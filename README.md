@@ -1,7 +1,7 @@
 EasyBuild - building software with ease
 =======================================
  
-[EasyBuild] is a software build and installation framework written in Python
+EasyBuild is a software build and installation framework written in Python
 that allows you to install software in a structured, repeatable and robust way.
 
 EasyBuild is split up into three different repositories:
