@@ -95,7 +95,7 @@ unpack them and run
 
 ::
 
-    python setup.py install --prefix=/some/dir"
+    python setup.py install --prefix=/some/dir
 
 for each of the packages.
 
