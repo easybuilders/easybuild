@@ -82,13 +82,22 @@ sources <https://github.com/hpcugent/easybuild-easyconfigs>`_.
 Installation
 ~~~~~~~~~~~~
 
-Installing EasyBuild is really easy: just run "easy\_install
---prefix=/some/dir easybuild" to install the latest available version of
-all three EasyBuild packages.
+Installing EasyBuild is really easy: just run 
+
+::
+
+    easy_install --prefix=/some/dir easybuild
+
+to install the latest available version of all three EasyBuild packages.
 
 You can also download the tarballs for the EasyBuild packages yourself,
-unpack them and run "python setup.py install --prefix=/some/dir" for
-each of the packages.
+unpack them and run 
+
+::
+
+    python setup.py install --prefix=/some/dir"
+
+for each of the packages.
 
 Do make sure you set your PYTHONPATH before performing the installation
 procedure (if not, easy\_install or setup.py will complain).
@@ -104,9 +113,13 @@ EasyBuild, by running the following command:
 
 ::
 
+    easy_install --user easybuild
+    export PATH=$PATH:$HOME/.local/bin
     eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot
 
-This will build and install HPL, after building and installing a
+This will install EasyBuild to your home directory ($HOME/.local), update
+the PATH environment variable such that the 'eb' command is available and
+subsequently build and install HPL, after building and installing a
 GCC-based compiler toolchain and all of its dependencies using the
 default EasyBuild configuration, which will install to
 $HOME/.local/easybuild/software.

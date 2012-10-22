@@ -45,7 +45,7 @@ install software in a structured and robust way. """,
                   ],
     platforms = "Linux",
     install_requires = [
-                        "easybuild-easyconfigs >= %s" % EB_VERSION
+                        "easybuild-easyconfigs >= %s" % EB_VERSION,
                         "easybuild-easyblocks >= %s" % EB_VERSION,
                         "easybuild-framework >= %s" % API_VERSION,  # order matters here, framework should be after easyblocks!
                        ]
