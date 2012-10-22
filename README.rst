@@ -108,8 +108,8 @@ Do not forget to also update your PATH environment variable, to include
 Quick demo for the impatient
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To see EasyBuild in action, build HPL with the robot feature of
-EasyBuild, by running the following command:
+To see EasyBuild in action, install it and build HPL with the robot feature of
+EasyBuild, by running the following commands:
 
 ::
 
