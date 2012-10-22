@@ -49,7 +49,7 @@ AVAILABILITY
 EasyBuild is split up into three different packages, which are available from the Python Package Index (PyPi):
 
 * [easybuild-framework] [6] - the EasyBuild framework, which includes the easybuild.framework and easybuild.tools Python packages that provide general support for building and installing software
-* [easybuild-easyblocks] [7] - a collection of easyblocks, in the form of the easybuild.easyblocks Python package, that implement support for building and installing (collections of) software applications; this depends on the framework being available, of course
+* [easybuild-easyblocks] [7] - a collection of easyblocks that implement support for building and installing (collections of) software packages
 * [easybuild-easyconfigs] [8] - a collection of example easyconfig files that specify which software to build, and using which build options; these easyconfigs will be well tested with the latest compatible versions of the easybuild-framework and easybuild-easyblocks packages
 
 Next to these packages, a meta-package named _easybuild_ to easily install the full EasyBuild distribution is also available, see [PyPi] [9].
@@ -161,7 +161,7 @@ and is made available under the GNU General Public License (GPL) version 2.
 [7]: http://pypi.python.org/pypi/easybuild-easyblocks "easybuild-easyblocks"
 [8]: http://pypi.python.org/pypi/easybuild-easyconfigs "easybuild-easyconfigs"
 [9]: http://pypi.python.org/pypi/easybuild "easybuild"
-[10]: https://github.com/hpcugent/easybuild-framwork "easybuild-framework sources"
+[10]: https://github.com/hpcugent/easybuild-framework "easybuild-framework sources"
 [11]: https://github.com/hpcugent/easybuild-easyblocks "easybuild-easyblocks sources"
 [12]: https://github.com/hpcugent/easybuild-easyconfigs "easybuild-easyconfigs sources"
 [13]: https://github.com/hpcugent/easybuild/wiki/Configuration "configure EasyBuild"
