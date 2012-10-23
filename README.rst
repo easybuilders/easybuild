@@ -132,6 +132,7 @@ variable.
 
 Notes:
  * a C and C++ compiler are required on your system, e.g., gcc and g++
+ * you will needs a coupe of GBs of free space in your home directory
  * the installation ATLAS library, which is part of this demo, may fail on a virtual machine
    due to the self-tuning install mechanism
  * if the --user option for easy_install is not available on your system, you can use the following commands instead:
