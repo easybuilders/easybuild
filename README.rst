@@ -138,11 +138,11 @@ Notes:
 
 ::
 
-    PYLIB=`python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp'); "`
+    PYLIB=`python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='$HOME/.local'); "`
     mkdir -p $PYLIB
     export PYTHONPATH=$PYLIB:$PYTHONPATH
-    easy_install --prefix=/tmp easybuild
-    export PATH=$PATH:/tmp/bin
+    easy_install --prefix=$HOME/.local easybuild
+    export PATH=$PATH:$HOME/.local/bin
     eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot
 
 Quick start
