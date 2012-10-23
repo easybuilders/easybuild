@@ -137,7 +137,7 @@ to load the provided modules, update your MODULEPATH environment
 variable.
 
 Notes:
- * a C and C++ compiler are required on your system, e.g., gcc and g++
+ * next to Python and the environment-modules package, a C and C++ compiler are required on your system, e.g., gcc and g++
  * you will needs a coupe of GBs of free space in your home directory (mainly due to the GCC build)
  * the installation ATLAS library, which is part of this demo, may fail on a virtual machine
    due to the self-tuning install mechanism
