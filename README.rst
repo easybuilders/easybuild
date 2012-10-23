@@ -86,6 +86,12 @@ Installing EasyBuild is really easy: just run
 
 ::
 
+    easy_install --user easybuild
+
+or
+
+::
+
     easy_install --prefix=/some/dir easybuild
 
 to install the latest available version of all three EasyBuild packages.
