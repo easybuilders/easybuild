@@ -16,9 +16,9 @@
         <h4>EasyBuild:  building software with ease.</h4>
         <p class="view"><a href="https://github.com/hpcugent/easybuild">View the Project on GitHub <small>hpcugent/easybuild</small></a></p>
         <ul>
-          <li><a href="https://github.com/hpcugent/easybuild/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/hpcugent/easybuild/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/hpcugent/easybuild">View On <strong>GitHub</strong></a></li>
+         <li><a href="https://github.com/hpcugent/easybuild-framework">easybuild-<strong>framework</strong></a></li>
+         <li><a href="https://github.com/hpcugent/easybuild-easyblocks">easybuild-<strong>easyblocks</strong></a></li>
+         <li><a href="https://github.com/hpcugent/easybuild-easyconfigs">easybuild-<strong>easyconfigs</strong></a></li>
         </ul>
       </header>
       <section>
@@ -67,7 +67,7 @@ as well as the <a href="http://modules.sourceforge.net/">environment-modules</a>
 <p>See the EasyBuild wiki for more information on <a href="https://github.com/hpcugent/easybuild/wiki/Dependencies">EasyBuild
 dependencies</a>.</p>
 
-<h2><a>Availability</a></h2>
+<h2><a>Download</a></h2>
 
 <p>EasyBuild is split up into three different packages, which are available
 from the Python Package Index (PyPi):</p>
@@ -86,21 +86,24 @@ will be well tested with the latest compatible versions of the
 easybuild-framework and easybuild-easyblocks packages</li>
 </ul>
 
-<p>Next to these packages, a meta-package named <em>easybuild</em> to easily
-install the full EasyBuild distribution is also available, see
-<a href="http://pypi.python.org/pypi/easybuild">PyPi</a>.</p>
-<p>The source code for these packages is available on GitHub, see
-<a href="https://github.com/hpcugent/easybuild-framework">easybuild-framework
-sources</a>,
-<a href="https://github.com/hpcugent/easybuild-easyblocks">easybuild-easyblocks
-sources</a>,
-<a href="https://github.com/hpcugent/easybuild-easyconfigs">easybuild-easyconfigs
-sources</a>.</p>
+<p>Next to these packages, a meta-package named <a href="http://pypi.python.org/pypi/easybuild">easybuild</a>
+to easily install the full EasyBuild distribution is also available on PyPi.</p>
+<p>The source code for these packages is also available on GitHub:
+<ul><li><a href="https://github.com/hpcugent/easybuild-framework">easybuild-framework
+git repository</a></li>
+<li><a href="https://github.com/hpcugent/easybuild-easyblocks">easybuild-easyblocks
+git repository</a></li>
+<li><a href="https://github.com/hpcugent/easybuild-easyconfigs">easybuild-easyconfigs
+git repository</a></li>
+</ul>
+The <a href="https://github.com/hpcugent/easybuild">main EasyBuild repository</a> mainly hosts the
+issue tracker and the documentation wiki.
+</p>
 
 <h2><a>Installation</a></h2>
 <p>Installing EasyBuild is really easy: just run</p>
 <pre><code>easy_install --user easybuild</code></pre>
-or
+<p>or</p>
 <pre><code>easy_install --prefix=/some/dir easybuild</code></pre>
 <p>to install the latest available version of all three EasyBuild packages.</p>
 <p>You can also download the tarballs for the EasyBuild packages yourself,

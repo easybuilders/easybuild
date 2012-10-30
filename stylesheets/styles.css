@@ -172,7 +172,7 @@ header ul a {
   text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 }
 header ul a strong {
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -208,6 +208,10 @@ p, ul, ol, table, pre, dl {
   margin: 0 0 20px;
 }
 
+.header_blocks {
+    font-size: 13px;
+}
+
 h1, h2, h3 {
   line-height: 1.1;
 }
@@ -238,8 +242,8 @@ img {
 }
 
 code, pre {
-  /*font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;*/
-  font-family: Courier, sans-serif;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  /*font-family: Courier, sans-serif;*/
   color: #333;
   font-size: 14px;
 }
