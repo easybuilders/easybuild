@@ -34,7 +34,7 @@ or
 import os
 from distutils import log
 
-VERSION = "1.0.0-rc1"
+VERSION = "1.0.0-rc2"
 API_VERSION = str(VERSION).split('.')[0]
 EB_VERSION = '.'.join(VERSION.split('.')[0:2])
 if VERSION.endswith('dev'):
