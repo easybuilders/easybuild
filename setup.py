@@ -32,13 +32,17 @@ or
 """
 
 import os
+import re
 from distutils import log
 
 VERSION = "1.0.0-rc2"
 API_VERSION = str(VERSION).split('.')[0]
 EB_VERSION = '.'.join(VERSION.split('.')[0:2])
-if VERSION.endswith('dev'):
-    EB_VERSION += 'dev'
+rc_regexp = re.compile("^.*-rc[0-9]*$")
+if rc_regexp.match(VERSION):
+    suff = '-%s' % VERSION.split('-')[-1]
+    API_VERSION += suff
+    EB_VERSION += suff
 
 # Utility function to read README file
 def read(fname):
