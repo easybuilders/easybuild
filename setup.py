@@ -35,10 +35,12 @@ import os
 import re
 from distutils import log
 
-VERSION = "1.0.0-rc2"
+# note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
+# 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
+VERSION = "1.0.0"
 API_VERSION = str(VERSION).split('.')[0]
 EB_VERSION = '.'.join(VERSION.split('.')[0:2])
-rc_regexp = re.compile("^.*-rc[0-9]*$")
+rc_regexp = re.compile("^.*rc[0-9]*$")
 if rc_regexp.match(VERSION):
     suff = '-%s' % VERSION.split('-')[-1]
     API_VERSION += suff
@@ -82,8 +84,8 @@ install software in a structured and robust way. """,
                   ],
     platforms = "Linux",
     install_requires = [
-                        "easybuild-easyconfigs >= %s" % EB_VERSION,
-                        "easybuild-easyblocks >= %s" % EB_VERSION,
-                        "easybuild-framework >= %s" % API_VERSION,  # order matters here, framework should be after easyblocks!
+                        "easybuild-easyconfigs == 1.0.0",
+                        "easybuild-easyblocks == 1.0",
+                        "easybuild-framework == 1.0",  # order matters here, framework should be after easyblocks!
                        ]
 )
