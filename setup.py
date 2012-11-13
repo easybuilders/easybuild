@@ -53,7 +53,7 @@ except ImportError, err:
     log.info("Failed to import setuptools.setup, so falling back to distutils.setup")
     from distutils import setup
 
-log.info("Installing version %s" % API_VERSION)
+log.info("Installing version %s" % VERSION)
 
 setup(
     name = "easybuild",
