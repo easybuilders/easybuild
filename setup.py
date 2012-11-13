@@ -34,11 +34,9 @@ or
 import os
 from distutils import log
 
-VERSION = "1.0.0-rc2"
-API_VERSION = str(VERSION).split('.')[0]
-EB_VERSION = '.'.join(VERSION.split('.')[0:2])
-if VERSION.endswith('dev'):
-    EB_VERSION += 'dev'
+# note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
+# 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
+VERSION = "1.0.0"
 
 # Utility function to read README file
 def read(fname):
@@ -54,7 +52,7 @@ except ImportError, err:
     log.info("Failed to import setuptools.setup, so falling back to distutils.setup")
     from distutils import setup
 
-log.info("Installing version %s (API version %s)" % (VERSION, API_VERSION))
+log.info("Installing version %s" % VERSION)
 
 setup(
     name = "easybuild",
@@ -78,8 +76,8 @@ install software in a structured and robust way. """,
                   ],
     platforms = "Linux",
     install_requires = [
-                        "easybuild-easyconfigs >= %s" % EB_VERSION,
-                        "easybuild-easyblocks >= %s" % EB_VERSION,
-                        "easybuild-framework >= %s" % API_VERSION,  # order matters here, framework should be after easyblocks!
+                        "easybuild-easyconfigs == 1.0.0",
+                        "easybuild-easyblocks == 1.0",
+                        "easybuild-framework == 1.0",  # order matters here, framework should be after easyblocks!
                        ]
 )
