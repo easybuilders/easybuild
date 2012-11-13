@@ -32,7 +32,6 @@ or
 """
 
 import os
-import re
 from distutils import log
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
