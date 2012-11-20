@@ -36,7 +36,7 @@ from distutils import log
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = "1.0.0"
+VERSION = "1.0.1dev"
 
 # Utility function to read README file
 def read(fname):
@@ -50,7 +50,7 @@ try:
     log.info("Installing with setuptools.setup...")
 except ImportError, err:
     log.info("Failed to import setuptools.setup, so falling back to distutils.setup")
-    from distutils import setup
+    from distutils.core import setup
 
 log.info("Installing version %s" % VERSION)
 
@@ -77,7 +77,7 @@ install software in a structured and robust way. """,
     platforms = "Linux",
     install_requires = [
                         "easybuild-easyconfigs == 1.0.0",
-                        "easybuild-easyblocks == 1.0",
-                        "easybuild-framework == 1.0",  # order matters here, framework should be after easyblocks!
+                        "easybuild-easyblocks == 1.0.1",
+                        "easybuild-framework == 1.0.1",  # order matters here, framework should be after easyblocks!
                        ]
 )
