@@ -77,7 +77,7 @@ install software in a structured and robust way. """,
     platforms = "Linux",
     install_requires = [
                         "easybuild-easyconfigs == 1.0.0",
-                        "easybuild-easyblocks == 1.0",
-                        "easybuild-framework == 1.0",  # order matters here, framework should be after easyblocks!
+                        "easybuild-easyblocks == 1.0.1",
+                        "easybuild-framework == 1.0.1",  # order matters here, framework should be after easyblocks!
                        ]
 )
