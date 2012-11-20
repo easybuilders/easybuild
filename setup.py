@@ -50,7 +50,7 @@ try:
     log.info("Installing with setuptools.setup...")
 except ImportError, err:
     log.info("Failed to import setuptools.setup, so falling back to distutils.setup")
-    from distutils import setup
+    from distutils.core import setup
 
 log.info("Installing version %s" % VERSION)
 
