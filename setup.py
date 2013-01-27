@@ -36,7 +36,7 @@ from distutils import log
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = "1.0.2"
+VERSION = "1.1.0"
 
 # Utility function to read README file
 def read(fname):
@@ -76,8 +76,8 @@ install software in a structured and robust way. """,
                   ],
     platforms = "Linux",
     install_requires = [
-                        "easybuild-easyconfigs == 1.0.0.2",
-                        "easybuild-easyblocks == 1.0.2",
-                        "easybuild-framework == 1.0.2",  # order matters here, framework should be after easyblocks!
+                        "easybuild-easyconfigs == 1.1.0.0",
+                        "easybuild-easyblocks == 1.1.0",
+                        "easybuild-framework == 1.1.0",  # order matters here, framework should be after easyblocks!
                        ]
 )
