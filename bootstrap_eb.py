@@ -76,22 +76,25 @@ def error(msg, exit=True):
     print "[[ERROR]]", msg
     sys.exit(1)
 
-def det_lib_path():
+def det_lib_path(libdir):
     """Determine relative path of Python library dir."""
-    return os.path.join('lib', 'python%s' % sys.version[:3], 'site-packages')
+    if libdir is None:
+        libdir = 'lib'
+    return os.path.join(libdir, 'python%s' % sys.version[:3], 'site-packages')
 
 def find_egg_dir_for(path, pkg):
     """Find full path of egg dir for given package."""
 
-    full_libpath = os.path.join(path, det_lib_path())
+    for libdir in ['lib', 'lib64']:
+        full_libpath = os.path.join(path, det_lib_path(libdir))
 
-    eggdir_regex = re.compile('%s-[0-9a-z.]+-py[0-9.]+.egg' % pkg.replace('-', '_'))
-    subdirs = os.listdir(full_libpath)
-    for subdir in subdirs:
-        if eggdir_regex.match(subdir):
-            eggdir = os.path.join(full_libpath, subdir)
-            debug("Found egg dir for %s at %s" % (pkg, eggdir))
-            return eggdir
+        eggdir_regex = re.compile('%s-[0-9a-z.]+-py[0-9.]+.egg' % pkg.replace('-', '_'))
+        subdirs = os.listdir(full_libpath)
+        for subdir in subdirs:
+            if eggdir_regex.match(subdir):
+                eggdir = os.path.join(full_libpath, subdir)
+                debug("Found egg dir for %s at %s" % (pkg, eggdir))
+                return eggdir
 
     error("Failed to determine egg dir path for %s in %s (subdirs: %s)" % (pkg, path, subdirs))
 
@@ -104,17 +107,19 @@ def prep(path):
     os.environ = copy.deepcopy(orig_os_environ)
     debug("os.environ['PYTHONPATH'] after reset: %s" % os.environ['PYTHONPATH'])
 
-    # make sure directory exists (this is required by setuptools)
-    full_libpath = os.path.join(path, det_lib_path())
-    if not os.path.exists(full_libpath):
-        os.makedirs(full_libpath)
-
     # update PATH
     os.environ['PATH'] = ':'.join([os.path.join(path, 'bin'), os.environ.get('PATH', '')])
     # update actual Python search path
     sys.path.insert(0, path)
-    # PYTHONPATH needs to be set as well, otherwise setuptools will fail
-    os.environ['PYTHONPATH'] = ':'.join([full_libpath, os.environ.get('PYTHONPATH', '')])
+
+    # make sure directory exists (this is required by setuptools)
+    # usually it's 'lib', but can be 'lib64' as well
+    for libdir in ['lib', 'lib64']:
+        full_libpath = os.path.join(path, det_lib_path(libdir))
+        if not os.path.exists(full_libpath):
+            os.makedirs(full_libpath)
+        # PYTHONPATH needs to be set as well, otherwise setuptools will fail
+        os.environ['PYTHONPATH'] = ':'.join([full_libpath, os.environ.get('PYTHONPATH', '')])
 
 #
 # Stage functions
@@ -300,7 +305,7 @@ def main():
 
     # check whether 'modulecmd' is available, we need that
     out = os.path.join(tmpdir, 'modulecmd.out')
-    cmd = "modulecmd python -H"
+    cmd = "modulecmd python help"
     os.system("%s > %s 2>&1" % (cmd, out))
     modcmd_re = re.compile('Usage: module')
     txt = open(out, "r").read()
