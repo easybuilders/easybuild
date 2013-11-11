@@ -12,7 +12,7 @@ print_usage()
 {
     echo "Usage: $0 github_username install_directory"
     echo
-    echo "    github_username:     username on GitHub for which the easybuild repositories have been cloned"
+    echo "    github_username:     username on GitHub for which the easybuild repositories should be cloned"
     echo
     echo "    install_directory:   directory were all the EasyBuild files will be installed"
     echo
@@ -37,7 +37,7 @@ github_clone_branch()
     if [ "$BRANCH" != "master" ] ; then
         echo "=== Checking out the '${BRANCH}' branch"
         git branch --track "${BRANCH}" "github_hpcugent/${BRANCH}"
-    	git checkout "${BRANCH}"
+        git checkout "${BRANCH}"
     fi
 }
 
