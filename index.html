@@ -92,7 +92,7 @@ dependencies</a>.</p>
 The recommended way of installing EasyBuild is via the provided bootstrap script; this will first install EasyBuild to a temporary location,
 and then install EasyBuild using EasyBuild.<br>
 
-<pre><code>wget https://raw.github.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+<pre><code>wget --no-check-certificate https://raw.github.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 export EASYBUILD_PREFIX=/tmp
 python bootstrap_eb.py $EASYBUILD_PREFIX
 export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
@@ -133,7 +133,7 @@ variable.</p>
 <p><b>Notes:</b>
 <ul>
 <li>next to Python and a modules tool (Tcl(/C) environment modules or Lmod), a C and C++ compiler are required on your system, e.g., gcc and g++</li>
-<li>you will needs a coupe of GBs of free space in the specified prefix (mainly due to the GCC build)</li>
+<li>you will needs a couple of GBs of free space in the specified prefix (mainly due to the GCC build)</li>
 <li>the installation ATLAS library, which is part of this demo, may fail on a virtual machine
 due to the self-tuning install mechanism it uses</li>
 </ul>
