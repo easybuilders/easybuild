@@ -131,7 +131,7 @@ file. This can be used as an empty template configuration file:
     mkdir -p $HOME/.easybuild
     eb --confighelp > $HOME/.easybuild/config.cfg
 
-. code:: bash
+.. code:: bash
 
     $ head $HOME/.easybuild/config.cfg
     [MAIN]
