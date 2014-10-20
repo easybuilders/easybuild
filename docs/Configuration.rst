@@ -430,9 +430,9 @@ Modules tool (``--modules-tool``)
 
 *default*: ``EnvironmentModulesC``
 
-| Specifying the modules tool that should be used by EasyBuild can be
+Specifying the modules tool that should be used by EasyBuild can be
 done using the ``modules-tool`` configuration setting.
-| A list of supported modules tools can be obtained using
+A list of supported modules tools can be obtained using
 ``eb --avail-modules-tools``.
 
 Currently, the following modules tools are supported:
