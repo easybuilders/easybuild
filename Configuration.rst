@@ -65,12 +65,10 @@ List of used configuration files
 The set of configuration files that will be used by EasyBuild is
 determined in the following order of preference:
 
--  the path(s) specified via **command line argument ``--configfiles``**
--  the path(s) specified via the **``$EASYBUILD_CONFIGFILES``
-   environment variable**
+-  the path(s) specified via ** command line argument ``--configfiles`` **
+-  the path(s) specified via the ** ``$EASYBUILD_CONFIGFILES`` environment variable **
 -  the **default path** for the EasyBuild configuration file, i.e.
-   ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``XDG_CONFIG_HOME``
-   defaults to ``$HOME/.config``).
+   ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``XDG_CONFIG_HOME`` defaults to ``$HOME/.config``).
 
 Note that each available configuration file will be used, and that the
 configuration settings specified in these files will be retained according to the order of preference as indicated above.
@@ -192,27 +190,18 @@ In EasyBuild v1.x, a couple of configuration options other than the ones
 above are available that follow the **legacy configuration style**,
 including:
 
--  the ``-C`` and ``--config`` command line arguments (**use
-   ``--configfiles`` instead**)
--  the ``$EASYBUILDCONFIG`` environment variable (**use
-   ``$EASYBUILD_CONFIGFILES`` instead**)
--  the default path ``$HOME/.easybuild/config.py`` (**new-style default
-   path is ``$XDG_CONFIG_HOME/easybuild/config.cfg``**)
--  the legacy fallback path
-   ``<installpath>/easybuild/easybuild_config.py`` (**only
-   default/fallback path is ``$XDG_CONFIG_HOME/easybuild/config.cfg``**)
+-  the ``-C`` and ``--config`` command line arguments (** use ``--configfiles`` instead **)
+-  the ``$EASYBUILDCONFIG`` environment variable (** use ``$EASYBUILD_CONFIGFILES`` instead **)
+-  the default path ``$HOME/.easybuild/config.py`` (** new-style default path is ``$XDG_CONFIG_HOME/easybuild/config.cfg`` **)
+-  the legacy fallback path ``<installpath>/easybuild/easybuild_config.py`` (** only default/fallback path is ``$XDG_CONFIG_HOME/easybuild/config.cfg`` **)
 
 Likewise, the following legacy environment variables allowed to override
 selected configuration settings:
 
--  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild (**use
-   ``$EASYBUILD_BUILDPATH`` instead**)
--  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild
-   (**use ``$EASYBUILD_INSTALLPATH`` instead**)
--  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild (**use
-   ``$EASYBUILD_SOURCEPATH`` instead**)
--  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used
-   (**use ``$EASYBUILD_PREFIX`` instead**)
+-  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild (** use ``$EASYBUILD_BUILDPATH`` instead **)
+-  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild (** use ``$EASYBUILD_INSTALLPATH`` instead **)
+-  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild (** use ``$EASYBUILD_SOURCEPATH`` instead **)
+-  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used (** use ``$EASYBUILD_PREFIX`` instead **)
 
 We *strongly* advise to switch to the new way of configuring EasyBuild
 as soon as possible,
