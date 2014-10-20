@@ -3,7 +3,7 @@
    contain the root `toctree` directive.
 
 Welcome to EasyBuild's documentation!
-===================================
+=====================================
 
 Contents:
 
@@ -12,7 +12,6 @@ Contents:
     :maxdepth: 1
 
     Configuration
-    EasyBuild_*
 
 Indices and tables
 ==================
