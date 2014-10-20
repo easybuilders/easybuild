@@ -32,7 +32,7 @@ Note that the various available configuration options are handled
 
 -  configuration file entry (key-value assignment):
 
-   .. code:: python
+   .. code:: ini
 
        [somesection]
        foo-option = bar
@@ -40,14 +40,14 @@ Note that the various available configuration options are handled
 -  environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s
    become ``_``\ ’s):
 
-   .. code:: bash
+   .. code:: shell-session
 
        $ export EASYBUILD_FOO_OPTION=bar
 
 -  command line argument (long options preceded by ``--`` and
    (optionally) using ``=``):
 
-   .. code:: bash
+   .. code:: shell-session
 
        $ eb --foo-option=bar
        # or
@@ -124,12 +124,12 @@ Since EasyBuild v1.10, a command line option ``--confighelp`` is
 available that prints out the help text as an annotated configuration
 file. This can be used as an empty template configuration file:
 
-.. code:: bash
+.. code:: shell-session
 
     mkdir -p $HOME/.easybuild
     eb --confighelp > $HOME/.easybuild/config.cfg
 
-.. code:: bash
+.. code:: shell-session
 
     $ head $HOME/.easybuild/config.cfg
     [MAIN]
@@ -154,7 +154,7 @@ corresponding setting specified in a configuration file.
 
 For example, to enable debug logging using an environment variable:
 
-.. code:: bash
+.. code:: shell-session
 
     export EASYBUILD_DEBUG=1
 
@@ -176,7 +176,7 @@ For boolean configuration settings, both the ``--<option>`` and
 
 Examples (more below):
 
-.. code:: bash
+.. code:: shell-session
 
     # enable debug logging (long option) and logging to stdout (short option)
     eb --debug -l ...
@@ -300,7 +300,7 @@ After (re)configuring EasyBuild, you need to make sure that
 ``modules/all`` subdirectory of the ``installpath``
 so you can load the modules created for the software built with EasyBuild, i.e.:
 
-.. code:: bash
+.. code:: shell-session
 
     export MODULEPATH=<installpath>/modules/all:$MODULEPATH
 
@@ -348,7 +348,7 @@ like this:
 Or, optionally an extra argument representing a subdirectory can be
 specified, e.g.:
 
-.. code:: bash
+.. code:: shell-session
 
     $ export EASYBUILD_REPOSITORY=GitRepository
     $ export EASYBUILD_REPOSITORYPATH=<path>, <subdir>
@@ -406,7 +406,7 @@ The software and modules install path suffixes can be adjusted using the
 ``subdir-software`` and/or ``subdir-modules`` configuration settings,
 for example:
 
-.. code:: bash
+.. code:: shell-session
 
     $ export EASYBUILD_SUBDIR_SOFTWARE=installs
     $ eb --subdir-modules=module_files ...
@@ -443,7 +443,7 @@ The actual module command (i.e., ``modulecmd``, ``modulecmd.tcl``,
 For example, to indicate that EasyBuild should be using ``Lmod`` as
 modules tool:
 
-.. code:: bash
+.. code:: shell-session
 
     eb --modules-tool=Lmod ...
 
