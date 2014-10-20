@@ -11,7 +11,7 @@ Contents:
     :glob:
     :maxdepth: 1
 
-    Configuration
+    docs/Configuration
 
 Indices and tables
 ==================
@@ -25,7 +25,6 @@ Reference Pages
 .. toctree::
     :maxdepth: 1
 
-    Configuration
     HTML snippets <HTML-snippets>
     CSS style objects <CSS-styles>
     Glossary <glossary>
