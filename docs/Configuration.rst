@@ -65,8 +65,8 @@ List of used configuration files
 The set of configuration files that will be used by EasyBuild is
 determined in the following order of preference:
 
--  the path(s) specified via **command line argument ``--configfiles`` **
--  the path(s) specified via the ** ``$EASYBUILD_CONFIGFILES`` environment variable**
+-  the path(s) specified via **command line argument ``--configfiles``**
+-  the path(s) specified via the **``$EASYBUILD_CONFIGFILES`` environment variable**
 -  the **default path** for the EasyBuild configuration file, i.e.
    ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``XDG_CONFIG_HOME`` defaults to ``$HOME/.config``).
 
