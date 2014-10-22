@@ -73,7 +73,7 @@ today_fmt = '%a %d %B %Y'
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'trac'
+pygments_style = 'friendly'
 
 
 # Options for HTML output
