@@ -113,7 +113,7 @@ html_static_path = ['.static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = '%d %b %Y'
+html_last_updated_fmt = '%a %d %b %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -147,7 +147,7 @@ html_last_updated_fmt = '%d %b %Y'
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'EBdoc'
+htmlhelp_basename = 'easyBuild_docs'
 
 
 # Options for LaTeX output
@@ -163,7 +163,7 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'EB.tex', 'EB Documentation',
+  ('index', 'easybuild.tex', 'easybuild Documentation',
    'Ghent University', 'manual'),
 ]
 
