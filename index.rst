@@ -2,7 +2,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-This document was last rebuilt on: |today|.
+This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is: 1.15.2
 
 Welcome to EasyBuild's documentation!
 =====================================
@@ -60,5 +60,5 @@ Reference Pages
 
 --------
 
-This document was last rebuilt on: |today|.
+This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is: 1.15.2
 

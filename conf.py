@@ -43,7 +43,7 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '0.1'
 # The full version, including alpha/beta/rc tags.
-release = '0.1.7'
+release = '0.1.8'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -73,7 +73,7 @@ today_fmt = '%a %d %B %Y'
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'default'
+pygments_style = 'borland'
 
 
 # Options for HTML output
