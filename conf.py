@@ -43,13 +43,13 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '0.1'
 # The full version, including alpha/beta/rc tags.
-release = '0.1.5'
+release = '0.1.6'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
 # Else, today_fmt is used as the format for a strftime call.
-today_fmt = '%d %B %Y'
+today_fmt = '%a %d %B %Y'
 
 # List of documents that shouldn't be included in the build.
 #unused_docs = []
@@ -86,6 +86,7 @@ pygments_style = 'sphinx'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
     html_theme = 'nature'
+    html_theme = 'djangodocs'
 else:
     html_theme = 'default'
 

@@ -2,6 +2,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. toctree::
+     :maxdepth: 1
+
 This document was last rebuilt on: |today|.
 
 Welcome to EasyBuild's documentation!
@@ -36,7 +39,8 @@ Having trouble? We'd like to help!
 .. _ticket tracker: https://github.com/hpcugent/easybuild/issues
 
 
-Contents:
+Contents
+========
 
 .. toctree::
     :glob:
