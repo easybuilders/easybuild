@@ -1,4 +1,7 @@
 
+.. toctree::
+     :maxdepth: 2
+
 EasyBuild configuration
 =======================
 
