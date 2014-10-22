@@ -73,7 +73,7 @@ today_fmt = '%a %d %B %Y'
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'trac'
 
 
 # Options for HTML output
@@ -86,7 +86,6 @@ pygments_style = 'sphinx'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
     html_theme = 'nature'
-    html_theme = 'djangodocs'
 else:
     html_theme = 'default'
 
