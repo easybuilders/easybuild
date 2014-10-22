@@ -14,7 +14,7 @@ Getting help
 
 Having trouble? We'd like to help!
 
-* Search for information in the archives of the easybuild-users |easybuild@lists.ugent.be| mailing list, see the `archives`_ or `post a question`_.
+* Search for information in the archives of the easybuild@lists.ugent.be mailing list, see the `archives`_ or `post a question`_.
 
 * Ask a question in the `#easybuild IRC channel`_, or search this documentation collection.
 
@@ -54,8 +54,6 @@ Reference Pages
 
 .. toctree::
     :maxdepth: 1
-
-    Glossary <glossary>
 
 * :ref:`Search <search>`
 
