@@ -2,7 +2,7 @@
 EasyBuild configuration
 =======================
 
-This page discusses the new (and recommended) style of configuring
+This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
 Deprecated/outdated documentation on the legacy way of configuring
@@ -65,10 +65,10 @@ List of used configuration files
 The set of configuration files that will be used by EasyBuild is
 determined in the following order of preference:
 
--  the path(s) specified via **command line argument ``--configfiles``**
--  the path(s) specified via the **``$EASYBUILD_CONFIGFILES`` environment variable**
+-  the path(s) specified via **command line argument** ``--configfiles``
+-  the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
 -  the **default path** for the EasyBuild configuration file, i.e.
-   ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``XDG_CONFIG_HOME`` defaults to ``$HOME/.config``).
+   ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``).
 
 Note that each available configuration file will be used, and that the
 configuration settings specified in these files will be retained according to the order of preference as indicated above.
@@ -86,7 +86,7 @@ configuration format as parsed by the ``configparser`` module
 (see `http://docs.python.org/2/library/configparser.html`_).
 
 Configuration files are organized in sections, the section name for a
-particular configuration setting are indicated in the output of
+particular configuration setting is indicated in the output of
 ``eb --help``.
 Some examples sections are: ``MAIN``, ``basic``, ``config``,
 ``informative``, ``override``, ``regtest``, ``software``, ``unittest``,
@@ -181,7 +181,7 @@ Examples (more below):
     # enable debug logging (long option) and logging to stdout (short option)
     eb --debug -l ...
     # use /dev/shm as build path, install to temporary install path, disable debug logging
-    eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug
+    eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
 
 Legacy configuration (**deprecated!**)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
