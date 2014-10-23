@@ -109,6 +109,33 @@ code).
 An example configuration file that should make everything clear is shown
 below.
 
+.. code:
+::
+
+    [basic]
+    # always enable logging to stdout
+    logtostdout = true
+    [config]
+    # use Lmod as modules tool
+    modules-tool: Lmod
+    # use different default installation path
+    prefix=/home/you/work/easybuild/
+
+Hello World
+
+.. code-block::
+
+    [basic]
+    # always enable logging to stdout
+    logtostdout = true
+    [config]
+    # use Lmod as modules tool
+    modules-tool: Lmod
+    # use different default installation path
+    prefix=/home/you/work/easybuild/
+
+Hello World 2
+
 .. code:: python
 
     [basic]
@@ -360,7 +387,7 @@ You do not have to worry about importing these classes, EasyBuild will
 make them available to the configuration file.
 
 Using ``git`` requires the ``GitPython`` Python modules, using ``svn``
-requires the ``pysvn`` Python module (see [[Dependencies]]).
+requires the ``pysvn`` Python module (see `Dependencies`_).
 
 If access to the easyconfigs repository fails for some reason (e.g.,
 no network or a missing required Python module), EasyBuild will
@@ -458,8 +485,7 @@ Active module naming scheme (``--module-naming-scheme``)
 The module naming scheme that should be used by EasyBuild can be
 specified using the ``module-naming-scheme`` configuration setting.
 
-For more details, see the dedicated wiki page [[Using a custom module
-naming scheme]].
+For more details, see the dedicated wiki page `Using a custom module naming scheme`_.
 
 
 .. _here: https://github.com/hpcugent/easybuild/wiki/Configuration-legacy
