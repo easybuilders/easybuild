@@ -23,9 +23,11 @@ Configuring EasyBuild can be done by:
 Of course, combining any of these types of configuration works too (and
 is even fairly common).
 
-The order of preference for the different configuration types is as
-listed above, i.e., environment variables override the corresponding
-entries in the configuration file, while command line arguments in turn override the corresponding environment variables *and* matching entries in the configuration file.
+The order of preference for the different configuration types is as listed above, that is:
+
+-  environment variables override the corresponding entries in the configuration file
+-  command line arguments in turn override the corresponding environment variables *and* matching entries in the configuration file
+
 
 Consistentency across supported configuration types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -302,7 +304,7 @@ so you can load the modules created for the software built with EasyBuild, i.e.:
 
 .. code:: shell-session
 
-    export MODULEPATH=<installpath>/modules/all:$MODULEPATH
+    module use <installpath>/modules/all
 
 It is probably a good idea to add this to your (favourite) shell
 ``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login

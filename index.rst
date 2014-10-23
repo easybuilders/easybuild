@@ -14,9 +14,9 @@ Getting help
 
 Having trouble? We'd like to help!
 
-* Search for information in the archives of the easybuild@lists.ugent.be mailing list, see the `archives`_ or `post a question`_.
+* Search for information in the `archives`_ of the easybuild@lists.ugent.be mailing list or `subscribe`_ to post a question.
 
-* Ask a question in the `#easybuild IRC channel`_, or search this documentation collection.
+* Ask a question in the `#easybuild IRC channel`_ on the Freenode network, or search this documentation collection.
 
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 
@@ -27,7 +27,7 @@ Having trouble? We'd like to help!
 * Report issues with EasyBuild, anything else, in our `ticket tracker`_.
 
 .. _archives: https://lists.ugent.be/wws/arc/easybuild
-.. _post a question: https://lists.ugent.be/wws/arc/easybuild
+.. _subscribe: https://lists.ugent.be/wws/subscribe/easybuild
 .. _#easybuild IRC channel: irc://irc.freenode.net/easybuild
 .. _IRC logs: http://www.google.com/
 .. _framework ticket tracker: https://github.com/hpcugent/easybuild-framework/issues
