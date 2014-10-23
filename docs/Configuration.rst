@@ -200,15 +200,13 @@ including:
 Likewise, the following legacy environment variables allowed to override
 selected configuration settings:
 
--  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild ( **use ``$EASYBUILD_BUILDPATH`` instead** )
--  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild ( **use ``$EASYBUILD_INSTALLPATH`` instead** )
--  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild ( **use ``$EASYBUILD_SOURCEPATH`` instead** )
--  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used ( **use ``$EASYBUILD_PREFIX`` instead** )
+-  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild ( **use** ``$EASYBUILD_BUILDPATH`` **instead** )
+-  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild ( **use** ``$EASYBUILD_INSTALLPATH`` **instead** )
+-  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild ( **use** ``$EASYBUILD_SOURCEPATH`` **instead** )
+-  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used ( **use** ``$EASYBUILD_PREFIX`` **instead** )
 
-We *strongly* advise to switch to the new way of configuring EasyBuild
-as soon as possible,
-since the legacy configuration style will no longer be supported in
-EasyBuild v2.x.
+We *strongly* advise to switch to the new way of configuring EasyBuild as soon as possible,
+since the legacy configuration style will no longer be supported in EasyBuild v2.x.
 
 Available configuration settings
 --------------------------------
