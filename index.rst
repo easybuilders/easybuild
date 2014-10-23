@@ -60,5 +60,3 @@ Reference Pages
 
 --------
 
-This document was last rebuilt on: |today|.
-
