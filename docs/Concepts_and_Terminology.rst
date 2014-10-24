@@ -73,6 +73,8 @@ left unimplemented (since there is no common procedure for them). Each of the st
 tweaked and steered via different parameters known to the framework, for which values are
 either obtained from the provided specification files or set to reasonable default values.
 
+XXX
+
 In EasyBuild v1.15.2 the framework source code consists of about 19000 lines of code,
 organized across about 125 Python modules in roughly a dozen Python package directories,
 next to almost 7000 lines of code for tests. This provides some notion of the size of the
@@ -104,6 +106,8 @@ should be used, based on the name of the software package or the value of the ea
 specification parameter. In case an easyblock specification is not provided and no (software-specific)
 easyblock matching the software name could be found, a fallback mechanism will resort to using
 the generic ConfigureMake easyblock, which implements the common configure – make – make install procedure.
+
+XXX
 
 At the time of writing, the most recent release of EasyBuild (v1.15.2) includes 139 software-specific
 easyblocks and 20 generic easyblocks, providing support for automatically installing a wide range
@@ -143,6 +147,9 @@ an installation, EasyBuild copies the used easyconfig file to the install direct
 and also supports maintaining an easyconfig archive which is updated on every successful installation.
 Therefore, reproducing installations becomes trivial.
 
-EasyBuild v1.15.2 includes over 2800 easyconfig files, for 511 different software packages.
+XXX
+
+EasyBuild v1.15.2 includes support for over 511 different software packages,
+spread over 2800 easyconfig files describing distinct builds.
 
 

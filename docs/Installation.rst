@@ -22,9 +22,6 @@ This page describes the various installation methods.
 -  `In case of problems...`_
   -  `How to collect info in case sanity checks fail or there is another issue`_
 
-.. toctree::
-   :maxdepth: 1
-
 --------------
 
 Bootstrapping
@@ -32,8 +29,8 @@ Bootstrapping
 
 Installing any Python package can be a real pain, and since EasyBuild is
 a set of Python packages (framework, easyblocks and easyconfigs) glued together,
-installing EasyBuild may, ironically, also cause some headaches. To resolve this,
-we have created a bootstrap script that installs the 
+installing EasyBuild may, ironically, also cause some headaches.
+To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
 it - and yes, we use EasyBuild for doing so. All you really need is `Python 2.4 (or 2.x)`
 and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
@@ -43,7 +40,7 @@ Bootstrapping EasyBuild
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The easiest way (by far) to install EasyBuild is by bootstrapping it,
-i.e. installing EasyBuild via EasyBuild itself. 
+i.e. installing EasyBuild via EasyBuild itself.
 
 Download the bootstrap script, and run it, specifying an install path
 for EasyBuild, to obtain an ``EasyBuild`` module which you can then load::
@@ -51,15 +48,23 @@ for EasyBuild, to obtain an ``EasyBuild`` module which you can then load::
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
     python bootstrap_eb.py $HOME/.local/easybuild
 
-.. note:: The path you specify to the bootstrap script is where EasyBuild should be installed and ``MODULEPATH`` would possibly be aligned to point towards it. If you also want software that is built using EasyBuild to be installed there, you will need to set ``EASYBUILDINSTALLPATH``, and/or look into the details on configuring EasyBuild. XXX
+.. note::
+
+  The path you specify to the bootstrap script is where EasyBuild should be installed
+  and ``MODULEPATH`` would possibly be aligned to point towards it. If you also want
+  software that is built using EasyBuild to be installed there, you will need to set
+  ``EASYBUILDINSTALLPATH``, and/or look into the details on `EasyBuild configuration`_.
 
 .. warning::
 
- N.B. Last command will only succeed if commands `module version` and `modulecmd bash version` work as expected (fi. environments-modules-c >=v3.2.10), because they are used throughout the tool, fi. to resolve dependencies.
+  N.B. Last command will only succeed if commands `module version` and `modulecmd bash version`
+  work as expected (fi. environments-modules-c >=v3.2.10), because modules are applied throughout,
+  fi. to resolve dependencies and detect already installed software.
 
 
 Only when the above fails to work for you for some reason, should you resort
-to one of the alternative approaches documented later on (which are more involved but also give more control in certain circumstances).
+to one of the alternative approaches documented later on
+(which are more involved but also give more control, in certain circumstances).
 
 
 Sanity check
@@ -75,8 +80,7 @@ more details)::
     export MODULEPATH=$HOME/.local/easybuild/modules/all:$MODULEPATH
     module load EasyBuild/1.15.2 ## replace version as needed
 
-Determine the version of the installed EasyBuild, which should match the
-name of the module::
+Determine the version of the installed EasyBuild, which should match the name of the module::
 
     eb --version
 
@@ -97,7 +101,7 @@ Example boostrap run
 ~~~~~~~~~~~~~~~~~~~~
 
 This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
-  
+
   CTFwork:easybuild fgeorgatos$ modulecmd bash --version 2>&1 |head -2 ## This should report something reasonable
   VERSION=3.2.10
   DATE=2012-12-21
@@ -222,8 +226,6 @@ you can use one of the following simple commands:
 
 The ``--user`` part in these commands allows you to install EasyBuild without admin rights.
 It will just install EasyBuild in your home directory (the exact location depends on the OS).
-
-If you don’t have ``pip`` or ``easy_install`` available, see XXX_source_install
 
 Adjusting ``PATH`` environment variable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -365,10 +367,10 @@ You can setup a development version of EasyBuild, quite well in the following ma
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
     bash install-EasyBuild-develop.sh hpcugent /tmp/$$ # N.B. delivery directory
 
-.. note:: The above creates a modulefile which you can load/inspect at will. 
+.. note:: The above creates a modulefile which you can load/inspect at will.
   The interesting aspect about it is that it is pointing to an EasyBuild
   installation directly on local git repositories, which allows you to
-  customise it easily. Remember to commit/push or otherwise save your changes, 
+  customise it easily. Remember to commit/push or otherwise save your changes,
   if you intend them for future usage!
 
 
