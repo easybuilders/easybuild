@@ -31,7 +31,7 @@ templates_path = ['.templates']
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'docs/index'
+master_doc = 'index'
 
 # General substitutions.
 project = 'EasyBuild'
@@ -43,7 +43,7 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '0.2'
 # The full version, including alpha/beta/rc tags.
-release = '0.2.1'
+release = '0.2.2'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
