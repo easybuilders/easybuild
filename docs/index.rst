@@ -43,11 +43,11 @@ Contents
     :glob:
     :maxdepth: 1
 
-    docs/Concepts_and_Terminology
+    Concepts_and_Terminology
     docs/Installation
     docs/Configuration
     docs/Basic_Usage_and_Command_Line_Options
-    docs/Configuration
+    Configuration
 
 Indices and tables
 ==================
