@@ -20,7 +20,9 @@ Having trouble? We'd like to help!
 
 * Search for information in the `archives`_ of the easybuild@lists.ugent.be mailing list or `subscribe`_ to post a question.
 
-* Ask a question in the `#easybuild IRC channel`_ on the Freenode network, or search this documentation collection.
+* Did you try ``eb --help``?
+
+* Ask a question in the `#easybuild IRC channel`_ on the Freenode network or, :ref:`search <search>` this documentation collection.
 
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 
@@ -49,9 +51,9 @@ Contents
 
     docs/Concepts_and_Terminology
     docs/Installation
+    docs/Installation_Alternative
     docs/Configuration
     docs/Basic_Usage_and_Command_Line_Options
-    docs/Configuration
 
 Indices and tables
 ==================
