@@ -42,17 +42,24 @@ Note that the various available configuration options are handled
        [somesection]
        foo-option = bar
 
--  environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s become ``_``\ ’s)::
+-  environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s
+   become ``_``\ ’s):
+
+   .. code:: shell-session
 
        $ export EASYBUILD_FOO_OPTION=bar
 
--  command line argument (long options preceded by ``--`` and (optionally) using ``=``)::
+-  command line argument (long options preceded by ``--`` and
+   (optionally) using ``=``):
+
+   .. code:: shell-session
 
        $ eb --foo-option=bar
        # or
        $ eb --foo-option bar
 
-For more details w.r.t. each of the supported configuration types, see below.
+For more details w.r.t. each of the supported configuration types, see
+below.
 
 Configuration file
 ~~~~~~~~~~~~~~~~~~
@@ -101,7 +108,9 @@ For boolean configuration settings, values that evaluated to ``True``
 Comment lines start with a hash character ``#`` (just like in Python
 code).
 
-An example configuration file that should make everything clear is shown below. ::
+An example configuration file that should make everything clear is shown below.
+
+.. code:: python
 
     [basic]
     # always enable logging to stdout
