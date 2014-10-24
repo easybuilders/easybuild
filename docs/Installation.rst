@@ -2,22 +2,20 @@
 .. toctree::
      :maxdepth: 1
 
-EasyBuild configuration
+EasyBuild installation
 =======================
 
-
-
-
-
-There are a couple of ways to install EasyBuild, depending on your use
-case. This page describes the various installation methods.
+There are a couple of ways to install EasyBuild, depending on your use-case.
+This page describes the various installation methods.
 
 
 -  `Bootstrapping`_
--  `Standard installation of latest release`_
--  `Installation from downloaded sources`_
--  `Installation of latest release from GitHub`_
--  `Installation of latest development version`_
+ -  `Bootstrapping EasyBuild`_
+-  `Alternative installation methods`_
+ -  `Standard installation of latest release`_
+ -  `Installation from downloaded sources`_
+ -  `Installation of latest release from GitHub`_
+ -  `Installation of latest development version`_
 
 .. toctree::
    :maxdepth: 1
@@ -27,17 +25,20 @@ case. This page describes the various installation methods.
 Bootstrapping
 -------------
 
+Installing any Python package can be a real pain, and since EasyBuild is
+a set of Python packages (framework, easyblocks and easyconfigs) glued together,
+installing EasyBuild may, ironically, also cause some headaches. To resolve this,
+we have created a bootstrap script that installs the 
+latest EasyBuild version for you together with an environment module for
+it - and yes, we use EasyBuild for doing so. All you really need is `Python 2.4 (or 2.x)`
+and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
+
+
 Bootstrapping EasyBuild
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The easiest way (by far) to install EasyBuild is by bootstrapping,
-i.e. installing EasyBuild via EasyBuild itself. You think this is a chichen-egg issue? Just read on!
-
-Installing any Python package can be a real pain, and since EasyBuild is
-a set of Python packages (framework, easyblocks and easyconfigs) glued together, installing EasyBuild may, ironically, also cause some headaches. To resolve this, we have created a bootstrap script that installs the 
-latest EasyBuild version for you together with an environment module for
-it - and yes, we use EasyBuild for doing so. All you really need is `Python 2.4 (or 2.x)` and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
-
+The easiest way (by far) to install EasyBuild is by bootstrapping it,
+i.e. installing EasyBuild via EasyBuild itself. 
 
 Download the bootstrap script, and run it, specifying an install path
 for EasyBuild, to obtain an ``EasyBuild`` module which you can then load::
@@ -67,7 +68,7 @@ module with the specific version (see output of bootstrap script for
 more details)::
 
     export MODULEPATH=$HOME/.local/easybuild/modules/all:$MODULEPATH
-    module load EasyBuild/<version>
+    module load EasyBuild/1.15.2 ## replace version as needed
 
 Determine the version of the installed EasyBuild, which should match the
 name of the module::
@@ -79,7 +80,7 @@ Running unit tests
 
 After completion of the bootstrap procedure and loading the
 ``EasyBuild`` module, try running the EasyBuild unit tests. If this
-doesn’t complete successfully, **`please open an issue`_** to report it.::
+doesn’t complete successfully, `please open an issue`_ to report it.::
 
     python -m test.framework.suite
 
@@ -87,7 +88,101 @@ doesn’t complete successfully, **`please open an issue`_** to report it.::
 .. _please open an issue: https://github.com/hpcugent/easybuild-framework/issues/new
 
 
+Example boostrap run
+~~~~~~~~~~~~~~~~~~~~
 
+This is from a recent setup with EasyBuild/1.15.2::
+  
+  CTFwork:easybuild fgeorgatos$ modulecmd bash --version 2>&1 |head -2
+  VERSION=3.2.10
+  DATE=2012-12-21
+  
+  CTFwork:easybuild fgeorgatos$ curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                   Dload  Upload   Total   Spent    Left  Speed
+  100 26650  100 26650    0     0  25874      0  0:00:01  0:00:01 --:--:-- 25898
+  
+  CTFwork:easybuild fgeorgatos$ python bootstrap_eb.py $HOME/.local/easybuild
+  [[INFO]] Found module command 'modulecmd' (EnvironmentModulesC), so using it.
+  [[INFO]]
+  
+  +++ STAGE 0: installing distribute via included (patched) distribute_setup.py...
+  
+  Downloading http://pypi.python.org/packages/source/d/distribute/distribute-0.6.34.tar.gz
+  Extracting in /tmp/tmpgUDe59
+  Now working in /tmp/tmpgUDe59/distribute-0.6.34
+  Installing Distribute
+  [[INFO]]
+  
+  +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
+  
+  Installing with setuptools.setup...
+  Installing version 1.15.2
+  warning: install_lib: 'build/lib' does not exist -- no Python modules to install
+  
+  zip_safe flag not set; analyzing archive contents...
+  Installing with setuptools.setup...
+  Installing version 1.15.2 (API version 1)
+  Installing with setuptools.setup...
+  Installing version 1.15.2 (required versions: API >= 1)
+  Installing with setuptools.setup...
+  Installing version 1.15.2.0 (required versions: API >= 1, easyblocks >= 1.15)
+  warning: install_lib: 'build/lib' does not exist -- no Python modules to install
+  
+  [[INFO]]
+  
+  +++ STAGE 2: installing EasyBuild in /Users/fgeorgatos/.local/easybuild with EasyBuild from stage 1...
+  
+  == temporary log file in case of crash /tmp/easybuild-I0RSpc/easybuild-4e14kP.log
+  == resolving dependencies ...
+  == processing EasyBuild easyconfig /tmp/tmprQwWo0/EasyBuild-1.15.2.eb
+  == building and installing EasyBuild/1.15.2...
+  == fetching files...
+  == creating build dir, resetting environment...
+  == unpacking...
+  == patching...
+  == preparing...
+  == configuring...
+  == building...
+  == testing...
+  == installing...
+  == taking care of extensions...
+  == packaging...
+  == postprocessing...
+  == sanity checking...
+  == cleaning up...
+  == creating module...
+  == COMPLETED: Installation ended successfully
+  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/easybuild/easybuild-EasyBuild-1.15.2-20141023.225606.log
+  == Build succeeded for 1 out of 1
+  == temporary log file /tmp/easybuild-I0RSpc/easybuild-4e14kP.log has been removed.
+  == temporary directory /tmp/easybuild-I0RSpc has been removed.
+  [[INFO]] Done!
+  [[INFO]]
+  [[INFO]] EasyBuild v1.15.2 was installed to /Users/fgeorgatos/.local/easybuild, so make sure your $MODULEPATH includes /Users/fgeorgatos/.local/easybuild/modules/all
+  [[INFO]]
+  [[INFO]] Run 'module load EasyBuild', and run 'eb --help' to get help on using EasyBuild.
+  [[INFO]] Set $EASYBUILD_MODULES_TOOL to 'EnvironmentModulesC' to use the same modules tool as was used now.
+  [[INFO]]
+  [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
+  [[INFO]] To install software with EasyBuild to /Users/fgeorgatos/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
+  [[INFO]] See https://github.com/hpcugent/easybuild/wiki/Configuration for details on configuring EasyBuild.
+  
+  CTFwork:easybuild fgeorgatos$ export MODULEPATH=/Users/fgeorgatos/.local/easybuild/modules/all
+  CTFwork:easybuild fgeorgatos$ module av
+  
+  ----------------------------------------------------------------- /Users/fgeorgatos/.local/easybuild/modules/all ------------------------------------------------------------------
+  EasyBuild/1.15.2
+  CTFwork:easybuild fgeorgatos$ module load EasyBuild
+  CTFwork:easybuild fgeorgatos$ module list
+  Currently Loaded Modulefiles:
+    1) EasyBuild/1.15.2
+  CTFwork:easybuild fgeorgatos$ which eb
+  /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
+  CTFwork:easybuild fgeorgatos$ eb --version
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
+  CTFwork:easybuild fgeorgatos$
+  
 
 
 
