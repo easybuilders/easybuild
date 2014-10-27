@@ -29,8 +29,13 @@ a set of Python packages (framework, easyblocks and easyconfigs) glued together,
 installing EasyBuild may, ironically, also cause some headaches.
 To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
-it - and yes, we use EasyBuild for doing so. All you really need is `Python 2.4 (or 2.x)` XXX - UPDATE BY VERSION
-and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
+it - and yes, we use EasyBuild for doing so.
+
+.. tip::
+  All you really need as dependencies is `Python 2.4 (or 2.x)` XXX - UPDATE BY VERSION
+  and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
+  Practically speaking, `a compiler able to build GCC` is desired for initiating most software builds,
+  yet EasyBuild does not restrict you in what is possible.
 
 Bootstrapping procedure
 ~~~~~~~~~~~~~~~~~~~~~~~
