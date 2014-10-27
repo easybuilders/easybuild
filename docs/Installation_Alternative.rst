@@ -2,16 +2,15 @@
 .. toctree::
      :maxdepth: 1
 
-EasyBuild alternative installation methods
-==========================================
+Alternative installation methods
+================================
 
-This page describes the alternative installation methods.
+This page describes the alternative installation methods:
 
--  `Alternative installation methods`_
-  -  `Standard installation of latest release`_
-  -  `Installation from downloaded sources`_
-  -  `Installation of latest release from GitHub`_
-  -  `Installation of latest development version`_
+-  `Standard installation of latest release`_
+-  `Installation from downloaded sources`_
+-  `Installation of latest release from GitHub`_
+-  `Installation of latest development version`_
 
 --------------
 
@@ -43,8 +42,12 @@ you can use one of the following simple commands:
 
        pip install --user easybuild
 
-The ``--user`` part in these commands allows you to install EasyBuild without admin rights.
+The ``--user`` part in these commands allows you to install EasyBuild without admin rights into ``$HOME/.local``.
 It will just install EasyBuild in your home directory (the exact location depends on the OS).
+
+.. warning::
+   Installing with --user is pretty tricky, since Python packages installed there always win...
+   Even if you change $PYTHONPATH to include a path to a newer version of e.g. EasyBuild, the version installed via --user will take precedence.
 
 Adjusting ``PATH`` environment variable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -175,8 +178,6 @@ EasyBuild repository for that matter)::
 .. note::
   You should use this only if you are interested in developing for EasyBuild.
   Although it is well tested, the development version of EasyBuild may be unstable at a given point in time.
-
-.. _here: #user_alternatives
 
 Installation of latest development version, last but not least
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
