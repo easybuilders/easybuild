@@ -5,11 +5,14 @@
 EasyBuild installation
 ======================
 
-There are a couple of ways to install EasyBuild, depending on your use-case.
-This page describes the various installation methods.
+EasyBuild is Python software, so there are a couple of ways to install it.
+Because of various issues with the different installation tools that are available
+for Python packages, we recommend using the **bootstrap** install procedure described here.
+
+Notes on other ways of installing EasyBuild are available under section `Alternative installation methods`_.
 
 -  `Bootstrapping EasyBuild`_
-  -  `Bootstrapping`_
+  -  `Bootstrapping procedure`_
   -  `Sanity check`_
   -  `Running unit tests`_
   -  `Example boostrap run`_
@@ -26,18 +29,17 @@ a set of Python packages (framework, easyblocks and easyconfigs) glued together,
 installing EasyBuild may, ironically, also cause some headaches.
 To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
-it - and yes, we use EasyBuild for doing so. All you really need is `Python 2.4 (or 2.x)`
+it - and yes, we use EasyBuild for doing so. All you really need is `Python 2.4 (or 2.x)` XXX - UPDATE BY VERSION
 and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
 
-
-Bootstrapping
-~~~~~~~~~~~~~
+Bootstrapping procedure
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The easiest way (by far) to install EasyBuild is by bootstrapping it,
 i.e. installing EasyBuild via EasyBuild itself.
 
 Download the bootstrap script, and run it, specifying an install path
-for EasyBuild, to obtain an ``EasyBuild`` module which you can then load::
+for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
 
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
     python bootstrap_eb.py $HOME/.local/easybuild
@@ -45,9 +47,10 @@ for EasyBuild, to obtain an ``EasyBuild`` module which you can then load::
 .. note::
 
   The path you specify to the bootstrap script is where EasyBuild should be installed
-  and ``MODULEPATH`` would possibly be aligned to point towards it. If you also want
+  and ``MODULEPATH`` should be aligned with it to make sure the EasyBuild module can be loaded,
+  i.e. you should include .../modules/all in your $MODULEPATH.". If you also want
   software that is built using EasyBuild to be installed there, you will need to set
-  ``EASYBUILDINSTALLPATH``, and/or look into the details on `EasyBuild configuration`_.
+  ``EASYBUILD_INSTALLPATH``, and/or look into the details on `EasyBuild configuration`_.
 
 .. warning::
 
@@ -56,27 +59,32 @@ for EasyBuild, to obtain an ``EasyBuild`` module which you can then load::
   fi. to resolve dependencies and detect already installed software.
 
 
-Only when the above fails to work for you for some reason, should you resort
-to one of the alternative approaches documented later on
-(which are more involved but also give more control, in certain circumstances).
+Normally, only when the above fails to work for you for some reason, should you resort
+to one of the alternative approaches documented at `Alternative installation methods`_
+(these are more involved but also they may give more control).
 
 
 Sanity check
 ~~~~~~~~~~~~
 
-**Please provide the results of the commands below as well, to verify
-that everything worked.**
+**Please provide the results of the commands below as well, to verify that everything worked.**
 
-Set your ``MODULEPATH`` correctly if needed, and load the EasyBuild
-module with the specific version (see output of bootstrap script for
-more details)::
+Set your ``$MODULEPATH`` correctly if needed, and load the EasyBuild
+module with the specific version (see output of bootstrap script for more details)::
 
     export MODULEPATH=$HOME/.local/easybuild/modules/all:$MODULEPATH
-    module load EasyBuild/1.15.2 ## replace version as needed
+    module load EasyBuild
 
-Determine the version of the installed EasyBuild, which should match the name of the module::
+Determine the version of the loaded EasyBuild, which should match the expected module::
 
     eb --version
+
+.. tip::
+  Environment-modules-C and Lmod implementations do their default sorting differently;
+  The former will normally sort in the lexicographic order, while Lmod follows
+  an approach that is closer to Python's LooseVersion() way of ordering. Such aspects
+  may make a big difference, if you have installed both versions 1.9.0 & 1.15.2 etc,
+  about what is the default.
 
 Running unit tests
 ~~~~~~~~~~~~~~~~~~
@@ -96,16 +104,16 @@ Example boostrap run
 
 This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
 
-  CTFwork:easybuild fgeorgatos$ modulecmd bash --version 2>&1 |head -2 ## This should report something reasonable
+  $ modulecmd bash --version 2>&1 |head -2 ## This should report something reasonable
   VERSION=3.2.10
   DATE=2012-12-21
   
-  CTFwork:easybuild fgeorgatos$ curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+  $ curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                    Dload  Upload   Total   Spent    Left  Speed
   100 26650  100 26650    0     0  25874      0  0:00:01  0:00:01 --:--:-- 25898
   
-  CTFwork:easybuild fgeorgatos$ python bootstrap_eb.py $HOME/.local/easybuild
+  $ python bootstrap_eb.py $HOME/.local/easybuild
   [[INFO]] Found module command 'modulecmd' (EnvironmentModulesC), so using it.
   [[INFO]]
   
@@ -171,27 +179,28 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   [[INFO]] To install software with EasyBuild to /Users/fgeorgatos/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
   [[INFO]] See https://github.com/hpcugent/easybuild/wiki/Configuration for details on configuring EasyBuild.
   
-  CTFwork:easybuild fgeorgatos$ export MODULEPATH=/Users/fgeorgatos/.local/easybuild/modules/all
-  CTFwork:easybuild fgeorgatos$ module av
+  $ export MODULEPATH=$HOME/.local/easybuild/modules/all
+  $ module av
   
-  ----------------------------------- /Users/fgeorgatos/.local/easybuild/modules/all ------------------------------------
+  ------------------------- /Users/fgeorgatos/.local/easybuild/modules/all --------------------------
   EasyBuild/1.15.2
-  CTFwork:easybuild fgeorgatos$ module load EasyBuild
-  CTFwork:easybuild fgeorgatos$ module list
+  $ module load EasyBuild
+  $ module list
   Currently Loaded Modulefiles:
     1) EasyBuild/1.15.2
-  CTFwork:easybuild fgeorgatos$ which eb
+  $ which eb
   /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
-  CTFwork:easybuild fgeorgatos$ eb --version
+  $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
-  CTFwork:easybuild fgeorgatos$
   
+Now, enjoy!
+
 
 In case of problems...
 ~~~~~~~~~~~~~~~~~~~~~~
 
 **Please open an issue:**
-https://github.com/hpcugent/easybuild-framework/issues/new
+https://github.com/hpcugent/easybuild/issues/new
 
 How to collect info in case sanity checks fail or there is another issue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,7 +211,8 @@ and provide the output.
 **Do not worry if some of these commands fail or spit out error messages.**::
 
     python -V
-    modulecmd bash version
+    type -f module
+    module --version
     module av EasyBuild
     which -a eb
     eb --version
