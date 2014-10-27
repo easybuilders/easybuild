@@ -53,6 +53,7 @@ Contents
     docs/Installation
     docs/Installation_Alternative
     docs/Configuration
+    docs/Configuration_Legacy
     docs/Basic_Usage_and_Command_Line_Options
 
 Indices and tables
