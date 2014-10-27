@@ -6,9 +6,9 @@ EasyBuild configuration
 =======================
 
 This page discusses the recommended style of configuring
-EasyBuild, which is supported since EasyBuild v1.3.0.  XXX
+EasyBuild, which is supported since EasyBuild v1.3.0.
 
-Deprecated/outdated documentation on the legacy way of configuring EasyBuild, see `here`_.
+For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see `Configuration Legacy`_.
 
 Supported configuration types
 -----------------------------
@@ -33,7 +33,7 @@ Consistentency across supported configuration types
 
 Note that the various available configuration options are handled
 **consistently** across the supported configuration types, i.e. for defining the configuration setting
-``foo-option`` (in section ``somesection``) to ``bar``, the following alternatives are available:
+``foo`` (in section ``somesection``) to ``bar``, the following alternatives are available:
 
 -  configuration file entry (key-value assignment):
 
@@ -90,7 +90,7 @@ configuration format as parsed by the ``configparser`` module
 Configuration files are organized in sections, the section name for a
 particular configuration setting is indicated in the output of ``eb --help``.
 Some examples sections are: ``MAIN``, ``basic``, ``config``,
-``informative``, ``override``, ``regtest``, ``software``, ``unittest``, … .
+``informative``, ``override``, ``regtest``, ``software``, ``unittest``, etc.
 
 Sections are indicated by specifying the section name in square brackets
 on a dedicated line, e.g., ``[basic]``.
@@ -270,9 +270,9 @@ when the installation is completed (by default).
 
 .. tip::
   Using ``/dev/shm`` as build path can significantly speed up builds,
-  if it is available and provides a sufficient amount of space. Hint: Setting up
+  if it is available and provides a sufficient amount of space. Setting up
   the variable ``EASYBUILD_BUILDPATH`` in your shell startup files makes this default.
-  However be aware that, fi., 2 parallel GCC builds may fill up ``/dev/shm`` !
+  However be aware that, fi., two parallel GCC builds may fill up ``/dev/shm`` !
 
 Install path (``--installpath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -285,7 +285,7 @@ corresponding module files.
 
 The packages themselves are installed under ``<installpath>/software``
 in their own subdirectory following the active module naming scheme
-(e.g., ``<name>/<version>-<toolkit><versionsuffix>``, by default).
+(e.g., ``<name>/<version>-<toolchain><versionsuffix>``, by default).
 The corresponding module files are installed under
 ``<installpath>/modules/all``, and symlinks are installed in ``<installpath>/modules/<moduleclass>``.
 
