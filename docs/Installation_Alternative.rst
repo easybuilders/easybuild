@@ -179,13 +179,13 @@ EasyBuild repository for that matter)::
   You should use this only if you are interested in developing for EasyBuild.
   Although it is well tested, the development version of EasyBuild may be unstable at a given point in time.
 
-Installation of latest development version, last but not least
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation of latest development version using provided script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can setup a development version of EasyBuild, quite well in the following manner::
+You can set up a development version of EasyBuild, in the following manner::
 
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
-    bash install-EasyBuild-develop.sh hpcugent /tmp/$$ ## N.B. repo-to-be-used & delivery directory
+    bash install-EasyBuild-develop.sh hpcugent /tmp/$$ ## N.B. repo-to-be-used & installation prefix
     module load /tmp/$$/module-EasyBuild-develop
     eb --version  ## This should ensure you have a reasonable instance of EasyBuild
 
@@ -193,5 +193,5 @@ You can setup a development version of EasyBuild, quite well in the following ma
   The interesting aspect about it is that it is pointing to an EasyBuild
   installation directly on local git repositories, which allows you to
   customise it easily. Remember to commit/push or otherwise save your changes,
-  if you intend them for future usage!
+  if you intend to use them later.
 
