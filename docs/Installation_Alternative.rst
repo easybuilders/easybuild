@@ -184,7 +184,9 @@ Installation of latest development version, last but not least
 You can setup a development version of EasyBuild, quite well in the following manner::
 
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
-    bash install-EasyBuild-develop.sh hpcugent /tmp/$$ # N.B. delivery directory
+    bash install-EasyBuild-develop.sh hpcugent /tmp/$$ ## N.B. repo-to-be-used & delivery directory
+    module load /tmp/$$/module-EasyBuild-develop
+    eb --version  ## This should ensure you have a reasonable instance of EasyBuild
 
 .. note:: The above creates a modulefile which you can load/inspect at will.
   The interesting aspect about it is that it is pointing to an EasyBuild
