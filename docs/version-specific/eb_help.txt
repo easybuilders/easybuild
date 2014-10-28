@@ -1,4 +1,6 @@
 
+::
+
  Usage: eb [options] easyconfig [...]
 
  Builds software based on easyconfig (or parse a directory). Provide one or
