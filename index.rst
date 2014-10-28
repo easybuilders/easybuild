@@ -56,6 +56,7 @@ Contents
 
 .. toctree::
     :hidden:
+    :maxdepth: 1
 
     docs/Installation_Alternative
     docs/Configuration_Legacy
