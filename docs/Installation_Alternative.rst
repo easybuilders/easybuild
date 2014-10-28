@@ -55,6 +55,8 @@ update the ``$PATH`` environment variable to make sure the system can
 find the main EasyBuild command ``eb``.
 On (most) Linux distributions, the command for doing this is:
 
+.. code-block:: shell
+
     export PATH=/tmp/bin:$PATH
     export PYTHONPATH=/tmp/lib/python2.7/site-packages:$PYTHONPATH
 
