@@ -4,7 +4,8 @@ Configuration Legacy
 
 .. XXX - UPDATE BY VERSION
 
-Legacy configuration is currently **deprecated!**; 
+Legacy configuration is currently **deprecated!**
+
 If you are a new user of EasyBuild you can safely ignore everything below this line,
 refer instead to :doc:`Configuration`.
 
@@ -41,14 +42,7 @@ Configuring `EasyBuild` is done by providing a configuration file.
 EasyBuild expects the configuration file to contain valid Python code,
 because it executes its contents (using ``exec``).
 The rationale is that this approach provides a lot of flexibility for
-configuring EasyBuild. However,
-we are going to move away from this path, and use the default python
-configuration format as parsed by `configparser`_
-This new format is already available, you can see it showing up in
-``eb --help`` (all the configfile section names) and use it using the
-``--configfiles`` option, or put a configfile in
-``$HOME/.easybuild/config.cfg``
-**This new format is** usable, but it is **not yet documented here.**
+configuring EasyBuild.
 
 EasyBuild will use the file that is provided by the path/filename in the
 following order of preference:
@@ -90,9 +84,9 @@ in their own subdirectory aptly named
 (by default), where name is the package name. The corresponding module
 files are installed under ``install_path/modules``.
 
-**Setting MODULEPATH**
+**Setting $MODULEPATH**
 
-After the configuration, you need to make sure that ``MODULEPATH``
+After the configuration, you need to make sure that ``$MODULEPATH``
 environment variable is extended with the ``modules/all`` subdirectory
 of the ``install_path``, i.e.:
 
@@ -101,7 +95,7 @@ of the ``install_path``, i.e.:
     export MODULEPATH=<install_path>/modules/all:$MODULEPATH
 
 It is probably a good idea to add this to your (favourite) shell .rc
-file, e.g., ``.bashrc``, and/or the ``.profile`` login scripts, so you do not need to adjust the ``MODULEPATH`` variable every time
+file, e.g., ``.bashrc``, and/or the ``.profile`` login scripts, so you do not need to adjust the ``$MODULEPATH`` variable every time
 you start a new session.
 
 Source path (required)
@@ -113,8 +107,7 @@ looks for software source and install files.
 Similarly to the configuration file lookup, EasyBuild looks for the
 installation files as given by the ``sources`` variable in the .eb easyconfig file, in the following order of preference:
 
--  ``<source_path>/<name>``: a subdirectory determined by the name 
-   of the software package
+-  ``<source_path>/<name>``: a subdirectory determined by the name of the software package
 -  ``<source_path>/<letter>/<name>``: in the style of the
    ``easyblocks``/``easyconfigs`` directories:
    in a subdirectory determined by the first letter (in lower case) of
@@ -122,7 +115,7 @@ installation files as given by the ``sources`` variable in the .eb easyconfig fi
 -  ``<source_path>``: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
-files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the PYTHONPATH.
+files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the ``$PYTHONPATH``.
 
 
 .. _configparser: http://docs.python.org/2/library/configparser.html

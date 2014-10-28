@@ -282,7 +282,10 @@ in their own subdirectory following the active module naming scheme
 The corresponding module files are installed under
 ``<installpath>/modules/all``, and symlinks are installed in ``<installpath>/modules/<moduleclass>``.
 
-Different configuration options are available for changing the default behaviour, i.e., --subdir-software, --subdir-modules, --module-naming-scheme, etc.
+Different configuration options are available for changing the default behaviour, i.e.,
+--subdir-software, --subdir-modules, --suffix-modules-path, --module-naming-scheme, etc.
+
+For more information, see `Optional configuration settings`_.
 
 Setting ``$MODULEPATH``
 '''''''''''''''''''''''
@@ -341,7 +344,7 @@ Or, optionally an extra argument representing a subdirectory can be specified, e
 .. code:: shell-session
 
     $ export EASYBUILD_REPOSITORY=GitRepository
-    $ export EASYBUILD_REPOSITORYPATH=<path>, <subdir>
+    $ export EASYBUILD_REPOSITORYPATH=<path>,<subdir>
 
 You do not have to worry about importing these classes,
 EasyBuild will make them available to the configuration file.
@@ -386,25 +389,24 @@ EasyBuild configuration file:
 Optional configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Software and modules install path suffixes (``--subdir-software``, ``--subdir-modules``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Software and modules install path suffixes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-(supported since v1.1.0)
+This section describes configuration options
+``--subdir-software``, ``--subdir-modules``, ``--suffix-modules-path``,
+which are supported since v1.14.0.
 
 *defaults*: ``software`` as software install path suffix, ``modules`` as
 modules install path suffix
 
 The software and modules install path suffixes can be adjusted using the
-``subdir-software`` and/or ``subdir-modules`` configuration settings,
+``subdir-software`` and/or ``subdir-modules`` / ``suffix-modules-path`` configuration settings,
 for example:
 
 .. code:: shell-session
 
     $ export EASYBUILD_SUBDIR_SOFTWARE=installs
     $ eb --subdir-modules=module_files ...
-
-Note: EasyBuild will still use the additional ``all`` and
-``<moduleclass>`` suffixes for the module install paths.
 
 Modules tool (``--modules-tool``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -417,12 +419,12 @@ A list of supported modules tools can be obtained using ``eb --avail-modules-too
 
 Currently, the following modules tools are supported:
 
--  ``EnvironmentModulesC``: C version of environment modules (``modulecmd``)
+-  ``EnvironmentModulesC``: Tcl/C version of environment modules (``modulecmd``)
 -  ``EnvironmentModulesTcl``: Tcl-only version of environment modules (``modulecmd.tcl``)
 -  ``Lmod``: Lmod, an modern alternative to environment modules, written in Lua (``lmod``)
 
 You can determine which modules tool you are using by checking the
-output of ``type module`` (in a ``bash`` shell), or ``alias module`` (in a ``tcsh`` shell).
+output of ``type -f module`` (in a ``bash`` shell), or ``alias module`` (in a ``tcsh`` shell).
 
 The actual module command (i.e., ``modulecmd``, ``modulecmd.tcl``,
 ``lmod``, ...) must be available via ``$PATH`` (which is not standard).
@@ -440,6 +442,10 @@ Active module naming scheme (``--module-naming-scheme``)
 
 The module naming scheme that should be used by EasyBuild can be
 specified using the ``module-naming-scheme`` configuration setting.
+
+.. code:: shell-session
+
+    eb --module-naming-scheme=HierarchicalMNS ...
 
 For more details, see the dedicated wiki page :doc:`Using a custom module naming scheme`.
 

@@ -43,24 +43,22 @@ you can use one of the following simple commands:
        pip install --prefix /tmp easybuild
 
 The ``--prefix /tmp`` part in these commands allows you to install EasyBuild without admin rights into ``/tmp``.
-It will just install EasyBuild in your home directory (the exact location depends on your OS configuration).
 
 
 Adjusting ``$PATH`` and ``$PYTHONPATH`` environment variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After installing EasyBuild with either ``easy_install`` or ``pip``
-like this, you will need to
-update the ``$PATH`` environment variable to make sure the system can
-find the main EasyBuild command ``eb``.
+like this, you will need to update the ``$PATH`` and ``$PYTHONPATH``
+environment variable to make sure the system can find the main EasyBuild command ``eb``.
 On (most) Linux distributions, the command for doing this is:
 
-.. code-block:: bash
+.. code:: bash
 
     export PATH=/tmp/bin:$PATH
     export PYTHONPATH=/tmp/lib/python2.7/site-packages:$PYTHONPATH
 
-.. tip:
+.. tip::
 
   To determine the path that should be added to the ``$PYTHONPATH``
   environment variable for a given installation prefix, you can use the
@@ -86,13 +84,12 @@ you can specify that EasyBuild should be installed in your ``$HOME``
 directory using the ``--user`` option.
 
 The full list of commands to install EasyBuild in your ``$HOME``
-directory using ``pip`` would be:
+directory using ``pip`` would be::
 
     pip install --user easybuild
     export PATH=$HOME/.local/bin:$PATH
 
-
-.. warning:
+.. warning::
 
   In our experience, using ``--user`` creates more problems than it solves.
   We have run into unexpected behavior with Python software installed in your
@@ -181,4 +178,8 @@ You can set up a development version of EasyBuild, in the following manner::
   installation directly on local git repositories, which allows you to
   customise it easily. Remember to commit/push or otherwise save your changes,
   if you intend to use them later.
+
+.. note:: Using ``$$`` (process id of current shell) is there to ensure that you do not step on other people's toes,
+  in case you happen to run the same command, on the same system, at the same time.
+
 
