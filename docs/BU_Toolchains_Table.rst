@@ -10,9 +10,13 @@ The list of toolchains can easily be obtained with::
   [...]
 
 
-===================   ======================================================
-Toolchain name        Components that comprise the toolchain
-===================   ======================================================
+.. XXX - UPDATE BY VERSION
+
+.. table List of toolchains as of version 1.15.2
+
+ ==================   ======================================================
+ Toolchain name        Components that comprise the toolchain
+ ==================   ======================================================
 
 	ClangGCC      Clang, GCC
 	GCC           GCC
@@ -44,7 +48,6 @@ Toolchain name        Components that comprise the toolchain
 	impmkl        MPICH2, icc, ifort, imkl
 	intel         icc, ifort, imkl, impi
 	iomkl         OpenMPI, icc, ifort, imkl
-	iqacml: ACML, BLACS, FFTW, QLogicMPI, ScaLAPACK, icc, ifort
-	ismkl: MPICH2, icc, ifort, imkl
-	tcc: TCC
+	iqacml        ACML, BLACS, FFTW, QLogicMPI, ScaLAPACK, icc, ifort
+	ismkl         MPICH2, icc, ifort, imkl
 
