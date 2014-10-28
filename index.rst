@@ -1,13 +1,16 @@
+.. toctree::
+     :maxdepth: 2
+
 .. EasyBuild documentation master file
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+
 
 This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version: 1.15.2
 
 Welcome to EasyBuild's documentation!
 =====================================
 
-.. rubric:: Everything you need to know about EasyBuild.
+.. rubric:: Everything you need to know about EasyBuild
+  , the efficient way to manage software on High Performance Computing (HPC) platforms.
 
 Getting help
 ============
@@ -16,7 +19,9 @@ Having trouble? We'd like to help!
 
 * Search for information in the `archives`_ of the easybuild@lists.ugent.be mailing list or `subscribe`_ to post a question.
 
-* Ask a question in the `#easybuild IRC channel`_ on the Freenode network, or search this documentation collection.
+* Did you try ``eb --help``?
+
+* Ask a question in the `#easybuild IRC channel`_ on the Freenode network or, :ref:`search <search>` this documentation collection.
 
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 
@@ -43,7 +48,18 @@ Contents
     :glob:
     :maxdepth: 1
 
+    docs/Concepts_and_Terminology
+    docs/Installation
     docs/Configuration
+
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+
+    docs/Installation_Alternative
+    docs/Configuration_Legacy
+
+-------
 
 Indices and tables
 ==================
@@ -58,5 +74,6 @@ Reference Pages
 
 * :ref:`Search <search>`
 
---------
+
+-------
 

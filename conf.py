@@ -41,9 +41,9 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '0.2'
 # The full version, including alpha/beta/rc tags.
-release = '0.1.13'
+release = '0.2.22'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -100,6 +100,8 @@ else:
 # The name of an image file (within the static path) to place at the top of
 # the sidebar.
 #html_logo = None
+
+html_logo = 'easybuild_logo_alpha.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
