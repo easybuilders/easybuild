@@ -2,6 +2,8 @@
 .. toctree::
      :maxdepth: 1
 
+.. _configuring_easybuild:
+
 Configuring EasyBuild
 =====================
 
@@ -329,7 +331,7 @@ You do not have to worry about importing these classes,
 EasyBuild will make them available to the configuration file.
 
 Using ``git`` requires the ``GitPython`` Python modules, using ``svn``
-requires the ``pysvn`` Python module (see :doc:`Dependencies`).
+requires the ``pysvn`` Python module (see :ref:`dependencies`).
 
 If access to the easyconfigs repository fails for some reason
 (e.g., no network or a missing required Python module), EasyBuild will

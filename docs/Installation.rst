@@ -63,8 +63,7 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
   and ``MODULEPATH`` should be aligned with it to make sure the EasyBuild module can be loaded,
   i.e. you should include .../modules/all in your $MODULEPATH.". If you also want
   software that is built using EasyBuild to be installed there, you will need to set
-  ``EASYBUILD_INSTALLPATH``, and/or look into the details on :doc:`Configuring EasyBuild`.
-
+  ``EASYBUILD_INSTALLPATH``, and/or look into the details on :ref:`configuring_easyBuild`.
 
 .. XXX - UPDATE BY VERSION
 
@@ -73,7 +72,6 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
   The bootstrap script will only succeed if command `module --version` reports a sufficiently recent version
   (e.g., environments-modules-c >=v3.2.10 or Lmd >= 5.6.3), because modules are applied throughout,
   e.g., to resolve dependencies and detect already installed software.
-
 
 Normally, only when the above fails to work for you for some reason, should you resort
 to one of the alternative approaches documented at :ref:`alt_inst_methods`
@@ -212,6 +210,7 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
 Now, enjoy!
 
 
+.. _dependencies:
 
 Dependencies
 ------------

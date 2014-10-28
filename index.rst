@@ -49,9 +49,7 @@ Contents
     :maxdepth: 1
 
     docs/Concepts_and_Terminology
-    Installation <Installing EasyBuild>
     docs/Installation
-    Configuration <Configuring EasyBuild>
     docs/Configuration
 
 .. toctree::
