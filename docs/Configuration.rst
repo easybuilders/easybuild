@@ -211,16 +211,18 @@ provided using one of the supported configuration types.
 The following configuration settings are currently mandatory
 (more details in the sections below):
 
--  `Source path (``--sourcepath``)`
--  build path
--  install path
--  easyconfigs repository
--  format for name of logfile
+-  :ref:`sourcepath`
+-  :ref:`buildpath`
+-  :ref:`installpath`
+-  :ref:`easyconfigsrepo`
+-  :ref:`logfile_format`
 
 If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
 
 In practice, all of these have reasonable defaults (see eb --help for the default settings).
 
+
+.. _sourcepath:
 
 Source path (``--sourcepath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -239,6 +241,8 @@ easyconfig file is done in the following order of preference:
 
 Note that these locations are also used when EasyBuild looks for patch
 files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the PYTHONPATH.
+
+.. _buildpath:
 
 Build path (``--buildpath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -260,6 +264,8 @@ when the installation is completed (by default).
   if it is available and provides a sufficient amount of space. Setting up
   the variable ``EASYBUILD_BUILDPATH`` in your shell startup files makes this default.
   However be aware that, fi., two parallel GCC builds may fill up ``/dev/shm`` !
+
+.. _installpath:
 
 Install path (``--installpath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -294,6 +300,7 @@ It is probably a good idea to add this to your (favourite) shell
 ``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login scripts,
 so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 
+.. _easyconfigs_repo:
 
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -347,6 +354,8 @@ If access to the easyconfigs repository fails for some reason
 issue a warning. The software package will still be installed, but the
 (successful) easyconfig will not be automatically added to the archive
 (i.e., it is not considered a fatal error).
+
+.. _logfile_format:
 
 Logfile format (``--logfile-format``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
