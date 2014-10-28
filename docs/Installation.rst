@@ -274,7 +274,7 @@ Optional Python modules
 
 
 In case of problems...
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 **Please open an issue:**
 https://github.com/hpcugent/easybuild/issues/new
