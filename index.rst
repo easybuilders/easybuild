@@ -2,16 +2,17 @@
      :maxdepth: 2
 
 .. EasyBuild documentation master file
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+
 
 This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version: 1.15.2
 
 Welcome to EasyBuild's documentation!
 =====================================
 
-.. rubric:: Everything you need to know about EasyBuild,
-            the efficient way to manage software on High Performance Computing (HPC) platforms.
+.. rubric::
+
+  Everything you need to know about EasyBuild,
+  the efficient way to manage software on High Performance Computing (HPC) platforms.
 
 Getting help
 ============
@@ -50,9 +51,10 @@ Contents
     :maxdepth: 1
 
     docs/Concepts_and_Terminology
-    Installation <docs/Installation>
-    Configuration <docs/Configuration>
+    :doc:`Installation <docs/Installation>`
+    :doc:`Configuration <docs/Configuration>`
     docs/Basic_Usage_and_Command_Line_Options
+    docs/Toolchains_Table
 
 .. toctree::
     :hidden:
