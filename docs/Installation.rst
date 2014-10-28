@@ -12,11 +12,14 @@ for Python packages, we recommend using the **bootstrap** install procedure desc
 Notes on other ways of installing EasyBuild are available under section `Alternative installation methods`_.
 
 -  `Bootstrapping EasyBuild`_
+
   -  `Bootstrapping procedure`_
   -  `Sanity check`_
   -  `Running unit tests`_
   -  `Example boostrap run`_
+
 -  `In case of problems...`_
+
   -  `How to collect info in case sanity checks fail or there is another issue`_
 
 --------------
@@ -55,7 +58,7 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
   and ``MODULEPATH`` should be aligned with it to make sure the EasyBuild module can be loaded,
   i.e. you should include .../modules/all in your $MODULEPATH.". If you also want
   software that is built using EasyBuild to be installed there, you will need to set
-  ``EASYBUILD_INSTALLPATH``, and/or look into the details on `EasyBuild configuration`_.
+  ``EASYBUILD_INSTALLPATH``, and/or look into the details on `EasyBuild Configuration`_.
 
 .. warning::
 

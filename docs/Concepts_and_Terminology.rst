@@ -78,7 +78,7 @@ Compiler toolchains
 -------------------
 
 EasyBuild employs so-called `compiler toolchains` (or simply `toolchains` for short),
-which are a major concept in handling the build and installation processes. 
+which are a major concept in handling the build and installation processes.
 
 A toolchain consists of one or more compilers, usually put together with some libraries for specific functionality,
 e.g., for using an MPI stack for distributed computing, or which provide optimized routines for commonly
@@ -102,7 +102,7 @@ Recent releases of EasyBuild include out-of-the-box toolchain support for: vario
 Easyconfig files
 ----------------
 
- The specification files that are supplied to EasyBuild are referred to as `easyconfig files`
+The specification files that are supplied to EasyBuild are referred to as `easyconfig files`
 (or simply `easyconfigs`), which are basically plain text files containing (mostly) only
 key-value assignments for build parameters supported by the framework, also referred
 to as `easyconfig parameters`. Some parameters are mandatory, like ``name`` and ``version``

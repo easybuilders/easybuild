@@ -9,10 +9,8 @@ This document was last rebuilt on: |today|. Latest EasyBuild release known to co
 Welcome to EasyBuild's documentation!
 =====================================
 
-.. rubric::
-
-  Everything you need to know about EasyBuild,
-  the efficient way to manage software on High Performance Computing (HPC) platforms.
+.. rubric:: Everything you need to know about EasyBuild
+  , the efficient way to manage software on High Performance Computing (HPC) platforms.
 
 Getting help
 ============
@@ -51,10 +49,10 @@ Contents
     :maxdepth: 1
 
     docs/Concepts_and_Terminology
-    :doc:`Installation <docs/Installation>`
-    :doc:`Configuration <docs/Configuration>`
+    docs/Installation
+    docs/Configuration
     docs/Basic_Usage_and_Command_Line_Options
-    docs/Toolchains_Table
+    docs/BU_Toolchains_Table
 
 .. toctree::
     :hidden:
@@ -76,5 +74,4 @@ Reference Pages
 
 * :ref:`Search <search>`
 
---------
 

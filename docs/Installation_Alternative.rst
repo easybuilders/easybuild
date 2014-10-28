@@ -56,14 +56,14 @@ find the main EasyBuild command ``eb``.
 On (most) Linux distributions, the command for doing this is:
 
     export PATH=$HOME/.local/bin:$PATH
-XXX - PYTHONPATH
+    XXX - PYTHONPATH
 
 On Mac OS X systems, the user-site install location is different, so the
 command would look something like::
 
     export PATH=$HOME/Library/Python/2.7/bin:$PATH
     export PYTHONPATH=$HOME/Library/Python2.7/lib/python2.7/site-packages:$PYTHONPATH
-XXX - PYTHONPATH
+    XXX - PYTHONPATH
 
 Depending on the OS X version and the Python version that comes with it,
 you may need to adjust the Python version used in the path.
