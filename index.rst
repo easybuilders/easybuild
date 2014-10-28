@@ -59,6 +59,8 @@ Contents
     docs/Installation_Alternative
     docs/Configuration_Legacy
 
+-------
+
 Indices and tables
 ==================
 
@@ -72,4 +74,6 @@ Reference Pages
 
 * :ref:`Search <search>`
 
+
+-------
 

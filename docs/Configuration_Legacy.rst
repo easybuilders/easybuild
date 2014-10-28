@@ -14,17 +14,15 @@ refer instead to :doc:`Configuration`.
 Porting from legacy configuration style
 ---------------------------------------
 
-In EasyBuild v1.x, a couple of configuration options other than the ones
-above are available that follow the **legacy configuration style**,
-including:
+In EasyBuild v1.x, a couple of configuration options, other than the standard ones aligned with variables,
+are available that follow the **legacy configuration style**, including:
 
 -  the ``-C`` and ``--config`` command line arguments ( **use** ``--configfiles`` **instead** )
 -  the ``$EASYBUILDCONFIG`` environment variable ( **use** ``$EASYBUILD_CONFIGFILES`` **instead** )
 -  the default path ``$HOME/.easybuild/config.py`` ( **new-style default path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
 -  the legacy fallback path ``<installpath>/easybuild/easybuild_config.py`` ( **only default/fallback path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
 
-Likewise, the following legacy environment variables allowed to override
-selected configuration settings:
+Likewise, the following legacy environment variables allowed to override selected configuration settings:
 
 -  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild ( **use** ``$EASYBUILD_BUILDPATH`` **instead** )
 -  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild ( **use** ``$EASYBUILD_INSTALLPATH`` **instead** )
