@@ -54,10 +54,13 @@ Contents
 
 .. toctree::
     :hidden:
+    :glob:
     :maxdepth: 1
 
     docs/Installation_Alternative
     docs/Configuration_Legacy
+    docs/eb_*.rst
+    docs/Installing*.rst
 
 -------
 
