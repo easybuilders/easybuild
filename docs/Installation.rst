@@ -297,7 +297,7 @@ you are using the bootstrap script, please copy-paste the commands below
 and provide the output.
 **Do not worry if some of these commands fail or spit out error messages.**
 
-.. code:: shell
+.. code:: sh
 
     python -V
     type -f module

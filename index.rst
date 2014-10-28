@@ -60,7 +60,9 @@ Contents
     docs/Installation_Alternative
     docs/Configuration_Legacy
     docs/eb_*.rst
-    docs/Installing*.rst
+    docs/Installing-Lmod-without-root-permissions.rst
+    docs/Installing-environment-modules-without-root-permissions.rst
+    docs/Using_a_custom_module_naming_scheme.rst
 
 -------
 
@@ -76,7 +78,4 @@ Reference Pages
     :maxdepth: 1
 
 * :ref:`Search <search>`
-
-
--------
 

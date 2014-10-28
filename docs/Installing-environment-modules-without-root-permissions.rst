@@ -66,7 +66,7 @@ Environment Modules
 #. Download the latest source tarball for the environment modules tools
    from <http://modules.sourceforge.net/>. At the time of writing,
    the latest available version is 3.2.10 which can be downloaded
-   `here <http://prdownloads.sourceforge.net/modules/modules-3.2.10.tar.gz>`_.
+   `from here <http://prdownloads.sourceforge.net/modules/modules-3.2.10.tar.gz>`_.
 
 #. Unpack the downloaded source tarball:
 
@@ -77,8 +77,7 @@ Environment Modules
 #. Configure the build, again use ``--prefix`` to specify where to
    install the environment modules tool in the end. If you needed to
    install Tcl by hand as outlined in the previous section, you’ll also
-   need to specify where it was installed using the ``--with-tcl``
-   option:
+   need to specify where it was installed using the ``--with-tcl`` option:
 
    .. code:: bash
 
