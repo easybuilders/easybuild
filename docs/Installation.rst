@@ -277,7 +277,10 @@ Optional Python modules
    repository for easyconfig files (.eb)
 -  `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
    SVN repository for easyconfig files (.eb)
-
+-  `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
+   only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
+-  `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
+   only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``.
 
 
 In case of installation issues...
@@ -292,9 +295,9 @@ How to collect info in case sanity checks fail or there is another issue
 In order to get a better understanding in which kind of environment
 you are using the bootstrap script, please copy-paste the commands below
 and provide the output.
-**Do not worry if some of these commands fail or spit out error messages.**:
+**Do not worry if some of these commands fail or spit out error messages.**
 
-.. sourcecode:: shell
+.. code:: shell
 
     python -V
     type -f module

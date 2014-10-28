@@ -10,9 +10,6 @@ Configuring EasyBuild
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
-For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration_Legacy` .
-
-
 Supported configuration types
 -----------------------------
 
@@ -303,7 +300,7 @@ It is probably a good idea to add this to your (favourite) shell
 ``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login scripts,
 so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 
-.. _easyconfigs_repo:
+.. _easyconfigsrepo:
 
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -447,7 +444,7 @@ specified using the ``module-naming-scheme`` configuration setting.
 
     eb --module-naming-scheme=HierarchicalMNS ...
 
-For more details, see the dedicated wiki page :doc:`Using a custom module naming scheme`.
+For more details, see the dedicated page :ref:`Using a custom module naming scheme`.
 
 .. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
 
