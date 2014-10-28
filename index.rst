@@ -59,10 +59,10 @@ Contents
 
     docs/Installation_Alternative
     docs/Configuration_Legacy
-    docs/eb_*.rst
-    docs/Installing-Lmod-without-root-permissions.rst
-    docs/Installing-environment-modules-without-root-permissions.rst
-    docs/Using_a_custom_module_naming_scheme.rst
+    docs/eb_*
+    docs/Installing-Lmod-without-root-permissions
+    docs/Installing-environment-modules-without-root-permissions
+    docs/Using_a_custom_module_naming_scheme
 
 -------
 
