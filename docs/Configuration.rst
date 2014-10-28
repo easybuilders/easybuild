@@ -43,21 +43,25 @@ Note that the various available configuration options are handled
    .. code:: ini
 
        [somesection]
-       foo-option = bar
+       foo = bar
+       modules-tool = Lmod
 
 -  environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s becomes ``_``\ ’s):
 
    .. code:: shell-session
 
-       $ export EASYBUILD_FOO_OPTION=bar
+       $ export EASYBUILD_FOO=bar
+       $ export EASYBUILD_MODULES_TOOL=Lmod
 
 -  command line argument (long options preceded by ``--`` and (optionally) using ``=``):
 
    .. code:: shell-session
 
-       $ eb --foo-option=bar
+       $ eb --foo=bar
+       $ eb --modules-tool=Lmod
        # or
-       $ eb --foo-option bar
+       $ eb --foo bar
+       $ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
 
@@ -162,6 +166,9 @@ For example, to enable debug logging using an environment variable:
 More examples of using environment variables to configure EasyBuild are
 shown in the sections below.
 
+.. tip:: Any configuration option of EasyBuild which can be tuned by command line
+   or via the configuration file, can also be tuned via a corresponding environment variable.
+
 
 Command line arguments
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -204,7 +211,7 @@ provided using one of the supported configuration types.
 The following configuration settings are currently mandatory
 (more details in the sections below):
 
--  source path
+-  `Source path (``--sourcepath``)`
 -  build path
 -  install path
 -  easyconfigs repository
@@ -212,7 +219,7 @@ The following configuration settings are currently mandatory
 
 If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
 
-In practice, all of these have reasonable defaults.
+In practice, all of these have reasonable defaults (see eb --help for the default settings).
 
 
 Source path (``--sourcepath``)
@@ -263,11 +270,13 @@ The ``installpath`` configuration setting specifies the parent path of
 the directories in which EasyBuild installs software packages and the
 corresponding module files.
 
-The packages themselves are installed under ``<installpath>/software``
+By default, the packages themselves are installed under ``<installpath>/software``
 in their own subdirectory following the active module naming scheme
 (e.g., ``<name>/<version>-<toolchain><versionsuffix>``, by default).
 The corresponding module files are installed under
 ``<installpath>/modules/all``, and symlinks are installed in ``<installpath>/modules/<moduleclass>``.
+
+Different configuration options are available for changing the default behaviour, i.e., --subdir-software, --subdir-modules, --module-naming-scheme, etc.
 
 Setting ``$MODULEPATH``
 '''''''''''''''''''''''

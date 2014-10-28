@@ -1,15 +1,15 @@
 .. toctree::
      :maxdepth: 1
 
-Concepts and design
-===================
+Concepts and terminology
+========================
 
 
 EasyBuild consists of a collection of Python modules and packages that interact with each other,
 dynamically picking up additional Python modules as needed for building and installing
 a (stack of) software package(s) specified via simple specification files.
-Or, in EasyBuild terminology: the `EasyBuild framework`_ leverages `Easyblocks`_ to automatically
-build and install software using particular `Compiler toolchains`_, as specified by one or multiple `Easyconfig files`_.
+Or, in EasyBuild terminology: the `EasyBuild framework`_ leverages `easyblocks`_ to automatically
+build and install software using particular `compiler toolchains`_, as specified by one or multiple `easyconfig files`_.
 
 
 
@@ -24,14 +24,14 @@ creating module files that match the specification files, etc.
 
 Included in the framework is an `abstract` implementation of a software build and install procedure,
 which is split up into different `steps`: unpacking sources, configuration, build, installation,
-module generation, etc. Most of these steps, i.e., the ones that are generally more-or-less
+module generation, etc. Most of these steps, i.e., the ones which are generally more-or-less
 analogous across different software packages, have appropriate (default) implementations.
 The only exceptions are the configuration, build and installation steps that are purposely
 left unimplemented (since there is no common procedure for them). Each of the steps can be
 tweaked and steered via different parameters known to the framework, for which values are
 either obtained from the provided specification files or set to reasonable default values.
 
-XXX - UPDATE BY VERSION
+.. XXX - UPDATE BY VERSION
 
 In EasyBuild v1.15.2 the framework source code consists of about 19000 lines of code,
 organized across about 125 Python modules in roughly a dozen Python package directories,
@@ -64,14 +64,14 @@ specification parameter. In case an easyblock specification is not provided and 
 easyblock matching the software name could be found, a fallback mechanism will resort to using
 the generic ConfigureMake easyblock, which implements the common configure – make – make install procedure.
 
-XXX - UPDATE BY VERSION
+.. XXX - UPDATE BY VERSION
 
 At the time of writing, the most recent release of EasyBuild (v1.15.2) includes 139 software-specific
 easyblocks and 20 generic easyblocks, providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, over basic tools
 like compilers, various MPI stacks and commonly used libraries, to large scientific software
 packages that are notorious for their involved and tedious install procedures, such as:
-`CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`
+`CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`.
 
 
 Compiler toolchains
@@ -92,7 +92,7 @@ of library names to supply to the linker (via ``$LIBS``), etc. This enables maki
 `toolchain-agnostic` since they can simply rely on these environment variables; that is, unless they
 need to be aware of, for example, the particular compiler being used to determine the build configuration options.
 
-Recent releases of EasyBuild include out-of-the-box toolchain support for: various compilers, including:
+Recent releases of EasyBuild include out-of-the-box toolchain support for:
 
 - various compilers, including GCC, Intel, Clang, CUDA
 - common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI
@@ -105,12 +105,16 @@ Easyconfig files
 The specification files that are supplied to EasyBuild are referred to as `easyconfig files`
 (or simply `easyconfigs`), which are basically plain text files containing (mostly) only
 key-value assignments for build parameters supported by the framework, also referred
-to as `easyconfig parameters`. Some parameters are mandatory, like ``name`` and ``version``
+to as `easyconfig parameters`.
+
+Some parameters are mandatory, like ``name`` and ``version``
 to specify which software (version) should be installed, `toolchain` to indicate
 which compiler toolchain should be used, etc. Others are optional, and have appropriate
 defaults set for them in the EasyBuild framework; examples include ``buildopts`` to specify
 options for the build command, and dependencies to list the software `dependencies` that should
-be taken into account. Note that easyconfig files only provide the bits of information required
+be taken into account.
+
+Note that easyconfig files only provide the bits of information required
 to determine the corresponding module name; the module name itself is computed by EasyBuild
 framework by querying the module naming scheme being used. The complete
 list of supported easyconfig parameters can be easily obtained via the EasyBuild command line (``eb -a``).
@@ -121,9 +125,7 @@ an installation, EasyBuild copies the used easyconfig file to the install direct
 and also supports maintaining an easyconfig archive which is updated on every successful installation.
 Therefore, reproducing installations becomes trivial.
 
-XXX - UPDATE BY VERSION
+.. XXX - UPDATE BY VERSION
 
 EasyBuild v1.15.2 includes support for over 511 different software packages,
 spread over 2800 easyconfig files describing distinct builds.
-
-
