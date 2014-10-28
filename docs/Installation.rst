@@ -2,8 +2,8 @@
 .. toctree::
      :maxdepth: 1
 
-EasyBuild installation
-======================
+Installing EasyBuild
+====================
 
 EasyBuild is Python software, so there are a couple of ways to install it.
 Because of various issues with the different installation tools that are available
@@ -63,7 +63,7 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
   and ``MODULEPATH`` should be aligned with it to make sure the EasyBuild module can be loaded,
   i.e. you should include .../modules/all in your $MODULEPATH.". If you also want
   software that is built using EasyBuild to be installed there, you will need to set
-  ``EASYBUILD_INSTALLPATH``, and/or look into the details on :doc:`EasyBuild Configuration`.
+  ``EASYBUILD_INSTALLPATH``, and/or look into the details on :doc:`Configuring EasyBuild`.
 
 
 .. XXX - UPDATE BY VERSION

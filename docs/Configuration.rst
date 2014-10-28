@@ -2,15 +2,17 @@
 .. toctree::
      :maxdepth: 1
 
-EasyBuild configuration
-=======================
+Configuring EasyBuild
+=====================
 
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
-For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy`.
+For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy` .
 
-For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy`_.
+For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration_Legacy` .
+
+For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy`_ .
 XXX
 
 Supported configuration types
