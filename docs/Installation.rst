@@ -18,11 +18,14 @@ Notes on other ways of installing EasyBuild are available under section :doc:`Al
   -  `Running unit tests`_
   -  `Example boostrap run`_
 
+-  `Dependencies`_
+
 -  `In case of problems...`_
 
   -  `How to collect info in case sanity checks fail or there is another issue`_
 
 --------------
+
 
 Bootstrapping EasyBuild
 -----------------------
@@ -34,11 +37,13 @@ To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
 it - and yes, we use EasyBuild for doing so.
 
+.. XXX - UPDATE BY VERSION, below
+
 .. tip::
-  All you really need as dependencies is `Python 2.4 (or 2.x)` XXX - UPDATE BY VERSION
-  and `environment modules` (C, Tcl or Lmod variants) installed on your system, beforehand.
+  All you really need as required `dependencies`_ are `Python 2.4 (or 2.x)`
+  and `environment modules` (Tcl/C or Lmod variants) installed on your system, beforehand.
   Practically speaking, `a compiler able to build GCC` is desired for initiating most software builds,
-  yet EasyBuild does not restrict you in what is possible.
+  yet the EasyBuild framework, by itself, does not restrict you in what is possible.
 
 Bootstrapping procedure
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,6 +207,70 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
   
 Now, enjoy!
+
+
+
+Dependencies
+------------
+
+EasyBuild has a couple of dependencies, some of them optional:
+
+Required dependencies
+~~~~~~~~~~~~~~~~~~~~~
+
+-  **Linux** (or OSX) operating system; preferred: x86_64
+-  `Python 2.4 <http://python.org>`_, or a more recent 2.x version
+-  `Tcl/C environment-modules, version >= 3.2.10
+   <http://modules.sourceforge.net/>`_ 
+   or `Lmod, version >=5.6.3 <lmod.sourceforge.net>`_
+
+  -  environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
+     installed (with header files and development libraries)
+  -  a guide on installing Tcl and environment without having root
+     permissions is available at `Installing environment modules
+     without root permissions`_
+
+-  a C/C++ compiler
+
+.. tip::  
+ A packaged version of Tcl/C env. modules is available for 
+ `RPM-based systems <https://rhn.redhat.com/errata/RHBA-2014-0327.html>`_ and
+ `Debian/Ubuntu <https://packages.debian.org/testing/main/environment-modules>`_
+
+
+EasyBuild is written in Python, so a Python installation is
+indispensable.
+
+EasyBuild not only generates module files to be used along with the
+software it installs, it also depends on the generated modules for some
+of its functionality. In practice, you need environment modules to make
+full use of EasyBuild’s features.
+
+The C/C++ compiler is only required when an open-source compiler will be
+used to build software applications. EasyBuild will construct a GCC
+compiler toolchain first, before building the software applications, and
+to build the compiler to be part of the toolchain from source typically
+a C/C++ (system) compiler is required.
+
+Required Python modules
+^^^^^^^^^^^^^^^^^^^^^^^
+
+There are no required dependencies on non-standard Python modules.
+
+Optional dependencies
+~~~~~~~~~~~~~~~~~~~~~
+
+Some dependencies are optional and are only required to support certain features.
+
+Optional Python modules
+^^^^^^^^^^^^^^^^^^^^^^^
+
+-  `GitPython <http://gitorious.org/git-python>`_, only needed if
+   EasyBuild is hosted in a git repository or if you’re using a git
+   repository for easyconfig files (.eb)
+-  `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
+   SVN repository for easyconfig files (.eb)
+
 
 
 In case of problems...
