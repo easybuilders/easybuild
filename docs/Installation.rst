@@ -65,11 +65,14 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
   software that is built using EasyBuild to be installed there, you will need to set
   ``EASYBUILD_INSTALLPATH``, and/or look into the details on :doc:`EasyBuild Configuration`.
 
-.. warning::
 
-  N.B. Last command will only succeed if commands `module version` and `modulecmd bash version`
-  work as expected (fi. environments-modules-c >=v3.2.10), because modules are applied throughout,
-  fi. to resolve dependencies and detect already installed software.
+.. XXX - UPDATE BY VERSION
+
+.. tip::
+
+  The bootstrap script will only succeed if command `module --version` reports a sufficiently recent version
+  (e.g., environments-modules-c >=v3.2.10 or Lmd >= 5.6.3), because modules are applied throughout,
+  e.g., to resolve dependencies and detect already installed software.
 
 
 Normally, only when the above fails to work for you for some reason, should you resort
@@ -205,7 +208,7 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
   $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
-  
+
 Now, enjoy!
 
 

@@ -36,88 +36,79 @@ you can use one of the following simple commands:
 
 -  using ``easy_install`` (old tool, but still works)::
 
-       easy_install --prefix $HOME/.local easybuild
+       easy_install --prefix /tmp easybuild
 
 -  using ``pip`` (more recent and better installation tool for Python software)::
 
-       pip install --prefix $HOME/.local easybuild
+       pip install --prefix /tmp easybuild
 
-The ``--prefix $HOME/.local`` part in these commands allows you to install EasyBuild without admin rights into ``$HOME/.local``.
+The ``--prefix /tmp`` part in these commands allows you to install EasyBuild without admin rights into ``/tmp``.
 It will just install EasyBuild in your home directory (the exact location depends on your OS configuration).
 
 
-Adjusting ``PATH`` environment variable
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Adjusting ``$PATH`` and ``$PYTHONPATH`` environment variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After installing EasyBuild with either ``easy_install`` or ``pip``
 like this, you will need to
-update the ``PATH`` environment variable to make sure the system can
+update the ``$PATH`` environment variable to make sure the system can
 find the main EasyBuild command ``eb``.
 On (most) Linux distributions, the command for doing this is:
 
-    export PATH=$HOME/.local/bin:$PATH
-    XXX - PYTHONPATH
+    export PATH=/tmp/bin:$PATH
+    export PYTHONPATH=/tmp/lib/python2.7/site-packages:$PYTHONPATH
 
-On Mac OS X systems, the user-site install location is different, so the
-command would look something like::
+.. tip:
 
-    export PATH=$HOME/Library/Python/2.7/bin:$PATH
-    export PYTHONPATH=$HOME/Library/Python2.7/lib/python2.7/site-packages:$PYTHONPATH
-    XXX - PYTHONPATH
+  To determine the path that should be added to the ``$PYTHONPATH``
+  environment variable for a given installation prefix, you can use the
+  following command::
 
-Depending on the OS X version and the Python version that comes with it,
-you may need to adjust the Python version used in the path.
-
+    python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp');"
 
 
 Install with admin rights
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you do have admin rights on the system where you want to install
-EasyBuild, you can simply omit the ``--prefix $HOME/.local`` XXX - VERIFY
+EasyBuild, you can simply omit the ``--prefix /tmp``
 to have EasyBuild installed system-wide. In that case, you do not need
-to touch the ``PATH`` environment variable since
+to touch the ``$PATH`` or ``$PYTHONPATH`` environment variables since
 the ``eb`` command will be installed in one of the default paths.
 
-Alternatives to --prefix $HOME/.local
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Alternatives to --prefix
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-One problem is that the ``--prefix $HOME/.local`` option is relatively new,
-and thus only available in recent Python installations. XXX - VERIFY
-As an alternative when you do not have admin rights, you can control
-where EasyBuild is installed using the ``--prefix`` option.
-However, that does require that you also adjust the ``PYTHONPATH``
-environment variable that specifies the Python search path.
+As an alternative to ``--prefix`` when you do not have admin rights,
+you can specify that EasyBuild should be installed in your ``$HOME``
+directory using the ``--user`` option.
 
-The full list of commands to install EasyBuild in the installation
-prefix ``/tmp`` using ``pip`` would be:
+The full list of commands to install EasyBuild in your ``$HOME``
+directory using ``pip`` would be:
 
-    pip install --prefix=/tmp easybuild
-    export PATH=/tmp/bin:$PATH
-    export PYTHONPATH=/tmp/lib/python2.7/site-packages:$PYTHONPATH
+    pip install --user easybuild
+    export PATH=$HOME/.local/bin:$PATH
 
-Or alternatively (with an old pip)::
 
-    pip install --install-option="--prefix=/tmp" easybuild
+.. warning:
 
-To determine the path that should be added to the ``PYTHONPATH``
-environment variable for a given installation prefix, you can use the
-following command::
-
-    python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp');"
-
+  In our experience, using ``--user`` creates more problems than it solves.
+  We have run into unexpected behavior with Python software installed in your
+  home directory using ``--user``, for example it **always** being preferred over
+  versions installed somewhere else. Hence, we strongly discourage using `--user`
+  to install EasyBuild (or other Python software).
 
 Installing the EasyBuild packages separately
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each of the EasyBuild packages can also be installed separetely::
 
-    pip install --prefix $HOME/.local easybuild-framework
-    pip install --prefix $HOME/.local easybuild-easyblocks
-    pip install --prefix $HOME/.local easybuild-easyconfigs
+    pip install --prefix /tmp easybuild-framework
+    pip install --prefix /tmp easybuild-easyblocks
+    pip install --prefix /tmp easybuild-easyconfigs
 
 This is basically the exact same sequence of steps as they will be
-performed when running ``pip install --prefix $HOME/.local easybuild``.
+performed when running ``pip install --prefix /tmp easybuild``.
 
 Installation from downloaded sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,7 +118,7 @@ tarball, use the following steps::
 
     tar xfvz easybuild-framework-1.0.tar.gz
     cd easybuild-framework-1.0
-    pip install --prefix $HOME/.local .
+    pip install --prefix /tmp .
 
 Do note that when an EasyBuild package is being installed without
 having the EasyBuild packages that it depends upon available,
@@ -138,18 +129,13 @@ Thus, to have full control over the EasyBuild installation, you need
 to respect the following installation order:
 easybuild-framework, easybuild-easyblocks, easybuild-easyconfigs. The
 easyblocks package depends on the framework package;
-the easyconfigs package depends on both the framework and easyblocks
-packages.
+the easyconfigs package depends on both the framework and easyblocks packages.
 
 If you do not have ``pip`` or ``easy_install`` available, you can also
 fall back to using the ``setup.py`` script directly::
 
-    python setup.py --prefix $HOME/.local install
+    python setup.py --prefix /tmp install
 
-
-or, using ``--prefix`` (see also `Alternatives to --prefix $HOME/.local`_)::
-
-    python setup.py install --prefix $HOME/.local
 
 Installation of latest release from GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,7 +143,7 @@ Installation of latest release from GitHub
 To install the latest (stable) release of an EasyBuild package directly
 from GitHub, use the following command::
 
-    pip install --prefix $HOME/.local http://github.com/hpcugent/easybuild-framework/archive/master.tar.gz
+    pip install --prefix /tmp http://github.com/hpcugent/easybuild-framework/archive/master.tar.gz
 
 Again, the order in which the EasyBuild packages are installed is
 important to have full control over the installation process, see
@@ -172,7 +158,7 @@ from the previous section to install from the ``develop`` branch (or
 any of the available feature branches in any
 EasyBuild repository for that matter)::
 
-    pip install --prefix $HOME/.local http://github.com/hpcugent/easybuild-framework/archive/develop.tar.gz
+    pip install --prefix /tmp http://github.com/hpcugent/easybuild-framework/archive/develop.tar.gz
 
 .. note::
   You should use this only if you are interested in developing for EasyBuild.
