@@ -2,6 +2,42 @@
 Configuration Legacy
 ====================
 
+.. XXX - UPDATE BY VERSION
+
+Legacy configuration is currently **deprecated!**; 
+If you are a new user of EasyBuild you can safely ignore everything below this line,
+refer instead to :doc:`Configuration`.
+
+--------
+
+
+Porting from legacy configuration style
+---------------------------------------
+
+In EasyBuild v1.x, a couple of configuration options other than the ones
+above are available that follow the **legacy configuration style**,
+including:
+
+-  the ``-C`` and ``--config`` command line arguments ( **use** ``--configfiles`` **instead** )
+-  the ``$EASYBUILDCONFIG`` environment variable ( **use** ``$EASYBUILD_CONFIGFILES`` **instead** )
+-  the default path ``$HOME/.easybuild/config.py`` ( **new-style default path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
+-  the legacy fallback path ``<installpath>/easybuild/easybuild_config.py`` ( **only default/fallback path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
+
+Likewise, the following legacy environment variables allowed to override
+selected configuration settings:
+
+-  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild ( **use** ``$EASYBUILD_BUILDPATH`` **instead** )
+-  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild ( **use** ``$EASYBUILD_INSTALLPATH`` **instead** )
+-  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild ( **use** ``$EASYBUILD_SOURCEPATH`` **instead** )
+-  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used ( **use** ``$EASYBUILD_PREFIX`` **instead** )
+
+We *strongly* advise to switch to the new way of configuring EasyBuild as soon as possible,
+since the legacy configuration style will no longer be supported in EasyBuild v2.x.
+
+
+How EasyBuild used to be configured in the early days
+-----------------------------------------------------
+
 Configuring `EasyBuild` is done by providing a configuration file.
 
 EasyBuild expects the configuration file to contain valid Python code,
@@ -19,24 +55,21 @@ This new format is already available, you can see it showing up in
 EasyBuild will use the file that is provided by the path/filename in the
 following order of preference:
 
--  path/filename specified on the EasyBuild command line (using
-   ``--config``),
--  path/filename obtained from the environment variable
-   ``EASYBUILDCONFIG`` (if it is defined)
+-  path/filename specified on the EasyBuild command line (using ``--config``),
+-  path/filename obtained from the environment variable ``EASYBUILDCONFIG`` (if it is defined)
 -  ``$HOME/.easybuild/config.py`` (as of EasyBuild v1.1)
 -  the (default) configuration file at
    ``<path where EasyBuild was installed>/easybuild/easybuild_config.py``
 
 Configuration variables
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The configuration file must define the following five variables:
-``build_path``, ``install_path``, ``source_path``, ``repository``, and
-``log_format``.
+``build_path``, ``install_path``, ``source_path``, ``repository``, and ``log_format``.
 If one of them is not defined, EasyBuild will complain and exit.
 
 Build path (required)
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 The ``build_path`` variable specifies the directory in which EasyBuild
 builds its software packages.
@@ -48,7 +81,7 @@ Note that the build directories are emptied by EasyBuild when the
 installation is completed (by default).
 
 Install path (required)
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``install_path`` variable specifies the directory in which EasyBuild
 installs software packages and the corresponding module files.
@@ -74,7 +107,7 @@ file, e.g., ``.bashrc``, and/or the ``.profile`` login scripts, so you do not ne
 you start a new session.
 
 Source path (required)
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 The ``source_path`` variable specifies the directory in which EasyBuild
 looks for software source and install files.

@@ -10,6 +10,9 @@ EasyBuild, which is supported since EasyBuild v1.3.0.
 
 For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy`.
 
+For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy`_.
+XXX
+
 Supported configuration types
 -----------------------------
 
@@ -182,29 +185,6 @@ Examples (more below):
     eb --debug -l ...
     # use /dev/shm as build path, install to temporary install path, disable debug logging
     eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
-
-Legacy configuration (**deprecated!**)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In EasyBuild v1.x, a couple of configuration options other than the ones
-above are available that follow the **legacy configuration style**,
-including:
-
--  the ``-C`` and ``--config`` command line arguments ( **use** ``--configfiles`` **instead** )
--  the ``$EASYBUILDCONFIG`` environment variable ( **use** ``$EASYBUILD_CONFIGFILES`` **instead** )
--  the default path ``$HOME/.easybuild/config.py`` ( **new-style default path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
--  the legacy fallback path ``<installpath>/easybuild/easybuild_config.py`` ( **only default/fallback path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
-
-Likewise, the following legacy environment variables allowed to override
-selected configuration settings:
-
--  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild ( **use** ``$EASYBUILD_BUILDPATH`` **instead** )
--  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild ( **use** ``$EASYBUILD_INSTALLPATH`` **instead** )
--  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild ( **use** ``$EASYBUILD_SOURCEPATH`` **instead** )
--  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used ( **use** ``$EASYBUILD_PREFIX`` **instead** )
-
-We *strongly* advise to switch to the new way of configuring EasyBuild as soon as possible,
-since the legacy configuration style will no longer be supported in EasyBuild v2.x.
 
 Available configuration settings
 --------------------------------
