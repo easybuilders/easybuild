@@ -1,3 +1,5 @@
+.. _Using_CMNS:
+
 Using a custom module naming scheme
 ===================================
 

@@ -1,4 +1,6 @@
 
+.. _installing_lmod::
+
 Installing Lmod without root permissions
 ========================================
 

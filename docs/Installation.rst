@@ -231,9 +231,9 @@ Required dependencies
      installed (with header files and development libraries)
   -  Lmod requires Lua and a couple of non-standard Lua libraries to be available
   -  a guide on installing Tcl/C environment modules without having root
-     permissions is available at `Installing environment modules without root permissions`_
+     permissions is available at :ref:`installing_env_mod_c`.
   -  a guide on installing Lmod without having root permissions is available at
-     `Installing Lmod without root permissions`_
+     :ref:`installing_lmod`.
 
 -  a C/C++ compiler
 
@@ -245,8 +245,7 @@ Required dependencies
 Details
 ^^^^^^^
 
-EasyBuild is written in Python, so a Python installation is
-indispensable.
+EasyBuild is written in Python, so a Python installation is indispensable.
 
 EasyBuild not only generates module files to be used along with the
 software it installs, it also depends on the generated modules for some

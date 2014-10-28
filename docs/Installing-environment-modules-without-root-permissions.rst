@@ -1,4 +1,6 @@
 
+.. _installing_env_mod_c::
+
 Installing environment modules without root permissions
 =======================================================
 
