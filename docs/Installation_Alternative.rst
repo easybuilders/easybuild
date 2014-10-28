@@ -2,6 +2,8 @@
 .. toctree::
      :maxdepth: 1
 
+.. _alt_inst_methods:
+
 Alternative installation methods
 ================================
 
@@ -14,8 +16,6 @@ This page describes the alternative installation methods:
 
 --------------
 
-Alternative installation methods
---------------------------------
 
 Standard installation of latest release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

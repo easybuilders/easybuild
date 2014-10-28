@@ -49,8 +49,8 @@ Contents
     :maxdepth: 1
 
     docs/Concepts_and_Terminology
-    :doc:`Installation <docs/Installation>`
-    :doc:`Configuration <docs/Configuration>`
+    Installation <docs/Installation>
+    Configuration <docs/Configuration>
     docs/Basic_Usage_and_Command_Line_Options
     docs/BU_Use_case_building_WRF
     docs/BU_first_steps_with_EB

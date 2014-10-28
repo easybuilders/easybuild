@@ -9,7 +9,7 @@ EasyBuild is Python software, so there are a couple of ways to install it.
 Because of various issues with the different installation tools that are available
 for Python packages, we recommend using the **bootstrap** install procedure described here.
 
-Notes on other ways of installing EasyBuild are available under section :doc:`Alternative installation methods`.
+Notes on other ways of installing EasyBuild are available under section :ref:`alt_inst_methods`.
 
 -  `Bootstrapping EasyBuild`_
 
@@ -76,7 +76,7 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
 
 
 Normally, only when the above fails to work for you for some reason, should you resort
-to one of the alternative approaches documented at :doc:`Alternative installation methods`
+to one of the alternative approaches documented at :ref:`alt_inst_methods`
 (these are more involved but also they may give more control).
 
 
