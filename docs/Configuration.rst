@@ -8,7 +8,7 @@ EasyBuild configuration
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
-For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see `Configuration Legacy`_.
+For deprecated/outdated documentation on the legacy way of configuring EasyBuild, see :doc:`Configuration Legacy`.
 
 Supported configuration types
 -----------------------------
@@ -351,7 +351,7 @@ You do not have to worry about importing these classes,
 EasyBuild will make them available to the configuration file.
 
 Using ``git`` requires the ``GitPython`` Python modules, using ``svn``
-requires the ``pysvn`` Python module (see `Dependencies`_).
+requires the ``pysvn`` Python module (see :doc:`Dependencies`).
 
 If access to the easyconfigs repository fails for some reason
 (e.g., no network or a missing required Python module), EasyBuild will
@@ -419,18 +419,15 @@ A list of supported modules tools can be obtained using ``eb --avail-modules-too
 
 Currently, the following modules tools are supported:
 
--  ``EnvironmentModulesC``: C version of environment modules
-   (``modulecmd``)
--  ``EnvironmentModulesTcl``: Tcl-only version of environment modules
-   (``modulecmd.tcl``)
--  ``Lmod``: Lmod, an modern alternative to environment modules, written
-   in Lua (``lmod``)
+-  ``EnvironmentModulesC``: C version of environment modules (``modulecmd``)
+-  ``EnvironmentModulesTcl``: Tcl-only version of environment modules (``modulecmd.tcl``)
+-  ``Lmod``: Lmod, an modern alternative to environment modules, written in Lua (``lmod``)
 
 You can determine which modules tool you are using by checking the
 output of ``type module`` (in a ``bash`` shell), or ``alias module`` (in a ``tcsh`` shell).
 
 The actual module command (i.e., ``modulecmd``, ``modulecmd.tcl``,
-``lmod``, …) must be available via ``$PATH`` (which is not standard).
+``lmod``, ...) must be available via ``$PATH`` (which is not standard).
 
 For example, to indicate that EasyBuild should be using ``Lmod`` as modules tool:
 
@@ -446,10 +443,7 @@ Active module naming scheme (``--module-naming-scheme``)
 The module naming scheme that should be used by EasyBuild can be
 specified using the ``module-naming-scheme`` configuration setting.
 
-For more details, see the dedicated wiki page `Using a custom module naming scheme`_.
-
-
-.. _here: https://github.com/hpcugent/easybuild/wiki/Configuration-legacy
+For more details, see the dedicated wiki page :doc:`Using a custom module naming scheme`.
 
 .. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
 
