@@ -2,24 +2,25 @@
 Basic Usage and Command Line Options
 ====================================
 
-Basic usage of EasyBuild is described in the following sections, covering the most important range of topics for newcomers.
+Basic usage of EasyBuild is described in the following sections, covering the most important range of topics if you are new to EasyBuild.
  
-``eb`` command line
+``eb`` Command Line
 -------------------
  
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework.
-see ``eb --help`` w.r.t. usage, see ``eb --version`` 
 
-Providing an easyconfig file
+Check :ref:`Basic Usage, --help` described below w.r.t. usage and see ``eb --version`` to validate the version which you are testing; as a first step try::
+
+  $ eb --version
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
+
+Providing an Easyconfig File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-Most basic usage is to simply provide the name of an easyconfig file to ``eb``::
-
-  eb bzip2-1.0.6.eb
- 
+The most basic usage is to simply provide the name of an easyconfig file to ``eb``.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by the easyconfig file.
  
-Build & install bzip2 v1.0.6 (using system compiler)::
+For example, to build and install bzip2 v1.0.6 (using the system compiler)::
  
   $ eb bzip2-1.0.6.eb
   == temporary log file in case of crash /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log
@@ -51,19 +52,20 @@ Build & install bzip2 v1.0.6 (using system compiler)::
   $ which bzip2
   /Users/fgeorgatos/.local/easybuild/software/bzip2/1.0.6/bin/bzip2
  
+.. tip:: All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
+         this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this feature
+         and permits very complicated builds, sitting upon composite toolchains, to be described in high detail.
  
-.. tip:: All easyconfig file names end with .eb and follow format <name>-<version>-<toolchain>-<versionsuffix>;
-         this is crucial, since the dependency resolution mechanism relies upon this feature.
- 
- 
-Using only command line options
+.. tip:: You may wish to modify ``$EASYBUILD_PREFIX`` in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``
+
+Using Only Command Line Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 An alternative approach is to only use command line options to specify which software to build.
  
-Here is how to build & install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using system compiler)::
+Here is how to build and install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using the system compiler)::
  
-  $ time eb --software-name=bzip2 --toolchain-name=dummy
+  $ eb --software-name=bzip2 --toolchain-name=dummy
   == temporary log file in case of crash /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log
   == resolving dependencies ...
   == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/bzip2/bzip2-1.0.6.eb
@@ -89,18 +91,16 @@ Here is how to build & install last version of bzip2 (that EasyBuild is aware of
   == temporary log file /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log has been removed.
   == temporary directory /tmp/easybuild-3AzStZ has been removed.
   
-  real	0m10.062s
-  user	0m4.222s
-  sys	0m0.999s
-
-Providing multiple easyconfig files
+Providing Multiple Easyconfig Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files::
+Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
+
+For example, to build and install both bzip2 and GCC with a single command, simply list the easyconfigs for both on the eb command line (note that bzip2 is not being reinstalled, since a matching module is already available)::
  
-  $ time eb bzip2-1.0.6.eb GCC-4.8.3.eb
+  $ eb bzip2-1.0.6.eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-pGof8u/easybuild-GNYSey.log
-  == bzip2/1.0.6 is already installed (module found), skipping                      ## N.B. bzip2 does not get built, if already available
+  == bzip2/1.0.6 is already installed (module found), skipping
   == resolving dependencies ...
   == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
   == building and installing GCC/4.8.3...
@@ -124,20 +124,17 @@ Multiple easyconfig files can be provided as well, either directly or by specify
   == Build succeeded for 1 out of 1
   == temporary log file /tmp/easybuild-pGof8u/easybuild-GNYSey.log has been removed.
   == temporary directory /tmp/easybuild-pGof8u has been removed.
-  
-  real	58m45.188s
-  user	92m53.829s
-  sys	18m14.947s
 
 
-Here is how to organize your builds into directories, so that they can be handled as collections of software components:
+When one or more directories are provided, EasyBuild will (recursively) traverse them
+to find easyconfig files. For example:
 
 ::
 
-  $ ls set_of_easyconfigs/
-  GCC-4.8.3.eb	bzip2-1.0.6.eb
-
-Next step is to build then, EasyBuild considers a directory as a collection and acts accordingly:
+  $ find set_of_easyconfigs/ -type f             
+  set_of_easyconfigs//GCC-4.8.3.eb
+  set_of_easyconfigs//foo.txt
+  set_of_easyconfigs//tools/bzip2-1.0.6.eb
 
 ::
 
@@ -150,14 +147,13 @@ Next step is to build then, EasyBuild considers a directory as a collection and 
   == temporary log file /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log has been removed.
   == temporary directory /tmp/easybuild-1yxCvv has been removed.
  
-.. note:: EasyBuild will only pick up the files which end with .eb ; anything else will be ignored.
+.. note:: EasyBuild will only pick up the files which end with ``.eb`` ; anything else will be ignored.
  
-.. tip:: Calling EasyBuild is designed as an `idempotent` operation; if one of the proposed builds is available as a module,
-  it will simply be skipped, while if not the build is attempted. You can rerun your eb command until all builds are accomplished,
-  esp. in case a mishap breaks the build effort, for whatever reason (fi. full disk, OS shutdown, or even a user process kill).
+.. tip:: Calling EasyBuild is designed as an `idempotent` operation; 
+  if a module is available that matches with an provided easyconfig file, the installation will simply be skipped.
 
 
-Commonly used command line options
+Commonly Used Command Line Options
 ----------------------------------
  
 [[EB cmdline??]] - XXX
@@ -165,22 +161,29 @@ Commonly used command line options
 Basic Usage, --help
 ~~~~~~~~~~~~~~~~~~~
  
-Use ``eb —help``/``-H``, ``eb -h`` - XXX
+Use ``eb --help``/``-H``, ``eb -h`` - XXX
+
+.. note:: --help/-H spit out the long help info (i.e. including long option names), -h only includes short option names
+.. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used
 
 Refer to page :ref:`basicusagehelp` for more information.
 
-Overview of known toolchains
+Overview of Known Toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-``eb --list-toolchains``, refer to page `Toolchain Tables`
-(make sure example output of --list-toolchains is in a separate file, so it’s easy to auto-update for new releases)
+For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`Toolchain_Tables`
  
+.. tip:: Toolchains have brief mnemonic names, for example:
+  ``goolf`` stands for ``gcc+openmpi+openblas/lapack+fftw``,
+  ``iimpi`` stands for ``icc/ifort+intelmpi``, while
+  ``cgmvolf`` stands for ``clang/gcc+mvapich+openblas/lapack+fftw``.
+
 :ref:`Toolchains_Table`
 
-List of available easyblocks
+List of Available Easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-List of available easyblocks via ``--list-easyblocks``
+You can obtain a list of available :ref:`Easyblocks` via ``--list-easyblocks``.
  
 Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
  
@@ -191,75 +194,45 @@ List of generic easyblocks::
 Refer to page :ref:`basicusageeasyblocks` for more information.
 
 
-All available easyconfig parameters
+All Available Easyconfig Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-EasyBuild will provide a long list of output, if you ask it to show you details of its configuration options.
+EasyBuild provides a significant amount of easyconfig parameters.
+An overview of all available easyconfig parameters can be obtained via 
+``eb --avail-easyconfig-params``, or ``eb -a`` for short.
 
-Here is an overview of all available easyconfig parameters via ``eb --avail-easyconfig-params``, or ``eb -a`` for short::
-
-  $ eb -a Available easyconfig parameters (* indicates specific for the ConfigureMake EasyBlock)
-
-  MANDATORY                   BUILD                    FILE-MANAGEMENT          EXTENSIONS
-  ---------                   -----                    ---------------          ----------
-  description                 buildopts                buildininstalldir        exts_classmap
-  docurls                     checksums                cleanupoldbuild          exts_defaultclass
-  homepage                    configopts               cleanupoldinstall        exts_filter
-  name                        easyblock                dontcreateinstalldir     exts_list
-  software_license            easybuild_version        keeppreviousinstall
-  software_license_urls       installopts              keepsymlinks             MODULES
-  toolchain                   maxparallel              start_dir                -------
-  version                     parallel                                          include_modpath_extensions
-                              patches                  DEPENDENCIES             modaliases
-  EASYBLOCK-SPECIFIC          postinstallcmds          ------------             modextrapaths
-  ------------------          prebuildopts             allow_system_deps        modextravars
-  configure_cmd_prefix(*)     preconfigopts            builddependencies        modloadmsg
-  prefix_opt(*)               preinstallopts           dependencies             modtclfooter
-  tar_config_opts(*)          runtest                  hiddendependencies       moduleclass
-                              sanity_check_commands    osdependencies           moduleforceunload
-  TOOLCHAIN                   sanity_check_paths                                moduleloadnoconflict
-  ---------                   skip                     LICENSE
-  onlytcmod                   skipsteps                -------                  OTHER
-  toolchainopts               source_urls              group                    -----
-                              sources                  key                      buildstats
-                              stop                     license_file
-                              tests                    license_server
-                              unpack_options           license_server_port
-                              unwanted_env_vars
-                              versionprefix            
-                              versionsuffix            
-
-Refer to page :ref:`easyconfigsparameters` for more information on the details of the individual options.
+Refer to page :ref:`easyconfigsparameters` for more information, the possible parameters are a very rich set.
 
 .. tip:: Combine with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
   default is to include ``ConfigureMake`` specific-ones (e.g., ``prefix_opt``)
 
 (refer to external page that lists all available easyconfig parameters, maybe even in a nicer format than just a literal dump of the “eb -a” output (i.e. with a one-liner before dumping the output to a file) - XXX - Need to convert -a output to .rst format
 
-Enable debug logging
+Enable Debug Logging
 ~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
-  eb bzip2-1.0.6.eb -ld   ## Long output follows
+  eb bzip2-1.0.6.eb -d   ## Long output follows
   [...]
 
-.. tip:: enable this by default by adding ``debug = True`` in EasyBuild configuration file
+.. tip:: You may enable this by default via adding ``debug = True`` in your EasyBuild configuration file
 
-.. tip:: this option makes log files significantly bigger, use it as required
+.. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
 
-Forced reinstallation
+Forced Reinstallation
 ~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 
-.. warning:: Use with care since this will rebuild and reinstall an existing module, which may be used as a dependency for something else!
+.. warning:: Use with care since this will rebuild and reinstall an existing module,
+  which may be used as a dependency for something else, without requesting confirmation first.
 
-Searching for easyconfigs
+Searching for Easyconfigs
 -----------------------------------
 
-Use ``--search/-S`` (long vs short output) and an easyconfig filename pattern, for case-insensitive search of easyconfigs. Example::
+Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
 
   $ eb -S WRF-3.5.1
   == temporary log file in case of crash /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log
@@ -272,32 +245,36 @@ Use ``--search/-S`` (long vs short output) and an easyconfig filename pattern, f
   == temporary log file /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log has been removed.
   == temporary directory /tmp/easybuild-muFTYO has been removed.
   
-  $ eb -S /GCC-4.9.1
-  == temporary log file in case of crash /tmp/easybuild-HJ7qa4/easybuild-JaBakE.log
-  == Searching (case-insensitive) for '/GCC-4.9.1' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+  $ eb -S /GCC-4.9
+  == temporary log file in case of crash /tmp/easybuild-W40SsV/easybuild-7l96Cm.log
+  == Searching (case-insensitive) for '/GCC-4.9' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
   CFGS1=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC
+   * $CFGS1/GCC-4.9.0-CLooG-multilib.eb
+   * $CFGS1/GCC-4.9.0-CLooG.eb
+   * $CFGS1/GCC-4.9.0.eb
    * $CFGS1/GCC-4.9.1-CLooG-multilib.eb
    * $CFGS1/GCC-4.9.1-CLooG.eb
    * $CFGS1/GCC-4.9.1.eb
-  == temporary log file /tmp/easybuild-HJ7qa4/easybuild-JaBakE.log has been removed.
-  == temporary directory /tmp/easybuild-HJ7qa4 has been removed.
+  == temporary log file /tmp/easybuild-W40SsV/easybuild-7l96Cm.log has been removed.
+  == temporary directory /tmp/easybuild-W40SsV has been removed.
+
 
 .. note:: By using a leading slash in front of a search pattern, as the last example, we filter out all the potential matches
-  of easyconfigs that are built with GCC (as opposed to the very easyconfigs of GCC itself, which is our intention).
+  of easyconfigs that are built with GCC (as opposed to the actual easyconfigs for GCC itself, which is our intention here).
 
-.. tip:: Using ``--search`` has remarkably longer output in most cases, than ``-S``; the information is the same,
+.. tip:: Using ``--search`` has remarkably longer output in most cases, compared to ``-S``; the information is the same,
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
-Dependency resolution
+Dependency Resolution
 -------------------------------
 
-To make EasyBuild try and resolve dependencies, use the --robot/-r command line option, as follows::
+To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
 
      $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | grep "building and installing"
      (show output)
 
-Get an overview of planned installations
+Get an Overview of Planned Installations
 -------------------------------------------------------
 
 dry run overview -D/--dry-run (combined with --robot) 
@@ -313,7 +290,7 @@ dry run overview -D/--dry-run (combined with --robot)
   CFGS=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
    * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
    * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [x] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
+   * [F] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
    * [x] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
    * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
    * [x] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
@@ -334,5 +311,11 @@ dry run overview -D/--dry-run (combined with --robot)
    * [ ] $CFGS/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb (module: WRF/3.5.1-goolf-1.4.10-dmpar)
   == temporary log file /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log has been removed.
   == temporary directory /tmp/easybuild-HqpcAZ has been removed.
+
+
+.. tip:: Note how the different status symbols denote distinct handling states by EasyBuild:
+  [ ] The build is not available, EasyBuild will deliver it
+  [x] The build is available, EasyBuild will skip building this module
+  [F] The build is available, however EasyBuild has been asked to force a rebuild and will do so
 
 
