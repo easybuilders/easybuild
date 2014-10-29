@@ -51,6 +51,7 @@ Contents
     docs/Concepts_and_Terminology
     docs/Installation
     docs/Configuration
+    docs/Basic_Usage_and_Command_Line_Options
 
 .. toctree::
     :hidden:

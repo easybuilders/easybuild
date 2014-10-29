@@ -1,5 +1,5 @@
 
-.. _easyconfigsparameters::
+.. _easyconfigsparameters:
 
 Basic Usage, -a
 ---------------

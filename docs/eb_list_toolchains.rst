@@ -1,4 +1,6 @@
 
+.. _Toolchains_Table:
+
 Toolchains table
 ================
 
@@ -49,4 +51,5 @@ The list of toolchains can easily be obtained with::
 	iomkl         OpenMPI, icc, ifort, imkl
 	iqacml        ACML, BLACS, FFTW, QLogicMPI, ScaLAPACK, icc, ifort
 	ismkl         MPICH2, icc, ifort, imkl
+ ==================   ======================================================
 
