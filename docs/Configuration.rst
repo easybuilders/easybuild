@@ -444,7 +444,7 @@ specified using the ``module-naming-scheme`` configuration setting.
 
     eb --module-naming-scheme=HierarchicalMNS ...
 
-For more details, see the dedicated page :ref:`Using_CMNS`.
+For more details, see the dedicated page: `https://github.com/hpcugent/easybuild/wiki/Using-a-custom-module-naming-scheme`_.
 
 .. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
 
