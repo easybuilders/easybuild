@@ -54,10 +54,15 @@ Contents
 
 .. toctree::
     :hidden:
+    :glob:
     :maxdepth: 1
 
     docs/Installation_Alternative
     docs/Configuration_Legacy
+    docs/eb_*
+    docs/Installing-Lmod-without-root-permissions
+    docs/Installing-environment-modules-without-root-permissions
+    docs/Useful_links
 
 -------
 
@@ -73,7 +78,5 @@ Reference Pages
     :maxdepth: 1
 
 * :ref:`Search <search>`
-
-
--------
+* :ref:`Useful Links <useful_links>`
 
