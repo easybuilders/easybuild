@@ -15,6 +15,8 @@ The list of toolchains can easily be obtained with::
 
 .. table: List of toolchains as of version 1.15.2
 
+::
+
   ==================   ======================================================
   Toolchain name        Components that comprise the toolchain
   ==================   ======================================================

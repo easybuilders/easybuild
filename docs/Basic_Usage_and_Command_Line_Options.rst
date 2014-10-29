@@ -2,8 +2,7 @@
 Basic Usage and Command Line Options
 ====================================
 
-Basic usage
-===========
+Basic usage of EasyBuild is described in the following sections, covering the most important range of topics for newcomers.
  
 ``eb`` command line
 -------------------
@@ -183,7 +182,7 @@ List of available easyblocks
  
 List of available easyblocks via ``--list-easyblocks``
  
-Software-specific easyblocks have a name that starts with ``EB_`; the ones that do not are generic easyblocks.
+Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
  
 List of generic easyblocks::
  
@@ -233,7 +232,7 @@ Here is an overview of all available easyconfig parameters via ``eb --avail-easy
 Refer to page :ref:`easyconfigsparameters` for more information on the details of the individual options.
 
 .. tip:: Combine with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
-  default is to include :ref:`ConfigureMake` specific-ones (e.g., ``prefix_opt``)
+  default is to include ``ConfigureMake`` specific-ones (e.g., ``prefix_opt``)
 
 (refer to external page that lists all available easyconfig parameters, maybe even in a nicer format than just a literal dump of the “eb -a” output (i.e. with a one-liner before dumping the output to a file) - XXX - Need to convert -a output to .rst format
 
@@ -244,7 +243,6 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
   eb bzip2-1.0.6.eb -ld   ## Long output follows
   [...]
-
 
 .. tip:: enable this by default by adding ``debug = True`` in EasyBuild configuration file
 
