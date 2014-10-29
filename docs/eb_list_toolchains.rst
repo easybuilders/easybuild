@@ -11,9 +11,7 @@ The list of toolchains can easily be obtained with::
   [...]
 
 
-.. XXX - UPDATE BY VERSION
-
-.. table: List of toolchains as of version 1.15.2
+.. table: List of toolchains
 
 ::
 

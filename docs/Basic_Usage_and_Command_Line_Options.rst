@@ -184,12 +184,15 @@ List of Available Easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 You can obtain a list of available :ref:`Easyblocks` via ``--list-easyblocks``.
- 
+
+The parameter ``--list-easyblocks`` prints the easyblocks in a hierarchical way,
+showing the inheritance patterns, with the "base" easyblock class ``EasyBlock`` on top.
+
 Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
  
 List of generic easyblocks::
  
-     eb --list-easyblocks | grep -v ^EB_
+  eb --list-easyblocks | grep -v ^EB_
  
 Refer to page :ref:`basicusageeasyblocks` for more information.
 
