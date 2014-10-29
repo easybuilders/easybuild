@@ -1,5 +1,5 @@
 
-.. _useful_links::
+.. _usefullinks::
 
 Useful links
 ============

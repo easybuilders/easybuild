@@ -80,5 +80,5 @@ Reference Pages
     :maxdepth: 1
 
 * :ref:`Search <search>`
-* :ref:`Useful Links <useful_links>`
+* :ref:`Useful Links <usefullinks>`
 
