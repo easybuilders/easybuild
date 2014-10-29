@@ -6,12 +6,13 @@ Useful links
 
 Tools used to convert from other wiki formats and prepare .rst when in pre-production mode:
 
-* http://johnmacfarlane.net/pandoc/try/?text=%0A&from=markdown_github&to=rst <http://johnmacfarlane.net/pandoc/try/?text=%0A&from=markdown_github&to=rst>
+* http://johnmacfarlane.net/pandoc/try/?text=%0A&from=markdown_github&to=rst
 * http://rst.ninjs.org <http://rst.ninjs.org/>
 
 Reference documents online
 ==========================
 
+* https://github.com/rtfd/readthedocs.org
 * http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 * http://matplotlib.org/sampledoc/cheatsheet.html
 * http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
@@ -21,7 +22,7 @@ Reference documents online
 * https://pythonhosted.org/an_example_pypi_project/sphinx.html
 * http://openmdao.org/docs/documenting/sphinx.html
 
-Third party sphinx examples, themes and possible extensions
+Third party Sphinx examples, themes and possible extensions
 ===========================================================
 
 * http://sphinx.readthedocs.org/en/latest/examples.html
@@ -32,5 +33,6 @@ Third party sphinx examples, themes and possible extensions
 * http://django-profiletools.readthedocs.org/en/latest/
 * http://pythonhosted.org/korean/
 * https://pythonhosted.org/cloud_sptheme/cloud_theme.html#features
+* http://openmdao.org/docs/documenting/sphinx.html
 * http://sphinx-doc.org/genindex.html
 
