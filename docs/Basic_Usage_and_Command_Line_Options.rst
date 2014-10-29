@@ -9,7 +9,7 @@ Basic usage of EasyBuild is described in the following sections, covering the mo
  
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework.
 
-Check :ref:`Basic Usage, --help` described below w.r.t. usage and see ``eb --version`` to validate the version which you are testing; as a first step try::
+Check :ref:`BasicUsagehelp` described below w.r.t. usage and see ``eb --version`` to validate the version which you are testing; as a first step try::
 
   $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
@@ -158,6 +158,8 @@ Commonly Used Command Line Options
  
 [[EB cmdline??]] - XXX
  
+.. _BasicUsagehelp:
+
 Basic Usage, --help
 ~~~~~~~~~~~~~~~~~~~
  
@@ -171,7 +173,7 @@ Refer to page :ref:`basicusagehelp` for more information.
 Overview of Known Toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`Toolchain_Tables`
+For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`Toolchains_Table`
  
 .. tip:: Toolchains have brief mnemonic names, for example:
   ``goolf`` stands for ``gcc+openmpi+openblas/lapack+fftw``,
@@ -236,6 +238,18 @@ Searching for Easyconfigs
 -----------------------------------
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
+
+  $ eb --search WRF-3.5.1
+  == temporary log file in case of crash /tmp/easybuild-B0tYcq/easybuild-ZpmYAs.log
+  == Searching (case-insensitive) for 'WRF-3.5.1' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb
+   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.5.14-dmpar.eb
+   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-4.1.13-dmpar.eb
+   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-5.3.0-dmpar.eb
+  == temporary log file /tmp/easybuild-B0tYcq/easybuild-ZpmYAs.log has been removed.
+  == temporary directory /tmp/easybuild-B0tYcq has been removed.
+
+The same query with ``-S`` is far more readable, when there is a joint path that can be collapsed to a variable like ``$CFGS1``::
 
   $ eb -S WRF-3.5.1
   == temporary log file in case of crash /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log
