@@ -62,7 +62,6 @@ Contents
     docs/eb_*
     docs/Installing-Lmod-without-root-permissions
     docs/Installing-environment-modules-without-root-permissions
-    docs/Using_a_custom_module_naming_scheme
     README
     docs/Useful_links
 
@@ -80,5 +79,5 @@ Reference Pages
     :maxdepth: 1
 
 * :ref:`Search <search>`
-* :ref:`Useful Links <usefullinks>`
+* :ref:`Useful Links <useful_links>`
 
