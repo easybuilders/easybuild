@@ -10,15 +10,11 @@ The list of toolchains can easily be obtained with::
   List of known toolchains (toolchainname: module[,module...]):
   [...]
 
-
 .. table: List of toolchains
-
-::
 
   ==================   ======================================================
   Toolchain name        Components that comprise the toolchain
   ==================   ======================================================
-
   ClangGCC             Clang, GCC
   GCC                  GCC
   cgmpich              ClangGCC, MPICH
@@ -27,7 +23,7 @@ The list of toolchains can easily be obtained with::
   cgmvolf              BLACS, ClangGCC, FFTW, MVAPICH2, OpenBLAS, ScaLAPACK
   cgompi               ClangGCC, OpenMPI
   cgoolf               BLACS, ClangGCC, FFTW, OpenBLAS, OpenMPI, ScaLAPACK
-  dummy:
+  dummy
   foss                 BLACS, FFTW, GCC, OpenBLAS, OpenMPI, ScaLAPACK
   gcccuda              CUDA, GCC
   gimkl                GCC, imkl, impi

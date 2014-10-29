@@ -158,8 +158,6 @@ Commonly Used Command Line Options
  
 [[EB cmdline??]] - XXX
  
-.. _BasicUsagehelp:
-
 Basic Usage, --help
 ~~~~~~~~~~~~~~~~~~~
  
