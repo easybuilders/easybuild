@@ -57,12 +57,12 @@ Contents
     :glob:
     :maxdepth: 1
 
+    README
     docs/Installation_Alternative
     docs/Configuration_Legacy
     docs/eb_*
     docs/Installing-Lmod-without-root-permissions
     docs/Installing-environment-modules-without-root-permissions
-    README
     docs/Useful_links
 
 -------
