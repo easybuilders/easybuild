@@ -66,7 +66,7 @@ Environment Modules
 ~~~~~~~~~~~~~~~~~~~
 
 #. Download the latest source tarball for the environment modules tools
-   from <http://modules.sourceforge.net/>. At the time of writing,
+   from http://modules.sourceforge.net/. At the time of writing,
    the latest available version is 3.2.10 which can be downloaded
    `from here <http://prdownloads.sourceforge.net/modules/modules-3.2.10.tar.gz>`_.
 
@@ -114,7 +114,7 @@ To make a long story short, these are the commands you need to execute:
 
     export PATH=$HOME/.local/environment-modules/Modules/3.2.10/bin:$PATH
     export LD_LIBRARY_PATH=$HOME/.local/Tcl/lib:$LD_LIBRARY_PATH
-    # adjust line beow if you're using a shell other than bash, check with 'echo $SHELL'
+    # adjust line below if you're using a shell other than bash, check with 'echo $SHELL'
     source $HOME/.local/environment-modules/Modules/3.2.10/init/bash
 
 .. tip:: Add these three lines in your ``.bashrc`` file, that way they’ll be executed every time you log in.
