@@ -57,7 +57,6 @@ Contents
     :glob:
     :maxdepth: 1
 
-    README
     docs/Installation_Alternative
     docs/Configuration_Legacy
     docs/eb_*
