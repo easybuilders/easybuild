@@ -12,6 +12,30 @@ Welcome to EasyBuild's documentation!
 .. rubric:: Everything you need to know about EasyBuild
   , the efficient way to manage software on High Performance Computing (HPC) platforms.
 
+Contents
+========
+
+.. toctree::
+    :glob:
+    :maxdepth: 1
+
+    docs/Concepts_and_Terminology
+    docs/Installation
+    docs/Configuration
+    docs/Basic_Usage_and_Command_Line_Options
+
+.. toctree::
+    :hidden:
+    :glob:
+    :maxdepth: 1
+
+    docs/Installation_Alternative
+    docs/Configuration_Legacy
+    docs/eb_*
+    docs/Installing-Lmod-without-root-permissions
+    docs/Installing-environment-modules-without-root-permissions
+    docs/Useful_links
+
 Getting help
 ============
 
@@ -40,30 +64,6 @@ Having trouble? We'd like to help!
 .. _easyconfigs ticket tracker: https://github.com/hpcugent/easybuild-easyconfigs/issues
 .. _ticket tracker: https://github.com/hpcugent/easybuild/issues
 
-
-Contents
-========
-
-.. toctree::
-    :glob:
-    :maxdepth: 1
-
-    docs/Concepts_and_Terminology
-    docs/Installation
-    docs/Configuration
-    docs/Basic_Usage_and_Command_Line_Options
-
-.. toctree::
-    :hidden:
-    :glob:
-    :maxdepth: 1
-
-    docs/Installation_Alternative
-    docs/Configuration_Legacy
-    docs/eb_*
-    docs/Installing-Lmod-without-root-permissions
-    docs/Installing-environment-modules-without-root-permissions
-    docs/Useful_links
 
 -------
 

@@ -47,7 +47,7 @@ iiqmpi               icc/ifort  QLogicMPI
 impmkl               icc/ifort  MPICH2    imkl
 intel                icc/ifort  impi      imkl
 iomkl                icc/ifort  OpenMPI   imkl
-iqacml               icc/ifort  OpenMPI   BLACS, ACML, ScaLAPACK, FFTW
+iqacml               icc/ifort  QLogicMPI (BLACS,) ACML, ScaLAPACK, FFTW
 ismkl                icc/ifort  MPICH2    imkl
 ==================   ========== ========= =================================
 

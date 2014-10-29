@@ -260,6 +260,8 @@ The same query with ``-S`` is far more readable, when there is a joint path that
   == temporary log file /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log has been removed.
   == temporary directory /tmp/easybuild-muFTYO has been removed.
   
+Finally, using a common substring will help to expand a bit the range of matching easyconfigs::
+
   $ eb -S /GCC-4.9
   == temporary log file in case of crash /tmp/easybuild-W40SsV/easybuild-7l96Cm.log
   == Searching (case-insensitive) for '/GCC-4.9' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
