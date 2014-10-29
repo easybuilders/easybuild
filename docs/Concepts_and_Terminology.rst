@@ -1,7 +1,7 @@
 .. toctree::
      :maxdepth: 1
 
-Concepts and terminology
+Concepts and Terminology
 ========================
 
 
@@ -13,7 +13,7 @@ build and install software using particular compiler `toolchains`_, as specified
 
 
 
-EasyBuild framework
+EasyBuild Framework
 -------------------
 
 The EasyBuild framework embodies the core of the tool, providing functionality commonly
@@ -40,6 +40,7 @@ EasyBuild framework and the amount of supporting functionality it has to offer.
 
 
 
+.. _Easyblocks:
 
 Easyblocks
 ----------
