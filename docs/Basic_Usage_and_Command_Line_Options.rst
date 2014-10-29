@@ -14,7 +14,9 @@ see ``eb --help`` w.r.t. usage, see ``eb --version``
 Providing an easyconfig file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-Most basic usage is to simply provide the name of an easyconfig file to ``eb``.
+Most basic usage is to simply provide the name of an easyconfig file to ``eb``::
+
+  eb bzip2-1.0.6.eb
  
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by the easyconfig file.
  
@@ -51,15 +53,16 @@ Build & install bzip2 v1.0.6 (using system compiler)::
   /Users/fgeorgatos/.local/easybuild/software/bzip2/1.0.6/bin/bzip2
  
  
-.. tip:: easyconfig file names (end with .eb, follow format <name>-<version>-<toolchain>-<versionsuffix>, see JSC slides)
+.. tip:: All easyconfig file names end with .eb and follow format <name>-<version>-<toolchain>-<versionsuffix>;
+         this is crucial, since the dependency resolution mechanism relies upon this feature.
  
  
 Using only command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-An alternative approach is to only use command line options to specify which software to build:
+An alternative approach is to only use command line options to specify which software to build.
  
-build & install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using system compiler)::
+Here is how to build & install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using system compiler)::
  
   $ time eb --software-name=bzip2 --toolchain-name=dummy
   == temporary log file in case of crash /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log
@@ -98,7 +101,7 @@ Multiple easyconfig files can be provided as well, either directly or by specify
  
   $ time eb bzip2-1.0.6.eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-pGof8u/easybuild-GNYSey.log
-  == bzip2/1.0.6 is already installed (module found), skipping
+  == bzip2/1.0.6 is already installed (module found), skipping                      ## N.B. bzip2 does not get built, if already available
   == resolving dependencies ...
   == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
   == building and installing GCC/4.8.3...
@@ -127,10 +130,15 @@ Multiple easyconfig files can be provided as well, either directly or by specify
   user	92m53.829s
   sys	18m14.947s
 
+
+Here is how to organize your builds into directories, so that they can be handled as collections of software components:
+
 ::
 
   $ ls set_of_easyconfigs/
   GCC-4.8.3.eb	bzip2-1.0.6.eb
+
+Next step is to build then, EasyBuild considers a directory as a collection and acts accordingly:
 
 ::
 
@@ -146,8 +154,8 @@ Multiple easyconfig files can be provided as well, either directly or by specify
 .. note:: EasyBuild will only pick up the files which end with .eb ; anything else will be ignored.
  
 .. tip:: Calling EasyBuild is designed as an `idempotent` operation; if one of the proposed builds is available as a module,
-  it will simply be skipped, if not a build is attempted. You can rerun your eb command until all builds are finished,
-  esp. in case a mishap breaks the build effort at any time (full disk, OS shutdown, or even user processes kill).
+  it will simply be skipped, while if not the build is attempted. You can rerun your eb command until all builds are accomplished,
+  esp. in case a mishap breaks the build effort, for whatever reason (fi. full disk, OS shutdown, or even a user process kill).
 
 
 Commonly used command line options
@@ -168,7 +176,7 @@ Overview of known toolchains
 ``eb --list-toolchains``, refer to page `Toolchain Tables`
 (make sure example output of --list-toolchains is in a separate file, so it’s easy to auto-update for new releases)
  
-:ref:`Toolchains Table`
+:ref:`Toolchains_Table`
 
 List of available easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -187,8 +195,9 @@ Refer to page :ref:`basicusageeasyblocks` for more information.
 All available easyconfig parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Overview of all available easyconfig parameters via ``eb --avail-easyconfig-params`` or ``eb -a`` for short::
+EasyBuild will provide a long list of output, if you ask it to show you details of its configuration options.
 
+Here is an overview of all available easyconfig parameters via ``eb --avail-easyconfig-params``, or ``eb -a`` for short::
 
   $ eb -a Available easyconfig parameters (* indicates specific for the ConfigureMake EasyBlock)
 
@@ -221,21 +230,25 @@ Overview of all available easyconfig parameters via ``eb --avail-easyconfig-para
                               versionprefix            
                               versionsuffix            
 
-Refer to page :ref:`easyconfigsparameters` for more information on the individual options.
+Refer to page :ref:`easyconfigsparameters` for more information on the details of the individual options.
 
-.. tip:: Combine with --easyblock/-e to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
-  default is to include ConfigureMake specific-ones (e.g., prefix_opt)
+.. tip:: Combine with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
+  default is to include :ref:`ConfigureMake` specific-ones (e.g., ``prefix_opt``)
 
 (refer to external page that lists all available easyconfig parameters, maybe even in a nicer format than just a literal dump of the “eb -a” output (i.e. with a one-liner before dumping the output to a file) - XXX - Need to convert -a output to .rst format
 
 Enable debug logging
 ~~~~~~~~~~~~~~~~~~~~
 
-Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file
+Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
+
+  eb bzip2-1.0.6.eb -ld   ## Long output follows
+  [...]
+
 
 .. tip:: enable this by default by adding ``debug = True`` in EasyBuild configuration file
 
-.. tip:: makes log files significantly bigger
+.. tip:: this option makes log files significantly bigger, use it as required
 
 
 Forced reinstallation
@@ -248,7 +261,7 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 Searching for easyconfigs
 -----------------------------------
 
-Use ``--search/-S`` (long vs short output) + an easyconfig filename pattern, for case-insensitive search of easyconfigs::
+Use ``--search/-S`` (long vs short output) and an easyconfig filename pattern, for case-insensitive search of easyconfigs. Example::
 
   $ eb -S WRF-3.5.1
   == temporary log file in case of crash /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log
@@ -271,16 +284,19 @@ Use ``--search/-S`` (long vs short output) + an easyconfig filename pattern, for
   == temporary log file /tmp/easybuild-HJ7qa4/easybuild-JaBakE.log has been removed.
   == temporary directory /tmp/easybuild-HJ7qa4 has been removed.
 
-.. tip:: By using a leading slash in front of a search pattern, we filter out all the potential matches
-  of easyconfigs that are built with GCC (as opposed to the easyconfigs of GCC itself, which is our intention).
+.. note:: By using a leading slash in front of a search pattern, as the last example, we filter out all the potential matches
+  of easyconfigs that are built with GCC (as opposed to the very easyconfigs of GCC itself, which is our intention).
+
+.. tip:: Using ``--search`` has remarkably longer output in most cases, than ``-S``; the information is the same,
+  however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
 Dependency resolution
 -------------------------------
 
-Take make EasyBuild try and resolve dependencies, using the --robot/-r command line option.
+To make EasyBuild try and resolve dependencies, use the --robot/-r command line option, as follows::
 
-     $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb —robot | grep "building and installing"
+     $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | grep "building and installing"
      (show output)
 
 Get an overview of planned installations
