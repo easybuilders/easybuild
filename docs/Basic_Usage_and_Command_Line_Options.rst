@@ -9,7 +9,9 @@ Basic usage of EasyBuild is described in the following sections, covering the mo
  
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework.
 
-Check :ref:`BasicUsagehelp` described below w.r.t. usage and see ``eb --version`` to validate the version which you are testing; as a first step try::
+Details about the command line options are available via --help, see also :ref:`basic_usage_help`.
+
+You can query which EasyBuild version you are using with --version::
 
   $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host Cephalonia.local.
@@ -18,7 +20,7 @@ Providing an Easyconfig File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 The most basic usage is to simply provide the name of an easyconfig file to ``eb``.
-EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by the easyconfig file.
+EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
  
 For example, to build and install bzip2 v1.0.6 (using the system compiler)::
  
@@ -53,10 +55,9 @@ For example, to build and install bzip2 v1.0.6 (using the system compiler)::
   /Users/fgeorgatos/.local/easybuild/software/bzip2/1.0.6/bin/bzip2
  
 .. tip:: All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
-         this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this feature
-         and permits very complicated builds, sitting upon composite toolchains, to be described in high detail.
+         this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
  
-.. tip:: You may wish to modify ``$EASYBUILD_PREFIX`` in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``
+.. tip:: You may wish the modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``), in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``
 
 Using only command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
