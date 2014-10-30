@@ -14,7 +14,7 @@ Details about the command line options are available via ``--help``, see also :r
 You can query which EasyBuild version you are using with ``--version``::
 
   $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host Cephalonia.local.
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host foo.local.
 
 Providing an Easyconfig File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,7 +27,7 @@ For example, to build and install GCC/4.8.3 (using the system compiler - this ma
   $ eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log
   == resolving dependencies ...
-  == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
+  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
   == building and installing GCC/4.8.3...
   == fetching files...
   == creating build dir, resetting environment...
@@ -45,14 +45,14 @@ For example, to build and install GCC/4.8.3 (using the system compiler - this ma
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/gcc/4.8.3/easybuild/easybuild-GCC-4.8.3-20141029.013716.log
+  == Results of the build can be found in the log file /home/example/.local/easybuild/software/gcc/4.8.3/easybuild/easybuild-GCC-4.8.3-20141029.013716.log
   == Build succeeded for 1 out of 1
   == temporary log file /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log has been removed.
   == temporary directory /tmp/easybuild-0f0xKN has been removed.
 
   $ module load GCC/4.8.3
   $ which gcc
-  /Users/fgeorgatos/.local/easybuild/software/GCC/4.8.3/bin/gcc
+  /home/example/.local/easybuild/software/GCC/4.8.3/bin/gcc
  
 .. tip:: All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
          this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
@@ -73,7 +73,7 @@ using ``dummy`` toolchain (i.e., using the system compiler)::
   $ eb --software-name=bzip2 --toolchain-name=dummy
   == temporary log file in case of crash /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log
   == resolving dependencies ...
-  == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/bzip2/bzip2-1.0.6.eb
+  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/bzip2/bzip2-1.0.6.eb
   == building and installing bzip2/1.0.6...
   == fetching files...
   == creating build dir, resetting environment...
@@ -91,7 +91,7 @@ using ``dummy`` toolchain (i.e., using the system compiler)::
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/bzip2/1.0.6/easybuild/easybuild-bzip2-1.0.6-20141029.013514.log
+  == Results of the build can be found in the log file /home/example/.local/easybuild/software/bzip2/1.0.6/easybuild/easybuild-bzip2-1.0.6-20141029.013514.log
   == Build succeeded for 1 out of 1
   == temporary log file /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log has been removed.
   == temporary directory /tmp/easybuild-3AzStZ has been removed.
@@ -108,7 +108,7 @@ For example, to build and install both bzip2 and GCC with a single command, simp
   == temporary log file in case of crash /tmp/easybuild-pGof8u/easybuild-GNYSey.log
   == bzip2/1.0.6 is already installed (module found), skipping
   == resolving dependencies ...
-  == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
+  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
   == building and installing GCC/4.8.3...
   == fetching files...
   == creating build dir, resetting environment...
@@ -126,7 +126,7 @@ For example, to build and install both bzip2 and GCC with a single command, simp
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/GCC/4.8.3/easybuild/easybuild-GCC-4.8.3-20141029.024018.log
+  == Results of the build can be found in the log file /home/example/.local/easybuild/software/GCC/4.8.3/easybuild/easybuild-GCC-4.8.3-20141029.024018.log
   == Build succeeded for 1 out of 1
   == temporary log file /tmp/easybuild-pGof8u/easybuild-GNYSey.log has been removed.
   == temporary directory /tmp/easybuild-pGof8u has been removed.
@@ -246,11 +246,11 @@ Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, f
 
   $ eb --search WRF-3.5.1
   == temporary log file in case of crash /tmp/easybuild-B0tYcq/easybuild-ZpmYAs.log
-  == Searching (case-insensitive) for 'WRF-3.5.1' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb
-   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.5.14-dmpar.eb
-   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-4.1.13-dmpar.eb
-   * /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-5.3.0-dmpar.eb
+  == Searching (case-insensitive) for 'WRF-3.5.1' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.5.14-dmpar.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-4.1.13-dmpar.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-5.3.0-dmpar.eb
   == temporary log file /tmp/easybuild-B0tYcq/easybuild-ZpmYAs.log has been removed.
   == temporary directory /tmp/easybuild-B0tYcq has been removed.
 
@@ -258,8 +258,8 @@ The same query with ``-S`` is far more readable, when there is a joint path that
 
   $ eb -S WRF-3.5.1
   == temporary log file in case of crash /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log
-  == Searching (case-insensitive) for 'WRF-3.5.1' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-  CFGS1=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF
+  == Searching (case-insensitive) for 'WRF-3.5.1' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF
    * $CFGS1/WRF-3.5.1-goolf-1.4.10-dmpar.eb
    * $CFGS1/WRF-3.5.1-goolf-1.5.14-dmpar.eb
    * $CFGS1/WRF-3.5.1-ictce-4.1.13-dmpar.eb
@@ -272,8 +272,8 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
 
   $ eb -S /GCC-4.9
   == temporary log file in case of crash /tmp/easybuild-W40SsV/easybuild-7l96Cm.log
-  == Searching (case-insensitive) for '/GCC-4.9' in /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-  CFGS1=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC
+  == Searching (case-insensitive) for '/GCC-4.9' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC
    * $CFGS1/GCC-4.9.0-CLooG-multilib.eb
    * $CFGS1/GCC-4.9.0-CLooG.eb
    * $CFGS1/GCC-4.9.0.eb
@@ -340,27 +340,27 @@ The output of --dry-run turns to be long for complex builds, see WRF for an exam
   $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot --dry-run
   == temporary log file in case of crash /tmp/easybuild-7VwyLh/easybuild-Intzn7.log
   Dry run: printing build status of easyconfigs and dependencies
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/z/zlib/zlib-1.2.7-goolf-1.4.10.eb (module: zlib/1.2.7-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/Szip/Szip-2.1-goolf-1.4.10.eb (module: Szip/2.1-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/ncurses/ncurses-5.9-goolf-1.4.10.eb (module: ncurses/5.9-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/f/flex/flex-2.5.37-goolf-1.4.10.eb (module: flex/2.5.37-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/M4/M4-1.4.16-goolf-1.4.10.eb (module: M4/1.4.16-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/j/JasPer/JasPer-1.900.1-goolf-1.4.10.eb (module: JasPer/1.900.1-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/h/HDF5/HDF5-1.8.10-patch1-goolf-1.4.10.eb (module: HDF5/1.8.10-patch1-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/t/tcsh/tcsh-6.18.01-goolf-1.4.10.eb (module: tcsh/6.18.01-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/Bison/Bison-2.7-goolf-1.4.10.eb (module: Bison/2.7-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/d/Doxygen/Doxygen-1.8.3.1-goolf-1.4.10.eb (module: Doxygen/1.8.3.1-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/netCDF/netCDF-4.2.1.1-goolf-1.4.10.eb (module: netCDF/4.2.1.1-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/netCDF-Fortran/netCDF-Fortran-4.2-goolf-1.4.10.eb (module: netCDF-Fortran/4.2-goolf-1.4.10)
-   * [ ] /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb (module: WRF/3.5.1-goolf-1.4.10-dmpar)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/z/zlib/zlib-1.2.7-goolf-1.4.10.eb (module: zlib/1.2.7-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/Szip/Szip-2.1-goolf-1.4.10.eb (module: Szip/2.1-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/ncurses/ncurses-5.9-goolf-1.4.10.eb (module: ncurses/5.9-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/f/flex/flex-2.5.37-goolf-1.4.10.eb (module: flex/2.5.37-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/M4/M4-1.4.16-goolf-1.4.10.eb (module: M4/1.4.16-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/j/JasPer/JasPer-1.900.1-goolf-1.4.10.eb (module: JasPer/1.900.1-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/h/HDF5/HDF5-1.8.10-patch1-goolf-1.4.10.eb (module: HDF5/1.8.10-patch1-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/t/tcsh/tcsh-6.18.01-goolf-1.4.10.eb (module: tcsh/6.18.01-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/Bison/Bison-2.7-goolf-1.4.10.eb (module: Bison/2.7-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/d/Doxygen/Doxygen-1.8.3.1-goolf-1.4.10.eb (module: Doxygen/1.8.3.1-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/netCDF/netCDF-4.2.1.1-goolf-1.4.10.eb (module: netCDF/4.2.1.1-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/netCDF-Fortran/netCDF-Fortran-4.2-goolf-1.4.10.eb (module: netCDF-Fortran/4.2-goolf-1.4.10)
+   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb (module: WRF/3.5.1-goolf-1.4.10-dmpar)
   == temporary log file /tmp/easybuild-7VwyLh/easybuild-Intzn7.log has been removed.
   == temporary directory /tmp/easybuild-7VwyLh has been removed.
 
@@ -370,7 +370,7 @@ and builds that will be forced are indicated as such. For example::
   $ eb OpenMPI-1.6.4-GCC-4.7.2.eb netCDF-4.2.1.1-goolf-1.4.10.eb WRF-3.5.1-goolf-1.4.10-dmpar.eb -Dr --force
   == temporary log file in case of crash /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log
   Dry run: printing build status of easyconfigs and dependencies
-  CFGS=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+  CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
    * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
    * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
    * [F] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)

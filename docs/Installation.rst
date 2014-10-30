@@ -157,7 +157,7 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   
   [[INFO]]
   
-  +++ STAGE 2: installing EasyBuild in /Users/fgeorgatos/.local/easybuild with EasyBuild from stage 1...
+  +++ STAGE 2: installing EasyBuild in /home/example/.local/easybuild with EasyBuild from stage 1...
   
   == temporary log file in case of crash /tmp/easybuild-I0RSpc/easybuild-4e14kP.log
   == resolving dependencies ...
@@ -179,34 +179,34 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/easybuild/easybuild-EasyBuild-1.15.2-20141023.225606.log
+  == Results of the build can be found in the log file /home/example/.local/easybuild/software/EasyBuild/1.15.2/easybuild/easybuild-EasyBuild-1.15.2-20141023.225606.log
   == Build succeeded for 1 out of 1
   == temporary log file /tmp/easybuild-I0RSpc/easybuild-4e14kP.log has been removed.
   == temporary directory /tmp/easybuild-I0RSpc has been removed.
   [[INFO]] Done!
   [[INFO]]
-  [[INFO]] EasyBuild v1.15.2 was installed to /Users/fgeorgatos/.local/easybuild, so make sure your $MODULEPATH includes /Users/fgeorgatos/.local/easybuild/modules/all
+  [[INFO]] EasyBuild v1.15.2 was installed to /home/example/.local/easybuild, so make sure your $MODULEPATH includes /home/example/.local/easybuild/modules/all
   [[INFO]]
   [[INFO]] Run 'module load EasyBuild', and run 'eb --help' to get help on using EasyBuild.
   [[INFO]] Set $EASYBUILD_MODULES_TOOL to 'EnvironmentModulesC' to use the same modules tool as was used now.
   [[INFO]]
   [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
-  [[INFO]] To install software with EasyBuild to /Users/fgeorgatos/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
+  [[INFO]] To install software with EasyBuild to /home/example/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
   [[INFO]] See https://github.com/hpcugent/easybuild/wiki/Configuration for details on configuring EasyBuild.
   
   $ export MODULEPATH=$HOME/.local/easybuild/modules/all
   $ module av
   
-  ------------------------- /Users/fgeorgatos/.local/easybuild/modules/all --------------------------
+  ------------------------- /home/example/.local/easybuild/modules/all --------------------------
   EasyBuild/1.15.2
   $ module load EasyBuild
   $ module list
   Currently Loaded Modulefiles:
     1) EasyBuild/1.15.2
   $ which eb
-  /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
+  /home/example/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
   $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host Cephalonia.local.
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host foo.local.
 
 Now, enjoy!
 
