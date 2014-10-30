@@ -1,7 +1,7 @@
 .. toctree::
      :maxdepth: 1
 
-Concepts and Terminology
+Concepts and terminology
 ========================
 
 
@@ -12,8 +12,7 @@ Or, in EasyBuild terminology: the `EasyBuild framework`_ leverages `easyblocks`_
 build and install software using particular compiler `toolchains`_, as specified by one or multiple `easyconfig files`_.
 
 
-
-EasyBuild Framework
+EasyBuild framework
 -------------------
 
 The EasyBuild framework embodies the core of the tool, providing functionality commonly
@@ -31,13 +30,10 @@ left unimplemented (since there is no common procedure for them). Each of the st
 tweaked and steered via different parameters known to the framework, for which values are
 either obtained from the provided specification files or set to reasonable default values.
 
-.. XXX - UPDATE BY VERSION
-
 In EasyBuild |version| the framework source code consists of about 19000 lines of code,
 organized across about 125 Python modules in roughly a dozen Python package directories,
 next to almost 7000 lines of code for tests. This provides some notion of the size of the
 EasyBuild framework and the amount of supporting functionality it has to offer.
-
 
 
 .. _Easyblocks:

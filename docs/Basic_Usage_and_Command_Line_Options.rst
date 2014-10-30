@@ -9,9 +9,9 @@ Basic usage of EasyBuild is described in the following sections, covering the mo
  
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework.
 
-Details about the command line options are available via --help, see also :ref:`basic_usage_help`.
+Details about the command line options are available via ``--help``, see also :ref:`basic_usage_help`.
 
-You can query which EasyBuild version you are using with --version::
+You can query which EasyBuild version you are using with ``--version``::
 
   $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host Cephalonia.local.
@@ -64,7 +64,7 @@ Using only command line options
  
 An alternative approach is to only use command line options to specify which software to build.
 Refer to the "Software search and build options" section in the eb --help output for an overview
-of the available command line options for this purpose (cfr. :ref:basic_usage_help).
+of the available command line options for this purpose (cfr. :ref:`basic_usage_help`).
  
 Here is how to build and install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using the system compiler)::
  
@@ -176,6 +176,7 @@ Overview of known toolchains
 For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`toolchains_table`.
  
 Toolchains have brief mnemonic names, for example:
+
 * ``goolf`` stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW``,
 * ``iimpi`` stands for ``icc/ifort, impi``, while
 * ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``.
@@ -212,14 +213,13 @@ Refer to page :ref:`easyconfigs_parameters` for more information, the possible p
 .. tip:: Combine with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
   default is to include ``ConfigureMake`` specific-ones (e.g., ``prefix_opt``)
 
-(refer to external page that lists all available easyconfig parameters, maybe even in a nicer format than just a literal dump of the “eb -a” output (i.e. with a one-liner before dumping the output to a file) - XXX - Need to convert -a output to .rst format
-
 Enable debug logging
 ~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
-  eb bzip2-1.0.6.eb -d   ## Long output follows
+  $ eb bzip2-1.0.6.eb -d
+  == temporary log file in case of crash ...
   [...]
 
 .. tip:: You may enable this by default via adding ``debug = True`` in your EasyBuild configuration file
@@ -232,11 +232,13 @@ Forced reinstallation
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 
-.. warning:: Use with care since this will rebuild and reinstall an existing module,
-  which may be used as a dependency for something else, without requesting confirmation first.
+.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
+
+.. tip:: Combine --force with --dry-run to get a good view on which installations will be forced.
+   (cfr. :ref:`Get an overview of planned installations`)
 
 Searching for easyconfigs
------------------------------------
+-------------------------
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
 
@@ -263,7 +265,8 @@ The same query with ``-S`` is far more readable, when there is a joint path that
   == temporary log file /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log has been removed.
   == temporary directory /tmp/easybuild-muFTYO has been removed.
   
-Finally, using a common substring will help to expand a bit the range of matching easyconfigs::
+The supplied pattern is used to match easyconfig **filepaths**, which can be exploited to trim down
+the list of easyconfigs in the search result. For example, use ``/GCC`` to search for easyconfig files for GCC::
 
   $ eb -S /GCC-4.9
   == temporary log file in case of crash /tmp/easybuild-W40SsV/easybuild-7l96Cm.log
@@ -278,9 +281,8 @@ Finally, using a common substring will help to expand a bit the range of matchin
   == temporary log file /tmp/easybuild-W40SsV/easybuild-7l96Cm.log has been removed.
   == temporary directory /tmp/easybuild-W40SsV has been removed.
 
-
 .. note:: By using a leading slash in front of a search pattern, as the last example, we filter out all the potential matches
-  of easyconfigs that are built with GCC (as opposed to the actual easyconfigs for GCC itself, which is our intention here).
+  of easyconfigs that are built with the GCC toolchain.
 
 .. tip:: Using ``--search`` has remarkably longer output in most cases, compared to ``-S``; the information is the same,
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
@@ -291,8 +293,40 @@ Dependency resolution
 
 To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
 
-     $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | grep "building and installing"
-     (show output)
+  $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | egrep "building and installing|Build succeeded"
+  == building and installing GCC/4.7.2...
+  == building and installing hwloc/1.6.2-GCC-4.7.2...
+  == building and installing OpenMPI/1.6.4-GCC-4.7.2...
+  == building and installing gompi/1.4.10...
+  == building and installing OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2...
+  == building and installing FFTW/3.3.3-gompi-1.4.10...
+  == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...
+  == building and installing goolf/1.4.10...
+  == building and installing zlib/1.2.7-goolf-1.4.10...
+  == building and installing Szip/2.1-goolf-1.4.10...
+  == building and installing ncurses/5.9-goolf-1.4.10...
+  == building and installing flex/2.5.37-goolf-1.4.10...
+  == building and installing M4/1.4.16-goolf-1.4.10...
+  == building and installing JasPer/1.900.1-goolf-1.4.10...
+  == building and installing HDF5/1.8.10-patch1-goolf-1.4.10...
+  == building and installing tcsh/6.18.01-goolf-1.4.10...
+  == building and installing Bison/2.7-goolf-1.4.10...
+  == building and installing Doxygen/1.8.3.1-goolf-1.4.10...
+  == building and installing netCDF/4.2.1.1-goolf-1.4.10...
+  == building and installing netCDF-Fortran/4.2-goolf-1.4.10...
+  == building and installing WRF/3.5.1-goolf-1.4.10-dmpar...
+  == Build succeeded for 21 out of 21
+
+EasyBuild supports installing an entire software stack, including the required toolchain if needed, with a single ``eb`` invocation.
+
+The dependency resolution mechanism will construct a full dependency graph for the software package(s)
+being installed, after which a list of dependencies is composed for which no module is available yet.
+Each of the retained dependencies will then be built and installed, in the required order as indicated by the dependency graph.
+
+To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
+
+.. tip:: This is particularly useful for software packages that have an extensive list of dependencies,
+  or when reinstalling software using a different compiler toolchain (using the ``--try-toolchain`` command line option in combination with ``--robot``).
 
 Get an overview of planned installations
 ----------------------------------------
@@ -328,7 +362,8 @@ The output of --dry-run turns to be long for complex builds, see WRF for an exam
   == temporary log file /tmp/easybuild-7VwyLh/easybuild-Intzn7.log has been removed.
   == temporary directory /tmp/easybuild-7VwyLh has been removed.
 
-::
+Using the short alternative ``-D`` results in more readable output,
+and builds that will be forced are indicated as such. For example::
   
   $ eb OpenMPI-1.6.4-GCC-4.7.2.eb netCDF-4.2.1.1-goolf-1.4.10.eb WRF-3.5.1-goolf-1.4.10-dmpar.eb -Dr --force
   == temporary log file in case of crash /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log
@@ -358,10 +393,9 @@ The output of --dry-run turns to be long for complex builds, see WRF for an exam
   == temporary log file /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log has been removed.
   == temporary directory /tmp/easybuild-HqpcAZ has been removed.
 
+Note how the different status symbols denote distinct handling states by EasyBuild:
 
-.. tip:: Note how the different status symbols denote distinct handling states by EasyBuild:
-  [ ] The build is not available, EasyBuild will deliver it
-  [x] The build is available, EasyBuild will skip building this module
-  [F] The build is available, however EasyBuild has been asked to force a rebuild and will do so
-
+* ``[ ]`` The build is not available, EasyBuild will deliver it
+* ``[x]`` The build is available, EasyBuild will skip building this module
+* ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild and will do so
 
