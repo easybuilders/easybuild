@@ -18,13 +18,13 @@ You can query which EasyBuild version you are using with ``--version``::
   $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
 
-Providing an Easyconfig File
+Providing an easyconfig file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 The most basic usage is to simply provide the name of an easyconfig file to ``eb``.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
  
-For example, to build and install GCC/4.8.3 (using the system compiler - this may take 30 minutes or so)::
+For example, to build and install GCC/4.8.3 (using the system compiler and EasyBuild/1.15.2 - this may take 30 minutes or so)::
  
   $ eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log
@@ -77,26 +77,11 @@ using ``dummy`` toolchain (i.e., using the system compiler)::
   == resolving dependencies ...
   == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/bzip2/bzip2-1.0.6.eb
   == building and installing bzip2/1.0.6...
-  == fetching files...
-  == creating build dir, resetting environment...
-  == unpacking...
-  == patching...
-  == preparing...
-  == configuring...
-  == building...
-  == testing...
-  == installing...
-  == taking care of extensions...
-  == packaging...
-  == postprocessing...
-  == sanity checking...
-  == cleaning up...
+  [...]
   == creating module...
   == COMPLETED: Installation ended successfully
   == Results of the build can be found in the log file /home/example/.local/easybuild/software/bzip2/1.0.6/easybuild/easybuild-bzip2-1.0.6-20141029.013514.log
-  == Build succeeded for 1 out of 1
-  == temporary log file /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log has been removed.
-  == temporary directory /tmp/easybuild-3AzStZ has been removed.
+  [...]
   
 Providing multiple easyconfig files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -171,13 +156,13 @@ Detailed information about the usage of the eb command is available via the ``--
 
 Refer to page :ref:`basic_usage_help` for more detailed information.
 
-.. note:: --help/-H spit out the long help info (i.e. including long option names), -h only includes short option names.
-.. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used!
+.. note:: ``--help``/``-H`` spit out the long help info (i.e. including long option names), ``-h`` only includes short option names.
+.. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
 
 Overview of known toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`toolchains_table`.
+For an overview of known toolchains, use ``eb --list-toolchains``.
  
 Toolchains have brief mnemonic names, for example:
 
@@ -198,9 +183,9 @@ showing the inheritance patterns, with the "base" easyblock class ``EasyBlock`` 
 Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
 (cfr. :ref:`easyblocks` for the distinction between both types of easyblocks).
  
-For example, a list of only generic easyblocks can be obtained with::
+For example, a list of easyblocks can be obtained with::
  
-  $ eb --list-easyblocks | grep -v ^EB_
+  $ eb --list-easyblocks
  
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
@@ -214,8 +199,10 @@ An overview of all available easyconfig parameters can be obtained via
 
 Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
 
-.. tip:: Combine with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
-  default is to include ``ConfigureMake`` specific-ones (e.g., ``prefix_opt``)
+Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock;
+by default, the ones specific to the generic ConfigureMake easyblock are included. For example::
+
+  $ eb -a -e EB_WRF
 
 Enable debug logging
 ~~~~~~~~~~~~~~~~~~~~
@@ -223,8 +210,6 @@ Enable debug logging
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
   $ eb bzip2-1.0.6.eb -d
-  == temporary log file in case of crash ...
-  [...]
 
 .. tip:: You may enable this by default via adding ``debug = True`` in your EasyBuild configuration file
 
