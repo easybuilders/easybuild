@@ -63,6 +63,8 @@ Using only command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 An alternative approach is to only use command line options to specify which software to build.
+Refer to the "Software search and build options" section in the eb --help output for an overview
+of the available command line options for this purpose (cfr. :ref:basic_usage_help).
  
 Here is how to build and install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using the system compiler)::
  
@@ -97,7 +99,8 @@ Providing multiple easyconfig files
  
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
 
-For example, to build and install both bzip2 and GCC with a single command, simply list the easyconfigs for both on the eb command line (note that bzip2 is not being reinstalled, since a matching module is already available)::
+For example, to build and install both bzip2 and GCC with a single command, simply list the easyconfigs for both on the
+``eb`` command line (note that bzip2 is not being reinstalled, since a matching module is already available)::
  
   $ eb bzip2-1.0.6.eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-pGof8u/easybuild-GNYSey.log
@@ -133,9 +136,9 @@ to find easyconfig files. For example:
 ::
 
   $ find set_of_easyconfigs/ -type f             
-  set_of_easyconfigs//GCC-4.8.3.eb
-  set_of_easyconfigs//foo.txt
-  set_of_easyconfigs//tools/bzip2-1.0.6.eb
+  set_of_easyconfigs/GCC-4.8.3.eb
+  set_of_easyconfigs/foo.txt
+  set_of_easyconfigs/tools/bzip2-1.0.6.eb
 
 ::
 
@@ -160,38 +163,39 @@ Commonly used command line options
 Basic usage, --help
 ~~~~~~~~~~~~~~~~~~~
  
-Use ``eb --help``/``-H``, ``eb -h`` - XXX
+Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
 
-.. note:: --help/-H spit out the long help info (i.e. including long option names), -h only includes short option names
-.. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used
+Refer to page :ref:`basic_usage_help` for more detailed information.
 
-Refer to page :ref:`basic_usage_help` for more information.
+.. note:: --help/-H spit out the long help info (i.e. including long option names), -h only includes short option names.
+.. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used!
 
 Overview of known toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`toolchains_table`
+For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`toolchains_table`.
  
-.. tip:: Toolchains have brief mnemonic names, for example:
-  ``goolf`` stands for ``gcc+openmpi+openblas/lapack+fftw``,
-  ``iimpi`` stands for ``icc/ifort+intelmpi``, while
-  ``cgmvolf`` stands for ``clang/gcc+mvapich+openblas/lapack+fftw``.
+Toolchains have brief mnemonic names, for example:
+* ``goolf`` stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW``,
+* ``iimpi`` stands for ``icc/ifort, impi``, while
+* ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``.
 
-:ref:`toolchains_table`
+The complete table of available toolchains is visible here: :ref:`toolchains_table`
 
 List of available easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 You can obtain a list of available :ref:`easyblocks` via ``--list-easyblocks``.
 
-The parameter ``--list-easyblocks`` prints the easyblocks in a hierarchical way,
+The ``--list-easyblocks`` command line option prints the easyblocks in a hierarchical way,
 showing the inheritance patterns, with the "base" easyblock class ``EasyBlock`` on top.
 
 Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
+(cfr. :ref:`easyblocks` for the distinction between both types of easyblocks).
  
-List of generic easyblocks::
+For example, a list of only generic easyblocks can be obtained with::
  
-  eb --list-easyblocks | grep -v ^EB_
+  $ eb --list-easyblocks | grep -v ^EB_
  
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
