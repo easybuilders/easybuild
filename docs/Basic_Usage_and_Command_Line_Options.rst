@@ -1,4 +1,4 @@
-. toctree::
+.. toctree::
      :maxdepth: 2
 
 Basic usage and command line options
@@ -149,8 +149,8 @@ to find easyconfig files. For example:
 Commonly used command line options
 ----------------------------------
  
-Basic usage, --help
-~~~~~~~~~~~~~~~~~~~
+Basic usage, ``eb --help``
+~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
 

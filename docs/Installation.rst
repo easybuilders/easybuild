@@ -238,7 +238,7 @@ Required dependencies
 -  a C/C++ compiler
 
 .. tip::  
- A packaged version of Tcl/C env. modules is available for 
+ A packaged version of Tcl/C environment modules is available for 
  `RPM-based systems <https://rhn.redhat.com/errata/RHBA-2014-0327.html>`_ and
  `Debian/Ubuntu <https://packages.debian.org/testing/main/environment-modules>`_
 
