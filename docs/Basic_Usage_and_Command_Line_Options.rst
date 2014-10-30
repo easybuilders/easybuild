@@ -14,7 +14,7 @@ Details about the command line options are available via ``--help``, see also :r
 You can query which EasyBuild version you are using with ``--version``::
 
   $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host foo.local.
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
 
 Providing an Easyconfig File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
