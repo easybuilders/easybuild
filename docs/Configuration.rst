@@ -211,7 +211,7 @@ The following configuration settings are currently mandatory
 -  :ref:`sourcepath`
 -  :ref:`buildpath`
 -  :ref:`installpath`
--  :ref:`easyconfigsrepo`
+-  :ref:`easyconfigs_repo`
 -  :ref:`logfile_format`
 
 If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
@@ -300,7 +300,7 @@ It is probably a good idea to add this to your (favourite) shell
 ``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login scripts,
 so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 
-.. _easyconfigsrepo:
+.. _easyconfigs_repo:
 
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

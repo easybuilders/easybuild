@@ -1,5 +1,5 @@
 
-.. _basicusageeasyblocks:
+.. _basic_usage_easyblocks:
 
 List of EasyBlocks
 ==================

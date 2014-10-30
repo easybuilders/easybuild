@@ -33,7 +33,7 @@ either obtained from the provided specification files or set to reasonable defau
 
 .. XXX - UPDATE BY VERSION
 
-In EasyBuild v1.15.2 the framework source code consists of about 19000 lines of code,
+In EasyBuild |version| the framework source code consists of about 19000 lines of code,
 organized across about 125 Python modules in roughly a dozen Python package directories,
 next to almost 7000 lines of code for tests. This provides some notion of the size of the
 EasyBuild framework and the amount of supporting functionality it has to offer.
@@ -67,7 +67,7 @@ the generic ConfigureMake easyblock, which implements the common configure – m
 
 .. XXX - UPDATE BY VERSION
 
-At the time of writing, the most recent release of EasyBuild (v1.15.2) includes 139 software-specific
+At the time of writing, the most recent release of EasyBuild (|version|) includes 139 software-specific
 easyblocks and 20 generic easyblocks, providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, over basic tools
 like compilers, various MPI stacks and commonly used libraries, to large scientific software
@@ -128,5 +128,5 @@ Therefore, reproducing installations becomes trivial.
 
 .. XXX - UPDATE BY VERSION
 
-EasyBuild v1.15.2 includes support for over 511 different software packages,
+EasyBuild |version| includes support for over 511 different software packages,
 spread over 2800 easyconfig files describing distinct builds.

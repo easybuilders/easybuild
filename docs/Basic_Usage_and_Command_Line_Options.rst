@@ -1,10 +1,10 @@
 
-Basic Usage and Command Line Options
+Basic usage and command line options
 ====================================
 
 Basic usage of EasyBuild is described in the following sections, covering the most important range of topics if you are new to EasyBuild.
  
-``eb`` Command Line
+``eb`` command line
 -------------------
  
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework.
@@ -58,7 +58,7 @@ For example, to build and install bzip2 v1.0.6 (using the system compiler)::
  
 .. tip:: You may wish to modify ``$EASYBUILD_PREFIX`` in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``
 
-Using Only Command Line Options
+Using only command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 An alternative approach is to only use command line options to specify which software to build.
@@ -91,7 +91,7 @@ Here is how to build and install last version of bzip2 (that EasyBuild is aware 
   == temporary log file /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log has been removed.
   == temporary directory /tmp/easybuild-3AzStZ has been removed.
   
-Providing Multiple Easyconfig Files
+Providing multiple easyconfig files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
@@ -153,12 +153,10 @@ to find easyconfig files. For example:
   if a module is available that matches with an provided easyconfig file, the installation will simply be skipped.
 
 
-Commonly Used Command Line Options
+Commonly used command line options
 ----------------------------------
  
-[[EB cmdline??]] - XXX
- 
-Basic Usage, --help
+Basic usage, --help
 ~~~~~~~~~~~~~~~~~~~
  
 Use ``eb --help``/``-H``, ``eb -h`` - XXX
@@ -166,24 +164,24 @@ Use ``eb --help``/``-H``, ``eb -h`` - XXX
 .. note:: --help/-H spit out the long help info (i.e. including long option names), -h only includes short option names
 .. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used
 
-Refer to page :ref:`basicusagehelp` for more information.
+Refer to page :ref:`basic_usage_help` for more information.
 
-Overview of Known Toolchains
+Overview of known toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`Toolchains_Table`
+For an overview of known toolchains, try ``eb --list-toolchains`` and/or refer to page :ref:`toolchains_table`
  
 .. tip:: Toolchains have brief mnemonic names, for example:
   ``goolf`` stands for ``gcc+openmpi+openblas/lapack+fftw``,
   ``iimpi`` stands for ``icc/ifort+intelmpi``, while
   ``cgmvolf`` stands for ``clang/gcc+mvapich+openblas/lapack+fftw``.
 
-:ref:`Toolchains_Table`
+:ref:`toolchains_table`
 
-List of Available Easyblocks
+List of available easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-You can obtain a list of available :ref:`Easyblocks` via ``--list-easyblocks``.
+You can obtain a list of available :ref:`easyblocks` via ``--list-easyblocks``.
 
 The parameter ``--list-easyblocks`` prints the easyblocks in a hierarchical way,
 showing the inheritance patterns, with the "base" easyblock class ``EasyBlock`` on top.
@@ -194,24 +192,24 @@ List of generic easyblocks::
  
   eb --list-easyblocks | grep -v ^EB_
  
-Refer to page :ref:`basicusageeasyblocks` for more information.
+Refer to page :ref:`basic_usage_easyblocks` for more information.
 
 
-All Available Easyconfig Parameters
+All available easyconfig parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via 
 ``eb --avail-easyconfig-params``, or ``eb -a`` for short.
 
-Refer to page :ref:`easyconfigsparameters` for more information, the possible parameters are a very rich set.
+Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
 
 .. tip:: Combine with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock; fi. ``eb -a -e EB_WRF``;
   default is to include ``ConfigureMake`` specific-ones (e.g., ``prefix_opt``)
 
 (refer to external page that lists all available easyconfig parameters, maybe even in a nicer format than just a literal dump of the “eb -a” output (i.e. with a one-liner before dumping the output to a file) - XXX - Need to convert -a output to .rst format
 
-Enable Debug Logging
+Enable debug logging
 ~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
@@ -224,7 +222,7 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
 
-Forced Reinstallation
+Forced reinstallation
 ~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
@@ -232,7 +230,7 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. warning:: Use with care since this will rebuild and reinstall an existing module,
   which may be used as a dependency for something else, without requesting confirmation first.
 
-Searching for Easyconfigs
+Searching for easyconfigs
 -----------------------------------
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
@@ -283,16 +281,16 @@ Finally, using a common substring will help to expand a bit the range of matchin
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
-Dependency Resolution
--------------------------------
+Dependency resolution
+---------------------
 
 To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
 
      $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | grep "building and installing"
      (show output)
 
-Get an Overview of Planned Installations
--------------------------------------------------------
+Get an overview of planned installations
+----------------------------------------
 
 You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with --robot, in the form of ``-Dr``).
 

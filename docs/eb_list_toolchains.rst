@@ -1,5 +1,5 @@
 
-.. _Toolchains_Table:
+.. _toolchains_table:
 
 Toolchains table
 ================
