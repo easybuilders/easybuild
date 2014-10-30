@@ -206,7 +206,7 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   $ which eb
   /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
   $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host CTFwork.local.
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host Cephalonia.local.
 
 Now, enjoy!
 
