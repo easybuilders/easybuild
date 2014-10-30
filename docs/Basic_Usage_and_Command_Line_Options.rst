@@ -22,13 +22,13 @@ Providing an Easyconfig File
 The most basic usage is to simply provide the name of an easyconfig file to ``eb``.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
  
-For example, to build and install bzip2 v1.0.6 (using the system compiler)::
+For example, to build and install GCC/4.8.3 (using the system compiler - this may take 30 minutes or so)::
  
-  $ eb bzip2-1.0.6.eb
+  $ eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log
   == resolving dependencies ...
-  == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/bzip2/bzip2-1.0.6.eb
-  == building and installing bzip2/1.0.6...
+  == processing EasyBuild easyconfig /Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
+  == building and installing GCC/4.8.3...
   == fetching files...
   == creating build dir, resetting environment...
   == unpacking...
@@ -45,28 +45,30 @@ For example, to build and install bzip2 v1.0.6 (using the system compiler)::
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/bzip2/1.0.6/easybuild/easybuild-bzip2-1.0.6-20141029.013716.log
+  == Results of the build can be found in the log file /Users/fgeorgatos/.local/easybuild/software/gcc/4.8.3/easybuild/easybuild-GCC-4.8.3-20141029.013716.log
   == Build succeeded for 1 out of 1
   == temporary log file /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log has been removed.
   == temporary directory /tmp/easybuild-0f0xKN has been removed.
 
-  $ module load bzip2/1.0.6
-  $ which bzip2
-  /Users/fgeorgatos/.local/easybuild/software/bzip2/1.0.6/bin/bzip2
+  $ module load GCC/4.8.3
+  $ which gcc
+  /Users/fgeorgatos/.local/easybuild/software/GCC/4.8.3/bin/gcc
  
 .. tip:: All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
          this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
  
-.. tip:: You may wish the modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``), in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``
+.. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
+  in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
 
 Using only command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 An alternative approach is to only use command line options to specify which software to build.
-Refer to the "Software search and build options" section in the eb --help output for an overview
+Refer to the ``Software search and build options`` section in the ``eb --help`` output for an overview
 of the available command line options for this purpose (cfr. :ref:`basic_usage_help`).
  
-Here is how to build and install last version of bzip2 (that EasyBuild is aware of) using ``dummy`` toolchain (i.e., using the system compiler)::
+Here is how to build and install last version of bzip2 (that EasyBuild is aware of)
+using ``dummy`` toolchain (i.e., using the system compiler)::
  
   $ eb --software-name=bzip2 --toolchain-name=dummy
   == temporary log file in case of crash /tmp/easybuild-3AzStZ/easybuild-YD_fMf.log
