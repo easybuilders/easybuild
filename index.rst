@@ -17,7 +17,7 @@ Contents
 
 .. toctree::
     :glob:
-    :maxdepth: 1
+    :maxdepth: 2
 
     docs/Concepts_and_Terminology
     docs/Installation
