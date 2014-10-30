@@ -166,9 +166,9 @@ For an overview of known toolchains, use ``eb --list-toolchains``.
  
 Toolchains have brief mnemonic names, for example:
 
-* ``goolf`` stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW``,
-* ``iimpi`` stands for ``icc/ifort, impi``, while
-* ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``.
+* ``goolf`` stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW``
+* ``iimpi`` stands for ``icc/ifort, impi``
+* ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``
 
 The complete table of available toolchains is visible here: :ref:`toolchains_table`
 

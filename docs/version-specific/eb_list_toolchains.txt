@@ -4,7 +4,7 @@
 ==================   ============== =========== =========================================
 Toolchain            Components that comprise the toolchain
 ------------------   --------------------------------------------------------------------
-Name                 Compilers  MPI stack Included Libraries
+Name                 Compilers      MPI stack   Included Libraries
 ==================   ============== =========== =========================================
 ClangGCC             Clang/GCC
 GCC                  GCC
