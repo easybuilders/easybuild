@@ -1,7 +1,6 @@
 
-
 Writing easyconfig files
 ========================
 
-XXX - ONGOING
+XXX - IN PROGRESS
 

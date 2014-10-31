@@ -3,7 +3,7 @@ Typical workflow example: building and installing WRF
 =====================================================
 
 This section shows an example case of building
-`Weather Research and Forecasting<http://www.wrf-model.org>`_ scientific software application,
+`Weather Research and Forecasting <http://www.wrf-model.org>`_ scientific software application,
 which is notoriously complex software application to build and install.
 With EasyBuild however, WRF can be installed quite easily and here is how.
 
