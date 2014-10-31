@@ -6,6 +6,9 @@ Using the EasyBuild command line
 
 Basic usage of EasyBuild is described in the following sections, covering the most important range of topics if you are new to EasyBuild.
  
+Specifying builds
+-----------------
+
 By providing a single easyconfig file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
@@ -307,7 +310,7 @@ You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combine
 $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr
 == temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
 Dry run: printing build status of easyconfigs and dependencies
-CFGS=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
  * [*] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
  * [*] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
  * [*] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
