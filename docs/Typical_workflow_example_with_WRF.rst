@@ -2,14 +2,17 @@
 Typical workflow example: building and installing WRF
 =====================================================
 
-This section shows an example case of building Weather Research and Forecasting application,
-which is a case of notable build complexity and much choice in how to provide the build:
+This section shows an example case of building
+`Weather Research and Forecasting<http://www.wrf-model.org>`_ scientific software application,
+which is notoriously complex software application to build and install.
+With EasyBuild however, WRF can be installed quite easily and here is how.
 
 
 Searching for available easyconfigs files
 -----------------------------------------
 
-Searching for easyconfigs is achieved via the ``--search`` or ``-S`` parameters; lloing for ``WRF``::
+Searching for build specification for a particular software package can be done using the
+``--search``/``-S`` command line options; for example, to get a list of available easyconfig files for WRF::
 
   $ eb -S WRF
   == temporary log file in case of crash /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log
@@ -17,41 +20,34 @@ Searching for easyconfigs is achieved via the ``--search`` or ``-S`` parameters;
   CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF
    * $CFGS1/WRF-3.3.1-goalf-1.1.0-no-OFED-dmpar.eb
    * $CFGS1/WRF-3.3.1-goolf-1.4.10-dmpar.eb
-   * $CFGS1/WRF-3.3.1-ictce-3.2.2.u3-dmpar.eb
-   * $CFGS1/WRF-3.3.1-ictce-5.3.0-dmpar.eb
-   * $CFGS1/WRF-3.3.1_GCC-build_fix.patch
-   * $CFGS1/WRF-3.3.1_known_problems.patch
-   * $CFGS1/WRF-3.4-goalf-1.1.0-no-OFED-dmpar.eb
-   * $CFGS1/WRF-3.4-goolf-1.4.10-dmpar.eb
-   * $CFGS1/WRF-3.4-ictce-3.2.2.u3-dmpar.eb
-   * $CFGS1/WRF-3.4-ictce-5.3.0-dmpar.eb
-   * $CFGS1/WRF-3.4.1-ictce-5.3.0-dmpar.eb
-   * $CFGS1/WRF-3.4.1-iqacml-3.7.3-dmpar.eb
-   * $CFGS1/WRF-3.4.1_netCDF-Fortran_separate_path.patch
-   * $CFGS1/WRF-3.4_known_problems.patch
+   [...]
    * $CFGS1/WRF-3.5-goolf-1.4.10-dmpar.eb
    * $CFGS1/WRF-3.5-ictce-4.1.13-dmpar.eb
    * $CFGS1/WRF-3.5-ictce-5.3.0-dmpar.eb
    * $CFGS1/WRF-3.5.1-goolf-1.4.10-dmpar.eb
    * $CFGS1/WRF-3.5.1-goolf-1.5.14-dmpar.eb
-   * $CFGS1/WRF-3.5.1-ictce-4.1.13-dmpar.eb
-   * $CFGS1/WRF-3.5.1-ictce-5.3.0-dmpar.eb
-   * $CFGS1/WRF-3.5_known_problems.patch
-   * $CFGS1/WRF-3.5_netCDF-Fortran_separate_path.patch
-   * $CFGS1/WRF_FC-output-spec_fix.patch
-   * $CFGS1/WRF_netCDF-Fortran_separate_path.patch
-   * $CFGS1/WRF_no-GCC-graphite-loop-opts.patch
-   * $CFGS1/WRF_parallel_build_fix.patch
-   * $CFGS1/WRF_tests_limit-runtimes.patch
+   [...]
   == temporary log file /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log has been removed.
   == temporary directory /tmp/easybuild-MdAp7p has been removed.
 
-Various builds present themselves, some are based on GCC (goolf/goalf) while others are Intel compiler specific (ictce ones).
+Various easyconfig files are found: for different versions of WRF (e.g., v3.5 and v3.5.1),
+for different (versions of) compiler toolchains (e.g., goolf v1.4.10, goolf v1.5.14, ictce), etc.
+
+For the remainder of this example, we will use the available ``WRF-3.5.1-goolf-1.4.10-dmpar.eb``
+easyconfig file to specify to EasyBuild to build and install
+WRF v3.5.1 using version 1.4.10 of the ``goolf`` toolchain.
+
 
 Getting an overview of planned installations
 --------------------------------------------
 
-Assuming that we need a standard open source build, based on GCC, OpenMPI, OpenBLAS etc, here is an example of how to report what is already there::
+To get an overview of the software that EasyBuild is going to build and install
+we can use the ``--dry-run``/``-D`` command line option. This will show a list of easyconfig files
+that will be used, together with the module files that will be installed
+and their current availability (``[x]`` marks available modules).
+
+Note that EasyBuild will take care of all of the dependencies of WRF as well,
+and can even install the compiler toolchain as well if the corresponding modules are not available yet::
 
   $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb -Dr
   == temporary log file in case of crash /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log
@@ -86,30 +82,71 @@ Assuming that we need a standard open source build, based on GCC, OpenMPI, OpenB
 Installing a software stack
 ---------------------------
 
-To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
+To make EasyBuild build and install WRF, including all of its dependencies, a **single command** is sufficient.
 
-  $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | egrep "building and installing|Build succeeded"
+By using the ``--robot``/``-r`` command line option, we enable dependency resolution such that the entire software stack is handled::
+
+  $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot
   == building and installing GCC/4.7.2...
+  [...]
   == building and installing hwloc/1.6.2-GCC-4.7.2...
+  [...]
   == building and installing OpenMPI/1.6.4-GCC-4.7.2...
+  [...]
   == building and installing gompi/1.4.10...
+  [...]
   == building and installing OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2...
+  [...]
   == building and installing FFTW/3.3.3-gompi-1.4.10...
+  [...]
   == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...
+  [...]
   == building and installing goolf/1.4.10...
+  [...]
   == building and installing zlib/1.2.7-goolf-1.4.10...
+  [...]
   == building and installing Szip/2.1-goolf-1.4.10...
+  [...]
   == building and installing ncurses/5.9-goolf-1.4.10...
+  [...]
   == building and installing flex/2.5.37-goolf-1.4.10...
+  [...]
   == building and installing M4/1.4.16-goolf-1.4.10...
+  [...]
   == building and installing JasPer/1.900.1-goolf-1.4.10...
+  [...]
   == building and installing HDF5/1.8.10-patch1-goolf-1.4.10...
+  [...]
   == building and installing tcsh/6.18.01-goolf-1.4.10...
+  [...]
   == building and installing Bison/2.7-goolf-1.4.10...
+  [...]
   == building and installing Doxygen/1.8.3.1-goolf-1.4.10...
+  [...]
   == building and installing netCDF/4.2.1.1-goolf-1.4.10...
+  [...]
   == building and installing netCDF-Fortran/4.2-goolf-1.4.10...
+  [...]
   == building and installing WRF/3.5.1-goolf-1.4.10-dmpar...
+  [...]
   == Build succeeded for 21 out of 21
 
+Once the installation has succeeded, modules will be available for WRF and all of its dependencies::
+
+  $ module load WRF
+  $ module list
+
+  $ module load WRF
+  $ module list
+  Currently Loaded Modulefiles:
+    1) GCC/4.7.2                                                  9) JasPer/1.900.1-goolf-1.4.10
+    2) hwloc/1.6.2-GCC-4.7.2                                     10) zlib/1.2.7-goolf-1.4.10
+    3) OpenMPI/1.6.4-GCC-4.7.2                                   11) Szip/2.1-goolf-1.4.10
+    4) gompi/1.4.10                                              12) HDF5/1.8.10-patch1-goolf-1.4.10
+    5) OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2                  13) netCDF/4.2.1.1-goolf-1.4.10
+    6) FFTW/3.3.3-gompi-1.4.10                                   14) netCDF-Fortran/4.2-goolf-1.4.10
+    7) ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2  15) WRF/3.5.1-goolf-1.4.10-dmpar
+    8) goolf/1.4.10
+
+For more information, see the other topics discussed in the documentation :ref:`contents`.
 

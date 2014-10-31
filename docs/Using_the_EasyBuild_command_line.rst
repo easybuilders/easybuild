@@ -143,8 +143,8 @@ Commonly used command line options
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
 and hereby the most common command line options are being documented.
 
-Basic usage, ``eb --help``
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Command line help, ``eb --help``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
 
@@ -162,7 +162,7 @@ You can query which EasyBuild version you are using with ``--version``::
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
 
 .. tip:: Asking EasyBuild to print its version is a quick way to ensure that ``$PYTHONPATH``
-  carries sufficient information, so that EasyBuild can initiate build operations.
+  is set up correctly, so that the entire EasyBuild installation (framework, easyblocks, easyconfigs) is available.
 
 List of known toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -176,6 +176,37 @@ Toolchains have brief mnemonic names, for example:
 * ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``
 
 The complete table of available toolchains is visible here: :ref:`toolchains_table`
+
+List of available easyblocks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can obtain a list of available :ref:`easyblocks` via ``--list-easyblocks``.
+
+The ``--list-easyblocks`` command line option prints the easyblocks in a hierarchical way,
+showing the inheritance patterns, with the "base" easyblock class ``EasyBlock`` on top.
+
+Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
+(cfr. :ref:`easyblocks` for the distinction between both types of easyblocks).
+
+For example, a list of easyblocks can be obtained with::
+
+  $ eb --list-easyblocks
+
+Refer to page :ref:`basic_usage_easyblocks` for more information.
+
+All available easyconfig parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EasyBuild provides a significant amount of easyconfig parameters.
+An overview of all available easyconfig parameters can be obtained via
+``eb --avail-easyconfig-params``, or ``eb -a`` for short.
+
+Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
+
+Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock;
+by default, the ones specific to the generic ConfigureMake easyblock are included. For example::
+
+  $ eb -a -e EB_WRF
 
 Enable debug logging
 ~~~~~~~~~~~~~~~~~~~~
@@ -196,12 +227,12 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
 .. tip:: Combine --force with --dry-run to get a good view on which installations will be forced.
-   (cfr. `Get an overview of planned installations`_)
+   (cfr. `Using dry-run to get an overview of planned installations`_)
 
 Searching for easyconfigs
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
+Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for `case-insensitive` search of easyconfigs. Example::
 
   $ eb --search blast
   == temporary log file in case of crash /tmp/easybuild-1qIvuB/easybuild-eYwxlR.log
@@ -280,17 +311,27 @@ Use robot for dependency resolution
 
 To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
 
-  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot | egrep "building and installing|Build succeeded"
+  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot
+  [...]
   == building and installing GCC/4.7.2...
+  [...]
   == building and installing hwloc/1.6.2-GCC-4.7.2...
+  [...]
   == building and installing OpenMPI/1.6.4-GCC-4.7.2...
+  [...]
   == building and installing gompi/1.4.10...
+  [...]
   == building and installing OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2...
+  [...]
   == building and installing FFTW/3.3.3-gompi-1.4.10...
+  [...]
   == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...
+  [...]
   == building and installing goolf/1.4.10...
+  [...]
   == building and installing mpiBLAST/1.6.0-goolf-1.4.10...
-  == Build succeeded for 21 out of 21
+  [...]
+  == Build succeeded for 10 out of 10
 
 EasyBuild supports installing an entire software stack, including the required toolchain if needed, with a single ``eb`` invocation.
 
@@ -305,7 +346,7 @@ Each of the retained dependencies will then be built and installed, in the requi
 Using dry-run to get an overview of planned installations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with --robot, in the form of ``-Dr``)::
+You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with ``--robot``, in the form of ``-Dr``)::
 
   $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr
   == temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
