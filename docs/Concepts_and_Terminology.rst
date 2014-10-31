@@ -8,6 +8,7 @@ Concepts and terminology
 EasyBuild consists of a collection of Python modules and packages that interact with each other,
 dynamically picking up additional Python modules as needed for building and installing
 a (stack of) software package(s) specified via simple specification files.
+
 Or, in EasyBuild terminology: the `EasyBuild framework`_ leverages `easyblocks`_ to automatically
 build and install software using particular compiler `toolchains`_, as specified by one or multiple `easyconfig files`_.
 

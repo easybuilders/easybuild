@@ -199,7 +199,7 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
    (cfr. `Get an overview of planned installations`_)
 
 Searching for easyconfigs
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
 
@@ -276,7 +276,7 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
 
 
 Use robot for dependency resolution
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
 
@@ -303,7 +303,7 @@ Each of the retained dependencies will then be built and installed, in the requi
   (you can use the ``--try-toolchain`` command line option in combination with ``--robot``).
 
 Using dry-run to get an overview of planned installations
----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with --robot, in the form of ``-Dr``)::
 

@@ -1,5 +1,5 @@
 .. toctree::
-     :maxdepth: 2
+     :maxdepth: 3
 
 .. EasyBuild documentation master file
 
@@ -17,7 +17,7 @@ Contents
 
 .. toctree::
     :glob:
-    :maxdepth: 2
+    :maxdepth: 3
 
     docs/Concepts_and_Terminology
     docs/Installation
