@@ -154,7 +154,7 @@ Refer to page :ref:`basic_usage_help` for more detailed information.
 .. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
 
 Report version
---------------
+~~~~~~~~~~~~~~
  
 You can query which EasyBuild version you are using with ``--version``::
 
@@ -305,23 +305,23 @@ Each of the retained dependencies will then be built and installed, in the requi
 Using dry-run to get an overview of planned installations
 ---------------------------------------------------------
 
-You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with --robot, in the form of ``-Dr``).
+You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with --robot, in the form of ``-Dr``)::
 
-$ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr
-== temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
-Dry run: printing build status of easyconfigs and dependencies
-CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
- * [*] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
- * [*] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
- * [*] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
- * [*] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
- * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
- * [ ] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
- * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
- * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
- * [ ] $CFGS/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb (module: mpiBLAST/1.6.0-goolf-1.4.10)
-== temporary log file /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log has been removed.
-== temporary directory /tmp/easybuild-vyNQhw has been removed.
+  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr
+  == temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
+  Dry run: printing build status of easyconfigs and dependencies
+  CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+   * [*] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
+   * [*] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
+   * [*] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
+   * [*] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
+   * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
+   * [ ] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
+   * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
+   * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
+   * [ ] $CFGS/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb (module: mpiBLAST/1.6.0-goolf-1.4.10)
+  == temporary log file /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log has been removed.
+  == temporary directory /tmp/easybuild-vyNQhw has been removed.
 
 Note how the different status symbols denote distinct handling states by EasyBuild:
 

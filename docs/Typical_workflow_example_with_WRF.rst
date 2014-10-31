@@ -9,45 +9,49 @@ which is a case of notable build complexity and much choice in how to provide th
 Searching for available easyconfigs files
 -----------------------------------------
 
-$ eb -S WRF
-== temporary log file in case of crash /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log
-== Searching (case-insensitive) for 'WRF' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF
- * $CFGS1/WRF-3.3.1-goalf-1.1.0-no-OFED-dmpar.eb
- * $CFGS1/WRF-3.3.1-goolf-1.4.10-dmpar.eb
- * $CFGS1/WRF-3.3.1-ictce-3.2.2.u3-dmpar.eb
- * $CFGS1/WRF-3.3.1-ictce-5.3.0-dmpar.eb
- * $CFGS1/WRF-3.3.1_GCC-build_fix.patch
- * $CFGS1/WRF-3.3.1_known_problems.patch
- * $CFGS1/WRF-3.4-goalf-1.1.0-no-OFED-dmpar.eb
- * $CFGS1/WRF-3.4-goolf-1.4.10-dmpar.eb
- * $CFGS1/WRF-3.4-ictce-3.2.2.u3-dmpar.eb
- * $CFGS1/WRF-3.4-ictce-5.3.0-dmpar.eb
- * $CFGS1/WRF-3.4.1-ictce-5.3.0-dmpar.eb
- * $CFGS1/WRF-3.4.1-iqacml-3.7.3-dmpar.eb
- * $CFGS1/WRF-3.4.1_netCDF-Fortran_separate_path.patch
- * $CFGS1/WRF-3.4_known_problems.patch
- * $CFGS1/WRF-3.5-goolf-1.4.10-dmpar.eb
- * $CFGS1/WRF-3.5-ictce-4.1.13-dmpar.eb
- * $CFGS1/WRF-3.5-ictce-5.3.0-dmpar.eb
- * $CFGS1/WRF-3.5.1-goolf-1.4.10-dmpar.eb
- * $CFGS1/WRF-3.5.1-goolf-1.5.14-dmpar.eb
- * $CFGS1/WRF-3.5.1-ictce-4.1.13-dmpar.eb
- * $CFGS1/WRF-3.5.1-ictce-5.3.0-dmpar.eb
- * $CFGS1/WRF-3.5_known_problems.patch
- * $CFGS1/WRF-3.5_netCDF-Fortran_separate_path.patch
- * $CFGS1/WRF_FC-output-spec_fix.patch
- * $CFGS1/WRF_netCDF-Fortran_separate_path.patch
- * $CFGS1/WRF_no-GCC-graphite-loop-opts.patch
- * $CFGS1/WRF_parallel_build_fix.patch
- * $CFGS1/WRF_tests_limit-runtimes.patch
-== temporary log file /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log has been removed.
-== temporary directory /tmp/easybuild-MdAp7p has been removed.
+Searching for easyconfigs is achieved via the ``--search`` or ``-S`` parameters; lloing for ``WRF``::
 
+  $ eb -S WRF
+  == temporary log file in case of crash /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log
+  == Searching (case-insensitive) for 'WRF' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF
+   * $CFGS1/WRF-3.3.1-goalf-1.1.0-no-OFED-dmpar.eb
+   * $CFGS1/WRF-3.3.1-goolf-1.4.10-dmpar.eb
+   * $CFGS1/WRF-3.3.1-ictce-3.2.2.u3-dmpar.eb
+   * $CFGS1/WRF-3.3.1-ictce-5.3.0-dmpar.eb
+   * $CFGS1/WRF-3.3.1_GCC-build_fix.patch
+   * $CFGS1/WRF-3.3.1_known_problems.patch
+   * $CFGS1/WRF-3.4-goalf-1.1.0-no-OFED-dmpar.eb
+   * $CFGS1/WRF-3.4-goolf-1.4.10-dmpar.eb
+   * $CFGS1/WRF-3.4-ictce-3.2.2.u3-dmpar.eb
+   * $CFGS1/WRF-3.4-ictce-5.3.0-dmpar.eb
+   * $CFGS1/WRF-3.4.1-ictce-5.3.0-dmpar.eb
+   * $CFGS1/WRF-3.4.1-iqacml-3.7.3-dmpar.eb
+   * $CFGS1/WRF-3.4.1_netCDF-Fortran_separate_path.patch
+   * $CFGS1/WRF-3.4_known_problems.patch
+   * $CFGS1/WRF-3.5-goolf-1.4.10-dmpar.eb
+   * $CFGS1/WRF-3.5-ictce-4.1.13-dmpar.eb
+   * $CFGS1/WRF-3.5-ictce-5.3.0-dmpar.eb
+   * $CFGS1/WRF-3.5.1-goolf-1.4.10-dmpar.eb
+   * $CFGS1/WRF-3.5.1-goolf-1.5.14-dmpar.eb
+   * $CFGS1/WRF-3.5.1-ictce-4.1.13-dmpar.eb
+   * $CFGS1/WRF-3.5.1-ictce-5.3.0-dmpar.eb
+   * $CFGS1/WRF-3.5_known_problems.patch
+   * $CFGS1/WRF-3.5_netCDF-Fortran_separate_path.patch
+   * $CFGS1/WRF_FC-output-spec_fix.patch
+   * $CFGS1/WRF_netCDF-Fortran_separate_path.patch
+   * $CFGS1/WRF_no-GCC-graphite-loop-opts.patch
+   * $CFGS1/WRF_parallel_build_fix.patch
+   * $CFGS1/WRF_tests_limit-runtimes.patch
+  == temporary log file /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log has been removed.
+  == temporary directory /tmp/easybuild-MdAp7p has been removed.
+
+Various builds present themselves, some are based on GCC (goolf/goalf) while others are Intel compiler specific (ictce ones).
 
 Getting an overview of planned installations
 --------------------------------------------
 
+Assuming that we need a standard open source build, based on GCC, OpenMPI, OpenBLAS etc, here is an example of how to report what is already there::
 
   $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb -Dr
   == temporary log file in case of crash /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log
