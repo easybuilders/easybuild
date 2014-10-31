@@ -206,8 +206,8 @@ Refer to page :ref:`basic_usage_help` for more detailed information.
 .. note:: ``--help``/``-H`` spit out the long help info (i.e. including long option names), ``-h`` only includes short option names.
 .. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
 
-Report version
-~~~~~~~~~~~~~~
+Report version, ``--version``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 You can query which EasyBuild version you are using with ``--version``::
 
@@ -217,8 +217,8 @@ You can query which EasyBuild version you are using with ``--version``::
 .. tip:: Asking EasyBuild to print own its version is a quick way to ensure that ``$PYTHONPATH``
   is set up correctly, so that the entire EasyBuild installation (framework, easyblocks, easyconfigs) is available.
 
-List of known toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~
+List of known toolchains, ``eb --list-toolchains``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 For an overview of known toolchains, use ``eb --list-toolchains``.
  
@@ -230,8 +230,8 @@ Toolchains have brief mnemonic names, for example:
 
 The complete table of available toolchains is visible here: :ref:`toolchains_table`
 
-List of available easyblocks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of available easyblocks, ``--list-easyblocks``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can obtain a list of available :ref:`easyblocks` via ``--list-easyblocks``.
 
@@ -247,8 +247,8 @@ For example, a list of easyblocks can be obtained with::
 
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
-All available easyconfig parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+All available easyconfig parameters, ``eb -a``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
@@ -261,8 +261,8 @@ by default, the ones specific to the generic ConfigureMake easyblock are include
 
   $ eb -a -e EB_WRF
 
-Enable debug logging
-~~~~~~~~~~~~~~~~~~~~
+Enable debug logging, ``--debug``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
@@ -272,8 +272,8 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
-Forced reinstallation
-~~~~~~~~~~~~~~~~~~~~~
+Forced reinstallation, ``eb --force``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 
@@ -282,8 +282,8 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. tip:: Combine --force with --dry-run to get a good view on which installations will be forced.
    (cfr. `Using dry-run to get an overview of planned installations`_)
 
-Searching for easyconfigs
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Searching for easyconfigs, ``--search``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for `case-insensitive` search of easyconfigs. Example::
 
@@ -312,7 +312,7 @@ Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, f
 
 The same query with ``-S`` is far more readable, when there is a joint path that can be collapsed to a variable like ``$CFGS1``::
 
-  eb -S blast
+  $ eb -S blast
   == temporary log file in case of crash /tmp/easybuild-tMmLMz/easybuild-Qgfely.log
   == Searching (case-insensitive) for 'blast' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
   CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
@@ -359,8 +359,8 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
-Use robot for dependency resolution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use robot for dependency resolution, ``--robot``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild supports installing an entire software stack, including the required toolchain
 if needed, with a single ``eb`` invocation::
