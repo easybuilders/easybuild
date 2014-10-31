@@ -1,25 +1,13 @@
 .. toctree::
-     :maxdepth: 2
+     :maxdepth: 4
 
-Basic usage and command line options
-====================================
+Using the EasyBuild command line
+================================
 
 Basic usage of EasyBuild is described in the following sections, covering the most important range of topics if you are new to EasyBuild.
  
-``eb`` command line
--------------------
- 
-``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework.
-
-Details about the command line options are available via ``--help``, see also :ref:`basic_usage_help`.
-
-You can query which EasyBuild version you are using with ``--version``::
-
-  $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
-
-Providing an easyconfig file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By providing a single easyconfig file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 The most basic usage is to simply provide the name of an easyconfig file to ``eb``.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
@@ -56,14 +44,14 @@ For example, to build and install GCC/4.8.3 (using the system compiler and EasyB
   $ which gcc
   /home/example/.local/easybuild/software/GCC/4.8.3/bin/gcc
  
-.. tip:: All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
-         this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
+All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
+this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
  
 .. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
   in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
 
-Using only command line options
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Via command line options
+~~~~~~~~~~~~~~~~~~~~~~~~
  
 An alternative approach is to only use command line options to specify which software to build.
 Refer to the ``Software search and build options`` section in the ``eb --help`` output for an overview
@@ -83,8 +71,8 @@ using ``dummy`` toolchain (i.e., using the system compiler)::
   == Results of the build can be found in the log file /home/example/.local/easybuild/software/bzip2/1.0.6/easybuild/easybuild-bzip2-1.0.6-20141029.013514.log
   [...]
   
-Providing multiple easyconfig files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By providing a set of easyconfig files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
 
@@ -149,6 +137,9 @@ to find easyconfig files. For example:
 Commonly used command line options
 ----------------------------------
  
+``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
+and hereby the most common command line options are being documented.
+
 Basic usage, ``eb --help``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
  
@@ -159,8 +150,19 @@ Refer to page :ref:`basic_usage_help` for more detailed information.
 .. note:: ``--help``/``-H`` spit out the long help info (i.e. including long option names), ``-h`` only includes short option names.
 .. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
 
-Overview of known toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Report version
+--------------
+ 
+You can query which EasyBuild version you are using with ``--version``::
+
+  $ eb --version
+  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
+
+.. tip:: Asking EasyBuild to print its version is a quick way to ensure that ``$PYTHONPATH``
+  carries sufficient information, so that EasyBuild can initiate build operations.
+
+List of known toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~
  
 For an overview of known toolchains, use ``eb --list-toolchains``.
  
@@ -172,38 +174,6 @@ Toolchains have brief mnemonic names, for example:
 
 The complete table of available toolchains is visible here: :ref:`toolchains_table`
 
-List of available easyblocks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
-You can obtain a list of available :ref:`easyblocks` via ``--list-easyblocks``.
-
-The ``--list-easyblocks`` command line option prints the easyblocks in a hierarchical way,
-showing the inheritance patterns, with the "base" easyblock class ``EasyBlock`` on top.
-
-Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
-(cfr. :ref:`easyblocks` for the distinction between both types of easyblocks).
- 
-For example, a list of easyblocks can be obtained with::
- 
-  $ eb --list-easyblocks
- 
-Refer to page :ref:`basic_usage_easyblocks` for more information.
-
-
-All available easyconfig parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-EasyBuild provides a significant amount of easyconfig parameters.
-An overview of all available easyconfig parameters can be obtained via 
-``eb --avail-easyconfig-params``, or ``eb -a`` for short.
-
-Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
-
-Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock;
-by default, the ones specific to the generic ConfigureMake easyblock are included. For example::
-
-  $ eb -a -e EB_WRF
-
 Enable debug logging
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -214,7 +184,6 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 .. tip:: You may enable this by default via adding ``debug = True`` in your EasyBuild configuration file
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
-
 
 Forced reinstallation
 ~~~~~~~~~~~~~~~~~~~~~
@@ -231,30 +200,56 @@ Searching for easyconfigs
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for case-insensitive search of easyconfigs. Example::
 
-  $ eb --search WRF-3.5.1
-  == temporary log file in case of crash /tmp/easybuild-B0tYcq/easybuild-ZpmYAs.log
-  == Searching (case-insensitive) for 'WRF-3.5.1' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.5.14-dmpar.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-4.1.13-dmpar.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-ictce-5.3.0-dmpar.eb
-  == temporary log file /tmp/easybuild-B0tYcq/easybuild-ZpmYAs.log has been removed.
-  == temporary directory /tmp/easybuild-B0tYcq has been removed.
+  $ eb --search blast
+  == temporary log file in case of crash /tmp/easybuild-1qIvuB/easybuild-eYwxlR.log
+  == Searching (case-insensitive) for 'blast' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.26-Linux_x86_64.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27-goalf-1.1.0-no-OFED.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27-goolf-1.4.10.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27-ictce-4.0.6.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27_ictce-fixes.patch
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-goolf-1.4.10-Python-2.7.3.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-goolf-1.4.10.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-ictce-4.1.13.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-ictce-5.3.0-Python-2.7.3.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-ictce-5.3.0.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28_ictce-fixes.patch
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-goalf-1.1.0-no-OFED.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-ictce-4.0.6.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.2.0.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.3.0.eb
+   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST_disable-ncbi-X11-apps.patch
+  == temporary log file /tmp/easybuild-1qIvuB/easybuild-eYwxlR.log has been removed.
+  == temporary directory /tmp/easybuild-1qIvuB has been removed.
 
 The same query with ``-S`` is far more readable, when there is a joint path that can be collapsed to a variable like ``$CFGS1``::
 
-  $ eb -S WRF-3.5.1
-  == temporary log file in case of crash /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log
-  == Searching (case-insensitive) for 'WRF-3.5.1' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF
-   * $CFGS1/WRF-3.5.1-goolf-1.4.10-dmpar.eb
-   * $CFGS1/WRF-3.5.1-goolf-1.5.14-dmpar.eb
-   * $CFGS1/WRF-3.5.1-ictce-4.1.13-dmpar.eb
-   * $CFGS1/WRF-3.5.1-ictce-5.3.0-dmpar.eb
-  == temporary log file /tmp/easybuild-muFTYO/easybuild-d8Lcqq.log has been removed.
-  == temporary directory /tmp/easybuild-muFTYO has been removed.
-  
-The supplied pattern is used to match easyconfig **filepaths**, which can be exploited to trim down
+  eb -S blast
+  == temporary log file in case of crash /tmp/easybuild-tMmLMz/easybuild-Qgfely.log
+  == Searching (case-insensitive) for 'blast' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+   * $CFGS1/b/BLAST/BLAST-2.2.26-Linux_x86_64.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.27-goalf-1.1.0-no-OFED.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.27-goolf-1.4.10.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.27-ictce-4.0.6.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.27_ictce-fixes.patch
+   * $CFGS1/b/BLAST/BLAST-2.2.28-goolf-1.4.10-Python-2.7.3.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.28-goolf-1.4.10.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.28-ictce-4.1.13.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.28-ictce-5.3.0-Python-2.7.3.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.28-ictce-5.3.0.eb
+   * $CFGS1/b/BLAST/BLAST-2.2.28_ictce-fixes.patch
+   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-goalf-1.1.0-no-OFED.eb
+   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb
+   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-ictce-4.0.6.eb
+   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.2.0.eb
+   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.3.0.eb
+   * $CFGS1/m/mpiBLAST/mpiBLAST_disable-ncbi-X11-apps.patch
+  == temporary log file /tmp/easybuild-tMmLMz/easybuild-Qgfely.log has been removed.
+  == temporary directory /tmp/easybuild-tMmLMz has been removed.
+
+The supplied pattern is used to match easyconfig **filepaths**; that aspect can be exploited to trim down
 the list of easyconfigs in the search result. For example, use ``/GCC`` to search for easyconfig files for GCC::
 
   $ eb -S /GCC-4.9
@@ -270,19 +265,19 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
   == temporary log file /tmp/easybuild-W40SsV/easybuild-7l96Cm.log has been removed.
   == temporary directory /tmp/easybuild-W40SsV has been removed.
 
-.. note:: By using a leading slash in front of a search pattern, as the last example, we filter out all the potential matches
-  of easyconfigs that are built with the GCC toolchain.
+.. note:: By using a leading slash in front of a search pattern, as the last example,
+  we filter out all the potential matches of easyconfigs that are built with the GCC toolchain.
 
 .. tip:: Using ``--search`` has remarkably longer output in most cases, compared to ``-S``; the information is the same,
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
-Dependency resolution
----------------------
+Use robot for dependency resolution
+-----------------------------------
 
 To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
 
-  $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot | egrep "building and installing|Build succeeded"
+  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot | egrep "building and installing|Build succeeded"
   == building and installing GCC/4.7.2...
   == building and installing hwloc/1.6.2-GCC-4.7.2...
   == building and installing OpenMPI/1.6.4-GCC-4.7.2...
@@ -291,19 +286,7 @@ To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command l
   == building and installing FFTW/3.3.3-gompi-1.4.10...
   == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...
   == building and installing goolf/1.4.10...
-  == building and installing zlib/1.2.7-goolf-1.4.10...
-  == building and installing Szip/2.1-goolf-1.4.10...
-  == building and installing ncurses/5.9-goolf-1.4.10...
-  == building and installing flex/2.5.37-goolf-1.4.10...
-  == building and installing M4/1.4.16-goolf-1.4.10...
-  == building and installing JasPer/1.900.1-goolf-1.4.10...
-  == building and installing HDF5/1.8.10-patch1-goolf-1.4.10...
-  == building and installing tcsh/6.18.01-goolf-1.4.10...
-  == building and installing Bison/2.7-goolf-1.4.10...
-  == building and installing Doxygen/1.8.3.1-goolf-1.4.10...
-  == building and installing netCDF/4.2.1.1-goolf-1.4.10...
-  == building and installing netCDF-Fortran/4.2-goolf-1.4.10...
-  == building and installing WRF/3.5.1-goolf-1.4.10-dmpar...
+  == building and installing mpiBLAST/1.6.0-goolf-1.4.10...
   == Build succeeded for 21 out of 21
 
 EasyBuild supports installing an entire software stack, including the required toolchain if needed, with a single ``eb`` invocation.
@@ -312,75 +295,30 @@ The dependency resolution mechanism will construct a full dependency graph for t
 being installed, after which a list of dependencies is composed for which no module is available yet.
 Each of the retained dependencies will then be built and installed, in the required order as indicated by the dependency graph.
 
-To make EasyBuild try and resolve dependencies, use the ``--robot/-r`` command line option, as follows::
-
 .. tip:: This is particularly useful for software packages that have an extensive list of dependencies,
-  or when reinstalling software using a different compiler toolchain (using the ``--try-toolchain`` command line option in combination with ``--robot``).
+  or when reinstalling software using a different compiler toolchain
+  (you can use the ``--try-toolchain`` command line option in combination with ``--robot``).
 
-Get an overview of planned installations
-----------------------------------------
+Using dry-run to get an overview of planned installations
+---------------------------------------------------------
 
 You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with --robot, in the form of ``-Dr``).
 
-The output of --dry-run turns to be long for complex builds, see WRF for an example::
-
-  $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot --dry-run
-  == temporary log file in case of crash /tmp/easybuild-7VwyLh/easybuild-Intzn7.log
-  Dry run: printing build status of easyconfigs and dependencies
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/z/zlib/zlib-1.2.7-goolf-1.4.10.eb (module: zlib/1.2.7-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/s/Szip/Szip-2.1-goolf-1.4.10.eb (module: Szip/2.1-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/ncurses/ncurses-5.9-goolf-1.4.10.eb (module: ncurses/5.9-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/f/flex/flex-2.5.37-goolf-1.4.10.eb (module: flex/2.5.37-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/M4/M4-1.4.16-goolf-1.4.10.eb (module: M4/1.4.16-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/j/JasPer/JasPer-1.900.1-goolf-1.4.10.eb (module: JasPer/1.900.1-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/h/HDF5/HDF5-1.8.10-patch1-goolf-1.4.10.eb (module: HDF5/1.8.10-patch1-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/t/tcsh/tcsh-6.18.01-goolf-1.4.10.eb (module: tcsh/6.18.01-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/Bison/Bison-2.7-goolf-1.4.10.eb (module: Bison/2.7-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/d/Doxygen/Doxygen-1.8.3.1-goolf-1.4.10.eb (module: Doxygen/1.8.3.1-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/netCDF/netCDF-4.2.1.1-goolf-1.4.10.eb (module: netCDF/4.2.1.1-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/n/netCDF-Fortran/netCDF-Fortran-4.2-goolf-1.4.10.eb (module: netCDF-Fortran/4.2-goolf-1.4.10)
-   * [ ] /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb (module: WRF/3.5.1-goolf-1.4.10-dmpar)
-  == temporary log file /tmp/easybuild-7VwyLh/easybuild-Intzn7.log has been removed.
-  == temporary directory /tmp/easybuild-7VwyLh has been removed.
-
-Using the short alternative ``-D`` results in more readable output,
-and builds that will be forced are indicated as such. For example::
-  
-  $ eb OpenMPI-1.6.4-GCC-4.7.2.eb netCDF-4.2.1.1-goolf-1.4.10.eb WRF-3.5.1-goolf-1.4.10-dmpar.eb -Dr --force
-  == temporary log file in case of crash /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log
-  Dry run: printing build status of easyconfigs and dependencies
-  CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
-   * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [F] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
-   * [x] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
-   * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
-   * [x] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
-   * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
-   * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
-   * [ ] $CFGS/s/Szip/Szip-2.1-goolf-1.4.10.eb (module: Szip/2.1-goolf-1.4.10)
-   * [ ] $CFGS/f/flex/flex-2.5.37-goolf-1.4.10.eb (module: flex/2.5.37-goolf-1.4.10)
-   * [ ] $CFGS/n/ncurses/ncurses-5.9-goolf-1.4.10.eb (module: ncurses/5.9-goolf-1.4.10)
-   * [ ] $CFGS/m/M4/M4-1.4.16-goolf-1.4.10.eb (module: M4/1.4.16-goolf-1.4.10)
-   * [ ] $CFGS/j/JasPer/JasPer-1.900.1-goolf-1.4.10.eb (module: JasPer/1.900.1-goolf-1.4.10)
-   * [ ] $CFGS/z/zlib/zlib-1.2.7-goolf-1.4.10.eb (module: zlib/1.2.7-goolf-1.4.10)
-   * [ ] $CFGS/t/tcsh/tcsh-6.18.01-goolf-1.4.10.eb (module: tcsh/6.18.01-goolf-1.4.10)
-   * [ ] $CFGS/b/Bison/Bison-2.7-goolf-1.4.10.eb (module: Bison/2.7-goolf-1.4.10)
-   * [ ] $CFGS/h/HDF5/HDF5-1.8.10-patch1-goolf-1.4.10.eb (module: HDF5/1.8.10-patch1-goolf-1.4.10)
-   * [ ] $CFGS/d/Doxygen/Doxygen-1.8.3.1-goolf-1.4.10.eb (module: Doxygen/1.8.3.1-goolf-1.4.10)
-   * [ ] $CFGS/n/netCDF/netCDF-4.2.1.1-goolf-1.4.10.eb (module: netCDF/4.2.1.1-goolf-1.4.10)
-   * [ ] $CFGS/n/netCDF-Fortran/netCDF-Fortran-4.2-goolf-1.4.10.eb (module: netCDF-Fortran/4.2-goolf-1.4.10)
-   * [ ] $CFGS/w/WRF/WRF-3.5.1-goolf-1.4.10-dmpar.eb (module: WRF/3.5.1-goolf-1.4.10-dmpar)
-  == temporary log file /tmp/easybuild-HqpcAZ/easybuild-uNzmpk.log has been removed.
-  == temporary directory /tmp/easybuild-HqpcAZ has been removed.
+$ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr
+== temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
+Dry run: printing build status of easyconfigs and dependencies
+CFGS=/Users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
+ * [*] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
+ * [*] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
+ * [*] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
+ * [*] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
+ * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
+ * [ ] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
+ * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
+ * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
+ * [ ] $CFGS/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb (module: mpiBLAST/1.6.0-goolf-1.4.10)
+== temporary log file /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log has been removed.
+== temporary directory /tmp/easybuild-vyNQhw has been removed.
 
 Note how the different status symbols denote distinct handling states by EasyBuild:
 

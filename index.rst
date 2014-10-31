@@ -6,8 +6,8 @@
 
 This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version: 1.15.2
 
-Welcome to EasyBuild's documentation!
-=====================================
+Welcome to EasyBuild
+====================
 
 .. rubric:: Everything you need to know about EasyBuild
   , the efficient way to manage software on High Performance Computing (HPC) platforms.
@@ -22,7 +22,8 @@ Contents
     docs/Concepts_and_Terminology
     docs/Installation
     docs/Configuration
-    docs/Basic_Usage_and_Command_Line_Options
+    docs/Using_the_EasyBuild_command_line
+    docs/Writing_easyconfig_files
 
 .. toctree::
     :hidden:
