@@ -38,27 +38,28 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
 * configuration file entry (key-value assignment):
 
-   .. code:: ini
+.. code:: ini
 
-       [config]
-       modules-tool = Lmod
+[config]
+modules-tool = Lmod
 
 * environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s becomes ``_``\ ’s):
 
-   .. code:: shell-session
+.. code:: shell-session
 
-       $ export EASYBUILD_MODULES_TOOL=Lmod
+$ export EASYBUILD_MODULES_TOOL=Lmod
 
 * command line argument (long options preceded by ``--`` and (optionally) using ``=``):
 
-   .. code:: shell-session
+.. code:: shell-session
 
-       $ eb --modules-tool=Lmod
-   or
+$ eb --modules-tool=Lmod
 
-   .. code:: shell-session
+or
 
-       $ eb --modules-tool Lmod
+.. code:: shell-session
+
+$ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
 
@@ -184,14 +185,16 @@ For boolean configuration settings, both the ``--<option>`` and
 Examples (more below):
 
 * enable debug logging (long option) and logging to stdout (short option)
+
 .. code:: shell-session
 
-    $ eb --debug -l ...
+$ eb --debug -l ...
 
 * use ``/dev/shm`` as build path, install to temporary install path, disable debug logging
+
 .. code:: shell-session
 
-    $ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
+$ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
 
 Available configuration settings
 --------------------------------
@@ -373,10 +376,8 @@ is supported:
 
 * ``%(name)s``: the name of the software package to install
 * ``%(version)s``: the version of the software package to install
-* ``%(date)s``: the date on which the installation was performed (in
-   ``YYYYMMDD`` format, e.g. ``20120324``)
-* ``%(time)s``: the time at which the installation was started (in
-   ``HHMMSS`` format, e.g. ``214359``)
+* ``%(date)s``: the date on which the installation was performed (in ``YYYYMMDD`` format, e.g. ``20120324``)
+* ``%(time)s``: the time at which the installation was started (in ``HHMMSS`` format, e.g. ``214359``)
 
 For example, the logfile format can be specified as follows in the
 EasyBuild configuration file:
