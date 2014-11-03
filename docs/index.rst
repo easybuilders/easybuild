@@ -20,7 +20,7 @@ Introductory topics
     :glob:
     :maxdepth: 3
 
-    introduction
+    Introduction
     Concepts_and_Terminology
     Typical_workflow_example_with_WRF
 
@@ -90,9 +90,9 @@ Lists and tables
 
 As of version EasyBuild version |version|:
 
-  * The complete table of available toolchains is visible at :ref:`toolchains_table`
-  * The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
-  * The list of available (generic) easyconfig parameters is visble at :ref:`easyconfigs_parameters`
+* The complete table of available toolchains is visible at :ref:`toolchains_table`
+* The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
+* The list of available (generic) easyconfig parameters is visble at :ref:`easyconfigs_parameters`
 
 Reference Pages
 ===============
