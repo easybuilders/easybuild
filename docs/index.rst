@@ -20,7 +20,7 @@ Introductory topics
     :glob:
     :maxdepth: 3
 
-    introduction
+    Introduction
     Concepts_and_Terminology
     Typical_workflow_example_with_WRF
 
