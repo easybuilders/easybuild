@@ -18,7 +18,7 @@ By providing a single easyconfig file
 The most basic usage is to simply provide the name of an easyconfig file to the ``eb`` command.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
  
-For example, to build and install ``HPL`` using the ``goolf`` toolchain (and EasyBuild v1.15.2)::
+For example, to build and install ``HPL`` using the ``goolf`` toolchain::
  
   $ eb HPL-2.0-goolf-1.4.10.eb --robot
   [...]
@@ -55,7 +55,7 @@ Then, we can actually load the freshly installed HPL module::
   /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/bin/xhpl
  
 All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
-this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
+this is a crucial design aspect, since the dependency resolution mechanism (see :ref:`use_robot`) relies upon this convention.
  
 .. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
   in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
@@ -77,7 +77,7 @@ using the ``goolf/1.4.10`` toolchain::
   == COMPLETED: Installation ended successfully
   [...]
 
-At this point, a module ``HPCG/2.1-goolf-1.4.10`` should be visible with ``module available``.
+At this point, a module ``HPCG/2.1-goolf-1.4.10`` should have been installed.
  
 
 By providing a set of easyconfig files
@@ -89,31 +89,13 @@ For example, to build and install both HPCG and GCC with a single command, simpl
 ``eb`` command line (note that HPCG is not being reinstalled, since a matching module is already available)::
  
   $ eb HPCG-2.1-goolf-1.4.10.eb GCC-4.8.3.eb
-  == temporary log file in case of crash /tmp/easybuild-pGof8u/easybuild-GNYSey.log
+  [...]
   == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping
-  == resolving dependencies ...
-  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
+  [...]
   == building and installing GCC/4.8.3...
-  == fetching files...
-  == creating build dir, resetting environment...
-  == unpacking...
-  == patching...
-  == preparing...
-  == configuring...
-  == building...
-  == testing...
-  == installing...
-  == taking care of extensions...
-  == packaging...
-  == postprocessing...
-  == sanity checking...
-  == cleaning up...
-  == creating module...
-  == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /home/example/.local/easybuild/software/GCC/4.8.3/easybuild/easybuild-GCC-4.8.3-20141029.024018.log
+  [...]
   == Build succeeded for 1 out of 1
-  == temporary log file /tmp/easybuild-pGof8u/easybuild-GNYSey.log has been removed.
-  == temporary directory /tmp/easybuild-pGof8u has been removed.
+  [...]
 
 
 When one or more directories are provided, EasyBuild will (recursively) traverse them
@@ -165,7 +147,7 @@ You can query which EasyBuild version you are using with ``--version``::
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
 
 .. tip:: Asking EasyBuild to print own its version is a quick way to ensure that ``$PYTHONPATH``
-  is set up correctly, so that the entire EasyBuild installation (framework, easyblocks, easyconfigs) is available.
+  is set up correctly, so that the entire EasyBuild installation (framework and easyblocks) is available.
 
 List of known toolchains, ``--list-toolchains``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -178,7 +160,7 @@ Toolchains have brief mnemonic names, for example:
 * ``iimpi`` stands for ``icc/ifort, impi``
 * ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``
 
-The complete table of available toolchains is visible here: :ref:`toolchains_table`
+The complete table of available toolchains is available at :ref:`toolchains_table`.
 
 List of available easyblocks, ``--list-easyblocks``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -394,14 +376,17 @@ Tweaking existing easyconfig files can be done using the **--try-*** command lin
 For each of the software build options that can be used as an alternative to specifying easyconfig file names,
 a matching ``--try-X`` command line options is available:
 
- * ``--try-toolchain`` to try using the toolchain with the given name and version
-    * format: ``--try-toolchain=<name>,<version>``
-    * ``--try-toolchain-name`` to try using the latest toolchain version of a toolchain
-    * ``--try-toolchain-version`` to try using a different toolchain version
- * ``--try-software-version`` to try building a different software version
- * ``--try-amend`` to try tweaking a different easyconfig parameter
-    * format: ``--try-amend=<param>=<value>``
-    * only supports string and list-of-strings value types
+* ``--try-toolchain`` to try using the toolchain with the given name and version
+
+  * format: ``--try-toolchain=<name>,<version>``
+  * ``--try-toolchain-name`` to try using the latest toolchain version of a toolchain
+  * ``--try-toolchain-version`` to try using a different toolchain version
+
+* ``--try-software-version`` to try building a different software version
+* ``--try-amend`` to try tweaking a different easyconfig parameter
+
+  * format: ``--try-amend=<param>=<value>``
+  * only supports string and list-of-strings value types
 
 For example, to build and install WRF and its dependencies with a different toolchain version::
 
