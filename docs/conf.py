@@ -43,7 +43,7 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '1.15.2'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '0.6.13'  # this is meant to reference the version of the documentation itself
+release = '0.6.14'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -91,7 +91,7 @@ else:
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "|project| |version| , documentation version |release|"
+html_title = "<project> <version> , documentation version <release>"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -122,6 +122,11 @@ html_last_updated_fmt = '%a %d %b %Y'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
