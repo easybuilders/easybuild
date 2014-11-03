@@ -52,9 +52,10 @@ Getting an overview of planned installations
 --------------------------------------------
 
 To get an overview of the software that EasyBuild is going to build and install
-we can use the ``--dry-run``/``-D`` command line option. This will show a list of easyconfig files
-that will be used, together with the module files that will be installed
-and their current availability (``[x]`` marks available modules).
+we can use the ``--dry-run``/``-D`` (see ref:`get_an_overview`) command line option.
+This will show a list of easyconfig files
+that will be used, together with the module files that will be installed,
+as well as their current availability (``[x]`` marks available modules).
 
 Note that EasyBuild will take care of all of the dependencies of WRF as well,
 and can even install the compiler toolchain as well if the corresponding modules are not available yet::
