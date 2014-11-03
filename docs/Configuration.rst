@@ -38,7 +38,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
 * configuration file entry (key-value assignment):
 
-.. code:: ini
+  .. code:: ini
 
 [config]
 modules-tool = Lmod
