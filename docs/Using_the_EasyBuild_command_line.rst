@@ -194,14 +194,14 @@ Commonly used command line options
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
 and hereby the most common command line options are being documented.
 
-Command line help, ``--help``/``-H``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Command line help, ``--help`` / ``-H``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
 
 Refer to page :ref:`basic_usage_help` for more detailed information.
 
-.. note:: ``--help``/``-H`` spit out the long help info (i.e. including long option names), ``-h`` only includes short option names.
+.. note:: ``--help`` / ``-H`` spit out the long help info (i.e. including long option names), ``-h`` only includes short option names.
 .. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
 
 Report version, ``--version``
@@ -245,8 +245,8 @@ For example, a list of easyblocks can be obtained with::
 
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
-All available easyconfig parameters, ``--avail-easyconfig-params``/``-a``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+All available easyconfig parameters, ``--avail-easyconfig-params`` / ``-a``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
@@ -259,8 +259,8 @@ by default, the ones specific to the generic ConfigureMake easyblock are include
 
   $ eb -a -e EB_WRF
 
-Enable debug logging, ``--debug``/``-d``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable debug logging, ``--debug`` / ``-d``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
@@ -270,15 +270,15 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
-Forced reinstallation, ``--force`` or ``-f``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Forced reinstallation, ``--force`` / ``-f``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
-   (cfr. Get an overview of planned installations ``--dry-run``/``-D`` :ref:`get_an_overview`)
+   (cfr. Get an overview of planned installations ``--dry-run`` / ``-D`` :ref:`get_an_overview`)
 
 Searching for easyconfigs, ``--search`` / ``-S``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -357,8 +357,8 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
-Use robot for dependency resolution, ``--robot``/``-r``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use robot for dependency resolution, ``--robot`` / ``-r``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild supports installing an entire software stack, including the required toolchain
 if needed, with a single ``eb`` invocation::
@@ -395,8 +395,8 @@ Each of the retained dependencies will then be built and installed, in the requi
 
 .. _get_an_overview:
 
-Get an overview of planned installations ``--dry-run``/``-D``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get an overview of planned installations ``--dry-run`` / ``-D``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with ``--robot``, in the form of ``-Dr``)::
 
