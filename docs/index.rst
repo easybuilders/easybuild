@@ -4,7 +4,7 @@
 .. EasyBuild documentation master file
 
 
-This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version: 1.15.2
+This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version |version|
 
 EasyBuild documentation
 =======================
@@ -14,8 +14,8 @@ that allows you to manage (scientific) software on High Performance Computing (H
 
 .. _contents:
 
-Contents
-========
+Introduction
+============
 
 .. toctree::
     :glob:
@@ -23,10 +23,28 @@ Contents
 
     introduction
     Concepts_and_Terminology
+    Typical_workflow_example_with_WRF
+
+
+Getting started
+===============
+
+.. toctree::
+    :glob:
+    :maxdepth: 3
+
     Installation
     Configuration
+
+
+Basic usage topics
+==================
+
+.. toctree::
+    :glob:
+    :maxdepth: 3
+
     Using_the_EasyBuild_command_line
-    Typical_workflow_example_with_WRF
     Writing_easyconfig_files
     Logfiles
 
