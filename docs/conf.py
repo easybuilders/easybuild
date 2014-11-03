@@ -41,15 +41,15 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '1.15.2' ## this is meant to reference the version of EasyBuild
+version = '1.15.2'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '0.6.8'  ## this is meant to reference the version of the documentation itself
+release = '0.6.15'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
 # Else, today_fmt is used as the format for a strftime call.
-today_fmt = '%a %d %B %Y'
+today_fmt = '%a, %d %b %Y %H:%M:%S'  # e.g., Mon, 03 Nov 2014 22:14:42
 
 # List of documents that shouldn't be included in the build.
 #unused_docs = []
@@ -73,8 +73,7 @@ today_fmt = '%a %d %B %Y'
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'borland'
-
+pygments_style = 'sphinx'
 
 # Options for HTML output
 # -----------------------
@@ -89,10 +88,9 @@ if on_rtd:
 else:
     html_theme = 'default'
 
-
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = project + " v" + version + " documentation (version " + release + ")"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -123,6 +121,11 @@ html_last_updated_fmt = '%a %d %b %Y'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -165,7 +168,7 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'easybuild.tex', 'easybuild Documentation',
+  ('index', 'easybuild.tex', 'EasyBuild Documentation',
    'Ghent University', 'manual'),
 ]
 

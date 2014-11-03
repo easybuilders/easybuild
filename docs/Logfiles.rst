@@ -1,9 +1,14 @@
 
 
-Build and installation log files
-================================
+Understanding EasyBuild logs
+=============================
 
-EasyBuild thoroughly keeps track of the build procedure used for each installation.
+EasyBuild thoroughly keeps track of the executed build and install procedures.
+This page details some of the specifics, to help you making sense of them.
+
+
+Basic information
+-----------------
 
 During an invocation of the ``eb`` command, a temporary log file is provided.
 This log can be consulted in case any problems occur during the process.
@@ -14,9 +19,9 @@ After each successful installation, this application log file is copied to the i
 directory for future reference.
 
 By default, the application log file is copied to a subdirectory of the installation
-prefix named ``easybuild``, and has a filename of the type
-``easybuild-HPL-2.0-20141103.104412.log`` (corresponding to the format
-``easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log``).
+prefix named ``easybuild``, and has a filename like
+``easybuild-HPL-2.0-20141103.104412.log`` for example, which corresponds to the filename
+template ``easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log``.
 This aspect can be tweaked via the ``--logfile-format`` configuration option.
 
 Example::
@@ -33,24 +38,23 @@ Example::
   == temporary directory /tmp/easybuild-rHHgBu has been removed.
 
 
-Note: enabling debug mode using the ``--debug`` or ``-d`` command line option will
-ensure that all details of the executed build and installation procedure are logged
-thoroughly (but will also result is significantly bigger and more verbose logs).
+.. note:: Enabling debug mode using the ``--debug`` or ``-d`` command line option
+  ensures that all details of the executed build and installation procedure are included
+  in the log file, but will also result is significantly bigger and more verbose logs.
 
-Tip: always include a reference to a log file (even if partial) when reporting
-a potential bug in EasyBuild. A particularly useful way of doing so is by creating
-a Gist (https://gist.github.com/), and sharing the corresponding URL. This is much
-better than mailing a lengthy log file, since it can be easily shared across
-mailing lists, irc, other IMs etc. Showing the exact command line invoked is important, too.
+.. tip:: Always include a reference to a log file (even if partial) when reporting
+  a potential bug in EasyBuild. A particularly useful way of doing so is by creating
+  a Gist (https://gist.github.com/), and sharing the corresponding URL. This is much
+  better than sending a lengthy log file via email, since it can be easily shared across
+  different communication channels (mailing list, IRC, IM, etc.).
 
 
 Navigating log files
 --------------------
 
 Extracting the information you're interested in from an EasyBuild log file
-may be a daunting task, especially for debug logs.
-
-A couple of notes w.r.t. navigating EasyBuild log files:
+may be a daunting task, especially for debug logs. The information and guidelines
+in this section should make navigating logs less scary.
 
 Log message format
 ~~~~~~~~~~~~~~~~~~
@@ -63,22 +67,22 @@ Example::
 
 Each log line consists of the following parts:
 
- * a ``==`` prefix, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands
- * date and time information (e.g., ``2014-11-03 13:34:31,906``)
- * the Python module/class/function that is responsible for the log message (e.g., ``main.EB_HPL``)
- * the log level (e.g., ``INFO``)
- * the actual log message
+* a prefix label ``==``, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands;
+* date and time information (e.g., ``2014-11-03 13:34:31,906``);
+* the Python module/class/function that is responsible for the log message (e.g., ``main.EB_HPL``);
+* the log level (e.g., ``INFO``);
+* and a string with the actual log message at the end
 
-Useful handles
-~~~~~~~~~~~~~~
+Useful handles in log files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Next to looking for a particular search pattern (e.g., ``[Ee]rror``),
-there are a couple of handles that can be used to jump around in log files:
+there are a couple of handles that can be used to jump around in log files.
 
 Step markers
 ^^^^^^^^^^^^
 
-For each step in the build and installation process, corresponding log messages is emitted. For example::
+For each step performed in the build and installation process, corresponding log messages is emitted. For example::
 
   == 2014-11-03 13:34:48,816 main.EB_HPL INFO configuring...
   == 2014-11-03 13:34:48,817 main.EB_HPL INFO Starting configure step
@@ -86,14 +90,14 @@ For each step in the build and installation process, corresponding log messages 
   == 2014-11-03 13:34:48,823 main.EB_HPL INFO Running method configure_step part of step configure
 
 
-This allows you to navigate a log file step-by-step, for example using the `_step` search pattern.
+This allows you to navigate a log file step by step, for example using the ``_step`` search pattern.
 
 
 Executed shell commands
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-For each executed shell command, log messages with the full command line,
-the location where the command was executed and the command's output and exit code are included.
+For each executed shell command, log messages are included with the full command line,
+the location where the command was executed and the command's output and exit code.
 For example::
 
   == 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: running cmd /bin/bash make_generic (in /tmp/user/easybuild_build/HPL/2.0/goolf-1.4.10/hpl-2.0/setup)
@@ -105,6 +109,6 @@ you can use ``INFO cmd`` (or ``run_cmd``, in debug logs) as a search pattern.
 
 .. note:: Next to the configure/build/install commands, EasyBuild also runs
   a couple of other commands to obtain system information, or to query the modules tool.
-  Typically, a single invocation of ``eb`` involves executing minimally a dozen or so different shell commands.
+  Typically, a single invocation of ``eb`` involves executing a dozen or so different shell commands, minimally.
 
 

@@ -3,29 +3,47 @@
 
 .. EasyBuild documentation master file
 
+EasyBuild documentation
+=======================
 
-This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version: 1.15.2
+Welcome to the documentation of **EasyBuild**, a software build and installation framework
+that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
-Welcome to EasyBuild
-====================
-
-.. rubric:: Everything you need to know about EasyBuild
-  , the efficient way to manage software on High Performance Computing (HPC) platforms.
+This documentation is intended for EasyBuild version |version|, and was last rebuilt on |today|.
 
 .. _contents:
 
-Contents
-========
+Introductory topics
+===================
 
 .. toctree::
     :glob:
     :maxdepth: 3
 
+    Introduction
     Concepts_and_Terminology
+    Typical_workflow_example_with_WRF
+
+
+Getting started
+===============
+
+.. toctree::
+    :glob:
+    :maxdepth: 3
+
     Installation
     Configuration
+
+
+Basic usage topics
+==================
+
+.. toctree::
+    :glob:
+    :maxdepth: 3
+
     Using_the_EasyBuild_command_line
-    Typical_workflow_example_with_WRF
     Writing_easyconfig_files
     Logfiles
 
@@ -46,13 +64,15 @@ Getting help
 
 Having trouble? We'd like to help!
 
+* :ref:`Search <search>` this documentation collection
 * Search for information in the `archives`_ of the easybuild@lists.ugent.be mailing list or `subscribe`_ to post a question.
 * Did you try ``eb --help``?
-* Ask a question in the `#easybuild IRC channel`_ on the Freenode network or, :ref:`search <search>` this documentation collection.
+* Ask a question in the `#easybuild IRC channel`_ on the Freenode network
+* Consider participating to an EasyBuild `conference call <https://github.com/hpcugent/easybuild/wiki/Conference-calls>`_
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 * Report issues with EasyBuild easyblocks in our `easyblocks ticket tracker`_.
 * Report issues with EasyBuild easyconfigs in our `easyconfigs ticket tracker`_.
-* Report issues with EasyBuild, anything else, in our `ticket tracker`_.
+* Report issues with EasyBuild documentation or other aspects in our `general ticket tracker`_.
 
 .. _archives: https://lists.ugent.be/wws/arc/easybuild
 .. _subscribe: https://lists.ugent.be/wws/subscribe/easybuild
@@ -61,17 +81,18 @@ Having trouble? We'd like to help!
 .. _framework ticket tracker: https://github.com/hpcugent/easybuild-framework/issues
 .. _easyblocks ticket tracker: https://github.com/hpcugent/easybuild-easyblocks/issues
 .. _easyconfigs ticket tracker: https://github.com/hpcugent/easybuild-easyconfigs/issues
-.. _ticket tracker: https://github.com/hpcugent/easybuild/issues
+.. _general ticket tracker: https://github.com/hpcugent/easybuild/issues
 
 -------
 
-Indices and tables
+Lists and tables
 ==================
 
-As of version |version| :
+As of version EasyBuild version |version|:
 
-  * The complete table of available toolchains is visible here: :ref:`toolchains_table`
-  * The list of available easyblocks is visible here: :ref:`basic_usage_easyblocks`
+* The complete table of available toolchains is visible at :ref:`toolchains_table`
+* The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
+* The list of available (generic) easyconfig parameters is visble at :ref:`easyconfigs_parameters`
 
 Reference Pages
 ===============
