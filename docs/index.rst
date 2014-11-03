@@ -9,7 +9,7 @@ This document was last rebuilt on: |today|. Latest EasyBuild release known to co
 Welcome to EasyBuild
 ====================
 
-.. rubric:: Everything you need to know about EasyBuild
+.. rubric: Everything you need to know about EasyBuild
   , the efficient way to manage software on High Performance Computing (HPC) platforms.
 
 
