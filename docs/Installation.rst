@@ -64,7 +64,7 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
   and ``$MODULEPATH`` should be aligned with it to make sure the EasyBuild module can be loaded,
   i.e. you should include .../modules/all in your $MODULEPATH.". If you also want
   software that is built using EasyBuild to be installed there, you will need to set
-  ``$EASYBUILD_INSTALLPATH``, and/or look into the details on :ref:`configuring_easyBuild`.
+  ``$EASYBUILD_INSTALLPATH``, and/or look into the details on :ref:`configuring_easybuild`.
 
 .. XXX - UPDATE BY VERSION
 
