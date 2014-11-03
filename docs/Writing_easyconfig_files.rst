@@ -43,11 +43,11 @@ Available easyconfig parameters
 .. XXX UPDATE BY VERSION
 
 About 50 different (generic) easyconfig parameters are supported currently.
-
 An overview of all available easyconfig parameters is available via the ``-a`` command line option.
 
 By default, the parameters specific to generic (default) easyblock ``ConfigureMake`` are included;
 using ``--easyblock``/``-e`` parameters that are specific to a particular easyblock can be consulted.
+
 See :ref:`avail_easyconfig_params` for more details.
 
 Example::

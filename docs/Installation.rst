@@ -71,7 +71,7 @@ for EasyBuild, to obtain an ``EasyBuild`` module that you can then load::
 .. tip::
 
   The bootstrap script will only succeed if command ``module --version`` reports a sufficiently recent version
-  (e.g., environments-modules-c >=v3.2.10 or Lmd >= 5.6.3), because modules are applied throughout,
+  (e.g., environments-modules-c >=v3.2.10 or Lmod >= 5.6.3), because modules are applied throughout,
   e.g., to resolve dependencies and detect already installed software.
 
 Normally, only when the above fails to work for you for some reason, should you resort
@@ -114,14 +114,10 @@ If this does not complete successfully, `please open an issue`_ to report it.
 .. _please open an issue: https://github.com/hpcugent/easybuild-framework/issues/new
 
 
-Example boostrap run
-~~~~~~~~~~~~~~~~~~~~
+Example bootstrap run
+~~~~~~~~~~~~~~~~~~~~~
 
-This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
-
-  $ module --version 2>&1 |head -3 ## This should report something reasonable
-  VERSION=3.2.10
-  DATE=2012-12-21
+Example output for bootstrapping EasyBuild v1.15.2::
   
   $ curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -193,18 +189,22 @@ This is an example run from a recent setup attempt, using EasyBuild/1.15.2::
   [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
   [[INFO]] To install software with EasyBuild to /home/example/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
   [[INFO]] See https://github.com/hpcugent/easybuild/wiki/Configuration for details on configuring EasyBuild.
+
+After the bootstrap completes, the installed ``EasyBuild`` module can be loaded::
   
   $ export MODULEPATH=$HOME/.local/easybuild/modules/all
   $ module av
-  
   ------------------------- /home/example/.local/easybuild/modules/all --------------------------
   EasyBuild/1.15.2
+
   $ module load EasyBuild
   $ module list
   Currently Loaded Modulefiles:
     1) EasyBuild/1.15.2
+
   $ which eb
   /home/example/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
+
   $ eb --version
   This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
 
@@ -223,9 +223,8 @@ Required dependencies
 
 -  **Linux** (or OSX) operating system; preferably x86_64 based
 -  `Python 2.4 <http://python.org>`_, or a more recent 2.x version
--  `Tcl/C environment-modules, version >= 3.2.10
-   <http://modules.sourceforge.net/>`_ 
-   or `Lmod, version >=5.6.3 <lmod.sourceforge.net>`_
+-  `Tcl/C environment-modules  <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
+   or `Lmod <lmod.sourceforge.net>`_ (version >= 5.6.3)
 
   -  environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
      installed (with header files and development libraries)
@@ -285,15 +284,15 @@ Optional Python modules
 In case of installation issues...
 ---------------------------------
 
-**Please open an issue:**
-https://github.com/hpcugent/easybuild/issues/new
+Should the installation of EasyBuild fail for you, `please open an issue <https://github.com/hpcugent/easybuild/issues/new>`_
+to report the problems you're running into.
 
 How to collect info in case sanity checks fail or there is another issue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to get a better understanding in which kind of environment
 you are using the bootstrap script, please copy-paste the commands below
-and provide the output.
+and provide the output in your problem report.
 **Do not worry if some of these commands fail or spit out error messages.**
 
 .. code:: sh

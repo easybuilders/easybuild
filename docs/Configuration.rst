@@ -15,49 +15,49 @@ Supported configuration types
 
 Configuring EasyBuild can be done by:
 
--  using ``eb`` with **command line arguments**
--  setting **environment variables** (``$EASYBUILD_...``)
--  providing one or more **configuration files**
+* using ``eb`` with **command line arguments**
+* setting **environment variables** (``$EASYBUILD_...``)
+* providing one or more **configuration files**
 
 Of course, combining any of these types of configuration works too (and
 is even fairly common).
 
 The order of preference for the different configuration types is as listed above, that is:
 
--  environment variables override the corresponding entries in the configuration file
--  command line arguments in turn override the corresponding environment variables *and* matching entries in the configuration file
+* environment variables override the corresponding entries in the configuration file
+* command line arguments in turn override the corresponding environment variables *and* matching entries in the configuration file
 
 
 Consistentency across supported configuration types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note that the various available configuration options are handled
-**consistently** across the supported configuration types, i.e. for defining the configuration setting
-``foo`` (in section ``somesection``) to ``bar``, the following alternatives are available:
+**consistently** across the supported configuration types.
 
--  configuration file entry (key-value assignment):
+For example: to configure EasyBuild to use Lmod as modules tool, the following alternatives are available:
+
+* configuration file entry (key-value assignment):
 
    .. code:: ini
 
-       [somesection]
-       foo = bar
+       [config]
        modules-tool = Lmod
 
--  environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s becomes ``_``\ ’s):
+* environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s becomes ``_``\ ’s):
 
    .. code:: shell-session
 
-       $ export EASYBUILD_FOO=bar
        $ export EASYBUILD_MODULES_TOOL=Lmod
 
--  command line argument (long options preceded by ``--`` and (optionally) using ``=``):
+* command line argument (long options preceded by ``--`` and (optionally) using ``=``):
 
    .. code:: shell-session
 
-       $ eb --foo=bar
        $ eb --modules-tool=Lmod
-       # or
-       $ eb --foo bar
+   or
+
+   .. code:: shell-session
+
        $ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
@@ -71,9 +71,9 @@ List of used configuration files
 The set of configuration files that will be used by EasyBuild is
 determined in the following order of preference:
 
--  the path(s) specified via **command line argument** ``--configfiles``
--  the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
--  the **default path** for the EasyBuild configuration file, i.e.
+* the path(s) specified via **command line argument** ``--configfiles``
+* the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
+* the **default path** for the EasyBuild configuration file, i.e.
    ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``).
 
 Note that each available configuration file will be used, and that the
@@ -128,8 +128,8 @@ file. This can be used as an empty template configuration file:
 
 .. code:: shell-session
 
-    mkdir -p $HOME/.easybuild
-    eb --confighelp > $HOME/.easybuild/config.cfg
+    $ mkdir -p $HOME/.easybuild
+    $ eb --confighelp > $HOME/.easybuild/config.cfg
 
 .. code:: shell-session
 
@@ -158,7 +158,7 @@ For example, to enable debug logging using an environment variable:
 
 .. code:: shell-session
 
-    export EASYBUILD_DEBUG=1
+    $ export EASYBUILD_DEBUG=1
 
 More examples of using environment variables to configure EasyBuild are
 shown in the sections below.
@@ -183,12 +183,15 @@ For boolean configuration settings, both the ``--<option>`` and
 
 Examples (more below):
 
+* enable debug logging (long option) and logging to stdout (short option)
 .. code:: shell-session
 
-    # enable debug logging (long option) and logging to stdout (short option)
-    eb --debug -l ...
-    # use /dev/shm as build path, install to temporary install path, disable debug logging
-    eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
+    $ eb --debug -l ...
+
+* use ``/dev/shm`` as build path, install to temporary install path, disable debug logging
+.. code:: shell-session
+
+    $ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
 
 Available configuration settings
 --------------------------------
@@ -208,15 +211,15 @@ provided using one of the supported configuration types.
 The following configuration settings are currently mandatory
 (more details in the sections below):
 
--  :ref:`sourcepath`
--  :ref:`buildpath`
--  :ref:`installpath`
--  :ref:`easyconfigs_repo`
--  :ref:`logfile_format`
+* :ref:`sourcepath`
+* :ref:`buildpath`
+* :ref:`installpath`
+* :ref:`easyconfigs_repo`
+* :ref:`logfile_format`
 
 If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
 
-In practice, all of these have reasonable defaults (see eb --help for the default settings).
+In practice, all of these have reasonable defaults (see ``eb --help`` for the default settings).
 
 
 .. _sourcepath:
@@ -232,9 +235,9 @@ the directory in which EasyBuild looks for software source and install files.
 Looking for the files specified via the ``sources`` parameter in the .eb
 easyconfig file is done in the following order of preference:
 
--  ``<sourcepath>/<name>``: a subdirectory determined by the name of the software package
--  ``<sourcepath>/<letter>/<name>``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
--  ``<sourcepath>``: directly in the source path
+* ``<sourcepath>/<name>``: a subdirectory determined by the name of the software package
+* ``<sourcepath>/<letter>/<name>``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
+* ``<sourcepath>``: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
 files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the PYTHONPATH.
@@ -294,7 +297,7 @@ so you can load the modules created for the software built with EasyBuild, i.e.:
 
 .. code:: shell-session
 
-    module use <installpath>/modules/all
+    $ module use <installpath>/modules/all
 
 It is probably a good idea to add this to your (favourite) shell
 ``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login scripts,
@@ -314,16 +317,16 @@ corresponding ``.eb`` file is uploaded to a repository defined by the ``reposito
 Currently, EasyBuild supports the following repository types (see also
 ``eb --avail-repositories``):
 
--  ``FileRepository('path', 'subdir')``: a plain flat file repository;
+* ``FileRepository('path', 'subdir')``: a plain flat file repository;
    ``path`` is the path where files will be stored, ``subdir`` is an
    *optional* subdirectory of
    that path where the files should be stored
--  ``GitRepository('path', 'subdir/in/repo'``: a *non-empty* **bare**
+* ``GitRepository('path', 'subdir/in/repo'``: a *non-empty* **bare**
    git repository (created with ``git init --bare`` or ``git clone --bare``);
    ``path`` is the path to the git repository (can also be a URL);
    ``subdir/in/repo`` is optional, and specifies a subdirectory of the
    repository where files should be stored in
--  ``SvnRepository('path', 'subdir/in/repo')``: an SVN repository;
+* ``SvnRepository('path', 'subdir/in/repo')``: an SVN repository;
    ``path`` contains the subversion repository location (directory or
    URL), the optional second value
    specifies a subdirectory in the repository
@@ -368,11 +371,11 @@ specifying a log directory name and a template log file name.
 In both of these values, using the following string templates
 is supported:
 
--  ``%(name)s``: the name of the software package to install
--  ``%(version)s``: the version of the software package to install
--  ``%(date)s``: the date on which the installation was performed (in
+* ``%(name)s``: the name of the software package to install
+* ``%(version)s``: the version of the software package to install
+* ``%(date)s``: the date on which the installation was performed (in
    ``YYYYMMDD`` format, e.g. ``20120324``)
--  ``%(time)s``: the time at which the installation was started (in
+* ``%(time)s``: the time at which the installation was started (in
    ``HHMMSS`` format, e.g. ``214359``)
 
 For example, the logfile format can be specified as follows in the
@@ -416,9 +419,9 @@ A list of supported modules tools can be obtained using ``eb --avail-modules-too
 
 Currently, the following modules tools are supported:
 
--  ``EnvironmentModulesC``: Tcl/C version of environment modules (``modulecmd``)
--  ``EnvironmentModulesTcl``: Tcl-only version of environment modules (``modulecmd.tcl``)
--  ``Lmod``: Lmod, an modern alternative to environment modules, written in Lua (``lmod``)
+* ``EnvironmentModulesC``: Tcl/C version of environment modules (``modulecmd``)
+* ``EnvironmentModulesTcl``: Tcl-only version of environment modules (``modulecmd.tcl``)
+* ``Lmod``: Lmod, an modern alternative to environment modules, written in Lua (``lmod``)
 
 You can determine which modules tool you are using by checking the
 output of ``type -f module`` (in a ``bash`` shell), or ``alias module`` (in a ``tcsh`` shell).
@@ -430,7 +433,7 @@ For example, to indicate that EasyBuild should be using ``Lmod`` as modules tool
 
 .. code:: shell-session
 
-    eb --modules-tool=Lmod ...
+    $ eb --modules-tool=Lmod ...
 
 Active module naming scheme (``--module-naming-scheme``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -442,7 +445,7 @@ specified using the ``module-naming-scheme`` configuration setting.
 
 .. code:: shell-session
 
-    eb --module-naming-scheme=HierarchicalMNS ...
+    $ eb --module-naming-scheme=HierarchicalMNS ...
 
 For more details, see the dedicated page: https://github.com/hpcugent/easybuild/wiki/Using-a-custom-module-naming-scheme .
 
