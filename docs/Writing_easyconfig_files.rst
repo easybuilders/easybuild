@@ -149,7 +149,7 @@ Example:
   builddependencies = [('CMake', '2.8.12', '', ('GCC', '4.8.2')]
 
 .. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the software being installed.
-Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example).
+  Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example).
 
 Configure/build/install command options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -267,15 +267,12 @@ and MPI libraries.
 Tweaking existing easyconfig files
 ----------------------------------
 
-**TOO**: move (most of) this section!
+The ability to modify easyconfig files on the fly with EasyBuild,
+provides a very powerful and flexible feature to describe builds,
+without having to manually create all the input files.
 
-* modify easyconfig(s) straight from command line via ``--try-X``
-* ``--try-toolchain`` to try building with a different toolchain
-* ``--try-software-version`` to try building a different version
-* ``--try-amend`` to try tweaking a different parameter
-* currently only for parameters with string- or list-typed values
-* see ``eb --help | grep try-`` for all options
-* cooperates as expected with ``--robot``
+Tweaking existing easyconfigs can be done using the ``--try-*`` command lines options.
+See :ref:`tweaking_easyconfigs_using_try` for more details.
 
 Example:
 

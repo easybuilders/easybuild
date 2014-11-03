@@ -21,13 +21,13 @@ Contents
     :glob:
     :maxdepth: 3
 
-    docs/Concepts_and_Terminology
-    docs/Installation
-    docs/Configuration
-    docs/Using_the_EasyBuild_command_line
-    docs/Typical_workflow_example_with_WRF
-    docs/Writing_easyconfig_files
-    docs/Logfiles
+    Concepts_and_Terminology
+    Installation
+    Configuration
+    Using_the_EasyBuild_command_line
+    Typical_workflow_example_with_WRF
+    Writing_easyconfig_files
+    Logfiles
 
 .. toctree::
     :hidden:

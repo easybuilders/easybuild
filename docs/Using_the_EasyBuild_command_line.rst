@@ -379,3 +379,21 @@ Note how the different status symbols denote distinct handling states by EasyBui
 * ``[x]`` The build is available, EasyBuild will skip building this module
 * ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild and will do so
 
+
+.. _tweaking_easyconfigs_using_try:
+
+Tweaking existing easyconfig files, using ``--try-*``
+-----------------------------------------------------
+
+XXX **TODO**: move (most of) this section!
+
+* modify easyconfig(s) straight from command line via ``--try-X``
+* ``--try-toolchain`` to try building with a different toolchain
+* ``--try-software-version`` to try building a different version
+* ``--try-amend`` to try tweaking a different parameter
+* currently only for parameters with string- or list-typed values
+* see ``eb --help | grep try-`` for all options
+* cooperates as expected with ``--robot``
+
+
+
