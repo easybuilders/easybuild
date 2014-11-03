@@ -383,7 +383,7 @@ Note how the different status symbols denote distinct handling states by EasyBui
 .. _tweaking_easyconfigs_using_try:
 
 Tweaking existing easyconfig files, using ``--try-*``
------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 XXX **TODO**: move (most of) this section!
 
@@ -394,6 +394,5 @@ XXX **TODO**: move (most of) this section!
 * currently only for parameters with string- or list-typed values
 * see ``eb --help | grep try-`` for all options
 * cooperates as expected with ``--robot``
-
 
 
