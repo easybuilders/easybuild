@@ -85,13 +85,14 @@ Having trouble? We'd like to help!
 
 -------
 
-Indices and tables
+Lists and tables
 ==================
 
-As of version |version| :
+As of version EasyBuild version |version|:
 
-  * The complete table of available toolchains is visible here: :ref:`toolchains_table`
-  * The list of available easyblocks is visible here: :ref:`basic_usage_easyblocks`
+  * The complete table of available toolchains is visible at :ref:`toolchains_table`
+  * The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
+  * The list of available (generic) easyconfig parameters is visble at :ref:`avail_easyconfig_params`
 
 Reference Pages
 ===============
