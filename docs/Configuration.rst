@@ -43,21 +43,20 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
    [config]
    modules-tool = Lmod
 
-* environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s becomes ``_``\ ’s):
+* environment variable (upper case, ``EASYBUILD_`` prefix, ``-``'s becomes ``_``'s):
 
-  .. code:: shell-session
+  .. code::
 
    $ export EASYBUILD_MODULES_TOOL=Lmod
 
 * command line argument (long options preceded by ``--`` and (optionally) using ``=``):
 
-  .. code:: shell-session
+  .. code::
 
    $ eb --modules-tool=Lmod
+  or
 
-or
-
-  .. code:: shell-session
+  .. code::
 
    $ eb --modules-tool Lmod
 
