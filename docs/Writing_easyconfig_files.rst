@@ -72,11 +72,13 @@ A handful of easyconfig parameters are `mandatory`:
   * **name, version**: specify what software (version) to build
   * **homepage**, description: metadata (used for module help)
   * **toolchain**: specifies name and version of compiler toolchain to use
+
      * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
 
 Remarks:
 
   * some others are planned to be required in the future
+
      * `docurls, software license, software license urls`
 
 Example:
@@ -108,6 +110,7 @@ Remarks:
 
   * sources are downloaded (best effort), unless already available
   * patches need to be EasyBuild-compatible
+
      * unified diff format (``diff -ru``)
      * patched locations relative to unpacked sources
 
@@ -123,7 +126,6 @@ Example:
   # fix Make dependencies, so parallel build also works
   patches = ['HPL_parallel-make.patch']
   [...]
-
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources,
   a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
@@ -191,13 +193,16 @@ These are used to make sure that an installation didn't (partly) fail unnoticed.
 
 Remarks:
 
-* format: Python dictionary with (`only`) ``files``/``dirs`` keys
-* values must be lists of (tuples of) strings, one of both **must** be non-empty
-   * paths are `relative` to installation directory
-   * for a path specified as a tuple, only one of the specified paths must be available
-* default values:
-   * paths: non-empty ``bin`` and ``lib`` or ``lib64`` directories
-   * commands: none
+  * format: Python dictionary with (`only`) ``files``/``dirs`` keys
+  * values must be lists of (tuples of) strings, one of both **must** be non-empty
+
+     * paths are `relative` to installation directory
+     * for a path specified as a tuple, only one of the specified paths must be available
+
+  * default values:
+
+     * paths: non-empty ``bin`` and ``lib`` or ``lib64`` directories
+     * commands: none
 
 Example:
 
@@ -211,13 +216,15 @@ Example:
 Easyblock specification
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, EasyBuild will derive the easyblock to use based on the software name: if a matching easyblock is found, it will use that;
+By default, EasyBuild will derive the easyblock to use based on the software name:
+if a matching easyblock is found, it will use that;
 if not, it will fall back to the generic ``ConfigureMake`` easyblock.
 
 To make EasyBuild use a specific (usually generic) easyblock rather
 than deriving it from the software name, the **easyblock** parameter can be used.
 
-A list of available easyblocks is available via ``--list-easyblocks``; generic easyblocks are the ones for which the name does `not` start with ``EB_``.
+A list of available easyblocks is available via ``--list-easyblocks``;
+generic easyblocks are the ones for which the name does `not` start with ``EB_``.
 
 Example:
 
@@ -326,14 +333,15 @@ Contributing back
 **Contribute back your working easyconfig files!**
 
 Share your expertise with the community, avoid duplicate work, especially if:
-   * the software package is not supported yet
-   * an existing easyconfig needs (non-trivial) changes for a different version/toolchain
-   * it is a frequently used software package (compilers, MPI, etc.)
+ * the software package is not supported yet
+ * an existing easyconfig needs (non-trivial) changes for a different version/toolchain
+ * it is a frequently used software package (compilers, MPI, etc.)
 
 Notes:
 
  * over 25% of easyconfigs are provided by contributors outside of HPC-UGent
  * contributing back does require a limited amount of knowledge on Git/GitHub
  * contributions are reviewed & thoroughly tested before inclusion
+
     * see https://github.com/hpcugent/easybuild/wiki/Contributing-back for a step-by-step walkthrough
 

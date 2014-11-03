@@ -28,7 +28,7 @@ Contents
     :glob:
     :maxdepth: 3
 
-    Introduction
+    introduction
     Concepts_and_Terminology
     Installation
     Configuration

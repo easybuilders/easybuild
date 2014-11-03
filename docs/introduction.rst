@@ -18,14 +18,22 @@ Performance Computing (HPC) systems in an efficient way. It is motivated the nee
 Some key features of EasyBuild:
 
  * build & install (scientific) software **fully autonomously**
+
     * also interactive installers, code patching, generating module file, ...
+
  * easily :ref:`configurable <configuring_easybuild>`: config file/environment/command line
+
     * including aspects like module naming scheme
+
  * thorough logging and archiving (see :doc:`Logfiles`)
+
     * entire build process is logged thoroughly, logs are stored in install directory;
     * easyconfig file used for build is archived (install directory + file/svn/git repo) 
+
  * automatic **dependency resolution** (see :ref:`use_robot`)
+
     * build entire software stack with a single command, using ``--robot``
+
  * building software in **parallel**
  * robust and thoroughly tested code base, fully and unit-tested before each release
  * thriving, growing **community**
