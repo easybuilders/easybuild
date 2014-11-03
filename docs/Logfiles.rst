@@ -39,14 +39,14 @@ Example::
 
 
 .. note:: Enabling debug mode using the ``--debug`` or ``-d`` command line option
-ensures that all details of the executed build and installation procedure are included
-in the log file, but will also result is significantly bigger and more verbose logs.
+  ensures that all details of the executed build and installation procedure are included
+  in the log file, but will also result is significantly bigger and more verbose logs.
 
 .. tip:: Always include a reference to a log file (even if partial) when reporting
-a potential bug in EasyBuild. A particularly useful way of doing so is by creating
-a Gist (https://gist.github.com/), and sharing the corresponding URL. This is much
-better than sending a lengthy log file via email, since it can be easily shared across
-different communication channels (mailing list, IRC, IM, etc.).
+  a potential bug in EasyBuild. A particularly useful way of doing so is by creating
+  a Gist (https://gist.github.com/), and sharing the corresponding URL. This is much
+  better than sending a lengthy log file via email, since it can be easily shared across
+  different communication channels (mailing list, IRC, IM, etc.).
 
 
 Navigating log files
@@ -67,7 +67,7 @@ Example::
 
 Each log line consists of the following parts:
 
- * a prefix label ``== ``, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands;
+ * a prefix label ``==``, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands;
  * date and time information (e.g., ``2014-11-03 13:34:31,906``);
  * the Python module/class/function that is responsible for the log message (e.g., ``main.EB_HPL``);
  * the log level (e.g., ``INFO``);
