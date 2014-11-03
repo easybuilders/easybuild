@@ -55,6 +55,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
        $ eb --modules-tool=Lmod
    or
+
    .. code:: shell-session
 
        $ eb --modules-tool Lmod
