@@ -1,7 +1,7 @@
 
 .. _basic_usage_easyblocks:
 
-List of easyBlocks
+List of easyblocks
 ==================
 
 The list of available easyblocks can easily be obtained as follows:
