@@ -124,7 +124,9 @@ Example:
   patches = ['HPL_parallel-make.patch']
   [...]
 
-.. note:: Rather than hardcoding the version (and name) in the list of sources, a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
+
+.. note:: Rather than hardcoding the version (and name) in the list of sources,
+  a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
 
 Dependencies
 ~~~~~~~~~~~~
@@ -184,8 +186,8 @@ Sanity check
 Custom paths and commands to be used in the sanity check step can be specified using the respective parameters.
 These are used to make sure that an installation didn't (partly) fail unnoticed.
 
-* **sanity_check_paths**: files/directories that must get installed
-* **sanity_check_commands**: (simple) commands that must work when the installed module is loaded
+  * **sanity_check_paths**: files/directories that must get installed
+  * **sanity_check_commands**: (simple) commands that must work when the installed module is loaded
 
 Remarks:
 
