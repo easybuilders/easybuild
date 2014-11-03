@@ -1,8 +1,8 @@
 
 .. _easyconfigs_parameters:
 
-Basic Usage, -a
----------------
+Available easyconfig parameters
+-------------------------------
 
 The list of available easyconfig parameters can easily be obtained with:
 
