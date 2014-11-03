@@ -28,7 +28,7 @@ which is split up into different `steps`:
 * unpacking sources
 * configuration
 * build
-* installation,
+* installation
 * module generation
 * etc.
 
