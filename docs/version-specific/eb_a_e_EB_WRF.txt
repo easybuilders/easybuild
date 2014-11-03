@@ -1,6 +1,8 @@
 
 ::
 
+  $ eb -a --easyblock EB_WRF
+
   Available easyconfig parameters (* indicates specific for the EB_WRF EasyBlock)
   MANDATORY
   ---------

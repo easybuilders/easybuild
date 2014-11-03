@@ -12,7 +12,12 @@ Welcome to EasyBuild
 .. rubric:: Everything you need to know about EasyBuild
   , the efficient way to manage software on High Performance Computing (HPC) platforms.
 
-.. include:: introduction.rst
+
+EasyBuild documentation
+=======================
+
+Welcome to the documentation of **EasyBuild**, a software build and installation framework
+that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
 .. _contents:
 
@@ -23,6 +28,7 @@ Contents
     :glob:
     :maxdepth: 3
 
+    Introduction
     Concepts_and_Terminology
     Installation
     Configuration
@@ -36,7 +42,6 @@ Contents
     :glob:
     :maxdepth: 1
 
-    introduction.rst
     Installation_Alternative
     Configuration_Legacy
     eb_*
@@ -57,7 +62,7 @@ Having trouble? We'd like to help!
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 * Report issues with EasyBuild easyblocks in our `easyblocks ticket tracker`_.
 * Report issues with EasyBuild easyconfigs in our `easyconfigs ticket tracker`_.
-* Report issues with EasyBuild, anything else, in our `ticket tracker`_.
+* Report issues with EasyBuild documentation or other aspects in our `general ticket tracker`_.
 
 .. _archives: https://lists.ugent.be/wws/arc/easybuild
 .. _subscribe: https://lists.ugent.be/wws/subscribe/easybuild
@@ -66,7 +71,7 @@ Having trouble? We'd like to help!
 .. _framework ticket tracker: https://github.com/hpcugent/easybuild-framework/issues
 .. _easyblocks ticket tracker: https://github.com/hpcugent/easybuild-easyblocks/issues
 .. _easyconfigs ticket tracker: https://github.com/hpcugent/easybuild-easyconfigs/issues
-.. _ticket tracker: https://github.com/hpcugent/easybuild/issues
+.. _general ticket tracker: https://github.com/hpcugent/easybuild/issues
 
 -------
 
