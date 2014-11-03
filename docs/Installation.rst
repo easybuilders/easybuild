@@ -115,7 +115,7 @@ If this does not complete successfully, `please open an issue`_ to report it.
 
 
 Example bootstrap run
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Example output for bootstrapping EasyBuild v1.15.2::
   

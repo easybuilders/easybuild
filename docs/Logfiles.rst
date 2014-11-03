@@ -67,17 +67,17 @@ Example::
 
 Each log line consists of the following parts:
 
- * a prefix label ``==``, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands;
- * date and time information (e.g., ``2014-11-03 13:34:31,906``);
- * the Python module/class/function that is responsible for the log message (e.g., ``main.EB_HPL``);
- * the log level (e.g., ``INFO``);
- * and a string with the actual log message at the end
+* a prefix label ``==``, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands;
+* date and time information (e.g., ``2014-11-03 13:34:31,906``);
+* the Python module/class/function that is responsible for the log message (e.g., ``main.EB_HPL``);
+* the log level (e.g., ``INFO``);
+* and a string with the actual log message at the end
 
 Useful handles in log files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Next to looking for a particular search pattern (e.g., ``[Ee]rror``),
-there are a couple of handles that can be used to jump around in log files:
+there are a couple of handles that can be used to jump around in log files.
 
 Step markers
 ^^^^^^^^^^^^
