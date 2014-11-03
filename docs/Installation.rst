@@ -284,7 +284,7 @@ Optional Python modules
 In case of installation issues...
 ---------------------------------
 
-Should the installation of EasyBuild fail for you, `please open an issue <https://github.com/hpcugent/easybuild/issues/new>`_
+Should the installation of EasyBuild fail for you, `please open an issue`_
 to report the problems you're running into.
 
 How to collect info in case sanity checks fail or there is another issue
