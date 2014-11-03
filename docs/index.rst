@@ -92,7 +92,7 @@ As of version EasyBuild version |version|:
 
 * The complete table of available toolchains is visible at :ref:`toolchains_table`
 * The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
-* The list of available (generic) easyconfig parameters is visble at :ref:`avail_easyconfig_params`
+* The list of available (generic) easyconfig parameters is visble at :ref:`easyconfigs_parameters`
 
 Reference Pages
 ===============

@@ -16,7 +16,7 @@ Notes on other ways of installing EasyBuild are available under section :ref:`al
   -  `Bootstrapping procedure`_
   -  `Sanity check`_
   -  `Running unit tests`_
-  -  `Example boostrap run`_
+  -  `Example bootstrap run`_
 
 -  `Dependencies`_
 
@@ -221,20 +221,20 @@ EasyBuild has a couple of dependencies, some of them optional:
 Required dependencies
 ~~~~~~~~~~~~~~~~~~~~~
 
--  **Linux** (or OSX) operating system; preferably x86_64 based
--  `Python 2.4 <http://python.org>`_, or a more recent 2.x version
--  `Tcl/C environment-modules  <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
+*  **Linux** (or OSX) operating system; preferably x86_64 based
+*  `Python 2.4 <http://python.org>`_, or a more recent 2.x version
+*  `Tcl/C environment-modules  <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
    or `Lmod <lmod.sourceforge.net>`_ (version >= 5.6.3)
 
-  -  environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
+  * environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
      installed (with header files and development libraries)
-  -  Lmod requires Lua and a couple of non-standard Lua libraries to be available
-  -  a guide on installing Tcl/C environment modules without having root
+  * Lmod requires Lua and a couple of non-standard Lua libraries to be available
+  * a guide on installing Tcl/C environment modules without having root
      permissions is available at :ref:`installing_env_mod_c`.
-  -  a guide on installing Lmod without having root permissions is available at
+  * a guide on installing Lmod without having root permissions is available at
      :ref:`installing_lmod`.
 
--  a C/C++ compiler
+*  a C/C++ compiler (optionally, to build GCC)
 
 .. tip::  
  A packaged version of Tcl/C environment modules is available for 
