@@ -1,6 +1,6 @@
 
-Introduction
-------------
+What is EasyBuild?
+------------------
 
 EasyBuild is a software build and installation framework that allows you to manage (scientific) software on High 
 Performance Computing (HPC) systems in an efficient way. It is motivated the need for a tool that combines the following features: 
