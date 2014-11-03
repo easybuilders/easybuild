@@ -43,7 +43,7 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '1.15.2'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '0.6.14'  # this is meant to reference the version of the documentation itself
+release = '0.6.15'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -73,8 +73,7 @@ today_fmt = '%a, %d %b %Y %H:%M:%S'  # e.g., Mon, 03 Nov 2014 22:14:42
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'borland'
-
+pygments_style = 'sphinx'
 
 # Options for HTML output
 # -----------------------
@@ -91,7 +90,7 @@ else:
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "<project> <version> , documentation version <release>"
+## html_title = "<project> <version> , documentation version <release>"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
