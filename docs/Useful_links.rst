@@ -7,7 +7,7 @@ Useful links
 Tools used to convert from other wiki formats and prepare .rst when in pre-production mode:
 
 * http://johnmacfarlane.net/pandoc/try/?text=%0A&from=markdown_github&to=rst
-* http://rst.ninjs.org <http://rst.ninjs.org/>
+* http://rst.ninjs.org
 
 Reference documents online
 ==========================
