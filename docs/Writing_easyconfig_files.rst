@@ -69,17 +69,17 @@ Mandatory easyconfig parameters
 
 A handful of easyconfig parameters are `mandatory`:
 
-  * **name, version**: specify what software (version) to build
-  * **homepage**, description: metadata (used for module help)
-  * **toolchain**: specifies name and version of compiler toolchain to use
+* **name, version**: specify what software (version) to build
+* **homepage**, description: metadata (used for module help)
+* **toolchain**: specifies name and version of compiler toolchain to use
 
-     * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
+  * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
 
 Remarks:
 
-  * some others are planned to be required in the future
+* some others are planned to be required in the future
 
-     * `docurls, software license, software license urls`
+  * `docurls, software license, software license urls`
 
 Example:
 
@@ -102,17 +102,17 @@ This section includes an overview of some commonly used (optional) easyconfig pa
 Source files and patches
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-  * **sources**: list of source files (filenames only)
-  * **source urls**: list of URLs where sources can be downloaded
-  * **patches**: list of patch files to be applied (``.patch`` extension)
+* **sources**: list of source files (filenames only)
+* **source urls**: list of URLs where sources can be downloaded
+* **patches**: list of patch files to be applied (``.patch`` extension)
 
 Remarks:
 
-  * sources are downloaded (best effort), unless already available
-  * patches need to be EasyBuild-compatible
+* sources are downloaded (best effort), unless already available
+* patches need to be EasyBuild-compatible
 
-     * unified diff format (``diff -ru``)
-     * patched locations relative to unpacked sources
+  * unified diff format (``diff -ru``)
+  * patched locations relative to unpacked sources
 
 Example:
 
@@ -133,16 +133,16 @@ Example:
 Dependencies
 ~~~~~~~~~~~~
 
-  * **dependencies**: build/runtime dependencies
-  * **builddependencies**: build-only dependencies (not in module)
-  * **hiddendependencies**: dependencies via hidden modules
-  * **osdependencies**: system dependencies (package names)
+* **dependencies**: build/runtime dependencies
+* **builddependencies**: build-only dependencies (not in module)
+* **hiddendependencies**: dependencies via hidden modules
+* **osdependencies**: system dependencies (package names)
 
 Remarks:
 
-  * modules must exist for all (non-system) dependencies
-  * (non-system) dependencies can be resolved via ``--robot``
-  * format: ``(<name>, <version>[, <versionsuffix>[, <toolchain>]])``
+* modules must exist for all (non-system) dependencies
+* (non-system) dependencies can be resolved via ``--robot``
+* format: ``(<name>, <version>[, <versionsuffix>[, <toolchain>]])``
 
 Example:
 
@@ -188,21 +188,21 @@ Sanity check
 Custom paths and commands to be used in the sanity check step can be specified using the respective parameters.
 These are used to make sure that an installation didn't (partly) fail unnoticed.
 
-  * **sanity_check_paths**: files/directories that must get installed
-  * **sanity_check_commands**: (simple) commands that must work when the installed module is loaded
+* **sanity_check_paths**: files/directories that must get installed
+* **sanity_check_commands**: (simple) commands that must work when the installed module is loaded
 
 Remarks:
 
-  * format: Python dictionary with (`only`) ``files``/``dirs`` keys
-  * values must be lists of (tuples of) strings, one of both **must** be non-empty
+* format: Python dictionary with (`only`) ``files``/``dirs`` keys
+* values must be lists of (tuples of) strings, one of both **must** be non-empty
 
-     * paths are `relative` to installation directory
-     * for a path specified as a tuple, only one of the specified paths must be available
+  * paths are `relative` to installation directory
+  * for a path specified as a tuple, only one of the specified paths must be available
 
-  * default values:
+* default values:
 
-     * paths: non-empty ``bin`` and ``lib`` or ``lib64`` directories
-     * commands: none
+  * paths: non-empty ``bin`` and ``lib`` or ``lib64`` directories
+  * commands: none
 
 Example:
 
@@ -242,6 +242,7 @@ Example:
   their behavior (see also :ref:`avail_easyconfig_params`).
 
 Example:
+
 .. code:: python
 
   easyblock = 'Binary'
@@ -292,7 +293,7 @@ Example:
 
    eb GCC-4.9.0.eb --try-software-version=4.9.1
 
-* install WRF + its dozen dependencies with another toolchain (!)::
+* install WRF + its dozen dependencies with a different toolchain (!)::
 
    eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain=intel,2014b -r
 
@@ -333,15 +334,16 @@ Contributing back
 **Contribute back your working easyconfig files!**
 
 Share your expertise with the community, avoid duplicate work, especially if:
- * the software package is not supported yet
- * an existing easyconfig needs (non-trivial) changes for a different version/toolchain
- * it is a frequently used software package (compilers, MPI, etc.)
+
+* the software package is not supported yet
+* an existing easyconfig needs (non-trivial) changes for a different version/toolchain
+* it is a frequently used software package (compilers, MPI, etc.)
 
 Notes:
 
- * over 25% of easyconfigs are provided by contributors outside of HPC-UGent
- * contributing back does require a limited amount of knowledge on Git/GitHub
- * contributions are reviewed & thoroughly tested before inclusion
+* over 25% of easyconfigs are provided by contributors outside of HPC-UGent
+* contributing back does require a limited amount of knowledge on Git/GitHub
+* contributions are reviewed & thoroughly tested before inclusion
 
-    * see https://github.com/hpcugent/easybuild/wiki/Contributing-back for a step-by-step walkthrough
+  * see https://github.com/hpcugent/easybuild/wiki/Contributing-back for a step-by-step walkthrough
 
