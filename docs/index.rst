@@ -36,6 +36,7 @@ Contents
     :glob:
     :maxdepth: 1
 
+    introduction.rst
     Installation_Alternative
     Configuration_Legacy
     eb_*

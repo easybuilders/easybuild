@@ -213,7 +213,7 @@ by default, the ones specific to the generic ConfigureMake easyblock are include
 
   $ eb -a -e EB_WRF
 
-If you want to see the full output of running this command, look at :doc:`eb_a_e_EB_WRF.rst`.
+If you want to see the full output of running this command, look at :doc:`eb_a_e_EB_WRF`.
 
 Enable debug logging, ``--debug`` / ``-d``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

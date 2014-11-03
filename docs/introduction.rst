@@ -19,7 +19,7 @@ Some key features of EasyBuild:
 
  * build & install software **fully autonomously**
     * also interactive installers, code patching, generating module file, ...
- * easily :ref:`**configurable** <configuring_easybuild>`_: config file/environment/command line
+ * easily :ref:`**configurable** <configuring_easybuild>`: config file/environment/command line
     * including aspects like module naming scheme
  * thorough logging and archiving (see :doc:`Logfiles`)
     * entire build process is logged thoroughly, logs are stored in install directory;
