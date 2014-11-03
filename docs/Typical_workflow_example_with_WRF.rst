@@ -11,7 +11,7 @@ With EasyBuild however, WRF can be installed quite easily and here is how.
 First, you search which easyconfigs are available for WRF, using ``--search`` (see :ref:`searching_for_easyconfigs`)
 and you select one based on the software version, toolchain, etc.
 
-Using the selected easyconfig file, you can get an overview of the planned installations using ``--dry-run`` (see ref:`get_an_overview`).
+Using the selected easyconfig file, you can get an overview of the planned installations using ``--dry-run`` (see :ref:`get_an_overview`).
 
 Finally, building and installing WRF is done by specifying the matching easyconfig file in the eb command line,
 and using ``--robot`` (see :ref:`use_robot`) to enable dependency resolution. That way WRF and all of its dependencies are installed with `a single command`!
@@ -52,7 +52,7 @@ Getting an overview of planned installations
 --------------------------------------------
 
 To get an overview of the software that EasyBuild is going to build and install
-we can use the ``--dry-run``/``-D`` (see ref:`get_an_overview`) command line option.
+we can use the ``--dry-run``/``-D`` (see :ref:`get_an_overview`) command line option.
 This will show a list of easyconfig files
 that will be used, together with the module files that will be installed,
 as well as their current availability (``[x]`` marks available modules).

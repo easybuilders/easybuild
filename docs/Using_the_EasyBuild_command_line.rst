@@ -20,7 +20,7 @@ EasyBuild will (try and) locate the easyconfig file, and perform the installatio
  
 For example, to build and install ``HPL`` using the ``goolf`` toolchain (and EasyBuild v1.15.2)::
  
-  $ eb HPL-2.0-goolf-1.4.10.eb
+  $ eb HPL-2.0-goolf-1.4.10.eb --robot
   [...]
   == building and installing GCC/4.7.2...
   [...]
