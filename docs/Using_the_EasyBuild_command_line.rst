@@ -270,8 +270,8 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
-Forced reinstallation, ``--force``/``-f``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Forced reinstallation, ``--force`` or ``-f``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 
@@ -280,8 +280,8 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
    (cfr. Get an overview of planned installations ``--dry-run``/``-D`` :ref:`get_an_overview`)
 
-Searching for easyconfigs, ``--search``/``-S``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Searching for easyconfigs, ``--search`` / ``-S``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for `case-insensitive` search of easyconfigs. Example::
 
