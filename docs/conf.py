@@ -165,7 +165,7 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'easybuild.tex', 'easybuild Documentation',
+  ('index', 'easybuild.tex', 'EasyBuild Documentation',
    'Ghent University', 'manual'),
 ]
 
