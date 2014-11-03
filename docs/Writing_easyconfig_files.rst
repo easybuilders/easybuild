@@ -18,7 +18,7 @@ What is an easyconfig (file)?
 
 An easyconfig file serves as a `build specification` for EasyBuild.
 
-It consists of a plain text file (in Python syntax; strings, lists, dictionaries, etc.) with mostly `key-value` assignment to define **easyconfig parameters**.
+It consists of a plain text file (in Python syntax) with mostly `key-value` assignment to define **easyconfig parameters**.
 
 Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][-<versionsuffix>].eb``.
 
@@ -45,9 +45,10 @@ Available easyconfig parameters
 About 50 different (generic) easyconfig parameters are supported currently.
 
 An overview of all available easyconfig parameters is available via the ``-a`` command line option.
+
 By default, the parameters specific to generic (default) easyblock ``ConfigureMake`` are included;
 using ``--easyblock``/``-e`` parameters that are specific to a particular easyblock can be consulted.
-See :ref:`_avail_easyconfig_params` for more details.
+See :ref:`avail_easyconfig_params` for more details.
 
 Example::
 
@@ -68,15 +69,15 @@ Mandatory easyconfig parameters
 
 A handful of easyconfig parameters are `mandatory`:
 
-* **name, version**: specify what software (version) to build
-* **homepage**, description: metadata (used for module help)
-* **toolchain**: specifies name and version of compiler toolchain to use
-   * format: dictionary with name/version keys, e.g. ``{'name': 'foo', 'version': '1.2.3'}``
+  * **name, version**: specify what software (version) to build
+  * **homepage**, description: metadata (used for module help)
+  * **toolchain**: specifies name and version of compiler toolchain to use
+     * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
 
 Remarks:
 
-* some others are planned to be required in the future
-   * `docurls, software license, software license urls`
+  * some others are planned to be required in the future
+     * `docurls, software license, software license urls`
 
 Example:
 
@@ -99,16 +100,16 @@ This section includes an overview of some commonly used (optional) easyconfig pa
 Source files and patches
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **sources**: list of source files (filenames only)
-* **source urls**: list of URLs where sources can be downloaded
-* **patches**: list of patch files to be applied (``.patch`` extension)
+  * **sources**: list of source files (filenames only)
+  * **source urls**: list of URLs where sources can be downloaded
+  * **patches**: list of patch files to be applied (``.patch`` extension)
 
 Remarks:
 
-* sources are downloaded (best effort), unless already available
-* patches need to be EasyBuild-compatible
-   * unified diff format (``diff -ru``)
-   * patched locations relative to unpacked sources
+  * sources are downloaded (best effort), unless already available
+  * patches need to be EasyBuild-compatible
+     * unified diff format (``diff -ru``)
+     * patched locations relative to unpacked sources
 
 Example:
 
@@ -121,22 +122,23 @@ Example:
 
   # fix Make dependencies, so parallel build also works
   patches = ['HPL_parallel-make.patch']
+  [...]
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources, a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
 
 Dependencies
 ~~~~~~~~~~~~
 
-* **dependencies**: build/runtime dependencies
-* **builddependencies**: build-only dependencies (not in module)
-* **hiddendependencies**: dependencies via hidden modules
-* **osdependencies**: system dependencies (package names)
+  * **dependencies**: build/runtime dependencies
+  * **builddependencies**: build-only dependencies (not in module)
+  * **hiddendependencies**: dependencies via hidden modules
+  * **osdependencies**: system dependencies (package names)
 
 Remarks:
 
-* modules must exist for all (non-system) dependencies
-* (non-system) dependencies can be resolved via ``--robot``
-* format: (``<name>, <version>[, <versionsuffix>[, <toolchain>]]``)
+  * modules must exist for all (non-system) dependencies
+  * (non-system) dependencies can be resolved via ``--robot``
+  * format: ``(<name>, <version>[, <versionsuffix>[, <toolchain>]])``
 
 Example:
 
@@ -187,7 +189,7 @@ These are used to make sure that an installation didn't (partly) fail unnoticed.
 
 Remarks:
 
-* format: Python dictionary with (`only`) ``files`/``dirs`` keys
+* format: Python dictionary with (`only`) ``files``/``dirs`` keys
 * values must be lists of (tuples of) strings, one of both **must** be non-empty
    * paths are `relative` to installation directory
    * for a path specified as a tuple, only one of the specified paths must be available
@@ -210,7 +212,8 @@ Easyblock specification
 By default, EasyBuild will derive the easyblock to use based on the software name: if a matching easyblock is found, it will use that;
 if not, it will fall back to the generic ``ConfigureMake`` easyblock.
 
-To make EasyBuild use a specific (usually generic) easyblock rather than deriving it from the software name, the ``easyblock`` parameter can be used.
+To make EasyBuild use a specific (usually generic) easyblock rather
+than deriving it from the software name, the **easyblock** parameter can be used.
 
 A list of available easyblocks is available via ``--list-easyblocks``; generic easyblocks are the ones for which the name does `not` start with ``EB_``.
 
@@ -241,8 +244,8 @@ Example:
 Module class
 ~~~~~~~~~~~~
 
-The category to which the software belongs to can be specified using the ``moduleclass`` easyconfig parameter.
-By default, the ``base`` module class is used.
+The category to which the software belongs to can be specified using the **moduleclass** easyconfig parameter.
+By default, the ``base`` module class is used (which should be replaced with a more appropriate category).
 
 EasyBuild enforces that only known module classes can be specified (to avoid misclassification due to typos).
 
@@ -312,7 +315,7 @@ Example:
 
 .. note:: Proper use of string templates is important, in particular to avoid hardcoding the software version
   in multiple locations of an easyconfig file; this is critical to make ``--try-software-version`` behave
-  as expected (see also :ref:`tweaking_easyconfigs`).
+  as expected (see also :ref:`tweaking_easyconfigs_using_try`).
 
 
 Contributing back
