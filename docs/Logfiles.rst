@@ -1,9 +1,14 @@
 
 
-Build and installation log files
-================================
+Understanding EasyBuild logs
+=============================
 
 EasyBuild thoroughly keeps track of the executed build and install procedures.
+This page details some of the specifics, to help you making sense of them.
+
+
+Basic information
+-----------------
 
 During an invocation of the ``eb`` command, a temporary log file is provided.
 This log can be consulted in case any problems occur during the process.
