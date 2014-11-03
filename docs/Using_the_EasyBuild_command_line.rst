@@ -196,8 +196,8 @@ Commonly used command line options
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
 and hereby the most common command line options are being documented.
 
-Command line help, ``eb --help``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Command line help, ``--help``/``-H``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
 
@@ -217,8 +217,8 @@ You can query which EasyBuild version you are using with ``--version``::
 .. tip:: Asking EasyBuild to print own its version is a quick way to ensure that ``$PYTHONPATH``
   is set up correctly, so that the entire EasyBuild installation (framework, easyblocks, easyconfigs) is available.
 
-List of known toolchains, ``eb --list-toolchains``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+List of known toolchains, ``--list-toolchains``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 For an overview of known toolchains, use ``eb --list-toolchains``.
  
@@ -247,8 +247,8 @@ For example, a list of easyblocks can be obtained with::
 
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
-All available easyconfig parameters, ``eb -a``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+All available easyconfig parameters, ``--avail-easyconfig-params``/``-a``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
@@ -261,8 +261,8 @@ by default, the ones specific to the generic ConfigureMake easyblock are include
 
   $ eb -a -e EB_WRF
 
-Enable debug logging, ``--debug``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable debug logging, ``--debug``/``-d``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
@@ -272,18 +272,18 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
-Forced reinstallation, ``eb --force``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Forced reinstallation, ``--force``/``-f``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
-.. tip:: Combine --force with --dry-run to get a good view on which installations will be forced.
-   (cfr. `Using dry-run to get an overview of planned installations`_)
+.. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
+   (cfr. Get an overview of planned installations ``--dry-run``/``-D`` :ref:`_get_an_overview`)
 
-Searching for easyconfigs, ``--search``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Searching for easyconfigs, ``--search``/``-S``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for `case-insensitive` search of easyconfigs. Example::
 
@@ -359,8 +359,8 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
 
-Use robot for dependency resolution, ``--robot``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use robot for dependency resolution, ``--robot``/``-r``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild supports installing an entire software stack, including the required toolchain
 if needed, with a single ``eb`` invocation::
@@ -395,8 +395,10 @@ Each of the retained dependencies will then be built and installed, in the requi
   or when reinstalling software using a different compiler toolchain
   (you can use the ``--try-toolchain`` command line option in combination with ``--robot``).
 
-Using dry-run to get an overview of planned installations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _get_an_overview:
+
+Get an overview of planned installations ``--dry-run``/``-D``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with ``--robot``, in the form of ``-Dr``)::
 
