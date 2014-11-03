@@ -54,6 +54,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
   .. code::
 
    $ eb --modules-tool=Lmod
+
   or
 
   .. code::
@@ -164,7 +165,7 @@ More examples of using environment variables to configure EasyBuild are
 shown in the sections below.
 
 .. tip:: Any configuration option of EasyBuild which can be tuned by command line
-   or via the configuration file, can also be tuned via a corresponding environment variable.
+  or via the configuration file, can also be tuned via a corresponding environment variable.
 
 
 Command line arguments
@@ -187,13 +188,13 @@ Examples (more below):
 
 .. code:: shell-session
 
-$ eb --debug -l ...
+    $ eb --debug -l ...
 
 * use ``/dev/shm`` as build path, install to temporary install path, disable debug logging
 
 .. code:: shell-session
 
-$ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
+    $ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
 
 Available configuration settings
 --------------------------------
