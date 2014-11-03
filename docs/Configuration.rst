@@ -40,26 +40,26 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
   .. code:: ini
 
-[config]
-modules-tool = Lmod
+   [config]
+   modules-tool = Lmod
 
 * environment variable (upper case, ``EASYBUILD_`` prefix, ``-``\ ’s becomes ``_``\ ’s):
 
-.. code:: shell-session
+  .. code:: shell-session
 
-$ export EASYBUILD_MODULES_TOOL=Lmod
+   $ export EASYBUILD_MODULES_TOOL=Lmod
 
 * command line argument (long options preceded by ``--`` and (optionally) using ``=``):
 
-.. code:: shell-session
+  .. code:: shell-session
 
-$ eb --modules-tool=Lmod
+   $ eb --modules-tool=Lmod
 
 or
 
-.. code:: shell-session
+  .. code:: shell-session
 
-$ eb --modules-tool Lmod
+   $ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
 
