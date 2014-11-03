@@ -258,11 +258,11 @@ Example:
     moduleclass = 'compiler'
 
 .. note:: By default, EasyBuild will create a symlink to the generated module file in a module class-specific path.
-This behavior is configurable through the module naming scheme being used.
+  This behavior is configurable through the module naming scheme being used.
 
 .. tip:: The module class may play a significant role in other aspects. For example, the alternative (hierarchical)
-module naming scheme ``HierarchicalMNS`` heavily relies on the ``moduleclass`` parameter for discriminating compilers
-and MPI libraries.
+  module naming scheme ``HierarchicalMNS`` heavily relies on the ``moduleclass`` parameter for discriminating compilers
+  and MPI libraries.
 
 Tweaking existing easyconfig files
 ----------------------------------
@@ -311,8 +311,8 @@ Example:
   ...
 
 .. note:: Proper use of string templates is important, in particular to avoid hardcoding the software version
-in multiple locations of an easyconfig file; this is critical to make ``--try-software-version`` behave
-as expected (see also :ref:`tweaking_easyconfigs`).
+  in multiple locations of an easyconfig file; this is critical to make ``--try-software-version`` behave
+  as expected (see also :ref:`tweaking_easyconfigs`).
 
 
 Contributing back

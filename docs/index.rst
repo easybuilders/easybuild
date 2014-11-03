@@ -34,12 +34,12 @@ Contents
     :glob:
     :maxdepth: 1
 
-    docs/Installation_Alternative
-    docs/Configuration_Legacy
-    docs/eb_*
-    docs/Installing-Lmod-without-root-permissions
-    docs/Installing-environment-modules-without-root-permissions
-    docs/Useful_links
+    Installation_Alternative
+    Configuration_Legacy
+    eb_*
+    Installing-Lmod-without-root-permissions
+    Installing-environment-modules-without-root-permissions
+    Useful_links
 
 Getting help
 ============
