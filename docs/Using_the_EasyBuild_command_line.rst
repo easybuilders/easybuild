@@ -280,6 +280,8 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
    (cfr. Get an overview of planned installations ``--dry-run`` / ``-D`` :ref:`get_an_overview`)
 
+.. _searching_for_easyconfigs:
+
 Searching for easyconfigs, ``--search`` / ``-S``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -356,6 +358,7 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
 .. tip:: Using ``--search`` has remarkably longer output in most cases, compared to ``-S``; the information is the same,
   however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
 
+.. _use_robot:
 
 Use robot for dependency resolution, ``--robot`` / ``-r``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

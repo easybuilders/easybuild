@@ -3,16 +3,26 @@ Typical workflow example: building and installing WRF
 =====================================================
 
 This section shows an example case of building
-`Weather Research and Forecasting <http://www.wrf-model.org>`_ scientific software application,
-which is notoriously complex software application to build and install.
+`Weather Research and Forecasting (WRF) <http://www.wrf-model.org>`_ scientific software application,
+which is a notoriously complex software application to build and install.
 With EasyBuild however, WRF can be installed quite easily and here is how.
+
+
+First, you search which easyconfigs are available for WRF, using ``--search`` (see :ref:`searching_for_easyconfigs`)
+and you select one based on the software version, toolchain, etc.
+
+Using the selected easyconfig file, you can get an overview of the planned installations using ``--dry-run`` (see ref:`get_an_overview`).
+
+Finally, building and installing WRF is done by specifying the matching easyconfig file in the eb command line,
+and using ``--robot`` (see :ref:`use_robot`) to enable dependency resolution. That way WRF and all of its dependencies are installed with `a single command`!
 
 
 Searching for available easyconfigs files
 -----------------------------------------
 
 Searching for build specification for a particular software package can be done using the
-``--search``/``-S`` command line options; for example, to get a list of available easyconfig files for WRF::
+``--search``/``-S`` command line options (see :ref:`searching_for_easyconfigs`);
+for example, to get a list of available easyconfig files for WRF::
 
   $ eb -S WRF
   == temporary log file in case of crash /tmp/easybuild-MdAp7p/easybuild-zEBJMk.log
@@ -55,12 +65,12 @@ and can even install the compiler toolchain as well if the corresponding modules
   CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
    * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
    * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [ ] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
+   * [x] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
    * [x] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
-   * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
+   * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
    * [x] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
-   * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
-   * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
+   * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
+   * [x] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
    * [ ] $CFGS/s/Szip/Szip-2.1-goolf-1.4.10.eb (module: Szip/2.1-goolf-1.4.10)
    * [ ] $CFGS/f/flex/flex-2.5.37-goolf-1.4.10.eb (module: flex/2.5.37-goolf-1.4.10)
    * [ ] $CFGS/n/ncurses/ncurses-5.9-goolf-1.4.10.eb (module: ncurses/5.9-goolf-1.4.10)
@@ -84,24 +94,10 @@ Installing a software stack
 
 To make EasyBuild build and install WRF, including all of its dependencies, a **single command** is sufficient.
 
-By using the ``--robot``/``-r`` command line option, we enable dependency resolution such that the entire software stack is handled::
+By using the ``--robot``/``-r`` (see :ref:`use_robot`) command line option,
+we enable dependency resolution such that the entire software stack is handled::
 
   $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --robot
-  == building and installing GCC/4.7.2...
-  [...]
-  == building and installing hwloc/1.6.2-GCC-4.7.2...
-  [...]
-  == building and installing OpenMPI/1.6.4-GCC-4.7.2...
-  [...]
-  == building and installing gompi/1.4.10...
-  [...]
-  == building and installing OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2...
-  [...]
-  == building and installing FFTW/3.3.3-gompi-1.4.10...
-  [...]
-  == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...
-  [...]
-  == building and installing goolf/1.4.10...
   [...]
   == building and installing zlib/1.2.7-goolf-1.4.10...
   [...]
@@ -129,12 +125,9 @@ By using the ``--robot``/``-r`` command line option, we enable dependency resolu
   [...]
   == building and installing WRF/3.5.1-goolf-1.4.10-dmpar...
   [...]
-  == Build succeeded for 21 out of 21
+  == Build succeeded for 13 out of 13
 
 Once the installation has succeeded, modules will be available for WRF and all of its dependencies::
-
-  $ module load WRF
-  $ module list
 
   $ module load WRF
   $ module list
@@ -148,5 +141,5 @@ Once the installation has succeeded, modules will be available for WRF and all o
     7) ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2  15) WRF/3.5.1-goolf-1.4.10-dmpar
     8) goolf/1.4.10
 
-For more information, see the other topics discussed in the documentation :ref:`contents`.
+For more information, see the other topics discussed in the documentation (see :ref:`contents`).
 
