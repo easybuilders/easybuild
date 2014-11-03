@@ -197,6 +197,8 @@ For example, a list of easyblocks can be obtained with::
 
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
+.. _avail_easyconfig_params:
+
 All available easyconfig parameters, ``--avail-easyconfig-params`` / ``-a``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
