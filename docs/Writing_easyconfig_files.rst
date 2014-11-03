@@ -21,15 +21,14 @@ What is an easyconfig (file)?
 * plain text file, **Python syntax** (strings, lists, dictionaries, etc.)
 * specified parameters (usually) override any default value
 * easyconfigs typically follow a (fixed) strict naming scheme
-
- * ``<name>-<version>[-<toolchain>][-<versionsuffix>].eb``
- * toolchain label (name, version) is omitted for dummy toolchain
- * version suffix is omitted when empty
- * filename only important w.r.t. dependency resolution (``--robot``)
+   * ``<name>-<version>[-<toolchain>][-<versionsuffix>].eb``
+   * toolchain label (name, version) is omitted for dummy toolchain
+   * version suffix is omitted when empty
+   * filename only important w.r.t. dependency resolution (``--robot``)
 
 Example:
 
-.. code-block:: python
+.. code:: python
 
   name = ‘GCC’
   version = ‘4.8.3’
@@ -56,12 +55,15 @@ Mandatory easyconfig parameters
 * **name, version**: specify what software (version) to build
 * **homepage**, description: metadata (used for module help)
 * **toolchain**: specifies compiler toolchain to use (name, version)
+
+Remarks:
+
 * some others are planned to be required in the future
    * `docurls, software license, software license urls`
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
     name = ‘foo’
     version = ‘1.2.3’
@@ -91,7 +93,7 @@ Remarks:
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
     name = ‘GROMACS’
     version = ‘4.6.1’
@@ -116,7 +118,7 @@ Remarks:
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
   name = ‘GTI’
   ...
@@ -138,7 +140,7 @@ In analogy to `configure`, also `build` and `install` commands are tuneable:
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
     easyblock = ‘ConfigureMake’
     ...
@@ -162,7 +164,7 @@ Remarks:
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
   sanity_check_paths = {
     ‘files’: [‘bin/otfconfig’, ‘include/open-trace-format/otf.h’],
@@ -183,7 +185,7 @@ Remarks:
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
     easyblock = ‘CMakeMake’
     name = ‘GTI’
@@ -204,7 +206,7 @@ Module class
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
     name = ‘GCC’
     ...
@@ -244,7 +246,7 @@ Notes:
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
   name = ‘GCC’
   version = ‘4.8.3’
@@ -267,7 +269,7 @@ Use available generic easyblocks
 
 Example::
 
-.. code-block:: python
+.. code:: python
 
   easyblock = ‘CMakeMake’
   name = ‘GTI’
