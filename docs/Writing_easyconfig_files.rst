@@ -224,10 +224,11 @@ Example:
     ...
 
 .. tip::
-It is highly recommended to use existing (generic) easyblocks, where applicable.
-This avoids the need for creating (and maintaining) new easyblocks.
-Typically, generic easyblocks support several custom easyconfig parameters which allow to steer
-their behavior (see also :ref:`avail_easyconfig_params`).
+  It is highly recommended to use existing (generic) easyblocks, where applicable.
+  This avoids the need for creating (and maintaining) new easyblocks.
+  Typically, generic easyblocks support several custom easyconfig parameters which allow to steer
+  their behavior (see also :ref:`avail_easyconfig_params`).
+
 Example:
 .. code:: python
 
