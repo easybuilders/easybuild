@@ -24,6 +24,7 @@ creating module files that match the specification files, etc.
 
 Included in the framework is an `abstract` implementation of a software build and install procedure,
 which is split up into different `steps`:
+
 * unpacking sources
 * configuration
 * build
@@ -74,7 +75,7 @@ For each software package being built, the EasyBuild framework will determine wh
 should be used, based on the name of the software package or the value of the easyblock
 specification parameter. In case an easyblock specification is not provided and no (software-specific)
 easyblock matching the software name could be found, a fallback mechanism will resort to using
-the generic ``ConfigureMake`` easyblock, which implements the common configure – make – make install procedure.
+the generic ``ConfigureMake`` easyblock, which implements the common ``configure`` / ``make`` / ``make install`` procedure.
 
 .. XXX - UPDATE BY VERSION
 

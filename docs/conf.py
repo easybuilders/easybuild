@@ -41,15 +41,15 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '1.15.2' ## this is meant to reference the version of EasyBuild
+version = '1.15.2'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '0.6.12'  ## this is meant to reference the version of the documentation itself
+release = '0.6.12'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
 # Else, today_fmt is used as the format for a strftime call.
-today_fmt = '%a %d %B %Y'
+today_fmt = '%a, %d %b %Y %H:%M:%S'  # e.g., Mon, 03 Nov 2014 22:14:42
 
 # List of documents that shouldn't be included in the build.
 #unused_docs = []
