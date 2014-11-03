@@ -280,7 +280,7 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
-   (cfr. Get an overview of planned installations ``--dry-run``/``-D`` :ref:`_get_an_overview`)
+   (cfr. Get an overview of planned installations ``--dry-run``/``-D`` :ref:`get_an_overview`)
 
 Searching for easyconfigs, ``--search``/``-S``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

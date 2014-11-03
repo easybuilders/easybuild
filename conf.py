@@ -85,7 +85,7 @@ pygments_style = 'borland'
 # html_style = 'default.css'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
-    html_theme = 'haiku'
+    html_theme = 'nature'
 else:
     html_theme = 'default'
 
