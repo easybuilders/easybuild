@@ -3,19 +3,18 @@
 
 .. EasyBuild documentation master file
 
-
-This document was last rebuilt on: |today|. Latest EasyBuild release known to conform is version |version|
-
 EasyBuild documentation
 =======================
 
 Welcome to the documentation of **EasyBuild**, a software build and installation framework
 that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
+This documentation is intended for EasyBuild version |version|, and was last rebuilt on |today|.
+
 .. _contents:
 
-Introduction
-============
+Introductory topics
+===================
 
 .. toctree::
     :glob:
