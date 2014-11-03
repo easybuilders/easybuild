@@ -12,12 +12,12 @@ Specifying builds
 By providing a single easyconfig file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-The most basic usage is to simply provide the name of an easyconfig file to ``eb``.
+The most basic usage is to simply provide the name of an easyconfig file to the ``eb`` command.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
  
-For example, to build and install ``gzip`` (using the system compiler and EasyBuild/1.15.2 - this may take 30 minutes or so)::
+For example, to build and install ``HPL`` using the ``goolf`` toolchain (and EasyBuild v1.15.2)::
  
-  $ eb gzip-1.5-goolf-1.4.10.eb
+  $ eb HPL-2.0-goolf-1.4.10.eb
   == temporary log file in case of crash /tmp/easybuild-0f0xKN/easybuild-oI1vAm.log
   == resolving dependencies ...
   == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.7.2.eb
@@ -39,7 +39,6 @@ For example, to build and install ``gzip`` (using the system compiler and EasyBu
   == creating module...
   == COMPLETED: Installation ended successfully
   [...]
-  == processing EasyBuild easyconfig /home/users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.6/site-packages/easybuild_easyconfigs-1.15.2.0-py2.6.egg/easybuild/easyconfigs/g/goolf/goolf-1.4.10.eb
   == building and installing goolf/1.4.10...
   == fetching files...
   == creating build dir, resetting environment...
@@ -57,9 +56,8 @@ For example, to build and install ``gzip`` (using the system compiler and EasyBu
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /tmp/18827/software/goolf/1.4.10/easybuild/easybuild-goolf-1.4.10-20141031.223215.log
-  == processing EasyBuild easyconfig /home/users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.6/site-packages/easybuild_easyconfigs-1.15.2.0-py2.6.egg/easybuild/easyconfigs/g/gzip/gzip-1.5-goolf-1.4.10.eb
-  == building and installing gzip/1.5-goolf-1.4.10...
+  [...]
+  == building and installing HPL/2.0-goolf-1.4.10...
   == fetching files...
   == creating build dir, resetting environment...
   == unpacking...
@@ -76,14 +74,14 @@ For example, to build and install ``gzip`` (using the system compiler and EasyBu
   == cleaning up...
   == creating module...
   == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /tmp/18827/software/gzip/1.5-goolf-1.4.10/easybuild/easybuild-gzip-1.5-20141031.223237.log
+  == Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141031.223237.log
   == Build succeeded for 5 out of 5
   == temporary log file /tmp/easybuild-UOEWix/easybuild-NiswcV.log has been removed.
   == temporary directory /tmp/easybuild-UOEWix has been removed.
 
-  $ module load gzip/1.5-goolf-1.4.10
-  $ which gzip
-  /tmp/18827/software/gzip/1.5-goolf-1.4.10/bin/gzip
+  $ module load HPL/2.0-goolf-1.4.10
+  $ which xhpl
+  /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/bin/xhpl
  
 All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
 this is a crucial design aspect, since the dependency resolution mechanism (introduced below) relies upon this convention.
@@ -98,14 +96,14 @@ An alternative approach is to only use command line options to specify which sof
 Refer to the ``Software search and build options`` section in the ``eb --help`` output for an overview
 of the available command line options for this purpose (cfr. :ref:`basic_usage_help`).
  
-Here is how to build and install last version of bzip2 (that EasyBuild is aware of)
+Here is how to build and install last version of HPCG (that EasyBuild is aware of)
 using ``dummy`` toolchain (i.e., using the system compiler)::
  
-  $ eb --software-name=gzip --toolchain=goolf,1.4.10 -f
+  $ eb --software-name=HPCG --toolchain=goolf,1.4.10 -f
   == temporary log file in case of crash /tmp/easybuild-lMTL2f/easybuild-IWd4xX.log
   == resolving dependencies ...
-  == processing EasyBuild easyconfig /home/users/fgeorgatos/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.6/site-packages/easybuild_easyconfigs-1.15.2.0-py2.6.egg/easybuild/easyconfigs/g/gzip/gzip-1.5-goolf-1.4.10.eb
-  == building and installing gzip/1.5-goolf-1.4.10...
+  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.6/site-packages/easybuild_easyconfigs-1.15.2.0-py2.6.egg/easybuild/easyconfigs/h/HPCG/HPCG-2.1-goolf-1.4.10.eb
+  == building and installing HPCG/2.1-goolf-1.4.10...
   == fetching files...
   == creating build dir, resetting environment...
   == unpacking...
@@ -124,7 +122,7 @@ using ``dummy`` toolchain (i.e., using the system compiler)::
   == COMPLETED: Installation ended successfully
   [...]
 
-At this point, a module ``gzip/1.5-goolf-1.4.10`` should be visible with ``module available``.
+At this point, a module ``HPCG/2.1-goolf-1.4.10`` should be visible with ``module available``.
  
 
 By providing a set of easyconfig files
@@ -132,12 +130,12 @@ By providing a set of easyconfig files
  
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
 
-For example, to build and install both bzip2 and GCC with a single command, simply list the easyconfigs for both on the
-``eb`` command line (note that bzip2 is not being reinstalled, since a matching module is already available)::
+For example, to build and install both HPCG and GCC with a single command, simply list the easyconfigs for both on the
+``eb`` command line (note that HPCG is not being reinstalled, since a matching module is already available)::
  
-  $ eb bzip2-1.0.6.eb GCC-4.8.3.eb
+  $ eb HPCG-2.1-goolf-1.4.10.eb GCC-4.8.3.eb
   == temporary log file in case of crash /tmp/easybuild-pGof8u/easybuild-GNYSey.log
-  == bzip2/1.0.6 is already installed (module found), skipping
+  == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping
   == resolving dependencies ...
   == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC/GCC-4.8.3.eb
   == building and installing GCC/4.8.3...
@@ -171,13 +169,13 @@ to find easyconfig files. For example:
   $ find set_of_easyconfigs/ -type f             
   set_of_easyconfigs/GCC-4.8.3.eb
   set_of_easyconfigs/foo.txt
-  set_of_easyconfigs/tools/bzip2-1.0.6.eb
+  set_of_easyconfigs/tools/HPCG-2.1-goolf-1.4.10.eb
 
 ::
 
   $ eb set_of_easyconfigs/
   == temporary log file in case of crash /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log
-  == bzip2/1.0.6 is already installed (module found), skipping
+  == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping
   == GCC/4.8.3 is already installed (module found), skipping
   == No easyconfigs left to be built.
   == Build succeeded for 0 out of 0
@@ -266,7 +264,7 @@ Enable debug logging, ``--debug``/``-d``
 
 Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
 
-  $ eb bzip2-1.0.6.eb -d
+  $ eb HPCG-2.1-goolf-1.4.10.eb -d
 
 .. tip:: You may enable this by default via adding ``debug = True`` in your EasyBuild configuration file
 
