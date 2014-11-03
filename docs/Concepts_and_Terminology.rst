@@ -67,8 +67,8 @@ the generic ConfigureMake easyblock, which implements the common configure – m
 At the time of writing, the most recent release of EasyBuild (|version|) includes 139 software-specific
 easyblocks and 20 generic easyblocks, providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, over basic tools
-like compilers, various MPI stacks and commonly used libraries, to large scientific software
-packages that are notorious for their involved and tedious install procedures, such as:
+like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
+to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
 `CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`.
 
 

@@ -27,6 +27,7 @@ Contents
     docs/Using_the_EasyBuild_command_line
     docs/Typical_workflow_example_with_WRF
     docs/Writing_easyconfig_files
+    docs/Logfiles
 
 .. toctree::
     :hidden:
