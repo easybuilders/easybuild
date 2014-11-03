@@ -1,13 +1,17 @@
 
-Writing Easyconfig Files: The Basics
+Writing easyconfig files: the basics
 ====================================
 
 This page explains all the basic information about how to write easyconfig files.
 
-For software builds that not deviate significantly from established build patterns, an easyconfig is all that you need to specify in order to derive a build and a modulefile. 
+For software builds that not deviate significantly from established build patterns,
+an easyconfig is all that you need to specify in order to derive a build and a module file.
 
-Luckily, the majority of software delivery mechanisms are being designed around either autotools or cmake or, perhaps, some simple file extraction/copy pattern. 
-Yet, in case the software build calls for more elaborate steps (scientific software never fails to surprise us in this regard), an :ref:`EasyBlock` may be needed, which is the subject of other part of this documentation.
+Luckily, the majority of software delivery mechanisms are being designed around
+either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
+Yet, in case the software build calls for more elaborate steps
+(scientific software never fails to surprise us in this regard),
+an :ref:`easyblocks` may be needed, which is the subject of other part of this documentation.
 
 What is an easyconfig (file)?
 -----------------------------
@@ -23,22 +27,23 @@ What is an easyconfig (file)?
  * version suffix is omitted when empty
  * filename only important w.r.t. dependency resolution (``--robot``)
 
-Example::
+Example:
+
+.. code-block:: python
 
   name = ‘GCC’
   version = ‘4.8.3’
   ...
-
 
 Available easyconfig parameters
 -------------------------------
 
 * build specification is defined by easyconfig parameters
 * about 50 generic different easyconfig parameters are supported
-* see eb --avail-easyconfig-params or eb -a for full list
+* use ``eb --avail-easyconfig-params`` or ``eb -a`` for full list (see XXX)
 * parameters specific to a particular easyblock are indicated
 * by default, those specific to ConfigureMake are included
-* parameters for other easyblocks via --easyblock/-e
+* parameters for other easyblocks via ``--easyblock``/``-e``
 
 Example::
 
@@ -52,9 +57,11 @@ Mandatory easyconfig parameters
 * **homepage**, description: metadata (used for module help)
 * **toolchain**: specifies compiler toolchain to use (name, version)
 * some others are planned to be required in the future
-* `docurls, software license, software license urls`
+   * `docurls, software license, software license urls`
 
 Example::
+
+.. code-block:: python
 
     name = ‘foo’
     version = ‘1.2.3’
@@ -65,18 +72,26 @@ Example::
         "version": ‘2014a’,
     }
 
-Common easyconfig parameters: source files, patches
----------------------------------------------------
+Common easyconfig parameters
+----------------------------
+
+Source files and patches
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **sources**: list of source files (filenames only)
 * **source urls**: list of URLs where sources can be downloaded
 * **patches**: list of patch files to be applied (``.patch`` extension)
+
+Remarks:
+
 * sources are downloaded (best effort), unless already available
 * patches need to be EasyBuild-compatible
 * unified diff format (``diff -ru``)
 * patched locations relative to unpacked sources
 
 Example::
+
+.. code-block:: python
 
     name = ‘GROMACS’
     version = ‘4.6.1’
@@ -85,18 +100,23 @@ Example::
     sources = [SOURCELOWER_TAR_GZ]
     patches = [‘%(namelower)s-%(version)s_Makefile-fix.patch’]
 
-Common easyconfig parameters: dependencies
-------------------------------------------
+Dependencies
+~~~~~~~~~~~~
 
 * **dependencies**: build/runtime dependencies
 * **builddependencies**: build-only dependencies (not in module)
 * **hiddendependencies**: dependencies via hidden modules
 * **osdependencies**: system dependencies (package names)
+
+Remarks:
+
 * modules must exist for all (non-system) dependencies
 * (non-system) dependencies can be resolved via ``--robot``
 * format: (``<name>, <version>[, <versionsuffix>[, <toolchain>]]``)
 
 Example::
+
+.. code-block:: python
 
   name = ‘GTI’
   ...
@@ -105,18 +125,20 @@ Example::
   builddependencies = [(‘CMake’, ‘2.8.12’, ‘’, (‘GCC’, ‘4.8.2’)]
 
 
-Common easyconfig parameters: configure/build/install command options
----------------------------------------------------------------------
+Configure/build/install command options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **configopts**: options for configure command
 * **preconfigopts**: options used as prefix for configure command
 
-Analogous:
+In analogy to `configure`, also `build` and `install` commands are tuneable:
 
 * **buildopts, prebuildopts**: options for build command
 * **installopts, preinstallopts**: options for install command
 
 Example::
+
+.. code-block:: python
 
     easyblock = ‘ConfigureMake’
     ...
@@ -124,11 +146,12 @@ Example::
     buildopts = ‘CC="$CC" CFLAGS="$CFLAGS"’
     installopts = ‘PREFIX=%(installdir)s’
 
+Sanity check
+~~~~~~~~~~~~
 
-Common easyconfig parameters: sanity check
-------------------------------------------
+* **sanity check paths**: files/directories that must get installed
 
-**sanity check paths**: files/directories that must get installed
+Remarks:
 
 * used to check whether installation (partly) failed unnoticed
 * paths are `relative` to installation directory
@@ -139,15 +162,19 @@ Common easyconfig parameters: sanity check
 
 Example::
 
+.. code-block:: python
+
   sanity_check_paths = {
     ‘files’: [‘bin/otfconfig’, ‘include/open-trace-format/otf.h’],
     ‘dirs’: [(‘lib’, ‘lib64’)],
   }
 
-Common easyconfig parameters: easyblock specification
------------------------------------------------------
+Easyblock specification
+~~~~~~~~~~~~~~~~~~~~~~~
 
-**easyblock**: specify which easyblock must be used
+* **easyblock**: specify which easyblock must be used
+
+Remarks:
 
 * overrides easyblock derived from software name
 * usually a generic easyblock, but there are exceptions
@@ -156,14 +183,16 @@ Common easyconfig parameters: easyblock specification
 
 Example::
 
+.. code-block:: python
+
     easyblock = ‘CMakeMake’
     name = ‘GTI’
     version = ‘1.2.0’
     ...
 
 
-Common easyconfig parameters: module class
-------------------------------------------
+Module class
+~~~~~~~~~~~~
 
 
 **moduleclass**: ‘category’ in which the software package fits
@@ -174,6 +203,8 @@ Common easyconfig parameters: module class
 * symlink for module class is created for module (by default)
 
 Example::
+
+.. code-block:: python
 
     name = ‘GCC’
     ...
@@ -190,30 +221,30 @@ Tweaking existing easyconfig files
 * see ``eb --help | grep try-`` for all options
 * cooperates as expected with ``--robot``
 
-Example::
+Example:
 
- GCC version update:
+* GCC version update::
 
    eb GCC-4.9.0.eb --try-software-version=4.9.1
 
- install WRF + its dozen dependencies with another toolchain (!):
+* install WRF + its dozen dependencies with another toolchain (!)::
 
    eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain=intel,2014b -r
 
+Dynamic values for easyconfig parameters
+----------------------------------------
 
-String templates & constants: Dynamic values for easyconfig parameters
-----------------------------------------------------------------------
+String templates are completed by easyconfig parameters, typically ``name`` and/or ``version``. These help to avoid hardcoding values in multiple locations.
 
-* string templates are completed by easyconfig parameters
+Notes:
 
- * typically ``name`` and/or ``version``
-
-* help to avoid hardcoding values in multiple locations
 * required for making ``--try-software-version`` behave as expected
 * list of available templates via ``--avail-easyconfig-templates``
 * list of available constants via ``--avail-easyconfig-constants``
 
 Example::
+
+.. code-block:: python
 
   name = ‘GCC’
   version = ‘4.8.3’
@@ -236,6 +267,8 @@ Use available generic easyblocks
 
 Example::
 
+.. code-block:: python
+
   easyblock = ‘CMakeMake’
   name = ‘GTI’
   ...
@@ -249,19 +282,17 @@ Example::
 Contributing back
 -----------------
 
-* contribute back your working easyconfig files!
-* share your expertise with the community, avoid duplicate work, especially if:
+Contribute back your working easyconfig files!
 
- * software package is not supported yet
- * existing easyconfig needs changes for new version/toolchain
- * frequently used software package (compilers, MPI, etc.)
+Share your expertise with the community, avoid duplicate work, especially if:
+   * software package is not supported yet
+   * existing easyconfig needs changes for new version/toolchain
+   * frequently used software package (compilers, MPI, etc.)
 
-* ∼ 25% of easyconfigs by contributors outside of HPC-UGent
-* requires a limited amount of knowledge on Git/GitHub
+Notes:
+
+* about 25% of easyconfigs are provided by contributors outside of HPC-UGent
+* contributing back requires a limited amount of knowledge on Git/GitHub
 * contributions are reviewed & thoroughly tested before inclusion
-* see EasyBuild wiki for detailed walkthrough:
-  https://github.com/hpcugent/easybuild/wiki/Contributing-back
-
-
-
+   * see EasyBuild wiki for detailed walkthrough: https://github.com/hpcugent/easybuild/wiki/Contributing-back
 
