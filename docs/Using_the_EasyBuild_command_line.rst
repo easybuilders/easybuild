@@ -385,14 +385,52 @@ Note how the different status symbols denote distinct handling states by EasyBui
 Tweaking existing easyconfig files, using ``--try-*``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-XXX **TODO**: move (most of) this section!
+Making minor changes to existing easyconfig files can be done straight from the ``eb`` command line.
+This way, having to manually copying and editing easyconfig files can be avoided.
 
-* modify easyconfig(s) straight from command line via ``--try-X``
-* ``--try-toolchain`` to try building with a different toolchain
-* ``--try-software-version`` to try building a different version
-* ``--try-amend`` to try tweaking a different parameter
-* currently only for parameters with string- or list-typed values
-* see ``eb --help | grep try-`` for all options
-* cooperates as expected with ``--robot``
+Tweaking existing easyconfig files can be done using the **--try-*** command line options.
+For each of the software build options that can be used as an alternative to specifying easyconfig file names,
+a matching ``--try-X`` command line options is available:
 
+ * ``--try-toolchain`` to try using the toolchain with the given name and version
+    * format: ``--try-toolchain=<name>,<version>``
+    * ``--try-toolchain-name`` to try using the latest toolchain version of a toolchain
+    * ``--try-toolchain-version`` to try using a different toolchain version
+ * ``--try-software-version`` to try building a different software version
+ * ``--try-amend`` to try tweaking a different easyconfig parameter
+    * format: ``--try-amend=<param>=<value>``
+    * only supports string and list-of-strings value types
+
+For example, to build and install WRF and its dependencies with a different toolchain version::
+
+    $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --try-toolchain-version=1.5.14 -Dr
+    == temporary log file in case of crash /tmp/easybuild-Y9WApt/easybuild-VmPiOH.log
+    Dry run: printing build status of easyconfigs and dependencies
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC/GCC-4.8.2.eb (module: GCC/4.8.2)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/h/hwloc/hwloc-1.8.1-GCC-4.8.2.eb (module: hwloc/1.8.1-GCC-4.8.2)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.5-GCC-4.8.2.eb (module: OpenMPI/1.6.5-GCC-4.8.2)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/gompi/gompi-1.5.14.eb (module: gompi/1.5.14)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenBLAS/OpenBLAS-0.2.8-gompi-1.5.14-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.8-gompi-1.5.14-LAPACK-3.5.0)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/f/FFTW/FFTW-3.3.4-gompi-1.5.14.eb (module: FFTW/3.3.4-gompi-1.5.14)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.5.14-OpenBLAS-0.2.8-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-1.5.14-OpenBLAS-0.2.8-LAPACK-3.5.0)
+     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/goolf/goolf-1.5.14.eb (module: goolf/1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/zlib-1.2.7-goolf-1.5.14.eb (module: zlib/1.2.7-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Szip-2.1-goolf-1.5.14.eb (module: Szip/2.1-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/ncurses-5.9-goolf-1.5.14.eb (module: ncurses/5.9-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/flex-2.5.37-goolf-1.5.14.eb (module: flex/2.5.37-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/M4-1.4.16-goolf-1.5.14.eb (module: M4/1.4.16-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/JasPer-1.900.1-goolf-1.5.14.eb (module: JasPer/1.900.1-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/HDF5-1.8.10-patch1-goolf-1.5.14.eb (module: HDF5/1.8.10-patch1-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/tcsh-6.18.01-goolf-1.5.14.eb (module: tcsh/6.18.01-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Bison-2.7-goolf-1.5.14.eb (module: Bison/2.7-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Doxygen-1.8.3.1-goolf-1.5.14.eb (module: Doxygen/1.8.3.1-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/netCDF-4.2.1.1-goolf-1.5.14.eb (module: netCDF/4.2.1.1-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/netCDF-Fortran-4.2-goolf-1.5.14.eb (module: netCDF-Fortran/4.2-goolf-1.5.14)
+     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/WRF-3.5.1-goolf-1.5.14-dmpar.eb (module: WRF/3.5.1-goolf-1.5.14-dmpar)
+    == temporary log file /tmp/easybuild-Y9WApt/easybuild-VmPiOH.log has been removed.
+    == temporary directory /tmp/easybuild-Y9WApt has been removed.
+
+.. note:: The ``--try-*`` command line options behave as expected when combined with ``--robot``. For example: a modified toolchain specified via ``--try-toolchain`` only trickles down until the toolchain level (not deeper). This makes for a particularly powerful combo for rebuilding entire software stacks using a different toolchain.
+
+.. note:: Modifying the software version does **note** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
 
