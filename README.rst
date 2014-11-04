@@ -1,5 +1,8 @@
+
 EasyBuild: building software with ease
 --------------------------------------
+
+.. image:: http://hpcugent.github.io/easybuild/images/easybuild_logo_small.png
 
 `EasyBuild <https://hpcugent.github.com/easybuild>`_ is a software build
 and installation framework that allows you to manage (scientific) software
@@ -8,7 +11,7 @@ on High Performance Computing (HPC) systems in an efficient way.
 Documentation
 ~~~~~~~~~~~~~
 
-Read the fine manual (RTFM!) at http://easybuild.readthedocs.org/ .
+Read the fine manual (RTFM!) at http://easybuild.readthedocs.org .
 
 Getting started
 ~~~~~~~~~~~~~~~
@@ -34,6 +37,7 @@ components (GCC, OpenMPI, etc.) by running the following commands::
   $ eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot
 
 This should install a module file for HPL which you can load to start using it::
+
   $ export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
   $ module load HPL
 
