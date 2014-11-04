@@ -1,8 +1,5 @@
 .. _using_the_easybuild_command_line:
 
-.. toctree::
-     :maxdepth: 4
-
 Using the EasyBuild command line
 ================================
 

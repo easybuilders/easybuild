@@ -103,3 +103,4 @@ Appendices
     Installing-Lmod-without-root-permissions
     Installing-environment-modules-without-root-permissions
     Useful_links
+    Changelog
