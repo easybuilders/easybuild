@@ -16,14 +16,14 @@
         <h4>EasyBuild:  building software with ease.</h4>
         <p class="view"><a href="https://github.com/hpcugent/easybuild">View the Project on GitHub <small>hpcugent/easybuild</small></a></p>
         <ul>
-         <li><a href="https://github.com/hpcugent/easybuild-framework">easybuild-<strong>framework</strong></a></li>
-         <li><a href="https://github.com/hpcugent/easybuild-easyblocks">easybuild-<strong>easyblocks</strong></a></li>
-         <li><a href="https://github.com/hpcugent/easybuild-easyconfigs">easybuild-<strong>easyconfigs</strong></a></li>
+         <li><a href="https://pypi.python.org/pypi/easybuild"><strong>EasyBuild @PyPi</strong></a></li>
+         <li><a href="http://easybuild.readthedocs.org"><strong>EasyBuild docs</strong></a></li>
+         <li><a href="https://github.com/hpcugent/easybuild"><strong>EasyBuild @GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <p><a href="https://github.com/hpcugent/easybuild">EasyBuild</a> is a software build and installation framework written in Python
-that allows you to install software in a structured, repeatable and robust way.</p>
+        <p><a href="https://github.com/hpcugent/easybuild">EasyBuild</a> is a software build and installation framework that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.</p>
+
 <body>
 
 <hr>
@@ -32,6 +32,7 @@ that allows you to install software in a structured, repeatable and robust way.<
 
 <div class=news>
 <ul>
+<li><em>20141104</em> - <a href="http://easybuild.readthedocs.org/">New documentation available online</a></li>
 <li><em>20141020</em> - <a href="http://hpcugent.github.io/easybuild/files/hust14_paper.pdf">pre-print of <strong>HUST-14 workshop paper</strong> available</a></li>
 <li><em>20141007</em> - <a href="http://pypi.python.org/pypi/easybuild"><strong>EasyBuild v1.15.2</strong> is available</a></li>
 <li><em>20140909</em> - <strong>SC'14 BoF "Getting Scientific Software Installed" accepted</strong></li>
@@ -44,152 +45,40 @@ that allows you to install software in a structured, repeatable and robust way.<
 
 <hr>
 
-<h2><a>Introduction</a></h2>
+<h2><a>Documentation</a></h2>
 
-<p>EasyBuild is motivated by the need for a tool that allows to:</p>
+Read the fine manual (RTFM!) at <a href="http://easybuild.readthedocs.org/">http://easybuild.readthedocs.org/</a>.</p>
 
-<ul>
-<li>independently install multiple versions of software side-by-side</li>
-<li>support multiple compilers and libraries for building software and
-its dependencies</li>
-<li>keep the software build configuration simple</li>
-<li>divert from the standard configure / make / make install with custom
-procedures (which is often necessary for scientific software)</li>
-<li>use <a href="http://modules.sourceforge.net/">environment modules</a> or <a href="http://sourceforge.net/projects/lmod/">Lmod</a> for dependency resolution and making the software
-available to users in a transparent way (by generating module files)</li>
-<li>keep record of the installation logs</li>
-<li>keep track of installation configuration in version control</li>
-</ul>
+<h2><a>Getting started</a></h2>
 
-<p>Some key properties of EasyBuild:</p>
-<ul>
-<li>installation configuration is done using a (very concise) .eb
-specification file</li>
-<li>custom behaviour is described in easyblocks; these are Python classes
-that can be plugged into the EasyBuild framework</li>
-<li>the generation of the module files to easily make the software
-available to users</li>
-<li>the dependencies for installation are resolved using environment
-modules and can be automatically installed using the robot feature</li>
-<li>after the installation, the specification files can be sent to a
-repository for archiving</li>
-</ul>
-<p>For a <a href="https://github.com/hpcugent/easybuild/wiki/List-of-supported-software-packages">list of supported software packages</a> and more information on EasyBuild, see the <a href="https://github.com/hpcugent/easybuild/wiki/Home">EasyBuild
-wiki</a> on GitHub.</p>
+<p>The recommended way of installing EasyBuild is via the
+<a href="http://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-procedure">documented bootstrap
+procedure</a>. You should <a href="http://easybuild.readthedocs.org/en/latest/Configuration.html">configure</a>
+EasyBuild to behave as you prefer, subsequently.</p>
 
-<p>Our <a href="http://www.dlr.de/sc/desktopdefault.aspx/tabid-8190/14011_read-35623/">PyHPC workshop</a> paper <i>"EasyBuild: Building Software With Ease"</i> that was presented at <a href="http://sc12.supercomputing.org">Supercomputing'2012</a> is available <a href="http://hpcugent.github.com/easybuild/files/easybuild-PyHPC-SC12_paper.pdf">here (PDF)</a> (<a href="http://hpcugent.github.com/easybuild/files/easybuild-PyHPC-SC12_slides.pdf">slides (PDF) here</a>).<br/>
-Other (more recent) presentations are available on our wiki, see <a href="https://github.com/hpcugent/easybuild/wiki#meetings">https://github.com/hpcugent/easybuild/wiki#meetings</a></p>
-
-<h2><a>Requirements</a></h2>
-
-<p>EasyBuild requires <a href="http://www.python.org">Python</a> 2.4 (or a more recent 2.x version) to be available,
-as well as the <a href="http://modules.sourceforge.net/">environment-modules</a> software package.</p>
-
-<p>The <a href="http://gitorious.org/git-python">GitPython</a> Python module is recommended, especially when EasyBuild is being used from a git repository.</p>
-
-<p>See the EasyBuild wiki for more information on <a href="https://github.com/hpcugent/easybuild/wiki/Dependencies">EasyBuild
-dependencies</a>.</p>
-
-<h2><a>Installation</a></h2>
-The recommended way of installing EasyBuild is via the provided bootstrap script; this will first install EasyBuild to a temporary location,
-and then install EasyBuild using EasyBuild.<br>
-
-<pre><code>wget --no-check-certificate https://raw.github.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
-export EASYBUILD_PREFIX=/tmp
-python bootstrap_eb.py $EASYBUILD_PREFIX
-export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
-module load EasyBuild
-eb --version
-</code></pre>
-
-More information about installing EasyBuild, together with alternative installation methods, is available on <a href="https://github.com/hpcugent/easybuild/wiki/Installing-EasyBuild">the EasyBuild wiki</a>.
-
-<p>
-<strong>We strongly recommend the bootstrap installation approach. If you run into troubles when trying this, please let us know!</strong>
-</p>
+<p>That is all that is needed to get started with installing (scientific) software with ease.
+Take a look at the <a href="http://easybuild.readthedocs.org/en/latest/Typical_workflow_example_with_WRF.html">
+typical workflow</a>
+example in the EasyBuild documentation that shows how to make EasyBuild build and install WRF <i>with a single
+command</i>.</p>
 
 <h2><a>Quick demo for the impatient</a></h2>
 
-<p>To see EasyBuild in action, install it and build HPL with the robot feature of
-EasyBuild, by running the following commands:</p>
+<p>After <a href="http://easybuild.readthedocs.org/en/latest/Installation.html">installing EasyBuild</a>,
+you can build and install <strong>HPL</strong> on top of a compiler toolchain that consists of open source
+components (GCC, OpenMPI, etc.) by running the following commands:</p>
 
-<pre><code>
-module load EasyBuild
-export EASYBUILD_PREFIX=/tmp
-export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
-eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot
-</code></pre>
+<pre><code>$ module load EasyBuild
+$ export EASYBUILD_PREFIX=/tmp/$USER  # example installation prefix
+$ eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot</code></pre>
 
-<p>This loads the EasyBuild module such that the 'eb' command is available, and
-subsequently builds and installs HPL, after building and installing a
-GCC-based compiler toolchain and all of its dependencies, in the prefix specified
-to EasyBuild using the $EASYBUILD_PREFIX environment variable that configures the EasyBuild behavior.
-</p>
+<p>This should install a module file for HPL which you can load to start using it.</p>
+<pre><code>$ export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
+$ module load HPL</code></pre>
 
-<p>The entire process should take about an hour on a recent system.</p>
+<p>For more information on using EasyBuild, see the
+<a href="http://easybuild.readthedocs.org/">EasyBuild documentation</a>.</p>
 
-<p>Module files will be provided in $EASYBUILD_PREFIX/modules/all, so
-to load the provided modules, update your MODULEPATH environment
-variable.</p>
-
-<p><b>Notes:</b>
-<ul>
-<li>next to Python and a modules tool (Tcl(/C) environment modules or Lmod), a C and C++ compiler are required on your system, e.g., gcc and g++</li>
-<li>you will needs a couple of GBs of free space in the specified prefix (mainly due to the GCC build)</li>
-<li>the installation ATLAS library, which is part of this demo, may fail on a virtual machine
-due to the self-tuning install mechanism it uses</li>
-</ul>
-</p>
-
-<h2><a>Quick start</a></h2>
-<p>To get started, you first need to <a href="https://github.com/hpcugent/easybuild/wiki/Configuration">configure
-EasyBuild</a>
-for use.</p>
-<p>Once this is done, using EasyBuild is as simple as creating a .eb
-specification file, and providing it to the framework:</p>
-<pre><code>eb bzip2-1.0.6.eb</code></pre>
-<p>For command line options, see</p>
-<pre><code>eb -h (or --help)</code></pre>
-
-
-<h2><a>Documentation</a></h2>
-<p>See the <a href="https://github.com/hpcugent/easybuild/wiki">EasyBuild wiki</a> for documentation on various topics.
-including a step-by-step guide to <a href="https://github.com/hpcugent/easybuild/wiki/Step-by-step-guide">getting
-started</a>
-with EasyBuild.</p>
-
-<h2><a>Sources</a></h2>
-
-<p>EasyBuild is split up into three different packages, which are available
-from the Python Package Index (PyPi):</p>
-<ul>
-<li><a href="http://pypi.python.org/pypi/easybuild-framework">easybuild-framework</a>
-- the EasyBuild framework, which includes the easybuild.framework and
-easybuild.tools Python packages that provide general support for
-building and installing software</li>
-<li><a href="http://pypi.python.org/pypi/easybuild-easyblocks">easybuild-easyblocks</a>
-- a collection of easyblocks that implement support for building and
-installing (collections of) software packages</li>
-<li><a href="http://pypi.python.org/pypi/easybuild-easyconfigs">easybuild-easyconfigs</a>
-- a collection of example easyconfig files that specify which
-software to build, and using which build options; these easyconfigs
-will be well tested with the latest compatible versions of the
-easybuild-framework and easybuild-easyblocks packages</li>
-</ul>
-
-<p>Next to these packages, a meta-package named <a href="http://pypi.python.org/pypi/easybuild">easybuild</a>
-to easily install the full EasyBuild distribution is also available on PyPi.</p>
-<p>The source code for these packages is also available on GitHub:
-<ul><li><a href="https://github.com/hpcugent/easybuild-framework">easybuild-framework
-git repository</a></li>
-<li><a href="https://github.com/hpcugent/easybuild-easyblocks">easybuild-easyblocks
-git repository</a></li>
-<li><a href="https://github.com/hpcugent/easybuild-easyconfigs">easybuild-easyconfigs
-git repository</a></li>
-</ul>
-The <a href="https://github.com/hpcugent/easybuild">main EasyBuild repository</a> mainly hosts the
-the <a href="https://github.com/hpcugent/easybuild/wiki">documentation wiki</a>.
-</p>
 
 <a name="contact"/>
 <h2><a>Contact info</a></h2>
@@ -215,8 +104,9 @@ pointers to the available commands.</p>
 <a href="http://twitter.com/easy_build">&#64;easy_build</a>.</p>
 
 <h2><a>Disclaimer</a></h2>
-<p>EasyBuild is intended for use on Linux-based systems (RedHat-based, Debian, SuSE, ...).
-Limited support for other Unix-based operating systems (e.g. OS X) is also available.</p>
+<p>EasyBuild has mostly been used and tested on x86_64-based Linux systems (RedHat-based, Debian, SuSE, ...),
+but can be easily extended for other platforms.
+Limited provisions for other Unix-based operating systems (e.g., Mac OS X) are also available.</p>
 
 <h2><a>License</a></h2>
 
