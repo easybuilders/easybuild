@@ -54,8 +54,11 @@ Then, we can actually load the freshly installed HPL module::
   $ which xhpl
   /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/bin/xhpl
  
-All easyconfig file names' suffixes are ``.eb`` and follow format ``<name>-<version>-<toolchain>-<versionsuffix>``;
-this is a crucial design aspect, since the dependency resolution mechanism (see :ref:`use_robot`) relies upon this convention.
+All easyconfig file names' suffixes are ``.eb`` and follow format::
+
+   ``<name>-<version>-<toolchain>-<versionsuffix>``
+
+This is a crucial design aspect, since the dependency resolution mechanism (see :ref:`use_robot`) relies upon this convention.
  
 .. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
   in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
@@ -216,7 +219,7 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
-   (cfr. Get an overview of planned installations ``--dry-run`` / ``-D`` :ref:`get_an_overview`)
+   (cfr. :ref:`get_an_overview`)
 
 .. _searching_for_easyconfigs:
 
