@@ -1,3 +1,4 @@
+.. _what_is_easybuild:
 
 What is EasyBuild?
 ------------------

@@ -47,18 +47,6 @@ Basic usage topics
     Writing_easyconfig_files
     Logfiles
 
-.. toctree::
-    :hidden:
-    :glob:
-    :maxdepth: 1
-
-    Installation_Alternative
-    Configuration_Legacy
-    eb_*
-    Installing-Lmod-without-root-permissions
-    Installing-environment-modules-without-root-permissions
-    Useful_links
-
 Getting help
 ============
 
@@ -94,12 +82,24 @@ As of version EasyBuild version |version|:
 * The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
 * The list of available (generic) easyconfig parameters is visble at :ref:`easyconfigs_parameters`
 
-Reference Pages
-===============
+Appendices
+==========
 
 .. toctree::
     :maxdepth: 1
 
+* :ref:`Changelog <changelog>`
 * :ref:`Search <search>`
 * :ref:`Useful Links <useful_links>`
 
+.. toctree::
+    :hidden:
+    :glob:
+    :maxdepth: 1
+
+    Installation_Alternative
+    Configuration_Legacy
+    eb_*
+    Installing-Lmod-without-root-permissions
+    Installing-environment-modules-without-root-permissions
+    Useful_links
