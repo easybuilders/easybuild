@@ -43,7 +43,7 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '1.15.2'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '0.7.1'  # this is meant to reference the version of the documentation itself
+release = '0.7.2'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -133,9 +133,11 @@ html_sidebars = {
 
 # If false, no module index is generated.
 #html_use_modindex = True
+html_use_modindex = False
 
 # If false, no index is generated.
 #html_use_index = True
+html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
