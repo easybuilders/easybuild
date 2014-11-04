@@ -3,6 +3,7 @@ EasyBuild: building software with ease
 --------------------------------------
 
 .. image:: http://hpcugent.github.io/easybuild/images/easybuild_logo_small.png
+   :align: center
 
 `EasyBuild <https://hpcugent.github.com/easybuild>`_ is a software build
 and installation framework that allows you to manage (scientific) software
