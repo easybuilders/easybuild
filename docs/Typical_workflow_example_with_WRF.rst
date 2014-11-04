@@ -1,3 +1,4 @@
+.. _typical_workflow:
 
 Typical workflow example: building and installing WRF
 =====================================================

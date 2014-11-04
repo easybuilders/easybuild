@@ -1,4 +1,4 @@
-
+.. _understanding_easyBuild_logs:
 
 Understanding EasyBuild logs
 =============================

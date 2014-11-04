@@ -1,3 +1,4 @@
+.. _writing_easyconfig_files:
 
 Writing easyconfig files: the basics
 ====================================

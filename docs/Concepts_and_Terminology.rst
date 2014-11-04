@@ -1,3 +1,5 @@
+.. _concepts_and_terminology:
+
 .. toctree::
      :maxdepth: 1
 
