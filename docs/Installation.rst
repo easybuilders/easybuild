@@ -1,8 +1,5 @@
 .. _installation:
 
-.. toctree::
-     :maxdepth: 1
-
 Installing EasyBuild
 ====================
 
