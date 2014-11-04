@@ -1,8 +1,8 @@
 
 .. _basic_usage_help:
 
-Basic Usage, ``--help``
-=======================
+Getting help, ``--help``
+========================
 
 EasyBuild supports a range options, which are easy to discover with ``--help``;
 Here is an example output, as it has with version |version|:
