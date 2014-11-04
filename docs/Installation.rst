@@ -12,19 +12,6 @@ for Python packages, we recommend using the **bootstrap** install procedure desc
 
 Notes on other ways of installing EasyBuild are available under section :ref:`alt_inst_methods`.
 
--  `Bootstrapping EasyBuild`_
-
-  -  `Bootstrapping procedure`_
-  -  `Sanity check`_
-  -  `Running unit tests`_
-  -  `Example bootstrap run`_
-
--  `Dependencies`_
-
--  `In case of installation issues...`_
-
-  -  `How to collect info in case sanity checks fail or there is another issue`_
-
 --------------
 
 
@@ -280,6 +267,34 @@ Optional Python modules
    only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
 -  `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
    only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``.
+
+Sources
+-------
+
+EasyBuild is split up into three different packages, which are available
+from the Python Package Index (PyPi):
+
+* `easybuild-framework <http://pypi.python.org/pypi/easybuild-framework>`_ - the EasyBuild framework, which includes the
+   easybuild.framework and easybuild.tools Python packages that provide
+   general support for building and installing software
+* `easybuild-easyblocks <http://pypi.python.org/pypi/easybuild-easyblocks>`_ - a collection of easyblocks that implement
+   support for building and installing (collections of) software
+   packages
+* `easybuild-easyconfigs <http://pypi.python.org/pypi/easybuild-easyconfigs>`_ - a collection of example easyconfig files
+   that specify which software to build, and using which build options;
+   these easyconfigs will be well tested with the latest compatible
+   versions of the easybuild-framework and easybuild-easyblocks packages
+
+Next to these packages, a meta-package named `easybuild <http://pypi.python.org/pypi/easybuild>`_ is also
+available on PyPi, in order to easily install the full EasyBuild
+distribution.
+
+The source code for these packages is also available on GitHub:
+
+* `easybuild-framework git repository <https://github.com/hpcugent/easybuild-framework>`_
+* `easybuild-easyblocks git repository <https://github.com/hpcugent/easybuild-easyblocks>`_
+* `easybuild-easyconfigs git repository <https://github.com/hpcugent/easybuild-easyconfigs>`_
+* the `main EasyBuild repository <https://github.com/hpcugent/easybuild>`_ mainly hosts `this` EasyBuild documentation
 
 
 In case of installation issues...

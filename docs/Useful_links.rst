@@ -9,8 +9,8 @@ Tools used to convert from other wiki formats and prepare .rst when in pre-produ
 * http://johnmacfarlane.net/pandoc/try/?text=%0A&from=markdown_github&to=rst
 * http://rst.ninjs.org
 
-Reference documents online
-==========================
+Sphinx and Read the Docs reference documents online
+===================================================
 
 * https://github.com/rtfd/readthedocs.org
 * http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
