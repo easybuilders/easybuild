@@ -243,7 +243,7 @@ easyconfig file is done in the following order of preference:
 * ``<sourcepath>``: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
-files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the PYTHONPATH.
+files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the $PYTHONPATH.
 
 .. _buildpath:
 
