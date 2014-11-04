@@ -9,6 +9,16 @@ EasyBuild: building software with ease
 and installation framework that allows you to manage (scientific) software
 on High Performance Computing (HPC) systems in an efficient way.
 
+Sources
+~~~~~~~
+
+The EasyBuild sources are spread across different GitHub repositories:
+
+* the `easybuild <https://https://github.com/hpcugent/easybuild>`_ repository hosts the documentation and the `easybuild` Python metapackage
+* the `easybuild-framework <https://https://github.com/hpcugent/easybuild-framework>`_ repository hosts the source code of the EasyBuild `framework`
+* the `easybuild-easyblocks <https://https://github.com/hpcugent/easybuild-easyblocks>`_ repository hosts `easyblocks`, i.e. implementations of install procedures
+* the `easybuild-easyconfigs <https://https://github.com/hpcugent/easybuild-easyconfigs>`_ repository hosts `easyconfigs`, i.e. EasyBuild specification files
+
 Documentation
 ~~~~~~~~~~~~~
 
