@@ -1,7 +1,4 @@
 
-EasyBuild: building software with ease
---------------------------------------
-
 .. image:: http://hpcugent.github.io/easybuild/images/easybuild_logo_small.png
    :align: center
 
@@ -14,10 +11,17 @@ Sources
 
 The EasyBuild sources are spread across different GitHub repositories:
 
-* the `easybuild <https://https://github.com/hpcugent/easybuild>`_ repository hosts the documentation and the `easybuild` Python metapackage
-* the `easybuild-framework <https://https://github.com/hpcugent/easybuild-framework>`_ repository hosts the source code of the EasyBuild `framework`
-* the `easybuild-easyblocks <https://https://github.com/hpcugent/easybuild-easyblocks>`_ repository hosts `easyblocks`, i.e. implementations of install procedures
-* the `easybuild-easyconfigs <https://https://github.com/hpcugent/easybuild-easyconfigs>`_ repository hosts `easyconfigs`, i.e. EasyBuild specification files
+* the `main easybuild repository <https://https://github.com/hpcugent/easybuild>`_ hosts the documentation and the `easybuild` Python metapackage
+* the `easybuild-framework repository <https://https://github.com/hpcugent/easybuild-framework>`_ hosts the source code of the EasyBuild `framework`
+* the `easybuild-easyblocks repository <https://https://github.com/hpcugent/easybuild-easyblocks>`_ hosts `easyblocks`, i.e. implementations of install procedures
+* the `easybuild-easyconfigs repository <https://https://github.com/hpcugent/easybuild-easyconfigs>`_ hosts `easyconfigs`, i.e. EasyBuild specification files
+
+Corresponding Python packages are available via PyPi:
+
+* https://pypi.python.org/pypi/easybuild
+* https://pypi.python.org/pypi/easybuild-framework
+* https://pypi.python.org/pypi/easybuild-easyblocks
+* https://pypi.python.org/pypi/easybuild-easyconfigs
 
 Documentation
 ~~~~~~~~~~~~~
