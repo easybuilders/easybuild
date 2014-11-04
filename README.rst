@@ -38,8 +38,8 @@ Requirements
 ~~~~~~~~~~~~
 
 EasyBuild requires Python 2.4 (or a more recent 2.x version) to be
-available, as well as the `environment
-modules <http://modules.sourceforge.net/>`_ tool.
+available, as well as the `environment modules <http://modules.sourceforge.net/>`_ tool
+or `Lmod <http://sourceforge.net/projects/lmod/>`_ or any other compatible implementation.
 
 The `GitPython <http://gitorious.org/git-python>`_ Python module is
 recommended, especially when EasyBuild is being used from a git
@@ -83,12 +83,6 @@ Installation
 ~~~~~~~~~~~~
 
 Installing EasyBuild is really easy: just run 
-
-::
-
-    easy_install --user easybuild
-
-or
 
 ::
 

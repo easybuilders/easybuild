@@ -1,0 +1,299 @@
+
+::
+
+ $ eb --help
+
+ Usage: eb [options] easyconfig [...]
+
+ Builds software based on easyconfig (or parse a directory). Provide one or
+ more easyconfigs or directories, use -H or --help more information.
+
+ Options:
+  --version             show program's version number and exit
+  -h, --shorthelp       show short help message and exit
+  -H, --help            show full help message and exit
+  --confighelp          show help as annotated configfile
+
+  Debug and logging options (configfile section MAIN):
+    -d, --debug         Enable debug log mode (def False)
+    --info              Enable info log mode (def False)
+    --quiet             Enable quiet/warning log mode (def False)
+
+  Configfile options:
+    --configfiles=CONFIGFILES
+                        Parse (additional) configfiles (type comma-separated
+                        list; def /Users/test/.easybuild/config.cfg)
+    --ignoreconfigfiles=IGNORECONFIGFILES
+                        Ignore configfiles (type comma-separated list)
+
+  Basic options:
+    Basic runtime options for EasyBuild. (configfile section basic)
+
+    --dry-run           Print build overview incl. dependencies (full paths)
+                        (def False)
+    -D, --dry-run-short
+                        Print build overview incl. dependencies (short paths)
+                        (def False)
+    -f, --force         Force to rebuild software even if it's already
+                        installed (i.e. if it can be found as module) (def
+                        False)
+    --job               Submit the build as a job (def False)
+    -l, --logtostdout   Redirect main log to stdout (def False)
+    -b BLOCKS, --only-blocks=BLOCKS
+                        Only build listed blocks (type comma-separated list)
+    -r PATH, --robot=PATH
+                        Path(s) to search for easyconfigs for missing
+                        dependencies (colon-separated) (def /Users/test/.local
+                        /easybuild/software/EasyBuild/1.15.2/lib/python2.7
+                        /site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.eg
+                        g/easybuild/easyconfigs)
+    -k, --skip          Skip existing software (useful for installing
+                        additional packages) (def False)
+    -s STOP, --stop=STOP
+                        Stop the installation after certain step (type choice;
+                        def source) (choices: fetch, ready, source, patch,
+                        prepare, configure, build, test, install, extensions,
+                        package, postproc, sanitycheck, cleanup, module,
+                        testcases)
+    --strict=STRICT     Set strictness level (type choice; def warn) (choices:
+                        ignore, warn, error)
+
+  Configuration options:
+    Configure EasyBuild behavior. (configfile section config)
+
+    --avail-module-naming-schemes
+                        Show all supported module naming schemes (def False)
+    --avail-modules-tools
+                        Show all supported module tools (def False)
+    --avail-repositories
+                        Show all repository types (incl. non-usable) (def
+                        False)
+    --buildpath=BUILDPATH
+                        Temporary build path (def
+                        /Users/test/.local/easybuild/build)
+    -C CONFIG, --config=CONFIG
+                        Path to EasyBuild config file (def /Users/test/.local/
+                        easybuild/software/EasyBuild/1.15.2/lib/python2.7
+                        /site-packages/easybuild_framework-1.15.2-py2.7.egg/ea
+                        sybuild/easybuild_config.py)
+    --ignore-dirs=IGNORE-DIRS
+                        Directory names to ignore when searching for
+                        files/dirs (type comma-separated list; def .git,.svn)
+    --installpath=INSTALLPATH
+                        Install path for software and modules (def
+                        /Users/test/.local/easybuild)
+    --logfile-format=DIR,FORMAT
+                        Directory name and format of the log file (type comma-
+                        separated list; def easybuild,easybuild-%(name)s-%(ver
+                        sion)s-%(date)s.%(time)s.log)
+    --module-naming-scheme=MODULE-NAMING-SCHEME
+                        Module naming scheme (type choice; def EasyBuildMNS)
+                        (choices: EasyBuildMNS, HierarchicalMNS)
+    --moduleclasses=MODULECLASSES
+                        Extend supported module classes (For more info on the
+                        default classes, use --show-default-moduleclasses)
+                        (type comma-separated list; def base,bio,cae,chem,comp
+                        iler,data,debugger,devel,geo,ide,lang,lib,math,mpi,num
+                        lib,perf,phys,system,toolchain,tools,vis)
+    --modules-footer=PATH
+                        Path to file containing footer to be added to all
+                        generated module files
+    --modules-tool=MODULES-TOOL
+                        Modules tool to use (type choice; def
+                        EnvironmentModulesC) (choices: EnvironmentModulesC,
+                        EnvironmentModulesTcl, Lmod)
+    --prefix=PREFIX     Change prefix for buildpath, installpath, sourcepath
+                        and repositorypath (used prefix for defaults
+                        /Users/test/.local/easybuild)
+    --recursive-module-unload
+                        Enable generating of modules that unload recursively.
+                        (def False)
+    --repository=REPOSITORY
+                        Repository type, using repositorypath (type choice;
+                        def FileRepository) (choices: FileRepository)
+    --repositorypath=REPOSITORYPATH
+                        Repository path, used by repository (is passed as list
+                        of arguments to create the repository instance). For
+                        more info, use --avail-repositories. (type comma-
+                        separated list; def
+                        /Users/test/.local/easybuild/ebfiles_repo)
+    --show-default-moduleclasses
+                        Show default module classes with description (def
+                        False)
+    --sourcepath=SOURCEPATH
+                        Path(s) to where sources should be downloaded (string,
+                        colon-separated) (def
+                        /Users/test/.local/easybuild/sources)
+    --subdir-modules=SUBDIR-MODULES
+                        Installpath subdir for modules (def modules)
+    --subdir-software=SUBDIR-SOFTWARE
+                        Installpath subdir for software (def software)
+    --suffix-modules-path=SUFFIX-MODULES-PATH
+                        Suffix for module files install path (def all)
+    --testoutput=TESTOUTPUT
+                        Path to where a job should place the output (to be set
+                        within jobscript)
+    --tmp-logdir=TMP-LOGDIR
+                        Log directory where temporary log files are stored
+                        (def /tmp)
+    --tmpdir=TMPDIR     Directory to use for temporary storage
+
+  Informative options:
+    Obtain information about EasyBuild. (configfile section informative)
+
+    --avail-easyconfig-constants
+                        Show all constants that can be used in easyconfigs
+                        (def False)
+    --avail-easyconfig-licenses
+                        Show all license constants that can be used in
+                        easyconfigs (def False)
+    -a, --avail-easyconfig-params
+                        Show all easyconfig parameters (include easyblock-
+                        specific ones by using -e) (def False)
+    --avail-easyconfig-templates
+                        Show all template names and template constants that
+                        can be used in easyconfigs (def False)
+    --dep-graph=depgraph.<ext>
+                        Create dependency graph
+    --list-easyblocks=LIST-EASYBLOCKS
+                        Show list of available easyblocks (type choice; def
+                        simple) (choices: simple, detailed)
+    --list-toolchains   Show list of known toolchains (def False)
+    --search=STR        Search for easyconfig files in the robot directory,
+                        print full paths
+    -S STR, --search-short=STR
+                        Search for easyconfig files in the robot directory,
+                        print short paths
+
+  Override options:
+    Override default EasyBuild behavior. (configfile section override)
+
+    --allow-modules-tool-mismatch
+                        Allow mismatch of modules tool and definition of
+                        'module' function (def False)
+    --cleanup-builddir  Cleanup build dir after successful installation. (def
+                        True)
+    --deprecated=DEPRECATED
+                        Run pretending to be (future) version, to test removal
+                        of deprecated code.
+    -e CLASS, --easyblock=CLASS
+                        easyblock to use for processing the spec file or
+                        dumping the options
+    --experimental      Allow experimental code (with behaviour that can be
+                        changed or removed at any given time). (def False)
+    --filter-deps=FILTER-DEPS
+                        Comma separated list of dependencies that you DON'T
+                        want to install with EasyBuild, because equivalent OS
+                        packages are installed. (e.g. --filter-
+                        deps=zlib,ncurses) (type comma-separated list)
+    --group=GROUP       Group to be used for software installations (only
+                        verified, not set)
+    --hidden            Install 'hidden' module file(s) by prefixing their
+                        name with '.' (def False)
+    --ignore-osdeps     Ignore any listed OS dependencies (def False)
+    --oldstyleconfig    Look for and use the oldstyle configuration file. (def
+                        True)
+    --optarch=OPTARCH   Set architecture optimization, overriding native
+                        architecture optimizations
+    -p, --pretend       Does the build/installation in a test directory
+                        located in $HOME/easybuildinstall (def False)
+    --set-gid-bit       Set group ID bit on newly created directories (def
+                        False)
+    -t, --skip-test-cases
+                        Skip running test cases (def False)
+    --sticky-bit        Set sticky bit on newly created directories (def
+                        False)
+    --umask=UMASK       umask to use (e.g. '022'); non-user write permissions
+                        on install directories are removed
+
+  Regression test options:
+    Run and control an EasyBuild regression test. (configfile section
+    regtest)
+
+    --aggregate-regtest=DIR
+                        Collect all the xmls inside the given directory and
+                        generate a single file
+    --dump-test-report=DUMP-TEST-REPORT
+                        Dump test report to specified path (def
+                        test_report.md)
+    --github-user=GITHUB-USER
+                        GitHub username
+    --regtest           Enable regression test mode (def False)
+    --regtest-output-dir=DIR
+                        Set output directory for test-run
+    --sequential        Specify this option if you want to prevent parallel
+                        build (def False)
+    --test-report-env-filter=TEST-REPORT-ENV-FILTER
+                        Regex used to filter out variables in environment dump
+                        of test report
+    --upload-test-report
+                        Upload full test report as a gist on GitHub
+
+  Software search and build options:
+    Specify software search and build options: EasyBuild will search for a
+    matching easyconfig and build it. When called with the try prefix
+    (i.e. --try-X ), EasyBuild will search for a matching easyconfig and
+    if none are found, try to generate one based on a close matching one
+    (NOTE: --try-X is best effort, it might produce wrong builds!)
+    (configfile section software)
+
+    --amend=VAR=VALUE[,VALUE]
+                        Specify additional search and build parameters (can be
+                        used multiple times); for example: versionprefix=foo
+                        or patches=one.patch,two.patch)
+    --from-pr=PR#       Obtain easyconfigs from specified PR (type <type
+                        'int'>)
+    --software=NAME,VERSION
+                        Search and build software with given name and version
+                        (type comma-separated list)
+    --software-name=NAME
+                        Search and build software with given name
+    --software-version=VERSION
+                        Search and build software with given version
+    --toolchain=NAME,VERSION
+                        Search and build with given toolchain (name and
+                        version) (type comma-separated list)
+    --toolchain-name=NAME
+                        Search and build with given toolchain name
+    --toolchain-version=VERSION
+                        Search and build with given toolchain version
+    --try-amend=VAR=VALUE[,VALUE]
+                        Try to specify additional search and build parameters
+                        (can be used multiple times); for example:
+                        versionprefix=foo or patches=one.patch,two.patch) (USE
+                        WITH CARE!)
+    --try-software=NAME,VERSION
+                        Try to search and build software with given name and
+                        version (USE WITH CARE!) (type comma-separated list)
+    --try-software-name=NAME
+                        Try to search and build software with given name (USE
+                        WITH CARE!)
+    --try-software-version=VERSION
+                        Try to search and build software with given version
+                        (USE WITH CARE!)
+    --try-toolchain=NAME,VERSION
+                        Try to search and build with given toolchain (name and
+                        version) (USE WITH CARE!) (type comma-separated list)
+    --try-toolchain-name=NAME
+                        Try to search and build with given toolchain name (USE
+                        WITH CARE!)
+    --try-toolchain-version=VERSION
+                        Try to search and build with given toolchain version
+                        (USE WITH CARE!)
+
+  Unittest options:
+    Options dedicated to unittesting (experts only). (configfile section
+    unittest)
+
+    --unittest-file=FILE
+                        Log to this file in unittest mode
+
+ Boolean options support disable prefix to do the inverse of the action, e.g.
+ option --someopt also supports --disable-someopt.
+
+ All long option names can be passed as environment variables. Variable name is
+ EASYBUILD_<LONGNAME> eg. --some-opt is same as setting EASYBUILD_SOME_OPT in
+ the environment.
+
+
+

@@ -1,0 +1,204 @@
+
+::
+
+  $ eb --list-easyblocks
+
+  EasyBlock
+  |-- Binary
+  |   |-- EB_ABAQUS
+  |   |-- EB_Allinea
+  |   |-- EB_CPLEX
+  |   |-- EB_CUDA
+  |   |-- EB_EPD
+  |   |-- PackedBinary
+  |   |   |-- EB_Java
+  |   |   |-- EB_Tornado
+  |   |-- EB_Mathematica
+  |   |-- Rpm
+  |   |   |-- EB_QLogicMPI
+  |   |-- JAR
+  |-- EB_ACML
+  |-- EB_ALADIN
+  |-- EB_ANSYS
+  |-- EB_ant
+  |-- ConfigureMake
+  |   |-- EB_ARB
+  |   |-- CMakeMake
+  |   |   |-- EB_Armadillo
+  |   |   |-- EB_BamTools
+  |   |   |-- EB_CGAL
+  |   |   |-- EB_Clang
+  |   |   |-- CMakePythonPackage
+  |   |   |   |-- EB_DOLFIN
+  |   |   |   |-- EB_UFC
+  |   |   |-- EB_Geant4
+  |   |   |-- EB_GROMACS
+  |   |   |-- EB_netCDF
+  |   |   |-- EB_OpenBabel
+  |   |   |-- EB_Trilinos
+  |   |-- EB_ATLAS
+  |   |-- MakeCp
+  |   |   |-- EB_BamTools
+  |   |   |-- EB_BLAT
+  |   |   |-- EB_NAMD
+  |   |   |-- CmdCp
+  |   |-- EB_R
+  |   |-- EB_BLACS
+  |   |-- EB_Bowtie
+  |   |-- EB_Bowtie2
+  |   |-- EB_BWA
+  |   |-- EB_bzip2
+  |   |-- EB_CBLAS
+  |   |-- EB_Chapel
+  |   |-- EB_Cufflinks
+  |   |-- EB_DB
+  |   |-- EB_DL_underscore_POLY_underscore_Classic
+  |   |-- EB_Python
+  |   |-- EB_Doxygen
+  |   |-- EB_ESMF
+  |   |-- EB_ESPResSo
+  |   |-- EB_Ferret
+  |   |-- EB_flex
+  |   |-- EB_freetype
+  |   |-- EB_g2clib
+  |   |-- EB_g2lib
+  |   |-- EB_GCC
+  |   |-- EB_GHC
+  |   |-- EB_Go
+  |   |-- EB_HDF5
+  |   |-- EB_HPCG
+  |   |-- EB_HPL
+  |   |-- EB_Hypre
+  |   |-- EB_LAPACK
+  |   |-- EB_libint2
+  |   |-- EB_libxml2
+  |   |-- EB_MetaVelvet
+  |   |-- EB_METIS
+  |   |-- EB_Mothur
+  |   |-- EB_MrBayes
+  |   |-- EB_Perl
+  |   |-- EB_MUMmer
+  |   |-- EB_MUMPS
+  |   |-- EB_MVAPICH2
+  |   |-- EB_ncurses
+  |   |-- EB_netCDF_minus_Fortran
+  |   |-- EB_NEURON
+  |   |-- EB_NWChem
+  |   |-- EB_OpenSSL
+  |   |-- EB_Pasha
+  |   |-- EB_PETSc
+  |   |-- EB_Primer3
+  |   |-- EB_PSI
+  |   |-- EB_Qt
+  |   |-- EB_QuantumESPRESSO
+  |   |-- EB_ROOT
+  |   |-- EB_SAMtools
+  |   |-- EB_ScaLAPACK
+  |   |-- EB_Scalasca1
+  |   |-- EB_Score_minus_P
+  |   |-- EB_SHRiMP
+  |   |-- EB_SLEPc
+  |   |-- EB_SOAPdenovo
+  |   |-- EB_SuiteSparse
+  |   |-- EB_SWIG
+  |   |-- EB_Velvet
+  |   |-- EB_XCrySDen
+  |   |-- PerlModule
+  |-- ExtensionEasyBlock
+  |   |-- RPackage
+  |   |   |-- EB_Bioconductor
+  |   |   |-- EB_Rmpi
+  |   |   |-- EB_Rserve
+  |   |   |-- EB_XML
+  |   |-- PythonPackage
+  |   |   |-- CMakePythonPackage
+  |   |   |   |-- EB_DOLFIN
+  |   |   |   |-- EB_UFC
+  |   |   |-- EB_EasyBuildMeta
+  |   |   |-- EB_libxml2
+  |   |   |-- EB_netcdf4_minus_python
+  |   |   |-- EB_nose
+  |   |   |-- FortranPythonPackage
+  |   |   |   |-- EB_numpy
+  |   |   |   |-- EB_scipy
+  |   |   |-- EB_PyQuante
+  |   |   |-- EB_python_minus_meep
+  |   |   |-- EB_PyZMQ
+  |   |   |-- EB_VSC_minus_tools
+  |   |   |-- VersionIndependentPythonPackage
+  |   |   |   |-- VersionIndependendPythonPackage
+  |   |   |   |   |-- VSCPythonPackage
+  |   |-- PerlModule
+  |-- EB_BiSearch
+  |-- EB_Boost
+  |-- EB_CHARMM
+  |-- EB_CP2K
+  |-- EB_Eigen
+  |-- EB_FDTD_underscore_Solutions
+  |-- EB_FLUENT
+  |-- Tarball
+  |   |-- EB_FoldX
+  |   |-- EB_FreeSurfer
+  |   |-- EB_MTL4
+  |   |-- BinariesTarball
+  |-- EB_FSL
+  |-- EB_GenomeAnalysisTK
+  |-- IntelBase
+  |   |-- EB_icc
+  |   |   |-- EB_ifort
+  |   |-- EB_ifort
+  |   |-- EB_imkl
+  |   |-- EB_impi
+  |   |-- EB_Inspector
+  |   |-- EB_ipp
+  |   |-- EB_itac
+  |   |-- EB_tbb
+  |   |-- EB_VTune
+  |-- PackedBinary
+  |   |-- EB_Java
+  |   |-- EB_Tornado
+  |-- EB_libsmm
+  |-- EB_Maple
+  |-- EB_MATLAB
+  |-- EB_Modeller
+  |-- EB_NCL
+  |-- EB_OpenFOAM
+  |-- EB_OpenIFS
+  |-- EB_ParMETIS
+  |-- EB_picard
+  |-- EB_Rosetta
+  |-- EB_SCOTCH
+  |-- EB_TotalView
+  |-- EB_Trinity
+  |-- EB_WIEN2k
+  |-- EB_WPS
+  |-- EB_WRF
+  |-- Toolchain
+  
+  Extension
+  |-- ExtensionEasyBlock
+  |   |-- RPackage
+  |   |   |-- EB_Bioconductor
+  |   |   |-- EB_Rmpi
+  |   |   |-- EB_Rserve
+  |   |   |-- EB_XML
+  |   |-- PythonPackage
+  |   |   |-- CMakePythonPackage
+  |   |   |   |-- EB_DOLFIN
+  |   |   |   |-- EB_UFC
+  |   |   |-- EB_EasyBuildMeta
+  |   |   |-- EB_libxml2
+  |   |   |-- EB_netcdf4_minus_python
+  |   |   |-- EB_nose
+  |   |   |-- FortranPythonPackage
+  |   |   |   |-- EB_numpy
+  |   |   |   |-- EB_scipy
+  |   |   |-- EB_PyQuante
+  |   |   |-- EB_python_minus_meep
+  |   |   |-- EB_PyZMQ
+  |   |   |-- EB_VSC_minus_tools
+  |   |   |-- VersionIndependentPythonPackage
+  |   |   |   |-- VersionIndependendPythonPackage
+  |   |   |   |   |-- VSCPythonPackage
+  |   |-- PerlModule
+  
