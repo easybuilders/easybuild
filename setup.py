@@ -1,6 +1,5 @@
 ##
-# Copyright 2012 Ghent University
-# Copyright 2012 Kenneth Hoste
+# Copyright 2012-2014 Ghent University
 #
 # This file is part of EasyBuild,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -36,7 +35,7 @@ from distutils import log
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = "1.2.0"
+VERSION = "1.15.2"
 
 # Utility function to read README file
 def read(fname):
@@ -59,25 +58,26 @@ setup(
     version = str(VERSION),
     author = "EasyBuild community",
     author_email = "easybuild@lists.ugent.be",
-    description = """EasyBuild is a software installation framework in Python that allows you to \
-install software in a structured and robust way. """,
+    description = """EasyBuild is a software build
+and installation framework that allows you to manage (scientific) software
+on High Performance Computing (HPC) systems in an efficient way.""",
     license = "GPLv2",
     keywords = "software build building installation installing compilation HPC scientific",
     url = "http://hpcugent.github.com/easybuild",
     long_description = read("README.rst"),
     classifiers = [
-                   "Development Status :: 5 - Production/Stable",
-                   "Environment :: Console",
-                   "Intended Audience :: System Administrators",
-                   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-                   "Operating System :: POSIX :: Linux",
-                   "Programming Language :: Python :: 2.4",
-                   "Topic :: Software Development :: Build Tools",
-                  ],
+        "Development Status :: 5 - Production/Stable",
+        "Environment :: Console",
+        "Intended Audience :: System Administrators",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python :: 2.4",
+        "Topic :: Software Development :: Build Tools",
+    ],
     platforms = "Linux",
     install_requires = [
-                        "easybuild-easyconfigs == 1.2.0.0",
-                        "easybuild-easyblocks == 1.2.0",
-                        "easybuild-framework == 1.2.0",  # order matters here, framework should be after easyblocks!
-                       ]
+        "easybuild-easyconfigs == 1.15.2.0",
+        "easybuild-easyblocks == 1.15.2",
+        "easybuild-framework == 1.15.2",  # order matters here, framework should be after easyblocks!
+    ]
 )
