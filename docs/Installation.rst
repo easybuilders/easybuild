@@ -67,10 +67,10 @@ to one of the alternative approaches documented at :ref:`alt_inst_methods`
 Sanity check
 ~~~~~~~~~~~~
 
-Set your ``$MODULEPATH`` correctly if needed, and load the EasyBuild
+Set your module search path correctly and load the EasyBuild
 module with the specific version (see output of bootstrap script for more details)::
 
-    export MODULEPATH=$HOME/.local/easybuild/modules/all:$MODULEPATH
+    module use $HOME/.local/easybuild/modules/all
     module load EasyBuild
 
 Determine the version of the loaded EasyBuild, which should match the expected module::
@@ -177,7 +177,7 @@ Example output for bootstrapping EasyBuild v1.15.2::
 
 After the bootstrap completes, the installed ``EasyBuild`` module can be loaded::
   
-  $ export MODULEPATH=$HOME/.local/easybuild/modules/all
+  $ module use $HOME/.local/easybuild/modules/all
   $ module av
   ------------------------- /home/example/.local/easybuild/modules/all --------------------------
   EasyBuild/1.15.2

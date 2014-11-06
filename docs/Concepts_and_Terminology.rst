@@ -80,7 +80,7 @@ the generic ``ConfigureMake`` easyblock, which implements the common ``configure
 
 The most recent release of EasyBuild (version |version|) includes 139 software-specific easyblocks and 20 generic
 easyblocks (see also :ref:`basic_usage_easyblocks`), providing support for automatically installing a wide range
-of software packages. Examples range from fairly easy-to-build programs like gzip, over basic tools
+of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
 like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
 to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
 `CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`.
@@ -95,6 +95,7 @@ which are a major concept in handling the build and installation processes.
 A typical toolchain consists of one or more compilers, usually put together with some libraries for specific functionality,
 e.g., for using an MPI stack for distributed computing, or which provide optimized routines for commonly
 used math operations, e.g., the well-known BLAS/LAPACK APIs for linear algebra routines.
+
 For each software package being built, the toolchain to be used must be specified in some way.
 
 The EasyBuild framework prepares the `build environment` for the different toolchain components,
@@ -117,7 +118,7 @@ Easyconfig files
 ----------------
 
 The specification files that are supplied to EasyBuild are referred to as **easyconfig files**
-(or simply `easyconfigs`), which are basically plain text files containing (mostly) only
+(or simply `easyconfigs`), which are basically plain text files containing (mostly)
 key-value assignments for build parameters supported by the framework, also referred
 to as **easyconfig parameters** (see :doc:`Writing_easyconfig_files` for more information).
 
