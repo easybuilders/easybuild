@@ -48,6 +48,8 @@ For the remainder of this example, we will use the available ``WRF-3.5.1-goolf-1
 easyconfig file to specify to EasyBuild to build and install
 WRF v3.5.1 using version 1.4.10 of the ``goolf`` toolchain.
 
+See :ref:`list_toolchains` for a list of available toolchains. The ``goolf`` toolchain stands
+for stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW``.
 
 Getting an overview of planned installations
 --------------------------------------------

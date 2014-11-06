@@ -151,6 +151,8 @@ You can query which EasyBuild version you are using with ``--version``::
 .. tip:: Asking EasyBuild to print own its version is a quick way to ensure that ``$PYTHONPATH``
   is set up correctly, so that the entire EasyBuild installation (framework and easyblocks) is available.
 
+.. _list_toolchains:
+
 List of known toolchains, ``--list-toolchains``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
