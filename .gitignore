@@ -1,0 +1,8 @@
+.pydevproject
+.project
+LICENSE_HEADER
+*.pyc
+*.nja
+build/
+dist/
+*egg-info/
