@@ -67,7 +67,7 @@ to one of the alternative approaches documented at :ref:`alt_inst_methods`
 Sanity check
 ~~~~~~~~~~~~
 
-Set your module path correctly and load the EasyBuild
+Set your module search path correctly and load the EasyBuild
 module with the specific version (see output of bootstrap script for more details)::
 
     module use $HOME/.local/easybuild/modules/all
