@@ -9,10 +9,10 @@ The code style we follow in the EasyBuild code repository is mainly dictated by 
 Principal outtakes from PEP008:
 
 * use four spaces for indentation, do not use tabs
-   * for example, use `:set tabstop 4` and `:set expandtab` in Vim
-* use optional underscores, not camelCase, for variable, function and method names (i.e. `poll.get_unique_voters()`,
-  **not** `poll.getUniqueVoters`)
-* use `InitialCaps` for class names
+   * for example, use ``:set tabstop 4`` and ``:set expandtab`` in Vim
+* use optional underscores, not camelCase, for variable, function and method names (i.e. ``poll.get_unique_voters()``,
+  **not** ``poll.getUniqueVoters``)
+* use ``InitialCaps`` for class names
 * in docstrings, don't use "action words"
 * indent items in a list at an extra 4 spaces
 
