@@ -302,11 +302,13 @@ the list of easyconfigs in the search result. For example, use ``/GCC`` to searc
 
 .. _use_robot:
 
-Use robot for dependency resolution, ``--robot`` / ``-r``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enabling dependency resolution, ``--robot`` / ``-r`` and ``--robot-paths``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 EasyBuild supports installing an entire software stack, including the required toolchain
-if needed, with a single ``eb`` invocation::
+if needed, with a single ``eb`` invocation.
+
+To enable dependency resolution, use the ``--robot`` command line option::
 
   $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot
   [...]
@@ -332,11 +334,90 @@ if needed, with a single ``eb`` invocation::
 
 The dependency resolution mechanism will construct a full dependency graph for the software package(s)
 being installed, after which a list of dependencies is composed for which no module is available yet.
-Each of the retained dependencies will then be built and installed, in the required order as indicated by the dependency graph.
+Each of the retained dependencies will then be built and installed, in the required order as indicated
+by the dependency graph.
 
-.. tip:: This is particularly useful for software packages that have an extensive list of dependencies,
+.. tip:: Using ``--robot`` is particularly useful for software packages that have an extensive list of dependencies,
   or when reinstalling software using a different compiler toolchain
   (you can use the ``--try-toolchain`` command line option in combination with ``--robot``).
+
+.. note:: EasyBuid requires that modules are available for each of the dependencies. If one or more modules are missing,
+  ``eb`` will exit with an error stating that a module for a particular dependency could not be found, unless
+  ``--robot`` is used. For example::
+
+    add_dependencies: no module 'GCC/4.7.2' found for dependency {...}
+
+Searching for easyconfigs: the robot search path
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For each dependency that does not have a matching module installed yet, EasyBuild requires a correspondig easyconfig
+file. If no such easyconfig file was specified on the ``eb`` command line, the dependency resolution mechanism will try
+to locate one in the `robot search path`. (based on filename, .
+
+Searching for easyconfigs is done based on filename (see also :ref:`what_is_an_easyconfig`), with filenames being derived from the dependency specification (i.e. software name/version, toolchain and version suffix). For each directory part of the robot search path, a couple of subpaths are considered , which are mostly determined by the software name.
+
+For example, when looking for an easyconfig for OpenMPI version 1.6.4 and version suffix ``-test`` with toolchain ``GCC/4.7.2``, the following subpaths are considered:
+
+* ``OpenMPI/1.6.4-GCC-4.7.2-test.eb``
+* ``OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
+* ``o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
+* ``OpenMPI-1.6.4-GCC-4.7.2-test.eb``
+
+.. note:: Sometimes easyconfig files are needed even when the modules for the dependencies are already available, i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version suffix) is not sufficient. This is the case when using ``--dry-run`` to construct the complete dependency graph, or when the active module naming scheme requires some additional information (e.g., the ``moduleclass``).
+
+.. note:: If EasyBuild is unable to locate required easyconfigs, an appropriate error message will be shown. For example::
+
+    Irresolvable dependencies encountered: GCC/4.7.2
+
+ or::
+
+    Failed to find easyconfig file 'GCC-4.7.2.eb' when determining module name for: {...}
+
+.. _controlling_robot_search_path:
+
+Controlling the robot search path
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To control the robot search path, you can specify a (colon-separated list of) path(s) to ``--robot`` and/or
+``--robot-paths``::
+
+Paths specified to ``--robot`` get precedence over paths specified via ``--robot-paths``.
+Only ``--robot`` enables the dependency resolution mechanism; ``--robot-paths`` does not.
+
+By combining ``--robot`` and ``--robot-paths`` on the different configuration levels (see also :ref:`configuration_types`), you have full control over the robot search path.
+
+.. note:: The paths specified on the configuration level with the highest order of preference `replace` any paths specified otherwise.
+
+Default robot search path
++++++++++++++++++++++++++
+
+By default, EasyBuild will only include the collection of easyconfig files that is part of the EasyBuild installation
+in the robot search path. More specifically, only directories listed in the `Python search path` (partially specified by the
+``$PYTHONPATH`` environment variable) that contain a subdirectory named ``easybuild/easyconfigs`` are considered part
+of the robot search path (in the order they are encountered).
+
+A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in EasyBuild configuration files to refer
+to the default robot search path. See :ref:`configuration_file_templates_constants` for more information on using constants in EasyBuild configuration files.
+
+
+Example use case
+++++++++++++++++
+
+Wishlist:
+
+* (always) prefer easyconfig files in the archive/repository over the ones that are included in the EasyBuild installation (i)
+* consider easyconfig files located in the current directory first or ``/tmp`` (in that order) before any others (ii)
+
+Matching setup:
+
+* satisfy (i) using ``robot-paths`` in one of the active EasyBuild configuration files, for example ``$HOME/.config/easybuild/config.cfg`` (see also :ref:`list_of_configuration_files`)::
+
+    robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
+
+* satisfy (ii) via ``--robot`` on the ``eb`` command line::
+
+    eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot $PWD:/tmp
+
 
 .. _get_an_overview:
 
