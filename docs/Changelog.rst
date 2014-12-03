@@ -3,10 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 1.0.3** (``Dec ?? 2014``):
-
-    * add page on :ref:`code_style`
-
+* **release 1.0.3** (`Dec 3rd 2014`): add page on :ref:`code_style`
 * **release 1.0.2** (`Nov 6th 2014`): typo and grammar fixes, update Lmod installation instructions for Lmod v5.8
 * **release 1.0.1** (`Nov 4th 2014`): fix issues with Changelog
 * **release 1.0.0** `(Nov 4th 2014)`: initial release of revamped EasyBuild documentation
