@@ -97,10 +97,11 @@ Appendices
     :glob:
     :maxdepth: 1
 
-    Installation_Alternative
+    Code_style
     Configuration_Legacy
     eb_*
-    Installing-Lmod-without-root-permissions
+    Installation_Alternative
     Installing-environment-modules-without-root-permissions
+    Installing-Lmod-without-root-permissions
     Useful_links
     Changelog
