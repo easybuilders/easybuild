@@ -12,7 +12,9 @@ Luckily, the majority of software delivery mechanisms are being designed around
 either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
 Yet, in case the software build calls for more elaborate steps
 (scientific software never fails to surprise us in this regard),
-an :ref:`easyblocks` may be needed, which is the subject of other part of this documentation.
+an :ref:`easyblock <easyblocks>` may be needed, which is the subject of other part of this documentation.
+
+.. _what_is_an_easyconfig:
 
 What is an easyconfig (file)?
 -----------------------------
