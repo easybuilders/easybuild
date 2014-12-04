@@ -350,7 +350,7 @@ by the dependency graph.
 Searching for easyconfigs: the robot search path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For each dependency that does not have a matching module installed yet, EasyBuild requires a correspondig easyconfig
+For each dependency that does not have a matching module installed yet, EasyBuild requires a corresponding easyconfig
 file. If no such easyconfig file was specified on the ``eb`` command line, the dependency resolution mechanism will try
 to locate one in the `robot search path`.
 
@@ -376,6 +376,14 @@ For example, when looking for an easyconfig for ``OpenMPI`` version ``1.6.4`` an
 
     Failed to find easyconfig file 'GCC-4.7.2.eb' when determining module name for: {...}
 
+Default robot search path
++++++++++++++++++++++++++
+
+By default, EasyBuild will only include the collection of easyconfig files that is part of the EasyBuild installation
+in the robot search path. More specifically, only directories listed in the `Python search path` (partially specified
+by the ``$PYTHONPATH`` environment variable) that contain a subdirectory named ``easybuild/easyconfigs`` are considered
+part of the robot search path (in the order they are encountered).
+
 .. _controlling_robot_search_path:
 
 Controlling the robot search path
@@ -389,20 +397,11 @@ Only ``--robot`` enables the dependency resolution mechanism; ``--robot-paths`` 
 
 By combining ``--robot`` and ``--robot-paths`` on the different configuration levels (see also :ref:`configuration_types`), you have full control over the robot search path.
 
-.. note:: The paths specified on the configuration level with the highest order of preference `replace` any paths specified otherwise.
-
-Default robot search path
-+++++++++++++++++++++++++
-
-By default, EasyBuild will only include the collection of easyconfig files that is part of the EasyBuild installation
-in the robot search path. More specifically, only directories listed in the `Python search path` (partially specified
-by the ``$PYTHONPATH`` environment variable) that contain a subdirectory named ``easybuild/easyconfigs`` are considered
-part of the robot search path (in the order they are encountered).
-
 A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in EasyBuild configuration files to refer
 to the default robot search path. For more information on using constants in EasyBuild configuration files, see
 :ref:`configuration_file_templates_constants`.
 
+.. note:: The paths specified on the configuration level with the highest order of preference `replace` any paths specified otherwise.
 
 Example use case
 ++++++++++++++++
