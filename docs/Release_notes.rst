@@ -3,11 +3,6 @@
 EasyBuild release notes
 =======================
 
-v1.16.0 (December 17th 2014)
-----------------------------
-
-feature + bugfix release
-
 v1.15.2 (October 7th 2014)
 --------------------------
 
