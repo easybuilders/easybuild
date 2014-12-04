@@ -308,7 +308,7 @@ Enabling dependency resolution, ``--robot`` / ``-r`` and ``--robot-paths``
 EasyBuild supports installing an entire software stack, including the required toolchain
 if needed, with a single ``eb`` invocation.
 
-To enable dependency resolution, use the ``--robot`` command line option::
+To enable dependency resolution, use the ``--robot`` command line option (or ``-r`` for short)::
 
   $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot
   [...]
@@ -341,9 +341,9 @@ by the dependency graph.
   or when reinstalling software using a different compiler toolchain
   (you can use the ``--try-toolchain`` command line option in combination with ``--robot``).
 
-.. note:: EasyBuid requires that modules are available for each of the dependencies. If one or more modules are missing,
-  ``eb`` will exit with an error stating that a module for a particular dependency could not be found, unless
-  ``--robot`` is used. For example::
+.. note:: Unless dependency resolution is enabled, EasyBuid requires that modules are available for every dependency.
+  If ``--robot`` is not used and one or more modules are missing, ``eb`` will exit with an error stating that a module
+  for a particular dependency could not be found. For example::
 
     add_dependencies: no module 'GCC/4.7.2' found for dependency {...}
 
@@ -352,11 +352,14 @@ Searching for easyconfigs: the robot search path
 
 For each dependency that does not have a matching module installed yet, EasyBuild requires a correspondig easyconfig
 file. If no such easyconfig file was specified on the ``eb`` command line, the dependency resolution mechanism will try
-to locate one in the `robot search path`. (based on filename, .
+to locate one in the `robot search path`.
 
-Searching for easyconfigs is done based on filename (see also :ref:`what_is_an_easyconfig`), with filenames being derived from the dependency specification (i.e. software name/version, toolchain and version suffix). For each directory part of the robot search path, a couple of subpaths are considered , which are mostly determined by the software name.
+Searching for easyconfigs is done based on filename (see also :ref:`what_is_an_easyconfig`), with filenames being derived
+from the dependency specification (i.e. software name/version, toolchain and version suffix). For each entry in the robot
+search path, a couple of different filepaths are considered, mostly determined by the software name.
 
-For example, when looking for an easyconfig for OpenMPI version 1.6.4 and version suffix ``-test`` with toolchain ``GCC/4.7.2``, the following subpaths are considered:
+For example, when looking for an easyconfig for ``OpenMPI`` version ``1.6.4`` and version suffix ``-test`` with toolchain
+``GCC/4.7.2``, the following filepaths are considered (relative to each entry in the robot search path):
 
 * ``OpenMPI/1.6.4-GCC-4.7.2-test.eb``
 * ``OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
@@ -392,21 +395,22 @@ Default robot search path
 +++++++++++++++++++++++++
 
 By default, EasyBuild will only include the collection of easyconfig files that is part of the EasyBuild installation
-in the robot search path. More specifically, only directories listed in the `Python search path` (partially specified by the
-``$PYTHONPATH`` environment variable) that contain a subdirectory named ``easybuild/easyconfigs`` are considered part
-of the robot search path (in the order they are encountered).
+in the robot search path. More specifically, only directories listed in the `Python search path` (partially specified
+by the ``$PYTHONPATH`` environment variable) that contain a subdirectory named ``easybuild/easyconfigs`` are considered
+part of the robot search path (in the order they are encountered).
 
 A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in EasyBuild configuration files to refer
-to the default robot search path. See :ref:`configuration_file_templates_constants` for more information on using constants in EasyBuild configuration files.
+to the default robot search path. For more information on using constants in EasyBuild configuration files, see
+:ref:`configuration_file_templates_constants`.
 
 
 Example use case
 ++++++++++++++++
 
-Wishlist:
+For example, say we want to configure EasyBuild to behave as follows w.r.t. the robot search path:
 
 * (always) prefer easyconfig files in the archive/repository over the ones that are included in the EasyBuild installation (i)
-* consider easyconfig files located in the current directory first or ``/tmp`` (in that order) before any others (ii)
+* consider easyconfig files located in the current directory or home directory first (in that order), before any others (ii)
 
 Matching setup:
 
@@ -416,7 +420,7 @@ Matching setup:
 
 * satisfy (ii) via ``--robot`` on the ``eb`` command line::
 
-    eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot $PWD:/tmp
+    eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot $PWD:$HOME
 
 
 .. _get_an_overview:
