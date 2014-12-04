@@ -401,7 +401,9 @@ A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in
 to the default robot search path. For more information on using constants in EasyBuild configuration files, see
 :ref:`configuration_file_templates_constants`.
 
-.. note:: The paths specified on the configuration level with the highest order of preference `replace` any paths specified otherwise.
+.. note:: The paths specified on the configuration type with the highest order of preference `replace` any paths
+  specified otherwise, i.e. values are not retained across configuration types. For more information
+  see :ref:`configuration_types`.
 
 Example use case
 ++++++++++++++++
