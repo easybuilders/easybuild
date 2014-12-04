@@ -413,7 +413,8 @@ For example, say we want to configure EasyBuild to behave as follows w.r.t. the 
 
 Matching setup:
 
-* satisfy (i) using ``robot-paths`` in one of the active EasyBuild configuration files, for example ``$HOME/.config/easybuild/config.cfg`` (see also :ref:`list_of_configuration_files`)::
+* satisfy (i) using ``robot-paths`` in one of the active EasyBuild configuration files (see also
+  :ref:`list_of_configuration_files`)::
 
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
