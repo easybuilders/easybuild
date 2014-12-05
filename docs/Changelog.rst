@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20141204.02** (`Dec 4th 2014`): add EasyBuild release notes
 * **release 20141204.01** (`Dec 4th 2014`): updates for EasyBuild v1.16.0
 
     * document details w.r.t. (controlling of) robot search path, incl. ``--robot-paths`` (:ref:`using_the_easybuild_command_line`)
