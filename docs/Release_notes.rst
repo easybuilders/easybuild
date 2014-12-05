@@ -580,6 +580,7 @@ feature + bugfix release
 **easyconfigs**
 
 * added example easyconfig files for **30** new software packages:
+
   * argtable (`#669 <https://github.com/hpcugent/easybuild-framework/pull/669>`_), Clustal-Omega (`#669 <https://github.com/hpcugent/easybuild-framework/pull/669>`_), Coreutils (`#582 <https://github.com/hpcugent/easybuild-framework/pull/582>`_), GMT (`#560 <https://github.com/hpcugent/easybuild-framework/pull/560>`_), gperftools (`#596 <https://github.com/hpcugent/easybuild-framework/pull/596>`_), grep (`#582 <https://github.com/hpcugent/easybuild-framework/pull/582>`_), h4toh5 (`#597 <https://github.com/hpcugent/easybuild-framework/pull/597>`_),
     libunwind (`#596 <https://github.com/hpcugent/easybuild-framework/pull/596>`_), Lmod (`#600 <https://github.com/hpcugent/easybuild-framework/pull/600>`_, `#692 <https://github.com/hpcugent/easybuild-framework/pull/692>`_), Lua (`#600 <https://github.com/hpcugent/easybuild-framework/pull/600>`_, `#692 <https://github.com/hpcugent/easybuild-framework/pull/692>`_), MAFFT (`#654 <https://github.com/hpcugent/easybuild-framework/pull/654>`_), Molekel (`#597 <https://github.com/hpcugent/easybuild-framework/pull/597>`_), NEdit (`#597 <https://github.com/hpcugent/easybuild-framework/pull/597>`_),
     netcdf4-python (`#660 <https://github.com/hpcugent/easybuild-framework/pull/660>`_), nodejs (`#678 <https://github.com/hpcugent/easybuild-framework/pull/678>`_), OCaml (`#704 <https://github.com/hpcugent/easybuild-framework/pull/704>`_), patch (`#582 <https://github.com/hpcugent/easybuild-framework/pull/582>`_), PhyML (`#664 <https://github.com/hpcugent/easybuild-framework/pull/664>`_),
@@ -682,6 +683,7 @@ feature + bugfix release
 **easyconfigs**
 
 * added example easyconfig files for **18** new software packages:
+
   * BEDTools (`#579 <https://github.com/hpcugent/easybuild-framework/pull/579>`_, `#632 <https://github.com/hpcugent/easybuild-framework/pull/632>`_, `#635 <https://github.com/hpcugent/easybuild-framework/pull/635>`_), CAP3 (`#548 <https://github.com/hpcugent/easybuild-framework/pull/548>`_), CHARMM (`#584 <https://github.com/hpcugent/easybuild-framework/pull/584>`_), cutadapt (`#620 <https://github.com/hpcugent/easybuild-framework/pull/620>`_), ErlangOTP (`#556 <https://github.com/hpcugent/easybuild-framework/pull/556>`_, `#630 <https://github.com/hpcugent/easybuild-framework/pull/630>`_),
     Ghostscript (`#547 <https://github.com/hpcugent/easybuild-framework/pull/547>`_, `#632 <https://github.com/hpcugent/easybuild-framework/pull/632>`_), HTSeq (`#554 <https://github.com/hpcugent/easybuild-framework/pull/554>`_, `#632 <https://github.com/hpcugent/easybuild-framework/pull/632>`_), Jansson (`#545 <https://github.com/hpcugent/easybuild-framework/pull/545>`_), libjpeg-turbo (`#574 <https://github.com/hpcugent/easybuild-framework/pull/574>`_), Molden (`#566 <https://github.com/hpcugent/easybuild-framework/pull/566>`_),
     netloc (`#545 <https://github.com/hpcugent/easybuild-framework/pull/545>`_), o2scl (`#633 <https://github.com/hpcugent/easybuild-framework/pull/633>`_), packmol (`#566 <https://github.com/hpcugent/easybuild-framework/pull/566>`_), PP (`#405 <https://github.com/hpcugent/easybuild-framework/pull/405>`_), qtop (`#500 <https://github.com/hpcugent/easybuild-framework/pull/500>`_), TAMkin (`#566 <https://github.com/hpcugent/easybuild-framework/pull/566>`_), vsc-base (`#621 <https://github.com/hpcugent/easybuild-framework/pull/621>`_),
@@ -923,7 +925,9 @@ feature + bugfix release
   * added toy build unit test (`#688 <https://github.com/hpcugent/easybuild-framework/pull/688>`_)
   * support for specifying a list of source paths in EasyBuild configuration (`#690 <https://github.com/hpcugent/easybuild-framework/pull/690>`_, `#702 <https://github.com/hpcugent/easybuild-framework/pull/702>`_)
   * add function to determine CPU clock speed in ``systemtools.py`` (`#694 <https://github.com/hpcugent/easybuild-framework/pull/694>`_, `#699 <https://github.com/hpcugent/easybuild-framework/pull/699>`_)
+
 * various bug fixes, including:
+
   * avoid importing toolchain modules over and over again to make toolchain constants available in toolchain module (`#679 <https://github.com/hpcugent/easybuild-framework/pull/679>`)
   * only change the group id if current gid is different from what we want in ``adjust_permissions`` function (`#685 <https://github.com/hpcugent/easybuild-framework/pull/685>`)
   * restore original environment after running 'module purge' (`#698 <https://github.com/hpcugent/easybuild-framework/pull/698>`)
@@ -1034,6 +1038,7 @@ feature + bugfix release
   * Glib (`#294 <https://github.com/hpcugent/easybuild-framework/pull/294>`_, `#400 <https://github.com/hpcugent/easybuild-framework/pull/400>`_), GLPK (`#400 <https://github.com/hpcugent/easybuild-framework/pull/400>`_), horton (`#413 <https://github.com/hpcugent/easybuild-framework/pull/413>`_), libint2 (`#413 <https://github.com/hpcugent/easybuild-framework/pull/413>`_), molmod (`#413 <https://github.com/hpcugent/easybuild-framework/pull/413>`_), Rosetta (`#336 <https://github.com/hpcugent/easybuild-framework/pull/336>`_), SCons (`#336 <https://github.com/hpcugent/easybuild-framework/pull/336>`_), Stacks (`#367 <https://github.com/hpcugent/easybuild-framework/pull/367>`_, `#377 <https://github.com/hpcugent/easybuild-framework/pull/377>`_), sympy (`#413 <https://github.com/hpcugent/easybuild-framework/pull/413>`_), Qt (`#294 <https://github.com/hpcugent/easybuild-framework/pull/294>`_), XML-LibXML (`#397 <https://github.com/hpcugent/easybuild-framework/pull/397>`_), XML-Simple (`#397 <https://github.com/hpcugent/easybuild-framework/pull/397>`_), yaff (`#413 <https://github.com/hpcugent/easybuild-framework/pull/413>`_), YAML-Syck (`#380 <https://github.com/hpcugent/easybuild-framework/pull/380>`_), zsh (`#376 <https://github.com/hpcugent/easybuild-framework/pull/376>`_)
 
 * added additional easyconfigs for various software packages:
+
   * BLAST, BamTools, BioPerl, Bison, Boost, bzip2, CMake, Cython, CUDA, FFTW, FIAT, GCC, GMP, gettext, git, h5py,
     HDF5, libffi, libreadline, libxc, matplotlib, METIS, ncurses, Oases, Python, RAxML, ScientificPython, Szip,
     tcsh, imkl, MVAPICH2, TotalView, VTune, WRF, zlib
@@ -1377,7 +1382,9 @@ feature + bugfix release
 * added example easyconfigs for builds with goolf toolchain, i.e. for all goalf easyconfigs (`#189 <https://github.com/hpcugent/easybuild-framework/pull/189>`_)
 
   * for several software packages, a patch file was needed to get them to build with GCC 4.7:
-        AMOS, BEAGLE, Cufflinks, DOLFIN, GATE, ns, Pasha, Trilinos, Trinity
+
+    * AMOS, BEAGLE, Cufflinks, DOLFIN, GATE, ns, Pasha, Trilinos, Trinity
+
   * for PETSc, a patch file was required to make it build with a toolchain that doesn't include BLACS
 
 * added additional example easyconfig files for:
@@ -1590,7 +1597,7 @@ feature + bugfix release
 
   * clean up testing of Python packages (``PythonPackage`` easyblock)
   * make sure there is no ``site.cfg`` in home dir when building Python packages,
-        because e.g. ``scipy`` will pick it up
+    because e.g. ``scipy`` will pick it up
   * added support for building Intel MKL wrappers with OpenMPI toolchain
   * cleaning up of fake module that was loaded for running tests
   * move calls to functions that rely on environment up in the chain of steps (mostly for cleanup reasons)
@@ -1739,7 +1746,7 @@ v1.0 (November 13th 2012)
   * support for automatically generating an easyconfig file according to given specifications (best effort!)
 
 * add support for looking for easyconfig file in Python search path if it can't be found on specified (relative) path
-    (that way, easyconfig files available in the easybuild-easyconfigs package can be used easily)
+  (that way, easyconfig files available in the easybuild-easyconfigs package can be used easily)
 * various other enhancements and bug fixes, e.g.:
 
   * extended sanity check capabilities
@@ -1767,6 +1774,7 @@ v1.0 (November 13th 2012)
 **easyconfigs**
 
 * added example easyconfig files for **106** new software packages:
+
   * AMOS, Armadillo, ASE, Autoconf, BiSearch, Boost, Bowtie2, BWA, byacc, bzip2, CGAL, ClustalW2, CMake,
     CPLEX, cURL, CVXOPT, Cython, Docutils, DOLFIN, ECore, Eigen, expat, FASTX-Toolkit, FFC, FIAT,
     freetype, FSL, GEOS, git, glproto, GMP, gmvapich2, gompi, GPAW, GSL, guile, h5py, h5utils, Harminv,
