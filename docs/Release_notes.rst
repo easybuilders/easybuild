@@ -3,6 +3,50 @@
 EasyBuild release notes
 =======================
 
+v1.16.0 (December 17th 2014)
+----------------------------
+
+feature + bugfix release
+
+**framework**
+
+* various enhancements, including:
+
+    * also use ``-xHost`` when using Intel compilers on AMD systems (as opposed to ``-msse3``) (`#960 <https://github.com/hpcugent/easybuild-framework/pull/960>`_)
+    * add Python version check in 'eb' command (`#1046 <https://github.com/hpcugent/easybuild-framework/pull/1046>`_)
+    * take ``versionprefix`` into account in ``HierarchicalMNS`` module naming scheme (`#1058 <https://github.com/hpcugent/easybuild-framework/pull/1058>`_)
+    * clean up and refactor ``main.py``, move functionality to other modules (`#1059 <https://github.com/hpcugent/easybuild-framework/pull/1059>`_, `#1064 <https://github.com/hpcugent/easybuild-framework/pull/1064>`_, `#1075 <https://github.com/hpcugent/easybuild-framework/pull/1075>`_, `#1087 <https://github.com/hpcugent/easybuild-framework/pull/1087>`_)
+    * added a check in ``download_file`` function for the http return code + download progress report (`#1066 <https://github.com/hpcugent/easybuild-framework/pull/1066>`_, `#1090 <https://github.com/hpcugent/easybuild-framework/pull/1090>`_)
+    * include info log message with name and location of used easyblock (`#1069 <https://github.com/hpcugent/easybuild-framework/pull/1069>`_)
+    * fix hard crash when using patch files with an empty list of sources (`#1070 <https://github.com/hpcugent/easybuild-framework/pull/1070>`_)
+    *  enforce that hiddendependencies is a subset of dependencies (`#1078 <https://github.com/hpcugent/easybuild-framework/pull/1078>`_)
+
+        * this is done to avoid that site-specific policies w.r.t. hidden modules slip into contributed easyconfigs
+
+    * enable use of ``--show_hidden`` for ``avail subcommand`` with recent Lmod versions (`#1081 <https://github.com/hpcugent/easybuild-framework/pull/1081>`_)
+    * add ``--robot-paths`` configure option (`#1080 <https://github.com/hpcugent/easybuild-framework/pull/1080>`_, `#1093 <https://github.com/hpcugent/easybuild-framework/pull/1093>`_)
+
+        * see also `Controlling the robot search path <http://easybuild.readthedocs.org/en/develop/Using_the_EasyBuild_command_line.html#controlling-the-robot-search-path>`_
+
+    * use ``-xHost`` rather than ``-xHOST``, to match Intel documentation (`#1084 <https://github.com/hpcugent/easybuild-framework/pull/1084>`_)
+    * update and cleanup README file (`#1085 <https://github.com/hpcugent/easybuild-framework/pull/1085>`_)
+    * deprecate self.moduleGenerator in favor of self.module_generator in EasyBlock (`#1088 <https://github.com/hpcugent/easybuild-framework/pull/1088>`_)
+
+* various bug fixes, including:
+
+    * fix picking required software version specified by ``--software-version`` and clean up ``tweak.py`` (`#1062 <https://github.com/hpcugent/easybuild-framework/pull/1062>`_, `#1063 <https://github.com/hpcugent/easybuild-framework/pull/1063>`_)
+    * escape ``$`` characters in module load message specified via ``modloadmsg`` easyconfig parameter) (`#1068 <https://github.com/hpcugent/easybuild-framework/pull/1068>`_)
+    * take available hidden modules into account in dependency resolution (`#1065 <https://github.com/hpcugent/easybuild-framework/pull/1065>`_)
+
+**easyblocks**
+
+* 
+
+**easyconfigs**
+
+* 
+
+
 v1.15.2 (October 7th 2014)
 --------------------------
 

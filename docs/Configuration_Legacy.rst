@@ -1,4 +1,6 @@
 
+.. _configuring_easybuild_legacy:
+
 Configuration Legacy
 ====================
 

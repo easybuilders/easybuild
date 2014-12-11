@@ -65,6 +65,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
 For more details w.r.t. each of the supported configuration types, see below.
 
+.. _configuration_file:
 
 Configuration file
 ~~~~~~~~~~~~~~~~~~
