@@ -56,7 +56,7 @@ be available in EasyBuild v2.0 into an error message. For example::
          of deprecated behavior as early as possible.
 
          You can (temporarily) still rely on the deprecated functionality by
-         specifying a higher version via ``--deprecated`` to overrule the setting in the configuration file, until the
+         specifying a higher version via ``--deprecated`` to overrule that setting, until the
          functionality is actually disabled.
 
 .. _python_version_compatibility:
@@ -114,7 +114,7 @@ The previous default path ``$HOME/.easybuild/config.cfg`` that was in place sinc
 Automagic fallback to ``ConfigureMake``
 ---------------------------------------
 
-**The automagic fallback to the ** ``ConfigureMake`` ** easyblock is deprecated.**
+**The automagic fallback to the** ``ConfigureMake`` **easyblock is deprecated.**
 
 If the ``easyblock`` easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
 name. In EasyBuild v1.x, the generic ``ConfigureMake`` easyblock was used if no matching easyblock could be found.
@@ -130,7 +130,7 @@ Easyconfig parameters
 ---------------------
 
 **Some easyconfig parameters are deprecated:** ``premakeopts`` **,** ``makeopts`` **; so is the use of the**
-``shared_lib_ext`` **'template'.**
+``shared_lib_ext`` **'constant'.**
 
 A couple of easyconfig parameters have been renamed, for consistency reasons:
 
@@ -181,8 +181,8 @@ Some changes were made to the easyblocks API:
   must be able to determine the easyblock module path solely based on the name of the easyblock Python class *(since
   EasyBuild v1.4.0 (May'13))*
 
-  * easyblocks with a class name honoring the encoding scheme implemented by the ``encode_class_name`` function will not
-    be affected
+  * easyblocks with a class name that is already honoring the encoding scheme implemented by the ``encode_class_name``
+    function will not be affected
 
 **Easyblocks not taking into account these changes will no longer be supported in EasyBuild v2.0 and later.**
 
