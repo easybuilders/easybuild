@@ -20,6 +20,7 @@ For EasyBuild users:
 
 For authors of easyconfig files:
 
+* :ref:`ConfigureMake_fallback`
 * :ref:`easyconfig_parameters`
 
 For developers of easyblocks:
@@ -40,12 +41,23 @@ Since EasyBuild v1.16.0, the ``--deprecated`` command line option can be used to
 still being triggered in your EasyBuild setup.
 
 For example, using ``--deprecated=2.0`` will transform any deprecation warning for functionality that will no longer
-be available in EasyBuild v2.0 into an error message.
+be available in EasyBuild v2.0 into an error message. For example::
 
-.. tip:: Define `deprecated` to the next major EasyBuild version in one of your EasyBuild configuration files
-         (see :ref:`configuration_file`), to ensure you are made aware of deprecated behavior as early as possible. You
-         can (temporarily) still rely on the deprecated functionality by specifying a higher version via
-         ``--deprecated`` to overrule the setting in the configuration file, until the functionality is actually disabled.
+  $ eb OpenMPI-1.8.1-GCC-4.8.3.eb --deprecated=2.0
+  == temporary log file in case of crash /tmp/easybuild-WWalWX/easybuild-aoL9Nd.log
+  ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:945 in process_easyconfig):
+  Failed to process easyconfig /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.8.1-GCC-4.8.3.eb:
+  DEPRECATED (since v2.0) functionality used: Magic 'global' easyconfigs variables like shared_lib_ext should no longer
+  be used; see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
+
+
+.. tip:: Define ``deprecated`` to the next major EasyBuild version in one of your EasyBuild configuration files
+         (see :ref:`configuration_file`) or by defining ``$EASYBUILD_DEPRECATED=2.0``, to ensure you are made aware
+         of deprecated behavior as early as possible.
+
+         You can (temporarily) still rely on the deprecated functionality by
+         specifying a higher version via ``--deprecated`` to overrule the setting in the configuration file, until the
+         functionality is actually disabled.
 
 .. _python_version_compatibility:
 
@@ -92,16 +104,32 @@ For detailed information with respect to porting from the old to the new configu
 Note that the default path for the new-style configuration path is ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (or
 ``$HOME/.config/easybuild/config.cfg`` if ``$XDG_CONFIG_HOME`` is not set), see :ref:`list_of_configuration_files`.
 The previous default path ``$HOME/.easybuild/config.cfg`` that was in place since EasyBuild v1.3.0 is deprecated since
-v1.11.0 (Feb'14).
+*EasyBuild v1.11.0 (Feb'14)*.
 
 **Support for the old-style configuration options will be dropped in EasyBuild v2.0.**
+
+
+.. _ConfigureMake_fallback:
+
+Automagic fallback to ``ConfigureMake``
+---------------------------------------
+
+**The automagic fallback to the ** ``ConfigureMake`` ** easyblock is deprecated.**
+
+If the ``easyblock`` easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
+name. In EasyBuild v1.x, the generic ``ConfigureMake`` easyblock was used if no matching easyblock could be found.
+
+This behavior is deprecated since *EasyBuild v1.16.0 (Dec'14)*; instead, easyconfigs that require using the
+``ConfigureMake`` easyblock *must* specify the following::
+
+  easyblock = 'ConfigureMake'
 
 .. _easyconfig_parameters:
 
 Easyconfig parameters
 ---------------------
 
-**Some easyconfig parameters are deprecated:** ``premakeopts``**,** ``makeopts``**; so is the use of the**
+**Some easyconfig parameters are deprecated:** ``premakeopts`` **,** ``makeopts`` **; so is the use of the**
 ``shared_lib_ext`` **'template'.**
 
 A couple of easyconfig parameters have been renamed, for consistency reasons:
@@ -135,17 +163,17 @@ Some changes were made to the easyblocks API:
 * the return type of the ``extra_options`` static method has been changed to a *dictionary*, rather than a list of
   key-value tuples *(since EasyBuild v1.12.0 (Apr'13))*
 
-    * to work around this, you can add custom easyconfig parameters via a *dict*-typed value
-      to the ``extra_options`` function of parent easyblock; for example (taken from the generic ``Binary`` easyblock)::
+  * to work around this, you can add custom easyconfig parameters via a *dict*-typed value
+    to the ``extra_options`` function of parent easyblock; for example (taken from the generic ``Binary`` easyblock)::
 
-        @staticmethod
-        def extra_options(extra_vars=None):
-            """Extra easyconfig parameters specific to Binary easyblock."""
-            extra_vars = dict(EasyBlock.extra_options(extra_vars))
-            extra_vars.update({
-                'install_cmd': [None, "Install command to be used.", CUSTOM],
-            })
-            return EasyBlock.extra_options(extra_vars)
+      @staticmethod
+      def extra_options(extra_vars=None):
+          """Extra easyconfig parameters specific to Binary easyblock."""
+          extra_vars = dict(EasyBlock.extra_options(extra_vars))
+          extra_vars.update({
+              'install_cmd': [None, "Install command to be used.", CUSTOM],
+          })
+          return EasyBlock.extra_options(extra_vars)
 
 * only the ``ext_name``, ``ext_version`` and ``src`` template strings can be used in the ``exts_filter`` extension filter
   easyconfig parameter; using the ``name`` and ``version`` template strings is deprecated *(since EasyBuild v1.2.0 (Feb'13))*
@@ -153,8 +181,8 @@ Some changes were made to the easyblocks API:
   must be able to determine the easyblock module path solely based on the name of the easyblock Python class *(since
   EasyBuild v1.4.0 (May'13))*
 
-    * easyblocks with a class name honoring the encoding scheme implemented by the ``encode_class_name`` function will not
-      be affected
+  * easyblocks with a class name honoring the encoding scheme implemented by the ``encode_class_name`` function will not
+    be affected
 
 **Easyblocks not taking into account these changes will no longer be supported in EasyBuild v2.0 and later.**
 
@@ -195,7 +223,9 @@ Renamed/relocated functions
 A number of functions and methods that are part of the EasyBuild framework API have been renamed, mainly for consistency
 reasons:
 
-* ``source_paths()`` (in ``easybuild.tools.config``) replaces the deprecated ``source_path()`` (since EasyBuild v1.8.0 (Oct'13))
+* the ``moduleGenerator`` handle to the ``ModuleGenerator`` object instance has been renamed to ``module_generator``;
+  hence, easyblock should be using ``self.module_generator`` rather than ``self.moduleGenerator`` *(since EasyBuild v1.16.0 (Dec'14))*
+* ``source_paths()`` (in ``easybuild.tools.config``) replaces the deprecated ``source_path()`` *(since EasyBuild v1.8.0 (Oct'13))*
 * ``get_avail_core_count()`` (in ``easybuild.tools.systemtools``) replaces the deprecated ``get_core_count()``
   *(since EasyBuild v1.9.0 (Nov'13))*
 * ``get_os_type()`` (in ``easybuild.tools.systemtools``) replaces the deprecated ``get_kernel_name``
