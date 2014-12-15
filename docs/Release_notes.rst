@@ -3,7 +3,7 @@
 EasyBuild release notes
 =======================
 
-EasyBuild v|version| provides support for building and installing **538** different software packages,
+EasyBuild version |version| provides support for building and installing **538** different software packages,
 using 32 different (compilers) *toolchains*. It provides 139 software-specific easyblocks and 20 generic *easyblocks*,
 alongside 2,809 *easyconfig files*.
 
