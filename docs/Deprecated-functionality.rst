@@ -129,13 +129,16 @@ This behavior is deprecated since *EasyBuild v1.16.0 (Dec'14)*; instead, easycon
 Easyconfig parameters
 ---------------------
 
-**Some easyconfig parameters are deprecated:** ``premakeopts`` **,** ``makeopts`` **; so is the use of the**
-``shared_lib_ext`` **'constant'.**
+* **both** ``premakeopts`` **and** ``makeopts`` **are deprecated**
+* ``license`` **has been renamed to** ``software_license``
+* **use of the** ``shared_lib_ext`` **'constant' is deprecated**
 
 A couple of easyconfig parameters have been renamed, for consistency reasons:
 
 * ``makeopts`` is deprecated, and replaced by ``buildopts`` *(since EasyBuild v1.13.0 (May'14))*
 * ``premakeopts`` is deprecated, and replaced by ``prebuildopts`` *(since EasyBuild v1.13.0 (May'14))*
+* ``license`` is deprecated, and is replaced by ``software_license``; the specified value should be a known license
+  type (see ``eb --avail-easyconfig-licenses``) *(since EasyBuild v1.11.0 (Feb'14))*
 
 (see also :ref:`configure_build_install_command_options`)
 
@@ -177,6 +180,7 @@ Some changes were made to the easyblocks API:
 
 * only the ``ext_name``, ``ext_version`` and ``src`` template strings can be used in the ``exts_filter`` extension filter
   easyconfig parameter; using the ``name`` and ``version`` template strings is deprecated *(since EasyBuild v1.2.0 (Feb'13))*
+* explicitely specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is deprecated; only the class name should be specified, the corresponding module path is derived from it *(since EasyBuild v0.5 (Apr'12))*
 * determining the *location* of Python modules representing easyblocks based on the software name is deprecated; EasyBuild
   must be able to determine the easyblock module path solely based on the name of the easyblock Python class *(since
   EasyBuild v1.4.0 (May'13))*
@@ -194,19 +198,25 @@ Some changes were made to the easyblocks API:
 The API of the ``easybuild.tools.modules`` Python module has been changed extensively when implementing support for
 alternative module naming schemes *(EasyBuild v1.8.0 (Oct'13))*:
 
-* use of ``modules`` class variable and the ``add_module``/``remove_module`` methods is deprecated; modules should be
+* use of the ``modules`` class variable and the ``add_module``/``remove_module`` methods is deprecated; modules should be
   (un)loaded using the ``load`` and ``unload`` methods instead
 * the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method are deprecated; the class instance
   should be created with a specific list of module paths instead
 * using the ``Modules`` class to obtain a class instance representing a modules tool interface is deprecated,;
   the ``modules_tool`` function should be used instead
 
+Additionally, usage of the ``exists`` method which only takes a single module name is deprecated; it is replaced by
+the ``exist`` method, which takes a list of module names *(since EasyBuild v1.15.0 (Sept'15))*.
+
 Easyblocks should not be using ``easybuild.tools.modules`` directly, and hence should be unaffected.
 
 .. _softroot_version_env_vars:
 
-``$SOFTROOTX`` and ``$SOFTVERSIONX`` environment variables in generated module files
+``$SOFTX`` environment variables in generated module files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``$SOFTX`` **environment variables set by module files generated with EasyBuild v0.x will no longer be taken into
+account.**
 
 The ``get_software_root`` and ``get_software_version`` functions will only take ``$EBROOTFOO`` and
 ``$EBVERSIONFOO`` environment variables into account starting with EasyBuild v2.0, as opposed to also considering
