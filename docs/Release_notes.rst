@@ -12,55 +12,57 @@ feature + bugfix release
 
 * various enhancements, including:
 
-    * add script to clean up gists created via ``--upload-test-report`` (`#958 <https://github.com/hpcugent/easybuild-framework/pull/958>`_)
-    * also use ``-xHost`` when using Intel compilers on AMD systems (as opposed to ``-msse3``) (`#960 <https://github.com/hpcugent/easybuild-framework/pull/960>`_)
-    * add Python version check in 'eb' command (`#1046 <https://github.com/hpcugent/easybuild-framework/pull/1046>`_)
-    * take ``versionprefix`` into account in ``HierarchicalMNS`` module naming scheme (`#1058 <https://github.com/hpcugent/easybuild-framework/pull/1058>`_)
-    * clean up and refactor ``main.py``, move functionality to other modules (`#1059 <https://github.com/hpcugent/easybuild-framework/pull/1059>`_, `#1064 <https://github.com/hpcugent/easybuild-framework/pull/1064>`_, `#1075 <https://github.com/hpcugent/easybuild-framework/pull/1075>`_, `#1087 <https://github.com/hpcugent/easybuild-framework/pull/1087>`_)
-    * add a check in ``download_file`` function for the http return code + download progress report (`#1066 <https://github.com/hpcugent/easybuild-framework/pull/1066>`_, `#1090 <https://github.com/hpcugent/easybuild-framework/pull/1090>`_)
-    * include info log message with name and location of used easyblock (`#1069 <https://github.com/hpcugent/easybuild-framework/pull/1069>`_)
-    * fix hard crash when using patch files with an empty list of sources (`#1070 <https://github.com/hpcugent/easybuild-framework/pull/1070>`_)
-    * add toolchains definitions for ``gpsmpi``, ``gpsolf``, ``impich``, ``intel-para``, ``ipsmpi`` toolchains (`#1072 <https://github.com/hpcugent/easybuild-framework/pull/1072>`_, `#1073 <https://github.com/hpcugent/easybuild-framework/pull/1073>`_)
+  * add script to clean up gists created via ``--upload-test-report`` (`#958 <https://github.com/hpcugent/easybuild-framework/pull/958>`_)
+  * also use ``-xHost`` when using Intel compilers on AMD systems (as opposed to ``-msse3``) (`#960 <https://github.com/hpcugent/easybuild-framework/pull/960>`_)
+  * add Python version check in ``eb`` command (`#1046 <https://github.com/hpcugent/easybuild-framework/pull/1046>`_)
+  * take ``versionprefix`` into account in ``HierarchicalMNS`` module naming scheme (`#1058 <https://github.com/hpcugent/easybuild-framework/pull/1058>`_)
+  * clean up and refactor ``main.py``, move functionality to other modules (`#1059 <https://github.com/hpcugent/easybuild-framework/pull/1059>`_, `#1064 <https://github.com/hpcugent/easybuild-framework/pull/1064>`_, `#1075 <https://github.com/hpcugent/easybuild-framework/pull/1075>`_, `#1087 <https://github.com/hpcugent/easybuild-framework/pull/1087>`_)
+  * add check in ``download_file`` function for HTTP return code + show download progress report (`#1066 <https://github.com/hpcugent/easybuild-framework/pull/1066>`_, `#1090 <https://github.com/hpcugent/easybuild-framework/pull/1090>`_)
+  * include info log message with name and location of used easyblock (`#1069 <https://github.com/hpcugent/easybuild-framework/pull/1069>`_)
+  * fix hard crash when using patch files with an empty list of sources (`#1070 <https://github.com/hpcugent/easybuild-framework/pull/1070>`_)
+  * add toolchains definitions for ``gpsmpi``, ``gpsolf``, ``impich``, ``intel-para``, ``ipsmpi`` toolchains (`#1072 <https://github.com/hpcugent/easybuild-framework/pull/1072>`_, `#1073 <https://github.com/hpcugent/easybuild-framework/pull/1073>`_)
 
-      * support for Parastation MPI based toolchains
+    * support for Parastation MPI based toolchains
 
-    *  enforce that hiddendependencies is a subset of dependencies (`#1078 <https://github.com/hpcugent/easybuild-framework/pull/1078>`_)
+  * enforce that ``hiddendependencies`` is a subset of ``dependencies`` (`#1078 <https://github.com/hpcugent/easybuild-framework/pull/1078>`_)
 
-      * this is done to avoid that site-specific policies w.r.t. hidden modules slip into contributed easyconfigs
+    * this is done to avoid that site-specific policies w.r.t. hidden modules slip into contributed easyconfigs
 
-    * enable use of ``--show_hidden`` for ``avail subcommand`` with recent Lmod versions (`#1081 <https://github.com/hpcugent/easybuild-framework/pull/1081>`_)
-    * add ``--robot-paths`` configure option (`#1080 <https://github.com/hpcugent/easybuild-framework/pull/1080>`_, `#1093 <https://github.com/hpcugent/easybuild-framework/pull/1093>`_, `#1095 <https://github.com/hpcugent/easybuild-framework/pull/1095>`_,  `#1114 <https://github.com/hpcugent/easybuild-framework/pull/1114>`_), support use of ``%(DEFAULT_ROBOT_PATHS)s`` template in EasyBuild configuration files (`#1100 <https://github.com/hpcugent/easybuild-framework/pull/1100>`_)
+  * enable use of ``--show_hidden`` for ``avail`` subcommand with recent Lmod versions (`#1081 <https://github.com/hpcugent/easybuild-framework/pull/1081>`_)
+  * add ``--robot-paths`` configure option (`#1080 <https://github.com/hpcugent/easybuild-framework/pull/1080>`_, `#1093 <https://github.com/hpcugent/easybuild-framework/pull/1093>`_, `#1095 <https://github.com/hpcugent/easybuild-framework/pull/1095>`_,  `#1114 <https://github.com/hpcugent/easybuild-framework/pull/1114>`_)
+  * support use of ``%(DEFAULT_ROBOT_PATHS)s`` template in EasyBuild configuration files (`#1100 <https://github.com/hpcugent/easybuild-framework/pull/1100>`_)
 
-      * see also `Controlling the robot search path <http://easybuild.readthedocs.org/en/latest/Using_the_EasyBuild_command_line.html#controlling-the-robot-search-path>`_
+    * see also `Controlling the robot search path <http://easybuild.readthedocs.org/en/latest/Using_the_EasyBuild_command_line.html#controlling-the-robot-search-path>`_
 
-    * use ``-xHost`` rather than ``-xHOST``, to match Intel documentation (`#1084 <https://github.com/hpcugent/easybuild-framework/pull/1084>`_)
-    * update and cleanup README file (`#1085 <https://github.com/hpcugent/easybuild-framework/pull/1085>`_)
-    * deprecate self.moduleGenerator in favor of self.module_generator in EasyBlock (`#1088 <https://github.com/hpcugent/easybuild-framework/pull/1088>`_)
-    * also support ``MPICH`` MPI family in ``mpi_cmd_for`` function (`#1098 <https://github.com/hpcugent/easybuild-framework/pull/1098>`_)
-    * update documentation references to point to http://easybuild.readthedocs.org (`#1102 <https://github.com/hpcugent/easybuild-framework/pull/1102>`_)
-    * stop triggering deprecated functionality, to enable use of ``--deprecated=2.0`` (`#1107 <https://github.com/hpcugent/easybuild-framework/pull/1107>`_)
+  * use ``-xHost`` rather than ``-xHOST``, to match Intel documentation (`#1084 <https://github.com/hpcugent/easybuild-framework/pull/1084>`_)
+  * update and cleanup ``README`` file (`#1085 <https://github.com/hpcugent/easybuild-framework/pull/1085>`_)
+  * deprecate ``self.moduleGenerator`` in favor of ``self.module_generator`` in ``EasyBlock`` (`#1088 <https://github.com/hpcugent/easybuild-framework/pull/1088>`_)
+  * also support ``MPICH`` MPI family in ``mpi_cmd_for`` function (`#1098 <https://github.com/hpcugent/easybuild-framework/pull/1098>`_)
+  * update documentation references to point to http://easybuild.readthedocs.org (`#1102 <https://github.com/hpcugent/easybuild-framework/pull/1102>`_)
+  * stop triggering deprecated functionality, to enable use of ``--deprecated=2.0`` (`#1107 <https://github.com/hpcugent/easybuild-framework/pull/1107>`_)
 
-      * see `Deprecated functionality <http://boegel-eb.readthedocs.org/en/deprecated/Deprecated-functionality.html#configuremake-fallback>`_ for more information
+    * see `Deprecated functionality <http://boegel-eb.readthedocs.org/en/deprecated/Deprecated-functionality.html#configuremake-fallback>`_ for more information
 
-    * deprecate automagic fallback to ``ConfigureMake`` easyblock (`#1113 <https://github.com/hpcugent/easybuild-framework/pull/1113>`_)
+  * deprecate automagic fallback to ``ConfigureMake`` easyblock (`#1113 <https://github.com/hpcugent/easybuild-framework/pull/1113>`_)
 
-      * easyconfigs should specify ``easyblock = 'ConfigureMake'`` instead of relying on the fallback mechanism, which will be dropped in EasyBuild v2.0
-      * see also `Automagic fallback to ConfigureMake <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_
+    * easyconfigs should specify ``easyblock = 'ConfigureMake'`` instead of relying on the fallback mechanism
+    * **note: automagic fallback to** ``ConfigureMake`` **easyblock will be dropped in EasyBuild v2.0**
+    * see also `Automagic fallback to ConfigureMake <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_
 
 * various bug fixes, including:
 
-    * fix picking required software version specified by ``--software-version`` and clean up ``tweak.py`` (`#1062 <https://github.com/hpcugent/easybuild-framework/pull/1062>`_, `#1063 <https://github.com/hpcugent/easybuild-framework/pull/1063>`_)
-    * escape ``$`` characters in module load message specified via ``modloadmsg`` easyconfig parameter) (`#1068 <https://github.com/hpcugent/easybuild-framework/pull/1068>`_)
-    * take available hidden modules into account in dependency resolution (`#1065 <https://github.com/hpcugent/easybuild-framework/pull/1065>`_)
-    * fix Intel MKL BLACS library being used for MPICH/MPICH2-based toolchains (`#1072 <https://github.com/hpcugent/easybuild-framework/pull/1072>`_)
-    * fix regular expression in ``fetch_parameter_from_easyconfig_file`` function (`#1096 <https://github.com/hpcugent/easybuild-framework/pull/1096>`_)
-    * don't hardcode queue names when submitting a job (`#1106 <https://github.com/hpcugent/easybuild-framework/pull/1106>`_)
-    * fix affiliation/mail address for Fotis in headers (`#1105 <https://github.com/hpcugent/easybuild-framework/pull/1105>`_)
-    * filter out ``/dev/null`` entries in patch file in ``det_patched_files`` function (`#1108 <https://github.com/hpcugent/easybuild-framework/pull/1108>`_)
-    * fix ``gmpolf`` toolchain definition, to have ``gmpich`` as MPI components (instead of ``gmpich2``) (`#1112 <https://github.com/hpcugent/easybuild-framework/pull/1112>`_)
+  * fix picking required software version specified by ``--software-version`` and clean up ``tweak.py`` (`#1062 <https://github.com/hpcugent/easybuild-framework/pull/1062>`_, `#1063 <https://github.com/hpcugent/easybuild-framework/pull/1063>`_)
+  * escape ``$`` characters in module load message specified via ``modloadmsg`` easyconfig parameter) (`#1068 <https://github.com/hpcugent/easybuild-framework/pull/1068>`_)
+  * take available hidden modules into account in dependency resolution (`#1065 <https://github.com/hpcugent/easybuild-framework/pull/1065>`_)
+  * fix Intel MKL BLACS library being used for MPICH/MPICH2-based toolchains (`#1072 <https://github.com/hpcugent/easybuild-framework/pull/1072>`_)
+  * fix regular expression in ``fetch_parameter_from_easyconfig_file`` function (`#1096 <https://github.com/hpcugent/easybuild-framework/pull/1096>`_)
+  * don't hardcode queue names when submitting a job (`#1106 <https://github.com/hpcugent/easybuild-framework/pull/1106>`_)
+  * fix affiliation/mail address for Fotis in headers (`#1105 <https://github.com/hpcugent/easybuild-framework/pull/1105>`_)
+  * filter out ``/dev/null`` entries in patch file in ``det_patched_files`` function (`#1108 <https://github.com/hpcugent/easybuild-framework/pull/1108>`_)
+  * fix ``gmpolf`` toolchain definition, to have ``gmpich`` as MPI components (instead of ``gmpich2``) (`#1112 <https://github.com/hpcugent/easybuild-framework/pull/1112>`_)
 
-      * 'MPICH' refers to MPICH v3.x, while MPICH2 refers to MPICH(2) v2.x (MPICH v1.x is ancient/obsolete)
-      * **note**: this requires to reinstall the ``gmpolf`` module, using the updated easyconfig from `easyconfigs#1217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1217>`_
+    * 'MPICH' refers to MPICH v3.x, while MPICH2 refers to MPICH(2) v2.x (MPICH v1.x is ancient/obsolete)
+    * **note**: this requires to reinstall the ``gmpolf`` module, using the updated easyconfig from `easyconfigs#1217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1217>`_
 
 **easyblocks**
 
