@@ -3,6 +3,10 @@
 EasyBuild release notes
 =======================
 
+EasyBuild v|version| provides support for building and installing **538** different software packages,
+using 32 different (compilers) *toolchains*. It provides 139 software-specific easyblocks and 20 generic *easyblocks*,
+alongside 2,809 *easyconfig files*.
+
 v1.16.0 (December 17th 2014)
 ----------------------------
 
@@ -41,7 +45,7 @@ feature + bugfix release
   * update documentation references to point to http://easybuild.readthedocs.org (`#1102 <https://github.com/hpcugent/easybuild-framework/pull/1102>`_)
   * stop triggering deprecated functionality, to enable use of ``--deprecated=2.0`` (`#1107 <https://github.com/hpcugent/easybuild-framework/pull/1107>`_)
 
-    * see `Deprecated functionality <http://boegel-eb.readthedocs.org/en/deprecated/Deprecated-functionality.html#configuremake-fallback>`_ for more information
+    * see `Deprecated functionality <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_ for more information
 
   * deprecate automagic fallback to ``ConfigureMake`` easyblock (`#1113 <https://github.com/hpcugent/easybuild-framework/pull/1113>`_)
 
@@ -99,15 +103,35 @@ feature + bugfix release
 
 **easyconfigs**
 
-* 
+* added example easyconfig files for **26** new software packages:
 
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
-  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * ctffind (`#1249 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1249>`_), DBD_SQLite (`#1064 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1064>`_), DBD-mysql (`#1063 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1063>`_), grace (`#1131 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1131>`_), GSSAPI (`#1048 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1048>`_), Kerberos_V5 (`#1048 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1048>`_), libevent (`#1063 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1063>`_), libXdmcp (`#1129 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1129>`_), libXft (`#1017 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1017>`_), libXinerama (`#1017 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1017>`_), libXrender (`#1017 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1017>`_), Maven (`#1094 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1094>`_), MySQL (`#1063 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1063>`_), Net-LibIDN (`#1060 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1060>`_), OpenMD (`#1105 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1105>`_), Qhull (`#1105 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1105>`_), psmpi (`#1245 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1245>`_, `#1246 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1246>`_), RELION (`#1017 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1017>`_), renderproto (`#1017 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1017>`_), rjags (`#1125 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1125>`_), runjags (`#1125 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1125>`_), SPRNG (`#1138 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1138>`_, `#1141 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1141>`_), xineramaproto (`#1017 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1017>`_), XML-Dumper (`#1061 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1061>`_), XML-Parser (`#1061 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1061>`_), XML-Twig (`#1061 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1061>`_)
+
+* added easyconfigs for new toolchains
+
+  * ``intel/2014.10`` & ``intel/2014.11`` (`#1219 <https://github.com/hpcugent/easybuild-framework/pull/1219>`_), ``intel-para/2014.12`` (`#1246 <https://github.com/hpcugent/easybuild-framework/pull/1246>`_), ``gpsolf/2014.12`` (`#1245 <https://github.com/hpcugent/easybuild-framework/pull/1245>`_)
+  
+* include ``easyblock = 'ConfigureMake'`` in relevant easyconfigs to deal with deprecation of automagic fallback to ``ConfigureMake`` (`#1248 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1248>`_)
+
+  * see also `easybuild-framework#1113 <https://github.com/hpcugent/easybuild-framework/pull/1113>`_ and `Automagic fallback to ConfigureMake <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_
+
+* various enhancements, including:
+
+  * also build ``fftw3_threads`` libraries, and enhance sanity checks (`#1013 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1013>`_)
+  * add unit test to verify specified ``sanity_check_paths`` (`#1119 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1119>`_)
+  * update and clean up ``README``, refer to http://easybuild.readthedocs.org documentation (`#1184 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1184>`_, `#1224 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1224>`_)
+
+* various bug fixes, including:
+
+  * fix unit tests w.r.t. changes in framwork (`#1146 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1146>`_)
+  * remove unnecessary build dependencies for OpenMPI (`#1168 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1168>`_)
+  * remove duplicate line in OpenMPI easyconfigs (`#1207 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1207>`_)
+  * fix affiliation/mail address for Fotis in headers (`#1237 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1237>`_)
+  * fix permissions of easyconfig files for consistency (`#1210 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1210>`_)
+  * disable symbool lookup feature in cairo to fix build on SL6 (`#1241 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1241>`_)
+  * fix easyconfig ``gmpolf`` toolchain w.r.t. MPICH software name (`#1217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1217>`_)
+
+    * see also `easybuild-framework#1112 <https://github.com/hpcugent/easybuild-framework/pull/1112>`_
 
 
 v1.15.2 (October 7th 2014)
