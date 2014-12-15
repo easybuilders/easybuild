@@ -62,15 +62,52 @@ feature + bugfix release
   * fix ``gmpolf`` toolchain definition, to have ``gmpich`` as MPI components (instead of ``gmpich2``) (`#1112 <https://github.com/hpcugent/easybuild-framework/pull/1112>`_)
 
     * 'MPICH' refers to MPICH v3.x, while MPICH2 refers to MPICH(2) v2.x (MPICH v1.x is ancient/obsolete)
-    * **note**: this requires to reinstall the ``gmpolf`` module, using the updated easyconfig from `easyconfigs#1217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1217>`_
+    * **note**: this requires to reinstall the ``gmpolf`` module, using the updated easyconfig from `easybuild-easyconfigs#1217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1217>`_
 
 **easyblocks**
 
-* 
+* various enhancements, including:
+  
+  * update PETSc easyblock for recent versions (v3.5) (`#446 <https://github.com/hpcugent/easybuild-easyblocks/pull/446>`_)
+  * only include major/minor version numbers for FLUENT subdir (`#480 <https://github.com/hpcugent/easybuild-easyblocks/pull/480>`_)
+  * factor out 'move after install' code from impi easyblock to ``IntelBase``, use it for itac (`#487 <https://github.com/hpcugent/easybuild-easyblocks/pull/487>`_)
+  * support custom easyconfig parameters in ``EB_impi`` easyblock to correct behavior of MPI wrapper commands (`#493 <https://github.com/hpcugent/easybuild-easyblocks/pull/493>`_)
+  * consider both ``lib`` and ``lib64`` in sanity check for GROMACS (`#501 <https://github.com/hpcugent/easybuild-easyblocks/pull/501>`_)
+  * take ``preinstallopts`` and ``installopts`` into account in ``Binary`` easyblock (`#503 <https://github.com/hpcugent/easybuild-easyblocks/pull/503>`_)
+  * add sanity check command ``abaqus information=all`` for ABAQUS (`#504 <https://github.com/hpcugent/easybuild-easyblocks/pull/504>`_)
+  * update and clean up ``README``, refer to http://easybuild.readthedocs.org documentation (`#505 <https://github.com/hpcugent/easybuild-easyblocks/pull/505>`_, `#516 <https://github.com/hpcugent/easybuild-easyblocks/pull/516>`_)
+  * rename deprecated ``self.moduleGenerator`` to ``self.module_generator`` (`#506 <https://github.com/hpcugent/easybuild-easyblocks/pull/506>`_)
+
+    * see also `easybuild-framework#1088 <https://github.com/hpcugent/easybuild-easyblocks/pull/1088>`_
+
+  * check whether specified ``type`` value is a known value (``psmp`` or ``popt``) in CP2K easyblock (`#509 <https://github.com/hpcugent/easybuild-easyblocks/pull/509>`_)
+  * add support to ``SAMtools`` easyblock for installing recent versions (v1.x) (`#512 <https://github.com/hpcugent/easybuild-easyblocks/pull/512>`_)
+
+* various bug fixes, including:
+
+  * fix Libxc version check in CP2K easyblock (`#478 <https://github.com/hpcugent/easybuild-easyblocks/pull/478>`_)
+  * correctly specify ``mkl_libs`` when building *numpy* with GCC and imkl (`#485 <https://github.com/hpcugent/easybuild-easyblocks/pull/485>`_)
+  * extend noqa for OpenFOAM-Extend in build_step (`#488 <https://github.com/hpcugent/easybuild-easyblocks/pull/488>`_, `#520 <https://github.com/hpcugent/easybuild-easyblocks/pull/520>`_)
+  * correctly set ``$LD_LIBRARY_PATH``, ``$LIBRARY_PATH`` and ``$PKG_CONFIG_PATH`` for ``R`` (`#495 <https://github.com/hpcugent/easybuild-easyblocks/pull/495>`_)
+  * fix default value for ``files_to_copy`` in ``MakeCp`` easyblock (`#500 <https://github.com/hpcugent/easybuild-easyblocks/pull/500>`_)
+  * treat ``MPICH`` MPI family as MPICH v3.x instead of MPICH v1.x (`#519 <https://github.com/hpcugent/easybuild-easyblocks/pull/519>`_)
+
+    * see also `easybuild-framework#1112 <https://github.com/hpcugent/easybuild-framework/pull/1112>`_
+
+  * fix affiliation/mail address for Fotis in headers (`#521 <https://github.com/hpcugent/easybuild-easyblocks/pull/521>`_)
+  * fix use of deprecated functionality, enhance unit tests to check for it (`#523 <https://github.com/hpcugent/easybuild-easyblocks/pull/523>`_)
 
 **easyconfigs**
 
 * 
+
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
+  * foo (`#0000 <https://github.com/hpcugent/easybuild-easyconfigs/pull/0000>`_)
 
 
 v1.15.2 (October 7th 2014)
