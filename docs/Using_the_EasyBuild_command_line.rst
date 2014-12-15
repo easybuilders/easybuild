@@ -510,5 +510,5 @@ For example, to build and install WRF and its dependencies with a different tool
 
 .. note:: The ``--try-*`` command line options behave as expected when combined with ``--robot``. For example: a modified toolchain specified via ``--try-toolchain`` only trickles down until the toolchain level (not deeper). This makes for a particularly powerful combo for rebuilding entire software stacks using a different toolchain.
 
-.. note:: Modifying the software version does **note** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
+.. note:: Modifying the software version does **not** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
 
