@@ -123,12 +123,12 @@ feature + bugfix release
 
 * various bug fixes, including:
 
-  * fix unit tests w.r.t. changes in framwork (`#1146 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1146>`_)
+  * fix unit tests w.r.t. changes in framework (`#1146 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1146>`_)
   * remove unnecessary build dependencies for OpenMPI (`#1168 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1168>`_)
   * remove duplicate line in OpenMPI easyconfigs (`#1207 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1207>`_)
   * fix affiliation/mail address for Fotis in headers (`#1237 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1237>`_)
   * fix permissions of easyconfig files for consistency (`#1210 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1210>`_)
-  * disable symbool lookup feature in cairo to fix build on SL6 (`#1241 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1241>`_)
+  * disable symbol lookup feature in cairo to fix build on SL6 (`#1241 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1241>`_)
   * fix easyconfig ``gmpolf`` toolchain w.r.t. MPICH software name (`#1217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1217>`_)
 
     * see also `easybuild-framework#1112 <https://github.com/hpcugent/easybuild-framework/pull/1112>`_
