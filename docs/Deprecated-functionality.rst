@@ -22,29 +22,35 @@ However, every now and then a breaking change needs to be made to EasyBuild, bec
 mistakes that were made in the past. These changes involve *deprecating* the behaviour or functionality we want to get
 rid of, together with supporting a better alternative.
 
-Here is how we deprecate functionality:
+**Deprecating functionaliy:**
 
-* using a ``log.deprecated`` statement a certain block of code is tagged as deprecated, indicating a particular EasyBuild
-  version ``X.Y`` until which the corresponding functionality will remain supported; for example, to deprecate the use of
+* using a ``log.deprecated`` statement in EasyBuild version ``X.(Y-n)`` a certain block of code is tagged as deprecated,
+  indicating a particular EasyBuild version ``X.Y`` until which the corresponding functionality will remain supported;
+  for example, to deprecate the use of
   the ``makeopts`` easyconfig parameter in EasyBuild v2.0::
 
     if self.cfg['makeopts']:
         self.log.deprecated("Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead", '2.0')
 
-* until EasyBuild version ``X.Y``, the deprecation log message will manifest itself as a warning, highlighting the use
+* until EasyBuild version ``X.Y``, the deprecation log message will manifest itself as a *warning*, highlighting the use
   of deprecated functionality; for example::
 
     == 2014-12-16 16:29:07,906 main.easyconfig.easyconfig WARNING Deprecated functionality, will no longer work in v2.0:
     Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead;
     see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
 
-* starting with EasyBuild version ``X.Y``, the deprecation log message will result in an error,
+**Removing support for deprecated behavior:**
+
+* starting with EasyBuild version ``X.Y``, the deprecation log message will result in an *error*,
   indicating that the deprecated behavior is no longer supported; for example::
 
     ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:937 in process_easyconfig):
     Failed to process easyconfig /home/example/gzip-1.5-goolf-1.4.10.eb:
     DEPRECATED (since v2.0) functionality used: Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead;
     see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more informatio
+
+* the code supporting the deprecated functionality is *removed* in EasyBuild version ``X.(Y+1)`` (i.e., the first
+  non-bugfix-only release after version ``X.Y``)
 
 * until EasyBuild version ``X.(Y+1)``, the code supporting the deprecated functionality will still be available; using
   the ``--deprecated`` command line option (or, equivalently, the ``$EASYBUILD_DEPRECATED`` environment variable), the
@@ -114,7 +120,7 @@ Python version compatibility
 **Compatibility with Python 2.4 is deprecated.**
 
 * *deprecated since:* EasyBuild v1.14.0 (July'14)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: **upgrade to Python v2.6.x or v2.7.x**
 
 Ever since EasyBuild v1.0, the codebase has been Python 2.4 compatible. One reason for this is that EasyBuild was
@@ -170,7 +176,7 @@ Automagic fallback to ``ConfigureMake``
 **The automagic fallback to the** ``ConfigureMake`` **easyblock is deprecated.**
 
 * *deprecated since:* EasyBuild v1.16.0 (Dec'14)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: specify ``easyblock = 'ConfigureMake'`` in easyconfig file
 
 If the ``easyblock`` easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
@@ -192,7 +198,7 @@ Options for build command
 **Use of** ``premakeopts`` **or** ``makeopts`` **easyconfig parameters is deprecated.**
 
 * *deprecated since:* EasyBuild v1.13.0 (May'14)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use ``prebuildopts``/``buildopts`` instead
 
 For consistency in terminology, use of the ``premakeopts`` and ``makeopts`` generic easyconfig parameters is deprecated,
@@ -210,7 +216,7 @@ Shared library extension
 **Use of the** ``shared_lib_ext`` **'constant' in easyconfigs is deprecated.**
 
 * *deprecated since:* EasyBuild v1.5.0 (June'13)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use ``SHLIB_EXT`` instead
 
 Using the ``shared_lib_ext`` "magic" variable representing the extension for shared libraries (``.so`` on Linux,
@@ -222,7 +228,7 @@ Software license
 **Use of the** ``license`` **easyconfig parameter is deprecated.**
 
 * *deprecated since:* EasyBuild v1.11.0 (Feb'14)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use ``license_file`` or ``software_license`` instead
 
 The ``license`` easyconfig parameter, which was specific to the ``IntelBase`` generic easyblock and thus relevant
@@ -238,10 +244,14 @@ be a known license type (see ``eb --avail-easyconfig-licenses``).
 EasyBuild API changes
 ~~~~~~~~~~~~~~~~~~~~~
 
+Some changes in the EasyBuild API were made, which potentiallty affects easyblocks and the EasyBuild framework itself.
+
 .. _easyblocks_API:
 
-Easyblocks API (``easybuild.framework.easyblock``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Easyblocks API (``EasyBlock`` class from ``easybuild.framework.easyblock``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The API for easyblocks was modified slightly, to correct for a couple of historic mistakes.
 
 Return type of ``extra_options`` method
 +++++++++++++++++++++++++++++++++++++++
@@ -249,7 +259,7 @@ Return type of ``extra_options`` method
 **The list-of-tuples return type of the** ``extra_options`` **method is deprecated, should be a** ``dict`` **instead.**
 
 * *deprecated since:* EasyBuild v1.12.0 (Apr'14)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: ensure/assume ``dict`` return type
 
 The return type of the ``extra_options`` static method in the ``EasyBlock`` class has been changed to a *dictionary*
@@ -275,7 +285,7 @@ Extension filter template
 **Use of the** ``name`` **and** ``version`` **templates in** ``exts_filter`` **is deprecated.**
 
 * *deprecated since:* EasyBuild v1.2.0 (Feb'13)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use ``ext_name`` and ``ext_version`` instead
 
 Only the ``ext_name``, ``ext_version`` and ``src`` template strings can be used in the ``exts_filter`` extension filter
@@ -291,7 +301,7 @@ Module path of default class for extensions
 **Specifying the module path in** ``exts_defaultclass`` **is deprecated.**
 
 * *deprecated since:* EasyBuild v0.5 (Apr'12)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: *(none required, module path is derived from specified class name)*
 
 Explicitely specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is
@@ -303,7 +313,7 @@ Module path for easyblocks
 **Deriving the module path for easyblocks from the software name is deprecated.**
 
 * *deprecated since:* EasyBuild v1.4.0 (May'13)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use easyblock class name according to encoding scheme (e.g., ``EB_Foo``)
 
 Determining the *location* of Python modules representing easyblocks based on the software name (``name``) is deprecated.
@@ -321,7 +331,7 @@ function will not be affected.
 **The API of the** ``easybuild.tools.modules`` **module has been updated, certain aspects of the old API are deprecated.**
 
 * *deprecated since:* EasyBuild v1.8.0 (Oct'13) & v1.15.0 (Sept'15)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use equivalents available in new API (see below)
 
 The API of the ``easybuild.tools.modules`` Python module has been changed extensively when implementing support for
@@ -348,7 +358,7 @@ the ``exist`` method, which takes a list of module names *(since EasyBuild v1.15
 account.**
 
 * *deprecated since:* EasyBuild v1.3.0 (Apr'13)
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: reinstall (ancient) module files which are only defining the ``$SOFTX`` environment variables
 
 The ``get_software_root`` and ``get_software_version`` functions will only take ``$EBROOTFOO`` and ``$EBVERSIONFOO``
@@ -366,7 +376,7 @@ Renamed/relocated functions
 **Some functions/methods have been renamed or relocated, use via their previous location/name is deprecated.**
 
 * *deprecated since:* *(depends on function/method, see below)*
-* *no longer supported starting:* EasyBuild v2.0
+* *no longer supported in:* EasyBuild v2.0
 * *alternative(s)*: use new location/name
 
 A number of functions and methods that are part of the EasyBuild framework API have been renamed, mainly for consistency
