@@ -390,7 +390,9 @@ Controlling the robot search path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To control the robot search path, you can specify a (colon-separated list of) path(s) to ``--robot`` and/or
-``--robot-paths``::
+``--robot-paths`` (or, equivalently, ``$EASYBUILD_ROBOT`` and/or ``$EASYBUILD_ROBOT_PATHS``)::
+
+  eb --robot=$PWD:$HOME ...
 
 Paths specified to ``--robot`` get precedence over paths specified via ``--robot-paths``.
 Only ``--robot`` enables the dependency resolution mechanism; ``--robot-paths`` does not.
@@ -510,5 +512,5 @@ For example, to build and install WRF and its dependencies with a different tool
 
 .. note:: The ``--try-*`` command line options behave as expected when combined with ``--robot``. For example: a modified toolchain specified via ``--try-toolchain`` only trickles down until the toolchain level (not deeper). This makes for a particularly powerful combo for rebuilding entire software stacks using a different toolchain.
 
-.. note:: Modifying the software version does **note** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
+.. note:: Modifying the software version does **not** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
 

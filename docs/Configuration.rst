@@ -65,6 +65,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
 For more details w.r.t. each of the supported configuration types, see below.
 
+.. _configuration_file:
 
 Configuration file
 ~~~~~~~~~~~~~~~~~~
@@ -319,7 +320,7 @@ Different configuration options are available for changing the default behaviour
 For more information, see `Optional configuration settings`_.
 
 Setting ``$MODULEPATH``
-'''''''''''''''''''''''
++++++++++++++++++++++++
 
 After (re)configuring EasyBuild, you need to make sure that
 ``$MODULEPATH`` environment variable is extended with the
