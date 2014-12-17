@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20151218.01** (`Dec 18th 2014`): add release notes for EasyBuild v1.16.0
 * **release 20151217.01** (`Dec 17th 2014`): document deprecated functionality in EasyBuild v1.x (:ref:`deprecated`)
 * **release 20141204.02** (`Dec 4th 2014`): add EasyBuild release notes
 * **release 20141204.01** (`Dec 4th 2014`): updates for EasyBuild v1.16.0
