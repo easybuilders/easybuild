@@ -14,9 +14,9 @@ an :ref:`overview of currently deprecated functionality <overview_deprecated>`, 
 Deprecation policy
 ------------------
 
-With every EasyBuild release, we try very hard to maintain *backward compatibility*. That is, builds that worked with
-EasyBuild version ``X.Y`` should still work with EasyBuild version ``X.(Y+1)``, without requiring modifications to the
-used easyconfig file or easyblock.
+With every EasyBuild release, we try very hard to maintain *backward compatibility*. That is, EasyBuild version ``X.Y``
+should still build software packages that could be built with EasyBuild version ``X.(Y-1)``, without requiring
+modifications to the used easyconfig file or easyblock.
 
 However, every now and then a breaking change needs to be made to EasyBuild, because of design decisions or to resolve
 mistakes that were made in the past. These changes involve *deprecating* the behaviour or functionality we want to get
@@ -24,10 +24,9 @@ rid of, together with supporting a better alternative.
 
 **Deprecating functionaliy:**
 
-* using a ``log.deprecated`` statement in EasyBuild version ``X.(Y-n)`` a certain block of code is tagged as deprecated,
-  indicating a particular EasyBuild version ``X.Y`` until which the corresponding functionality will remain supported;
-  for example, to deprecate the use of
-  the ``makeopts`` easyconfig parameter in EasyBuild v2.0::
+* using a ``log.deprecated("msg", 'X.Y')`` statement in EasyBuild version ``X.(Y-n)`` a certain block of code is tagged
+  as *deprecated*, indicating that the corresponding functionality will no longer be supported in EasyBuild version
+  ``X.Y``; for example, to deprecate the use of the ``makeopts`` easyconfig parameter with EasyBuild v2.0::
 
     if self.cfg['makeopts']:
         self.log.deprecated("Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead", '2.0')
