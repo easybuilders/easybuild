@@ -129,8 +129,8 @@ feature + bugfix release
 
 * clean up use of deprecated functionality in existing easyconfigs (`#1252 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1252>`_, `#1259 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1259>`_)
 
-  * check for use of deprecated functionality in easyconfigs unit tests
   * stop using deprecated ``makeopts``, ``premakeopts`` and ``shared_lib_ext``
+  * check for use of deprecated functionality in easyconfigs unit tests
   * see also http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#easyconfig-parameters
 
 * various other enhancements, including:
@@ -153,7 +153,7 @@ feature + bugfix release
 
   * fix ``source_urls`` for WRF and WPS (`#1225 <h`ttps://github.com/hpcugent/easybuild-framework/pull/1225>`_)
   * fix and clean up GATE easyconfigs (`#1228 <h`ttps://github.com/hpcugent/easybuild-framework/pull/1228>`_)
-  * fix broken CLHEP builds by including ``-gcc` in ``$CXXFLAGS`` (`#1254 <https://github.com/hpcugent/easybuild-framework/pull/1254>`_)
+  * fix broken CLHEP builds by including ``-gcc`` in ``$CXXFLAGS`` (`#1254 <https://github.com/hpcugent/easybuild-framework/pull/1254>`_)
   * add patch to fix broken test in Go (`#1257 <https://github.com/hpcugent/easybuild-framework/pull/1257>`_)
   * fix name of GMAP easyconfigs, should be GMAP-GSNAP (`#1268 <https://github.com/hpcugent/easybuild-framework/pull/1268>`_)
 
