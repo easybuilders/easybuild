@@ -390,7 +390,9 @@ Controlling the robot search path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To control the robot search path, you can specify a (colon-separated list of) path(s) to ``--robot`` and/or
-``--robot-paths``::
+``--robot-paths`` (or, equivalently, ``$EASYBUILD_ROBOT`` and/or ``$EASYBUILD_ROBOT_PATHS``)::
+
+  eb --robot=$PWD:$HOME ...
 
 Paths specified to ``--robot`` get precedence over paths specified via ``--robot-paths``.
 Only ``--robot`` enables the dependency resolution mechanism; ``--robot-paths`` does not.
