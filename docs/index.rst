@@ -101,6 +101,7 @@ Appendices
     Changelog
     Code_style
     Configuration_Legacy
+    Deprecated-functionality
     eb_*
     Installation_Alternative
     Installing-environment-modules-without-root-permissions

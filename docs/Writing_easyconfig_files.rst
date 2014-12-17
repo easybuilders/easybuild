@@ -160,6 +160,8 @@ Example:
 .. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the software being installed.
   Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example).
 
+.. _configure_build_install_command_options:
+
 Configure/build/install command options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
