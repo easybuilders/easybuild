@@ -156,6 +156,7 @@ feature + bugfix release
   * fix broken CLHEP builds by including ``-gcc`` in ``$CXXFLAGS`` (`#1254 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1254>`_)
   * add patch to fix broken test in Go (`#1257 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1257>`_)
   * fix name of GMAP easyconfigs, should be GMAP-GSNAP (`#1268 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1268>`_)
+  * fix easyconfig filenames, enhance unit test to check easyconfig filenames (`#1271 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1271>`_)
 
 
 v1.15.2 (October 7th 2014)
