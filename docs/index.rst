@@ -47,6 +47,16 @@ Basic usage topics
     Writing_easyconfig_files
     Logfiles
 
+Other topics
+============
+
+.. toctree::
+    :glob:
+    :maxdepth: 2
+
+    Code_style
+    Deprecated-functionality
+
 Getting help
 ============
 
@@ -99,9 +109,7 @@ Appendices
     :maxdepth: 1
 
     Changelog
-    Code_style
     Configuration_Legacy
-    Deprecated-functionality
     eb_*
     Installation_Alternative
     Installing-environment-modules-without-root-permissions
