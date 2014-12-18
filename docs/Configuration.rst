@@ -10,6 +10,8 @@ Configuring EasyBuild
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
+.. _configuration_types:
+
 Supported configuration types
 -----------------------------
 
@@ -63,8 +65,12 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 
 For more details w.r.t. each of the supported configuration types, see below.
 
+.. _configuration_file:
+
 Configuration file
 ~~~~~~~~~~~~~~~~~~
+
+.. _list_of_configuration_files:
 
 List of used configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -119,6 +125,29 @@ An example configuration file that should make everything clear is shown below.
     modules-tool: Lmod
     # use different default installation path
     prefix=/home/you/work/easybuild/
+
+.. _configuration_file_templates_constants:
+
+Templates and constants supported in configuration files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For each configuration option, a matching template is available to refer to its corresponding value.
+
+A couple of predefined constants are available to be used (only) in EasyBuild configuration files.
+An overview of supported constants is available via ``eb --avail-cfgfile-constants``.
+
+For both templates and constants, the syntax format is ``%(template_or_constant_name)s``.
+
+Example
++++++++
+
+To include both the easyconfigs archive repository and the default list of robot search paths in the
+active robot search path, the following configuration file entry can be used, featuring the template for the
+``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
+
+    robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
+
+See also :ref:`controlling_robot_search_path`.
 
 Generating a template configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -291,7 +320,7 @@ Different configuration options are available for changing the default behaviour
 For more information, see `Optional configuration settings`_.
 
 Setting ``$MODULEPATH``
-'''''''''''''''''''''''
++++++++++++++++++++++++
 
 After (re)configuring EasyBuild, you need to make sure that
 ``$MODULEPATH`` environment variable is extended with the

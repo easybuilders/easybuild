@@ -12,7 +12,9 @@ Luckily, the majority of software delivery mechanisms are being designed around
 either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
 Yet, in case the software build calls for more elaborate steps
 (scientific software never fails to surprise us in this regard),
-an :ref:`easyblocks` may be needed, which is the subject of other part of this documentation.
+an :ref:`easyblock <easyblocks>` may be needed, which is the subject of other part of this documentation.
+
+.. _what_is_an_easyconfig:
 
 What is an easyconfig (file)?
 -----------------------------
@@ -157,6 +159,8 @@ Example:
 
 .. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the software being installed.
   Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example).
+
+.. _configure_build_install_command_options:
 
 Configure/build/install command options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -88,7 +88,8 @@ Appendices
 .. toctree::
     :maxdepth: 1
 
-* :ref:`Changelog <changelog>`
+* :ref:`Documentation changelog <changelog>`
+* :ref:`EasyBuild release notes <release_notes>`
 * :ref:`Search <search>`
 * :ref:`Useful Links <useful_links>`
 
@@ -97,11 +98,13 @@ Appendices
     :glob:
     :maxdepth: 1
 
+    Changelog
     Code_style
     Configuration_Legacy
+    Deprecated-functionality
     eb_*
     Installation_Alternative
     Installing-environment-modules-without-root-permissions
     Installing-Lmod-without-root-permissions
     Useful_links
-    Changelog
+    Release_notes
