@@ -194,7 +194,7 @@ An overview of all available easyconfig parameters can be obtained via
 
 Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
 
-Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock. Fro example::
+Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock. For example::
 
   $ eb -a -e EB_WRF
 
