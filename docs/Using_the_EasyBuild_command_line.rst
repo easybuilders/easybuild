@@ -194,12 +194,14 @@ An overview of all available easyconfig parameters can be obtained via
 
 Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
 
-Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock;
-by default, the ones specific to the generic ConfigureMake easyblock are included. For example::
+Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock. Fro example::
 
   $ eb -a -e EB_WRF
 
 If you want to see the full output of running this command, look at :doc:`eb_a_e_EB_WRF`.
+
+.. note:: With the automagic fallback to the ``ConfigureMake`` easyblock being deprecated (see :ref:`ConfigureMake_fallback`),
+  the easyconfig parameters specific to ``ConfigureMake`` are no longer included by default (since EasyBuild v1.16.1).
 
 Enable debug logging, ``--debug`` / ``-d``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
