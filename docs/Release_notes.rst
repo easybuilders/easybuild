@@ -7,6 +7,31 @@ The latest version of EasyBuild provides support for building and installing **5
 using 32 different (compilers) *toolchains*. It contains 141 software-specific easyblocks and 20 generic *easyblocks*,
 alongside 3,066 *easyconfig files*.
 
+v1.16.1 (December 19th 2014)
+----------------------------
+
+bugfix release
+
+**framework**
+
+* fix functionality that is broken with ``--deprecated=2.0`` or with ``$EASYBUILD_DEPRECATED=2.0``
+
+  * don't include easyconfig parameters for ``ConfigureMake`` in ``eb -a``, since fallback is deprecated (`#1123 <https://github.com/hpcugent/easybuild-framework/pull/1123>`_)
+  * correctly check software_license value type (`#1124 <https://github.com/hpcugent/easybuild-framework/pull/1124>`_)
+  * fix ``generate_software_list.py`` script w.r.t. deprecated fallback to ``ConfigureMake`` (`#1127 <https://github.com/hpcugent/easybuild-framework/pull/1127>`_)
+
+* other bug fixes
+
+  * fix logging issues in tests, sync with vsc-base v2.0.0 (`#1120 <https://github.com/hpcugent/easybuild-framework/pull/1120>`_)
+
+**easyblocks**
+
+* fix EasyBuild versions for which ``$EASYBUILD_DEPRECATED=1.0`` is set in EasyBuild sanity check (`#531 <https://github.com/hpcugent/easybuild-easyblocks/pull/531>`_)
+
+**easyconfigs**
+
+* set default easyblock to ConfigureMake in TEMPLATE.eb (`#1277 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1277>`_)
+
 v1.16.0 (December 18th 2014)
 ----------------------------
 
