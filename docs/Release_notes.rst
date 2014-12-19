@@ -14,7 +14,7 @@ bugfix release
 
 **framework**
 
-* fix functionality that is broken with `--deprecated=2.0` or with `$EASYBUILD_DEPRECATED=2.0`
+* fix functionality that is broken with ``--deprecated=2.0`` or with ``$EASYBUILD_DEPRECATED=2.0``
 
   * don't include easyconfig parameters for ``ConfigureMake`` in ``eb -a``, since fallback is deprecated (`#1123 <https://github.com/hpcugent/easybuild-framework/pull/1123>`_)
   * correctly check software_license value type (`#1124 <https://github.com/hpcugent/easybuild-framework/pull/1124>`_)
@@ -26,7 +26,7 @@ bugfix release
 
 **easyblocks**
 
-* fix EasyBuild versions for which DEPRECATED=1.0 is set in EasyBuild sanity check (`#531 <https://github.com/hpcugent/easybuild-easyblocks/pull/531>`_)
+* fix EasyBuild versions for which ``$EASYBUILD_DEPRECATED=1.0`` is set in EasyBuild sanity check (`#531 <https://github.com/hpcugent/easybuild-easyblocks/pull/531>`_)
 
 **easyconfigs**
 
