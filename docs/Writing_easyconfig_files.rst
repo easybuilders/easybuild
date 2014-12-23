@@ -214,8 +214,8 @@ Example:
 .. code:: python
 
   sanity_check_paths = {
-    'files': ["bin/xhpl"],
-    'dirs': [],
+      'files': ["bin/xhpl"],
+      'dirs': [],
   }
 
 Easyblock specification
@@ -322,8 +322,8 @@ Example:
   version = '4.8.3'
   ...
   source_urls = [
-    # http://ftpmirror.gnu.org/gcc/gcc-4.8.3
-    'http://ftpmirror.gnu.org/%(namelower)s/%(namelower)s-%(version)s',
+      # http://ftpmirror.gnu.org/gcc/gcc-4.8.3
+      'http://ftpmirror.gnu.org/%(namelower)s/%(namelower)s-%(version)s',
   ]
   sources = [SOURCELOWER_TAR_GZ]  # gcc-4.8.3.tar.gz
   ...
