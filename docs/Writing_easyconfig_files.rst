@@ -73,7 +73,7 @@ Mandatory easyconfig parameters
 A handful of easyconfig parameters are `mandatory`:
 
 * **name, version**: specify what software (version) to build
-* **homepage**, description: metadata (used for module help)
+* **homepage, description**: metadata (used for module help)
 * **toolchain**: specifies name and version of compiler toolchain to use
 
   * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
