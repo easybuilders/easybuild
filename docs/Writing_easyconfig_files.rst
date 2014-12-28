@@ -73,7 +73,7 @@ Mandatory easyconfig parameters
 A handful of easyconfig parameters are `mandatory`:
 
 * **name, version**: specify what software (version) to build
-* **homepage**, description: metadata (used for module help)
+* **homepage, description**: metadata (used for module help)
 * **toolchain**: specifies name and version of compiler toolchain to use
 
   * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
@@ -214,8 +214,8 @@ Example:
 .. code:: python
 
   sanity_check_paths = {
-    'files': ["bin/xhpl"],
-    'dirs': [],
+      'files': ["bin/xhpl"],
+      'dirs': [],
   }
 
 Easyblock specification
@@ -322,8 +322,8 @@ Example:
   version = '4.8.3'
   ...
   source_urls = [
-    # http://ftpmirror.gnu.org/gcc/gcc-4.8.3
-    'http://ftpmirror.gnu.org/%(namelower)s/%(namelower)s-%(version)s',
+      # http://ftpmirror.gnu.org/gcc/gcc-4.8.3
+      'http://ftpmirror.gnu.org/%(namelower)s/%(namelower)s-%(version)s',
   ]
   sources = [SOURCELOWER_TAR_GZ]  # gcc-4.8.3.tar.gz
   ...
