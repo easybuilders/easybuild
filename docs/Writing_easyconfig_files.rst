@@ -74,7 +74,7 @@ A handful of easyconfig parameters are `mandatory`:
 
 * **name, version**: specify what software (version) to build
 * **homepage, description**: metadata (used for module help)
-* **toolchain**: specifies name and version of compiler toolchain to use
+* **toolchain**: specifies name and version of compiler toolchain to use. A complete list of supported toolchains can be found at :ref:`eb_list_toolchains`
 
   * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
 
