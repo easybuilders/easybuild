@@ -25,7 +25,8 @@ It consists of a plain text file (in Python syntax) with mostly `key-value` assi
 
 Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][-<versionsuffix>].eb``.
 
-The toolchain label (which includes the toolchain name and version) is omitted when a ``dummy`` toolchain is used; the version suffix is omitted when it's empty.
+The toolchain label (which includes the toolchain name and version) is omitted when a ``dummy`` toolchain is used
+(see also :ref:`dummy_toolchain`); the version suffix is omitted when it's empty.
 
 .. note:: the filename of an easyconfig is only important w.r.t. dependency resolution (``--robot``), see :ref:`use_robot`.
 
@@ -74,9 +75,10 @@ A handful of easyconfig parameters are `mandatory`:
 
 * **name, version**: specify what software (version) to build
 * **homepage, description**: metadata (used for module help)
-* **toolchain**: specifies name and version of compiler toolchain to use. A complete list of supported toolchains can be found at :ref:`eb_list_toolchains`
+* **toolchain**: specifies name and version of compiler toolchain to use
 
   * format: dictionary with name/version keys, e.g., ``{'name': 'foo', 'version': '1.2.3'}``
+  * a list of supported toolchains can be found at :ref:`toolchain_table`
 
 Remarks:
 
