@@ -148,6 +148,7 @@ Remarks:
 * modules must exist for all (non-system) dependencies
 * (non-system) dependencies can be resolved via ``--robot``
 * format: ``(<name>, <version>[, <versionsuffix>[, <toolchain>]])``
+* osdependencies format: Suppply a list of tuples to check for, because osdependencies can have different names on different distributions a tuple of different names can be supplied: ``[([<osdependency os1> [, <osdependency os2>, ...]) [, ...]]`` e.g.  [('openssl-devel', 'libssl-dev')]
 
 Example:
 
