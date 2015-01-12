@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150112.01** (`Jan 12th 2014`): mention need to escape ``%`` when configuring log file format via configuration file (see :ref:`logfile_format`)
 * **release 20150107.01** (`Jan 7th 2014`): document behaviour of `dummy` toolchain (:ref:`dummy_toolchain`)
 * **release 20141219.01** (`Dec 19th 2014`): add release notes for EasyBuild v1.16.1
 * **release 20141218.01** (`Dec 18th 2014`): add release notes for EasyBuild v1.16.0
