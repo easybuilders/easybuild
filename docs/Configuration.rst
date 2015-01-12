@@ -409,7 +409,8 @@ is supported:
 * ``%(time)s``: the time at which the installation was started (in ``HHMMSS`` format, e.g. ``214359``)
 
 .. note:: The '``%``' character in these template values must be escaped when used in a configuration file
-          (and only then), e.g., '``%%(name)s``'.
+          (and only then), e.g., '``%%(name)s``'. Without escaping, an error like ``InterpolationMissingOptionError: Bad
+          value substitution`` will be thrown by ``ConfigParser``.
 
 For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
 ``easybuild`` can be done via the ``--logfile-format`` command line option::
