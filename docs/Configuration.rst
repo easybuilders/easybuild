@@ -408,12 +408,22 @@ is supported:
 * ``%(date)s``: the date on which the installation was performed (in ``YYYYMMDD`` format, e.g. ``20120324``)
 * ``%(time)s``: the time at which the installation was started (in ``HHMMSS`` format, e.g. ``214359``)
 
-For example, the logfile format can be specified as follows in the
-EasyBuild configuration file:
+.. note:: The '``%``' character in these template values must be escaped when used in a configuration file
+          (and only then), e.g., '``%%(name)s``'.
 
-.. code:: python
+For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
+``easybuild`` can be done via the ``--logfile-format`` command line option::
 
-    logfile-format = "easylog", "easybuild-%(name)s.log"
+    eb --logfile-format="easybuild,easybuild-%(name)s.log" ...
+
+or the ``$EASYBUILD_LOGFILE_FORMAT`` environment variable::
+
+    export EASYBUILD_LOGFILE_FORMAT="easybuild,easybuild-%(name)s.log"
+
+or by including the following in an EasyBuild configuration file (note the use of '``%%``' to escape the ``name``
+template value here)::
+
+    logfile-format = "easylog", "easybuild-%%(name)s.log"
 
 
 Optional configuration settings
