@@ -398,7 +398,7 @@ Logfile format (``--logfile-format``)
 *default*:
 ``easybuild, easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log``
 
-The ``logfile-format`` configuration setting contains a tuple
+The `logfile format` configuration setting contains a tuple
 specifying a log directory name and a template log file name.
 In both of these values, using the following string templates
 is supported:
@@ -408,9 +408,10 @@ is supported:
 * ``%(date)s``: the date on which the installation was performed (in ``YYYYMMDD`` format, e.g. ``20120324``)
 * ``%(time)s``: the time at which the installation was started (in ``HHMMSS`` format, e.g. ``214359``)
 
-.. note:: The '``%``' character in these template values must be escaped when used in a configuration file
-          (and only then), e.g., '``%%(name)s``'. Without escaping, an error like ``InterpolationMissingOptionError: Bad
-          value substitution`` will be thrown by ``ConfigParser``.
+.. note:: Because templating is supported in configuration files themselves (see
+          :ref:`configuration_file_templates_constants`), the '``%``' character in these template values must be escaped
+          when used in a configuration file (and only then), e.g., '``%%(name)s``'. Without escaping, an error like
+          ``InterpolationMissingOptionError: Bad value substitution`` will be thrown by ``ConfigParser``.
 
 For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
 ``easybuild`` can be done via the ``--logfile-format`` command line option::
