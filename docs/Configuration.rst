@@ -425,7 +425,7 @@ or the ``$EASYBUILD_LOGFILE_FORMAT`` environment variable::
 or by including the following in an EasyBuild configuration file (note the use of '``%%``' to escape the ``name``
 template value here)::
 
-    logfile-format = "easylog,easybuild-%%(name)s.log"
+    logfile-format = easybuild,easybuild-%%(name)s.log
 
 
 Optional configuration settings
