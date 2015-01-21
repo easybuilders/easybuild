@@ -209,7 +209,7 @@ Required dependencies
 *  **Linux** (or OSX) operating system; preferably x86_64 based
 *  `Python 2.4 <http://python.org>`_, or a more recent 2.x version
 *  `Tcl/C environment-modules  <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
-   or `Lmod <lmod.sourceforge.net>`_ (version >= 5.6.3)
+   or `Lmod <http://lmod.sourceforge.net>`_ (version >= 5.6.3)
 
   * environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
      installed (with header files and development libraries)
