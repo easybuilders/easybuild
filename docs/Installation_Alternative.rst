@@ -36,13 +36,13 @@ you can use one of the following simple commands:
 
 -  using ``easy_install`` (old tool, but still works)::
 
-       easy_install --prefix /tmp easybuild
+       easy_install --prefix /tmp/$USER easybuild
 
 -  using ``pip`` (more recent and better installation tool for Python software)::
 
-       pip install --prefix /tmp easybuild
+       pip install --install-option "--prefix=/tmp/$USER" easybuild
 
-The ``--prefix /tmp`` part in these commands allows you to install EasyBuild without admin rights into ``/tmp``.
+The ``--prefix /tmp/$USER`` part in these commands allows you to install EasyBuild without admin rights into ``/tmp/$USER``.
 
 
 Adjusting ``$PATH`` and ``$PYTHONPATH`` environment variables
@@ -55,8 +55,8 @@ On (most) Linux distributions, the command for doing this is:
 
 .. code:: bash
 
-    export PATH=/tmp/bin:$PATH
-    export PYTHONPATH=/tmp/lib/python2.7/site-packages:$PYTHONPATH
+    export PATH=/tmp/$USER/bin:$PATH
+    export PYTHONPATH=/tmp/$USER/lib/python2.7/site-packages:$PYTHONPATH
 
 .. tip::
 
@@ -64,14 +64,14 @@ On (most) Linux distributions, the command for doing this is:
   environment variable for a given installation prefix, you can use the
   following command::
 
-    python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp');"
+    python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp$USER/');"
 
 
 Install with admin rights
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you do have admin rights on the system where you want to install
-EasyBuild, you can simply omit the ``--prefix /tmp``
+EasyBuild, you can simply omit the ``--prefix /tmp$USER/``
 to have EasyBuild installed system-wide. In that case, you do not need
 to touch the ``$PATH`` or ``$PYTHONPATH`` environment variables since
 the ``eb`` command will be installed in one of the default paths.
@@ -102,12 +102,12 @@ Installing the EasyBuild packages separately
 
 Each of the EasyBuild packages can also be installed separetely::
 
-    pip install --prefix /tmp easybuild-framework
-    pip install --prefix /tmp easybuild-easyblocks
-    pip install --prefix /tmp easybuild-easyconfigs
+    pip install --install-option "--prefix=/tmp/$USER" easybuild-framework
+    pip install --install-option "--prefix=/tmp/$USER" easybuild-easyblocks
+    pip install --install-option "--prefix=/tmp/$USER" easybuild-easyconfigs
 
 This is basically the exact same sequence of steps as they will be
-performed when running ``pip install --prefix /tmp easybuild``.
+performed when running ``pip install --install-option "--prefix=/tmp/$USER" easybuild``.
 
 Installation from downloaded sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,7 +117,7 @@ tarball, use the following steps::
 
     tar xfvz easybuild-framework-1.0.tar.gz
     cd easybuild-framework-1.0
-    pip install --prefix /tmp .
+    pip install --install-option "--prefix=/tmp/$USER" .
 
 Do note that when an EasyBuild package is being installed without
 having the EasyBuild packages that it depends upon available,
@@ -133,7 +133,7 @@ the easyconfigs package depends on both the framework and easyblocks packages.
 If you do not have ``pip`` or ``easy_install`` available, you can also
 fall back to using the ``setup.py`` script directly::
 
-    python setup.py --prefix /tmp install
+    python setup.py --prefix /tmp$USER install
 
 
 Installation of latest release from GitHub
@@ -142,7 +142,7 @@ Installation of latest release from GitHub
 To install the latest (stable) release of an EasyBuild package directly
 from GitHub, use the following command::
 
-    pip install --prefix /tmp http://github.com/hpcugent/easybuild-framework/archive/master.tar.gz
+    pip install --install-option "--prefix=/tmp/$USER" http://github.com/hpcugent/easybuild-framework/archive/master.tar.gz
 
 Again, the order in which the EasyBuild packages are installed is
 important to have full control over the installation process, see
@@ -157,7 +157,7 @@ from the previous section to install from the ``develop`` branch (or
 any of the available feature branches in any
 EasyBuild repository for that matter)::
 
-    pip install --prefix /tmp http://github.com/hpcugent/easybuild-framework/archive/develop.tar.gz
+    pip install --install-option "--prefix=/tmp/$USER" http://github.com/hpcugent/easybuild-framework/archive/develop.tar.gz
 
 .. note::
   You should use this only if you are interested in developing for EasyBuild.
@@ -169,8 +169,8 @@ Installation of latest development version using provided script
 You can set up a development version of EasyBuild, in the following manner::
 
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
-    bash install-EasyBuild-develop.sh hpcugent /tmp/$$ ## N.B. repo-to-be-used & installation prefix
-    module load /tmp/$$/module-EasyBuild-develop
+    bash install-EasyBuild-develop.sh hpcugent /tmp/$USER/$$ ## N.B. repo-to-be-used & installation prefix
+    module load /tmp/$USER/$$/module-EasyBuild-develop
     eb --version  ## This should ensure you have a reasonable instance of EasyBuild
 
 .. note:: The above creates a modulefile which you can load/inspect at will.
