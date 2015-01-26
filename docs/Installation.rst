@@ -21,14 +21,14 @@ The only strict requirements are:
 * **Python version 2.6**, or a more recent 2.x version
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
-  * the path to the actual command provided by the modules tool used *must* be included in ``$PATH``,
-    such that the command is readily available to EasyBuild
+  * the path to the actual modules tool command used *must* be included in ``$PATH``,
+    to make the command readily available to EasyBuild
 
     * for Tcl/C environment modules: ``modulecmd``
     * for Tcl-only environment modules: ``modulecmd.tcl``
     * for Lmod: ``lmod``
 
-  * the path where the command binary/script is located can be determined by inspecting the ``module`` function definition, 
+  * the path where the command binary/script is located can be determined via the ``module`` function,
     for example using ``type -f module``
 
 For more information on (optional) dependencies, see :ref:`dependencies`.

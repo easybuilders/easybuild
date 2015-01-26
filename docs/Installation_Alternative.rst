@@ -106,7 +106,7 @@ Each of the EasyBuild packages can also be installed separetely::
     pip install --install-option "--prefix=/tmp/$USER" easybuild-easyblocks
     pip install --install-option "--prefix=/tmp/$USER" easybuild-easyconfigs
 
-This is basically the exact same sequence of steps as they will be
+This is the exact same sequence of steps as they will be
 performed when running ``pip install --install-option "--prefix=/tmp/$USER" easybuild``.
 
 Installation from downloaded sources
