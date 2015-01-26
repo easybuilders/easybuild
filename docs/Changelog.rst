@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150126.01** (`Jan 26th 2014`):
+
+  * fix ``pip`` installation prefix option (:ref:`alt_inst_methods`)
+  * clarify need to have modules tool binary available in ``$PATH`` (:ref:`installation`)
 * **release 20150112.01** (`Jan 12th 2014`): mention need to escape ``%`` when setting log file format via config file (see :ref:`logfile_format`)
 * **release 20150107.01** (`Jan 7th 2014`): document behaviour of `dummy` toolchain (:ref:`dummy_toolchain`)
 * **release 20141219.01** (`Dec 19th 2014`): add release notes for EasyBuild v1.16.1
