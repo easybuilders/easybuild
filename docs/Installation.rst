@@ -11,6 +11,28 @@ Notes on other ways of installing EasyBuild are available under section :ref:`al
 
 --------------
 
+Requirements
+------------
+
+.. XXX - UPDATE BY VERSION, below
+
+The only strict requirements are:
+
+* **Python version 2.6**, or a more recent 2.x version
+* a **modules tool**: Tcl(/C) environment modules or Lmod
+
+  * the path to the actual command provided by the modules tool used *must* be included in ``$PATH``,
+    such that the command is readily available to EasyBuild
+
+    * for Tcl/C environment modules: ``modulecmd``
+    * for Tcl-only environment modules: ``modulecmd.tcl``
+    * for Lmod: ``lmod``
+
+  * the path where the command binary/script is located can be determined by inspecting the ``module`` function definition, 
+    for example using ``type -f module``
+
+For more information on (optional) dependencies, see :ref:`dependencies`.
+
 
 Bootstrapping EasyBuild
 -----------------------
@@ -23,13 +45,6 @@ To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
 it - and yes, we use EasyBuild for doing so.
 
-.. XXX - UPDATE BY VERSION, below
-
-.. tip::
-  All you really need as required `dependencies`_ are `Python 2.4 (or 2.x)`
-  and `environment modules` (Tcl/C or Lmod variants) installed on your system, beforehand.
-  Practically speaking, `a compiler able to build GCC` is desired for initiating most software builds,
-  yet the EasyBuild framework, by itself, does not restrict you in what is possible.
 
 Bootstrapping procedure
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -207,7 +222,7 @@ Required dependencies
 ~~~~~~~~~~~~~~~~~~~~~
 
 *  **Linux** (or OSX) operating system; preferably x86_64 based
-*  `Python 2.4 <http://python.org>`_, or a more recent 2.x version
+*  `Python 2.6 <http://python.org>`_, or a more recent 2.x version
 *  `Tcl/C environment-modules  <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
    or `Lmod <http://lmod.sourceforge.net>`_ (version >= 5.6.3)
 
