@@ -64,14 +64,14 @@ On (most) Linux distributions, the command for doing this is:
   environment variable for a given installation prefix, you can use the
   following command::
 
-    python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp$USER/');"
+    python -c "import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix='/tmp/$USER/');"
 
 
 Install with admin rights
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you do have admin rights on the system where you want to install
-EasyBuild, you can simply omit the ``--prefix /tmp$USER/``
+EasyBuild, you can simply omit the ``--prefix /tmp/$USER/``
 to have EasyBuild installed system-wide. In that case, you do not need
 to touch the ``$PATH`` or ``$PYTHONPATH`` environment variables since
 the ``eb`` command will be installed in one of the default paths.
@@ -133,7 +133,7 @@ the easyconfigs package depends on both the framework and easyblocks packages.
 If you do not have ``pip`` or ``easy_install`` available, you can also
 fall back to using the ``setup.py`` script directly::
 
-    python setup.py --prefix /tmp$USER install
+    python setup.py --prefix /tmp/$USER install
 
 
 Installation of latest release from GitHub
