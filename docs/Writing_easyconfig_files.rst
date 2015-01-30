@@ -160,7 +160,16 @@ Example:
   builddependencies = [('CMake', '2.8.12', '', ('GCC', '4.8.2')]
 
 .. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the software being installed.
-  Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example).
+  Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example above).
+
+You can also define a dependency which uses the dummy toolchain:
+
+.. code:: python
+  
+  name = 'GTI'
+  ...
+  toolchain = {'name': 'goolf', 'version': '1.5.14'}
+  dependencies = [('PnMPI', '1.2.0', '', ('dummy', ''))]
 
 .. _configure_build_install_command_options:
 
