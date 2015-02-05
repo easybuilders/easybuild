@@ -101,11 +101,13 @@ For authors of easyconfig files:
 
 * :ref:`ConfigureMake_fallback`
 * :ref:`easyconfig_parameters`
+* :ref:`mrbayes_beagle`
 
 For developers of easyblocks:
 
 * :ref:`easyblocks_API`
 * :ref:`renamed_relocated_functions`
+* :ref:`changes_generic_easyblocks`
 
 For EasyBuild framework developers:
 
@@ -239,6 +241,23 @@ to specify the license under which the software was released (e.g., GPLv2, BSD, 
 be a known license type (see ``eb --avail-easyconfig-licenses``).
 
 .. note:: The `software_license` easyconfig parameter will become **mandatory** at some point.
+
+.. _mrbayes_beagle:
+
+``BEAGLE`` dependency in ``MrBayes`` easyblock replaced by ``beagle-lib``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**The** ``MrBayes`` **easyblock no longer considers** ``BEAGLE`` **as a valid dependency.**
+
+* *deprecated since:* EasyBuild v1.6.0 (Jul'14)
+* *no longer supported in:* EasyBuild v2.0
+* *alternative(s)*: use ``beagle-lib`` instead
+
+Due to a misnomer in the easyconfig files for ``beagle-lib`` (formerly named ``BEAGLE``), the custom easyblock for
+``MrBayes`` now no longer considers ``BEAGLE`` as a dependency.
+
+The library required by ``MrBayes`` must now be provided as a dependency named ``beagle-lib``.
+
 
 EasyBuild API changes
 ~~~~~~~~~~~~~~~~~~~~~
@@ -403,3 +422,49 @@ Some functions have moved to a different location:
 
 The ``get_log`` function provided by the ``easybuild.tools.build_log`` module has been deprecated entirely,
 no alternatives are provided (since none are needed). *(since EasyBuild v1.3.0 (Apr'13))*
+
+.. _changes_generic_easyblocks:
+
+Changes in (generic) easyblocks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Named argument ``builddir`` in ``CMakeMake.configure_step`` replaced with ``srcdir``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**The named argument** ``builddir`` **in the** ``configure_step`` **method of the generic** ``CMakeMake`` **easyblock
+was replaced by the equivalent** ``srcdir`` **named argument.**
+
+* *deprecated since:* EasyBuild v1.4.0 (May'13)
+* *no longer supported in:* EasyBuild v2.0
+* *alternative(s)*: use the ``srcdir`` named argument instead
+
+Since the ``builddir`` named argument in the ``configure_step`` method of the generic ``CMakeMake`` easyblock was a
+misnomer (it specifies the location of the *source* directory that should be provided to ``cmake``), it was replaced
+with an equivalent named argument ``srcdir``.
+
+``VersionIndependendPythonPackage`` generic easyblock replaced by ``VersionIndependentPythonPackage``
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**The** ``VersionIndependendPythonPackage`` **generic easyblock was replaced with the equivalent**
+``VersionIndependentPythonPackage`` **easyblock.**
+
+* *deprecated since:* EasyBuild v1.11.0 (Feb'14)
+* *no longer supported in:* EasyBuild v2.0
+* *alternative(s)*: use ``VersionIndependentPythonPackage``
+
+Because of to a typo in the name, the ``VersionIndependendPythonPackage`` generic easyblock was replaced by the
+equivalent ``VersionIndependentPythonPackage`` generic easyblock.
+
+``get_sitearch_suffix`` function in ``Perl`` easyblock is removed
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**The** ``get_sitearch_suffix`` **function in the** ``Perl`` **easyblock has been removed.**
+
+* *deprecated since:* EasyBuild v1.7.0 (Sept'13)
+* *no longer supported in:* EasyBuild v2.0
+* *alternative(s)*: use ``get_site_suffix('sitearch')``
+
+The ``get_sitearch_suffix`` function provided by the ``Perl`` easyblock, which can be (and is) imported in/used by other
+easyblocks, has been replaced by the more generic ``get_site_suffix`` function.
+
+To obtain the same functionality as was provided by ``get_sitearch_suffix``, use ``get_site_suffix('sitearch')`` instead.
