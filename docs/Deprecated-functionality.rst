@@ -442,11 +442,11 @@ Since the ``builddir`` named argument in the ``configure_step`` method of the ge
 misnomer (it specifies the location of the *source* directory that should be provided to ``cmake``), it was replaced
 with an equivalent named argument ``srcdir``.
 
-``VersionIndependentPythonPackage`` replaces ``VersionIndependentPythonPackage``
+``VersionIndependentPythonPackage`` replaces ``VersionIndependendPythonPackage``
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-**The** ``VersionIndependendPythonPackage`` **generic easyblock was replaced with the equivalent**
-``VersionIndependentPythonPackage`` **easyblock.**
+**The generic easyblock** ``VersionIndependendPythonPackage`` **was replaced with the equivalent generic easyblock**
+``VersionIndependentPythonPackage`` **.**
 
 * *deprecated since:* EasyBuild v1.11.0 (Feb'14)
 * *no longer supported in:* EasyBuild v2.0
