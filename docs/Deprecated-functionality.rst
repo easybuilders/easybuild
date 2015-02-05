@@ -428,29 +428,29 @@ no alternatives are provided (since none are needed). *(since EasyBuild v1.3.0 (
 Changes in (generic) easyblocks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Named argument ``builddir`` in ``CMakeMake.configure_step`` replaced with ``srcdir``
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+``srcdir`` replaces ``builddir`` as named argument in ``CMakeMake.configure_step``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **The named argument** ``builddir`` **in the** ``configure_step`` **method of the generic** ``CMakeMake`` **easyblock
-was replaced by the equivalent** ``srcdir`` **named argument.**
+was replaced by** ``srcdir`` **.**
 
 * *deprecated since:* EasyBuild v1.4.0 (May'13)
 * *no longer supported in:* EasyBuild v2.0
-* *alternative(s)*: use the ``srcdir`` named argument instead
+* *alternative(s)*: equivalent ``srcdir`` named argument
 
 Since the ``builddir`` named argument in the ``configure_step`` method of the generic ``CMakeMake`` easyblock was a
 misnomer (it specifies the location of the *source* directory that should be provided to ``cmake``), it was replaced
 with an equivalent named argument ``srcdir``.
 
-``VersionIndependendPythonPackage`` generic easyblock replaced by ``VersionIndependentPythonPackage``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+``VersionIndependentPythonPackage`` replaces ``VersionIndependentPythonPackage``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **The** ``VersionIndependendPythonPackage`` **generic easyblock was replaced with the equivalent**
 ``VersionIndependentPythonPackage`` **easyblock.**
 
 * *deprecated since:* EasyBuild v1.11.0 (Feb'14)
 * *no longer supported in:* EasyBuild v2.0
-* *alternative(s)*: use ``VersionIndependentPythonPackage``
+* *alternative(s)*: ``VersionIndependentPythonPackage``
 
 Because of to a typo in the name, the ``VersionIndependendPythonPackage`` generic easyblock was replaced by the
 equivalent ``VersionIndependentPythonPackage`` generic easyblock.
@@ -458,11 +458,12 @@ equivalent ``VersionIndependentPythonPackage`` generic easyblock.
 ``get_sitearch_suffix`` function in ``Perl`` easyblock is removed
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-**The** ``get_sitearch_suffix`` **function in the** ``Perl`` **easyblock has been removed.**
+**The** ``get_sitearch_suffix`` **function in the** ``Perl`` **easyblock was replaced in favor of the more generic**
+``get_site_suffix`` **function.**
 
 * *deprecated since:* EasyBuild v1.7.0 (Sept'13)
 * *no longer supported in:* EasyBuild v2.0
-* *alternative(s)*: use ``get_site_suffix('sitearch')``
+* *alternative(s)*: ``get_site_suffix('sitearch')``
 
 The ``get_sitearch_suffix`` function provided by the ``Perl`` easyblock, which can be (and is) imported in/used by other
 easyblocks, has been replaced by the more generic ``get_site_suffix`` function.
