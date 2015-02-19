@@ -75,7 +75,7 @@ Configuration file(s)
 List of used configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The set of configuration files that will be used by EasyBuild is determined in the following order of preference:
+The list of configuration files that will be used by EasyBuild is determined in the following order of preference:
 
 * the path(s) specified via the **command line argument** ``--configfiles``
 * the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
