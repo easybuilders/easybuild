@@ -85,9 +85,10 @@ Default configuration files
 +++++++++++++++++++++++++++
 
 By default, EasyBuild will use existing configuration files at the following paths:
- * ``$dir/easybuild.d/*.cfg``, for each directory ``$dir`` listed in ``$XDG_CONFIG_DIRS`` (where ``$XDG_CONFIG_DIRS``
+
+* ``$dir/easybuild.d/*.cfg``, for each directory ``$dir`` listed in ``$XDG_CONFIG_DIRS`` (where ``$XDG_CONFIG_DIRS``
    defaults to ``/etc``)
- * ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (where ``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``)
+* ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (where ``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``)
 
 Hence, if ``$XDG_CONFIG_HOME`` and ``$XDG_CONFIG_DIRS`` are not defined, EasyBuild will only consider default
 configuration files at ``/etc/easybuild.d/*.cfg`` and ``$HOME/.config/easybuild/config.cfg``.
