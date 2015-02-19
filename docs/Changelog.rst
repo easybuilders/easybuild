@@ -3,6 +3,9 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150219.01** (`Feb 19th 2015`): first updates for EasyBuild v2.0.0
+
+  * extend section on (default) EasyBuild configuration files to also cover ``$XDG_CONFIG_DIRS`` (see :ref:`configuration_file:`)
 * **release 20150205.01** (`Feb 5th 2015`): include information on deprecated functionality in (generic) easyblocks (see :ref:`deprecated`)
 * **release 20150126.01** (`Jan 26th 2015`):
 
