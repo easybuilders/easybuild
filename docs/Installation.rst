@@ -90,7 +90,7 @@ For example::
   python bootstrap_eb.py $PREFIX
 
   # update $MODULEPATH, and load the EasyBuild module
-  export MODULEPATH=$PREFIX/modules/all:$MODULEPATH
+  module use $PREFIX/modules/all
   module load EasyBuild
 
 .. note::
@@ -115,23 +115,19 @@ to one of the alternative approaches documented at :ref:`alt_inst_methods`
 Sanity check
 ~~~~~~~~~~~~
 
-Set your module search path correctly and load the EasyBuild
-module with the specific version (see output of bootstrap script for more details)::
+Compare the version of ``eb``, the main EasyBuild command, with the version of the EasyBuild module that was installed::
 
-    module use $HOME/.local/easybuild/modules/all
     module load EasyBuild
-
-Determine the version of the loaded EasyBuild, which should match the expected module::
-
+    module list
     eb --version
 
 .. tip::
 
-  The Tcl-based or Lmod implementations of environment modules do their default sorting differently;
+  The Tcl-based or Lmod implementations of environment modules do their default sorting differently.
   The former will normally sort in the lexicographic order, while Lmod follows
   an approach that is closer to Python's construct ``LooseVersion`` way of ordering. Such aspects
-  may make a big difference, if you have installed both versions 1.9.0 & 1.15.2 etc,
-  about what is the default version.
+  may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
+  with respect to what is the version being loaded by default.
 
 Running unit tests
 ~~~~~~~~~~~~~~~~~~
