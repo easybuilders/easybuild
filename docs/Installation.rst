@@ -148,96 +148,94 @@ If this does not complete successfully, `please open an issue`_ to report it.
 Example bootstrap run
 ~~~~~~~~~~~~~~~~~~~~~
 
-Example output for bootstrapping EasyBuild v1.15.2::
+Example output for bootstrapping EasyBuild v1.16.1::
+
+    [[INFO]] Found module command 'lmod' (Lmod), so using it.
+    [[INFO]] 
+
+    +++ STAGE 0: installing distribute via included (patched) distribute_setup.py...
+
+
+    Downloading http://pypi.python.org/packages/source/d/distribute/distribute-0.6.34.tar.gz
+    Extracting in /tmp/tmpz0zyAG
+    Now working in /tmp/tmpz0zyAG/distribute-0.6.34
+    Installing Distribute
+    [[INFO]] 
+
+    +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
+
+
+    Installing with setuptools.setup...
+    Installing version 1.16.1
+    warning: install_lib: 'build/lib' does not exist -- no Python modules to install
+
+    zip_safe flag not set; analyzing archive contents...
+    Installing with setuptools.setup...
+    Installing version 1.16.1 (API version 1)
+    Installing with setuptools.setup...
+    Installing version 1.16.1 (required versions: API >= 1)
+    Installing with setuptools.setup...
+    Installing version 1.16.1.0 (required versions: API >= 1, easyblocks >= 1.16)
+    warning: install_lib: 'build/lib' does not exist -- no Python modules to install
+
+    [[INFO]] 
+
+    +++ STAGE 2: installing EasyBuild in /home/example/.local/easybuild with EasyBuild from stage 1...
+
+
+    Couldn't import dot_parser, loading of dot files will not be possible.
+    == temporary log file in case of crash /tmp/easybuild-zql_Ft/easybuild-peQ8GA.log
+    == processing EasyBuild easyconfig /tmp/tmp_gzHPM/EasyBuild-1.16.1.eb
+    == building and installing EasyBuild/1.16.1...
+    == fetching files...
+    == creating build dir, resetting environment...
+    == unpacking...
+    == patching...
+    == preparing...
+    == configuring...
+    == building...
+    == testing...
+    == installing...
+    == taking care of extensions...
+    == packaging...
+    == postprocessing...
+    == sanity checking...
+    == cleaning up...
+    == creating module...
+    == COMPLETED: Installation ended successfully
+    == Results of the build can be found in the log file /home/example/.local/easybuild/software/EasyBuild/1.16.1/easybuild/easybuild-EasyBuild-1.16.1-20150220.210610.log
+    == Build succeeded for 1 out of 1
+    == temporary log file /tmp/easybuild-zql_Ft/easybuild-peQ8GA.log has been removed.
+    == temporary directory /tmp/easybuild-zql_Ft has been removed.
+    [[INFO]] Done!
+    [[INFO]] 
+    [[INFO]] EasyBuild v1.16.1 was installed to /home/example/.local/easybuild, so make sure your $MODULEPATH includes /home/example/.local/easybuild/modules/all
+    [[INFO]] 
+    [[INFO]] Run 'module load EasyBuild', and run 'eb --help' to get help on using EasyBuild.
+    [[INFO]] Set $EASYBUILD_MODULES_TOOL to 'Lmod' to use the same modules tool as was used now.
+    [[INFO]] 
+    [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
+    [[INFO]] To install software with EasyBuild to /home/example/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
+    [[INFO]] See http://easybuild.readthedocs.org/en/latest/Configuration.html for details on configuring EasyBuild.
   
-  $ curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
-    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                   Dload  Upload   Total   Spent    Left  Speed
-  100 26650  100 26650    0     0  25874      0  0:00:01  0:00:01 --:--:-- 25898
-  
-  $ python bootstrap_eb.py $HOME/.local/easybuild
-  [[INFO]] Found module command 'modulecmd' (EnvironmentModulesC), so using it.
-  [[INFO]]
-  
-  +++ STAGE 0: installing distribute via included (patched) distribute_setup.py...
-  
-  Downloading http://pypi.python.org/packages/source/d/distribute/distribute-0.6.34.tar.gz
-  Extracting in /tmp/tmpgUDe59
-  Now working in /tmp/tmpgUDe59/distribute-0.6.34
-  Installing Distribute
-  [[INFO]]
-  
-  +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
-  
-  Installing with setuptools.setup...
-  Installing version 1.15.2
-  warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-  
-  zip_safe flag not set; analyzing archive contents...
-  Installing with setuptools.setup...
-  Installing version 1.15.2 (API version 1)
-  Installing with setuptools.setup...
-  Installing version 1.15.2 (required versions: API >= 1)
-  Installing with setuptools.setup...
-  Installing version 1.15.2.0 (required versions: API >= 1, easyblocks >= 1.15)
-  warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-  
-  [[INFO]]
-  
-  +++ STAGE 2: installing EasyBuild in /home/example/.local/easybuild with EasyBuild from stage 1...
-  
-  == temporary log file in case of crash /tmp/easybuild-I0RSpc/easybuild-4e14kP.log
-  == resolving dependencies ...
-  == processing EasyBuild easyconfig /tmp/tmprQwWo0/EasyBuild-1.15.2.eb
-  == building and installing EasyBuild/1.15.2...
-  == fetching files...
-  == creating build dir, resetting environment...
-  == unpacking...
-  == patching...
-  == preparing...
-  == configuring...
-  == building...
-  == testing...
-  == installing...
-  == taking care of extensions...
-  == packaging...
-  == postprocessing...
-  == sanity checking...
-  == cleaning up...
-  == creating module...
-  == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /home/example/.local/easybuild/software/EasyBuild/1.15.2/easybuild/easybuild-EasyBuild-1.15.2-20141023.225606.log
-  == Build succeeded for 1 out of 1
-  == temporary log file /tmp/easybuild-I0RSpc/easybuild-4e14kP.log has been removed.
-  == temporary directory /tmp/easybuild-I0RSpc has been removed.
-  [[INFO]] Done!
-  [[INFO]]
-  [[INFO]] EasyBuild v1.15.2 was installed to /home/example/.local/easybuild, so make sure your $MODULEPATH includes /home/example/.local/easybuild/modules/all
-  [[INFO]]
-  [[INFO]] Run 'module load EasyBuild', and run 'eb --help' to get help on using EasyBuild.
-  [[INFO]] Set $EASYBUILD_MODULES_TOOL to 'EnvironmentModulesC' to use the same modules tool as was used now.
-  [[INFO]]
-  [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
-  [[INFO]] To install software with EasyBuild to /home/example/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
-  [[INFO]] See https://github.com/hpcugent/easybuild/wiki/Configuration for details on configuring EasyBuild.
 
 After the bootstrap completes, the installed ``EasyBuild`` module can be loaded::
   
   $ module use $HOME/.local/easybuild/modules/all
   $ module av
   ------------------------- /home/example/.local/easybuild/modules/all --------------------------
-  EasyBuild/1.15.2
+  EasyBuild/1.16.1
 
   $ module load EasyBuild
   $ module list
   Currently Loaded Modulefiles:
-    1) EasyBuild/1.15.2
+    1) EasyBuild/1.16.1
 
   $ which eb
-  /home/example/.local/easybuild/software/EasyBuild/1.15.2/bin/eb
+  /home/example/.local/easybuild/software/EasyBuild/1.16.1/bin/eb
 
   $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
+  This is EasyBuild 1.16.1 (framework: 1.16.1, easyblocks: 1.16.1) on host example.local.
 
 Now, enjoy!
 
@@ -247,7 +245,7 @@ Advanced bootstrapping options
 ------------------------------
 
 To use these advanced options, make sure you are using the latest version of the bootstrap script, available
-at https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py .
+at https://github.com/hpcugent/easybuild-framework/tree/develop/easybuild/scripts/bootstrap_eb.py .
 
 Skipping the installation of ``easy_install`` (stage 0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
