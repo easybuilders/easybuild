@@ -34,8 +34,9 @@ The only strict requirements are:
     * for Tcl-only environment modules: ``modulecmd.tcl``
     * for Lmod: ``lmod``
 
-  * the path where the command binary/script is located can be determined via the ``module`` function,
-    for example using ``type module`` or ``type -f module``
+  * the path where the command binary/script is located can be determined via the definition of the ``module`` function
+
+    * for example: using ``type module`` or ``type -f module``
 
 For more information on (optional) dependencies, see :ref:`dependencies`.
 
