@@ -59,16 +59,10 @@ i.e., installing the latest EasyBuild release (obtained from PyPI) using EasyBui
 
 To bootstrap EasyBuild:
 
-* download the ``bootstrap_eb.py`` script;
-* execute it, and specify an installation prefix (which we will refer to as ``$PREFIX``)
+* download the bootstrap script from https://github.com/hpcugent/easybuild-framework/tree/develop/easybuild/scripts/bootstrap_eb.py
+* execute it, and specify an installation prefix as an argument
 
-For example, as follows::
-
-  PREFIX=$HOME/.local/easybuild  # change this to your liking
-  curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
-  python bootstrap_eb.py $PREFIX
-
-Yes, it's that simple easy!
+Yes, it's that easy!
 
 The bootstrap script will perform a 3-stage bootstrap procedure:
 
@@ -81,9 +75,21 @@ The bootstrap script will perform a 3-stage bootstrap procedure:
 
 This should result in an ``EasyBuild`` module that you can load to start using EasyBuild, after making sure the
 module is available by updating ``$MODULEPATH``. More specifically, you need to include the ``modules/all``
-subdirectory of the specified installation prefix into ``$MODULEPATH``::
+subdirectory of the specified installation prefix into ``$MODULEPATH``.
 
-  export MODULEPATH=$PREFIX/modules/all:$PYTHONPATH
+For example::
+
+  # pick an installation prefix to install EasyBuild to (change this to your liking)
+  PREFIX=$HOME/.local/easybuild
+
+  # download script
+  curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+
+  # bootstrap EasyBuild
+  python bootstrap_eb.py $PREFIX
+
+  # update $MODULEPATH, and load the EasyBuild module
+  export MODULEPATH=$PREFIX/modules/all:$MODULEPATH
   module load EasyBuild
 
 .. note::
