@@ -115,11 +115,17 @@ to one of the alternative approaches documented at :ref:`alt_inst_methods`
 Sanity check
 ~~~~~~~~~~~~
 
-Compare the version of ``eb``, the main EasyBuild command, with the version of the EasyBuild module that was installed::
+Compare the version of ``eb``, the main EasyBuild command, with the version of the EasyBuild module that was installed.
+For example::
 
-    module load EasyBuild
-    module list
-    eb --version
+    $ module load EasyBuild
+    $ module list
+
+    Currently Loaded Modules:
+      1) EasyBuild/1.16.1
+
+    $ eb --version
+    This is EasyBuild 1.16.1 (framework: 1.16.1, easyblocks: 1.16.1) on host example.local
 
 .. tip::
 
