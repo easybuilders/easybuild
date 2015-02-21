@@ -3,6 +3,9 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150220.01** (`Feb 20th 2015`):
+
+  * document new advanced bootstrapping options: skipping stage 0 and providing source tarballs (see :ref:`installation`)
 * **release 20150219.01** (`Feb 19th 2015`): first updates for EasyBuild v2.0.0
 
   * extend section on (default) EasyBuild configuration files to also cover ``$XDG_CONFIG_DIRS`` (see :ref:`configuration_file:`)
