@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150227.01** (`Feb 27th 2015`): enhance documentation w.r.t. to (optional dependencies), see :ref:`installation`)
 * **release 20150220.01** (`Feb 20th 2015`):
 
   * document new advanced bootstrapping options: skipping stage 0 and providing source tarballs (see :ref:`installation`)

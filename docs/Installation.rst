@@ -20,23 +20,14 @@ Notes on other ways of installing EasyBuild are available under section :ref:`al
 Requirements
 ------------
 
-.. XXX - UPDATE BY VERSION, below
-
 The only strict requirements are:
 
+* Linux (or OS X)
 * **Python version 2.6**, or a more recent 2.x version
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
-  * the path to the actual modules tool command used *must* be included in ``$PATH``,
-    to make the command readily available to EasyBuild
-
-    * for Tcl/C environment modules: ``modulecmd``
-    * for Tcl-only environment modules: ``modulecmd.tcl``
-    * for Lmod: ``lmod``
-
-  * the path where the command binary/script is located can be determined via the definition of the ``module`` function
-
-    * for example: using ``type module`` or ``type -f module``
+  * the actual module command/script (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) *must* be available via ``$PATH``
+  * see :ref:`required_modules_tool` for more details
 
 For more information on (optional) dependencies, see :ref:`dependencies`.
 
@@ -320,68 +311,132 @@ Example usage, with the relevant output at the start of stage 1 of the bootstrap
 Dependencies
 ------------
 
-EasyBuild has a couple of dependencies, some of them optional:
+EasyBuild has a couple of dependencies, some are optional.
+
+.. _required_dependencies:
 
 Required dependencies
 ~~~~~~~~~~~~~~~~~~~~~
 
-*  **Linux** (or OSX) operating system; preferably x86_64 based
-*  `Python 2.6 <http://python.org>`_, or a more recent 2.x version
-*  `Tcl/C environment-modules  <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
-   or `Lmod <http://lmod.sourceforge.net>`_ (version >= 5.6.3)
+.. XXX - UPDATE BY VERSION, below
 
-  * environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
-     installed (with header files and development libraries)
-  * Lmod requires Lua and a couple of non-standard Lua libraries to be available
-  * a guide on installing Tcl/C environment modules without having root
-     permissions is available at :ref:`installing_env_mod_c`.
-  * a guide on installing Lmod without having root permissions is available at
-     :ref:`installing_lmod`.
+* **Linux** (or OSX) operating system
 
-*  a C/C++ compiler (optionally, to build GCC)
+  * some common shell tools are expected to be available, see :ref:`required_shell_tools`
 
-.. tip::  
- A packaged version of Tcl/C environment modules is available for 
- `RPM-based systems <https://rhn.redhat.com/errata/RHBA-2014-0327.html>`_ and
- `Debian/Ubuntu <https://packages.debian.org/testing/main/environment-modules>`_
+* `Python 2.6 <http://python.org>`_, or a more recent 2.x version
 
-Details
-^^^^^^^
+  * some additional non-standard Python packages are required, see :ref:`required_python_packages`
 
-EasyBuild is written in Python, so a Python installation is indispensable.
+* a **modules tool**: Tcl(/C) environment modules or Lmod
 
-EasyBuild not only generates module files to be used along with the
-software it installs, it also depends on the generated modules for some
-of its functionality. In practice, you need an environment modules (Tcl/C or Lmod) to make
-full use of EasyBuild’s features.
+  * the actual modules tool *must* be available via ``$PATH``, see :ref:`required_modules_tool`
 
-The C/C++ compiler is only required when an open-source compiler will be
-used to build software applications. EasyBuild will construct a GCC
-compiler toolchain first, before building the software applications, and
-to build the compiler to be part of the toolchain from source typically
-a C/C++ (system) compiler is required.
+* a C/C++ compiler (e.g., ``gcc`` and ``g++``)
 
-Required Python modules
-^^^^^^^^^^^^^^^^^^^^^^^
+  * only required to build and install GCC with, or as a dependency for the Intel compilers, for example
 
-There are no required dependencies on non-standard Python modules.
+.. _required_shell_tools:
+
+Required shell tools
+^^^^^^^^^^^^^^^^^^^^
+
+.. XXX - UPDATE BY VERSION, below
+
+A couple of shell tools may be required, depending on the particular use case (in relative order of importance):
+
+* shell builtin commands:
+
+  * ``type``, for inspecting the ``module`` function (if defined)
+  * ``ulimit``, for quering user limits
+
+* tools for unpacking (source) archives:
+
+  * commonly required: ``tar``, ``gunzip``, ``bunzip2``
+  * occasionally required: ``unzip``, ``unxz``
+
+* ``patch``, for applying patch files to unpacked sources (relatively common)
+* ``rpm`` or ``dpkg``, for quering OS dependencies (only needed occasionally)
+* ``locate``, only as a (poor mans) fallback to ``rpm``/``dpkg`` (rarely needed)
+* ``sysctl``, for quering system characteristics (only required on non-Linux systems)
+
+.. _required_modules_tool:
+
+Required modules tool
+^^^^^^^^^^^^^^^^^^^^^
+
+EasyBuild not only generates module files to be used along with the software it installs,
+it also depends on the generated modules, mainly for resolving dependencies.
+Hence, a modules tool must be available to consume module files with.
+
+.. XXX - UPDATE BY VERSION, below
+
+Supported module tools:
+
+* `Tcl/C environment-modules <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
+* `Tcl-only variant of environment modules <http://sourceforge.net/p/modules/modules-tcl>`_
+* `Lmod <http://lmod.sourceforge.net>`_ (version >= 5.6.3), *highly recommended*
+
+.. note::
+  The path to the actual modules tool binary/script used *must* be included in ``$PATH``,
+  to make it readily available to EasyBuild.
+
+  * for Tcl/C environment modules: ``modulecmd``
+  * for Tcl-only environment modules: ``modulecmd.tcl``
+  * for Lmod: ``lmod``
+
+  The path where the modules tool binary/script is located can be determined via the definition of
+  the ``module`` function; for example, using ``type module`` or ``type -f module``.
+
+
+Additional notes:
+
+* Tcl(/C) environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
+  installed (with header files and development libraries)
+* Lmod requires `Lua <http://www.lua.org/>`_ and a couple of non-standard Lua libraries
+  (``lua-posix``, ``lua-filesystem``) to be available
+
+  * Tcl (``tclsh``) must also be available for Lmod to support module files in ``Tcl`` syntax
+* a guide to installing Tcl/C environment modules without having root
+  permissions is available at :ref:`installing_env_mod_c`.
+* a guide to installing Lmod without having root permissions is available at
+  :ref:`installing_lmod`.
+
+.. _required_python_packages:
+
+Required Python packages
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* ``vsc-base``: a Python library providing the ``fancylogger`` and ``generaloption`` Python modules
+
+  * available at https://pypi.python.org/pypi/vsc-base and https://github.com/hpcugent/vsc-base
+  * the required version of ``vsc-base`` depends on the EasyBuild version
+
+.. note::
+   ``vsc-base`` is installed automatically along with EasyBuild, if an installation procedure is used that 
+   consumes the ``setup.py`` script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
+   bootstrap script, ``pip``, ``easy_install``, ...)
+
+Other Python packages are optional dependencies, see :ref:`optional_python_packages`.
 
 Optional dependencies
 ~~~~~~~~~~~~~~~~~~~~~
 
 Some dependencies are optional and are only required to support certain features.
 
-Optional Python modules
-^^^^^^^^^^^^^^^^^^^^^^^
+.. _optional_python_packages:
 
--  `GitPython <http://gitorious.org/git-python>`_, only needed if
-   EasyBuild is hosted in a git repository or if you’re using a git
-   repository for easyconfig files (.eb)
--  `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
-   SVN repository for easyconfig files (.eb)
--  `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
-   only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
--  `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
+Optional Python packages
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `GitPython <http://gitorious.org/git-python>`_, only needed if
+  EasyBuild is hosted in a git repository or if you’re using a git
+  repository for easyconfig files (.eb)
+* `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
+  SVN repository for easyconfig files (.eb)
+* `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
+  only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
+* `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
    only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``.
 
 Sources
@@ -391,15 +446,15 @@ EasyBuild is split up into three different packages, which are available
 from the Python Package Index (PyPi):
 
 * `easybuild-framework <http://pypi.python.org/pypi/easybuild-framework>`_ - the EasyBuild framework, which includes the
-   easybuild.framework and easybuild.tools Python packages that provide
-   general support for building and installing software
+  easybuild.framework and easybuild.tools Python packages that provide
+  general support for building and installing software
 * `easybuild-easyblocks <http://pypi.python.org/pypi/easybuild-easyblocks>`_ - a collection of easyblocks that implement
-   support for building and installing (collections of) software
-   packages
+  support for building and installing (collections of) software
+  packages
 * `easybuild-easyconfigs <http://pypi.python.org/pypi/easybuild-easyconfigs>`_ - a collection of example easyconfig files
-   that specify which software to build, and using which build options;
-   these easyconfigs will be well tested with the latest compatible
-   versions of the easybuild-framework and easybuild-easyblocks packages
+  that specify which software to build, and using which build options;
+  these easyconfigs will be well tested with the latest compatible
+  versions of the easybuild-framework and easybuild-easyblocks packages
 
 Next to these packages, a meta-package named `easybuild <http://pypi.python.org/pypi/easybuild>`_ is also
 available on PyPi, in order to easily install the full EasyBuild
@@ -410,7 +465,7 @@ The source code for these packages is also available on GitHub:
 * `easybuild-framework git repository <https://github.com/hpcugent/easybuild-framework>`_
 * `easybuild-easyblocks git repository <https://github.com/hpcugent/easybuild-easyblocks>`_
 * `easybuild-easyconfigs git repository <https://github.com/hpcugent/easybuild-easyconfigs>`_
-* the `main EasyBuild repository <https://github.com/hpcugent/easybuild>`_ mainly hosts `this` EasyBuild documentation
+* the `main EasyBuild repository <https://github.com/hpcugent/easybuild>`_ mainly hosts *this* EasyBuild documentation
 
 
 In case of installation issues...
