@@ -345,20 +345,20 @@ Required shell tools
 
 A couple of shell tools may be required, depending on the particular use case (in relative order of importance):
 
- * shell builtin commands:
+* shell builtin commands:
 
-   * ``type``, for inspecting the ``module`` function (if defined)
-   * ``ulimit``, for quering user limits
+  * ``type``, for inspecting the ``module`` function (if defined)
+  * ``ulimit``, for quering user limits
 
- * tools for unpacking (source) archives:
+* tools for unpacking (source) archives:
 
-   * commonly required: ``tar``, ``gunzip``, ``bunzip2``
-   * occasionally required: ``unzip``, ``unxz``
+  * commonly required: ``tar``, ``gunzip``, ``bunzip2``
+  * occasionally required: ``unzip``, ``unxz``
 
- * ``patch``, for applying patch files to unpacked sources (relatively common)
- * ``rpm`` or ``dpkg``, for quering OS dependencies (only needed occasionally)
- * ``locate``, only as a (poor mans) fallback to ``rpm``/``dpkg`` (rarely needed)
- * ``sysctl``, for quering system characteristics (only required on non-Linux systems)
+* ``patch``, for applying patch files to unpacked sources (relatively common)
+* ``rpm`` or ``dpkg``, for quering OS dependencies (only needed occasionally)
+* ``locate``, only as a (poor mans) fallback to ``rpm``/``dpkg`` (rarely needed)
+* ``sysctl``, for quering system characteristics (only required on non-Linux systems)
 
 .. _required_modules_tool:
 
@@ -381,9 +381,9 @@ Supported module tools:
   The path to the actual modules tool binary/script used *must* be included in ``$PATH``,
   to make it readily available to EasyBuild.
 
-   * for Tcl/C environment modules: ``modulecmd``
-   * for Tcl-only environment modules: ``modulecmd.tcl``
-   * for Lmod: ``lmod``
+  * for Tcl/C environment modules: ``modulecmd``
+  * for Tcl-only environment modules: ``modulecmd.tcl``
+  * for Lmod: ``lmod``
 
   The path where the modules tool binary/script is located can be determined via the definition of
   the ``module`` function; for example, using ``type module`` or ``type -f module``.
