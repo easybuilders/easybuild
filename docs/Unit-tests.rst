@@ -10,7 +10,7 @@ We refer to the available tests as unit tests, even though they may not be *unit
 Some tests are actually end-to-end tests or integration tests, see also
 http://en.wikipedia.org/wiki/Software_testing#Testing_levels.
 
-Following the test-driven developement paradigm, additional unit tests are implemented when new features are added or
+Following the test-driven development paradigm, additional unit tests are implemented when new features are added or
 when bugs are uncovered (and fixed).
 
 What the unit tests are *not*
@@ -45,7 +45,7 @@ optional features and edge cases.
 
 At the time of writing (EasyBuild v2.0), more than 250 tests were implemented, organised in 28 subgroups.
 
-Running the full EasyBuild framework unit test suite takes about 15-40 minutes, depending on your system resoures and
+Running the full EasyBuild framework unit test suite takes about 15-40 minutes, depending on your system resources and
 testing configuration (see for example https://jenkins1.ugent.be/view/EasyBuild/).
 
 easyblocks unit tests
@@ -53,7 +53,7 @@ easyblocks unit tests
 
 The easyblocks unit test suite consists of a coupe of light-weight tests that are run per easyblock:
 
-* initlialising the easyblock, to check for Python syntax errors and faulty imports
+* initialising the easyblock, to check for Python syntax errors and faulty imports
 * checking for the use of deprecated (or no longer supported) functionality
 
 Running the full easyblocks unit test suite takes less than one minute.
@@ -71,7 +71,7 @@ For each of the available easyconfig files, the following aspects are tested:
   toolchain name/version)
 * creating an ``EasyBlock`` instance using the parsed easyconfig, to check whether mandatory easyconfig parameters
   are defined
-* ensuring that all requires patch files are available (right next to the easyconfig file)
+* ensuring that all required patch files are available (right next to the easyconfig file)
 * making sure that the specified sanity check paths adher to the requirements, i.e. only (and both) the ``files``/``dirs``
   keys are listed, with the value for either one being non-empty
 * checking for the use of deprecated (or no longer supported) functionality
@@ -98,7 +98,7 @@ of the EasyBuild code repositories:
 * ``master`` (stable, latest EasyBuild release): https://jenkins1.ugent.be/view/EasyBuild/
 * ``develop`` (development, potentially unstable): https://jenkins1.ugent.be/view/EasyBuild%20(develop)/
 
-We strictly adher to the policy of only merging pull requests for which the correspondig (latest) run of the *full* unit
+We strictly adher to the policy of only merging pull requests for which the corresponding (latest) run of the *full* unit
 test suite passes successfully.
 
 
