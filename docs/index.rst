@@ -56,6 +56,7 @@ Other topics
 
     Code_style
     Deprecated-functionality
+    Unit-tests
 
 Getting help
 ============
