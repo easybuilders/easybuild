@@ -87,7 +87,7 @@ Running the full easyconfigs unit test suite should only take a couple of minute
 Applications
 ------------
 
-The unit test suites are automatically triggered by `Jenkins <https://jenkins1.ugent.be>` for:
+The unit test suites are automatically triggered by `Jenkins <https://jenkins1.ugent.be>`_ for:
 
 * each pull request (update), see https://jenkins1.ugent.be/view/pull-request-builder/
 * each (set of) change(s) that is merged in (usually via a pull request)
