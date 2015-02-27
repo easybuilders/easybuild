@@ -330,7 +330,7 @@ Required dependencies
 
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
-  * the actual modules tool *msut* be available via ``$PATH``, see :ref:`required_modules_tool`
+  * the actual modules tool *must* be available via ``$PATH``, see :ref:`required_modules_tool`
 
 * a C/C++ compiler (e.g., ``gcc`` and ``g++``)
 
