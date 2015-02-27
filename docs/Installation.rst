@@ -20,15 +20,14 @@ Notes on other ways of installing EasyBuild are available under section :ref:`al
 Requirements
 ------------
 
-
 The only strict requirements are:
 
 * Linux (or OS X)
 * **Python version 2.6**, or a more recent 2.x version
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
- * the actual module command/script (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) *must* be available via ``$PATH``
- * see :ref:`required_modules_tool` for more details
+  * the actual module command/script (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) *must* be available via ``$PATH``
+  * see :ref:`required_modules_tool` for more details
 
 For more information on (optional) dependencies, see :ref:`dependencies`.
 
@@ -323,17 +322,17 @@ Required dependencies
 
 * **Linux** (or OSX) operating system
 
- * some common shell tools are expected to be available, see :ref:`required_shell_tools`
+  * some common shell tools are expected to be available, see :ref:`required_shell_tools`
 
 * `Python 2.6 <http://python.org>`_, or a more recent 2.x version
 
- * some additional non-standard Python packages are required, see :ref:`required_python_packages`
+  * some additional non-standard Python packages are required, see :ref:`required_python_packages`
 
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
- * the actual modules tool *msut* be available via ``$PATH``, see :ref:`required_modules_tool`
+  * the actual modules tool *msut* be available via ``$PATH``, see :ref:`required_modules_tool`
 
-*  a C/C++ compiler (e.g., ``gcc`` and ``g++``)
+* a C/C++ compiler (e.g., ``gcc`` and ``g++``)
 
   * only required to build and install GCC with, or as a dependency for the Intel compilers, for example
 
@@ -389,6 +388,7 @@ Supported module tools:
   The path where the modules tool binary/script is located can be determined via the definition of
   the ``module`` function; for example, using ``type module`` or ``type -f module``.
 
+
 Additional notes:
 
 * Tcl(/C) environment-modules requires `Tcl <http://www.tcl.tk/>`_ to be
@@ -409,8 +409,8 @@ Required Python packages
 
 * ``vsc-base``: a Python library providing the ``fancylogger`` and ``generaloption`` Python modules
 
- * available at https://pypi.python.org/pypi/vsc-base and https://github.com/hpcugent/vsc-base
- * the required version of ``vsc-base`` depends on the EasyBuild version
+  * available at https://pypi.python.org/pypi/vsc-base and https://github.com/hpcugent/vsc-base
+  * the required version of ``vsc-base`` depends on the EasyBuild version
 
 .. note::
    ``vsc-base`` is installed automatically along with EasyBuild, if an installation procedure is used that 
@@ -429,14 +429,14 @@ Some dependencies are optional and are only required to support certain features
 Optional Python packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-*  `GitPython <http://gitorious.org/git-python>`_, only needed if
-   EasyBuild is hosted in a git repository or if you’re using a git
-   repository for easyconfig files (.eb)
-*  `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
-   SVN repository for easyconfig files (.eb)
-*  `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
-   only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
-*  `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
+* `GitPython <http://gitorious.org/git-python>`_, only needed if
+  EasyBuild is hosted in a git repository or if you’re using a git
+  repository for easyconfig files (.eb)
+* `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
+  SVN repository for easyconfig files (.eb)
+* `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
+  only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
+* `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
    only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``.
 
 Sources
@@ -446,15 +446,15 @@ EasyBuild is split up into three different packages, which are available
 from the Python Package Index (PyPi):
 
 * `easybuild-framework <http://pypi.python.org/pypi/easybuild-framework>`_ - the EasyBuild framework, which includes the
-   easybuild.framework and easybuild.tools Python packages that provide
-   general support for building and installing software
+  easybuild.framework and easybuild.tools Python packages that provide
+  general support for building and installing software
 * `easybuild-easyblocks <http://pypi.python.org/pypi/easybuild-easyblocks>`_ - a collection of easyblocks that implement
-   support for building and installing (collections of) software
-   packages
+  support for building and installing (collections of) software
+  packages
 * `easybuild-easyconfigs <http://pypi.python.org/pypi/easybuild-easyconfigs>`_ - a collection of example easyconfig files
-   that specify which software to build, and using which build options;
-   these easyconfigs will be well tested with the latest compatible
-   versions of the easybuild-framework and easybuild-easyblocks packages
+  that specify which software to build, and using which build options;
+  these easyconfigs will be well tested with the latest compatible
+  versions of the easybuild-framework and easybuild-easyblocks packages
 
 Next to these packages, a meta-package named `easybuild <http://pypi.python.org/pypi/easybuild>`_ is also
 available on PyPi, in order to easily install the full EasyBuild
