@@ -174,12 +174,14 @@ Installation of latest development version using provided script
 After you have forked each of the EasyBuild repositories on GitHub (+ vsc-base), you can set up a development version
 of EasyBuild, in the following manner::
 
+    # pick an installation prefix (adjust as you like)
+    INSTALL_PREFIX=$(mktemp -d $HOME/EasyBuild-XXXXXX)
     # download script
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
-    # run downloaded script, specifying your GitHub username and the installation prefix
-    bash install-EasyBuild-develop.sh GITHUB_USERNAME $HOME/EasyBuild/$$
+    # run downloaded script, specifying *your* GitHub username and the installation prefix
+    bash install-EasyBuild-develop.sh GITHUB_USERNAME $INSTALL_PREFIX
     # update $MODULEPATH via 'module use', and load the module
-    module use $HOME/EasyBuild/$$
+    module use $INSTALL_PREFIX
     module load EasyBuild-develop
     eb --version  ## This should ensure you have a reasonable instance of EasyBuild
 
@@ -188,6 +190,3 @@ of EasyBuild, in the following manner::
   installation directly on local git repositories, which allows you to
   customise it easily. Remember to commit/push or otherwise save your changes,
   if you intend to use them later.
-
-.. note:: Using ``$$`` (process id of current shell) is there to ensure that you do not step on other people's toes,
-  in case you happen to run the same command, on the same system, in the same account, at the same time.
