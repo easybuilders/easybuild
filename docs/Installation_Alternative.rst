@@ -7,12 +7,16 @@
 Alternative installation methods
 ================================
 
+We warmly recommend installing EasyBuild via the bootstrap procedure, see :ref:`bootstrapping`.
+
 This page describes the alternative installation methods:
 
--  `Standard installation of latest release`_
--  `Installation from downloaded sources`_
--  `Installation of latest release from GitHub`_
--  `Installation of latest development version`_
+*  `Standard installation of latest release`_
+*  `Installation from downloaded sources`_
+*  `Installation of latest release from GitHub`_
+*  `Installation of latest development version`_
+
+Do take into account the list of (required) dependencies (see :ref:`dependencies`).
 
 --------------
 
@@ -161,25 +165,28 @@ EasyBuild repository for that matter)::
 
 .. note::
   You should use this only if you are interested in developing for EasyBuild.
-  Although it is well tested, the development version of EasyBuild may be unstable at a given point in time.
+  Although it is well tested, the development version of the EasyBuild repositories may be unstable at a given point
+  in time.
 
 Installation of latest development version using provided script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can set up a development version of EasyBuild, in the following manner::
+After you have forked each of the EasyBuild repositories on GitHub (+ vsc-base), you can set up a development version
+of EasyBuild, in the following manner::
 
+    # pick an installation prefix (adjust as you like)
+    INSTALL_PREFIX=$(mktemp -d $HOME/EasyBuild-XXXXXX)
+    # download script
     curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
-    bash install-EasyBuild-develop.sh hpcugent $HOME/EasyBuild/$$ ## N.B. repo-to-be-used & installation prefix
-    module load $HOME/EasyBuild/$$/module-EasyBuild-develop
+    # run downloaded script, specifying *your* GitHub username and the installation prefix
+    bash install-EasyBuild-develop.sh GITHUB_USERNAME $INSTALL_PREFIX
+    # update $MODULEPATH via 'module use', and load the module
+    module use $INSTALL_PREFIX
+    module load EasyBuild-develop
     eb --version  ## This should ensure you have a reasonable instance of EasyBuild
 
-.. note:: The above creates a modulefile which you can load/inspect at will.
+.. note:: The above creates a module file which you can load/inspect at will.
   The interesting aspect about it is that it is pointing to an EasyBuild
   installation directly on local git repositories, which allows you to
   customise it easily. Remember to commit/push or otherwise save your changes,
   if you intend to use them later.
-
-.. note:: Using ``$$`` (process id of current shell) is there to ensure that you do not step on other people's toes,
-  in case you happen to run the same command, on the same system, at the same time.
-
-

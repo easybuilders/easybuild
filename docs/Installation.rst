@@ -31,6 +31,7 @@ The only strict requirements are:
 
 For more information on (optional) dependencies, see :ref:`dependencies`.
 
+.. _bootstrapping:
 
 Bootstrapping EasyBuild
 -----------------------
