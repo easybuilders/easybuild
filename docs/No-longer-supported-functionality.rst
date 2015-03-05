@@ -37,7 +37,7 @@ For EasyBuild framework developers:
 
 .. note::
     A script ``fix-broken-easyconfigs.py`` is provided to fix easyconfig files that were broken by the
-    backward-incompatible changes documentated at :ref:`depr_ConfigureMake_fallback_eb1` and
+    backward-incompatible changes documented at :ref:`depr_ConfigureMake_fallback_eb1` and
     :ref:`depr_easyconfig_parameters_eb1`. See :ref:`fix_broken_easyconfigs_script` for more information.
 
 .. _depr_python_version_compatibility_eb1:
@@ -126,6 +126,8 @@ Some easyconfig parameters are no longer supported.
   A script is available to fix easyconfig files that are broken because they still rely on this functionality,
   see :ref:`fix_broken_easyconfigs_script`.
 
+.. _depr_premakeopts_makeopts_eb1:
+
 Options for build command
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -140,9 +142,11 @@ in favor of their alternative parameters, ``prebuildopts`` and ``buildopts``, re
 
 (see also :ref:`configure_build_install_command_options`)
 
-.. note:: Since EasyBuild v1.13.0, ``buildopts`` will be automatically defined with the value of ``makeopts``, unless
+.. note:: Since EasyBuild v1.13.0, ``buildopts`` is automatically defined with the value of ``makeopts``, unless
   ``buildopts`` was specified by itself. When both values are specified, ``buildopts`` takes precedence of ``makeopts``
   (analogous for ``prebuildopts``/``premakeopts``).
+
+.. _depr_shared_lib_ext_eb1:
 
 Shared library extension
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -155,6 +159,8 @@ Shared library extension
 
 Using the ``shared_lib_ext`` "magic" variable representing the extension for shared libraries (``.so`` on Linux,
 ``.dylib`` on OS X) is deprecated; the easyconfig constant ``SHLIB_EXT`` should be using instead.
+
+.. _depr_license_eb1:
 
 Software license
 ^^^^^^^^^^^^^^^^

@@ -23,19 +23,19 @@ for which support will be removed in EasyBuild version 3.0.
 
 For EasyBuild users:
 
-*(none yet)*
+*(nothing yet)*
 
 For authors of easyconfig files:
 
-*(none yet)*
+*(nothing yet)*
 
 For developers of easyblocks:
 
-*(none yet)*
+*(nothing yet)*
 
 For EasyBuild framework developers:
 
-*(none yet)*
+*(nothing yet)*
 
 .. _deprecation_policy:
 

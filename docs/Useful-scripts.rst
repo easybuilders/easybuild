@@ -4,6 +4,7 @@ Useful scripts
 ==============
 
 A couple of useful stand-alone scripts are provided along with the EasyBuild framework.
+
 The latest stable version of these scripts is available in the ``easybuild-framework`` GitHub repository at
 https://github.com/hpcugent/easybuild-framework/tree/master/easybuild/scripts.
 
@@ -22,9 +23,9 @@ the ``fix_broken_easyconfigs.py`` script can be used.
 This script rewrites easyconfig files that are broken because they still:
 
 * rely on the automagic fallback to the generic ``ConfigureMake`` easyblock (see :ref:`depr_ConfigureMake_fallback_eb1`)
-* define the ``premakeopts`` and/or ``makeopts`` eaysconfig parameters (see :ref:`depr_easyconfig_parameters_eb1`)
-* use the ``shared_lib_ext`` 'constant' (see :ref:`depr_easyconfig_parameters_eb1`)
-* incorrectly use the ``license`` easyconfig parameter (see :ref:`depr_easyconfig_parameters_eb1`)
+* define the ``premakeopts`` and/or ``makeopts`` eaysconfig parameters (see :ref:`depr_premakeopts_makeopts_eb1`)
+* use the ``shared_lib_ext`` 'constant' (see :ref:`depr_shared_lib_ext_eb1`)
+* incorrectly use the ``license`` easyconfig parameter (see :ref:`depr_license_eb1`)
 
 The script accepts a list of easyconfig files or directories containing easyconfig files (``.eb``) as arguments,
 and will consider all easyconfig files it can find.
@@ -32,12 +33,15 @@ and will consider all easyconfig files it can find.
 Only easyconfig files that are considered broken (according to one or more of the aspects listed above) are patched;
 other easyconfigs will be left untouched.
 
+To determine whether ``easyblock = 'ConfigureMake'`` should be added in an easyconfig file that does
+not include any ``easyblock`` specification yet, the easyblocks available in the active Python search path (i.e.,
+the ones listed in the output of ``eb --list-easyblocks``, see also :ref:`list_easyblocks`) are taken into account.
+
 A backup copy is created for each easyconfig file that is being patched.
 
 Example usage::
 
     $ python easybuild/scripts/fix_broken_easyconfigs.py broken.eb myeasyconfigs GCC-4.9.2.eb
-    Couldn't import dot_parser, loading of dot files will not be possible.
     == 2015-03-05 17:02:22,438 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO Processing 3 easyconfigs
     == 2015-03-05 17:02:22,454 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO Backed up broken.eb to broken.eb.bk
     == 2015-03-05 17:02:22,454 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO broken.eb: fixed
