@@ -168,6 +168,8 @@ EasyBuild repository for that matter)::
   Although it is well tested, the development version of the EasyBuild repositories may be unstable at a given point
   in time.
 
+.. _install_EasyBuild_develop_script:
+
 Installation of latest development version using provided script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
