@@ -76,4 +76,4 @@ This results in ``broken.eb`` being rewritten/fixed, after creating a backup cop
 *download from:* https://github.com/hpcugent/easybuild-framework/blob/master/easybuild/scripts/install-EasyBuild-develop.sh
 
 A script to set up an EasyBuild development environment.
-For more information, see :ref:`install_EasyBuild_develop_script`.
+For more information, see :ref:`install_latest_develop_using_script`.
