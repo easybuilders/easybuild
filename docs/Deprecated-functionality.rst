@@ -9,6 +9,7 @@ Support for using this functionality will be dropped in a future version of Easy
 for more information about functionality for which support has already been dropped).
 
 This page:
+
 * provides an :ref:`overview of currently deprecated functionality <overview_deprecated>` together with
 available alternatives
 * describes the :ref:`EasyBuild deprecation policy <deprecation_policy>`
