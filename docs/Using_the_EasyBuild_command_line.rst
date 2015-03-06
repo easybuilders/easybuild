@@ -166,6 +166,8 @@ Toolchains have brief mnemonic names, for example:
 
 The complete table of available toolchains is available at :ref:`toolchains_table`.
 
+.. _list_easyblocks:
+
 List of available easyblocks, ``--list-easyblocks``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
