@@ -80,37 +80,37 @@ feature + bugfix release
 
 **easyblocks**
 
-* one new generic easyblock for installing a bundle of modules: ``Bundle`` (`#550 <https://github.com/hpcugent/easybuild-easyconfigs/pull/550>`_)
+* one new generic easyblock for installing a bundle of modules: ``Bundle`` (`#550 <https://github.com/hpcugent/easybuild-easyblocks/pull/550>`_)
 
   * and let the ``Toolchain`` generic easyblock derive from ``Bundle``
 * new easyblocks for 2 software packages that require customized support:
 
-  * GAMESS-US (`#470 <https://github.com/hpcugent/easybuild-easyconfigs/pull/470>`_, `#544 <https://github.com/hpcugent/easybuild-easyconfigs/pull/544>`_, `#558 <https://github.com/hpcugent/easybuild-easyconfigs/pull/558>`_), Hadoop (`#563 <https://github.com/hpcugent/easybuild-easyconfigs/pull/563>`_)
+  * GAMESS-US (`#470 <https://github.com/hpcugent/easybuild-easyblocks/pull/470>`_, `#544 <https://github.com/hpcugent/easybuild-easyblocks/pull/544>`_, `#558 <https://github.com/hpcugent/easybuild-easyblocks/pull/558>`_), Hadoop (`#563 <https://github.com/hpcugent/easybuild-easyblocks/pull/563>`_)
 * various other enhancements, including:
 
-  * move support for ``staged_install`` from CPLEX easyblock to generic ``Binary`` easyblock (`#502 <https://github.com/hpcugent/easybuild-easyconfigs/pull/502>`_)
-  * fix sanity check in picard easyblock for v1.119 that doesn't include ``sam.jar`` (`#522 <https://github.com/hpcugent/easybuild-easyconfigs/pull/522>`_)
-  * log warning message when unlinking jellyfish symlink fails in Trinity easyblock (`#534 <https://github.com/hpcugent/easybuild-easyconfigs/pull/534>`_)
-  * revamp ``EB_libint2`` easyblock into ``EB_Libint`` that works for both Libint v1x and v2.x (`#536 <https://github.com/hpcugent/easybuild-easyconfigs/pull/536>`_)
-  * update CP2K easyblock for recent versions (no more '``fes``') (`#537 <https://github.com/hpcugent/easybuild-easyconfigs/pull/537>`_)
-  * update SuiteSparse easyblock for recent versions (`#541 <https://github.com/hpcugent/easybuild-easyconfigs/pull/541>`_)
-  * fix easyblock unit tests after dropping support for deprecated behaviour in framework (`#543 <https://github.com/hpcugent/easybuild-easyconfigs/pull/543>`_)
-  * rework PSI easyblock to support future releases (`#545 <https://github.com/hpcugent/easybuild-easyconfigs/pull/545>`_)
-  * enable always generating a 'verbose' Makefile in the generic CMakeMake easyblock (`#546 <https://github.com/hpcugent/easybuild-easyconfigs/pull/546>`_)
-  * remove functionality in (generic) easyblocks that was deprecated for EasyBuild v2.0 (`#547 <https://github.com/hpcugent/easybuild-easyconfigs/pull/547>`_)
-  * enhance generic RPackage easyblock to support installing extensions in a separate prefix (`#551 <https://github.com/hpcugent/easybuild-easyconfigs/pull/551>`_)
-  * deprecate GenomeAnalysisTK easyblock, since it's basically equivalent to Tarball (`#557 <https://github.com/hpcugent/easybuild-easyconfigs/pull/557>`_)
-  * update SAMtools easyblock for v1.2 (`#562 <https://github.com/hpcugent/easybuild-easyconfigs/pull/562>`_)
-  * take ``preconfigopts`` easyconfig parameter into account in ROOT easyblock (`#566 <https://github.com/hpcugent/easybuild-easyconfigs/pull/566>`_)
+  * move support for ``staged_install`` from CPLEX easyblock to generic ``Binary`` easyblock (`#502 <https://github.com/hpcugent/easybuild-easyblocks/pull/502>`_)
+  * fix sanity check in picard easyblock for v1.119 that doesn't include ``sam.jar`` (`#522 <https://github.com/hpcugent/easybuild-easyblocks/pull/522>`_)
+  * log warning message when unlinking jellyfish symlink fails in Trinity easyblock (`#534 <https://github.com/hpcugent/easybuild-easyblocks/pull/534>`_)
+  * revamp ``EB_libint2`` easyblock into ``EB_Libint`` that works for both Libint v1x and v2.x (`#536 <https://github.com/hpcugent/easybuild-easyblocks/pull/536>`_)
+  * update CP2K easyblock for recent versions (no more '``fes``') (`#537 <https://github.com/hpcugent/easybuild-easyblocks/pull/537>`_)
+  * update SuiteSparse easyblock for recent versions (`#541 <https://github.com/hpcugent/easybuild-easyblocks/pull/541>`_)
+  * fix easyblock unit tests after dropping support for deprecated behaviour in framework (`#543 <https://github.com/hpcugent/easybuild-easyblocks/pull/543>`_)
+  * rework PSI easyblock to support future releases (`#545 <https://github.com/hpcugent/easybuild-easyblocks/pull/545>`_)
+  * enable always generating a 'verbose' Makefile in the generic CMakeMake easyblock (`#546 <https://github.com/hpcugent/easybuild-easyblocks/pull/546>`_)
+  * remove functionality in (generic) easyblocks that was deprecated for EasyBuild v2.0 (`#547 <https://github.com/hpcugent/easybuild-easyblocks/pull/547>`_)
+  * enhance generic RPackage easyblock to support installing extensions in a separate prefix (`#551 <https://github.com/hpcugent/easybuild-easyblocks/pull/551>`_)
+  * deprecate GenomeAnalysisTK easyblock, since it's basically equivalent to Tarball (`#557 <https://github.com/hpcugent/easybuild-easyblocks/pull/557>`_)
+  * update SAMtools easyblock for v1.2 (`#562 <https://github.com/hpcugent/easybuild-easyblocks/pull/562>`_)
+  * take ``preconfigopts`` easyconfig parameter into account in ROOT easyblock (`#566 <https://github.com/hpcugent/easybuild-easyblocks/pull/566>`_)
   * update easyblock for installing EasyBuild
 
-    * to support bootstrapping with provided source tarballs (`#559 <https://github.com/hpcugent/easybuild-easyconfigs/pull/559>`_)
+    * to support bootstrapping with provided source tarballs (`#559 <https://github.com/hpcugent/easybuild-easyblocks/pull/559>`_)
 
-    * to also cover vsc-base dependency, and verify ``easy-install.pth`` (`#567 <https://github.com/hpcugent/easybuild-easyconfigs/pull/567>`_)
-  * update disabling sanitizer tests for Clang 3.6 (`#570 <https://github.com/hpcugent/easybuild-easyconfigs/pull/570>`_)
+    * to also cover vsc-base dependency, and verify ``easy-install.pth`` (`#567 <https://github.com/hpcugent/easybuild-easyblocks/pull/567>`_)
+  * update disabling sanitizer tests for Clang 3.6 (`#570 <https://github.com/hpcugent/easybuild-easyblocks/pull/570>`_)
 * various bug fixes, including:
-  * fix handling of LTO in GCC easyblock (`#535 <https://github.com/hpcugent/easybuild-easyconfigs/pull/535>`_)
-  * relocate FDTD RPM to fix installation on SL6 (`#538 <https://github.com/hpcugent/easybuild-easyconfigs/pull/538>`_)
+  * fix handling of LTO in GCC easyblock (`#535 <https://github.com/hpcugent/easybuild-easyblocks/pull/535>`_)
+  * relocate FDTD RPM to fix installation on SL6 (`#538 <https://github.com/hpcugent/easybuild-easyblocks/pull/538>`_)
 
 **easyconfigs**
 
@@ -161,7 +161,7 @@ bugfix release
 
 **easyblocks**
 
-* make ``EB_EasyBuildMeta`` easyblock aware of vsc-base to make upgrading to EasyBuild v2.0.0 possible (`#573 <https://github.com/hpcugent/easybuild-easyconfigs/pull/573>`_)
+* make ``EB_EasyBuildMeta`` easyblock aware of vsc-base to make upgrading to EasyBuild v2.0.0 possible (`#573 <https://github.com/hpcugent/easybuild-easyblocks/pull/573>`_)
 
 **easyconfigs**
 
