@@ -8,10 +8,12 @@ Some of the functionality that was available in previous EasyBuild versions is *
 Support for using this functionality will be dropped in a future version of EasyBuild (see :ref:`no_longer_supported`
 for more information about functionality for which support has already been dropped).
 
-This page provides an :ref:`overview of currently deprecated functionality <overview_deprecated>` together with
-available alternatives, describes the :ref:`EasyBuild deprecation policy <deprecation_policy>`, and explains how
-to easily :ref:`check whether you are still relying on deprecated functionality
-<how_to_check_use_of_deprecated_functionality>`.
+This page:
+* provides an :ref:`overview of currently deprecated functionality <overview_deprecated>` together with
+available alternatives
+* describes the :ref:`EasyBuild deprecation policy <deprecation_policy>`
+* explains how to easily :ref:`check whether you are still relying on deprecated functionality
+<how_to_check_use_of_deprecated_functionality>`
 
 .. _overview_deprecated:
 
