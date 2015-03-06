@@ -55,8 +55,10 @@ Other topics
     :maxdepth: 2
 
     Code_style
-    Deprecated-functionality
     Unit-tests
+    Useful-scripts
+    Deprecated-functionality
+    Removed-functionality
 
 Getting help
 ============

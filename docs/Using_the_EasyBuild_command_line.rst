@@ -166,6 +166,8 @@ Toolchains have brief mnemonic names, for example:
 
 The complete table of available toolchains is available at :ref:`toolchains_table`.
 
+.. _list_easyblocks:
+
 List of available easyblocks, ``--list-easyblocks``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -199,9 +201,6 @@ Combine -a with ``--easyblock/-e`` to include parameters that are specific to a 
   $ eb -a -e EB_WRF
 
 If you want to see the full output of running this command, look at :doc:`eb_a_e_EB_WRF`.
-
-.. note:: With the automagic fallback to the ``ConfigureMake`` easyblock being deprecated (see :ref:`ConfigureMake_fallback`),
-  the easyconfig parameters specific to ``ConfigureMake`` are no longer included by default (since EasyBuild v1.16.1).
 
 Enable debug logging, ``--debug`` / ``-d``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

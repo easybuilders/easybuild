@@ -3,6 +3,11 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150305.01** (`Mar 5th 2015`):
+
+  * add documentation on removed functionality (see :ref:`removed_functionality`)
+  * clean up documentation on deprecated functionality (see :ref:`deprecated`)
+  * add documentation on provided scripts, in particular ``fix-broken-easyconfigs.py`` (see :ref:`useful_scripts`)
 * **release 20150302.01** (`Mar 2nd 2015`): update/cleanup documentation on :ref:`alt_inst_methods`
 * **release 20150227.02** (`Feb 27th 2015`): add documentation on the EasyBuild unit test suites, see :ref:`unit_tests`
 * **release 20150227.01** (`Feb 27th 2015`): enhance documentation w.r.t. to (optional dependencies), see :ref:`installation`
