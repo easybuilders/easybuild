@@ -149,6 +149,24 @@ feature + bugfix release
   * correct name in BLAST+ easyconfigs (`#1443 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1443>`_)
   * fix name for sparsehash easyconfigs (`#1452 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1452>`_)
 
+
+v1.16.2 (March 6th 2015)
+------------------------
+
+bugfix release
+
+**framework**
+
+`(no changes compared to v1.16.1, simple version bump to stay in sync with easybuild-easyblocks)`
+
+**easyblocks**
+
+* make ``EB_EasyBuildMeta`` easyblock aware of vsc-base to make upgrading to EasyBuild v2.0.0 possible (`#573 <https://github.com/hpcugent/easybuild-easyconfigs/pull/573>`_)
+
+**easyconfigs**
+
+`(no changes compared to v1.16.1, simple version bump to stay in sync with easybuild-easyblocks)`
+
 v1.16.1 (December 19th 2014)
 ----------------------------
 
