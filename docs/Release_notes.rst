@@ -42,7 +42,7 @@ feature + bugfix release
 * deprecate automagic fallback to ``ConfigureMake`` easyblock (`#1113 <https://github.com/hpcugent/easybuild-framework/pull/1113>`_)
 
   * easyconfigs should specify ``easyblock = 'ConfigureMake'`` instead of relying on the fallback mechanism
-  * **note: automagic fallback to** ``ConfigureMake`` **easyblock will be dropped in EasyBuild v2.0**
+  * **note: automagic fallback to** ``ConfigureMake`` **easyblock will be removed in EasyBuild v2.0**
   * see also `Automagic fallback to ConfigureMake <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_
   
 * stop triggering deprecated functionality, to enable use of ``--deprecated=2.0`` (`#1107 <https://github.com/hpcugent/easybuild-framework/pull/1107>`_, `#1115 <https://github.com/hpcugent/easybuild-framework/pull/1115>`_, `#1119 <https://github.com/hpcugent/easybuild-framework/pull/1119>`_)
