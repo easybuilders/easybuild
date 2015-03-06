@@ -47,6 +47,15 @@ Basic usage topics
     Writing_easyconfig_files
     Logfiles
 
+Advanced usage topics
+=====================
+
+.. toctree::
+    :glob:
+    :maxdepth: 3
+
+    Integration_with_GitHub
+
 Other topics
 ============
 

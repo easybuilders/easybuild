@@ -3,7 +3,11 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20150305.01** (`Mar 5th 2015`):
+* **release 20150306.02** (`Mar 6th 2015`):
+
+  * add documentation on GitHub integration features (see :ref:`integration_with_github`), mainly ``--from-pr`` (see :ref:`from_pr`)
+  * document locations where (specified) easyconfig files are being searched for (see :ref:`specifying_easyconfigs`)
+* **release 20150306.01** (`Mar 6th 2015`):
 
   * add documentation on removed functionality (see :ref:`removed_functionality`)
   * clean up documentation on deprecated functionality (see :ref:`deprecated`)
