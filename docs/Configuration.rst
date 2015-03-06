@@ -67,28 +67,53 @@ For more details w.r.t. each of the supported configuration types, see below.
 
 .. _configuration_file:
 
-Configuration file
-~~~~~~~~~~~~~~~~~~
+Configuration file(s)
+~~~~~~~~~~~~~~~~~~~~~
 
 .. _list_of_configuration_files:
 
 List of used configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The set of configuration files that will be used by EasyBuild is
-determined in the following order of preference:
+The list of configuration files that will be used by EasyBuild is determined in the following order of preference:
 
-* the path(s) specified via **command line argument** ``--configfiles``
+* the path(s) specified via the **command line argument** ``--configfiles``
 * the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
-* the **default path** for the EasyBuild configuration file, i.e.
-   ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``).
+* the **default paths** for EasyBuild configuration files
 
-Note that each available configuration file will be used, and that the
-configuration settings specified in these files will be retained according to the order of preference as indicated above.
+.. _default_configuration_files:
 
-On top of this, the command line argument ``--ignoreconfigfiles``
-allows to specify configuration files that should be *ignored* by EasyBuild
-(regardless of whether they are specified via any of the options above).
+Default configuration files
++++++++++++++++++++++++++++
+
+By default, EasyBuild will use existing configuration files at the following paths:
+
+* ``$dir/easybuild.d/*.cfg``, for each directory ``$dir`` listed in ``$XDG_CONFIG_DIRS`` (where ``$XDG_CONFIG_DIRS``
+  defaults to ``/etc``)
+* ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (where ``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``)
+
+Hence, if ``$XDG_CONFIG_HOME`` and ``$XDG_CONFIG_DIRS`` are not defined, EasyBuild will only consider default
+configuration files at ``/etc/easybuild.d/*.cfg`` and ``$HOME/.config/easybuild/config.cfg``.
+
+The configuration file located in ``$XDG_CONFIG_HOME`` will be listed *after* the ones obtained via ``$XDG_CONFIG_DIRS``,
+such that user-defined configuration settings have preference over system defaults.
+
+Multiple configuration files
+++++++++++++++++++++++++++++
+
+If multiple configuration files are listed via a mechanism listed above, the settings in the last
+configuration file have preference over the others.
+
+Each available configuration file will be used, and the configuration settings specified in these files
+will be retained according to the order of preference as indicated above: settings in configuration files specfied via
+``--configfiles`` override those in configuration files specified via ``$EASYBUILD_CONFIGFILES``, which in turns override
+settings in default configuration files.
+
+Ignored configuration files
++++++++++++++++++++++++++++
+
+On top of this, the ``--ignoreconfigfiles`` configuration option allows to specify configuration files that should be
+*ignored* by EasyBuild (regardless of whether they are specified via any of the options above).
 
 
 Configuration file format

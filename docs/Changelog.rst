@@ -3,6 +3,25 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150306.03** (`Mar 6th 2015`): add release notes for EasyBuild v2.0.0 (see :ref:`release_notes`)
+* **release 20150306.02** (`Mar 6th 2015`):
+
+  * add documentation on GitHub integration features (see :ref:`integration_with_github`), mainly ``--from-pr`` (see :ref:`from_pr`)
+  * document locations where (specified) easyconfig files are being searched for (see :ref:`specifying_easyconfigs`)
+* **release 20150306.01** (`Mar 6th 2015`):
+
+  * add documentation on removed functionality (see :ref:`removed_functionality`)
+  * clean up documentation on deprecated functionality (see :ref:`deprecated`)
+  * add documentation on provided scripts, in particular ``fix-broken-easyconfigs.py`` (see :ref:`useful_scripts`)
+* **release 20150302.01** (`Mar 2nd 2015`): update/cleanup documentation on :ref:`alt_inst_methods`
+* **release 20150227.02** (`Feb 27th 2015`): add documentation on the EasyBuild unit test suites, see :ref:`unit_tests`
+* **release 20150227.01** (`Feb 27th 2015`): enhance documentation w.r.t. to (optional dependencies), see :ref:`installation`
+* **release 20150220.01** (`Feb 20th 2015`):
+
+  * document new advanced bootstrapping options: skipping stage 0 and providing source tarballs (see :ref:`installation`)
+* **release 20150219.01** (`Feb 19th 2015`): first updates for EasyBuild v2.0.0
+
+  * extend section on (default) EasyBuild configuration files to also cover ``$XDG_CONFIG_DIRS`` (see :ref:`configuration_file:`)
 * **release 20150205.01** (`Feb 5th 2015`): include information on deprecated functionality in (generic) easyblocks (see :ref:`deprecated`)
 * **release 20150126.01** (`Jan 26th 2015`):
 
@@ -10,10 +29,10 @@ Changelog for EasyBuild documentation
   * clarify need to have modules tool binary available in ``$PATH`` (:ref:`installation`)
 * **release 20150112.01** (`Jan 12th 2015`): mention need to escape ``%`` when setting log file format via config file (see :ref:`logfile_format`)
 * **release 20150107.01** (`Jan 7th 2015`): document behaviour of `dummy` toolchain (:ref:`dummy_toolchain`)
-* **release 20141219.01** (`Dec 19th 2014`): add release notes for EasyBuild v1.16.1
-* **release 20141218.01** (`Dec 18th 2014`): add release notes for EasyBuild v1.16.0
+* **release 20141219.01** (`Dec 19th 2014`): add release notes for EasyBuild v1.16.1 (see :ref:`release_notes`)
+* **release 20141218.01** (`Dec 18th 2014`): add release notes for EasyBuild v1.16.0 (see :ref:`release_notes`)
 * **release 20141217.01** (`Dec 17th 2014`): document deprecated functionality in EasyBuild v1.x (:ref:`deprecated`)
-* **release 20141204.02** (`Dec 4th 2014`): add EasyBuild release notes
+* **release 20141204.02** (`Dec 4th 2014`): add EasyBuild release notes (see :ref:`release_notes`)
 * **release 20141204.01** (`Dec 4th 2014`): updates for EasyBuild v1.16.0
 
   * document details w.r.t. (controlling of) robot search path, incl. ``--robot-paths`` (:ref:`using_the_easybuild_command_line`)
