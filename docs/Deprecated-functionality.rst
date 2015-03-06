@@ -11,7 +11,7 @@ for more information about functionality for which support has already been drop
 This page:
 
 * provides an :ref:`overview of currently deprecated functionality <overview_deprecated>` together with
-available alternatives
+  available alternatives
 * describes the :ref:`EasyBuild deprecation policy <deprecation_policy>`
 * explains how to easily :ref:`check whether you are still relying on deprecated functionality
 <how_to_check_use_of_deprecated_functionality>`
