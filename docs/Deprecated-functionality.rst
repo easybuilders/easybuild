@@ -5,13 +5,16 @@ Deprecated functionality
 
 Some of the functionality that was available in previous EasyBuild versions is *deprecated*, and should no longer be used.
 
-Support for using this functionality will be dropped in a future version of EasyBuild (see :ref:`no_longer_supported`
-for more information about functionality for which support has already been dropped).
+This functionality will be removed in a future version of EasyBuild (see :ref:`removed_functionality`
+for more information about functionality that has been removed already).
 
-This page provides an :ref:`overview of currently deprecated functionality <overview_deprecated>` together with
-available alternatives, describes the :ref:`EasyBuild deprecation policy <deprecation_policy>`, and explains how
-to easily :ref:`check whether you are still relying on deprecated functionality
-<how_to_check_use_of_deprecated_functionality>`.
+This page:
+
+* provides an :ref:`overview of currently deprecated functionality <overview_deprecated>` together with
+  available alternatives
+* describes the :ref:`EasyBuild deprecation policy <deprecation_policy>`
+* explains how to easily :ref:`check whether you are still relying on deprecated functionality
+  <how_to_check_use_of_deprecated_functionality>`
 
 .. _overview_deprecated:
 
@@ -77,7 +80,7 @@ rid of, together with supporting a better alternative.
     see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more informatio
 
 * the code supporting the deprecated functionality is *removed* in EasyBuild version ``X.(Y+1)`` (i.e., the first
-  non-bugfix-only release after version ``X.Y``), see also :ref:`no_longer_supported`
+  non-bugfix-only release after version ``X.Y``), see also :ref:`removed_functionality`
 
 * until EasyBuild version ``X.(Y+1)``, the code supporting the deprecated functionality will still be available; using
   the ``--deprecated`` command line option (or, equivalently, the ``$EASYBUILD_DEPRECATED`` environment variable), the

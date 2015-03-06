@@ -67,7 +67,7 @@ Other topics
     Unit-tests
     Useful-scripts
     Deprecated-functionality
-    No-longer-supported-functionality
+    Removed-functionality
 
 Getting help
 ============
