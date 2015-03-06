@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150306.03** (`Mar 6th 2015`): add release notes for EasyBuild v2.0.0 (see :ref:`release_notes`)
 * **release 20150306.02** (`Mar 6th 2015`):
 
   * add documentation on GitHub integration features (see :ref:`integration_with_github`), mainly ``--from-pr`` (see :ref:`from_pr`)
@@ -28,10 +29,10 @@ Changelog for EasyBuild documentation
   * clarify need to have modules tool binary available in ``$PATH`` (:ref:`installation`)
 * **release 20150112.01** (`Jan 12th 2015`): mention need to escape ``%`` when setting log file format via config file (see :ref:`logfile_format`)
 * **release 20150107.01** (`Jan 7th 2015`): document behaviour of `dummy` toolchain (:ref:`dummy_toolchain`)
-* **release 20141219.01** (`Dec 19th 2014`): add release notes for EasyBuild v1.16.1
-* **release 20141218.01** (`Dec 18th 2014`): add release notes for EasyBuild v1.16.0
+* **release 20141219.01** (`Dec 19th 2014`): add release notes for EasyBuild v1.16.1 (see :ref:`release_notes`)
+* **release 20141218.01** (`Dec 18th 2014`): add release notes for EasyBuild v1.16.0 (see :ref:`release_notes`)
 * **release 20141217.01** (`Dec 17th 2014`): document deprecated functionality in EasyBuild v1.x (:ref:`deprecated`)
-* **release 20141204.02** (`Dec 4th 2014`): add EasyBuild release notes
+* **release 20141204.02** (`Dec 4th 2014`): add EasyBuild release notes (see :ref:`release_notes`)
 * **release 20141204.01** (`Dec 4th 2014`): updates for EasyBuild v1.16.0
 
   * document details w.r.t. (controlling of) robot search path, incl. ``--robot-paths`` (:ref:`using_the_easybuild_command_line`)

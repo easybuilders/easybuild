@@ -81,6 +81,8 @@ The list of configuration files that will be used by EasyBuild is determined in 
 * the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
 * the **default paths** for EasyBuild configuration files
 
+.. _default_configuration_files:
+
 Default configuration files
 +++++++++++++++++++++++++++
 
