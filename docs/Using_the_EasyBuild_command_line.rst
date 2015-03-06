@@ -8,8 +8,37 @@ Basic usage of EasyBuild is described in the following sections, covering the mo
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
 and hereby the most common command line options are being documented.
 
+.. _specifying_easyconfigs:
+
 Specifying builds
 -----------------
+
+To instruct EasyBuild which software packages it should build/install and which build parameters it should use,
+one or more *easyconfig files* (see :ref:`easyconfig_files`) must be specified.
+
+This can be done in a number of ways:
+
+* :ref:`specifying_easyconfigs_single`
+* :ref:`specifying_easyconfigs_command_line`
+* :ref:`specifying_easyconfigs_set_of_easyconfigs`
+* :ref:`from_pr`
+
+Whenever EasyBuild searches for easyconfig files, it considers a couple of locations, i.e. (in order of preference):
+
+(i) the local working directory
+(ii) the robot search path (see :ref:`robot_search_path`)
+(iii) the path to easyconfig files that are part of the active EasyBuild installation
+  (which is included in the default robot search path)
+
+These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
+*not* for easyconfig files that are specified via an absolute path.
+
+.. note::
+  For easyconfig files specified on the ``eb`` command line, the *full* robot search path is only considered since
+  EasyBuild v2.0.0. Earlier versions only considered the local working directory and the easyconfig files that are
+  part of the active EasyBuild installation for *explicitely specified* easyconfig files.
+
+.. _specifying_easyconfigs_single:
 
 By providing a single easyconfig file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,6 +91,9 @@ This is a crucial design aspect, since the dependency resolution mechanism (see 
 .. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
   in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
 
+
+.. _specifying_easyconfigs_command_line:
+
 Via command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~
  
@@ -81,6 +113,8 @@ using the ``goolf/1.4.10`` toolchain::
 
 At this point, a module ``HPCG/2.1-goolf-1.4.10`` should have been installed.
  
+
+.. _specifying_easyconfigs_set_of_easyconfigs:
 
 By providing a set of easyconfig files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -347,6 +381,8 @@ by the dependency graph.
   for a particular dependency could not be found. For example::
 
     add_dependencies: no module 'GCC/4.7.2' found for dependency {...}
+
+.. _robot_search_path:
 
 Searching for easyconfigs: the robot search path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
