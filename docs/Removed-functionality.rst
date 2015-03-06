@@ -45,7 +45,7 @@ For EasyBuild framework developers:
 Python version compatibility
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Compatibility with Python 2.4 is deprecated.**
+**Compatibility with Python 2.4 is removed.**
 
 * *deprecated since:* EasyBuild v1.14.0 (July'14)
 * *removed in:* EasyBuild v2.0
@@ -65,7 +65,7 @@ removing support for Python 2.4.
 EasyBuild configuration
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-**Old-style EasyBuild configuration is deprecated.**
+**Old-style EasyBuild configuration is removed.**
 
 * *deprecated since:* EasyBuild v1.3.0 (Apr'13)
 * *removed in*: EasyBuild v2.0
@@ -85,7 +85,7 @@ For detailed information with respect to porting from the old to the new configu
 Location of default configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**The default configuration file location** ``$HOME/.easybuild/config.cfg`` **is deprecated.**
+**The default configuration file location** ``$HOME/.easybuild/config.cfg`` **is no longer considered.**
 
 * *deprecated since:* EasyBuild v1.11.0 (Feb'14)
 * *removed in*: EasyBuild v2.0
@@ -94,14 +94,15 @@ Location of default configuration file
 The default path for the new-style configuration path is ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (or
 ``$HOME/.config/easybuild/config.cfg`` if ``$XDG_CONFIG_HOME`` is not set), see :ref:`list_of_configuration_files`.
 
-The previous default path ``$HOME/.easybuild/config.cfg`` that was in place since EasyBuild v1.3.0 is deprecated.
+The previous default path ``$HOME/.easybuild/config.cfg`` that was in place since EasyBuild v1.3.0 is no longer
+considered.
 
 .. _depr_ConfigureMake_fallback_eb1:
 
 Automagic fallback to ``ConfigureMake``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**The automagic fallback to the** ``ConfigureMake`` **easyblock is deprecated.**
+**The automagic fallback to the** ``ConfigureMake`` **easyblock is removed.**
 
 * *deprecated since:* EasyBuild v1.16.0 (Dec'14)
 * *removed in:* EasyBuild v2.0
@@ -110,7 +111,7 @@ Automagic fallback to ``ConfigureMake``
 If the ``easyblock`` easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
 name. In EasyBuild v1.x, the generic ``ConfigureMake`` easyblock was used if no matching easyblock could be found.
 
-This behavior is now deprecated; instead, easyconfigs that require using the ``ConfigureMake`` easyblock *must* include
+This behavior is now removed; instead, easyconfigs that require using the ``ConfigureMake`` easyblock *must* include
 the following::
 
   easyblock = 'ConfigureMake'
@@ -131,13 +132,13 @@ Some easyconfig parameters are removed.
 Options for build command
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Use of** ``premakeopts`` **or** ``makeopts`` **easyconfig parameters is deprecated.**
+**The** ``premakeopts`` **and** ``makeopts`` **easyconfig parameters are removed.**
 
 * *deprecated since:* EasyBuild v1.13.0 (May'14)
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: use ``prebuildopts``/``buildopts`` instead
 
-For consistency in terminology, use of the ``premakeopts`` and ``makeopts`` generic easyconfig parameters is deprecated,
+For consistency in terminology, the ``premakeopts`` and ``makeopts`` generic easyconfig parameters are removed,
 in favor of their alternative parameters, ``prebuildopts`` and ``buildopts``, resp.
 
 (see also :ref:`configure_build_install_command_options`)
@@ -151,28 +152,28 @@ in favor of their alternative parameters, ``prebuildopts`` and ``buildopts``, re
 Shared library extension
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Use of the** ``shared_lib_ext`` **'constant' in easyconfigs is deprecated.**
+**The** ``shared_lib_ext`` **'constant' in easyconfigs is no longer defined.**
 
 * *deprecated since:* EasyBuild v1.5.0 (June'13)
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: use ``SHLIB_EXT`` instead
 
-Using the ``shared_lib_ext`` "magic" variable representing the extension for shared libraries (``.so`` on Linux,
-``.dylib`` on OS X) is deprecated; the easyconfig constant ``SHLIB_EXT`` should be using instead.
+The ``shared_lib_ext`` "magic" variable representing the extension for shared libraries (``.so`` on Linux,
+``.dylib`` on OS X) is no longer defined; the easyconfig constant ``SHLIB_EXT`` should be using instead.
 
 .. _depr_license_eb1:
 
 Software license
 ^^^^^^^^^^^^^^^^
 
-**Use of the** ``license`` **easyconfig parameter is deprecated.**
+**The** ``license`` **easyconfig parameter is removed.**
 
 * *deprecated since:* EasyBuild v1.11.0 (Feb'14)
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: use ``license_file`` or ``software_license`` instead
 
 The ``license`` easyconfig parameter, which was specific to the ``IntelBase`` generic easyblock and thus relevant
-for Intel tools, is deprecated. The generic ``license_file`` easyconfig parameter should be used instead, to specify 
+for Intel tools, is removed. The generic ``license_file`` easyconfig parameter should be used instead, to specify 
 the location of the license file (or server).
 
 This change was made to avoid confusion with the ``software_license`` generic easyconfig parameter, which can be used
@@ -213,7 +214,7 @@ The API for easyblocks was modified slightly, to correct for a couple of histori
 Return type of ``extra_options`` method
 +++++++++++++++++++++++++++++++++++++++
 
-**The list-of-tuples return type of the** ``extra_options`` **method is deprecated, should be a** ``dict`` **instead.**
+**The list-of-tuples return type of the** ``extra_options`` **method must now be a** ``dict`` **instead.**
 
 * *deprecated since:* EasyBuild v1.12.0 (Apr'14)
 * *removed in:* EasyBuild v2.0
@@ -239,14 +240,14 @@ For example (taken from the generic easyblock ``Binary``)::
 Extension filter template
 +++++++++++++++++++++++++
 
-**Use of the** ``name`` **and** ``version`` **templates in** ``exts_filter`` **is deprecated.**
+**The** ``name`` **and** ``version`` **templates in** ``exts_filter`` **are removed.**
 
 * *deprecated since:* EasyBuild v1.2.0 (Feb'13)
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: use ``ext_name`` and ``ext_version`` instead
 
 Only the ``ext_name``, ``ext_version`` and ``src`` template strings can be used in the ``exts_filter`` extension filter
-easyconfig parameter; using the ``name`` and ``version`` template strings is deprecated.
+easyconfig parameter; the ``name`` and ``version`` template strings are removed.
 
 For example (default extension filter for Python packages)::
 
@@ -255,25 +256,25 @@ For example (default extension filter for Python packages)::
 Module path of default class for extensions
 +++++++++++++++++++++++++++++++++++++++++++
 
-**Specifying the module path in** ``exts_defaultclass`` **is deprecated.**
+**Specifying the module path in** ``exts_defaultclass`` **is no longer possible.**
 
 * *deprecated since:* EasyBuild v0.5 (Apr'12)
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: *(none required, module path is derived from specified class name)*
 
 Explicitely specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is
-deprecated. Only the class name should be specified, the corresponding module path is derived from it.
+no longer possible. Only the class name should be specified, the corresponding module path is derived from it.
 
 Module path for easyblocks
 ++++++++++++++++++++++++++
 
-**Deriving the module path for easyblocks from the software name is deprecated.**
+**Deriving the module path for easyblocks from the software name is removed.**
 
 * *deprecated since:* EasyBuild v1.4.0 (May'13)
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: use easyblock class name according to encoding scheme (e.g., ``EB_Foo``)
 
-Determining the *location* of Python modules representing easyblocks based on the software name (``name``) is deprecated.
+Determining the *location* of Python modules representing easyblocks based on the software name (``name``) is removed.
 
 EasyBuild *must* be able to determine the easyblock module path solely based on the name of the easyblock Python class.
 
@@ -285,7 +286,7 @@ function will not be affected.
 ``easybuild.tools.modules`` Python module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**The API of the** ``easybuild.tools.modules`` **module has been updated, certain aspects of the old API are deprecated.**
+**The API of the** ``easybuild.tools.modules`` **module has been updated, certain aspects of the old API are removed.**
 
 * *deprecated since:* EasyBuild v1.8.0 (Oct'13) & v1.15.0 (Sept'15)
 * *removed in:* EasyBuild v2.0
@@ -294,14 +295,14 @@ function will not be affected.
 The API of the ``easybuild.tools.modules`` Python module has been changed extensively when implementing support for
 alternative module naming schemes:
 
-* use of the ``modules`` class variable and the ``add_module``/``remove_module`` methods is deprecated; modules should be
+* the ``modules`` class variable and the ``add_module``/``remove_module`` methods are removed; modules should be
   (un)loaded using the ``load`` and ``unload`` methods instead
-* the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method are deprecated; the class instance
+* the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method aare removed; the class instance
   should be created with a specific list of module paths instead
-* using the ``Modules`` class to obtain a class instance representing a modules tool interface is deprecated;
+* the ``Modules`` class to obtain a class instance representing a modules tool interface is removed;
   the ``modules_tool`` function should be used instead
 
-Additionally, usage of the ``exists`` method which only takes a single module name is deprecated; it is replaced by
+Additionally, the ``exists`` method which only takes a single module name is removed; it is replaced by
 the ``exist`` method, which takes a list of module names *(since EasyBuild v1.15.0 (Sept'15))*.
 
 **Easyblocks should not be using** ``easybuild.tools.modules`` **directly, and hence should be unaffected.**
@@ -321,7 +322,7 @@ account.**
 The ``get_software_root`` and ``get_software_version`` functions will only take ``$EBROOTFOO`` and ``$EBVERSIONFOO``
 environment variables into account, as opposed to also considering the ``$SOFTROOTFOO`` and ``$SOFTVERSIONFOO``
 environment variables (which were set in modules generated by EasyBuild v0.x).
-Likewise, adhering to the ``$SOFTDEVELFOO`` environment variables is deprecated.
+Likewise, adhering to the ``$SOFTDEVELFOO`` environment variables is removed.
 
 *This is only relevant to early adopters who are still using module files generated by EasyBuild v0.x.*
 
@@ -330,7 +331,7 @@ Likewise, adhering to the ``$SOFTDEVELFOO`` environment variables is deprecated.
 Renamed/relocated functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Some functions/methods have been renamed or relocated, use via their previous location/name is deprecated.**
+**Some functions/methods have been renamed or relocated, their equivalents under a previous location/name are removed.**
 
 * *deprecated since:* *(depends on function/method, see below)*
 * *removed in:* EasyBuild v2.0
@@ -341,12 +342,12 @@ reasons.
 
 * the ``moduleGenerator`` handle to the ``ModuleGenerator`` object instance has been renamed to ``module_generator``;
   hence, easyblock should be using ``self.module_generator`` rather than ``self.moduleGenerator`` *(since EasyBuild v1.16.0 (Dec'14))*
-* ``source_paths()`` (in ``easybuild.tools.config``) replaces the deprecated ``source_path()`` *(since EasyBuild v1.8.0 (Oct'13))*
-* ``get_avail_core_count()`` (in ``easybuild.tools.systemtools``) replaces the deprecated ``get_core_count()``
+* ``source_paths()`` (in ``easybuild.tools.config``) replaces the removed ``source_path()`` *(since EasyBuild v1.8.0 (Oct'13))*
+* ``get_avail_core_count()`` (in ``easybuild.tools.systemtools``) replaces the removed ``get_core_count()``
   *(since EasyBuild v1.9.0 (Nov'13))*
-* ``get_os_type()`` (in ``easybuild.tools.systemtools``) replaces the deprecated ``get_kernel_name``
+* ``get_os_type()`` (in ``easybuild.tools.systemtools``) replaces the removed ``get_kernel_name``
   *(since EasyBuild v1.3.0 (Apr'13))*
-* the ``det_full_ec_version`` function available from ``easybuild.tools.module_generator`` replaces the deprecated
+* the ``det_full_ec_version`` function available from ``easybuild.tools.module_generator`` replaces the removed
   ``det_installversion`` function that was available from ``easybuild.framework.easyconfig.*`` *(since EasyBuild v1.8.0
   (Oct'13))*
 
@@ -359,7 +360,7 @@ Some functions have moved to a different location:
 * the ``run_cmd``, ``run_cmd_qa`` and ``parse_log_for_error`` functions are now provided by the ``easybuild.tools.run`` module,
   rather than by ``easybuild.tools.filetools`` *(since EasyBuild v1.11.0 (Feb'14))*
 
-The ``get_log`` function provided by the ``easybuild.tools.build_log`` module has been deprecated entirely,
+The ``get_log`` function provided by the ``easybuild.tools.build_log`` module has been removed entirely,
 no alternatives are provided (since none are needed). *(since EasyBuild v1.3.0 (Apr'13))*
 
 .. _depr_changes_generic_easyblocks_eb1:
