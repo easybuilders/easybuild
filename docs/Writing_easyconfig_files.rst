@@ -25,8 +25,8 @@ It consists of a plain text file (in Python syntax) with mostly `key-value` assi
 
 Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][-<versionsuffix>].eb``.
 
-The toolchain label (which includes the toolchain name and version) is omitted when a ``dummy`` toolchain is used
-(see also :ref:`dummy_toolchain`); the version suffix is omitted when it's empty.
+The toolchain label (which includes the toolchain name and version) is omitted when a :ref:`dummy_toolchain` is used;
+the version suffix is omitted when it's empty.
 
 .. note:: the filename of an easyconfig is only important w.r.t. dependency resolution (``--robot``), see :ref:`use_robot`.
 
@@ -104,6 +104,8 @@ Common easyconfig parameters
 
 This section includes an overview of some commonly used (optional) easyconfig parameters.
 
+.. _common_easyconfig_param_sources:
+
 Source files and patches
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -114,6 +116,8 @@ Source files and patches
 Remarks:
 
 * sources are downloaded (best effort), unless already available
+* proxy settings are taken into account, since the `urllib2 Python package <https://docs.python.org/2/library/urllib2.html>`_
+  is used for downloading (since EasyBuild v2.0)
 * patches need to be EasyBuild-compatible
 
   * unified diff format (``diff -ru``)
@@ -134,6 +138,8 @@ Example:
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources,
   a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
+
+.. _dependency_specs:
 
 Dependencies
 ~~~~~~~~~~~~
@@ -159,17 +165,38 @@ Example:
   dependencies = [('PnMPI', '1.2.0')]
   builddependencies = [('CMake', '2.8.12', '', ('GCC', '4.8.2')]
 
+For each of the specified (build) dependencies, the corresponding module will be loaded in the build environment
+defined by EasyBuild. For the *runtime* dependencies, ``module load`` statements will be included in the generated
+module file.
+
 .. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the software being installed.
-  Exceptions can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example above).
+  A different toolchain can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example above).
 
-You can also define a dependency which uses the dummy toolchain:
+Loading of modules for dependencies with a ``dummy`` toolchain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code:: python
-  
-  name = 'GTI'
-  ...
-  toolchain = {'name': 'goolf', 'version': '1.5.14'}
+When a :ref:`dummy_toolchain>` is used, EasyBuild will only load the modules for each of the (build)
+dependencies when an *empty* string is used as a toolchain version, i.e. ::
+
+  toolchain = {'name': 'dummy', 'version': ''}
+
+When specifying a non-empty string as version for the ``dummy`` toolchain (e.g., ``dummy``),
+modules for the (build) dependencies will *not* be loaded in the build environment as defined by EasyBuild.
+Load statements for the runtime dependencies will still be included in the generated module file, however.
+
+Specifying dependencies using ``dummy`` toolchain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To make EasyBuild resolve a dependency using the ``dummy`` toolchain, either specify '``dummy``' as toolchain name
+in the tuple representing the dependency specification, or simply use ``True`` as 4th value in the tuple.
+
+For example, to specify PnMPI version 1.2.0 built with the ``dummy`` toolchain as a (runtime) dependency::
+
   dependencies = [('PnMPI', '1.2.0', '', ('dummy', ''))]
+
+which is equivalent to::
+
+  dependencies = [('PnMPI', '1.2.0', '', True)]
 
 .. _configure_build_install_command_options:
 
