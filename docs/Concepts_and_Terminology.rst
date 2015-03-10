@@ -113,8 +113,8 @@ Recent releases of EasyBuild include out-of-the-box toolchain support for:
 
 .. _dummy_toolchain:
 
-Dummy toolchain
-~~~~~~~~~~~~~~~
+``dummy`` toolchain
+~~~~~~~~~~~~~~~~~~~
 
 The ``dummy`` toolchain is a special case. It is an `empty` toolchain, i.e. a toolchain without any components,
 and corresponds to using the readily available compilers and libraries (e.g., the ones provided by the OS, or
