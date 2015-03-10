@@ -3,6 +3,11 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150310.01** (`Mar 10th 2015`):
+
+  * document peculiarties w.r.t. dependencies in combination with a ``dummy`` toolchain (see :ref:`dependency_specs`)
+  * document ``clean_gists.py`` script (see :ref:`clean_gists_script`)
+  * mention taking into account of proxy settings for downloading sources (see :ref:`common_easyconfig_param_sources`)
 * **release 20150306.03** (`Mar 6th 2015`): add release notes for EasyBuild v2.0.0 (see :ref:`release_notes`)
 * **release 20150306.02** (`Mar 6th 2015`):
 
