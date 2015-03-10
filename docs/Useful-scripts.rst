@@ -101,4 +101,4 @@ To help with that the ``clean_gists.py`` script is available, to clean up gists 
 
 By default, the script will use the same GitHub account that Easybuild uses (see ``--github-user``); to specify a different GitHub account, use ``-g``.
 
-The script expects that a valid GitHub token for the used GitHub account username is available, see ref:`github_token`.
+The script expects that a valid GitHub token for the used GitHub account username is available, see :ref:`github_token`.
