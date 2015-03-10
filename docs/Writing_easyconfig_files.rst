@@ -175,7 +175,7 @@ module file.
 Loading of modules for dependencies with a ``dummy`` toolchain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a :ref:`dummy_toolchain>` is used, EasyBuild will only load the modules for each of the (build)
+When a :ref:`dummy_toolchain` is used, EasyBuild will only load the modules for each of the (build)
 dependencies when an *empty* string is used as a toolchain version, i.e. ::
 
   toolchain = {'name': 'dummy', 'version': ''}
