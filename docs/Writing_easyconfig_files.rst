@@ -180,7 +180,7 @@ dependencies when an *empty* string is used as a toolchain version, i.e. ::
 
   toolchain = {'name': 'dummy', 'version': ''}
 
-When specifying a non-empty string as version for the ``dummy`` toolchain (e.g., ``dummy``),
+When specifying a non-empty string as version for the :ref:`dummy_toolchain` (e.g., ``dummy``),
 modules for the (build) dependencies will *not* be loaded in the build environment as defined by EasyBuild.
 Load statements for the runtime dependencies will still be included in the generated module file, however.
 
