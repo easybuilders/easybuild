@@ -156,7 +156,7 @@ An example configuration file that should make everything clear is shown below.
 Templates and constants supported in configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Two types of template values are supported in configuration files:
+Two types of template values ``%(...)s`` are supported in configuration files:
 
 * for configuration options defined in the configuration file (and only those)
 
@@ -164,7 +164,7 @@ Two types of template values are supported in configuration files:
 
 * for the default value of selected configuration options (see ``eb --avail-cfgfile-constants``)
 
-  * *syntax:* ``%(DEFAULT_OPT)``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
+  * *syntax:* ``%(DEFAULT_OPT)s``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
 
 .. note::
   These template values are only supported in configuration files, *not* in environment variable values or 
