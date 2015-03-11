@@ -171,8 +171,9 @@ Two types of template values ``%(...)s`` are supported in configuration files:
   command line option values.
 
 .. note::
-  Using a template value for a configuration option that was not defined in the configuration file
-  will result in an error like ``ConfigParser.InterpolationMissingOptionError: Bad value substitution``.
+  Using an unknown template value, i.e. either one for a configuration option that was not defined in the
+  configuration file, or a non-existing one for a particular default value, will result in an error like:
+  ``ConfigParser.InterpolationMissingOptionError: Bad value substitution``.
 
 Example
 +++++++
