@@ -156,20 +156,29 @@ An example configuration file that should make everything clear is shown below.
 Templates and constants supported in configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For each configuration option, a matching template is available to refer to its corresponding value.
+Two types of template values are supported in configuration files:
 
-A couple of predefined constants are available to be used (only) in EasyBuild configuration files.
-An overview of supported constants is available via ``eb --avail-cfgfile-constants``.
+* for configuration options defined in the configuration file (and only those)
+  * *syntax:* ``%(opt)s``, i.e., using the (lowercase) name of the configuration option
+* for the default value of selected configuration options (see ``eb --avail-cfgfile-constants``)
+  * *syntax:* ``%(DEFAULT_OPT)``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
 
-For both templates and constants, the syntax format is ``%(template_or_constant_name)s``.
+.. note::
+  These template values are only supported in configuration files, *not* in environment variable values or 
+  command line option values.
+
+.. note::
+  Using a template value for a configuration option that was not defined in the configuration file
+  will result in an error like ``ConfigParser.InterpolationMissingOptionError: Bad value substitution``.
 
 Example
 +++++++
 
-To include both the easyconfigs archive repository and the default list of robot search paths in the
-active robot search path, the following configuration file entry can be used, featuring the template for the
-``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
+To include both the (custom) location for the easyconfigs archive repository and the default list of robot search
+paths in the active robot search path, the following configuration file entry can be used, featuring the template
+for the ``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
 
+    repositorypath = /home/example/easybuild/easyconfigs_archive
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
 See also :ref:`controlling_robot_search_path`.
