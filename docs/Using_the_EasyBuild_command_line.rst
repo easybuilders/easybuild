@@ -434,12 +434,15 @@ To control the robot search path, you can specify a (colon-separated list of) pa
 These two configuration options each serve a particular purpose:
 
 * ``--robot``, ``-r``:
+
   * intended to be used (only) as a command line option to ``eb`` (although it can also be defined through another
     configuration type see :ref:`configuration_types`)
   * enables the dependency resolution mechanism (disabled by default)
   * optionally, a list of paths can be specified, which is *prepended* to the robot search path
   * by default, the corresponding list of paths is *empty*
+
 * ``--robot-paths``:
+
   * intended to be defined in an EasyBuild configuration file, or via ``$EASYBUILD_ROBOT_PATHS``
   * does *not* enable the dependency resolution mechanism
   * the specified list of paths is *appended* to the robot search path
