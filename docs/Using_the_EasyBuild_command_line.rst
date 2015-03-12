@@ -431,31 +431,34 @@ To control the robot search path, you can specify a (colon-separated list of) pa
 
   eb --robot=$PWD:$HOME ...
 
-These two configuration options each serve a particular purpose:
+These two configuration options each serve a particular purpose, and together define the robot search path:
 
 * ``--robot``, ``-r``:
 
   * intended to be used (only) as a command line option to ``eb`` (although it can also be defined through another
     configuration type see :ref:`configuration_types`)
   * enables the dependency resolution mechanism (disabled by default)
-  * optionally, a list of paths can be specified, which is *prepended* to the robot search path
+  * optionally a list of paths can be specified, which is included *first* in the robot search path
   * by default, the corresponding list of paths is *empty*
 
 * ``--robot-paths``:
 
   * intended to be defined in an EasyBuild configuration file, or via ``$EASYBUILD_ROBOT_PATHS``
   * does *not* enable the dependency resolution mechanism
-  * the specified list of paths is *appended* to the robot search path
-  * by default, the corresponding list of paths only contains the path to the easyconfig files which
-    are part of the EasyBuild installation
+  * the specified list of paths is included *last* in the robot search path
+  * by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed
+  * **note**: setting this configuration option implies redefining the default robot search path!
 
 For both options, the list of paths should be specified as a colon-separated (``:``) list.
 
 By combining ``--robot`` and ``--robot-paths`` using the different configuration types (see also
-:ref:`configuration_types`), you have full control over the robot search path.
+:ref:`configuration_types`), you have full control over the robot search path: which paths are included,
+the order of those paths, whether or not the easyconfig files that are part of the EasyBuild installation should be
+considered, etc.
 
 A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in EasyBuild configuration files to refer
-to the default robot search path. For more information on using constants in EasyBuild configuration files, see
+to the default robot search path, i.e. the path to the easyconfigs that are part of the EasyBuild installation.
+For more information on using constants in EasyBuild configuration files, see
 :ref:`configuration_file_templates_constants`.
 
 .. tip::
