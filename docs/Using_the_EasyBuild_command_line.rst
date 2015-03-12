@@ -436,7 +436,7 @@ These two configuration options each serve a particular purpose, and together de
 * ``--robot``, ``-r``:
 
   * intended to be used (only) as a command line option to ``eb`` (although it can also be defined through another
-    configuration type see :ref:`configuration_types`)
+    configuration type)
   * enables the dependency resolution mechanism (disabled by default)
   * optionally a list of paths can be specified, which is included *first* in the robot search path
   * by default, the corresponding list of paths is *empty*
