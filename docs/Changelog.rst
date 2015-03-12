@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150312.01** (`Mar 12th 2015`):
+
+  * enhance documentation w.r.t. template values in configuration files (see :ref:`configuration_file_templates_constants`)
+  * improve documentation on ``--robot`` and ``--robot-paths`` (see :ref:`controlling_robot_search_path`)
 * **release 20150310.01** (`Mar 10th 2015`):
 
   * document peculiarties w.r.t. dependencies in combination with a ``dummy`` toolchain (see :ref:`dependency_specs`)
