@@ -178,12 +178,18 @@ of EasyBuild using the ``install-EasyBuild-develop.sh`` script.
 
 This script will clone the different EasyBuild repositories from GitHub:
 
- * ``easybuild``: EasyBuild metapackage & documentation sources for http://easybuild.readthedocs.org
- * ``vsc-base``: dependency for EasyBuild framework (logging, command line interface, ...)
- * ``easybuild-framework``: EasyBuild framework
- * ``easybuild-easyblocks``: collection of easyblocks
- * ``easybuild-easyconfigs``: collection of easyconfig files
- * ``easybuild-wiki``: EasyBuild wiki pages
+ * `easybuild <https://github.com/hpcugent/easybuild>`_:
+   EasyBuild metapackage & documentation sources for http://easybuild.readthedocs.org
+ * `vsc-base <https://github.com/hpcugent/vsc-base>`_:
+   dependency for EasyBuild framework (logging, command line interface, ...)
+ * `easybuild-framework <https://github.com/hpcugent/easybuild-framework>`_:
+   EasyBuild framework
+ * `easybuild-easyblocks <https://github.com/hpcugent/easybuild-easyblocks>`_:
+   collection of easyblocks
+ * `easybuild-easyconfigs <https://github.com/hpcugent/easybuild-easyconfigs>`_:
+   collection of easyconfig files
+ * `easybuild-wiki <https://github.com/hpcugent/easybuild-wiki>`_:
+   EasyBuild wiki pages
 
 It can be used as follows::
     # pick an installation prefix (adjust as you like)
