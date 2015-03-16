@@ -174,8 +174,18 @@ Installation of latest development version using provided script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After you have forked each of the EasyBuild repositories on GitHub (+ vsc-base), you can set up a development version
-of EasyBuild, in the following manner::
+of EasyBuild using the ``install-EasyBuild-develop.sh`` script.
 
+This script will clone the different EasyBuild repositories from GitHub:
+
+ * ``easybuild``: EasyBuild metapackage & documentation sources for http://easybuild.readthedocs.org
+ * ``vsc-base``: dependency for EasyBuild framework (logging, command line interface, ...)
+ * ``easybuild-framework``: EasyBuild framework
+ * ``easybuild-easyblocks``: collection of easyblocks
+ * ``easybuild-easyconfigs``: collection of easyconfig files
+ * ``easybuild-wiki``: EasyBuild wiki pages
+
+It can be used as follows::
     # pick an installation prefix (adjust as you like)
     INSTALL_PREFIX=$(mktemp -d $HOME/EasyBuild-XXXXXX)
     # download script
