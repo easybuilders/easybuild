@@ -192,6 +192,7 @@ This script will clone the different EasyBuild repositories from GitHub:
    EasyBuild wiki pages
 
 It can be used as follows::
+
     # pick an installation prefix (adjust as you like)
     INSTALL_PREFIX=$(mktemp -d $HOME/EasyBuild-XXXXXX)
     # download script
