@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150316.01** (`Mar 16th 2015`):
+
+  * include list of EasyBuild repositories cloned by ``install-EasyBuild-develop.sh`` script
+    (see :ref:`install_latest_develop_using_script`)
 * **release 20150312.01** (`Mar 12th 2015`):
 
   * enhance documentation w.r.t. template values in configuration files (see :ref:`configuration_file_templates_constants`)
