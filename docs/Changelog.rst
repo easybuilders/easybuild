@@ -3,6 +3,9 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150326.01** (`Mar 26th 2015`):
+
+  * documented deprecated functionality w.r.t. error reporting (see :ref:`depr_error_reporting`)
 * **release 20150316.01** (`Mar 16th 2015`):
 
   * include list of EasyBuild repositories cloned by ``install-EasyBuild-develop.sh`` script
