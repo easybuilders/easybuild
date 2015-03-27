@@ -34,43 +34,43 @@ For authors of easyconfig files:
 
 For developers of easyblocks:
 
-* ref:`depr_error_reporting`
+* :ref:`depr_error_reporting`
 
 For EasyBuild framework developers:
 
-* ref:`depr_error_reporting`
+* :ref:`depr_error_reporting`
 
 .. _depr_error_reporting:
 
-Report errors by raising ``EasyBuildError`` rather than using ``error()``/``exception()`` log methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Report errors by raising ``EasyBuildError`` rather than using log methods
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Use of the** ``error`` **and** ``exception`` **log methods is deprecated.**
+**Use of the** ``error()`` **and** ``exception()`` **log methods is deprecated.**
 
 * *deprecated since:* EasyBuild v2.1.0 (April'15)
 * *removed in:* EasyBuild v3.0
 * *alternative(s)*: **use** ``raise EasyBuildError(...)`` **instead**
 
-The `error() <https://docs.python.org/2/library/logging.html#logging.Logger.error>`_ and
-`exception() <https://docs.python.org/2/library/logging.html#logging.Logger.exception>`_ log methods defined by
-EasyBuild (in the ``easybuild.tools.build_log`` module) do not ahder to the semantics of the standard Python log
-methods, in the sense that they also raise an exception next to logging messages.
+The ``error()`` and ``exception()`` log methods defined by EasyBuild (in the ``easybuild.tools.build_log`` module)
+do not match the semantics of the `standard Python log methods
+<https://docs.python.org/2/library/logging.html#logging.Logger.error>`_, in the sense that they also raise an
+exception next to logging messages.
 
-This causes problems when 3rd party libraries are being used together with EasyBuild, since they may be using these
-log methods without expecting an exception being raised.
+This may cause problems when 3rd party libraries (e.g., `gc3pie <https://pypi.python.org/pypi/gc3pie>`_) are being
+used by EasyBuild, since they may be using these log methods without expecting an exception being raised.
 
-The custom definitions for the ``error()`` and ``exception()`` log methods will be removed in EasyBuild v3.0,
-so they should no longer be used. Note that this applies both to the EasyBuild framework and to (custom) easyblocks.
+The custom definitions for the ``error()`` and ``exception()`` log methods will be removed in EasyBuild v3.0.
 
-To report errors, an ``EasyBuildError`` should be raised instead::
+Hence, these log methods should no longer be used to report errors since they will not raise an exception anymore once
+their custom definitions are removed. Note that this applies both to the EasyBuild framework and to (custom) easyblocks.
 
-  from easybuild.tools.build_log import EasyBuildError
-  ...
-    def configure_step(self):
-        """Example configure step implementation where things may go wrong."""
-        ...
-        if errors:
-            raise EasyBuildError("One or more errors were detected: %s", errors)
+To report errors, an ``EasyBuildError`` should be raised instead. For example:
+
+.. code:: python
+
+    # make sure config.sh script is there
+    if not os.path.exists(os.path.join(self.builddir, 'config.sh'):
+        raise EasyBuildError("config.sh script is missing in %s", self.builddir)
 
 .. _deprecation_policy:
 
