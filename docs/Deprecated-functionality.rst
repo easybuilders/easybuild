@@ -66,10 +66,10 @@ their custom definitions are removed. Note that this applies both to the EasyBui
 
 To report errors, an ``EasyBuildError`` should be raised instead. For example:
 
-.. code:: python
+.. code::
 
     # make sure config.sh script is there
-    if not os.path.exists(os.path.join(self.builddir, 'config.sh'):
+    if not os.path.exists(os.path.join(self.builddir, 'config.sh')):
         raise EasyBuildError("config.sh script is missing in %s", self.builddir)
 
 .. _deprecation_policy:
