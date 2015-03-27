@@ -3,7 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20150326.01** (`Mar 26th 2015`):
+* **release 20150327.01** (`Mar 27th 2015`):
 
   * documented deprecated functionality w.r.t. error reporting (see :ref:`depr_error_reporting`)
 * **release 20150316.01** (`Mar 16th 2015`):
