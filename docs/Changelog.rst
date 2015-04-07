@@ -9,6 +9,8 @@ Changelog for EasyBuild documentation
     (see :ref:`install_running_unit_tests`)
   * clarify relation between ``--installpath``, ``--prefix``, ``-subdir-*`` and ``--installpath-*``
     configuration options (see :ref:`installpath`)
+  * mention ``--show-default-configfiles`` command line option in relevant section
+    (see :ref:`default_configuration_files`)
 
 * **release 20150327.01** (`Mar 27th 2015`):
 

@@ -99,6 +99,21 @@ configuration files at ``/etc/easybuild.d/*.cfg`` and ``$HOME/.config/easybuild/
 The configuration file located in ``$XDG_CONFIG_HOME`` will be listed *after* the ones obtained via ``$XDG_CONFIG_DIRS``,
 such that user-defined configuration settings have preference over system defaults.
 
+A detailed overview of the list of default configuration files is available via ``eb --show-default-configfiles``
+(available since EasyBuild v2.1.0). For example::
+
+ $ XDG_CONFIG_DIRS=/tmp/etc:/tmp/moreetc eb --show-default-configfiles
+ Default list of configuration files:
+
+ [with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: /tmp/etc:/tmp/moreetc]
+
+ * user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/easybuild/config.cfg
+   -> /home/example/.config/easybuild/config.cfg => found
+ * system-level: ${XDG_CONFIG_DIRS:-/etc}/easybuild.d/*.cfg
+   -> {/tmp/etc, /tmp/moreetc}/easybuild.d/*.cfg => /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg
+
+ Default list of existing configuration files (4): /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg, /home/example/.config/easybuild/config.cfg
+
 Multiple configuration files
 ++++++++++++++++++++++++++++
 
