@@ -349,11 +349,9 @@ defaults:
 
 There are several ways in which the software and modules install path used by EasyBuild can be configured:
 
-* using the direct configuration options ``--installpath-software`` and ``--installpath-modules`` (see
-  :ref:`installpath_direct_options`)
-* using the parent install path configuration option ``--installpath`` (see :ref:`parent_installpath`) or overall
-  prefix path configuration option ``--prefix`` (see :ref:`prefix`), along with the ``--subdir-*`` and
-  ``--suffix-modules-path`` companion configuration options (see :ref:`installpath_subdirs`)
+* using the direct configuration options ``--installpath-software`` and ``--installpath-modules`` (see below)
+* via the parent install path configuration option ``--installpath`` (see below)
+* via the overall prefix path configuration option ``--prefix`` (see :ref:`prefix`)
 
 .. _installpath_direct_options:
 
@@ -381,7 +379,9 @@ corresponding module files.
 
 The install path for software and modules specifically is determined by combining ``--installpath`` with
 ``--subdir-software``, and combining ``--installpath`` with ``--subdir-modules`` and ``--suffix-modules-path``,
-respectively. For more information on these companion configuration options, see :ref:`installpath_subdirs`.
+respectively.
+
+For more information on these companion configuration options, see :ref:`installpath_subdirs`.
 
 Full install path for software and module file
 ++++++++++++++++++++++++++++++++++++++++++++++
@@ -394,6 +394,7 @@ install path named according to the active module naming scheme (default format:
 ``<name>/<version>-<toolchain><versionsuffix>``).
 Additionally, symlinks to the actual module file are installed in a subdirectory of the modules install path
 named according to the value of the ``moduleclass`` easyconfig parameter.
+
 For more information on the module naming scheme used by EasyBuild, see :ref:`module_naming_scheme`.
 
 Updating ``$MODULEPATH``
@@ -537,15 +538,15 @@ Software and modules install path subdirectories (``--subdir-software``, ``--sub
 * *modules install path subdirectory* (``--subdir-modules``): ``modules``
 * *modules install path suffix* (``--suffix-modules-path``): ``all``
 
-The subdirectories for the software and modules install paths (relative to ``--installpath``) can be specified using
-the corresponding dedicated configuration options (available since EasyBuild v1.14.0).
+The subdirectories for the software and modules install paths (relative to ``--installpath``, see :ref:`installpath`)
+can be specified using the corresponding dedicated configuration options (available since EasyBuild v1.14.0).
 
 For example:
 
 .. code:: shell-session
 
     $ export EASYBUILD_SUBDIR_SOFTWARE=installs
-    $ eb --subdir-modules=module_files ...
+    $ eb --installpath=$HOME/easybuild --subdir-modules=module_files ...
 
 Modules tool (``--modules-tool``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
