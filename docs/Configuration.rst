@@ -512,8 +512,8 @@ Optional configuration settings
 
 .. _prefix:
 
-Overall prefix path
-^^^^^^^^^^^^^^^^^^^
+Overall prefix path (``--prefix``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *default:* ``$HOME/.local/easybuild``
 
