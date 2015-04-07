@@ -297,7 +297,7 @@ In practice, all of these have reasonable defaults (see ``eb --help`` for the de
 Source path (``--sourcepath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``$HOME/.local/easybuild/sources/``
+*default*: ``$HOME/.local/easybuild/sources/`` (determined via :ref:`prefix`)
 
 The ``sourcepath`` configuration setting specifies the parent path of
 the directory in which EasyBuild looks for software source and install files.
@@ -318,7 +318,7 @@ files in addition to the various ``easybuild/easyconfigs`` directories that are 
 Build path (``--buildpath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``$HOME/.local/easybuild/build/``
+*default*: ``$HOME/.local/easybuild/build/`` (determined via :ref:`prefix`)
 
 The ``buildpath`` configuration setting specifies the parent path of the
 (temporary) directories in which EasyBuild builds its software packages.
@@ -343,8 +343,8 @@ Software and modules install path (``--installpath``, ``--installpath-software``
 
 defaults:
 
-* *software install path:* ``$HOME/.local/easybuild/software`` (determined via ``--prefix`` and ``--subdir-software``)
-* *modules install path:* ``$HOME/.local/easybuild/modules/all`` (determined via ``--prefix``,
+* *software install path:* ``$HOME/.local/easybuild/software``  (determined via :ref:`prefix` and ``--subdir-software``)
+* *modules install path:* ``$HOME/.local/easybuild/modules/all``  (determined via :ref:`prefix`,
   ``--subdir-modules`` and ``--suffix-modules-path``)
 
 There are several ways in which the software and modules install path used by EasyBuild can be configured:
@@ -422,7 +422,7 @@ so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo``
+*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo`` (determined via :ref:`prefix`)
 
 EasyBuild has support for archiving (tested) ``.eb`` easyconfig files.
 After successfully installing a software package using EasyBuild, the
@@ -512,8 +512,8 @@ Optional configuration settings
 
 .. _prefix:
 
-Overall prefix
-^^^^^^^^^^^^^^
+Overall prefix path
+^^^^^^^^^^^^^^^^^^^
 
 *default:* ``$HOME/.local/easybuild``
 
