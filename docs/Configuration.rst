@@ -27,7 +27,8 @@ is even fairly common).
 The order of preference for the different configuration types is as listed above, that is:
 
 * environment variables override the corresponding entries in the configuration file
-* command line arguments in turn override the corresponding environment variables *and* matching entries in the configuration file
+* command line arguments in turn override the corresponding environment variables *and* matching entries in the
+  configuration file
 
 
 Consistentency across supported configuration types
@@ -159,12 +160,9 @@ Templates and constants supported in configuration files
 Two types of template values ``%(...)s`` are supported in configuration files:
 
 * for configuration options defined in the configuration file (and only those)
-
-  * *syntax:* ``%(opt)s``, i.e., using the (lowercase) name of the configuration option
-
+   * *syntax:* ``%(opt)s``, i.e., using the (lowercase) name of the configuration option
 * for the default value of selected configuration options (see ``eb --avail-cfgfile-constants``)
-
-  * *syntax:* ``%(DEFAULT_OPT)s``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
+   * *syntax:* ``%(DEFAULT_OPT)s``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
 
 .. note::
   These template values are only supported in configuration files, *not* in environment variable values or 
@@ -308,7 +306,8 @@ Looking for the files specified via the ``sources`` parameter in the .eb
 easyconfig file is done in the following order of preference:
 
 * ``<sourcepath>/<name>``: a subdirectory determined by the name of the software package
-* ``<sourcepath>/<letter>/<name>``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
+* ``<sourcepath>/<letter>/<name>``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a
+  subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
 * ``<sourcepath>``: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
@@ -343,11 +342,10 @@ Software and modules install path (``--installpath``, ``--installpath-software``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 defaults:
-
-* *software install path:* ``$HOME/.local/easybuild/software`` (determined via ``--prefix`` and
-  ``--subdir-software``)
-* *modules install path:* ``$HOME/.local/easybuild/modules/all`` (determined via ``--prefix``,
-  ``--subdir-modules`` and ``--suffix-modules-path``)
+  * *software install path:* ``$HOME/.local/easybuild/software`` (determined via ``--prefix`` and
+    ``--subdir-software``)
+  * *modules install path:* ``$HOME/.local/easybuild/modules/all`` (determined via ``--prefix``,
+    ``--subdir-modules`` and ``--suffix-modules-path``)
 
 There are several ways in which the software and modules install path used by EasyBuild can be configured:
 
@@ -355,7 +353,7 @@ There are several ways in which the software and modules install path used by Ea
   :ref:`installpath_direct_options`)
 * using the parent install path configuration option ``--installpath`` (see :ref:`parent_installpath`) or overall
   prefix path configuration option ``--prefix`` (see :ref:`prefix`), along with the ``--subdir-*`` and
-  ``--suffix-modules-path`` companion configuration options (see :ref:`parent_installpath`)
+  ``--suffix-modules-path`` companion configuration options (see :ref:`installpath_subdirs`)
 
 .. _installpath_direct_options:
 
@@ -430,7 +428,6 @@ corresponding ``.eb`` file is uploaded to a repository defined by the ``reposito
 
 Currently, EasyBuild supports the following repository types (see also
 ``eb --avail-repositories``):
-
 * ``FileRepository('path', 'subdir')``: a plain flat file repository;
   ``path`` is the path where files will be stored, ``subdir`` is an
   *optional* subdirectory of that path where the files should be stored
@@ -533,10 +530,9 @@ Software and modules install path subdirectories (``--subdir-software``, ``--sub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *defaults*:
-
-* *software install path subdirectory* (``--subdir-software``): ``software``
-* *modules install path subdirectory* (``--subdir-modules``): ``modules``
-* *modules install path suffix* (``--suffix-modules-path``): ``all``
+  * *software install path subdirectory* (``--subdir-software``): ``software``
+  * *modules install path subdirectory* (``--subdir-modules``): ``modules``
+  * *modules install path suffix* (``--suffix-modules-path``): ``all``
 
 The subdirectories for the software and modules install paths (relative to ``--installpath``) can be specified using
 the corresponding dedicated configuration options (available since EasyBuild v1.14.0).
