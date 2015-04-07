@@ -3,6 +3,15 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150407.01** (`Apr 7th 2015`):
+
+  * add link to :ref:`unit_tests` page in dedicated section at :ref:`installation` page
+    (see :ref:`install_running_unit_tests`)
+  * clarify relation between ``--installpath``, ``--prefix``, ``-subdir-*`` and ``--installpath-*``
+    configuration options (see :ref:`installpath`)
+  * mention ``--show-default-configfiles`` command line option in relevant section
+    (see :ref:`default_configuration_files`)
+
 * **release 20150327.01** (`Mar 27th 2015`):
 
   * documented deprecated functionality w.r.t. error reporting (see :ref:`depr_error_reporting`)
