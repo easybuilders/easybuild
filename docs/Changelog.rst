@@ -7,8 +7,8 @@ Changelog for EasyBuild documentation
 
   * add link to :ref:`unit_tests` page in dedicated section at :ref:`installation` page
     (see :ref:`install_running_unit_tests`)
-  * clarify relation between ``--installpath``, ``--prefix``, ``-subdir-*`` and ``-installpath-*`` configuration options
-    (see :ref:`installpath`)
+  * clarify relation between ``--installpath``, ``--prefix``, ``-subdir-*`` and ``--installpath-*``
+    configuration options (see :ref:`installpath`)
 
 * **release 20150327.01** (`Mar 27th 2015`):
 
