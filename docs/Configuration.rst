@@ -524,7 +524,7 @@ This affects the default value of several configuration options:
 * source path (see :ref:`sourcepath`)
 * build path (see :ref:`buildpath`)
 * software and modules install path (see :ref:`installpath`)
-* easyconfigs repository path (see :ref:`easyconfigs_repo:`)
+* easyconfigs repository path (see :ref:`easyconfigs_repo`)
 
 .. _installpath_subdirs:
 
