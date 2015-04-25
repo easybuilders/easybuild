@@ -55,6 +55,7 @@ Advanced usage topics
     :maxdepth: 3
 
     Integration_with_GitHub
+    Using_external_modules
 
 Other topics
 ============

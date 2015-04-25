@@ -198,6 +198,12 @@ which is equivalent to::
 
   dependencies = [('PnMPI', '1.2.0', '', True)]
 
+Using external modules as dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as dependencies is also supported.
+See :ref:`using_external_modules` for more information.
+
 .. _configure_build_install_command_options:
 
 Configure/build/install command options

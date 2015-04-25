@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150425.01** (`Apr 25th 2015`):
+
+  * add documentation on :ref:`using_external_modules`
+
 * **release 20150407.01** (`Apr 7th 2015`):
 
   * add link to :ref:`unit_tests` page in dedicated section at :ref:`installation` page
