@@ -24,8 +24,9 @@ For such dependencies, EasyBuild will:
 * load the module before initiating the software build and install procedure
 * include a '``module load``' statement in the generated module file (for non-build dependencies)
 
-If the module is not available, EasyBuild will only report the module as being missing. It will *not* search for a
-matching easyconfig file, or try to install the module in order to resolve the dependency.
+If the specified module is not available, EasyBuild will exit with an error message stating that the dependency can
+not be resolved because the module could not be found. It will *not* search for a matching easyconfig file in order to
+try and install the module to resolve the dependency.
 
 
 Metadata for external modules
