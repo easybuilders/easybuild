@@ -41,9 +41,9 @@ copyright = '2012-2014, Ghent University, CC-BY-SA'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '2.1.0dev'  # this is meant to reference the version of EasyBuild
+version = '2.1.0'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '20150425.01'  # this is meant to reference the version of the documentation itself
+release = '20150427.01'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
