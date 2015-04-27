@@ -146,7 +146,7 @@ Dependencies
 
 * **dependencies**: build/runtime dependencies
 * **builddependencies**: build-only dependencies (not in module)
-* **hiddendependencies**: dependencies via hidden modules
+* **hiddendependencies**: dependencies via hidden modules (see also :ref:`hide_deps`)
 * **osdependencies**: system dependencies (package names)
 
 Remarks:
