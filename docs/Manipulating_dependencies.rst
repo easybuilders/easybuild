@@ -58,7 +58,8 @@ For example (note the preceding '``.``' in the last part of the module names for
 
 .. note::
   Using Lmod (version >= 5.75), hidden modules can be made visible in the output of '``module avail`` using the
- ``--show-hidden`` option, for example::
+  ``--show-hidden`` option, for example::
+
    $ module avail bzip2
 
    Use "module spider" to find all possible modules.
