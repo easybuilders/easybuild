@@ -16,6 +16,9 @@ Any time a dependency with a name from this list is specified, it will be simply
 thus disregarded when resolving dependencies, loading modules for the dependencies in the build environment, and
 including '``module load``' statements in the generated module files.
 
+This can be useful when particular tools and libraries are already provided by OS packages (or in some other way),
+and should not be reinstalled as modules by EasyBuild.
+
 For example:
 
 * overview of dependencies of HDF5::
@@ -52,3 +55,18 @@ For example (note the preceding '``.``' in the last part of the module names for
   * [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/.1.2.8-intel-2015a)
   * [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/.2.1-intel-2015a)
   * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
+
+.. note::
+  Using Lmod (version >= 5.75), hidden modules can be made visible in the output of '``module avail`` using the
+ ``--show-hidden`` option, for example::
+   $ module avail bzip2
+
+   Use "module spider" to find all possible modules.
+   Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+   $ module --show-hidden avail bzip2
+   ----- /home/example/.local/easybuild/modules/all -----
+   bzip2/.1.0.6
+
+   Use "module spider" to find all possible modules.
+   Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
