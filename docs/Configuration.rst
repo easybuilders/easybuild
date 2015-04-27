@@ -620,6 +620,7 @@ Module files syntax (``--module-syntax``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *default*: ``Tcl``
+
 *supported since*: EasyBuild v2.1
 
 The syntax to use for generated module files can be specified using the ``--module-syntax`` configuration setting.
@@ -627,15 +628,20 @@ The syntax to use for generated module files can be specified using the ``--modu
 Possible values are:
 
 * ``Lua``: generate module files in Lua syntax
+
   * this requires the use of Lmod as a modules tool to consume the module files (see :ref:`modules_tool`)
   * module file names will have the ``.lua`` extension
+
 * ``Tcl``: generate module files in Tcl syntax
+
   * Tcl module files can be consumed by all supported modules tools
-  * module files will contain a header string indicating that they are composed in Tcl syntax
+  * module files will contain a header string ``#%Module`` indicating that they are composed in Tcl syntax
 
 .. note::
   Lmod is able to deal with having module files in place in both Tcl and Lua syntax. When a module file in Lua
-  syntax (i.e., with a ``.lua`` file name extension) is available, a Tcl module file with the same name will be ignored.
+  syntax (i.e., with a ``.lua`` file name extension) is available, a Tcl module file with the same name will be
+  ignored. The Tcl-based environment modules tool will simply ignore module files in Lua syntax, since they do not
+  contain the header string that is included in Tcl module files.
 
 .. note::
   Using module files in Lua syntax has the advantage that Lmod does not need to translate from Lua to Tcl internally
