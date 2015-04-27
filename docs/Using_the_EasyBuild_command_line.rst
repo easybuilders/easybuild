@@ -482,14 +482,14 @@ Prepending and/or appending to the default robot search path
 
 Prepending or appending to the default robot search path is supported via the ``--robot-paths`` configuration option.
 
-To *prepend* one or more paths, a list of paths followed by a '``:``' should be specified; analogously, to *append*
-one or more paths, a list of paths preceded by a '``:``' should be specified.
+To *prepend* one or more paths, a list of paths followed by a '``:``' should be specified.
+
+Analogously, to *append* one or more paths, a list of paths preceded by a '``:``' should be specified.
 
 For example:
 
-* ``--robot-paths=/tmp/$USER:``: prepend ``/tmp/$USER`` to the robot search path
-* ``export EASYBUILD_ROBOT_PATHS=:$HOME/myeasyconfigs:$HOME/test``: append ``$HOME/myeasyconfigs`` and ``$HOME/test`` to the
-  robot search path (in that order)
+* ``export EASYBUILD_ROBOT_PATHS=/tmp/$USER:``: prepend ``/tmp/$USER`` to the robot search path
+* ``--robot-paths :$HOME/eb:$HOME/test``: append ``$HOME/eb`` and ``$HOME/test`` to the robot search path (in that order)
 * ``--robot-paths=/tmp/$USER::$HOME/test``: prepend ``/tmp/$USER`` *and* append ``$HOME/test`` to the robot search path
 
 Example use case
