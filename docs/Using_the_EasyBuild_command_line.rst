@@ -488,9 +488,9 @@ Analogously, to *append* one or more paths, a list of paths preceded by a '``:``
 
 For example:
 
-* ``export EASYBUILD_ROBOT_PATHS=/tmp/$USER:``: prepend ``/tmp/$USER`` to the robot search path
-* ``--robot-paths :$HOME/eb:$HOME/test``: append ``$HOME/eb`` and ``$HOME/test`` to the robot search path (in that order)
-* ``--robot-paths=/tmp/$USER::$HOME/test``: prepend ``/tmp/$USER`` *and* append ``$HOME/test`` to the robot search path
+* ``export EASYBUILD_ROBOT_PATHS=/tmp/$USER:`` specifies to prepend ``/tmp/$USER`` to the robot search path
+* ``--robot-paths :$HOME/eb:$HOME/test`` specifies to append ``$HOME/eb`` and ``$HOME/test`` to the robot search path (in that order)
+* ``--robot-paths=/tmp/$USER::$HOME/test`` specifies to prepend ``/tmp/$USER`` *and* append ``$HOME/test`` to the robot search path
 
 Example use case
 ++++++++++++++++
