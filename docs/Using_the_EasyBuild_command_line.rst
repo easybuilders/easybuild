@@ -448,6 +448,7 @@ These two configuration options each serve a particular purpose, and together de
   * the specified list of paths is included *last* in the robot search path
   * by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed
   * **note**: setting this configuration option implies redefining the default robot search path!
+  * append/prepend support
 
 For both options, the list of paths should be specified as a colon-separated (``:``) list.
 
@@ -473,6 +474,23 @@ For more information on using constants in EasyBuild configuration files, see
   EasyBuild configuration file, etc. Of course, the value specified for ``--robot`` does not directly affect the value
   specified for ``--robot-paths``, on any configuration level, and vice versa. For more information on the relation
   between the different configuration types, see :ref:`configuration_types`.
+
+.. _robot_search_path_prepend_append:
+
+Prepending and/or appending to the default robot search path
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Prepending or appending to the default robot search path is supported via the ``--robot-paths`` configuration option.
+
+To *prepend* one or more paths, a list of paths followed by a '``:``' should be specified; analogously, to *append*
+one or more paths, a list of paths preceded by a '``:``' should be specified.
+
+For example:
+
+* ``--robot-paths=/tmp/$USER:``: prepend ``/tmp/$USER`` to the robot search path
+* ``export EASYBUILD_ROBOT_PATHS=:$HOME/myeasyconfigs:$HOME/test``: append ``$HOME/myeasyconfigs`` and ``$HOME/test`` to the
+  robot search path (in that order)
+* ``--robot-paths=/tmp/$USER::$HOME/test``: prepend ``/tmp/$USER`` *and* append ``$HOME/test`` to the robot search path
 
 Example use case
 ++++++++++++++++
