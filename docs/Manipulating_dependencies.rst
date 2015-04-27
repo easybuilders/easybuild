@@ -57,8 +57,10 @@ For example (note the preceding '``.``' in the last part of the module names for
   * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
 
 .. note::
-  Using Lmod (version >= 5.75), hidden modules can be made visible in the output of '``module avail`` using the
-  ``--show-hidden`` option, for example::
+  Using Lmod (version >= 5.7.5), hidden modules can be made visible in the output of '``module avail``' using the
+  ``--show-hidden`` option.
+
+  For example::
 
    $ module avail bzip2
 
