@@ -649,5 +649,5 @@ Possible values are:
   of Lmod-specific aspects of module files, the syntax of the module file does *not* matter; Lmod-specific statements
   supported by EasyBuild can be included in Tcl module files as well, by guarding them by a condition that only
   evaluates positively when Lmod is consuming the module file, i.e.
-  ``if { [ string match "*tcl2lua.tcl" $env(_) ] } { ... }``. Only conditional load statements like
-  ``load(atleast("gcc","4.8"))`` can only be used in Lua module files.
+  '``if { [ string match "*tcl2lua.tcl" $env(_) ] } { ... }``'. Only conditional load statements like
+  '``load(atleast("gcc","4.8"))``' can only be used in Lua module files.
