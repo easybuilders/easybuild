@@ -447,8 +447,8 @@ These two configuration options each serve a particular purpose, and together de
   * does *not* enable the dependency resolution mechanism
   * the specified list of paths is included *last* in the robot search path
   * by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed
-  * **note**: setting this configuration option implies redefining the default robot search path!
-  * append/prepend support
+  * **note**: setting this configuration option implies redefining the default robot search path, unless a
+    prepending/appending list of paths is specified, see :ref:`robot_search_path_prepend_append`
 
 For both options, the list of paths should be specified as a colon-separated (``:``) list.
 
