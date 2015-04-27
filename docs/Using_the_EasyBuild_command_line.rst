@@ -25,10 +25,10 @@ This can be done in a number of ways:
 
 Whenever EasyBuild searches for easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
-(i) the local working directory
-(ii) the robot search path (see :ref:`robot_search_path`)
+(i)   the local working directory
+(ii)  the robot search path (see :ref:`robot_search_path`)
 (iii) the path to easyconfig files that are part of the active EasyBuild installation
-  (which is included in the default robot search path)
+      (which is included in the default robot search path)
 
 These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
 *not* for easyconfig files that are specified via an absolute path.
