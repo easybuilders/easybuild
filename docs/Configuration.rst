@@ -647,5 +647,7 @@ Possible values are:
   Using module files in Lua syntax has the advantage that Lmod does not need to translate from Lua to Tcl internally
   when processing the module files, which benefits responsiveness of Lmod when used interactively by users. In terms
   of Lmod-specific aspects of module files, the syntax of the module file does *not* matter; Lmod-specific statements
-  can be included in Tcl module files as well, by guarding them by a condition that only evaluates positively when
-  Lmod is consuming the module file.
+  supported by EasyBuild can be included in Tcl module files as well, by guarding them by a condition that only
+  evaluates positively when Lmod is consuming the module file, i.e.
+  ``if { [ string match "*tcl2lua.tcl" $env(_) ] } { ... }``. Only conditional load statements like
+  ``load(atleast("gcc","4.8"))`` can only be used in Lua module files.
