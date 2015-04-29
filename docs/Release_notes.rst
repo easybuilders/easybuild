@@ -25,7 +25,7 @@ feature + bugfix release
   * module naming scheme API is enhanced to include det_install_subdir method
   * see :ref:`module_only`
 
-* add support for generating module files in Lua syntax (note: required Lmod as modules tool) (`#1060 <https://github.com/hpcugent/easybuild-framework/pull/1060>`_, `#1255 <https://github.com/hpcugent/easybuild-framework/pull/1255>`_, `#1256 <https://github.com/hpcugent/easybuild-framework/pull/1256>`_)
+* add support for generating module files in Lua syntax (note: required Lmod as modules tool) (`#1060 <https://github.com/hpcugent/easybuild-framework/pull/1060>`_, `#1255 <https://github.com/hpcugent/easybuild-framework/pull/1255>`_, `#1256 <https://github.com/hpcugent/easybuild-framework/pull/1256>`_, `#1270 <https://github.com/hpcugent/easybuild-framework/pull/1270>`_)
 
   * see ``--module-syntax`` configuration option and :ref:`module_syntax`
 
@@ -43,6 +43,7 @@ feature + bugfix release
 
 * various other enhancements, including:
 
+  * clear list of checksums when using ``--try-software-version`` (`#1169 <https://github.com/hpcugent/easybuild-framework/pull/1169>`_)
   * sort the results of searching for files (e.g., ``--search`` output) (`#1214 <https://github.com/hpcugent/easybuild-framework/pull/1214>`_)
   * enhance test w.r.t. use of templates in cfgfile (`#1217 <https://github.com/hpcugent/easybuild-framework/pull/1217>`_)
   * define '``%(DEFAULT_REPOSITORYPATH)s``' template for cfgfiles (see ``eb --avail-cfgfile-constants``) (`#1220 <https://github.com/hpcugent/easybuild-framework/pull/1220>`_)
@@ -72,6 +73,7 @@ feature + bugfix release
 
   * use dedicated subdirectory in temporary directory for each test to ensure better cleanup (`#1260 <https://github.com/hpcugent/easybuild-framework/pull/1260>`_)
   * get rid of ``$PROFILEREAD`` hack when running commands, not needed anymore (`#1264 <https://github.com/hpcugent/easybuild-framework/pull/1264>`_)
+
 * various bug fixes, including:
 
   * make bootstrap script robust against having ``vsc-base`` already available in Python search path (`#1212 <https://github.com/hpcugent/easybuild-framework/pull/1212>`_, `#1215 <https://github.com/hpcugent/easybuild-framework/pull/1215>`_)
@@ -107,6 +109,7 @@ feature + bugfix release
 
 * various bug fixes, including:
 
+  * fix Score-P easyblock for compiler-only toolchains, include Qt as optional dependecy (`#552 <https://github.com/hpcugent/easybuild-easyblocks/pull/552>`_)
   * fix definition of ``$MKLROOT``, should be set to '``mkl``' subdir of install dir (`#576 <https://github.com/hpcugent/easybuild-easyblocks/pull/576>`_)
   * add ``-libmpichf90`` to list of MPI libraries in NWChem easyblock (`#584 <https://github.com/hpcugent/easybuild-easyblocks/pull/584>`_)
   * stop using '``$root``' to make easyblocks compatible with module files in Lua syntax (`#590 <https://github.com/hpcugent/easybuild-easyblocks/pull/590>`_)
@@ -114,6 +117,8 @@ feature + bugfix release
   * unset ``buildopts``/``installopts`` before installing Python extensions in Python easyblock (`#597 <https://github.com/hpcugent/easybuild-easyblocks/pull/597>`_)
   * allow not including vsc-base sources when installing EasyBuild (gets installed with easybuild-framework) (`#600 <https://github.com/hpcugent/easybuild-easyblocks/pull/600>`_)
   * use ``self.initial_environ`` rather than ``self.orig_environ`` in EasyBuildMeta easyblock (`#600 <https://github.com/hpcugent/easybuild-easyblocks/pull/600>`_)
+  * make GCC easyblock compatible with ``--module-only`` by setting default value for ``self.platform_lib`` in constructor (`#603 <https://github.com/hpcugent/easybuild-easyblocks/pull/603>`_)
+
 
 **easyconfigs**
 
@@ -150,6 +155,9 @@ feature + bugfix release
   * replace use of '``$root``' with '``%(installdir)s``' to ensure compatibility with module files in Lua syntax (`#1532 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1532>`_)
   * stop relying on '``$MKLROOT``' in ROOT easyconfigs (`#1537 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1537>`_)
   * use proper Bundle easyblock for biodeps/PRACE (`#1566 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1566>`_)
+  * make source_urls in Cube and Scalasca easyconfigs compatible with --try-software-version (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
+  * add patch for Cube to fix configure script w.r.t. Qt dependency, add --without-java-reader configure option (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
+
 
 v2.0.0 (March 6th 2015)
 -----------------------
