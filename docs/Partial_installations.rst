@@ -106,7 +106,7 @@ Example usage::
 
 .. _module_only:
 
-Only (e)generating (additional) module files using ``--module-only``
+Only (re)generating (additional) module files using ``--module-only``
 ---------------------------------------------------------------------
 
 Since EasyBuild v2.1, it is possible to only (re)generate the module file that matches the specifications in the
