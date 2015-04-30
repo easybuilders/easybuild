@@ -264,4 +264,4 @@ Examples:
             module names (and other metadata) with the other.
 
             See for example the `MigrateFromEBToHMNS module naming scheme that is used by the EasyBuild framework unit
-            tests <https://github.com/hpcugent/easybuild-framework/blob/develop/test/framework/sandbox/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.py>`_.
+            tests <https://github.com/hpcugent/easybuild-framework/blob/master/test/framework/sandbox/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.py>`_.
