@@ -7,7 +7,7 @@ The latest version of EasyBuild provides support for building and installing **6
 using 33 different (compiler) toolchains. It contains 145 software-specific easyblocks and 22 generic easyblocks,
 alongside 3,618 easyconfig files.
 
-v2.1.0 (April 28th 2015)
+v2.1.0 (April 30th 2015)
 ------------------------
 
 feature + bugfix release
