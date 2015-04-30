@@ -146,7 +146,7 @@ Dependencies
 
 * **dependencies**: build/runtime dependencies
 * **builddependencies**: build-only dependencies (not in module)
-* **hiddendependencies**: dependencies via hidden modules
+* **hiddendependencies**: dependencies via hidden modules (see also :ref:`hide_deps`)
 * **osdependencies**: system dependencies (package names)
 
 Remarks:
@@ -197,6 +197,12 @@ For example, to specify PnMPI version 1.2.0 built with the ``dummy`` toolchain a
 which is equivalent to::
 
   dependencies = [('PnMPI', '1.2.0', '', True)]
+
+Using external modules as dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as dependencies is also supported.
+See :ref:`using_external_modules` for more information.
 
 .. _configure_build_install_command_options:
 

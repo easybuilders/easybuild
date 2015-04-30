@@ -3,6 +3,29 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150430.01** (`Apr 30th 2015`): updated documentation for EasyBuild v2.1.0
+
+  * also cover extensions in page on concepts and terminology (see :ref:`extensions`)
+  * add documentation on :ref:`partial_installations`, covering ``--stop``, ``--skip`` and ``--module-only``
+  * add documentation on :ref:`manipulating_dependencies`, covering ``--filter-deps`` and ``--hide-deps``
+  * document ``-module-syntax`` configuration option (see :ref:`module_syntax`)
+  * add note on detection of unknown ``$EASYBUILD``-prefixed environment variables (see :ref:`configuration_env_vars`)
+  * mention support for prepending/appending to ``--robot-paths`` (see :ref:`robot_search_path_prepend_append`)
+  * update release notes for EasyBuild v2.1.0 (see :ref:`release_notes`)
+
+* **release 20150425.01** (`Apr 25th 2015`):
+
+  * add documentation on :ref:`using_external_modules`
+
+* **release 20150407.01** (`Apr 7th 2015`):
+
+  * add link to :ref:`unit_tests` page in dedicated section at :ref:`installation` page
+    (see :ref:`install_running_unit_tests`)
+  * clarify relation between ``--installpath``, ``--prefix``, ``-subdir-*`` and ``--installpath-*``
+    configuration options (see :ref:`installpath`)
+  * mention ``--show-default-configfiles`` command line option in relevant section
+    (see :ref:`default_configuration_files`)
+
 * **release 20150327.01** (`Mar 27th 2015`):
 
   * documented deprecated functionality w.r.t. error reporting (see :ref:`depr_error_reporting`)
