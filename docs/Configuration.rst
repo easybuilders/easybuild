@@ -27,7 +27,8 @@ is even fairly common).
 The order of preference for the different configuration types is as listed above, that is:
 
 * environment variables override the corresponding entries in the configuration file
-* command line arguments in turn override the corresponding environment variables *and* matching entries in the configuration file
+* command line arguments in turn override the corresponding environment variables *and* matching entries in the
+  configuration file
 
 
 Consistentency across supported configuration types
@@ -98,6 +99,21 @@ configuration files at ``/etc/easybuild.d/*.cfg`` and ``$HOME/.config/easybuild/
 The configuration file located in ``$XDG_CONFIG_HOME`` will be listed *after* the ones obtained via ``$XDG_CONFIG_DIRS``,
 such that user-defined configuration settings have preference over system defaults.
 
+A detailed overview of the list of default configuration files is available via ``eb --show-default-configfiles``
+(available since EasyBuild v2.1.0). For example::
+
+ $ XDG_CONFIG_DIRS=/tmp/etc:/tmp/moreetc eb --show-default-configfiles
+ Default list of configuration files:
+
+ [with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: /tmp/etc:/tmp/moreetc]
+
+ * user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/easybuild/config.cfg
+   -> /home/example/.config/easybuild/config.cfg => found
+ * system-level: ${XDG_CONFIG_DIRS:-/etc}/easybuild.d/*.cfg
+   -> {/tmp/etc, /tmp/moreetc}/easybuild.d/*.cfg => /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg
+
+ Default list of existing configuration files (4): /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg, /home/example/.config/easybuild/config.cfg
+
 Multiple configuration files
 ++++++++++++++++++++++++++++
 
@@ -156,20 +172,30 @@ An example configuration file that should make everything clear is shown below.
 Templates and constants supported in configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For each configuration option, a matching template is available to refer to its corresponding value.
+Two types of template values ``%(...)s`` are supported in configuration files:
 
-A couple of predefined constants are available to be used (only) in EasyBuild configuration files.
-An overview of supported constants is available via ``eb --avail-cfgfile-constants``.
+* for configuration options defined in the configuration file (and only those)
+  * *syntax:* ``%(opt)s``, i.e., using the (lowercase) name of the configuration option
+* for the default value of selected configuration options (see ``eb --avail-cfgfile-constants``)
+  * *syntax:* ``%(DEFAULT_OPT)s``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
 
-For both templates and constants, the syntax format is ``%(template_or_constant_name)s``.
+.. note::
+  These template values are only supported in configuration files, *not* in environment variable values or 
+  command line option values.
+
+.. note::
+  Using an unknown template value, i.e. either one for a configuration option that was not defined in the
+  configuration file, or a non-existing one for a particular default value, will result in an error like:
+  ``ConfigParser.InterpolationMissingOptionError: Bad value substitution``.
 
 Example
 +++++++
 
-To include both the easyconfigs archive repository and the default list of robot search paths in the
-active robot search path, the following configuration file entry can be used, featuring the template for the
-``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
+To include both the (custom) location for the easyconfigs archive repository and the default list of robot search
+paths in the active robot search path, the following configuration file entry can be used, featuring the template
+for the ``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
 
+    repositorypath = /home/example/easybuild/easyconfigs_archive
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
 See also :ref:`controlling_robot_search_path`.
@@ -200,6 +226,8 @@ file. This can be used as an empty template configuration file:
     [basic]
     # Print build overview incl. dependencies (full paths) (def False)
 
+.. _configuration_env_vars:
+
 Environment variables
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -221,6 +249,8 @@ shown in the sections below.
 .. tip:: Any configuration option of EasyBuild which can be tuned by command line
   or via the configuration file, can also be tuned via a corresponding environment variable.
 
+.. note:: If any ``$EASYBUILD``-prefixed environment variables are defined that do not correspond to a known
+  configuration option, EasyBuild will report an error message and exit.
 
 Command line arguments
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -278,13 +308,15 @@ If any of these configuration settings is not provided in one way or another, Ea
 
 In practice, all of these have reasonable defaults (see ``eb --help`` for the default settings).
 
+.. note:: The mandatory path-related options can be tweaked collectively via ``--prefix``, see :ref:`prefix` for more
+          information.
 
 .. _sourcepath:
 
 Source path (``--sourcepath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``$HOME/.local/easybuild/sources/``
+*default*: ``$HOME/.local/easybuild/sources/`` (determined via :ref:`prefix`)
 
 The ``sourcepath`` configuration setting specifies the parent path of
 the directory in which EasyBuild looks for software source and install files.
@@ -293,7 +325,8 @@ Looking for the files specified via the ``sources`` parameter in the .eb
 easyconfig file is done in the following order of preference:
 
 * ``<sourcepath>/<name>``: a subdirectory determined by the name of the software package
-* ``<sourcepath>/<letter>/<name>``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
+* ``<sourcepath>/<letter>/<name>``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a
+  subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
 * ``<sourcepath>``: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
@@ -304,7 +337,7 @@ files in addition to the various ``easybuild/easyconfigs`` directories that are 
 Build path (``--buildpath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``$HOME/.local/easybuild/build/``
+*default*: ``$HOME/.local/easybuild/build/`` (determined via :ref:`prefix`)
 
 The ``buildpath`` configuration setting specifies the parent path of the
 (temporary) directories in which EasyBuild builds its software packages.
@@ -324,48 +357,92 @@ when the installation is completed (by default).
 
 .. _installpath:
 
-Install path (``--installpath``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Software and modules install path (``--installpath``, ``--installpath-software``, ``--installpath-modules``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``$HOME/.local/easybuild/``
+defaults:
 
-The ``installpath`` configuration setting specifies the parent path of
-the directories in which EasyBuild installs software packages and the
+* *software install path:* ``$HOME/.local/easybuild/software``  (determined via :ref:`prefix` and ``--subdir-software``)
+* *modules install path:* ``$HOME/.local/easybuild/modules/all``  (determined via :ref:`prefix`,
+  ``--subdir-modules`` and ``--suffix-modules-path``)
+
+There are several ways in which the software and modules install path used by EasyBuild can be configured:
+
+* using the direct configuration options ``--installpath-software`` and ``--installpath-modules`` (see below)
+* via the parent install path configuration option ``--installpath`` (see below)
+* via the overall prefix path configuration option ``--prefix`` (see :ref:`prefix`)
+
+.. _installpath_direct_options:
+
+Direct options: ``--installpath-software`` and ``--installpath-modules``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+*default*: *(no default specified)*
+
+The ``--installpath-software`` and ``--installpath-modules`` configuration options (available since EasyBuild v2.1.0)
+allow to directly specify the software and modules install paths, respectively.
+
+These configuration options have precedence over all of the other configuration options that relate to specifying the
+install path for software and/or modules (see below).
+
+.. _parent_installpath:
+
+Parent install path: ``--installpath``
+++++++++++++++++++++++++++++++++++++++
+
+*default*: *(no default specified)*
+
+The ``--installpath`` configuration option specifies the *parent* path of
+the directories in which EasyBuild should install software packages and the
 corresponding module files.
 
-By default, the packages themselves are installed under ``<installpath>/software``
-in their own subdirectory following the active module naming scheme
-(e.g., ``<name>/<version>-<toolchain><versionsuffix>``, by default).
-The corresponding module files are installed under
-``<installpath>/modules/all``, and symlinks are installed in ``<installpath>/modules/<moduleclass>``.
+The install path for software and modules specifically is determined by combining ``--installpath`` with
+``--subdir-software``, and combining ``--installpath`` with ``--subdir-modules`` and ``--suffix-modules-path``,
+respectively.
 
-Different configuration options are available for changing the default behaviour, i.e.,
---subdir-software, --subdir-modules, --suffix-modules-path, --module-naming-scheme, etc.
+For more information on these companion configuration options, see :ref:`installpath_subdirs`.
 
-For more information, see `Optional configuration settings`_.
+Full install path for software and module file
+++++++++++++++++++++++++++++++++++++++++++++++
 
-Setting ``$MODULEPATH``
-+++++++++++++++++++++++
+The full software and module install paths for a particular software package are determined by the active
+module naming scheme along with the general software and modules install paths specified by the EasyBuild configuration.
 
-After (re)configuring EasyBuild, you need to make sure that
-``$MODULEPATH`` environment variable is extended with the
-``modules/all`` subdirectory of the ``installpath``
-so you can load the modules created for the software built with EasyBuild, i.e.:
+Both the software itself and the corresponding module file will be installed in a subdirectory of the corresponding
+install path named according to the active module naming scheme (default format:
+``<name>/<version>-<toolchain><versionsuffix>``).
+Additionally, symlinks to the actual module file are installed in a subdirectory of the modules install path
+named according to the value of the ``moduleclass`` easyconfig parameter.
+
+For more information on the module naming scheme used by EasyBuild, see :ref:`module_naming_scheme`.
+
+Updating ``$MODULEPATH``
+++++++++++++++++++++++++
+
+To make the modules generated by EasyBuild available, the ``$MODULEPATH`` environment variable must be updated
+to include the modules install path.
+
+The recommended way to do this is to use the ``module use`` command.
+For example:
 
 .. code:: shell-session
 
-    $ module use <installpath>/modules/all
+    $ eb --installpath=$HOME/easybuild
+    $ module use $HOME/easybuild/modules/all
 
 It is probably a good idea to add this to your (favourite) shell
 ``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login scripts,
 so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
+
+.. note:: Updating ``$MODULEPATH`` is not required for EasyBuild itself, since ``eb`` updates ``$MODULEPATH`` itself at
+          runtime according to the modules install path it is configured with.
 
 .. _easyconfigs_repo:
 
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo``
+*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo`` (determined via :ref:`prefix`)
 
 EasyBuild has support for archiving (tested) ``.eb`` easyconfig files.
 After successfully installing a software package using EasyBuild, the
@@ -373,20 +450,17 @@ corresponding ``.eb`` file is uploaded to a repository defined by the ``reposito
 
 Currently, EasyBuild supports the following repository types (see also
 ``eb --avail-repositories``):
-
 * ``FileRepository('path', 'subdir')``: a plain flat file repository;
-   ``path`` is the path where files will be stored, ``subdir`` is an
-   *optional* subdirectory of
-   that path where the files should be stored
+  ``path`` is the path where files will be stored, ``subdir`` is an
+  *optional* subdirectory of that path where the files should be stored
 * ``GitRepository('path', 'subdir/in/repo'``: a *non-empty* **bare**
-   git repository (created with ``git init --bare`` or ``git clone --bare``);
-   ``path`` is the path to the git repository (can also be a URL);
-   ``subdir/in/repo`` is optional, and specifies a subdirectory of the
-   repository where files should be stored in
+  git repository (created with ``git init --bare`` or ``git clone --bare``);
+  ``path`` is the path to the git repository (can also be a URL);
+  ``subdir/in/repo`` is optional, and specifies a subdirectory of the
+  repository where files should be stored in
 * ``SvnRepository('path', 'subdir/in/repo')``: an SVN repository;
-   ``path`` contains the subversion repository location (directory or
-   URL), the optional second value
-   specifies a subdirectory in the repository
+  ``path`` contains the subversion repository location (directory or
+  URL), the optional second value specifies a subdirectory in the repository
 
 You need to set the ``repository`` setting inside a configuration file like this:
 
@@ -456,24 +530,44 @@ template value here)::
 Optional configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Software and modules install path suffixes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _prefix:
 
-This section describes configuration options
-``--subdir-software``, ``--subdir-modules``, ``--suffix-modules-path``,
-which are supported since v1.14.0.
+Overall prefix path (``--prefix``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*defaults*: ``software`` as software install path suffix, ``modules`` as
-modules install path suffix
+*default:* ``$HOME/.local/easybuild``
 
-The software and modules install path suffixes can be adjusted using the
-``subdir-software`` and/or ``subdir-modules`` / ``suffix-modules-path`` configuration settings,
-for example:
+The overall prefix path used by EasyBuild can be specified using the ``--prefix`` configuration option.
+
+This affects the default value of several configuration options:
+
+* source path (see :ref:`sourcepath`)
+* build path (see :ref:`buildpath`)
+* software and modules install path (see :ref:`installpath`)
+* easyconfigs repository path (see :ref:`easyconfigs_repo`)
+
+.. _installpath_subdirs:
+
+Software and modules install path subdirectories (``--subdir-software``, ``--subdir-modules``, ``--suffix-modules-path``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*defaults*:
+
+* *software install path subdirectory* (``--subdir-software``): ``software``
+* *modules install path subdirectory* (``--subdir-modules``): ``modules``
+* *modules install path suffix* (``--suffix-modules-path``): ``all``
+
+The subdirectories for the software and modules install paths (relative to ``--installpath``, see :ref:`installpath`)
+can be specified using the corresponding dedicated configuration options (available since EasyBuild v1.14.0).
+
+For example:
 
 .. code:: shell-session
 
     $ export EASYBUILD_SUBDIR_SOFTWARE=installs
-    $ eb --subdir-modules=module_files ...
+    $ eb --installpath=$HOME/easybuild --subdir-modules=module_files ...
+
+.. _modules_tool:
 
 Modules tool (``--modules-tool``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -502,6 +596,8 @@ For example, to indicate that EasyBuild should be using ``Lmod`` as modules tool
 
     $ eb --modules-tool=Lmod ...
 
+.. _module_naming_scheme:
+
 Active module naming scheme (``--module-naming-scheme``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -518,3 +614,40 @@ For more details, see the dedicated page: https://github.com/hpcugent/easybuild/
 
 .. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
 
+.. _module_syntax:
+
+Module files syntax (``--module-syntax``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*default*: ``Tcl``
+
+*supported since*: EasyBuild v2.1
+
+The syntax to use for generated module files can be specified using the ``--module-syntax`` configuration setting.
+
+Possible values are:
+
+* ``Lua``: generate module files in Lua syntax
+
+  * this requires the use of Lmod as a modules tool to consume the module files (see :ref:`modules_tool`)
+  * module file names will have the ``.lua`` extension
+
+* ``Tcl``: generate module files in Tcl syntax
+
+  * Tcl module files can be consumed by all supported modules tools
+  * module files will contain a header string ``#%Module`` indicating that they are composed in Tcl syntax
+
+.. note::
+  Lmod is able to deal with having module files in place in both Tcl and Lua syntax. When a module file in Lua
+  syntax (i.e., with a ``.lua`` file name extension) is available, a Tcl module file with the same name will be
+  ignored. The Tcl-based environment modules tool will simply ignore module files in Lua syntax, since they do not
+  contain the header string that is included in Tcl module files.
+
+.. note::
+  Using module files in Lua syntax has the advantage that Lmod does not need to translate from Lua to Tcl internally
+  when processing the module files, which benefits responsiveness of Lmod when used interactively by users. In terms
+  of Lmod-specific aspects of module files, the syntax of the module file does *not* matter; Lmod-specific statements
+  supported by EasyBuild can be included in Tcl module files as well, by guarding them by a condition that only
+  evaluates positively when Lmod is consuming the module file, i.e.
+  '``if { [ string match "*tcl2lua.tcl" $env(_) ] } { ... }``'. Only conditional load statements like
+  '``load(atleast("gcc","4.8"))``' can only be used in Lua module files.

@@ -25,10 +25,10 @@ This can be done in a number of ways:
 
 Whenever EasyBuild searches for easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
-(i) the local working directory
-(ii) the robot search path (see :ref:`robot_search_path`)
+(i)   the local working directory
+(ii)  the robot search path (see :ref:`robot_search_path`)
 (iii) the path to easyconfig files that are part of the active EasyBuild installation
-  (which is included in the default robot search path)
+      (which is included in the default robot search path)
 
 These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
 *not* for easyconfig files that are specified via an absolute path.
@@ -426,23 +426,71 @@ part of the robot search path (in the order they are encountered).
 Controlling the robot search path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To control the robot search path, you can specify a (colon-separated list of) path(s) to ``--robot`` and/or
+To control the robot search path, you can specify a (colon-separated list of) path(s) to ``--robot``/``-r`` and/or
 ``--robot-paths`` (or, equivalently, ``$EASYBUILD_ROBOT`` and/or ``$EASYBUILD_ROBOT_PATHS``)::
 
   eb --robot=$PWD:$HOME ...
 
-Paths specified to ``--robot`` get precedence over paths specified via ``--robot-paths``.
-Only ``--robot`` enables the dependency resolution mechanism; ``--robot-paths`` does not.
+These two configuration options each serve a particular purpose, and together define the robot search path:
 
-By combining ``--robot`` and ``--robot-paths`` on the different configuration levels (see also :ref:`configuration_types`), you have full control over the robot search path.
+* ``--robot``, ``-r``:
+
+  * intended to be used (only) as a command line option to ``eb`` (although it can also be defined through another
+    configuration type)
+  * enables the dependency resolution mechanism (disabled by default)
+  * optionally a list of paths can be specified, which is included *first* in the robot search path
+  * by default, the corresponding list of paths is *empty*
+
+* ``--robot-paths``:
+
+  * intended to be defined in an EasyBuild configuration file, or via ``$EASYBUILD_ROBOT_PATHS``
+  * does *not* enable the dependency resolution mechanism
+  * the specified list of paths is included *last* in the robot search path
+  * by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed
+  * **note**: setting this configuration option implies redefining the default robot search path, unless a
+    prepending/appending list of paths is specified, see :ref:`robot_search_path_prepend_append`
+
+For both options, the list of paths should be specified as a colon-separated (``:``) list.
+
+By combining ``--robot`` and ``--robot-paths`` using the different configuration types (see also
+:ref:`configuration_types`), you have full control over the robot search path: which paths are included,
+the order of those paths, whether or not the easyconfig files that are part of the EasyBuild installation should be
+considered, etc.
 
 A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in EasyBuild configuration files to refer
-to the default robot search path. For more information on using constants in EasyBuild configuration files, see
+to the default robot search path, i.e. the path to the easyconfigs that are part of the EasyBuild installation.
+For more information on using constants in EasyBuild configuration files, see
 :ref:`configuration_file_templates_constants`.
 
-.. note:: The paths specified on the configuration type with the highest order of preference `replace` any paths
-  specified otherwise, i.e. values are not retained across configuration types. For more information
-  see :ref:`configuration_types`.
+.. tip::
+  Only use ``--robot`` to enable the dependency resolution mechanism; define ``robot-paths`` in your EasyBuild
+  configuration file or via ``$EASYBUILD_ROBOT_PATHS`` to specify which sets of easyconfig files EasyBuild
+  should consider, and in which order. By means of exception, a path can be specified to ``--robot`` to give a specific
+  set of easyconfig files precedence over others, for example when testing modified easyconfig files.
+
+.. note:: The paths specified on the configuration type with the highest order of preference *replace* any paths
+  specified otherwise, i.e. values are not retained across configuration types. That is: ``--robot`` *overrides*
+  the value in ``$EASYBUILD_ROBOT``, ``$EASYBUILD_ROBOT_PATHS`` *overrides* the ``robot-paths`` specification in an
+  EasyBuild configuration file, etc. Of course, the value specified for ``--robot`` does not directly affect the value
+  specified for ``--robot-paths``, on any configuration level, and vice versa. For more information on the relation
+  between the different configuration types, see :ref:`configuration_types`.
+
+.. _robot_search_path_prepend_append:
+
+Prepending and/or appending to the default robot search path
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Prepending or appending to the default robot search path is supported via the ``--robot-paths`` configuration option.
+
+To *prepend* one or more paths, a list of paths followed by a '``:``' should be specified.
+
+Analogously, to *append* one or more paths, a list of paths preceded by a '``:``' should be specified.
+
+For example:
+
+* ``export EASYBUILD_ROBOT_PATHS=/tmp/$USER:`` specifies to prepend ``/tmp/$USER`` to the robot search path
+* ``--robot-paths :$HOME/eb:$HOME/test`` specifies to append ``$HOME/eb`` and ``$HOME/test`` to the robot search path (in that order)
+* ``--robot-paths=/tmp/$USER::$HOME/test`` specifies to prepend ``/tmp/$USER`` *and* append ``$HOME/test`` to the robot search path
 
 Example use case
 ++++++++++++++++

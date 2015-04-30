@@ -127,6 +127,8 @@ For example::
   may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
   with respect to what is the version being loaded by default.
 
+.. _install_running_unit_tests:
+
 Running unit tests
 ~~~~~~~~~~~~~~~~~~
 
@@ -134,6 +136,8 @@ After completion of the bootstrap procedure and loading the
 ``EasyBuild`` module, try running the EasyBuild unit tests::
 
     python -m test.framework.suite
+
+More details about the EasyBuild unit tests are available at :ref:`unit_tests`.
 
 If this does not complete successfully, `please open an issue`_ to report it.
 
