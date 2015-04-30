@@ -96,6 +96,10 @@ Example usage::
  == COMPLETED: Installation ended successfully
 
 .. note::
+  Upgrading of extensions to a newer version does not work (yet) using ``--skip``, because the way in which extensions
+  are checked for availability, i.e. the extensions filter, is (usually) version-agnogstic.
+
+.. note::
   The '``skipsteps``' easyconfig parameter has a different purpose, i.e. to specify which installation steps should
   *always* be skipped when the installation of a particular software package is performed, no matter whether the
   software or corresponding module is already available or not.
@@ -182,7 +186,7 @@ Example usage:
    == COMPLETED: Installation ended successfully
    ...
 
-   $ ls -l /home/example/.local/modules/all/GCC/4.8.2*
+   $ ls -l /home/example/.local/modules/all/GCC/4.8.2
    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
 
 .. _module_only_additional:
