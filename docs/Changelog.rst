@@ -3,7 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20150427.01** (`Apr 27th 2015`): updates for EasyBuild v2.1.0
+* **release 20150430.01** (`Apr 30th 2015`): updated documentation for EasyBuild v2.1.0
 
   * also cover 'extensions' in page on concepts and terminology (see :ref:`extensions`)
   * add documentation on :ref:`partial_installations`, covering ``--stop``, ``--skip`` and ``--module-only``
