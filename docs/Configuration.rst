@@ -226,6 +226,8 @@ file. This can be used as an empty template configuration file:
     [basic]
     # Print build overview incl. dependencies (full paths) (def False)
 
+.. _configuration_env_vars:
+
 Environment variables
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -247,6 +249,8 @@ shown in the sections below.
 .. tip:: Any configuration option of EasyBuild which can be tuned by command line
   or via the configuration file, can also be tuned via a corresponding environment variable.
 
+.. note:: If any ``$EASYBUILD``-prefixed environment variables are defined that do not correspond to a known
+  configuration option, EasyBuild will report an error message and exit.
 
 Command line arguments
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -563,6 +567,8 @@ For example:
     $ export EASYBUILD_SUBDIR_SOFTWARE=installs
     $ eb --installpath=$HOME/easybuild --subdir-modules=module_files ...
 
+.. _modules_tool:
+
 Modules tool (``--modules-tool``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -608,3 +614,40 @@ For more details, see the dedicated page: https://github.com/hpcugent/easybuild/
 
 .. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
 
+.. _module_syntax:
+
+Module files syntax (``--module-syntax``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*default*: ``Tcl``
+
+*supported since*: EasyBuild v2.1
+
+The syntax to use for generated module files can be specified using the ``--module-syntax`` configuration setting.
+
+Possible values are:
+
+* ``Lua``: generate module files in Lua syntax
+
+  * this requires the use of Lmod as a modules tool to consume the module files (see :ref:`modules_tool`)
+  * module file names will have the ``.lua`` extension
+
+* ``Tcl``: generate module files in Tcl syntax
+
+  * Tcl module files can be consumed by all supported modules tools
+  * module files will contain a header string ``#%Module`` indicating that they are composed in Tcl syntax
+
+.. note::
+  Lmod is able to deal with having module files in place in both Tcl and Lua syntax. When a module file in Lua
+  syntax (i.e., with a ``.lua`` file name extension) is available, a Tcl module file with the same name will be
+  ignored. The Tcl-based environment modules tool will simply ignore module files in Lua syntax, since they do not
+  contain the header string that is included in Tcl module files.
+
+.. note::
+  Using module files in Lua syntax has the advantage that Lmod does not need to translate from Lua to Tcl internally
+  when processing the module files, which benefits responsiveness of Lmod when used interactively by users. In terms
+  of Lmod-specific aspects of module files, the syntax of the module file does *not* matter; Lmod-specific statements
+  supported by EasyBuild can be included in Tcl module files as well, by guarding them by a condition that only
+  evaluates positively when Lmod is consuming the module file, i.e.
+  '``if { [ string match "*tcl2lua.tcl" $env(_) ] } { ... }``'. Only conditional load statements like
+  '``load(atleast("gcc","4.8"))``' can only be used in Lua module files.

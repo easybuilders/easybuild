@@ -153,3 +153,20 @@ Therefore, reproducing installations becomes trivial.
 
 EasyBuild version |version| includes support for over 511 different software packages,
 spread over 2800 easyconfig files describing distinct builds.
+
+.. _extensions:
+
+Extensions
+----------
+
+Some software packages support installing additional add-ons alongside the 'main' software, either in the same
+installation prefix, or in a separate location.
+
+In EasyBuild, we use the neutral term '**extensions**' to refer these add-ons.
+
+Well-known examples include:
+
+* Perl modules (http://www.cpan.org/modules/)
+* Python packages (https://pypi.python.org/pypi)
+* R libraries (http://cran.r-project.org/web/packages/)
+* Ruby gems (http://guides.rubygems.org/what-is-a-gem/)
