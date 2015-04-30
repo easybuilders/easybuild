@@ -5,7 +5,7 @@ EasyBuild release notes
 
 The latest version of EasyBuild provides support for building and installing **608** different software packages,
 using 33 different (compiler) toolchains. It contains 145 software-specific easyblocks and 22 generic easyblocks,
-alongside 3,617 easyconfig files.
+alongside 3,618 easyconfig files.
 
 v2.1.0 (April 28th 2015)
 ------------------------
@@ -25,7 +25,7 @@ feature + bugfix release
   * module naming scheme API is enhanced to include det_install_subdir method
   * see :ref:`module_only`
 
-* add support for generating module files in Lua syntax (note: required Lmod as modules tool) (`#1060 <https://github.com/hpcugent/easybuild-framework/pull/1060>`_, `#1255 <https://github.com/hpcugent/easybuild-framework/pull/1255>`_, `#1256 <https://github.com/hpcugent/easybuild-framework/pull/1256>`_, `#1270 <https://github.com/hpcugent/easybuild-framework/pull/1270>`_)
+* add support for generating module files in Lua syntax (note: requires Lmod as modules tool) (`#1060 <https://github.com/hpcugent/easybuild-framework/pull/1060>`_, `#1255 <https://github.com/hpcugent/easybuild-framework/pull/1255>`_, `#1256 <https://github.com/hpcugent/easybuild-framework/pull/1256>`_, `#1270 <https://github.com/hpcugent/easybuild-framework/pull/1270>`_)
 
   * see ``--module-syntax`` configuration option and :ref:`module_syntax`
 
