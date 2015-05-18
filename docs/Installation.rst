@@ -393,6 +393,13 @@ Supported module tools:
   The path where the modules tool binary/script is located can be determined via the definition of
   the ``module`` function; for example, using ``type module`` or ``type -f module``.
 
+.. note::
+  For Lmod specifically, EasyBuild will try to fall back to finding the ``lmod`` binary via the ``$LMOD_CMD``
+  environment variable, in case ``lmod`` is not availabe in ``$PATH``.
+
+  In EasyBuild versions *prior* to 2.1.1, the path specified by ``$LMOD_CMD`` was (erroneously) preferred over the
+  (first) ``lmod`` binary available via ``$PATH``.
+
 
 Additional notes:
 

@@ -3,6 +3,15 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150518.01** (`May 18th 2015`):
+
+  * update section on ``--search``: better examples + highlight ability to search via regular expression (see :ref:`searching_for_easyconfigs`)
+  * update release notes for EasyBuild v2.1.1 (see :ref:`release_notes`)
+
+* **release 20150506.01** (`May 6th 2015`): updated documentation for EasyBuild v2.1.1
+
+  * add note on ``$LMOD_CMD`` fallback to find full path to ``lmod`` binary (see :ref:`required_modules_tool`)
+
 * **release 20150430.01** (`Apr 30th 2015`): updated documentation for EasyBuild v2.1.0
 
   * also cover extensions in page on concepts and terminology (see :ref:`extensions`)
