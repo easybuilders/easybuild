@@ -266,9 +266,6 @@ Searching for available easyconfig files can be done using the ``--search`` (lon
 command line options. All easyconfig files available in the robot search path are considered
 (see :ref:`robot_search_path`), and searching is done `case-insensitive`.
 
-.. note:: Prior to EasyBuild v2.1.1, the full path to easyconfig files was considered when matching the search pattern.
-          Starting with EasyBuild v2.1.1, only the filename of the easyconfig file itself is taken into account.
-
 For example, to see which easyconfig files are available for the software package named `Mesquite`::
 
   $ eb --search mesquite
@@ -320,6 +317,9 @@ Or, to find all easyconfig files for Python versions 2.7.8 and 2.7.9 that use th
    * $CFGS1/Python-2.7.9-intel-2015a.eb
   == temporary log file(s) /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log* have been removed.
   == temporary directory /tmp/eb-Dv5LEJ has been removed.
+
+.. note:: Prior to EasyBuild v2.1.1, the full path to easyconfig files was considered when matching the search pattern.
+          Starting with EasyBuild v2.1.1, only the filename of the easyconfig file itself is taken into account.
 
 .. _use_robot:
 
