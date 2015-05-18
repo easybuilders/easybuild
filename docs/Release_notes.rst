@@ -20,6 +20,7 @@ bugfix release
 * enhance ``--search``: only consider actual filename (not entire path), use regex syntax (`#1281 <https://github.com/hpcugent/easybuild-framework/pull/1281>`_)
 * various other bug fixes, including:
 
+  * fix ``generate_software_list.py`` script w.r.t. dependencies marked as external modules (`#1273 <https://github.com/hpcugent/easybuild-framework/pull/1273>`_)
   * only use ``$LMOD_CMD`` value if ``lmod`` binary can't be found in $PATH (`#1275 <https://github.com/hpcugent/easybuild-framework/pull/1275>`_)
   * fix location of ``module_only`` build option w.r.t. default value (`#1277 <https://github.com/hpcugent/easybuild-framework/pull/1277>`_)
   * fix combined use of ``--hide-deps`` and ``hiddendependencies`` (`#1280 <https://github.com/hpcugent/easybuild-framework/pull/1280>`_)
