@@ -14,7 +14,6 @@ naming scheme).
 
   * :ref:`module_only_only_regenerate`
   * :ref:`module_only_additional`
-  * :ref:`module_only`
 
 .. _partial_installation_stop:
 
@@ -119,11 +118,14 @@ software installation is available).
 Combining ``--module-only`` with ``--installpath-modules`` is also a common use case, to generate the module file in
 a (test) location other than the software installation prefix (see :ref:`installpath`).
 
+.. note:: Although ``--module-only`` was already supported in EasyBuild v2.1.0, we strongly recommend to use EasyBuild
+          v2.1.1 or a more recent version, because of some critical bug fixes with respect to ``--module-only``
+          (see :ref:`release_notes_eb211`).
+
 Use cases:
 
 * :ref:`module_only_only_regenerate`
-* :ref:`module_only_existing_different`
-* :ref:`module_only_force`
+* :ref:`module_only_additional`
 
 .. _module_only_only_regenerate:
 
