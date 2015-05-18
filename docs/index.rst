@@ -58,6 +58,7 @@ Advanced usage topics
     Manipulating_dependencies
     Partial_installations
     Using_external_modules
+    Creating_binary_packages
 
 Other topics
 ============
