@@ -267,3 +267,7 @@ Examples:
 
             See for example the `MigrateFromEBToHMNS module naming scheme that is used by the EasyBuild framework unit
             tests <https://github.com/hpcugent/easybuild-framework/blob/master/test/framework/sandbox/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.py>`_.
+
+.. note:: Although ``--module-only`` was already supported in EasyBuild v2.1.0, we strongly recommend to use EasyBuild
+          v2.1.1 or a more recent version, because of some critical bug fixes with respect to ``--module-only``
+          (see :ref:`release_notes_eb211`).
