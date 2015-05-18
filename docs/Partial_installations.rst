@@ -14,7 +14,6 @@ naming scheme).
 
   * :ref:`module_only_only_regenerate`
   * :ref:`module_only_additional`
-  * :ref:`module_only`
 
 .. _partial_installation_stop:
 
@@ -126,8 +125,7 @@ a (test) location other than the software installation prefix (see :ref:`install
 Use cases:
 
 * :ref:`module_only_only_regenerate`
-* :ref:`module_only_existing_different`
-* :ref:`module_only_force`
+* :ref:`module_only_additional`
 
 .. _module_only_only_regenerate:
 
