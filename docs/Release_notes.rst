@@ -3,9 +3,58 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **608** different software packages,
+The latest version of EasyBuild provides support for building and installing **611** different software packages,
 using 33 different (compiler) toolchains. It contains 145 software-specific easyblocks and 22 generic easyblocks,
-alongside 3,618 easyconfig files.
+alongside 3,689 easyconfig files.
+
+v2.1.1 (May 18th 2015)
+----------------------
+
+bugfix release
+
+**framework**
+
+* fix issue with missing load statements when ``--module-only`` is used, don't skip ready/prepare steps (`#1276 <https://github.com/hpcugent/easybuild-framework/pull/1276>`_)
+* enhance ``--search``: only consider actual filename (not entire path), use regex syntax (`#1281 <https://github.com/hpcugent/easybuild-framework/pull/1281>`_)
+* various other bug fixes, including:
+
+  * only use ``$LMOD_CMD`` value if ``lmod`` binary can't be found in $PATH (`#1275 <https://github.com/hpcugent/easybuild-framework/pull/1275>`_)
+  * fix location of ``module_only`` build option w.r.t. default value (`#1277 <https://github.com/hpcugent/easybuild-framework/pull/1277>`_)
+  * fix combined use of ``--hide-deps`` and ``hiddendependencies`` (`#1280 <https://github.com/hpcugent/easybuild-framework/pull/1280>`_)
+  * remove log handlers that were added during tests, to ensure effective cleanup of log files (`#1282 <https://github.com/hpcugent/easybuild-framework/pull/1282>`_)
+
+    * this makes the unit test suite run ~3x faster!
+
+  * define ``$CRAYPE_LINK_TYPE`` if '``dynamic``' toolchain option is enabled for Cray compiler wrappers (`#1283 <https://github.com/hpcugent/easybuild-framework/pull/1283>`_)
+
+**easyblocks**
+
+* fix compatibility of easyblocks with ``--module-only`` + dedicated unit test module (`#610 <https://github.com/hpcugent/easybuild-easyblocks/pull/610>`_)
+* minor enhancements, including:
+
+  * update GROMACS easyblock for version 5 (`#513 <https://github.com/hpcugent/easybuild-easyblocks/pull/513>`_)
+
+* various other bug fixes, including:
+
+  * only check compiler being used if FFTW interfaces are being built in Intel MKL easyblock (`#606 <https://github.com/hpcugent/easybuild-easyblocks/pull/606>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 3 new software packages:
+
+  * networkx (`#1592 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1592>`_), Platanus (`#1597 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1597>`_), SaguaroGW (`#1600 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1600>`_)
+
+* added new easyconfigs for existing toolchains: ``ictce/7.3.5``, ``CrayCCE/5.2.40``, ``CrayGNU/5.2.40``, ``CrayIntel/5.2.40``
+* added easyconfigs using ``CrayGNU/5.2.25`` and ``CrayGNU/5.2.40`` toolchains (`#1610 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1610>`_, `#1611 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1611>`_)
+* added additional easyconfigs for various supported software packages: version updates, different toolchains, ...
+
+  * including Boost 1.58.0, GROMACS 5.0.4, Python 3.4.3
+
+* various bug fixes, including:
+
+  * enable usempi in GROMACS easyconfig using CrayGNU toolchain (as required by GROMACS easyblock) (`#1590 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1590>`_)
+  * use system-provided tcsh when building WRF on Cray systems, to avoid hanging build (`#1595 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1595>`_)
+  * only use '``dynamic``' toolchain option, not '``shared``', in easyconfigs using Cray toolchain (`#1609 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1609>`_)
 
 v2.1.0 (April 30th 2015)
 ------------------------

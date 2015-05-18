@@ -262,78 +262,64 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 Searching for easyconfigs, ``--search`` / ``-S``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use ``--search/-S`` (long vs short output) and an easyconfig filepath pattern, for `case-insensitive` search of easyconfigs. Example::
+Searching for available easyconfig files can be done using the ``--search`` (long output) and ``-S`` (short output)
+command line options. All easyconfig files available in the robot search path are considered
+(see :ref:`robot_search_path`), and searching is done `case-insensitive`.
 
-  $ eb --search blast
-  == temporary log file in case of crash /tmp/easybuild-1qIvuB/easybuild-eYwxlR.log
-  == Searching (case-insensitive) for 'blast' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.26-Linux_x86_64.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27-goalf-1.1.0-no-OFED.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27-goolf-1.4.10.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27-ictce-4.0.6.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.27_ictce-fixes.patch
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-goolf-1.4.10-Python-2.7.3.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-goolf-1.4.10.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-ictce-4.1.13.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-ictce-5.3.0-Python-2.7.3.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28-ictce-5.3.0.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/b/BLAST/BLAST-2.2.28_ictce-fixes.patch
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-goalf-1.1.0-no-OFED.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-ictce-4.0.6.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.2.0.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.3.0.eb
-   * /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/m/mpiBLAST/mpiBLAST_disable-ncbi-X11-apps.patch
-  == temporary log file /tmp/easybuild-1qIvuB/easybuild-eYwxlR.log has been removed.
-  == temporary directory /tmp/easybuild-1qIvuB has been removed.
+.. note:: Prior to EasyBuild v2.1.1, the full path to easyconfig files was considered when matching the search pattern.
+          Starting with EasyBuild v2.1.1, only the filename of the easyconfig file itself is taken into account.
 
-The same query with ``-S`` is far more readable, when there is a joint path that can be collapsed to a variable like ``$CFGS1``::
+For example, to see which easyconfig files are available for the software package named `Mesquite`::
 
-  $ eb -S blast
-  == temporary log file in case of crash /tmp/easybuild-tMmLMz/easybuild-Qgfely.log
-  == Searching (case-insensitive) for 'blast' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * $CFGS1/b/BLAST/BLAST-2.2.26-Linux_x86_64.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.27-goalf-1.1.0-no-OFED.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.27-goolf-1.4.10.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.27-ictce-4.0.6.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.27_ictce-fixes.patch
-   * $CFGS1/b/BLAST/BLAST-2.2.28-goolf-1.4.10-Python-2.7.3.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.28-goolf-1.4.10.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.28-ictce-4.1.13.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.28-ictce-5.3.0-Python-2.7.3.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.28-ictce-5.3.0.eb
-   * $CFGS1/b/BLAST/BLAST-2.2.28_ictce-fixes.patch
-   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-goalf-1.1.0-no-OFED.eb
-   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb
-   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-ictce-4.0.6.eb
-   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.2.0.eb
-   * $CFGS1/m/mpiBLAST/mpiBLAST-1.6.0-ictce-5.3.0.eb
-   * $CFGS1/m/mpiBLAST/mpiBLAST_disable-ncbi-X11-apps.patch
-  == temporary log file /tmp/easybuild-tMmLMz/easybuild-Qgfely.log has been removed.
-  == temporary directory /tmp/easybuild-tMmLMz has been removed.
+  $ eb --search mesquite
+  == temporary log file in case of crash /tmp/eb-_TYdTf/easybuild-iRJ2vb.log
+  == Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-goolf-1.4.10.eb
+   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-4.1.13.eb
+   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-5.3.0.eb
+  == temporary log file(s) /tmp/eb-_TYdTf/easybuild-iRJ2vb.log* have been removed.
+  == temporary directory /tmp/eb-_TYdTf has been removed.
 
-The supplied pattern is used to match easyconfig **filepaths**; that aspect can be exploited to trim down
-the list of easyconfigs in the search result. For example, use ``/GCC`` to search for easyconfig files for GCC::
+The same query with ``-S`` is more readable, when there is a joint path that can be collapsed to a variable like ``$CFGS1``::
 
-  $ eb -S /GCC-4.9
-  == temporary log file in case of crash /tmp/easybuild-W40SsV/easybuild-7l96Cm.log
-  == Searching (case-insensitive) for '/GCC-4.9' in /home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-  CFGS1=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs/g/GCC
-   * $CFGS1/GCC-4.9.0-CLooG-multilib.eb
-   * $CFGS1/GCC-4.9.0-CLooG.eb
-   * $CFGS1/GCC-4.9.0.eb
-   * $CFGS1/GCC-4.9.1-CLooG-multilib.eb
-   * $CFGS1/GCC-4.9.1-CLooG.eb
-   * $CFGS1/GCC-4.9.1.eb
-  == temporary log file /tmp/easybuild-W40SsV/easybuild-7l96Cm.log has been removed.
-  == temporary directory /tmp/easybuild-W40SsV has been removed.
+  $ eb -S mesquite
+  == temporary log file in case of crash /tmp/eb-5diJjn/easybuild-nUXlkj.log
+  == Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite
+   * $CFGS1/Mesquite-2.3.0-goolf-1.4.10.eb
+   * $CFGS1/Mesquite-2.3.0-ictce-4.1.13.eb
+   * $CFGS1/Mesquite-2.3.0-ictce-5.3.0.eb
+  == temporary log file(s) /tmp/eb-5diJjn/easybuild-nUXlkj.log* have been removed.
+  == temporary directory /tmp/eb-5diJjn has been removed.
 
-.. note:: By using a leading slash in front of a search pattern, as the last example,
-  we filter out all the potential matches of easyconfigs that are built with the GCC toolchain.
+For more specific searching, a regular expression pattern can be supplied (since EasyBuild v2.1.1).
 
-.. tip:: Using ``--search`` has remarkably longer output in most cases, compared to ``-S``; the information is the same,
-  however the paths towards the easyconfigs are fully expanded, taking lot of screen real estate for most people. 
+For example, to search which easyconfig files are available for GCC v4.6.x, without listing easyconfig files that use
+GCC v4.6.x as a toolchain::
+
+  $ eb -S ^GCC-4.6
+  == temporary log file in case of crash /tmp/eb-PpwTwm/easybuild-b8yrOG.log
+  == Searching (case-insensitive) for '^GCC-4.6' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC
+   * $CFGS1/GCC-4.6.3-CLooG-PPL.eb
+   * $CFGS1/GCC-4.6.3.eb
+   * $CFGS1/GCC-4.6.4.eb
+  == temporary log file(s) /tmp/eb-PpwTwm/easybuild-b8yrOG.log* have been removed.
+  == temporary directory /tmp/eb-PpwTwm has been removed.
+
+Or, to find all easyconfig files for Python versions 2.7.8 and 2.7.9 that use the ``intel`` toolchain::
+
+  $ eb -S '^Python-2.7.[89].*intel'
+  == temporary log file in case of crash /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log
+  == Searching (case-insensitive) for '^Python-2.7.[89].*intel' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/p/Python
+   * $CFGS1/Python-2.7.8-intel-2014.06.eb
+   * $CFGS1/Python-2.7.8-intel-2014b.eb
+   * $CFGS1/Python-2.7.8-intel-2015a.eb
+   * $CFGS1/Python-2.7.9-intel-2015a-bare.eb
+   * $CFGS1/Python-2.7.9-intel-2015a.eb
+  == temporary log file(s) /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log* have been removed.
+  == temporary directory /tmp/eb-Dv5LEJ has been removed.
 
 .. _use_robot:
 
