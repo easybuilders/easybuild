@@ -7,6 +7,8 @@ The latest version of EasyBuild provides support for building and installing **6
 using 33 different (compiler) toolchains. It contains 145 software-specific easyblocks and 22 generic easyblocks,
 alongside 3,618 easyconfig files.
 
+.. _release_notes_v2.1.0:
+
 v2.1.0 (April 30th 2015)
 ------------------------
 
@@ -158,6 +160,7 @@ feature + bugfix release
   * make source_urls in Cube and Scalasca easyconfigs compatible with --try-software-version (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
   * add patch for Cube to fix configure script w.r.t. Qt dependency, add --without-java-reader configure option (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
 
+.. _release_notes_v2.0.0:
 
 v2.0.0 (March 6th 2015)
 -----------------------
