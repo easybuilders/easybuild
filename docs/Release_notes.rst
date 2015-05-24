@@ -59,6 +59,8 @@ bugfix release
   * use system-provided tcsh when building WRF on Cray systems, to avoid hanging build (`#1595 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1595>`_)
   * only use '``dynamic``' toolchain option, not '``shared``', in easyconfigs using Cray toolchain (`#1609 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1609>`_)
 
+.. _release_notes_v2.1.0:
+
 v2.1.0 (April 30th 2015)
 ------------------------
 
@@ -210,6 +212,7 @@ feature + bugfix release
   * make source_urls in Cube and Scalasca easyconfigs compatible with --try-software-version (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
   * add patch for Cube to fix configure script w.r.t. Qt dependency, add --without-java-reader configure option (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
 
+.. _release_notes_v2.0.0:
 
 v2.0.0 (March 6th 2015)
 -----------------------
