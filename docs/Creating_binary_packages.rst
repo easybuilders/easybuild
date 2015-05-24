@@ -5,7 +5,7 @@ Creating binary packages
 
 As an experimental feature (see :ref:`experimental_features`), support for `FPM <https://github.com/jordansissel/fpm>`_ has been integrated into EasyBuild v2.2.0 (see :ref:`release_notes_v2.2.0`). 
 
-FPM is provided by EasyBuild itself, along with Ruby. 
+FPM is provided by EasyBuild itself, along with Ruby. You can install FPM using the FPM-1.3.3-Ruby-2.1.6.eb easyblock.
 
 Overview
 --------
@@ -13,17 +13,19 @@ Overview
 Installing prerequisites
 ------------------------
 
-First you will need the Ruby package that includes FPM::
+First you will need the FPM package, which will also install Ruby if you haven't already::
 
-    $ eb Ruby-2.1.5.eb
+    $ eb FPM-1.3.3-Ruby-2.1.6.eb -r
+    [...]
+    == building and installing Ruby/2.1.6...
     [...]
     == COMPLETED: Installation ended successfully
-    == 2015-05-18 15:12:58,526 main.easyblock INFO Results of the build can be found in the log file /home/example/easybuild/software/Ruby/2.1.5/easybuild/easybuild-Ruby-2.1.5-20150518.151258.log
-    == Results of the build can be found in the log file /home/example/easybuild/software/Ruby/2.1.5/easybuild/easybuild-Ruby-2.1.5-20150518.151258.log
-    == 2015-05-18 15:12:58,528 main INFO Build succeeded for 1 out of 1
-    == Build succeeded for 1 out of 1
-
-
-
+    [...]
+    == building and installing FPM/1.3.3-Ruby-2.1.6...
+    [...]
+    == COMPLETED: Installation ended successfully
+    == Results of the build can be found in the log file /export/easybuild/software/FPM/1.3.3-Ruby-2.1.6/easybuild/easybui
+    ld-FPM-1.3.3-20150524.181859.log
+    == Build succeeded for 2 out of 2
 
 
