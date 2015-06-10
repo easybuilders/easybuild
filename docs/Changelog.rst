@@ -3,6 +3,8 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150610.01** (`June 10th 2015`): update :ref:`installing_lmod` for Lmod v6.0
+
 * **release 20150518.01** (`May 18th 2015`):
 
   * update section on ``--search``: better examples + highlight ability to search via regular expression (see :ref:`searching_for_easyconfigs`)
