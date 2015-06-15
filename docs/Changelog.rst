@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150615.01** (`June 15th 2015`): add documentation on :ref:`submitting_jobs_configuration`
 * **release 20150610.01** (`June 10th 2015`): update :ref:`installing_lmod` for Lmod v6.0
 
 * **release 20150518.01** (`May 18th 2015`):
