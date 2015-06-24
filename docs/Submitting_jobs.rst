@@ -202,8 +202,6 @@ https://gc3pie.readthedocs.org/en/latest/users/configuration.html).
 Example GC3Pie configuraton for local system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Example GC3Pie configuration file for running jobs locally:
-
 .. code:: ini
 
   [resource/localhost]
@@ -224,8 +222,6 @@ Example GC3Pie configuration file for running jobs locally:
 
 Example GC3Pie configuration for PBS/TORQUE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Example GC3Pie configuration file for submitting job to PBS/TORQUE:
 
 .. code:: ini
 
@@ -263,8 +259,6 @@ Example GC3Pie configuration file for submitting job to PBS/TORQUE:
 
 Example GC3Pie configuration for SLURM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Example GC3Pie configuration file for submitting job to SLURM:
 
 .. code:: ini
 
