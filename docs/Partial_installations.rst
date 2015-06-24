@@ -267,5 +267,7 @@ Examples:
             naming schemes, by providing the name of the software installation subdirectory using one scheme, and the
             module names (and other metadata for module files) with the other.
 
-            See for example the `MigrateFromEBToHMNS module naming scheme that is used by the EasyBuild framework unit
-            tests <https://github.com/hpcugent/easybuild-framework/blob/master/test/framework/sandbox/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.py>`_.
+            An example of such a module naming scheme is ``MigrateFromEBToHMNS``, which allows to generate module files
+            using the hierarchical module naming scheme implemented by ``HierarchicalMNS`` for the software installed
+            in subdirectories following the default EasyBuild module naming scheme ``EasyBuildMNS``.
+            The ``MigrateFromEBToHMNS`` module naming scheme is available since EasyBuild v2.2.0.
