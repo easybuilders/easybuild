@@ -83,7 +83,25 @@ EasyBuild configuration option.
   * example configuration files are available at :ref:`submitting_jobs_examples_gc3pie_cfg`
 
 
-.. _submitting_jobs_cfg_max_job_walltime:
+
+.. _submitting_jobs_cfg_job_cores:
+
+Number of requested cores per job (``--job-cores``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``--job-cores`` can be used to indicate the number of cores that should be requested for each job that is submitted.
+
+The mechanism for determining the number of cores to request in case ``--job-cores`` was *not* specified depends on
+which job backend is being used:
+
+* when the ``PbsPython`` job backend is used, the (most common) number of available cores per workernode in the
+  target resource is determined; this usually results in jobs requesting full workernodes (at least in terms of cores)
+* when the ``GC3Pie`` job backend is used, the requested number of cores is left unspecified, which results in falling
+  back to the default mechanism used by GC3Pie to pick a number of cores; most likely, this results in single-core
+  jobs to be submitted (unless ``--job-cores`` is used)
+
+
+.. _submitting_jobs_cfg_job_max_walltime:
 
 Maximum walltime of jobs (``--job-max-walltime``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,11 +109,11 @@ Maximum walltime of jobs (``--job-max-walltime``)
 An integer value specifying the maximum walltime for jobs (in hours) can be specified via ``--job-max-walltime``
 (default: 24).
 
-.. FIXME check this?
-For builds for which a reference required walltime is available via the ``build_stats`` parameter in an available
-easyconfig file for the same software pacakage, EasyBuild will set the walltime of the job to the double of that.
+For easyconfigs for which a reference required walltime is available via the ``build_stats`` parameter in a matching
+easyconfig file from the easyconfig repository (see :ref:`easyconfigs_repo`), EasyBuild will set the walltime of the
+corresponding job to twice that value (unless the resulting value is higher than the maximum walltime for jobs).
 
-If no reference walltime is available, the maximum walltime will be used.
+If no such reference walltime is available, the maximum walltime is used.
 
 
 .. _submitting_jobs_cfg_job_output_dir:
@@ -175,9 +193,9 @@ To ensure that the installations are performed in the order dictated by the soft
 between installations are specified to GC3Pie as inter-task dependencies. GC3Pie will then gradually feed the
 installations to its available resources as their dependencies have been satisfied.
 
-See also :ref:`submitting_jobs_examples_gc3pie_backend`.
+Any log messages produced by GC3Pie are included in the EasyBuild log file, and are tagged with ``gc3pie``.
 
-.. FIXME location of GC3Pie log file?
+See also :ref:`submitting_jobs_examples_gc3pie_backend`.
 
 .. note:: The ``eb`` process will not exit until the full set of tasks that GC3Pie was provided with has been processed.
           An overall progress report will be printed regularly (see also :ref:`submitting_jobs_cfg_job_polling_interval`).
@@ -223,6 +241,8 @@ Example GC3Pie configuraton for local system
 Example GC3Pie configuration for PBS/TORQUE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. FIXME
+
 .. code:: ini
 
   # this is only needed if connecting through SSH to the cluster
@@ -259,6 +279,8 @@ Example GC3Pie configuration for PBS/TORQUE
 
 Example GC3Pie configuration for SLURM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. FIXME
 
 .. code:: ini
 
