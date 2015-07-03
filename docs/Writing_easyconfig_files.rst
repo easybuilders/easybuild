@@ -262,6 +262,8 @@ Example:
       'dirs': [],
   }
 
+.. _writing_easyconfigs_easyblock_spec:
+
 Easyblock specification
 ~~~~~~~~~~~~~~~~~~~~~~~
 
