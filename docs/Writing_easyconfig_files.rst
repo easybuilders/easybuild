@@ -271,7 +271,7 @@ By default, EasyBuild will assume that the easyblock to use can be derived from 
 For example: for ``GCC``, EasyBuild will look for an easyblock class named ``EB_GCC`` in the Python module
 ``easybuild.easyblocks.gcc``.
 
-A list of available easyblocks is available via ``--list-easyblocks`` (:ref:`list_easyblocks`);
+A list of available easyblocks is available via ``--list-easyblocks`` (see also :ref:`list_easyblocks`);
 generic easyblocks are the ones for which the name does *not* start with ``EB_``.
 
 Example:
