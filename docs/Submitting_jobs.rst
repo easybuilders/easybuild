@@ -22,27 +22,16 @@ be performed, rather than performing the installations locally on the system you
 If dependency resolution is enabled using ``--robot`` (see also :ref:`use_robot`), EasyBuild will submit separate
 jobs and set dependencies between them to ensure they are run in the order dictated by the software dependency graph(s).
 
-See :ref:`submitting_jobs_usage` for more details.
-
 
 .. _submitting_jobs_configuration:
 
 Configuring ``--job``
 ---------------------
 
-
-.. _submitting_jobs_cfg_required:
-
-Required configuration settings for ``--job``
+Selecting the job backend (``--job-backend``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-.. _submitting_jobs_cfg_job_backend:
-
-Selecting the job backend (``--job-backend``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The job backend must be selected via the ``--job-backend`` EasyBuild configuration option.
+The job backend to be used can be specified using the ``--job-backend`` EasyBuild configuration option.
 
 Since EasyBuild 2.2.0, two backends are supported:
 
@@ -60,22 +49,13 @@ Since EasyBuild 2.2.0, two backends are supported:
 For historical reasons, ``PbsPython`` is still the default job backend in EasyBuild version 2.x.
 
 
-.. _submitting_jobs_cfg_optional:
-
-Optional configuration settings for ``--job``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This section covers the configuration settings that are related to ``--job``. Most of these are optional, depending
-on which job backend is being used, and the job backend configuration (if any).
-
 
 .. _submitting_jobs_cfg_job_backend_config:
 
 Configuring the job backend (``--job-backend-config``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To configure the job backend, the path to a configuration file must be specified via the ``--job-backend-config``
-EasyBuild configuration option.
+To configure the job backend, the path to a configuration file must be specified via ``--job-backend-config``.
 
 * for ``PbsPython`` backend: *(irrelevant, no configuration file required)*
 * for ``GC3Pie`` backend: see https://gc3pie.readthedocs.org/en/latest/users/configuration.html
@@ -87,24 +67,26 @@ EasyBuild configuration option.
 .. _submitting_jobs_cfg_job_cores:
 
 Number of requested cores per job (``--job-cores``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``--job-cores`` can be used to indicate the number of cores that should be requested for each job that is submitted.
+The number of cores that should be requested for each job that is submitted can be specified using ``--job-cores``
+(default: *not specified*).
 
 The mechanism for determining the number of cores to request in case ``--job-cores`` was *not* specified depends on
 which job backend is being used:
 
-* when the ``PbsPython`` job backend is used, the (most common) number of available cores per workernode in the
+* if the ``PbsPython`` job backend is used, the (most common) number of available cores per workernode in the
   target resource is determined; this usually results in jobs requesting full workernodes (at least in terms of cores)
-* when the ``GC3Pie`` job backend is used, the requested number of cores is left unspecified, which results in falling
+  by default
+* if the ``GC3Pie`` job backend is used, the requested number of cores is left unspecified, which results in falling
   back to the default mechanism used by GC3Pie to pick a number of cores; most likely, this results in single-core
-  jobs to be submitted (unless ``--job-cores`` is used)
+  jobs to be submitted by default
 
 
 .. _submitting_jobs_cfg_job_max_walltime:
 
 Maximum walltime of jobs (``--job-max-walltime``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 An integer value specifying the maximum walltime for jobs (in hours) can be specified via ``--job-max-walltime``
 (default: 24).
@@ -119,7 +101,7 @@ If no such reference walltime is available, the maximum walltime is used.
 .. _submitting_jobs_cfg_job_output_dir:
 
 Job output directory (``--job-output-dir``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The directory where job log files should be placed can be specified via ``--job-output-dir``
 (default: current directory).
@@ -128,7 +110,7 @@ The directory where job log files should be placed can be specified via ``--job-
 .. _submitting_jobs_cfg_job_polling_interval:
 
 Job polling interval (``--job-polling-interval``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The frequency with which the status of submitted jobs should be checked can be specified via ``--job-polling-interval``,
 using a floating-point value representing the number of seconds between two checks (default: 30 seconds).
@@ -139,13 +121,13 @@ using a floating-point value representing the number of seconds between two chec
 .. _submitting_jobs_cfg_job_target_resource:
 
 Target resource for job backend (``--job-target-resource``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The target resource that should be used by the job backend can be specified using ``--job-target-resource``.
 
 * for ``PbsPython`` backend: hostname of TORQUE PBS server to submit jobs to (default: ``$PBS_DEFAULT``)
 * for ``GC3Pie`` backend: name of resource to submit jobs to (default: none, which implies weighted round-robin
-                          submission across all available resources)
+  submission across all available resources)
 
 
 .. _submitting_jobs_usage:
@@ -401,7 +383,7 @@ jobs have been submitted::
 
 
 Holds are put in place to ensure that the jobs run in the order dictated by the dependency graph(s).
-These holds are released by the Torque server as soon as they jobs on which they depend have completed::
+These holds are released by the TORQUE server as soon as they jobs on which they depend have completed::
 
 
   $ qstat -a
