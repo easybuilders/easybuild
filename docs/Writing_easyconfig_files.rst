@@ -5,8 +5,7 @@ Writing easyconfig files: the basics
 
 This page explains all the basic information about how to write easyconfig files.
 
-For software builds that not deviate significantly from established build patterns,
-an easyconfig is all that you need to specify in order to derive a build and a module file.
+For software builds that follow established build patterns, an easyconfig is all that you need to create in order to build the software and the corresponding module file.
 
 Luckily, the majority of software delivery mechanisms are being designed around
 either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
