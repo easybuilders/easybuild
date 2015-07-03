@@ -241,16 +241,14 @@ Example GC3Pie configuraton for local system
 Example GC3Pie configuration for PBS/TORQUE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. FIXME
-
 .. code:: ini
 
   # this is only needed if connecting through SSH to the cluster
   # frontend; otherwise you can remove this [auth/*] section, and just
   # use 'auth=none' in the resource definition
   [auth/myuser]
-  #type = ssh
-  #username = me
+  type = ssh
+  username = me
   
   [resource/pbs]
   enabled = yes
@@ -280,21 +278,19 @@ Example GC3Pie configuration for PBS/TORQUE
 Example GC3Pie configuration for SLURM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. FIXME
-
 .. code:: ini
 
   # this is only needed if connecting through SSH to the cluster
   # frontend; otherwise you can remove this [auth/*] section, and just
-  # use 'auth=none' in the resource definition
+  # use `auth=none` in the resource definition
   [auth/myuser]
-  #type = ssh
-  #username = me
+  type = ssh
+  username = me
   
   [resource/slurm]
   enabled = yes
   type = slurm
-
+  
   # use settings below when running GC3Pie on the cluster front-end node
   frontend = localhost
   transport = local
@@ -303,14 +299,14 @@ Example GC3Pie configuration for SLURM
   #frontend=hostname.fqdn
   #transport=ssh
   #auth=myuser
-
+  
   max_walltime = 2 days
   # maximum number of submitted jobs = max_cores / max_cores_per_job
   max_cores_per_job = 16
   max_cores = 1024
   max_memory_per_core = 2 GiB
   architecture = x86_64
-
+  
   # to add non-std options or use SLURM tools located outside of
   # the default PATH, use the following:
   #sbatch = /usr/bin/sbatch --mail-type=ALL
@@ -321,43 +317,113 @@ Example GC3Pie configuration for SLURM
 Example: submitting installations to SLURM via GC3Pie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. FIXME GC3Pie hangs?
+When submitting jobs to the ``GC3Pie`` job backend, the ``eb`` process will not exit until all tasks have been
+completed. A job overview will be printed every N seconds (see :ref:`submitting_jobs_cfg_job_polling_interval`).
+
+Jobs are only submitted to the resource manager (SLURM, in this case) when all task dependencies have been resolved.
 
 .. code::
 
-  $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb -df --job
-  == temporary log file in case of crash /tmp/hoste/eb-jimvmK/easybuild-tQGWUY.log
-  == GC3Pie job overview: 2 total, 2 new
-  == GC3Pie job overview: 2 total, 2 new
-  == GC3Pie job overview: 2 total, 2 new
-  == GC3Pie job overview: 2 total, 2 new
-  == GC3Pie job overview: 2 total, 2 new
+  $ export EASYBUILD_JOB_BACKEND=GC3Pie
+  $ export EASYBUILD_JOB_BACKEND_CONFIG=$PWD/gc3pie.cfg
+  $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job --job-cores=16 --job-max-walltime=10
+  == temporary log file in case of crash /tmp/eb-ivAiwD/easybuild-PCgmCB.log
+  == resolving dependencies ...
+  == GC3Pie job overview: 2 submitted (total: 9)
+  == GC3Pie job overview: 2 running (total: 9)
+  == GC3Pie job overview: 2 running (total: 9)
+  ...
+  == GC3Pie job overview: 4 terminated, 4 ok, 1 submitted (total: 9)
+  == GC3Pie job overview: 4 terminated, 4 ok, 1 running (total: 9)
+  ...
+  == GC3Pie job overview: 8 terminated, 8 ok, 1 running (total: 9)
+  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
+  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
+  == Done processing jobs
+  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
+  == Submitted parallel build jobs, exiting now
+  == temporary log file(s) /tmp/eb-ivAiwD/easybuild-PCgmCB.log* have been removed.
+  == temporary directory /tmp/eb-ivAiwD has been removed.
+  
+Checking which jobs have been submitted to SLURM at regular intervals reveals that indeed only tasks for which all
+dependencies have been processed are actually submitted as jobs::
+
+  $ squeue -u $USER
+  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
+  6161545     easybuild  example      GCC-4.9.2       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
+  6161546     easybuild  example      GCC-4.6.0       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
+
+  $ squeue -u $USER
+  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
+  6174527     easybuild  example Automake-1.15-  Resources          N/A          N/A   10:00:00     1 16       1120
+
+  $ squeue -u $USER
+  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
+  6174533     easybuild  example OpenMPI-1.8.4-       None 2015-07-03T0 2015-07-03T1    9:55:59     1 16       1119
+
 
 .. _submitting_jobs_examples_pbs_python_backend:
 
 Example: submitting installations to TORQUE via pbs_python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. FIXME no list of submitted jobs printed?
+Using the ``PbsPython`` job backend, ``eb`` submits jobs directly to Torque for processing, and exits as soon as all
+jobs have been submitted::
 
-.. code::
-
-  $ export EASYBUILD_JOB_BACKEND=PbsPython
-
-  $ eb OpenMPI-1.8.4-GCC-4.9.2.eb -f --robot --job
-  == temporary log file in case of crash /tmp/eb-sq24MP/easybuild-BmTY9v.log
+  $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job
+  == temporary log file in case of crash /tmp/eb-OMNQAV/easybuild-9fTuJA.log
   == resolving dependencies ...
-  == Submitted parallel build jobs, exiting now: 4 jobs required for build.
-  == temporary log file(s) /tmp/eb-sq24MP/easybuild-BmTY9v.log* have been removed.
-  == temporary directory /tmp/eb-sq24MP has been removed.
+  == List of submitted jobs (9): GCC-4.6.0 (GCC/4.6.0): 508023.example.pbs; GCC-4.9.2 (GCC/4.9.2): 508024.example.pbs;
+  libtool-2.4.2-GCC-4.9.2 (libtool/2.4.2-GCC-4.9.2): 508025.example.pbs; M4-1.4.17-GCC-4.9.2 (M4/1.4.17-GCC-4.9.2): 50
+  8026.example.pbs; Autoconf-2.69-GCC-4.9.2 (Autoconf/2.69-GCC-4.9.2): 508027.example.pbs; Automake-1.15-GCC-4.9.2 (Au
+  tomake/1.15-GCC-4.9.2): 508028.example.pbs; numactl-2.0.10-GCC-4.9.2 (numactl/2.0.10-GCC-4.9.2): 508029.example.pbs;
+  hwloc-1.10.0-GCC-4.9.2 (hwloc/1.10.0-GCC-4.9.2): 508030.example.pbs; OpenMPI-1.8.4-GCC-4.9.2 (OpenMPI/1.8.4-GCC-4.9.
+  2): 508031.example.pbs
+  == Submitted parallel build jobs, exiting now
+  == temporary log file(s) /tmp/eb-OMNQAV/easybuild-9fTuJA.log* have been removed.
+  == temporary directory /tmp/eb-OMNQAV has been removed.
 
   $ qstat -a
 
-  example.pbs.server:
-                                                                                    Req'd       Req'd       Elap
-  Job ID                  Username    Queue    Jobname          SessID  NDS   TSK   Memory      Time    S   Time
-  ----------------------- ----------- -------- ---------------- ------ ----- ------ --------- --------- - ---------
-  1602195.example.pbs.se  example    long     GCC-4.9.2           --      1     16       --   24:00:00 Q       -- 
-  1602196.example.pbs.se  example    long     numactl-2.0.10-G    --      1     16       --   24:00:00 H       -- 
-  1602197.example.pbs.se  example    long     hwloc-1.10.0-GCC    --      1     16       --   24:00:00 H       -- 
-  1602198.example.pbs.se  example    long     OpenMPI-1.8.4-GC    --      1     16       --   24:00:00 H       -- 
+  example.pbs:
+                                                                                Req'd    Req'd       Elap
+  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
+  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
+  508023.example.pbs  easybuild   batch    GCC-4.6.0           --      1     16    --   24:00:00 R  00:02:16 
+  508024.example.pbs  easybuild   batch    GCC-4.9.2           --      1     16    --   24:00:00 Q       -- 
+  508025.example.pbs  easybuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 H       -- 
+  508026.example.pbs  easybuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 H       -- 
+  508027.example.pbs  easybuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
+  508028.example.pbs  easybuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
+  508029.example.pbs  easybuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
+  508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
+  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
+
+
+Holds are put in place to ensure that the jobs run in the order dictated by the dependency graph(s).
+These holds are released by the Torque server as soon as they jobs on which they depend have completed::
+
+
+  $ qstat -a
+
+  example.pbs:
+                                                                                Req'd    Req'd       Elap
+  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
+  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
+  508025.example.pbs  easybuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 Q       -- 
+  508026.example.pbs  easybuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 Q       -- 
+  508027.example.pbs  easybuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
+  508028.example.pbs  easybuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
+  508029.example.pbs  easybuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
+  508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
+  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
+
+  ...
+
+  $ qstat -a
+
+  example.pbs:
+                                                                                Req'd    Req'd       Elap
+  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
+  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
+  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 R  00:03:46
