@@ -5,8 +5,8 @@ Writing easyconfig files: the basics
 
 This page explains all the basic information about how to write easyconfig files.
 
-For software builds that not deviate significantly from established build patterns,
-an easyconfig is all that you need to specify in order to derive a build and a module file.
+For software builds that follow established build patterns, an easyconfig is all that you need to create in order to
+build and install the software and the corresponding module file.
 
 Luckily, the majority of software delivery mechanisms are being designed around
 either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
@@ -262,18 +262,19 @@ Example:
       'dirs': [],
   }
 
+.. _writing_easyconfigs_easyblock_spec:
+
 Easyblock specification
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, EasyBuild will derive the easyblock to use based on the software name:
-if a matching easyblock is found, it will use that;
-if not, it will fall back to the generic ``ConfigureMake`` easyblock.
+To make EasyBuild use a specific (usually generic) easyblock the **easyblock** parameter can be used.
 
-To make EasyBuild use a specific (usually generic) easyblock rather
-than deriving it from the software name, the **easyblock** parameter can be used.
+By default, EasyBuild will assume that the easyblock to use can be derived from the software name.
+For example: for ``GCC``, EasyBuild will look for an easyblock class named ``EB_GCC`` in the Python module
+``easybuild.easyblocks.gcc``.
 
-A list of available easyblocks is available via ``--list-easyblocks``;
-generic easyblocks are the ones for which the name does `not` start with ``EB_``.
+A list of available easyblocks is available via ``--list-easyblocks`` (see also :ref:`list_easyblocks`);
+generic easyblocks are the ones for which the name does *not* start with ``EB_``.
 
 Example:
 

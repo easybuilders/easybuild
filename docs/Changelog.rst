@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150703.01** (`July 3rd 2015`):
+
+  * fix outdated documentation on ``easyblock`` parameter (see :ref:`writing_easyconfigs_easyblock_spec`)
+
 * **release 20150624.01** (`June 24th 2015`): mention ``MigrateFromEBToHMNS`` module naming scheme in section on
                                               ``--module-only`` (see :ref:`module_only_additional`)
 * **release 20150610.01** (`June 10th 2015`): update :ref:`installing_lmod` for Lmod v6.0
