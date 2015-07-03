@@ -4,6 +4,7 @@ Changelog for EasyBuild documentation
 -------------------------------------
 
 * **release 20150703.01** (`July 3rd 2015`):
+
   * fix outdated documentation on ``easyblock`` parameter (see :ref:`writing_easyconfigs_easyblock_spec`)
 
 * **release 20150624.01** (`June 24th 2015`): mention ``MigrateFromEBToHMNS`` module naming scheme in section on
