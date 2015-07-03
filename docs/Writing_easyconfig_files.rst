@@ -266,10 +266,11 @@ Easyblock specification
 
 To make EasyBuild use a specific (usually generic) easyblock the **easyblock** parameter can be used.
 
-By default, EasyBuild will assume that the easyblock to use can be derived from the software name (via an encoding
-scheme that includes using ``EB_`` as a prefix for the name of the easyblock Python class).
+By default, EasyBuild will assume that the easyblock to use can be derived from the software name.
+For example: for ``GCC``, EasyBuild will look for an easyblock class named ``EB_GCC`` in the Python module
+``easybuild.easyblocks.gcc``.
 
-A list of available easyblocks is available via ``--list-easyblocks``;
+A list of available easyblocks is available via ``--list-easyblocks`` (:ref:`list_easyblocks`);
 generic easyblocks are the ones for which the name does *not* start with ``EB_``.
 
 Example:
@@ -287,8 +288,7 @@ Example:
   Typically, generic easyblocks support several custom easyconfig parameters which allow to steer
   their behavior (see also :ref:`avail_easyconfig_params`).
 
-Example:
-
+  Example:
 .. code:: python
 
   easyblock = 'Binary'
