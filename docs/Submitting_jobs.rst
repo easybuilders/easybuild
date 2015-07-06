@@ -209,10 +209,10 @@ Example GC3Pie configuraton for local system
   type = shellcmd
   frontend = localhost
   transport = local
-  max_cores_per_job = 1
   max_memory_per_core = 10GiB
   max_walltime = 100 hours
-  # this doubles as "maximum concurrent jobs"
+  # max # jobs ~= max_cores / max_cores_per_job
+  max_cores_per_job = 1
   max_cores = 4
   architecture = x86_64
   auth = none
@@ -225,13 +225,6 @@ Example GC3Pie configuration for PBS/TORQUE
 
 .. code:: ini
 
-  # this is only needed if connecting through SSH to the cluster
-  # frontend; otherwise you can remove this [auth/*] section, and just
-  # use 'auth=none' in the resource definition
-  [auth/myuser]
-  type = ssh
-  username = me
-  
   [resource/pbs]
   enabled = yes
   type = pbs
@@ -240,13 +233,9 @@ Example GC3Pie configuration for PBS/TORQUE
   frontend = localhost
   transport = local
   auth = none
-  # use settings below when connecting through SSH to the cluster
-  #frontend=hostname.fqdn
-  #transport=ssh
-  #auth=myuser
 
   max_walltime = 2 days
-  # maximum number of submitted jobs = max_cores / max_cores_per_job
+  # max # jobs ~= max_cores / max_cores_per_job
   max_cores_per_job = 16
   max_cores = 1024
   max_memory_per_core = 2 GiB
@@ -262,13 +251,6 @@ Example GC3Pie configuration for SLURM
 
 .. code:: ini
 
-  # this is only needed if connecting through SSH to the cluster
-  # frontend; otherwise you can remove this [auth/*] section, and just
-  # use `auth=none` in the resource definition
-  [auth/myuser]
-  type = ssh
-  username = me
-  
   [resource/slurm]
   enabled = yes
   type = slurm
@@ -277,13 +259,9 @@ Example GC3Pie configuration for SLURM
   frontend = localhost
   transport = local
   auth = none
-  # use settings below when connecting through SSH to the cluster
-  #frontend=hostname.fqdn
-  #transport=ssh
-  #auth=myuser
   
   max_walltime = 2 days
-  # maximum number of submitted jobs = max_cores / max_cores_per_job
+  # max # jobs ~= max_cores / max_cores_per_job
   max_cores_per_job = 16
   max_cores = 1024
   max_memory_per_core = 2 GiB
