@@ -18,7 +18,7 @@ pick up additional Python modules, and get them registered in the appropriate ``
 
 .. _include_general_remarks:
 
-General aspects of ``--include`` options
+General aspects of ``--include-*`` options
 ------------------------------------------
 
 Format
