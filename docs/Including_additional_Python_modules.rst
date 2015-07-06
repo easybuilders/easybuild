@@ -21,6 +21,15 @@ pick up additional Python modules, and get them registered in the appropriate ``
 General aspects of ``--include-*`` options
 ------------------------------------------
 
+
+Configuration types
+~~~~~~~~~~~~~~~~~~~
+
+The ``--include-*`` options can be specified via the ``eb`` command line, using an environment variable
+(``$EASYBUILD_INCLUDE_*``) or by defining the corresponding ``include-*`` parameters in an EasyBuild configuration
+file, just like all other configuration options (see also :ref:`configuration_consistency`).
+
+
 Format
 ~~~~~~
 
@@ -33,16 +42,14 @@ For example, to include all Python modules located in the directory ``$HOME/myeb
 ``$HOME/myeb/*.py`` can be specified to the appropriate ``--include-*`` option.
 
 .. note:: Shell expansion can get in the way of specifying paths to ``eb`` that contains wildcards. To avoid problems
-          simply escape the wildcard characters using a backslash. For example:
-          ``export EASYBUILD_INCLUDE_EASYBLOCKS=$HOME/myeb\*.py``, or ``eb --include-easyblocks=$HOME/myeb/\*.py ...``.
+          simply wrap the path in single quotes, or escape the wildcard characters using a backslash. Keep in mind that
+          using single quotes also prevents environment variables (e.g., ``$HOME``) from being expanded.
 
+          Examples of correct path specifications containing wildcards:
 
-Configuration types
-~~~~~~~~~~~~~~~~~~~
-
-The ``--include-*`` options can be specified via the ``eb`` command line, using an environment variable
-(``$EASYBUILD_INCLUDE_*``) or by defining the corresponding ``include_*`` parameters in an EasyBuild configuration
-file, just like all other configuration options (see also :ref:`configuration_consistency`).
+          * in a configuration file (no escaping of wildcards requires): ``include-easyblocks = /home/example/myeb/*.py``
+          * using an environment variable: ``export EASYBUILD_INCLUDE_EASYBLOCKS="$HOME/myeb\*.py"``
+          * on the command line: ``eb --include-easyblocks='/home/example/myeb/\*.py' ...``.
 
 
 How it works
