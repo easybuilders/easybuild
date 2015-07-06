@@ -32,23 +32,17 @@ wildcard characters like ``*`` or ``?``. The latter can be used to include sever
 For example, to include all Python modules located in the directory ``$HOME/myeb``, a path pattern like
 ``$HOME/myeb/*.py`` can be specified to the appropriate ``--include-*`` option.
 
-.. note:: Shell expansion can get in the way of specifying paths to ``eb`` that contains wildcards. To avoid problems,
-          simply escape the wildcard characters using a backslash.
+.. note:: Shell expansion can get in the way of specifying paths to ``eb`` that contains wildcards. To avoid problems
+          simply escape the wildcard characters using a backslash. For example:
+          ``export EASYBUILD_INCLUDE_EASYBLOCKS=$HOME/myeb\*.py``, or ``eb --include-easyblocks=$HOME/myeb/\*.py ...``.
 
-          For example::
-
-            $ export EASYBUILD_INCLUDE_EASYBLOCKS=$HOME/myeb\*.py
-
-          or::
-
-            $ eb --include-easyblocks=$HOME/myeb/\*.py ...
 
 Configuration types
 ~~~~~~~~~~~~~~~~~~~
 
-Each of the ``--include-*`` options can be specified via the ``eb`` command line, using an environment variable
+The ``--include-*`` options can be specified via the ``eb`` command line, using an environment variable
 (``$EASYBUILD_INCLUDE_*``) or by defining the corresponding ``include_*`` parameters in an EasyBuild configuration
-file, just like all other configuration options (see :ref:`configuration_consistency`).
+file, just like all other configuration options (see also :ref:`configuration_consistency`).
 
 
 How it works
@@ -66,7 +60,7 @@ Python modules that are included via ``--include-*`` get preference over other P
 Python search path (e.g., the one that are part of the EasyBuild installation you are using). This may be useful when
 testing modifications to particular components of EasyBuild, for example easyblocks.
 
-.. note:: We recommend to only override existing components when testing. Upcoming EasyBuild versions may include
+.. note:: It is recommended to only override existing components during testing. Future EasyBuild versions may include
           important updates like bug fixes, which may be missed if customised implementations of components were
           put in place.
 
@@ -152,7 +146,7 @@ components implemented by the Python modules located in the directory ``$HOME/my
 
 .. code::
 
-    $ export EASYBUILD_INCLUDE_TOOLCHAINS='$HOME/myebtcs/*.py,$HOME/myebtcs/compiler/*.py,$HOME/myebtcs/mpi/*.py'
+    $ export EASYBUILD_INCLUDE_TOOLCHAINS=$HOME/myebtcs/\*.py,$HOME/myebtcs/compiler/\*.py,$HOME/myebtcs/mpi/\*.py
     $ eb --list-toolchains
     List of known toolchains (toolchainname: module[,module...]):
         ...
