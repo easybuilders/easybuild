@@ -47,9 +47,9 @@ For example, to include all Python modules located in the directory ``$HOME/myeb
 
           Examples of correct path specifications containing wildcards:
 
-          * in a configuration file (no escaping of wildcards requires): ``include-easyblocks = /home/example/myeb/*.py``
+          * in a configuration file (no escaping of wildcards required): ``include-easyblocks = /home/example/myeb/*.py``
           * using an environment variable: ``export EASYBUILD_INCLUDE_EASYBLOCKS="$HOME/myeb\*.py"``
-          * on the command line: ``eb --include-easyblocks='/home/example/myeb/\*.py' ...``.
+          * on the command line: ``eb --include-easyblocks='/home/example/myeb/*.py' ...``.
 
 
 How it works
