@@ -61,8 +61,6 @@ bugfix release
 
 .. _release_notes_v2.1.0:
 
-.. _release_notes_v2.1.0:
-
 v2.1.0 (April 30th 2015)
 ------------------------
 

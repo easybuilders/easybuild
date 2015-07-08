@@ -31,7 +31,11 @@ First you will need the FPM package, which will also install Ruby if you haven't
 Runtime options
 ---------------
 
-There are four main options associated with packaging currently available.
+Options associated with packaging currently available.
+
+* ``--package``:
+
+  * Enables packaging and is required for other options to work
 
 * ``--package-tool=<tool>``:
 
@@ -42,24 +46,26 @@ There are four main options associated with packaging currently available.
 
   * Specify which type of package you wish to build. Passed to fpm, but rpm is the default and tested. Also supports debs thorough FPM.
 
-* ``--package-template=<template>``:
+* ``--package-naming-scheme=<PNS>``:
 
-  * Gives you the ability to override the default template of ``eb-%(name)s-%(version)s-%(toolchain)s``, this can be used to change the prefix or to reorder the variables.
-  * Further allows you to create parallel installable packages.
+  * Gives you the ability to override the default package naming scheme of ``EasyBuildPNS``.
 
-.. note:: Changing the template also affects dependencies so should be done with caution. Generally the format should be set for your site and all packages, or at least interoperable packages, should be built using the same template.
+.. note:: Changing the naming scheme should be done with caution. RPM will only allow one package of a particular name to be installed, so if you wish multiple versions of a package to be installed in parallel you need to ensure variables like the version are included in that part of the naming scheme.
 
 * ``--packagepath``:
 
   * Allows you to specify a destination path for the packages being built in this run
 
+* ``--package-release``:
+
+  * The release to be added to the end of the package, by default ``1.`` This allows the packager to package that will upgrade an existing one with the same name and version.
 
 Example
 -------
 
-It is sufficient to add ``--experimental --package-tool=fpm`` to get started with EasyBuild packaging::
+It is sufficient to add ``--experimental --package --package-tool=fpm`` to get started with EasyBuild packaging::
 
-    $ eb --experimental --package-tool=fpm Perl-5.20.1-GCC-4.9.2-bare.eb -r -f
+    $ eb --experimental --package --package-tool=fpm Perl-5.20.1-GCC-4.9.2-bare.eb -r -f
     [...]
     == building and installing Perl/5.20.1-GCC-4.9.2-bare...
     == fetching files...
