@@ -3,7 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20150708.02** (`July 8th 2015`): add documentation on :ref:`submitting_jobs_configuration`
+* **release 20150709.01** (`July 9th 2015`): add documentation on :ref:`submitting_jobs_configuration`
 * **release 20150708.01** (`July 8th 2015`):
 
   * add documentation on ``--include-*`` options (see :ref:`including_additional_python_modules`)
