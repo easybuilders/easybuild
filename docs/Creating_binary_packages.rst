@@ -91,13 +91,31 @@ It is sufficient to add ``--experimental --package --package-tool=fpm`` to get s
 And in your packages directory (by default $prefix/packages) you will find your new package!
 
 The package by default will have the following properties::
-    
-    $ rpm -q --requires -p eb-Perl-5.20.1-bare-GCC-4.9.2-eb-1.x86_64.rpm
-    eb-GCC-4.9.2-dummy-dummy
+   
+    $ rpm -qip --requires --provides eb2.2.0dev-Perl-5.20.1-bare-GCC-4.9.2-5.20.1-1.x86_64.rpm
+    Name        : eb2.2.0dev-Perl-5.20.1-bare-GCC-4.9.2
+    Version     : 5.20.1
+    Release     : 1
+    Architecture: x86_64
+    Install Date: (not installed)
+    Group       : default
+    Size        : 64539427
+    License     : unknown
+    Signature   : (none)
+    Source RPM  : eb2.2.0dev-Perl-5.20.1-bare-GCC-4.9.2-5.20.1-1.src.rpm
+    Build Date  : Tue 07 Jul 2015 11:27:54 PM EDT
+    Build Host  : 59e46bbf1cd0
+    Relocations : /
+    Packager    : <easybuild@59e46bbf1cd0>
+    Vendor      : easybuild@59e46bbf1cd0
+    URL         : http://example.com/no-uri-given
+    Summary     : no description given
+    Description :
+    no description given
+    eb2.2.0dev-GCC-4.9.2-dummy-dummy
     rpmlib(PartialHardlinkSets) <= 4.0.4-1
     rpmlib(PayloadFilesHavePrefix) <= 4.0-1
     rpmlib(CompressedFileNames) <= 3.0.4-1
-    $ rpm -q --provides -p eb-Perl-5.20.1-bare-GCC-4.9.2-eb-1.x86_64.rpm
-    eb-Perl-5.20.1-bare-GCC-4.9.2
-    eb-Perl-5.20.1-bare-GCC-4.9.2 = eb-1
-    eb-Perl-5.20.1-bare-GCC-4.9.2(x86-64) = eb-1
+    eb2.2.0dev-Perl-5.20.1-bare-GCC-4.9.2
+    eb2.2.0dev-Perl-5.20.1-bare-GCC-4.9.2 = 5.20.1-1
+    eb2.2.0dev-Perl-5.20.1-bare-GCC-4.9.2(x86-64) = 5.20.1-1
