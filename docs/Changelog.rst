@@ -3,7 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20150706.01** (`July 6th 2015`):
+* **release 20150708.01** (`July 8th 2015`):
 
   * add documentation on ``--include-*`` options (see :ref:`including_additional_python_modules`)
 
