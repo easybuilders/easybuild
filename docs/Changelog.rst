@@ -8,7 +8,6 @@ Changelog for EasyBuild documentation
 
   * add documentation on ``--include-*`` options (see :ref:`including_additional_python_modules`)
 
->>>>>>> develop
 * **release 20150703.01** (`July 3rd 2015`):
 
   * fix outdated documentation on ``easyblock`` parameter (see :ref:`writing_easyconfigs_easyblock_spec`)
