@@ -42,7 +42,7 @@ Since EasyBuild 2.2.0, two backends are supported:
 
 * ``GC3Pie`` *(recommended)*
 
-  * ``GC3Pie`` version 2.3.0 (or more recent) required (https://gc3pie.readthedocs.org)
+  * ``GC3Pie`` version 2.4.0 (or more recent) required (https://gc3pie.readthedocs.org)
   * works with different resource managers and job schedulers, including TORQUE, SLURM, etc.
   * **note**: requires that a GC3Pie configuration file is provided, see :ref:`submitting_jobs_cfg_job_backend_config`
 
