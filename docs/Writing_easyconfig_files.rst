@@ -291,7 +291,8 @@ Example:
   Typically, generic easyblocks support several custom easyconfig parameters which allow to steer
   their behavior (see also :ref:`avail_easyconfig_params`).
 
-  Example:
+Example:
+
 .. code:: python
 
   easyblock = 'Binary'
