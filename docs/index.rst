@@ -58,6 +58,7 @@ Advanced usage topics
     Integration_with_GitHub
     Manipulating_dependencies
     Partial_installations
+    Submitting_jobs
     Using_external_modules
 
 Other topics
