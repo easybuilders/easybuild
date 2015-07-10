@@ -68,7 +68,7 @@ Example
 
 It is sufficient to add ``--experimental --package --package-tool=fpm`` to get started with EasyBuild packaging::
 
-    $ eb --experimental --package --package-tool=fpm Perl-5.20.1-GCC-4.9.2-bare.eb -r -f
+    $ eb --experimental --package Perl-5.20.1-GCC-4.9.2-bare.eb -r -f
     [...]
     == building and installing Perl/5.20.1-GCC-4.9.2-bare...
     == fetching files...
