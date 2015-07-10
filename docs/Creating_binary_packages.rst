@@ -10,6 +10,9 @@ FPM is provided by EasyBuild itself, along with Ruby. You can install FPM using 
 Overview
 --------
 
+.. contents::
+    :depth: 2
+
 Installing prerequisites
 ------------------------
 
