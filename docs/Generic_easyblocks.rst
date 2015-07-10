@@ -1,4 +1,11 @@
-==============================Overview of generic easyblocks==============================.. contents::    :depth: 2.. _BinariesTarball:
+==============================
+Overview of generic easyblocks
+==============================
+
+.. contents::
+    :depth: 2
+
+.. _BinariesTarball:
 
 ``BinariesTarball``
 ===================
@@ -13,6 +20,7 @@ Customised steps in ``BinariesTarball`` easyblock
 * ``build_step`` - Dummy build method: nothing to build (inherited)
 * ``configure_step`` - Dummy configure method (inherited)
 * ``install_step`` - Install by copying unzipped binaries to 'bin' subdir of installation dir, and fixing permissions. (inherited)
+
 .. _Binary:
 
 ``Binary``
@@ -39,6 +47,36 @@ Customised steps in ``Binary`` easyblock
 * ``build_step`` - No compilation, this is binary software
 * ``configure_step`` - No configuration, this is binary software
 * ``install_step`` - Copy all files in build directory to the install directory
+
+
+Example for ``Binary`` easyblock
+--------------------------------
+
+::
+
+    easyblock = 'Binary'
+    
+    name = 'Platanus'
+    version = '1.2.1'
+    versionsuffix = '-linux-x86_64'
+    
+    homepage = 'http://platanus.bio.titech.ac.jp/'
+    description = """PLATform for Assembling NUcleotide Sequences"""
+    
+    toolchain = {'name': 'dummy', 'version': 'dummy'}
+    
+    source_urls = ['http://platanus.bio.titech.ac.jp/Platanus_release/20130901010201']
+    sources = ['platanus']
+    checksums = ['02cf92847ec704d010a54df293b9c60a']
+    
+    sanity_check_paths = {
+    'files': ['platanus'],
+    'dirs': [],
+    }
+    
+    moduleclass = 'bio'
+    
+
 .. _Bundle:
 
 ``Bundle``
@@ -54,6 +92,32 @@ Customised steps in ``Bundle`` easyblock
 * ``build_step`` - Do nothing.
 * ``configure_step`` - Do nothing.
 * ``install_step`` - Do nothing.
+
+
+Example for ``Bundle`` easyblock
+--------------------------------
+
+::
+
+    easyblock = 'Bundle'
+    
+    name = 'Autotools'
+    version = '20150119' # date of the most recent change
+    
+    homepage = 'http://autotools.io'
+    description = """This bundle collect the standard GNU build tools: Autoconf, Automake and libtool"""
+    
+    toolchain = {'name': 'GCC', 'version': '4.9.2'}
+    
+    dependencies = [
+    ('Autoconf', '2.69'), # 20120424
+    ('Automake', '1.15'), # 20150105
+    ('libtool', '2.4.5'), # 20150119
+    ]
+    
+    moduleclass = 'devel'
+    
+
 .. _CMakeMake:
 
 ``CMakeMake``
@@ -84,6 +148,45 @@ Customised steps in ``CMakeMake`` easyblock
 * ``configure_step`` - Configure build using cmake (inherited)
 * ``install_step`` - Create the installation in correct location
         - typical: make install (inherited)
+
+
+Example for ``CMakeMake`` easyblock
+-----------------------------------
+
+::
+
+    easyblock = 'CMakeMake'
+    
+    name = 'ANTs'
+    version = '2.1.0rc3'
+    
+    homepage = 'http://stnava.github.io/ANTs/'
+    description = """ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing,
+    interpreting and visualizing multidimensional data."""
+    
+    toolchain = {'name': 'goolf', 'version': '1.5.14'}
+    toolchainopts = {'pic': True}
+    
+    source_urls = ['https://github.com/stnava/ANTs/archive/']
+    sources = ['v%(version)s.tar.gz']
+    
+    builddependencies = [('CMake', '3.0.2')]
+    
+    skipsteps = ['install']
+    buildopts = ' && mkdir -p %(installdir)s && cp -r * %(installdir)s/'
+    
+    parallel = 1
+    
+    separate_build_dir = True
+    
+    sanity_check_paths = {
+    'files': ['bin/ANTS'],
+    'dirs': ['lib'],
+    }
+    
+    moduleclass = 'data'
+    
+
 .. _CMakePythonPackage:
 
 ``CMakePythonPackage``
@@ -120,6 +223,7 @@ Customised steps in ``CMakePythonPackage`` easyblock
 * ``build_step`` - Build Python package with cmake
 * ``configure_step`` - Main configuration using cmake
 * ``install_step`` - Install with cmake install
+
 .. _CmdCp:
 
 ``CmdCp``
@@ -150,6 +254,7 @@ Customised steps in ``CmdCp`` easyblock
 * ``build_step`` - Build by running the command with the inputfiles
 * ``configure_step`` - Configure build if required (inherited)
 * ``install_step`` - Install by copying specified files and directories. (inherited)
+
 .. _ConfigureMake:
 
 ``ConfigureMake``
@@ -184,6 +289,35 @@ Customised steps in ``ConfigureMake`` easyblock
         - typically ./configure --prefix=/install/path style
 * ``install_step`` - Create the installation in correct location
         - typical: make install
+
+
+Example for ``ConfigureMake`` easyblock
+---------------------------------------
+
+::
+
+    easyblock = 'ConfigureMake'
+    
+    name = 'zsync'
+    version = '0.6.2'
+    
+    homepage = 'http://zsync.moria.org.uk/'
+    description = """zsync-0.6.2: Optimising file distribution program, a 1-to-many rsync"""
+    
+    sources = [SOURCE_TAR_BZ2]
+    source_urls = ['http://zsync.moria.org.uk/download/']
+    
+    
+    toolchain = {'name': 'ictce', 'version': '5.3.0'}
+    
+    sanity_check_paths = {
+    'files': ['bin/zsync'],
+    'dirs': []
+    }
+    
+    moduleclass = 'tools'
+    
+
 .. _ConfigureMakePythonPackage:
 
 ``ConfigureMakePythonPackage``
@@ -217,6 +351,48 @@ Customised steps in ``ConfigureMakePythonPackage`` easyblock
 * ``build_step`` - Build Python package with 'make'.
 * ``configure_step`` - Configure build using 'python configure'.
 * ``install_step`` - Install with 'make install'.
+
+
+Example for ``ConfigureMakePythonPackage`` easyblock
+----------------------------------------------------
+
+::
+
+    easyblock = 'ConfigureMakePythonPackage'
+    
+    name = 'PyQt'
+    version = '4.11.3'
+    
+    homepage = 'http://www.riverbankcomputing.co.uk/software/pyqt'
+    description = """PyQt is a set of Python v2 and v3 bindings for Digia's Qt application framework."""
+    
+    toolchain = {'name': 'goolf', 'version': '1.5.14'}
+    
+    sources = ['%(name)s-x11-gpl-%(version)s.tar.gz']
+    source_urls = ['http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-%(version)s']
+    
+    python = 'Python'
+    pyver = '2.7.9'
+    pythonshortver = '.'.join(pyver.split('.')[:2])
+    versionsuffix = '-%s-%s' % (python, pyver)
+    
+    dependencies = [
+    (python, pyver),
+    ('SIP', '4.16.4', versionsuffix),
+    ('Qt', '4.8.6'),
+    ]
+    
+    configopts = "configure-ng.py --confirm-license"
+    configopts += " --destdir=%%(installdir)s/lib/python%s/site-packages " % pythonshortver
+    configopts += " --no-sip-files"
+    
+    options = {'modulename': 'PyQt4'}
+    
+    modextrapaths = {'PYTHONPATH': 'lib/python%s/site-packages' % pythonshortver}
+    
+    moduleclass = 'vis'
+    
+
 .. _FortranPythonPackage:
 
 ``FortranPythonPackage``
@@ -242,6 +418,7 @@ Customised steps in ``FortranPythonPackage`` easyblock
 * ``build_step`` - Customize the build step by adding compiler-specific flags to the build command.
 * ``configure_step`` - Configure Python package build. (inherited)
 * ``install_step`` - Install Python package to a custom path using setup.py (inherited)
+
 .. _IntelBase:
 
 ``IntelBase``
@@ -274,6 +451,7 @@ Customised steps in ``IntelBase`` easyblock
         - create silent cfg file
         - set environment parameters
         - execute command
+
 .. _JAR:
 
 ``JAR``
@@ -299,6 +477,7 @@ Customised steps in ``JAR`` easyblock
 * ``build_step`` - No compilation, this is binary software (inherited)
 * ``configure_step`` - No configuration, this is binary software (inherited)
 * ``install_step`` - Copy all files in build directory to the install directory (inherited)
+
 .. _MakeCp:
 
 ``MakeCp``
@@ -328,6 +507,7 @@ Customised steps in ``MakeCp`` easyblock
         - typical: make -j X (inherited)
 * ``configure_step`` - Configure build if required (inherited)
 * ``install_step`` - Install by copying specified files and directories. (inherited)
+
 .. _PackedBinary:
 
 ``PackedBinary``
@@ -354,6 +534,7 @@ Customised steps in ``PackedBinary`` easyblock
 * ``build_step`` - No compilation, this is binary software (inherited)
 * ``configure_step`` - No configuration, this is binary software (inherited)
 * ``install_step`` - Copy all unpacked source directories to install directory, one-by-one. (inherited)
+
 .. _PerlModule:
 
 ``PerlModule``
@@ -379,6 +560,7 @@ Customised steps in ``PerlModule`` easyblock
 * ``build_step`` - No separate build procedure for Perl modules.
 * ``configure_step`` - No separate configuration for Perl modules.
 * ``install_step`` - Run install procedure for Perl modules.
+
 .. _PythonPackage:
 
 ``PythonPackage``
@@ -404,6 +586,7 @@ Customised steps in ``PythonPackage`` easyblock
 * ``build_step`` - Build Python package using setup.py
 * ``configure_step`` - Configure Python package build.
 * ``install_step`` - Install Python package to a custom path using setup.py
+
 .. _RPackage:
 
 ``RPackage``
@@ -428,6 +611,7 @@ Customised steps in ``RPackage`` easyblock
 * ``build_step`` - No separate build step for R packages.
 * ``configure_step`` - No configuration for installing R packages.
 * ``install_step`` - Install procedure for R packages.
+
 .. _Rpm:
 
 ``Rpm``
@@ -459,6 +643,7 @@ Customised steps in ``Rpm`` easyblock
 * ``build_step`` - No compilation, this is binary software (inherited)
 * ``configure_step`` - Custom configuration procedure for RPMs: rebuild RPMs for relocation if required. (inherited)
 * ``install_step`` - Custom installation procedure for RPMs into a custom prefix. (inherited)
+
 .. _RubyGem:
 
 ``RubyGem``
@@ -483,6 +668,7 @@ Customised steps in ``RubyGem`` easyblock
 * ``build_step`` - No separate build procedure for Ruby Gems.
 * ``configure_step`` - No separate configuration for Ruby Gems.
 * ``install_step`` - Install Ruby Gems using gem package manager
+
 .. _Tarball:
 
 ``Tarball``
@@ -499,6 +685,7 @@ Customised steps in ``Tarball`` easyblock
 * ``build_step`` - Dummy build method: nothing to build
 * ``configure_step`` - Dummy configure method
 * ``install_step`` - Install by copying from specified source directory (or 'start_dir' if not specified).
+
 .. _Toolchain:
 
 ``Toolchain``
@@ -514,6 +701,7 @@ Customised steps in ``Toolchain`` easyblock
 * ``build_step`` - Do nothing. (inherited)
 * ``configure_step`` - Do nothing. (inherited)
 * ``install_step`` - Do nothing. (inherited)
+
 .. _VSCPythonPackage:
 
 ``VSCPythonPackage``
@@ -539,6 +727,7 @@ Customised steps in ``VSCPythonPackage`` easyblock
 * ``build_step`` - No build procedure. (inherited)
 * ``configure_step`` - No build procedure. (inherited)
 * ``install_step`` - Custom install procedure to skip selection of python package versions. (inherited)
+
 .. _VersionIndependendPythonPackage:
 
 ``VersionIndependendPythonPackage``
@@ -564,6 +753,7 @@ Customised steps in ``VersionIndependendPythonPackage`` easyblock
 * ``build_step`` - No build procedure. (inherited)
 * ``configure_step`` - No build procedure. (inherited)
 * ``install_step`` - Custom install procedure to skip selection of python package versions. (inherited)
+
 .. _VersionIndependentPythonPackage:
 
 ``VersionIndependentPythonPackage``

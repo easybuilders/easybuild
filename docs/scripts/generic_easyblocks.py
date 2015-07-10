@@ -1,5 +1,5 @@
 # #
-# Copyright 2009-2015 Ghent University
+# Copyright 2015-2015 Ghent University
 #
 # This file is part of EasyBuild,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -23,39 +23,37 @@
 # along with EasyBuild.  If not, see <http://www.gnu.org/licenses/>.
 # #
 """
-Generates readthedocs documentation for generic easyblocks (rst format)
+Generates readthedocs documentation for easyblocks (rst format)
+
+@author Caroline De Brouwer (Ghent University)
 """
 
 import os
+import easybuild.tools.config as config
 
 from vsc.utils.generaloption import simple_option
 from easybuild.tools.docs import gen_easyblocks_overview_rst
+from easybuild.tools.filetools import write_file
 
-PACKET_NAME = 'easybuild.easyblocks.generic'
 COMMON_PARAMS = {
     'ConfigureMake': ['configopts', 'buildopts', 'installopts'],
     # needs to be extended
 }
 DOC_FUNCTIONS = ['build_step', 'configure_step', 'install_step']
 
-DEFAULT_OUT_PATH = os.path.join(os.path.dirname(__file__), '../Generic_easyblocks.rst')
-DEFAULT_EXAMPLE_PATH = os.path.join(os.path.dirname(__file__), 'examples')
+DEFAULT_OUT_PATH = os.path.join(os.getcwd(), 'Generic_easyblocks.rst')
+DEFAULT_EXAMPLE_PATH = os.path.join(os.getcwd(), 'examples')
+DEFAULT_MODULE = 'easybuild.easyblocks.generic'
 
 
-def main():
-    """ The main function """
-    options = {
-        'out-file': ('Path to output file', 'string', 'store', DEFAULT_OUT_PATH, 'o'),
-        'examples': ('Path to dir that contains example files', 'string', 'store', DEFAULT_EXAMPLE_PATH, 'e'),
-    }
-    so = simple_option(options)
+options = {
+    'out-file': ('Path to output file', 'string', 'store', DEFAULT_OUT_PATH, 'o'),
+    'examples': ('Path to dir that contains example files', 'string', 'store', DEFAULT_EXAMPLE_PATH, 'e'),
+    'module': ('Name of module to load the easyblocks from', 'string', 'store', DEFAULT_MODULE, 'm')
+}
+so = simple_option(options)
 
-    ge = gen_easyblocks_overview_rst(PACKET_NAME, so.options.examples, COMMON_PARAMS, DOC_FUNCTIONS)
-    f = open(so.options.out_file, 'w')
-    for line in ge:
-        f.write(line)
-    f.close()
+config.init_build_options({'validate': False, 'external_modules_metadata': {}})
 
-
-if __name__ == '__main__':
-    main()
+easyblocks_overview = gen_easyblocks_overview_rst(so.options.module, so.options.examples, COMMON_PARAMS, DOC_FUNCTIONS)
+write_file(so.options.out_file, '\n'.join(easyblocks_overview))
