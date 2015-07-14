@@ -29,7 +29,7 @@ feature + bugfix release
 
   * use https for PyPI URL templates (`#1286 <https://github.com/hpcugent/easybuild-framework/pull/1286>`_)
   * add GNU toolchain definition (`#1287 <https://github.com/hpcugent/easybuild-framework/pull/1287>`_)
-  * make bootstrap script more robust:
+  * make bootstrap script more robust (`#1289 <https://github.com/hpcugent/easybuild-framework/pull/1289>`_, `#1325 <https://github.com/hpcugent/easybuild-framework/pull/1325>`_):
 
     * exclude 'easyblocks' pkg from ``sys.path`` to avoid that ``setup.py`` for easybuild-easyblocks picks up wrong version
     * undefine ``$EASYBUILD_BOOTSTRAP*`` environment variables, since they do not correspond with known config options
