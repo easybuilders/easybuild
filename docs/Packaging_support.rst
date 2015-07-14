@@ -8,6 +8,7 @@ EasyBuild is included since EasyBuild v2.2.0.
 
 .. contents::
     :depth: 2
+    :backlinks: none
 
 
 .. _packaging_prereq:
