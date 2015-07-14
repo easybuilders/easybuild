@@ -31,6 +31,8 @@ The order of preference for the different configuration types is as listed above
   configuration file
 
 
+.. _configuration_consistency:
+
 Consistentency across supported configuration types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -65,6 +67,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
    $ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
+
 
 .. _configuration_file:
 

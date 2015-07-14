@@ -54,9 +54,11 @@ Advanced usage topics
     :glob:
     :maxdepth: 3
 
+    Including_additional_Python_modules
     Integration_with_GitHub
     Manipulating_dependencies
     Partial_installations
+    Submitting_jobs
     Using_external_modules
     Experimental_features
     Creating_binary_packages
