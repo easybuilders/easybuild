@@ -3,10 +3,12 @@
 Experimental features
 =====================
 
-First introduced in EasyBuild v2.1.0 (see :ref:`EasyBuild v2.1.0 Release Notes <release_notes_v2.1.0>`), experimental features can only be invoked by adding the ``--experimental`` option when running ``eb``.
+First introduced in EasyBuild v2.1.0 (see :ref:`EasyBuild v2.1.0 Release Notes <release_notes_v2.1.0>`),
+experimental features can only be used by enabling the ``--experimental`` configuration option.
 
-An experimental feature indicates to users that these features may change significantly in a future release and should be used only for testing.
+An experimental feature indicates to users that these features may change significantly in a future release
+and should be used only for testing, not (yet) for production usage.
 
 Currently enabled experimental features include:
- * Cray support
- * Binary Packaging Support (see :ref:`creating_binary_packages`)
+ * Cray support (see https://github.com/hpcugent/easybuild/wiki/EasyBuild-on-Cray)
+ * :ref:`packaging_support`
