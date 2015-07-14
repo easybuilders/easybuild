@@ -61,12 +61,12 @@ Options associated with packaging currently available.
 
 * ``--package-release``:
 
-  * The release to be added to the end of the package, by default ``1.`` This allows the packager to package that will upgrade an existing one with the same name and version.
+  * The release to be added to the end of the package, by default ``1``. This allows the packager to package that will upgrade an existing one with the same name and version.
 
 Example
 -------
 
-It is sufficient to add ``--experimental --package --package-tool=fpm`` to get started with EasyBuild packaging::
+It is sufficient to add ``--experimental --package`` to get started with EasyBuild packaging. That will defaule to using FPM to create RPMs::
 
     $ eb --experimental --package Perl-5.20.1-GCC-4.9.2-bare.eb -r -f
     [...]
