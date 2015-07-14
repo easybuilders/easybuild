@@ -23,6 +23,7 @@ for FPM using once of the available easyconfig files.
 EasyBuild will also take care of installing Ruby for you (which is required for FPM itself)::
 
     $ export EASYBUILD_PREFIX=/home/example
+
     $ eb FPM-1.3.3-Ruby-2.1.6.eb --robot
     [...]
     == building and installing Ruby/2.1.6...
@@ -34,6 +35,11 @@ EasyBuild will also take care of installing Ruby for you (which is required for 
     == COMPLETED: Installation ended successfully
     == Results of the build can be found in the log file /home/example/software/FPM/1.3.3-Ruby-2.1.6/easybuild/easybuild-FPM-1.3.3-20150524.181859.log
     == Build succeeded for 2 out of 2
+
+    $ module load FPM/1.3.3-Ruby-2.1.6
+
+    $ fpm --version
+    1.3.3
 
 
 .. _packaging_config:
@@ -60,10 +66,6 @@ Several configuration options related to packaging support are available.
 
   * specifies which package naming scheme to use; default: ``EasyBuildPNS``
 
-.. note:: Changing the naming scheme should be done with caution. For example, RPM will only allow one package of a
-          particular *name* to be installed, so if you wish multiple versions of a package to be installed in parallel
-          you need to ensure variables like the software version are included in the package name.
-
 * ``--packagepath``:
 
   * specifies destination path of packages being built
@@ -71,6 +73,11 @@ Several configuration options related to packaging support are available.
 * ``--package-release``:
 
   * specifies the package release (default: ``1``); typically, this should be an integer value
+
+
+.. note:: Changing the package naming scheme should be done with caution. For example, RPM will only allow one package
+          of a particular *name* to be installed, so if you wish multiple versions of a package to be installed
+          at the same time you need to ensure variables like the software version are included in the package name.
 
 
 .. _packaging_usage:
