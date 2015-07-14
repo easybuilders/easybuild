@@ -9,7 +9,7 @@ alongside 4,053 easyconfig files.
 
 .. _release_notes_eb220:
 
-v2.2.0 (July 14th 2015)
+v2.2.0 (July 15th 2015)
 -----------------------
 
 feature + bugfix release
