@@ -3,7 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20150430.01** (`Jluy 14th 2015`): update release notes for EasyBuild v2.2.0 (see :ref:`release_notes`)
+* **release 20150430.01** (`July 14th 2015`): update release notes for EasyBuild v2.2.0 (see :ref:`release_notes`)
 * **release 20150709.01** (`July 9th 2015`): add documentation on :ref:`submitting_jobs`
 * **release 20150708.01** (`July 8th 2015`):
 
