@@ -217,6 +217,9 @@ For example, a list of easyblocks can be obtained with::
 
   $ eb --list-easyblocks
 
+To see more details about the available easyblocks, i.e., in which Python module the class is defined, and where it is
+located, use ``--list-easyblocks=detailed``.
+
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
 .. _avail_easyconfig_params:
