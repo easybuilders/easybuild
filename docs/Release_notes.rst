@@ -3,9 +3,144 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **611** different software packages,
-using 33 different (compiler) toolchains. It contains 145 software-specific easyblocks and 22 generic easyblocks,
-alongside 3,689 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **673** different software packages,
+using 34 different (compiler) toolchains. It contains 150 software-specific easyblocks and 25 generic easyblocks,
+alongside 4,061 easyconfig files.
+
+.. _release_notes_eb220:
+
+v2.2.0 (July 15th 2015)
+-----------------------
+
+feature + bugfix release
+
+**framework**
+
+* add support for using GC3Pie as a backend for ``--job`` (`#1008 <https://github.com/hpcugent/easybuild-framework/pull/1008>`_)
+
+  * see also http://easybuild.readthedocs.org/en/latest/Submitting_jobs.html
+
+* add support for ``--include-*`` configuration options to include additional easyblocks, toolchains, etc. (`#1301 <https://github.com/hpcugent/easybuild-framework/pull/1301>`_)
+
+  * see http://easybuild.readthedocs.org/en/latest/Including_additional_Python_modules.html
+
+* add (experimental) support for packaging installed software using FPM (`#1224 <https://github.com/hpcugent/easybuild-framework/pull/1224>`_)
+* various other enhancements, including:
+
+  * use https for PyPI URL templates (`#1286 <https://github.com/hpcugent/easybuild-framework/pull/1286>`_)
+  * add GNU toolchain definition (`#1287 <https://github.com/hpcugent/easybuild-framework/pull/1287>`_)
+  * make bootstrap script more robust (`#1289 <https://github.com/hpcugent/easybuild-framework/pull/1289>`_, `#1325 <https://github.com/hpcugent/easybuild-framework/pull/1325>`_):
+
+    * exclude 'easyblocks' pkg from ``sys.path`` to avoid that ``setup.py`` for easybuild-easyblocks picks up wrong version
+    * undefine ``$EASYBUILD_BOOTSTRAP*`` environment variables, since they do not correspond with known config options
+
+  * improve error reporting/robustness in ``fix_broken_easyconfigs.py`` script (`#1290 <https://github.com/hpcugent/easybuild-framework/pull/1290>`_)
+  * reset keep toolchain component class 'constants' every time (`#1294 <https://github.com/hpcugent/easybuild-framework/pull/1294>`_)
+  * make ``--strict`` also a build option (`#1295 <https://github.com/hpcugent/easybuild-framework/pull/1295>`_)
+  * fix purging of loaded modules in unit tests' setup method (`#1297 <https://github.com/hpcugent/easybuild-framework/pull/1297>`_)
+  * promote ``MigrateFromEBToHMNS`` to a 'production' MNS (`#1302 <https://github.com/hpcugent/easybuild-framework/pull/1302>`_)
+  * add support for ``--read-only-installdir`` and ``--group-writable-installdir`` configuration options (`#1304 <https://github.com/hpcugent/easybuild-framework/pull/1304>`_)
+  * add support for *not* expanding relative paths in ``prepend_paths`` (`#1310 <https://github.com/hpcugent/easybuild-framework/pull/1310>`_)
+  * enhance ``EasyConfig.dump()`` method to use easyconfig templates where possible (`#1314 <https://github.com/hpcugent/easybuild-framework/pull/1314>`_), `#1319 <https://github.com/hpcugent/easybuild-framework/pull/1319>`_), `#1320 <https://github.com/hpcugent/easybuild-framework/pull/1320>`_), `#1321 <https://github.com/hpcugent/easybuild-framework/pull/1321>`_)
+
+* various bug fixes, including:
+
+  * fix issue with cleaning up (no) logfile if ``--logtostdout``/``-l`` is used (`#1298 <https://github.com/hpcugent/easybuild-framework/pull/1298>`_)
+  * stop making ``ModulesTool`` class a singleton since it causes problems when multilple toolchains are in play (`#1299 <https://github.com/hpcugent/easybuild-framework/pull/1299>`_)
+  * don't modify values of 'paths' list passed as argument to prepend_paths in ``ModuleGenerator`` (`#1300 <https://github.com/hpcugent/easybuild-framework/pull/1300>`_)
+  * fix issue with ``EasyConfig.dump()`` + cleanup (`#1308 <https://github.com/hpcugent/easybuild-framework/pull/1308>`_), `#1311 <https://github.com/hpcugent/easybuild-framework/pull/1311>`_)
+  * reenable (and fix) accidentally disabled test (`#1316 <https://github.com/hpcugent/easybuild-framework/pull/1316>`_)
+
+**easyblocks**
+
+* modified easybuild.easyblocks package declaration to support giving preference to custom easyblocks (`#617 <https://github.com/hpcugent/easybuild-easyblocks/pull/617>`_)
+* 2 new generic easyblocks: RubyGem (`#565 <https://github.com/hpcugent/easybuild-easyblocks/pull/565>`_), SystemCompiler (`#633 <https://github.com/hpcugent/easybuild-easyblocks/pull/633>`_)
+* new easyblocks for 5 software packages that require customized support:
+
+  * NEMO (`#564 <https://github.com/hpcugent/easybuild-easyblocks/pull/564>`_), pbdMPI (`#612 <https://github.com/hpcugent/easybuild-framework/pull/612>`_), `#620 <https://github.com/hpcugent/easybuild-framework/pull/620>`_), pbdSLAP (`#620 <https://github.com/hpcugent/easybuild-easyblocks/pull/620>`_), PDT (`#624 <https://github.com/hpcugent/easybuild-easyblocks/pull/624>`_), Ruby (`#565 <https://github.com/hpcugent/easybuild-easyblocks/pull/565>`_)
+
+* various other enhancements, including:
+
+  * update CUDA easyblock for v6.x (`#476 <https://github.com/hpcugent/easybuild-easyblocks/pull/476>`_)
+  * make METIS easyblock take into account configopts (`#494 <https://github.com/hpcugent/easybuild-easyblocks/pull/494>`_)
+  * enable building of EOMIP and EOMEA for NWChem versions 6.5 and up (`#508 <https://github.com/hpcugent/easybuild-easyblocks/pull/508>`_)
+  * make out-of-source build with CMake truly out-of-source (`#615 <https://github.com/hpcugent/easybuild-easyblocks/pull/615>`_)
+  * add support in Bundle easyblock to run full sanity check (`#627 <https://github.com/hpcugent/easybuild-easyblocks/pull/627>`_)
+  * also take platform-specific Python lib dirs into account in PythonPackage easyblock (`#628 <https://github.com/hpcugent/easybuild-easyblocks/pull/628>`_)
+  * don't restrict ``det_pylibdir`` function to only EasyBuild-provided Python (`#631 <https://github.com/hpcugent/easybuild-framework/pull/631>`_), `#641 <https://github.com/hpcugent/easybuild-framework/pull/641>`_)
+  * support snappy and other optional native libs in Hadoop easyblock (`#632 <https://github.com/hpcugent/easybuild-framework/pull/632>`_), `#638 <https://github.com/hpcugent/easybuild-framework/pull/638>`_), `#640 <https://github.com/hpcugent/easybuild-framework/pull/640>`_), `#642 <https://github.com/hpcugent/easybuild-framework/pull/642>`_)
+
+* various bug fixes, including:
+
+  * fix Xmipp easyblock, use provided ``install.sh`` script (`#630 <https://github.com/hpcugent/easybuild-easyblocks/pull/630>`_)
+  * update Clang easyblock to disable tests that may fail when unlimited stack size is used (`#622 <https://github.com/hpcugent/easybuild-easyblocks/pull/622>`_)
+  * fix setting of ``$INTEL_LICENSE_FILE`` for port@server values (`#635 <https://github.com/hpcugent/easybuild-easyblocks/pull/635>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for **62** new software packages:
+
+  * ADF (`#899 <https://github.com/hpcugent/easybuild-easyconfigs/pull/899>`_), AutoDock_Vina (`#808 <https://github.com/hpcugent/easybuild-easyconfigs/pull/808>`_), bibtexparser (`#1726 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1726>`_), Biggus (`#1770 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1770>`_), Bismark (`#990 <https://github.com/hpcugent/easybuild-easyconfigs/pull/990>`_), blasr (`#1662 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1662>`_), BSMAP (`#1171 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1171>`_),
+    Check (`#811 <https://github.com/hpcugent/easybuild-easyconfigs/pull/811>`_), Circuitscape (`#1222 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1222>`_), CONTRAfold (`#689 <https://github.com/hpcugent/easybuild-easyconfigs/pull/689>`_), cramtools (`#1741 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1741>`_), DBD-Pg (`#1066 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1066>`_), DendroPy (`#995 <https://github.com/hpcugent/easybuild-easyconfigs/pull/995>`_),
+    EMAN2 (`#1737 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1737>`_), ETSF_IO (`#727 <https://github.com/hpcugent/easybuild-easyconfigs/pull/727>`_), eudev (`#1578 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1578>`_), fastqc (`#1636 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1636>`_), FDS (`#814 <https://github.com/hpcugent/easybuild-framework/pull/814>`_), `#1617 <https://github.com/hpcugent/easybuild-framework/pull/1617>`_), `#1625 <https://github.com/hpcugent/easybuild-framework/pull/1625>`_), FPM (`#1440 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1440>`_),
+    frealign (`#1619 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1619>`_), g2log (`#1035 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1035>`_), GC3Pie (`#1692 <https://github.com/hpcugent/easybuild-framework/pull/1692>`_), `#1756 <https://github.com/hpcugent/easybuild-framework/pull/1756>`_), `#1768 <https://github.com/hpcugent/easybuild-framework/pull/1768>`_), GenotypeHarmonizer (`#1672 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1672>`_), gensim (`#1762 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1762>`_),
+    GraphViz (`#1658 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1658>`_), hisat (`#1674 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1674>`_), IDBA-UD (`#1045 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1045>`_), IMa2 (`#828 <https://github.com/hpcugent/easybuild-easyconfigs/pull/828>`_), IMPUTE2 (`#824 <https://github.com/hpcugent/easybuild-easyconfigs/pull/824>`_), JUBE (`#1396 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1396>`_), LAMARC (`#760 <https://github.com/hpcugent/easybuild-easyconfigs/pull/760>`_),
+    libXScrnSaver (`#1653 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1653>`_), MATIO (`#1004 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1004>`_), MuTect (`#1483 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1483>`_), ncdf (`#617 <https://github.com/hpcugent/easybuild-easyconfigs/pull/617>`_), NEMO (`#1640 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1640>`_), ngspice (`#1116 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1116>`_),
+    ordereddict (`#1774 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1774>`_), OSU Micro-Benchmarks (`#1777 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1777>`_), Parallel-ForkManager (`#847 <https://github.com/hpcugent/easybuild-easyconfigs/pull/847>`_), pBWA (`#1009 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1009>`_), PeakSeq (`#1412 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1412>`_),
+    Pillow (`#1702 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1702>`_), Pindel (`#1126 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1126>`_), PLUMED (`#1596 <https://github.com/hpcugent/easybuild-framework/pull/1596>`_), `#1665 <https://github.com/hpcugent/easybuild-framework/pull/1665>`_), PostgreSQL (`#1066 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1066>`_), PROJ (`#1006 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1006>`_), PyAMG (`#1222 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1222>`_), Pyke (`#1776 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1776>`_),
+    rpy2 (`#1775 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1775>`_), Sailfish (`#1035 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1035>`_), SCANMS (`#1386 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1386>`_), Seaborn (`#1763 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1763>`_), snpEff (`#1680 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1680>`_), SOBAcl (`#1658 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1658>`_),
+    SPIDER (`#1624 <https://github.com/hpcugent/easybuild-framework/pull/1624>`_), `#1723 <https://github.com/hpcugent/easybuild-framework/pull/1723>`_), STAR (`#1043 <https://github.com/hpcugent/easybuild-framework/pull/1043>`_), `#1676 <https://github.com/hpcugent/easybuild-framework/pull/1676>`_), system GCC (`#1778 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1778>`_), tabix (`#1059 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1059>`_), tecplot360ex (`#1100 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1100>`_), Vampir (`#512 <https://github.com/hpcugent/easybuild-easyconfigs/pull/512>`_),
+    VampirServer (`#512 <https://github.com/hpcugent/easybuild-easyconfigs/pull/512>`_), verifyBamID (`#1675 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1675>`_)
+
+* added easyconfigs for 4 new software bundles:
+
+  * R-bundle-Bioconductor (`#1573 <https://github.com/hpcugent/easybuild-framework/pull/1573>`_), `#1795 <https://github.com/hpcugent/easybuild-framework/pull/1795>`_), R-bundle-devtools (`#1621 <https://github.com/hpcugent/easybuild-framework/pull/1621>`_), `#1759 <https://github.com/hpcugent/easybuild-framework/pull/1759>`_), R-bundle-extra (`#1387 <https://github.com/hpcugent/easybuild-framework/pull/1387>`_), `#1759 <https://github.com/hpcugent/easybuild-framework/pull/1759>`_), R-bundle-pbd (`#1659 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1659>`_)
+
+* added easyconfigs for new GNU toolchain (`#1346 <https://github.com/hpcugent/easybuild-framework/pull/1346>`_), `#1669 <https://github.com/hpcugent/easybuild-framework/pull/1669>`_)
+* added new easyconfigs for existing toolchains: goolf/1.5.16, intel/2014.06
+* added additional easyconfigs for various supported software packages: version updates, different toolchains, ...
+
+  * including BLAST 2.2.31+, Clang 3.6.1, CUDA 6.x, GCC 4.9.3, GROMACS 5.0.5, HDF5 1.8.15 + 1.8.15-patch1,
+    Python 2.7.10, R 3.2.0 + 3.2.1, WRF 3.6.1
+
+* various other enhancements, including:
+
+  * update all ncurses easyconfigs to enable ncursesw and use ConfigureMake easyblock (`#1337 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1337>`_)
+  * update PDT easyconfigs to use PDT easyblock (`#1687 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1687>`_)
+  * add custom ``sanity_check_paths`` in libxml2 easyconfigs (`#1690 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1690>`_)
+  * enhance unit tests to also cover EasyConfig.dump() method on all easyconfigs (`#1761 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1761>`_)
+  * include snappy as dependency in Hadoop easyconfigs (`#1758 <https://github.com/hpcugent/easybuild-framework/pull/1758>`_), `#1773 <https://github.com/hpcugent/easybuild-framework/pull/1773>`_)
+  * enable SSL support in CMake v3.2.3 easyconfigs (`#1784 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1784>`_)
+  * add additional extensions in R easyconfigs (`#1637 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1637>`_)
+
+* various bug fixes, including:
+
+  * add patch file required for correct CUDA-aware OpenMPI v1.7.3 build (`#631 <https://github.com/hpcugent/easybuild-easyconfigs/pull/631>`_)
+  * fix issue with OpenMPI dependency in ECore easyconfigs (`#777 <https://github.com/hpcugent/easybuild-easyconfigs/pull/777>`_)
+  * don't run the Bloom tests for Jellyfish, they can randomly fail (`#1016 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1016>`_)
+  * fix source URLs in BioPerl easyconfigs (`#1075 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1075>`_)
+  * patch out svnversion command in Python 2.5.6 to fix build on recent systems (`#1576 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1576>`_)
+  * consistently use https for PyPI URLs in homepage/source_urls (`#1616 <https://github.com/hpcugent/easybuild-framework/pull/1616>`_), `#1722 <https://github.com/hpcugent/easybuild-framework/pull/1722>`_)
+  * include Tcl and Tk as dependencies in R easyconfig (`#1623 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1623>`_)
+  * add patch for installing paycheck as Py3 extension (`#1629 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1629>`_)
+  * add Perl dependency in git 2.x easyconfigs (`#1631 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1631>`_)
+  * fix easyconfig for GMP 6.0.0, don't use 6.0.0a sources (`#1635 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1635>`_)
+  * fix source_urls in QuantumESPRESSO 5.0.2 easyconfigs (`#1652 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1652>`_)
+  * include Tk as dependency in Python 2.7.9 easyconfigs (`#1654 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1654>`_)
+  * include tk-devel is list of OS deps for Python 2.7.9 Cray easyconfigs, make sure '``import Tkinter``' works (`#1655 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1655>`_)
+  * drop gpfs versionsuffix and stop using no longer existing ``--enable-gpfs`` configopt for recent HDF5 versions (`#1657 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1657>`_)
+  * include missing libxml2 dep in GLib easyconfigs (`#1666 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1666>`_)
+  * fix source URLs in Qt easyconfigs (`#1673 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1673>`_)
+  * fix source URLs for argparse Python extension (`#1697 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1697>`_)
+  * fix source URLs for deap Python extension (`#1699 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1699>`_)
+  * fix easyconfigs unit tests after making ModulesTool a non-singleton class (`#1708 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1708>`_)
+  * fix names for Xmipp easyconfigs and patches (`#1719 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1719>`_)
+  * add patch for Qt 4.8.6 to fix build issue on RHEL6 with intel/2015a (`#1734 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1734>`_)
+  * add M4 as build dep for GCC 5.1.0 (`#1735 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1735>`_)
+  * fix Bioconductor extension versions in R 3.1.3 easyconfigs (`#1748 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1748>`_)
+  * remove custom exts_filter definition from Python 3.4.3 easyconfig (`#1765 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1765>`_)
+  * fix source_urls in netCDF easyconfigs (`#1766 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1766>`_)
+  * fix source_urls in netCDF-C++ and netCDF-Fortran easyconfigs (`#1767 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1767>`_)
 
 .. _release_notes_eb211:
 
@@ -43,7 +178,7 @@ bugfix release
 
 **easyconfigs**
 
-* added example easyconfig files for 3 new software packages:
+* added example easyconfig files for **3** new software packages:
 
   * networkx (`#1592 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1592>`_), Platanus (`#1597 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1597>`_), SaguaroGW (`#1600 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1600>`_)
 
@@ -58,6 +193,8 @@ bugfix release
   * enable usempi in GROMACS easyconfig using CrayGNU toolchain (as required by GROMACS easyblock) (`#1590 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1590>`_)
   * use system-provided tcsh when building WRF on Cray systems, to avoid hanging build (`#1595 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1595>`_)
   * only use '``dynamic``' toolchain option, not '``shared``', in easyconfigs using Cray toolchain (`#1609 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1609>`_)
+
+.. _release_notes_v2.1.0:
 
 v2.1.0 (April 30th 2015)
 ------------------------
@@ -174,7 +311,7 @@ feature + bugfix release
 
 **easyconfigs**
 
-* added example easyconfig files for 27 new software packages:
+* added example easyconfig files for **27** new software packages:
 
   * AFNI (`#1322 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1322>`_, `#1521 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1521>`_), BCFtools (`#1492 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1492>`_), getdp (`#1518 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1518>`_), gmsh (`#1518 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1518>`_), gtest (`#1244 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1244>`_), hanythingondemand (`#1530 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1530>`_), mawk (`#1369 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1369>`_), Minimac (`#815 <https://github.com/hpcugent/easybuild-easyconfigs/pull/815>`_), Minimac3 (`#1502 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1502>`_), monty (`#1548 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1548>`_), Octave (`#1563 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1563>`_), pbs_python (`#1530 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1530>`_), pigz (`#1036 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1036>`_), Pygments (`#1536 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1536>`_), pyhull (`#1539 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1539>`_), pymatgen (`#1549 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1549>`_), PyQt (`#1322 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1322>`_, `#1521 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1521>`_), Ray (`#1494 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1494>`_), requests (`#1536 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1536>`_), seqtk (`#1524 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1524>`_), SIP (`#1322 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1322>`_, `#1521 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1521>`_), S-Lang (`#1369 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1369>`_), Spark (`#1554 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1554>`_), spglib (`#1549 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1549>`_), TINKER (`#1465 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1465>`_), tmux (`#1369 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1369>`_), Xmipp (`#1489 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1489>`_)
 
@@ -210,6 +347,7 @@ feature + bugfix release
   * make source_urls in Cube and Scalasca easyconfigs compatible with --try-software-version (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
   * add patch for Cube to fix configure script w.r.t. Qt dependency, add --without-java-reader configure option (`#1574 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1574>`_)
 
+.. _release_notes_v2.0.0:
 
 v2.0.0 (March 6th 2015)
 -----------------------
@@ -318,7 +456,7 @@ feature + bugfix release
 
 **easyconfigs**
 
-* added example easyconfig files for 29 new software packages:
+* added example easyconfig files for **29** new software packages:
 
   * bsoft (`#1353 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1353>`_), Coot (`#1400 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1400>`_), Cuby (`#1258 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1258>`_), DSRC (`#1242 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1242>`_), Exonerate (`#568 <https://github.com/hpcugent/easybuild-easyconfigs/pull/568>`_), fastqz (`#1242 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1242>`_), FSA (`#568 <https://github.com/hpcugent/easybuild-easyconfigs/pull/568>`_), fqzcomp (`#1242 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1242>`_), GAMESS-US (`#1153 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1153>`_, `#1406 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1406>`_), Grep (`#1308 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1308>`_), Hadoop (`#1418 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1418>`_), Hoard (`#1415 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1415>`_), IMB (`#1284 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1284>`_), ISL (`#1389 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1389>`_), jemalloc (`#1416 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1416>`_), libdwarf (`#1283 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1283>`_), libelf (`#1283 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1283>`_), MPC (`#1310 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1310>`_), multitail (`#1327 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1327>`_), Pmw (`#1403 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1403>`_), Quip (`#1242 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1242>`_), rCUDA (`#720 <https://github.com/hpcugent/easybuild-easyconfigs/pull/720>`_), SCALCE (`#1242 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1242>`_), SMALT (`#568 <https://github.com/hpcugent/easybuild-easyconfigs/pull/568>`_), STREAM (`#1332 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1332>`_), worker (`#1307 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1307>`_), Xerces-C++ (`#1370 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1370>`_), XQilla (`#1370 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1370>`_), ZPAQ (`#1242 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1242>`_)
 * added easyconfigs for new (common) toolchains

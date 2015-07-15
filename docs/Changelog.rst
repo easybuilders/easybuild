@@ -3,6 +3,19 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150715.01** (`July 15th 2015`): update release notes for EasyBuild v2.2.0 (see :ref:`release_notes`)
+* **release 20150714.01** (`July 14th 2015`): add documentation on :ref:`packaging_support`
+* **release 20150709.01** (`July 9th 2015`): add documentation on :ref:`submitting_jobs`
+* **release 20150708.01** (`July 8th 2015`):
+
+  * add documentation on ``--include-*`` options (see :ref:`including_additional_python_modules`)
+
+* **release 20150703.01** (`July 3rd 2015`):
+
+  * fix outdated documentation on ``easyblock`` parameter (see :ref:`writing_easyconfigs_easyblock_spec`)
+
+* **release 20150624.01** (`June 24th 2015`): mention ``MigrateFromEBToHMNS`` module naming scheme in section on
+                                              ``--module-only`` (see :ref:`module_only_additional`)
 * **release 20150610.01** (`June 10th 2015`): update :ref:`installing_lmod` for Lmod v6.0
 
 * **release 20150518.01** (`May 18th 2015`):
