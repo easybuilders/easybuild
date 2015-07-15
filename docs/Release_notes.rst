@@ -124,7 +124,7 @@ feature + bugfix release
   * include Tcl and Tk as dependencies in R easyconfig (`#1623 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1623>`_)
   * add patch for installing paycheck as Py3 extension (`#1629 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1629>`_)
   * add Perl dependency in git 2.x easyconfigs (`#1631 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1631>`_)
-  * fix easycofnig for GMP 6.0.0, don't use 6.0.0a sources (`#1635 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1635>`_)
+  * fix easyconfig for GMP 6.0.0, don't use 6.0.0a sources (`#1635 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1635>`_)
   * fix source_urls in QuantumESPRESSO 5.0.2 easyconfigs (`#1652 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1652>`_)
   * include Tk as dependency in Python 2.7.9 easyconfigs (`#1654 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1654>`_)
   * include tk-devel is list of OS deps for Python 2.7.9 Cray easyconfigs, make sure '``import Tkinter``' works (`#1655 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1655>`_)
