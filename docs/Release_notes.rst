@@ -141,7 +141,6 @@ feature + bugfix release
   * remove custom exts_filter definition from Python 3.4.3 easyconfig (`#1765 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1765>`_)
   * fix source_urls in netCDF easyconfigs (`#1766 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1766>`_)
   * fix source_urls in netCDF-C++ and netCDF-Fortran easyconfigs (`#1767 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1767>`_)
-  * add Infiniband-related patch for OpenMPI versions < 1.8.6 (`#1785 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1785>`_)
 
 .. _release_notes_eb211:
 
