@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20150715.01** (`July 15th 2015`): update release notes for EasyBuild v2.2.0 (see :ref:`release_notes`)
 * **release 20150714.01** (`July 14th 2015`): add documentation on :ref:`packaging_support`
 * **release 20150709.01** (`July 9th 2015`): add documentation on :ref:`submitting_jobs`
 * **release 20150708.01** (`July 8th 2015`):
