@@ -25,6 +25,9 @@ feature + bugfix release
   * see http://easybuild.readthedocs.org/en/latest/Including_additional_Python_modules.html
 
 * add (experimental) support for packaging installed software using FPM (`#1224 <https://github.com/hpcugent/easybuild-framework/pull/1224>`_)
+
+  * see http://easybuild.readthedocs.org/en/latest/Packaging_support.html
+
 * various other enhancements, including:
 
   * use https for PyPI URL templates (`#1286 <https://github.com/hpcugent/easybuild-framework/pull/1286>`_)
