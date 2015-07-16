@@ -31,9 +31,18 @@ This script requires Sphinx to be installed (http://sphinx-doc.org/index.html).
 
 import subprocess
 
+from vsc.utils.generaloption import simple_option
+
+
+options = {
+    'out_folder': ('Path to folder where api docfiles will be written', 'string', 'store', 'api', 'o'),
+    'module': ('Path to module for which api docs will be generated', 'string', 'store', '', 'm')
+}
+so = simple_option(options)
+
 # calls sphinx's automatic apidoc generator
 # -o specifies the output folder
 # -f forces to overwrite existing files
 # -e specifies that every module is written in a separate file
-subprocess.call("sphinx-apidoc -o 'api' '../../../easybuild-framework/' -f -e", shell=True)
+subprocess.call("sphinx-apidoc -o" + so.options.out_folder + " " + so.options.module + " -f -e", shell=True)
 
