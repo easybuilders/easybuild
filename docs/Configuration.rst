@@ -445,14 +445,17 @@ so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo`` (determined via :ref:`prefix`)
+*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo``
+(determined via :ref:`prefix`)
 
 EasyBuild has support for archiving (tested) ``.eb`` easyconfig files.
 After successfully installing a software package using EasyBuild, the
-corresponding ``.eb`` file is uploaded to a repository defined by the ``repository`` and ``repositorypath`` configuration settings.
+corresponding ``.eb`` file is uploaded to a repository defined by the
+``repository`` and ``repositorypath`` configuration settings.
 
 Currently, EasyBuild supports the following repository types (see also
 ``eb --avail-repositories``):
+
 * ``FileRepository('path', 'subdir')``: a plain flat file repository;
   ``path`` is the path where files will be stored, ``subdir`` is an
   *optional* subdirectory of that path where the files should be stored
