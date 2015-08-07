@@ -33,6 +33,11 @@ framework_path=`python -c "import os; import easybuild; print os.path.dirname(os
 vs=version-specific
 scripts_dir=scripts
 
+if [[ $PWD =~ "easybuild/docs$" ]]; then
+    echo "script should be run from easybuild/docs"
+    exit 1
+fi
+
 if [ ! -d $vs ]; then
     echo "version-specific dir does not exits"
     exit 1
