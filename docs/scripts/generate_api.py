@@ -36,7 +36,7 @@ from vsc.utils.generaloption import simple_option
 
 options = {
     'out_folder': ('Path to folder where api docfiles will be written', 'string', 'store', 'api', 'o'),
-    'module': ('Path to module for which api docs will be generated', 'string', 'store', '', 'm')
+    'module': ('Path to module for which api docs will be generated', 'string', 'store', 'easybuild', 'm')
 }
 so = simple_option(options)
 
