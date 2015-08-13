@@ -70,6 +70,7 @@ feature + bugfix release
   * make out-of-source build with CMake truly out-of-source (`#615 <https://github.com/hpcugent/easybuild-easyblocks/pull/615>`_)
   * add support in Bundle easyblock to run full sanity check (`#627 <https://github.com/hpcugent/easybuild-easyblocks/pull/627>`_)
   * also take platform-specific Python lib dirs into account in PythonPackage easyblock (`#628 <https://github.com/hpcugent/easybuild-easyblocks/pull/628>`_)
+  * fix mpivars scripts in Intel MPI installation for versions where the installation is moved (`#629 <https://github.com/hpcugent/easybuild-easyblocks/pull/629>`_)
   * don't restrict ``det_pylibdir`` function to only EasyBuild-provided Python (`#631 <https://github.com/hpcugent/easybuild-framework/pull/631>`_), `#641 <https://github.com/hpcugent/easybuild-framework/pull/641>`_)
   * support snappy and other optional native libs in Hadoop easyblock (`#632 <https://github.com/hpcugent/easybuild-framework/pull/632>`_), `#638 <https://github.com/hpcugent/easybuild-framework/pull/638>`_), `#640 <https://github.com/hpcugent/easybuild-framework/pull/640>`_), `#642 <https://github.com/hpcugent/easybuild-framework/pull/642>`_)
 
