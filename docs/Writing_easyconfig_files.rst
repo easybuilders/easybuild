@@ -23,7 +23,7 @@ An easyconfig file serves as a `build specification` for EasyBuild.
 
 It consists of a plain text file (in Python syntax) with mostly `key-value` assignment to define **easyconfig parameters**.
 
-Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][-<versionsuffix>].eb``.
+Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][<versionsuffix>].eb``.
 
 The ``-<toolchain>`` label (which includes the toolchain name and version) is omitted when a :ref:`dummy_toolchain` is used.
 The ``-<versionsuffix>`` label is omitted when the version suffix is empty.
