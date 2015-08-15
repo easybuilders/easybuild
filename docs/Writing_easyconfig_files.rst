@@ -26,7 +26,7 @@ It consists of a plain text file (in Python syntax) with mostly `key-value` assi
 Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][<versionsuffix>].eb``.
 
 The ``-<toolchain>`` label (which includes the toolchain name and version) is omitted when a :ref:`dummy_toolchain` is used.
-The ``-<versionsuffix>`` label is omitted when the version suffix is empty.
+The ``<versionsuffix>`` label is omitted when the version suffix is empty.
 
 .. note:: the filename of an easyconfig is only important w.r.t. dependency resolution (``--robot``), see :ref:`use_robot`.
 
