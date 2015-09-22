@@ -135,9 +135,10 @@ Running unit tests
 After completion of the bootstrap procedure and loading the
 ``EasyBuild`` module, try running the EasyBuild unit tests::
 
+    export TEST_EASYBUILD_MODULES_TOOL=Lmod
     python -m test.framework.suite
 
-More details about the EasyBuild unit tests are available at :ref:`unit_tests`.
+Keep in mind that this is just an example, more details about the EasyBuild unit tests are available at :ref:`unit_tests`.
 
 If this does not complete successfully, `please open an issue`_ to report it.
 
