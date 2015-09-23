@@ -31,7 +31,7 @@ Whenever EasyBuild searches for *explicitely specified* easyconfig files, it con
       (which is included in the default robot search path)
 
 These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
-*not* for easyconfig files that are specified via an absolute path. The dependencies are resolved using the robot search path and the path to easyconfig files provided by the EasyBuild installation.
+*not* for easyconfig files that are specified via an absolute path. The dependencies are resolved using the robot search path (see :ref:`robot_search_path`).
 
 .. note::
   For easyconfig files specified on the ``eb`` command line, the *full* robot search path is only considered since
