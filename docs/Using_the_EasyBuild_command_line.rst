@@ -392,7 +392,10 @@ For example, when looking for an easyconfig for ``OpenMPI`` version ``1.6.4`` an
 * ``o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
 * ``OpenMPI-1.6.4-GCC-4.7.2-test.eb``
 
-.. note:: Sometimes easyconfig files are needed even when the modules for the dependencies are already available, i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version suffix) is not sufficient. This is the case when using ``--dry-run`` to construct the complete dependency graph, or when the active module naming scheme requires some additional information (e.g., the ``moduleclass``).
+.. note:: Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
+ i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version
+ suffix) is not sufficient. This is the case when using ``--dry-run`` to construct the complete dependency graph, or
+ when the active module naming scheme requires some additional information (e.g., the ``moduleclass``).
 
 .. note:: If EasyBuild is unable to locate required easyconfigs, an appropriate error message will be shown. For example::
 
@@ -530,6 +533,9 @@ Note how the different status symbols denote distinct handling states by EasyBui
 * ``[x]`` The build is available, EasyBuild will skip building this module
 * ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild and will do so
 
+
+.. note:: Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
+ will be execute can be obtained using ``--extended-dry-run`` or ``-x``, see :ref:`extended_dry_run`.
 
 .. _tweaking_easyconfigs_using_try:
 
