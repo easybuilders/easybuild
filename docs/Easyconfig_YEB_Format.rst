@@ -1,5 +1,9 @@
 .. _easyconfig_yeb_format:
 
+.. note::
+    Because support for easyconfig files in YAML syntax (a.k.a. `.yeb` files) is still in development, using them
+    currently requires enabling the use of experimental features, see :ref:`experimental_features` .
+
 Writing easyconfig files with the .yeb format (in development)
 ===============================================================
 
