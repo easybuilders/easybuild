@@ -11,7 +11,7 @@ Easyconfig files in YAML
 -------------------------
 
 Take a look at the following example:
-.. code-block:: yaml
+::
     %YAML 1.2
     ---
     easyblock: ConfigureMake
@@ -35,16 +35,27 @@ Take a look at the following example:
 
     moduleclass: tools
 
+YAML header
+-----------
 The file starts with a standard YAML header. The first line declares the YAML version (the newest version is 1.2 and
 dates from 2009).
 The header is optional, but we recommend including it.
-.. code:: yaml
+::
     %YAML 1.2
     ---
 
+YAML Syntax
+-----------
 Easyconfig parameters are represented using ``key: value``. Note that quotes aren't needed here, as opposed to the .eb
-format. You can still use dictionaries with curly brackets ``{}``.
+format, except when the value contains special characters. You can still use dictionaries with curly brackets ``{}``.
+Lists use standard YAML syntax:
+::
+    key:
+        - value1
+        - value2
+        - ...
 
-Easyconfig constants are still useable, but they now need to be marked with an asterisk, like, in this example,
-``*SOURCE_TAR_GZ``.
-
+Easyconfig constants
+--------------------
+Easyconfig constants are still useable like before, but they now need to be marked with an asterisk,
+like in this example,``*SOURCE_TAR_GZ``.
