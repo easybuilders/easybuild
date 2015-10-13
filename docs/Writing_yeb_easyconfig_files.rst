@@ -16,7 +16,7 @@ Useful links:
 * YAML syntax specification: http://www.yaml.org/spec/1.2/spec.html
 
 .. contents::
-    :depth: 2
+    :depth: 3
     :backlinks: none
 
 .. _easyconfig_yeb_format_syntax:
@@ -75,7 +75,7 @@ Using scalar values is straight-forward, no special syntax is required.
 For string values, no quotes must be used (in general).
 However, quotes are sometimes required to escape characters that have special meaning in YAML (like '``:``').
 It's worth noting that there's a subtle difference between using single and double quotes, see
-:ref:`Flow Scalar Styles <http://www.yaml.org/spec/1.2/spec.html#id2786942>`.
+`Flow Scalar Styles <http://www.yaml.org/spec/1.2/spec.html#id2786942>`_.
 
 Examples::
 
@@ -111,7 +111,7 @@ indicated with a dash and a space ``- ``.
 
 Example::
 
-    # note: no quotes required here, since there's no ambiguity w.r.t. ':'
+    # no quotes required here, since there's no ambiguity w.r.t. ':'
     source_urls:
         - http://ftpmirror.gnu.org/gzip/
         - http://ftp.gnu.org/gnu/gzip/
@@ -120,7 +120,7 @@ Example::
 Mappings
 ########
 
-Mapping values (a.k.a. dictionaries) are expressed using a colon and space '``: ``' as key-value separator,
+Mapping values (a.k.a. dictionaries) are expressed using a colon '``:``' and space as key-value separator,
 a comma '``,``' to key-value pairs, and curly braces '``{``' '``}``' to mark the start/end.
 
 For example::
