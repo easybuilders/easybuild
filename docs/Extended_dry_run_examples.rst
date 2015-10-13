@@ -6,7 +6,7 @@ Extended dry run: examples
 Output examples for ``eb --extended-dry-run``/``eb -x``, see also :ref:`extended_dry_run`.
 
 .. contents::
-    :depth: 1
+    :depth: 2
     :backlinks: none
 
 
