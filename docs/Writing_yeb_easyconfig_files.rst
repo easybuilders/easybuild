@@ -138,7 +138,7 @@ For example, sequence values can be used in a mapping::
         files: [bin/gunzip, bin/gzip, bin/uncompress],
         dirs: [],
     }
-    
+
 
 .. _easyconfig_yeb_format_syntax_template_values_constants:
 
@@ -163,11 +163,50 @@ Dependencies
 ~~~~~~~~~~~~
 
 *(WORK IN PROGRESS)*
+Variables can be defined using standard YAML anchors (using a '&'). These are later referenced using an asterisk (*).
+Example::
+    vars:
+        - &compver 2015.3.187
+        - &gccsuff -GNU-4.9.3-2.25
 
+    dependencies: [
+        [icc, *compver, *gccsuff],
+        [ifort, *compver, *gccsuff]
+    ]
+
+To concat strings and variables, or multiple variables together, use the !join operator
+(See also :ref:`_string_concatenation`)
+
+A full example could look like this:
 Example::
 
-    dependencies:
-        - 
+    vars:
+        - &compver 2015.3.187
+        - &gccsuff -GNU-4.9.3-2.25
+
+    dependencies: [
+        [icc, *compver, *gccsuff],
+        [ifort, *compver, *gccsuff],
+        [impi, 5.0.3.048, '', [iccifort, !join [*compver, *gccsuff]]],
+        [imkl, 11.2.3.187, '', [iimpi, !join [7.3.5, *gccsuff]]],
+    ]
+
+.. _string_concatenation:
+
+Concatenating strings and/or variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As string concatenation is not supported in YAML, we defined a !join operator. It takes a list of values to concatenate
+as argument. This list can contain both hard strings and variables.
+Example::
+
+    !join [foo, bar]  # returns 'foobar'
+    vars:
+        - &f foo
+        - &b bar
+    !join [f, bar]  # returns 'foobar'
+    !join [f, b]  # returns 'foobar'
+
 
 .. _easyconfig_yeb_format_examples:
 
