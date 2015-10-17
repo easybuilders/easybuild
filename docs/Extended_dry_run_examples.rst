@@ -18,7 +18,7 @@ WRF v3.6.1 with intel/2015a
 .. code::
 
     $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
-    == temporary log file in case of crash /tmp/eb-dwykLF/easybuild-KwczSW.log
+    == temporary log file in case of crash /tmp/eb-aD_yNu/easybuild-xVbRms.log
 
     == processing EasyBuild easyconfig /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
 
@@ -101,7 +101,9 @@ WRF v3.6.1 with intel/2015a
     module load netCDF-Fortran/4.4.0-intel-2015a [SIMULATED]
     module load tcsh/6.18.01-intel-2015a [SIMULATED]
 
-    WARNING: Not all FFTW interface libraries ['fftw3xc_intel', 'mkl_intel_lp64', 'mkl_sequential', 'mkl_core'] are found in ['$EBROOTIMKL/mkl/lib/intel64', '$EBROOTIMKL/compiler/lib/intel64'], can't set $FFT_LIB.
+    !!!
+    !!! WARNING: Not all FFTW interface libraries ['fftw3xc_intel', 'mkl_intel_lp64', 'mkl_sequential', 'mkl_core'] are found in ['$EBROOTIMKL/mkl/lib/intel64', '$EBROOTIMKL/compiler/lib/intel64'], can't set $FFT_LIB.
+    !!!
 
     Defining build environment...
 
@@ -211,16 +213,16 @@ WRF v3.6.1 with intel/2015a
     testing... [DRY RUN]
 
     [test_step method]
-      export I_MPI_MPD_TMPDIR= /tmp/eb-dwykLF"
+      export I_MPI_MPD_TMPDIR="/tmp/eb-aD_yNu"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-dwykLF/mpi_cmd_for-oPoJhH/mpdboot
-    file written: /tmp/eb-dwykLF/mpi_cmd_for-oPoJhH/nodes
-      export I_MPI_MPD_TMPDIR= /tmp/eb-dwykLF"
+    file written: /tmp/eb-aD_yNu/mpi_cmd_for-PMf_hd/mpdboot
+    file written: /tmp/eb-aD_yNu/mpi_cmd_for-PMf_hd/nodes
+      export I_MPI_MPD_TMPDIR="/tmp/eb-aD_yNu"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-dwykLF/mpi_cmd_for-Zcu5tS/mpdboot
-    file written: /tmp/eb-dwykLF/mpi_cmd_for-Zcu5tS/nodes
+    file written: /tmp/eb-aD_yNu/mpi_cmd_for-6FdC3U/mpdboot
+    file written: /tmp/eb-aD_yNu/mpi_cmd_for-6FdC3U/nodes
 
     installing... [DRY RUN]
 
@@ -302,7 +304,7 @@ WRF v3.6.1 with intel/2015a
         
         setenv	NETCDF		"$EBROOTNETCDF"
         setenv	NETCDFF		"$EBROOTNETCDFMINFORTRAN"
-        # Built with EasyBuild version 2.4.0dev-reb33717939fa3489e6137b3c99ace806d0c43376
+        # Built with EasyBuild version 2.4.0.dev0-r066418585bb7b041c118f1dc3707fdf091d69982
         
 
     permissions... [DRY RUN]
@@ -324,6 +326,5 @@ WRF v3.6.1 with intel/2015a
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-dwykLF/easybuild-KwczSW.log* have been removed.
-    == Temporary directory /tmp/eb-dwykLF has been removed.
-
+    == Temporary log file(s) /tmp/eb-aD_yNu/easybuild-xVbRms.log* have been removed.
+    == Temporary directory /tmp/eb-aD_yNu has been removed.
