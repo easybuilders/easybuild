@@ -18,7 +18,7 @@ WRF v3.6.1 with intel/2015a
 .. code::
 
     $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
-    == temporary log file in case of crash /tmp/g/eb-MSlXxy/easybuild-oBf7fV.log
+    == temporary log file in case of crash /tmp/eb-dwykLF/easybuild-KwczSW.log
 
     == processing EasyBuild easyconfig /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
 
@@ -29,10 +29,6 @@ WRF v3.6.1 with intel/2015a
     Please be aware of this, and only use the information below for quick debugging purposes.
 
     *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /Users/kehoste/work/easybuild-easyblocks/easybuild/easyblocks/w/wrf.pyc) ***
-
-    Using fake build directory: /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/build/WRF/3.6.1/intel-2015a-dmpar
-    Using fake software install directory: /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar
-    Using fake modules install directory: /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/modules/all
 
     == building and installing WRF/3.6.1-intel-2015a-dmpar...
     fetching files... [DRY RUN]
@@ -67,23 +63,23 @@ WRF v3.6.1 with intel/2015a
 
     [extract_step method]
       running command "tar xzf /Users/kehoste/.local/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
     patching... [DRY RUN]
 
     [patch_step method]
     * applying patch file WRF_parallel_build_fix.patch
       running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
       running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_known_problems.patch
       running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF_tests_limit-runtimes.patch
       running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
     preparing... [DRY RUN]
 
@@ -92,38 +88,20 @@ WRF v3.6.1 with intel/2015a
 
     Loading toolchain module...
 
+    module load icc/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load ifort/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2 [SIMULATED]
     module load intel/2015a [SIMULATED]
-      export EBROOTINTEL="/tmp/g/eb-MSlXxy/__fake__/intel/2015a"
-      export EBVERSIONINTEL="2015a"
-     module load icc/2015.1.133-GCC-4.9.2 [SIMULATED]
-      export EBROOTICC="/tmp/g/eb-MSlXxy/__fake__/icc/2015.1.133"
-      export EBVERSIONICC="2015.1.133"
-     module load ifort/2015.1.133-GCC-4.9.2 [SIMULATED]
-      export EBROOTIFORT="/tmp/g/eb-MSlXxy/__fake__/ifort/2015.1.133"
-      export EBVERSIONIFORT="2015.1.133"
-     module load impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2 [SIMULATED]
-      export EBROOTIMPI="/tmp/g/eb-MSlXxy/__fake__/impi/5.0.2.044"
-      export EBVERSIONIMPI="5.0.2.044"
-     module load imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2 [SIMULATED]
-      export EBROOTIMKL="/tmp/g/eb-MSlXxy/__fake__/imkl/11.2.1.133"
-      export EBVERSIONIMKL="11.2.1.133"
 
     Loading modules for dependencies...
 
     module load JasPer/1.900.1-intel-2015a [SIMULATED]
-      export EBROOTJASPER="/tmp/g/eb-MSlXxy/__fake__/JasPer/1.900.1-intel-2015a"
-      export EBVERSIONJASPER="1.900.1"
     module load netCDF/4.3.2-intel-2015a [SIMULATED]
-      export EBROOTNETCDF="/tmp/g/eb-MSlXxy/__fake__/netCDF/4.3.2-intel-2015a"
-      export EBVERSIONNETCDF="4.3.2"
     module load netCDF-Fortran/4.4.0-intel-2015a [SIMULATED]
-      export EBROOTNETCDFMINFORTRAN="/tmp/g/eb-MSlXxy/__fake__/netCDF-Fortran/4.4.0-intel-2015a"
-      export EBVERSIONNETCDFMINFORTRAN="4.4.0"
     module load tcsh/6.18.01-intel-2015a [SIMULATED]
-      export EBROOTTCSH="/tmp/g/eb-MSlXxy/__fake__/tcsh/6.18.01-intel-2015a"
-      export EBVERSIONTCSH="6.18.01"
 
-    WARNING: Not all FFTW interface libraries ['fftw3xc_intel', 'mkl_intel_lp64', 'mkl_sequential', 'mkl_core'] are found in ['/tmp/g/eb-MSlXxy/__fake__/imkl/11.2.1.133/mkl/lib/intel64', '/var/folders/8s/_frgh9sj6m744mxt5w5lyztr0000gn/T/eb-MSlXxy/__fake__/imkl/11.2.1.133/compiler/lib/intel64'], can't set $FFT_LIB.
+    WARNING: Not all FFTW interface libraries ['fftw3xc_intel', 'mkl_intel_lp64', 'mkl_sequential', 'mkl_core'] are found in ['$EBROOTIMKL/mkl/lib/intel64', '$EBROOTIMKL/compiler/lib/intel64'], can't set $FFT_LIB.
 
     Defining build environment...
 
@@ -202,14 +180,14 @@ WRF v3.6.1 with intel/2015a
     configuring... [DRY RUN]
 
     [configure_step method]
-      export NETCDF="/tmp/g/eb-MSlXxy/__fake__/netCDF/4.3.2-intel-2015a"
-      export NETCDFF="/tmp/g/eb-MSlXxy/__fake__/netCDF-Fortran/4.4.0-intel-2015a"
-      export JASPERINC="/tmp/g/eb-MSlXxy/__fake__/JasPer/1.900.1-intel-2015a/include"
-      export JASPERLIB="/tmp/g/eb-MSlXxy/__fake__/JasPer/1.900.1-intel-2015a/lib"
+      export NETCDF="$EBROOTNETCDF"
+      export NETCDFF="$EBROOTNETCDFMINFORTRAN"
+      export JASPERINC="$EBROOTJASPER/include"
+      export JASPERLIB="$EBROOTJASPER/lib"
       export WRFIO_NCD_LARGE_FILE_SUPPORT="1"
     Perl script patched: arch/Config_new.pl
       running interactive command "./configure"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     applying regex substitutions to file configure.wrf
       * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'
       * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'
@@ -224,25 +202,25 @@ WRF v3.6.1 with intel/2015a
 
     [build_step method]
       running command "tcsh ./compile -j 4 wrf"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
       running command "tcsh ./compile -j 4 em_real"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
       running command "tcsh ./compile -j 4 em_b_wave"
-      (in /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
     testing... [DRY RUN]
 
     [test_step method]
-      export I_MPI_MPD_TMPDIR="/tmp/g/eb-MSlXxy"
+      export I_MPI_MPD_TMPDIR= /tmp/eb-dwykLF"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/g/eb-MSlXxy/mpi_cmd_for-AFse5J/mpdboot
-    file written: /tmp/g/eb-MSlXxy/mpi_cmd_for-AFse5J/nodes
-      export I_MPI_MPD_TMPDIR="/tmp/g/eb-MSlXxy"
+    file written: /tmp/eb-dwykLF/mpi_cmd_for-oPoJhH/mpdboot
+    file written: /tmp/eb-dwykLF/mpi_cmd_for-oPoJhH/nodes
+      export I_MPI_MPD_TMPDIR= /tmp/eb-dwykLF"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/g/eb-MSlXxy/mpi_cmd_for-xC1LyO/mpdboot
-    file written: /tmp/g/eb-MSlXxy/mpi_cmd_for-xC1LyO/nodes
+    file written: /tmp/eb-dwykLF/mpi_cmd_for-Zcu5tS/mpdboot
+    file written: /tmp/eb-dwykLF/mpi_cmd_for-Zcu5tS/nodes
 
     installing... [DRY RUN]
 
@@ -284,7 +262,7 @@ WRF v3.6.1 with intel/2015a
     creating module... [DRY RUN]
 
     [make_module_step method]
-    Generating module file /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
+    Generating module file /Users/kehoste/.local/easybuild/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
 
         #%Module
         proc ModulesHelp { } {
@@ -298,7 +276,7 @@ WRF v3.6.1 with intel/2015a
          numerical weather prediction system designed to serve both operational forecasting and atmospheric
          research needs. - Homepage: http://www.wrf-model.org}
         
-        set root /tmp/g/eb-MSlXxy/__ROOT__/Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar
+        set root /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar
         
         conflict WRF
         
@@ -322,9 +300,9 @@ WRF v3.6.1 with intel/2015a
         setenv	EBVERSIONWRF		"3.6.1"
         setenv	EBDEVELWRF		"$root/easybuild/WRF-3.6.1-intel-2015a-dmpar-easybuild-devel"
         
-        setenv	NETCDF		"/tmp/g/eb-MSlXxy/__fake__/netCDF/4.3.2-intel-2015a"
-        setenv	NETCDFF		"/tmp/g/eb-MSlXxy/__fake__/netCDF-Fortran/4.4.0-intel-2015a"
-        # Built with EasyBuild version 2.4.0dev-r7c88836b556a956a4502a137702e956c98033d2b
+        setenv	NETCDF		"$EBROOTNETCDF"
+        setenv	NETCDFF		"$EBROOTNETCDFMINFORTRAN"
+        # Built with EasyBuild version 2.4.0dev-reb33717939fa3489e6137b3c99ace806d0c43376
         
 
     permissions... [DRY RUN]
@@ -346,6 +324,6 @@ WRF v3.6.1 with intel/2015a
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/g/eb-MSlXxy/easybuild-oBf7fV.log* have been removed.
-    == Temporary directory /tmp/g/eb-MSlXxy has been removed.
+    == Temporary log file(s) /tmp/eb-dwykLF/easybuild-KwczSW.log* have been removed.
+    == Temporary directory /tmp/eb-dwykLF has been removed.
 
