@@ -90,7 +90,7 @@ source file.
 For example, while you may see this in the dry run output::
 
     [build_step method]
-      running command " make -j 4  CC="gcc"  CFLAGS='-Wall -Winline -fPIC -O2 -g $(BIGFILES)' "
+      running command " make -j 4"
       (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
 
 However, the actual build directory is more likely to be one level deeper, for example
@@ -134,12 +134,12 @@ In case no source URLs are available and required files are missing, they are si
 
 .. _extended_dry_run_overview_checksum_verification:
 
-Checksum verification for source files/patches is skipped
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Checksum verification is skipped
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Computing checksums of files and verifying them against specified checksums (if available) is *skipped* during
-a dry run, because it is considered potentially too time-consuming. In additional source files/patches may not be
-available anyway.
+Computing checksums of sources files/patches, and verifying them against specified checksums (if available) is
+*skipped* during a dry run, because it is considered potentially too time-consuming.
+In addition source files/patches may not be available anyway.
 
 .. _extended_dry_run_overview_unpacking_sources:
 
@@ -156,10 +156,36 @@ This has a number of implications:
 * the build directory in which commands are executed is likely incorrect in the dry run output
   (see also :ref:`extended_dry_run_overview_wrong_build_dir`)
 
+The extraction command is mentioned however::
+
+    [extract_step method]
+      running command "tar xjf bzip2-1.0.6.tar.bz2"
+      (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
+
 .. _extended_dry_run_overview_patching:
 
 Patch files are not applied, no runtime patching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since source files are not unpacked, patch files can not applied either.
+
+The dry run output does provide an overview of patch files, together with where they are found
+and how they are applied::
+
+    [patch_step method]
+    * applying patch file WRF_parallel_build_fix.patch
+      running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF_parallel_build_fix.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
+      running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF-3.6.1_known_problems.patch
+      running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_known_problems.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF_tests_limit-runtimes.patch
+      running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF_tests_limit-runtimes.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+
 
 .. _extended_dry_run_overview_module_load:
 
