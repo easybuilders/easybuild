@@ -176,14 +176,8 @@ and how they are applied::
     * applying patch file WRF_parallel_build_fix.patch
       running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF_parallel_build_fix.patch"
       (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
-    * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
-      running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_known_problems.patch
       running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_known_problems.patch"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
-    * applying patch file WRF_tests_limit-runtimes.patch
-      running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF_tests_limit-runtimes.patch"
       (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
 Likewise, runtime patching performed by the easyblock itself can not work either. If the ``apply_regex_substitutions``
@@ -196,9 +190,6 @@ For example, in the ``configure`` step of the WRF easyblock when using the Intel
     applying regex substitutions to file configure.wrf
       * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'
       * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'
-      * regex pattern '^(SFC\s*=\s*).*$', replacement string '\1 ifort'
-      * regex pattern '^(SCC\s*=\s*).*$', replacement string '\1 icc'
-      * regex pattern '^(CCOMP\s*=\s*).*$', replacement string '\1 icc'
 
 .. _extended_dry_run_overview_module_load:
 
