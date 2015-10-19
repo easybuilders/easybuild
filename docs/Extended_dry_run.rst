@@ -89,9 +89,9 @@ source file.
 
 For example, while you may see this in the dry run output::
 
-[build_step method]
-  running command " make -j 4  CC="gcc"  CFLAGS='-Wall -Winline -fPIC -O2 -g $(BIGFILES)' "
-  (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
+    [build_step method]
+      running command " make -j 4  CC="gcc"  CFLAGS='-Wall -Winline -fPIC -O2 -g $(BIGFILES)' "
+      (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
 
 However, the actual build directory is more likely to be one level deeper, for example
 ``/tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2/bzip2-1.0.6``.
@@ -101,31 +101,36 @@ However, the actual build directory is more likely to be one level deeper, for e
 No downloading of missing source files/patches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Requires files (source files/patches) are not downloaded during a dry run if they are not available yet.
+Required files (source files/patches) are not downloaded during a dry run if they are not available yet.
 
-The dry run output will specify whether files are already available (and at which path), or whether they are currently
-not available yet; the exact output for the latter depends on whether or not source URLs are available.
+The dry run output will specify whether files are have been found (and if so, at which path) or not; the exact output
+for files that were not found depends on whether or not source URLs are available.
 
-For example: if the required source tarball for ``bzip2`` is not available yet, EasyBuild will indicate will try to
-download it to::
+For example: if the required source file for ``bzip2`` is not available yet, it is indicated where EasyBuild
+will try to download it to::
 
     [fetch_step method]
     Available download URLs for sources/patches:
       * http://www.bzip.org/1.0.6/$source
 
     List of sources:
-      * bzip2-1.0.6.tar.gz downloaded to /Users/kehoste/.local/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
+      * bzip2-1.0.6.tar.gz downloaded to /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
 
     List of patches:
     (none)
 
-If the source file is already available in the source path that EasyBuild was configured with, the output would look
-slightly different::
+If the source file is already available in the source path that EasyBuild was configured with, it is indicated as such::
 
     List of sources:
       * bzip2-1.0.6.tar.gz found at /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
 
-If no source URLs are available for downloading missing source files/patches, this is indicated with ``(none)``.
+In case no source URLs are available and required files are missing, they are simply marked as such::
+
+    Available download URLs for sources/patches:
+    (none)
+
+    List of sources:
+      * bzip2-1.0.6.tar.bz2 (MISSING)
 
 .. _extended_dry_run_overview_checksum_verification:
 
