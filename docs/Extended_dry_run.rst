@@ -80,6 +80,9 @@ replaced by the corresponding original value in the dry run output::
 
 .. _extended_dry_run_overview_wrong_build_dir:
 
+Note on build directory in dry run mode
+#######################################
+
 .. note:: The build directory used during an actual (non-dry run) EasyBuild session is most likely going to be slightly
           different, since EasyBuild typically moves into the subdirectory that is created by unpacking the first
           source file.
