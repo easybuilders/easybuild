@@ -20,7 +20,7 @@ WRF v3.6.1 with intel/2015a
     $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
     == temporary log file in case of crash /tmp/eb-aD_yNu/easybuild-xVbRms.log
 
-    == processing EasyBuild easyconfig /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
+    == processing EasyBuild easyconfig /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
 
     Important note: the actual build & install procedure that will be performed may diverge
     (slightly) from what is outlined below, due to conditions in the easyblock which are
@@ -28,7 +28,7 @@ WRF v3.6.1 with intel/2015a
     Any errors that may occur are ignored and reported as warnings, on a per-step basis.
     Please be aware of this, and only use the information below for quick debugging purposes.
 
-    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /Users/kehoste/work/easybuild-easyblocks/easybuild/easyblocks/w/wrf.pyc) ***
+    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/easybuild-easyblocks/easybuild/easyblocks/w/wrf.pyc) ***
 
     == building and installing WRF/3.6.1-intel-2015a-dmpar...
     fetching files... [DRY RUN]
@@ -39,13 +39,13 @@ WRF v3.6.1 with intel/2015a
       * http://www.mmm.ucar.edu/wrf/src//$source
 
     List of sources:
-      * WRFV3.6.1.TAR.gz downloaded to /Users/kehoste/.local/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz
+      * WRFV3.6.1.TAR.gz downloaded to /home/example/easybuild/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz
 
     List of patches:
-      * WRF_parallel_build_fix.patch found at /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch
-      * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
-      * WRF-3.6.1_known_problems.patch found at /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch
-      * WRF_tests_limit-runtimes.patch found at /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch
+      * WRF_parallel_build_fix.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch
+      * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
+      * WRF-3.6.1_known_problems.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch
+      * WRF_tests_limit-runtimes.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch
 
     creating build dir, resetting environment... [DRY RUN]
 
@@ -62,24 +62,24 @@ WRF v3.6.1 with intel/2015a
     [checksum_step method]
 
     [extract_step method]
-      running command "tar xzf /Users/kehoste/.local/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "tar xzf /home/example/easybuild/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
     patching... [DRY RUN]
 
     [patch_step method]
     * applying patch file WRF_parallel_build_fix.patch
-      running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
-      running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_known_problems.patch
-      running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF_tests_limit-runtimes.patch
-      running command "patch -b -p<derived> -i /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
     preparing... [DRY RUN]
 
@@ -189,7 +189,7 @@ WRF v3.6.1 with intel/2015a
       export WRFIO_NCD_LARGE_FILE_SUPPORT="1"
     Perl script patched: arch/Config_new.pl
       running interactive command "./configure"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
     applying regex substitutions to file configure.wrf
       * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'
       * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'
@@ -204,11 +204,11 @@ WRF v3.6.1 with intel/2015a
 
     [build_step method]
       running command "tcsh ./compile -j 4 wrf"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
       running command "tcsh ./compile -j 4 em_real"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
       running command "tcsh ./compile -j 4 em_b_wave"
-      (in /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
     testing... [DRY RUN]
 
@@ -264,7 +264,7 @@ WRF v3.6.1 with intel/2015a
     creating module... [DRY RUN]
 
     [make_module_step method]
-    Generating module file /Users/kehoste/.local/easybuild/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
+    Generating module file /home/example/easybuild/easybuild/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
 
         #%Module
         proc ModulesHelp { } {
@@ -278,7 +278,7 @@ WRF v3.6.1 with intel/2015a
          numerical weather prediction system designed to serve both operational forecasting and atmospheric
          research needs. - Homepage: http://www.wrf-model.org}
         
-        set root /Users/kehoste/.local/easybuild/software/WRF/3.6.1-intel-2015a-dmpar
+        set root /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar
         
         conflict WRF
         
