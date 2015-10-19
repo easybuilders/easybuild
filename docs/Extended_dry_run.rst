@@ -83,18 +83,18 @@ replaced by the corresponding original value in the dry run output::
 Note on build directory in dry run mode
 #######################################
 
-.. note:: The build directory used during an actual (non-dry run) EasyBuild session is most likely going to be slightly
-          different, since EasyBuild typically moves into the subdirectory that is created by unpacking the first
-          source file.
+The build directory used during an actual (non-dry run) EasyBuild session is most likely going to be slightly
+different, since EasyBuild typically moves into the subdirectory that is created by unpacking the first
+source file.
 
-          For example, while you may see this in the dry run output::
+For example, while you may see this in the dry run output::
 
-            [build_step method]
-              running command " make -j 4  CC="gcc"  CFLAGS='-Wall -Winline -fPIC -O2 -g $(BIGFILES)' "
-              (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
+[build_step method]
+  running command " make -j 4  CC="gcc"  CFLAGS='-Wall -Winline -fPIC -O2 -g $(BIGFILES)' "
+  (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
 
-          However, the actual build directory is more likely to be one level deeper, for example
-          ``/tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2/bzip2-1.0.6``.
+However, the actual build directory is more likely to be one level deeper, for example
+``/tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2/bzip2-1.0.6``.
 
 .. _extended_dry_run_overview_downloading:
 
