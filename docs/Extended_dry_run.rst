@@ -26,16 +26,14 @@ produces:
 * The **actual build and install procedure may differ** from the one reported by ``--extended-dry-run``,
   due to conditional checks in the easyblock being used. For example, statements that are conditional on the presence
   of certain files or directories in the build directory will always be false, since the build directory is never
-  actually populated.
+  actually populated. See for example :ref:`_extended_dry_run_overview_wrong_build_dir`.
 
 * **Any errors that occur are ignored**, and are reported with a clear warning message. This is done because it is not
   unlikely that these errors occur because of the dry run mechanism; for example, the install step could require that
   certain files created during a previous step are present. However, it is also possible that these errors occur due
   to a bug in the easyblock being used, so it is important to pay attention to them.
 
-  .. code::
-
-    ...
+  Ignored errors are reported as follows::
 
     == testing... [DRY RUN]
 
@@ -44,7 +42,7 @@ produces:
     !!! WARNING: ignoring error "[Errno 2] No such file or directory: 'test'"
     !!!
 
-    ...
+  At the end of dry run output, anonother warning message is shown if any ignored errors occurred::
 
     == COMPLETED: Installation ended successfully
 
@@ -61,11 +59,39 @@ During an extended dry run, several operations are not performed, or are only si
 
 .. _extended_dry_run_overview_build_install_dirs:
 
-Temporary directories as Build/install directories
+Temporary directories as build/install directories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* temporary directories are used as build/install directory, to ensure that no persistent changes are made on the
-  filesystem
+To make very sure that EasyBuild does not touch any files or directories during the dry run, the build and
+(software/module) install directories are replaced by subdirectories of the temporary directory used by that
+particular EasyBuild session.
+
+In the background, the values for ``self.builddir``, ``self.installdir`` and ``self.installdir_mod`` are changed
+in the ``EasyBlock`` instance(s) being used; this also affects the use of the ``%(builddir)s`` and ``$(installdir)s``
+values in easyconfig files.
+
+Although the build and install directories are effectively temporary directories during a dry run (under a prefix like
+``/tmp/eb-aD_yNu/__ROOT__``), this is not visible in the dry run output: the 'fake' build and install directories are
+replaced by the corresponding original value in the dry run output::
+
+    [extract_step method]
+      running command "tar xjf /hom/example/easybuild/sources/m/make/make-3.82.tar.bz2"
+      (in /tmp/example/eb_build/make/3.82/GCC-4.8.2)
+
+.. _extended_dry_run_overview_wrong_build_dir:
+
+.. note:: The build directory used during an actual (non-dry run) EasyBuild session is most likely going to be slightly
+          different, since EasyBuild typically moves into the subdirectory that is created by unpacking the first
+          source file.
+
+          For example, while you may see this in the dry run output::
+
+            [build_step method]
+              running command " make -j 4 "
+              (in /tmp/example/eb_build/make/3.82/GCC-4.8.2)
+
+          The actual build directory is more likely to be one level deeper however, for example
+          ``/tmp/example/eb_build/make/3.82/GCC-4.8.2/make-3.82``.
 
 .. _extended_dry_run_overview_downloading:
 
