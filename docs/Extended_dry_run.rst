@@ -26,7 +26,7 @@ produces:
 * The **actual build and install procedure may differ** from the one reported by ``--extended-dry-run``,
   due to conditional checks in the easyblock being used. For example, statements that are conditional on the presence
   of certain files or directories in the build directory will always be false, since the build directory is never
-  actually populated. See for example :ref:`_extended_dry_run_overview_wrong_build_dir`.
+  actually populated. See for example :ref:`extended_dry_run_overview_wrong_build_dir`.
 
 * **Any errors that occur are ignored**, and are reported with a clear warning message. This is done because it is not
   unlikely that these errors occur because of the dry run mechanism; for example, the install step could require that
