@@ -137,14 +137,24 @@ In case no source URLs are available and required files are missing, they are si
 Checksum verification for source files/patches is skipped
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* computing/verifying checksums of source files/patches is skipped
+Computing checksums of files and verifying them against specified checksums (if available) is *skipped* during
+a dry run, because it is considered potentially too time-consuming. In additional source files/patches may not be
+available anyway.
 
 .. _extended_dry_run_overview_unpacking_sources:
 
 Source files are not unpacked
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* extraction of source files is not performed
+Source files are *not* unpacked, since this may require too much time (in case of large source files).
+Additionally, source files may not be available anyway.
+
+This has a number of implications:
+
+* files or directories that may be expected to be there are not, which may lead to (ignored) errors
+  if the used easyblock does not take this into account (see also :ref:`extended_dry_run_notes`)
+* the build directory in which commands are executed is likely incorrect in the dry run output
+  (see also :ref:`extended_dry_run_overview_wrong_build_dir`)
 
 .. _extended_dry_run_overview_patching:
 
