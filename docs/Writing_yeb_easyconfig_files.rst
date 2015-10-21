@@ -194,7 +194,55 @@ See also :ref:`easyconfig_param_templates`.
 Dependencies
 ~~~~~~~~~~~~
 
-*(WORK IN PROGRESS)*
+Dependecies in .yeb work just like they do in .eb files, except with the YAML syntax as described above. As there are no
+tuples in YAML, work with nested lists.
+An example::
+    dependencies: [
+        [libreadline, 6.3],
+        [Tcl, 8.6.4]
+    ]
+
+A more complicated (toolchain) example::
+
+    _internal_variables_:
+        - &version 1.4.10
+
+        - &comp_name GCC
+        - &comp_version 4.7.2
+        - &comp [*comp_name, *comp_version]
+
+        - &blaslib OpenBLAS
+        - &blasver 0.2.6
+        - &blas !join [*blaslib, -, *blasver]
+        - &blas_suff -LAPACK-3.4.2
+
+        - &comp_mpi_tc [gompi, *version]
+
+
+    easyblock: Toolchain
+
+    name: goolf
+    version: *version
+
+    homepage: (none)
+    description: |
+        GNU Compiler Collection (GCC) based compiler toolchain, including
+        OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+    toolchain: {name: dummy, version: dummy}
+
+    # compiler toolchain dependencies
+    # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
+    # because of toolchain preperation functions
+    dependencies: [
+        *comp,
+        [OpenMPI, 1.6.4, '', *comp],
+        [*blaslib, *blasver, *blas_suff, *comp_mpi_tc],
+        [FFTW, 3.3.3, '', *comp_mpi_tc],
+        [ScaLAPACK, 2.0.2, !join [-, *blas, *blas_suff], *comp_mpi_tc]
+    ]
+
+    moduleclass: toolchain
 
 .. _easyconfig_yeb_format_examples:
 
