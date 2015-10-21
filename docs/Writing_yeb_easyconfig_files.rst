@@ -19,6 +19,17 @@ Useful links:
     :depth: 3
     :backlinks: none
 
+.. _easyconfig_yeb_format_requirements:
+
+Requirements
+------------
+
+To use ``.yeb`` easyconfigs, you need to have:
+
+* an EasyBuild (development) version which is aware of the ``.yeb`` format (i.e., version 2.3.0dev or higher)
+* `PyYAML <https://pypi.python.org/pypi/PyYAML>`_ installed and available in your Python search path
+  (via ``$PYTHONPATH`` for example), such that ``import yaml`` works
+
 .. _easyconfig_yeb_format_syntax:
 
 Syntax
