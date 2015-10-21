@@ -55,6 +55,55 @@ Comments can be included anywhere, and are prefixed with a hash character ``#``:
     # this is a comment
 
 
+.. _internal_variables_yaml:
+
+Internal variables
+~~~~~~~~~~~~~~~~~~
+
+Variables can be defined using standard YAML anchors (using a '&'). These are later referenced using an asterisk (*).
+Example::
+    vars:
+        - &compver 2015.3.187
+        - &gccsuff -GNU-4.9.3-2.25
+
+    dependencies: [
+        [icc, *compver, *gccsuff],
+        [ifort, *compver, *gccsuff]
+    ]
+
+To concat strings and variables, or multiple variables together, use the !join operator
+(See also :ref:`_string_concatenation`)
+
+A full example could look like this:
+Example::
+
+    vars:
+        - &compver 2015.3.187
+        - &gccsuff -GNU-4.9.3-2.25
+
+    dependencies: [
+        [icc, *compver, *gccsuff],
+        [ifort, *compver, *gccsuff],
+        [impi, 5.0.3.048, '', [iccifort, !join [*compver, *gccsuff]]],
+        [imkl, 11.2.3.187, '', [iimpi, !join [7.3.5, *gccsuff]]],
+    ]
+
+.. _string_concatenation:
+
+Concatenating strings and/or variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As string concatenation is not supported in YAML, we defined a !join operator. It takes a list of values to concatenate
+as argument. This list can contain both hard strings and variables.
+Example::
+
+    !join [foo, bar]  # returns 'foobar'
+    vars:
+        - &f foo
+        - &b bar
+    !join [*f, bar]  # returns 'foobar'
+    !join [*f, *b]  # returns 'foobar'
+
 .. _easyconfig_yeb_format_syntax_easyconfig_parameters:
 
 Easyconfig parameter values
@@ -163,50 +212,6 @@ Dependencies
 ~~~~~~~~~~~~
 
 *(WORK IN PROGRESS)*
-Variables can be defined using standard YAML anchors (using a '&'). These are later referenced using an asterisk (*).
-Example::
-    vars:
-        - &compver 2015.3.187
-        - &gccsuff -GNU-4.9.3-2.25
-
-    dependencies: [
-        [icc, *compver, *gccsuff],
-        [ifort, *compver, *gccsuff]
-    ]
-
-To concat strings and variables, or multiple variables together, use the !join operator
-(See also :ref:`_string_concatenation`)
-
-A full example could look like this:
-Example::
-
-    vars:
-        - &compver 2015.3.187
-        - &gccsuff -GNU-4.9.3-2.25
-
-    dependencies: [
-        [icc, *compver, *gccsuff],
-        [ifort, *compver, *gccsuff],
-        [impi, 5.0.3.048, '', [iccifort, !join [*compver, *gccsuff]]],
-        [imkl, 11.2.3.187, '', [iimpi, !join [7.3.5, *gccsuff]]],
-    ]
-
-.. _string_concatenation:
-
-Concatenating strings and/or variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As string concatenation is not supported in YAML, we defined a !join operator. It takes a list of values to concatenate
-as argument. This list can contain both hard strings and variables.
-Example::
-
-    !join [foo, bar]  # returns 'foobar'
-    vars:
-        - &f foo
-        - &b bar
-    !join [f, bar]  # returns 'foobar'
-    !join [f, b]  # returns 'foobar'
-
 
 .. _easyconfig_yeb_format_examples:
 
@@ -223,7 +228,7 @@ gzip v1.6 with ``GCC/4.9.2`` toolchain
     easyblock: ConfigureMake
 
     name: gzip
-    version: '1.6'  # FIXME bug: quotes are required here to make sure this is parsed a a string, not a floating point value
+    version: 1.6
 
     homepage: 'http://www.gnu.org/software/gzip/'
     description:
