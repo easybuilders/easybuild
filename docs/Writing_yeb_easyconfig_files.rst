@@ -54,7 +54,6 @@ Comments can be included anywhere, and are prefixed with a hash character ``#``:
 
     # this is a comment
 
-
 .. _internal_variables_yaml:
 
 Internal variables
@@ -72,21 +71,7 @@ Example::
     ]
 
 To concat strings and variables, or multiple variables together, use the !join operator
-(See also :ref:`_string_concatenation`)
-
-A full example could look like this:
-Example::
-
-    vars:
-        - &compver 2015.3.187
-        - &gccsuff -GNU-4.9.3-2.25
-
-    dependencies: [
-        [icc, *compver, *gccsuff],
-        [ifort, *compver, *gccsuff],
-        [impi, 5.0.3.048, '', [iccifort, !join [*compver, *gccsuff]]],
-        [imkl, 11.2.3.187, '', [iimpi, !join [7.3.5, *gccsuff]]],
-    ]
+(See `Concatenating strings and/or variables`_)
 
 .. _string_concatenation:
 
@@ -103,6 +88,7 @@ Example::
         - &b bar
     !join [*f, bar]  # returns 'foobar'
     !join [*f, *b]  # returns 'foobar'
+
 
 .. _easyconfig_yeb_format_syntax_easyconfig_parameters:
 
