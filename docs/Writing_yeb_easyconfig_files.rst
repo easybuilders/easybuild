@@ -194,15 +194,82 @@ See also :ref:`easyconfig_param_templates`.
 Dependencies
 ~~~~~~~~~~~~
 
-Dependecies in .yeb work just like they do in .eb files, except with the YAML syntax as described above. As there are no
-tuples in YAML, work with nested lists.
+Dependecies can be specified in nested lists, using the syntax as described above. To use variables, we refer to the
+part on `Internal variables`_.
+
 An example::
+
     dependencies: [
         [libreadline, 6.3],
         [Tcl, 8.6.4]
     ]
 
 A more complicated (toolchain) example::
+
+    _internal_variables_:
+        - &comp_name GCC
+        - &comp_version 4.7.2
+        - &comp [*comp_name, *comp_version]
+
+        - &blaslib OpenBLAS
+        - &blasver 0.2.6
+        - &blas !join [*blaslib, -, *blasver]
+        - &blas_suff -LAPACK-3.4.2
+
+        - &comp_mpi_tc [gompi, 1.4.10]
+
+    dependencies: [
+        *comp,
+        [OpenMPI, 1.6.4, '', *comp],
+        [*blaslib, *blasver, *blas_suff, *comp_mpi_tc],
+        [FFTW, 3.3.3, '', *comp_mpi_tc],
+        [ScaLAPACK, 2.0.2, !join [-, *blas, *blas_suff], *comp_mpi_tc]
+    ]
+
+For the full version of this easyconfig file, see ``goolf v1.4.10 with dummy toolchain`` in the `Examples`_ section.
+
+
+.. _easyconfig_yeb_format_examples:
+
+Examples
+--------
+
+gzip v1.6 with ``GCC/4.9.2`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code::
+
+    %YAML 1.2
+    ---
+    easyblock: ConfigureMake
+
+    name: gzip
+    version: 1.6
+
+    homepage: 'http://www.gnu.org/software/gzip/'
+    description:
+        gzip is a popular data compression program
+        as a replacement for compress
+
+    toolchain: {name: GCC, version: 4.9.2}
+
+    # http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz
+    source_urls: [*GNU_SOURCE]
+    sources: [%(name)s-%(version)s.tar.gz]
+
+    # make sure the gzip, gunzip and compress binaries are available after installation
+    sanity_check_paths: {
+        files: [bin/gunzip, bin/gzip, bin/uncompress],
+        dirs: [],
+    }
+
+    moduleclass: tools
+
+
+goolf v1.4.10 with ``dummy`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code::
 
     _internal_variables_:
         - &version 1.4.10
@@ -243,39 +310,3 @@ A more complicated (toolchain) example::
     ]
 
     moduleclass: toolchain
-
-.. _easyconfig_yeb_format_examples:
-
-Examples
---------
-
-gzip v1.6 with ``GCC/4.9.2`` toolchain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code::
-
-    %YAML 1.2
-    ---
-    easyblock: ConfigureMake
-
-    name: gzip
-    version: 1.6
-
-    homepage: 'http://www.gnu.org/software/gzip/'
-    description:
-        gzip is a popular data compression program
-        as a replacement for compress
-
-    toolchain: {name: GCC, version: 4.9.2}
-
-    # http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz
-    source_urls: [*GNU_SOURCE]
-    sources: [%(name)s-%(version)s.tar.gz]
-
-    # make sure the gzip, gunzip and compress binaries are available after installation
-    sanity_check_paths: {
-        files: [bin/gunzip, bin/gzip, bin/uncompress],
-        dirs: [],
-    }
-
-    moduleclass: tools
