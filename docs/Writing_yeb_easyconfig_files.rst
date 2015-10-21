@@ -61,14 +61,11 @@ Internal variables
 
 Variables can be defined using standard YAML anchors (using a '&'). These are later referenced using an asterisk (*).
 Example::
-    vars:
-        - &compver 2015.3.187
-        - &gccsuff -GNU-4.9.3-2.25
+    _internal_variables:
+        - &name foo_name
+        - &version 1.2.3
 
-    dependencies: [
-        [icc, *compver, *gccsuff],
-        [ifort, *compver, *gccsuff]
-    ]
+    example_key: [*name, *version]  # will return [foo_name, 1.2.3]
 
 To concat strings and variables, or multiple variables together, use the !join operator
 (See `Concatenating strings and/or variables`_)
