@@ -9,18 +9,17 @@ Output examples for ``eb --extended-dry-run``/``eb -x``, see also :ref:`extended
     :depth: 2
     :backlinks: none
 
+.. _extended_dry_run_examples_make382_GCC482:
 
-.. _extended_dry_run_examples_WRF361_intel2015a:
-
-WRF v3.6.1 with intel/2015a
----------------------------
+make v3.82 with GCC/4.8.2
+-------------------------
 
 .. code::
 
-    $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
-    == temporary log file in case of crash /tmp/eb-aD_yNu/easybuild-xVbRms.log
+    $ eb make-3.82-GCC-4.8.2.eb -x
+    == temporary log file in case of crash /tmp/eb-BHQ4Gy/easybuild-_3b0i_.log
 
-    == processing EasyBuild easyconfig /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
+    == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/m/make/make-3.82-GCC-4.8.2.eb
 
     Important note: the actual build & install procedure that will be performed may diverge
     (slightly) from what is outlined below, due to conditions in the easyblock which are
@@ -28,24 +27,20 @@ WRF v3.6.1 with intel/2015a
     Any errors that may occur are ignored and reported as warnings, on a per-step basis.
     Please be aware of this, and only use the information below for quick debugging purposes.
 
-    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/easybuild-easyblocks/easybuild/easyblocks/w/wrf.pyc) ***
+    *** DRY RUN using 'ConfigureMake' easyblock (easybuild.easyblocks.generic.configuremake @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.pyc) ***
 
-    == building and installing WRF/3.6.1-intel-2015a-dmpar...
+    == building and installing make/3.82-GCC-4.8.2...
     fetching files... [DRY RUN]
 
     [fetch_step method]
     Available download URLs for sources/patches:
-      * http://www2.mmm.ucar.edu/wrf/src//$source
-      * http://www.mmm.ucar.edu/wrf/src//$source
+      * http://ftpmirror.gnu.org/make/$source
 
     List of sources:
-      * WRFV3.6.1.TAR.gz downloaded to /home/example/easybuild/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz
+      * make-3.82.tar.bz2 will be downloaded to /home/example/eb/sources/m/make/make-3.82.tar.bz2
 
     List of patches:
-      * WRF_parallel_build_fix.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch
-      * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
-      * WRF-3.6.1_known_problems.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch
-      * WRF_tests_limit-runtimes.patch found at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch
+    (none)
 
     creating build dir, resetting environment... [DRY RUN]
 
@@ -62,24 +57,212 @@ WRF v3.6.1 with intel/2015a
     [checksum_step method]
 
     [extract_step method]
-      running command "tar xzf /home/example/easybuild/easybuild/sources/w/WRF/WRFV3.6.1.TAR.gz"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "tar xjf /home/example/eb/sources/m/make/make-3.82.tar.bz2"
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2)
+
+    patching... [DRY RUN]
+
+    [patch_step method]
+
+    preparing... [DRY RUN]
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load GCC/4.8.2
+
+    Loading modules for dependencies...
+
+    Defining build environment...
+
+      export CC="gcc"
+      export CFLAGS="-O2"
+      export CXX="g++"
+      export CXXFLAGS="-O2"
+      export F77="gfortran"
+      export F90="gfortran"
+      export F90FLAGS="-O2"
+      export FFLAGS="-O2"
+      export FLIBS="-lgfortran"
+      export LDFLAGS="-L/home/example/eb/software/GCC/4.8.2/lib"
+      export LIBS="-lm -lpthread"
+      export OPTFLAGS="-O2"
+      export PRECFLAGS=""
+
+    Full list of loaded modules:
+      1) GCC/4.8.2
+
+    configuring... [DRY RUN]
+
+    [configure_step method]
+      running command " ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 "
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    building... [DRY RUN]
+
+    [build_step method]
+      running command " make -j 4 "
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    testing... [DRY RUN]
+
+    [test_step method]
+
+    installing... [DRY RUN]
+
+    [stage_install_step method]
+
+    [make_installdir method]
+
+    [install_step method]
+      running command " make install "
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    taking care of extensions... [DRY RUN]
+
+    [extensions_step method]
+
+    postprocessing... [DRY RUN]
+
+    [post_install_step method]
+
+    sanity checking... [DRY RUN]
+
+    [sanity_check_step method]
+    Sanity check paths - file ['files']
+      * bin/make
+    Sanity check paths - (non-empty) directory ['dirs']
+      (none)
+    Sanity check commands
+      (none)
+
+    cleaning up... [DRY RUN]
+
+    [cleanup_step method]
+
+    creating module... [DRY RUN]
+
+    [make_module_step method]
+    Generating module file /home/example/eb/modules/all/make/3.82-GCC-4.8.2, with contents:
+
+        #%Module
+        proc ModulesHelp { } {
+            puts stderr { make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html
+            }
+        }
+        
+        module-whatis {Description: make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html}
+        
+        set root /home/example/eb/software/make/3.82-GCC-4.8.2
+        
+        conflict make
+        
+        if { ![ is-loaded GCC/4.8.2 ] } {
+            module load GCC/4.8.2
+        }
+        
+        setenv	EBROOTMAKE		"$root"
+        setenv	EBVERSIONMAKE		"3.82"
+        setenv	EBDEVELMAKE		"$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel"
+        
+        # Built with EasyBuild version 2.4.0
+        
+
+    permissions... [DRY RUN]
+
+    [permissions_step method]
+
+    packaging... [DRY RUN]
+
+    [package_step method]
+
+    == COMPLETED: Installation ended successfully
+
+    Important note: the actual build & install procedure that will be performed may diverge
+    (slightly) from what is outlined above, due to conditions in the easyblock which are
+    incorrectly handled in a dry run.
+    Any errors that may occur are ignored and reported as warnings, on a per-step basis.
+    Please be aware of this, and only use the information above for quick debugging purposes.
+
+    (no ignored errors during dry run)
+
+    == Build succeeded for 1 out of 1
+    == Temporary log file(s) /tmp/eb-BHQ4Gy/easybuild-_3b0i_.log* have been removed.
+    == Temporary directory /tmp/eb-BHQ4Gy has been removed.
+
+
+.. _extended_dry_run_examples_WRF361_intel2015a:
+
+WRF v3.6.1 with intel/2015a
+---------------------------
+
+.. code::
+
+    $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
+    == temporary log file in case of crash /tmp/eb-N3tLAc/easybuild-teznGs.log
+
+    == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
+
+    Important note: the actual build & install procedure that will be performed may diverge
+    (slightly) from what is outlined below, due to conditions in the easyblock which are
+    incorrectly handled in a dry run.
+    Any errors that may occur are ignored and reported as warnings, on a per-step basis.
+    Please be aware of this, and only use the information below for quick debugging purposes.
+
+    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***
+
+    == building and installing WRF/3.6.1-intel-2015a-dmpar...
+    fetching files... [DRY RUN]
+
+    [fetch_step method]
+    Available download URLs for sources/patches:
+      * http://www2.mmm.ucar.edu/wrf/src//$source
+      * http://www.mmm.ucar.edu/wrf/src//$source
+
+    List of sources:
+      * WRFV3.6.1.TAR.gz will be downloaded to /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz
+
+    List of patches:
+      * WRF_parallel_build_fix.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch
+      * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
+      * WRF-3.6.1_known_problems.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch
+      * WRF_tests_limit-runtimes.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch
+
+    creating build dir, resetting environment... [DRY RUN]
+
+    [check_readiness_step method]
+
+    [make_builddir method]
+
+    [reset_changes method]
+
+    [handle_iterate_opts method]
+
+    unpacking... [DRY RUN]
+
+    [checksum_step method]
+
+    [extract_step method]
+      running command "tar xzf /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
 
     patching... [DRY RUN]
 
     [patch_step method]
     * applying patch file WRF_parallel_build_fix.patch
-      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
-      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF-3.6.1_known_problems.patch
-      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
     * applying patch file WRF_tests_limit-runtimes.patch
-      running command "patch -b -p<derived> -i /home/example/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
 
     preparing... [DRY RUN]
 
@@ -189,7 +372,7 @@ WRF v3.6.1 with intel/2015a
       export WRFIO_NCD_LARGE_FILE_SUPPORT="1"
     Perl script patched: arch/Config_new.pl
       running interactive command "./configure"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
     applying regex substitutions to file configure.wrf
       * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'
       * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'
@@ -204,25 +387,25 @@ WRF v3.6.1 with intel/2015a
 
     [build_step method]
       running command "tcsh ./compile -j 4 wrf"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
       running command "tcsh ./compile -j 4 em_real"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
       running command "tcsh ./compile -j 4 em_b_wave"
-      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
 
     testing... [DRY RUN]
 
     [test_step method]
-      export I_MPI_MPD_TMPDIR="/tmp/eb-aD_yNu"
+      export I_MPI_MPD_TMPDIR="/tmp/eb-N3tLAc"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-aD_yNu/mpi_cmd_for-PMf_hd/mpdboot
-    file written: /tmp/eb-aD_yNu/mpi_cmd_for-PMf_hd/nodes
-      export I_MPI_MPD_TMPDIR="/tmp/eb-aD_yNu"
+    file written: /tmp/eb-N3tLAc/mpi_cmd_for-bqNzpT/mpdboot
+    file written: /tmp/eb-N3tLAc/mpi_cmd_for-bqNzpT/nodes
+      export I_MPI_MPD_TMPDIR="/tmp/eb-N3tLAc"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-aD_yNu/mpi_cmd_for-6FdC3U/mpdboot
-    file written: /tmp/eb-aD_yNu/mpi_cmd_for-6FdC3U/nodes
+    file written: /tmp/eb-N3tLAc/mpi_cmd_for-jKuz7H/mpdboot
+    file written: /tmp/eb-N3tLAc/mpi_cmd_for-jKuz7H/nodes
 
     installing... [DRY RUN]
 
@@ -264,7 +447,7 @@ WRF v3.6.1 with intel/2015a
     creating module... [DRY RUN]
 
     [make_module_step method]
-    Generating module file /home/example/easybuild/easybuild/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
+    Generating module file /home/example/eb/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
 
         #%Module
         proc ModulesHelp { } {
@@ -278,7 +461,7 @@ WRF v3.6.1 with intel/2015a
          numerical weather prediction system designed to serve both operational forecasting and atmospheric
          research needs. - Homepage: http://www.wrf-model.org}
         
-        set root /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar
+        set root /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar
         
         conflict WRF
         
@@ -304,7 +487,7 @@ WRF v3.6.1 with intel/2015a
         
         setenv	NETCDF		"$EBROOTNETCDF"
         setenv	NETCDFF		"$EBROOTNETCDFMINFORTRAN"
-        # Built with EasyBuild version 2.4.0.dev0-r066418585bb7b041c118f1dc3707fdf091d69982
+        # Built with EasyBuild version 2.4.0
         
 
     permissions... [DRY RUN]
@@ -326,5 +509,5 @@ WRF v3.6.1 with intel/2015a
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-aD_yNu/easybuild-xVbRms.log* have been removed.
-    == Temporary directory /tmp/eb-aD_yNu has been removed.
+    == Temporary log file(s) /tmp/eb-N3tLAc/easybuild-teznGs.log* have been removed.
+    == Temporary directory /tmp/eb-N3tLAc has been removed.
