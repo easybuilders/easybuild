@@ -17,7 +17,7 @@ make v3.82 with GCC/4.8.2
 .. code::
 
     $ eb make-3.82-GCC-4.8.2.eb -x
-    == temporary log file in case of crash /tmp/eb-BHQ4Gy/easybuild-_3b0i_.log
+    == temporary log file in case of crash /tmp/eb-id7Ccr/easybuild-TyhJr9.log
 
     == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/m/make/make-3.82-GCC-4.8.2.eb
 
@@ -55,6 +55,7 @@ make v3.82 with GCC/4.8.2
     unpacking... [DRY RUN]
 
     [checksum_step method]
+    * expected checksum for make-3.82.tar.bz2: (none)
 
     [extract_step method]
       running command "tar xjf /home/example/eb/sources/m/make/make-3.82.tar.bz2"
@@ -189,8 +190,8 @@ make v3.82 with GCC/4.8.2
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-BHQ4Gy/easybuild-_3b0i_.log* have been removed.
-    == Temporary directory /tmp/eb-BHQ4Gy has been removed.
+    == Temporary log file(s) /tmp/eb-id7Ccr/easybuild-TyhJr9.log* have been removed.
+    == Temporary directory /tmp/eb-id7Ccr has been removed.
 
 
 .. _extended_dry_run_examples_WRF361_intel2015a:
@@ -201,7 +202,7 @@ WRF v3.6.1 with intel/2015a
 .. code::
 
     $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
-    == temporary log file in case of crash /tmp/eb-N3tLAc/easybuild-teznGs.log
+    == temporary log file in case of crash /tmp/eb-koVbqn/easybuild-rcZcuy.log
 
     == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
 
@@ -211,7 +212,7 @@ WRF v3.6.1 with intel/2015a
     Any errors that may occur are ignored and reported as warnings, on a per-step basis.
     Please be aware of this, and only use the information below for quick debugging purposes.
 
-    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***
+    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.pyc) ***
 
     == building and installing WRF/3.6.1-intel-2015a-dmpar...
     fetching files... [DRY RUN]
@@ -243,6 +244,11 @@ WRF v3.6.1 with intel/2015a
     unpacking... [DRY RUN]
 
     [checksum_step method]
+    * expected checksum for WRFV3.6.1.TAR.gz: (none)
+    * expected checksum for WRF_parallel_build_fix.patch: (none)
+    * expected checksum for WRF-3.6.1_netCDF-Fortran_separate_path.patch: (none)
+    * expected checksum for WRF-3.6.1_known_problems.patch: (none)
+    * expected checksum for WRF_tests_limit-runtimes.patch: (none)
 
     [extract_step method]
       running command "tar xzf /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz"
@@ -396,16 +402,16 @@ WRF v3.6.1 with intel/2015a
     testing... [DRY RUN]
 
     [test_step method]
-      export I_MPI_MPD_TMPDIR="/tmp/eb-N3tLAc"
+      export I_MPI_MPD_TMPDIR="/tmp/eb-koVbqn"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-N3tLAc/mpi_cmd_for-bqNzpT/mpdboot
-    file written: /tmp/eb-N3tLAc/mpi_cmd_for-bqNzpT/nodes
-      export I_MPI_MPD_TMPDIR="/tmp/eb-N3tLAc"
+    file written: /tmp/eb-koVbqn/mpi_cmd_for-Ei6agl/mpdboot
+    file written: /tmp/eb-koVbqn/mpi_cmd_for-Ei6agl/nodes
+      export I_MPI_MPD_TMPDIR="/tmp/eb-koVbqn"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-N3tLAc/mpi_cmd_for-jKuz7H/mpdboot
-    file written: /tmp/eb-N3tLAc/mpi_cmd_for-jKuz7H/nodes
+    file written: /tmp/eb-koVbqn/mpi_cmd_for-aK20sY/mpdboot
+    file written: /tmp/eb-koVbqn/mpi_cmd_for-aK20sY/nodes
 
     installing... [DRY RUN]
 
@@ -509,5 +515,6 @@ WRF v3.6.1 with intel/2015a
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-N3tLAc/easybuild-teznGs.log* have been removed.
-    == Temporary directory /tmp/eb-N3tLAc has been removed.
+    == Temporary log file(s) /tmp/eb-koVbqn/easybuild-rcZcuy.log* have been removed.
+    == Temporary directory /tmp/eb-koVbqn has been removed.
+
