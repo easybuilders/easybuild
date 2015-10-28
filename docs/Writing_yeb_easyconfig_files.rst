@@ -19,6 +19,17 @@ Useful links:
     :depth: 3
     :backlinks: none
 
+.. _easyconfig_yeb_format_requirements:
+
+Requirements
+------------
+
+To use ``.yeb`` easyconfigs, you need to have:
+
+* an EasyBuild (development) version which is aware of the ``.yeb`` format (i.e., version 2.3.0dev or higher)
+* `PyYAML <https://pypi.python.org/pypi/PyYAML>`_ installed and available in your Python search path
+  (via ``$PYTHONPATH`` for example), such that ``import yaml`` works
+
 .. _easyconfig_yeb_format_syntax:
 
 Syntax
@@ -54,37 +65,56 @@ Comments can be included anywhere, and are prefixed with a hash character ``#``:
 
     # this is a comment
 
-.. _internal_variables_yaml:
+
+.. _easyconfig_yeb_format_syntax_internal_variables:
 
 Internal variables
 ~~~~~~~~~~~~~~~~~~
 
-Variables can be defined using standard YAML anchors (using a '&'). These are later referenced using an asterisk (*).
-Example::
-    _internal_variables:
-        - &name foo_name
-        - &version 1.2.3
+To define and use temporary/internal variables in easyconfig files, which can be useful to avoid hardcoding (partial)
+easyconfig parameter values, the YAML anchor/alias functionality can be used
+(see also http://www.yaml.org/spec/1.2/spec.html#id2765878).
 
-    example_key: [*name, *version]  # will return [foo_name, 1.2.3]
+A value can be marked for future reference via an *anchor*, using the ampersand character '``&``'.
+Referring to it later is done using an asterisk character '``*``'.
 
-To concat strings and variables, or multiple variables together, use the !join operator
-(See `Concatenating strings and/or variables`_)
+Typically, internal variables are defined at the top of the ``.yeb`` easyconfig file using a list named
+``_internal_variables_``, but this is just a matter of style; anchors can be defined throughout the entire file if
+desired.
 
-.. _string_concatenation:
+For example, referring to the Python version being used in both the ``versionsuffix`` and list of dependencies can
+be done as follows::
+
+    _internal_variables_:
+        - &pyver 2.7.10
+
+    versionsuffix: !join [-Python-, *pyver]
+    dependencies:
+        - [Python, *pyver]
+
+In this example, the ``!join`` is used to concatenate two string values,
+see also :ref:`easyconfig_yeb_format_syntax_string_concatenation`.
+
+A more elaborate example of this is the :ref:`easyconfig_yeb_format_examples_goolf1410` example easyconfig.
+
+
+.. _easyconfig_yeb_format_syntax_string_concatenation:
 
 Concatenating strings and/or variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As string concatenation is not supported in YAML, we defined a !join operator. It takes a list of values to concatenate
-as argument. This list can contain both hard strings and variables.
-Example::
+The standard YAML format does not support the notion of string concatenation.
 
-    !join [foo, bar]  # returns 'foobar'
-    vars:
-        - &f foo
-        - &b bar
-    !join [*f, bar]  # returns 'foobar'
-    !join [*f, *b]  # returns 'foobar'
+Since concatenating string values is a common pattern in easyconfig files, the EasyBuild framework
+defines the ``!join`` operator to support this.
+
+For example, defining a ``versionsuffix`` that contains the Python version being used (which may be referred to
+elsewhere too) can be done as follows::
+
+    _internal_variables_:
+        - &pyver 2.7.10
+
+    versionsuffix: !join [-Python-, *pyver]
 
 
 .. _easyconfig_yeb_format_syntax_easyconfig_parameters:
@@ -98,6 +128,8 @@ In YAML terminology, an easyconfig file is expressed as a *mapping*, with easyco
 
 Three types of values (*nodes*) are supported: *scalars* (strings, integers), *sequences* (lists) and *mappings*
 (dictionaries).
+
+.. _easyconfig_yeb_format_syntax_scalars:
 
 Scalar values
 #############
@@ -125,6 +157,8 @@ Multiline strings can be expressed using indentation::
         gzip is a popular data compression program
         as a replacement for compress
 
+.. _easyconfig_yeb_format_syntax_sequences:
+
 Sequences
 #########
 
@@ -149,6 +183,8 @@ Example::
         - http://ftp.gnu.org/gnu/gzip/
         - ftp://ftp.gnu.org/gnu/gzip/
 
+.. _easyconfig_yeb_format_syntax_mappings:
+
 Mappings
 ########
 
@@ -158,6 +194,8 @@ a comma '``,``' to key-value pairs, and curly braces '``{``' '``}``' to mark the
 For example::
 
     toolchain: {name: intel, version: 2015b}
+
+.. _easyconfig_yeb_format_syntax_nesting:
 
 Nesting
 #######
@@ -170,6 +208,12 @@ For example, sequence values can be used in a mapping::
         files: [bin/gunzip, bin/gzip, bin/uncompress],
         dirs: [],
     }
+
+And sequences of sequences are also supported::
+
+    dependencies:
+        - [bzip2, 1.0.6]
+        - [Python, 2.7.10]
 
 
 .. _easyconfig_yeb_format_syntax_template_values_constants:
@@ -194,17 +238,23 @@ See also :ref:`easyconfig_param_templates`.
 Dependencies
 ~~~~~~~~~~~~
 
-Dependecies can be specified in nested lists, using the syntax as described above. To use variables, we refer to the
-part on `Internal variables`_.
+The list of (build) dependencies can be specified as list of lists, see also
+:ref:`easyconfig_yeb_format_syntax_nesting`.
 
-An example::
+A straightforward example::
 
     dependencies: [
         [libreadline, 6.3],
-        [Tcl, 8.6.4]
+        [Tcl, 8.6.4],
+    ]
+    builddependencies: [
+        # empty versionsuffix, different toolchain (GCC/4.9.2)
+        [CMake, 3.2.2, '', [GCC, 4.9.2],
     ]
 
-A more complicated (toolchain) example::
+A more complicated example from a toolchain easyconfig, where also the ``!join`` operator
+(see :ref:`easyconfig_yeb_format_syntax_string_concatenation`) and internal variables
+(see :ref:`easyconfig_yeb_format_syntax_internal_variables`) are used::
 
     _internal_variables_:
         - &comp_name GCC
@@ -226,7 +276,8 @@ A more complicated (toolchain) example::
         [ScaLAPACK, 2.0.2, !join [-, *blas, *blas_suff], *comp_mpi_tc]
     ]
 
-For the full version of this easyconfig file, see ``goolf v1.4.10 with dummy toolchain`` in the `Examples`_ section.
+For the full version of this easyconfig file, see the example ``.yeb`` easyconfig
+:ref:`easyconfig_yeb_format_examples_goolf1410`.
 
 
 .. _easyconfig_yeb_format_examples:
@@ -234,8 +285,12 @@ For the full version of this easyconfig file, see ``goolf v1.4.10 with dummy too
 Examples
 --------
 
-gzip v1.6 with ``GCC/4.9.2`` toolchain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _easyconfig_yeb_format_examples_gzip16_GCC492:
+
+gzip-1.6-GCC-4.9.2.yeb
+~~~~~~~~~~~~~~~~~~~~~~
+
+Example easyconfig for gzip v1.6 using the ``GCC/4.9.2`` toolchain.
 
 .. code::
 
@@ -265,9 +320,12 @@ gzip v1.6 with ``GCC/4.9.2`` toolchain
 
     moduleclass: tools
 
+.. _easyconfig_yeb_format_examples_goolf1410:
 
-goolf v1.4.10 with ``dummy`` toolchain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+goolf-1.4.10.yeb
+~~~~~~~~~~~~~~~~
+
+Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
 
 .. code::
 
