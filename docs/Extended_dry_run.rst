@@ -25,8 +25,8 @@ produces.
 
 .. _extended_dry_run_notes_differences:
 
-Reported build/install procedure may be (slightly) different
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Build/install procedure reported by dryn run may be (slightly) different
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The actual build and install procedure may (slightly) differ from the one reported by ``--extended-dry-run``,
 due to conditional checks in the easyblock being used.
@@ -36,8 +36,8 @@ will always be false, since the build directory is never actually populated.
 
 .. _extended_dry_run_notes_ignored_errors:
 
-Errors are ignored
-~~~~~~~~~~~~~~~~~~
+Errors are ignored (by default) during dry run
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Any errors that occur are ignored, and are reported with a clear warning message.
 This is done because it is not unlikely that these errors occur because of the dry run mechanism.
@@ -234,7 +234,8 @@ and how they are applied::
       (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
 Likewise, runtime patching performed by the easyblock itself can not work either. If the ``apply_regex_substitutions``
-function (available from ``easybuild.tools.filetools``) is used, a clear overview is included in the dry run output.
+function (available from ``easybuild.tools.filetools``) is used, a clear overview is included in the dry run output
+(see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching`).
 
 For example, in the ``configure`` step of the WRF easyblock when using the Intel compilers, this yields::
 
@@ -399,7 +400,8 @@ Shell commands are not executed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Any shell commands that are executed via the ``run_cmd`` and ``run_cmd_qa`` functions that are provided by the
-EasyBuild framework via the ``easybuild.tools.run`` are *not* executed, only reported.
+EasyBuild framework via the ``easybuild.tools.run`` are *not* executed, only reported
+(see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`).
 
 This typically includes the commands that are defined in the easyblockto be run as a part of the
 configure/build/install steps.
