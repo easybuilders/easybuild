@@ -3,8 +3,9 @@
 Extended dry run
 ================
 
-Using ``--extended-dry-run`` or ``-x`` (supported since EasyBuild v2.4.0), a detailed overview of the build and install
-procedure that EasyBuild is going to execute can be obtained almost instantly.
+Using ``--extended-dry-run`` or ``-x`` (supported since EasyBuild v2.4.0, see release notes for
+:ref:`release_notes_eb240`), a detailed overview of the build and install procedure that EasyBuild is going to execute
+can be obtained almost instantly.
 
 All time-consuming operations, including executing commands to configure/build/install the software,
 are only *reported* rather than being actually performed.
@@ -40,7 +41,7 @@ Errors are ignored (by default) during dry run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Any errors that occur are ignored, and are reported with a clear warning message.
-This is done because it is not unlikely that these errors occur because of the dry run mechanism.
+This is done because it is possible that these errors occur because of the dry run mechanism.
 
 For example, the install step could assume that certain files created by a previous step will be present, but they
 will not be there since the commands that are supposed to produce them were not actually performed in dry run mode.
@@ -403,7 +404,7 @@ Any shell commands that are executed via the ``run_cmd`` and ``run_cmd_qa`` func
 EasyBuild framework via the ``easybuild.tools.run`` are *not* executed, only reported
 (see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`).
 
-This typically includes the commands that are defined in the easyblockto be run as a part of the
+This typically includes the commands that are defined in the easyblock to be run as a part of the
 configure/build/install steps.
 
 For example::
