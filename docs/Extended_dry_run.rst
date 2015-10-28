@@ -76,6 +76,8 @@ Overview of dry run mechanism
 
 During an extended dry run, several operations are not performed, or are only simulated.
 
+The sections below give a detailed overview of the dry run mechanism.
+
 .. _extended_dry_run_overview_build_install_dirs:
 
 Temporary directories as build/install directories
@@ -234,19 +236,21 @@ the step in which it is being performed being aborted (see :ref:`extended_dry_ru
 
 .. _extended_dry_run_overview_module_load:
 
-``module load`` statements are executed or simulated
+Module ``load`` statements are executed or simulated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``module load`` statements are either effectively executed or simulated, dependending on whether the corresponding
 module files are available or not.
 
-Available modules
-^^^^^^^^^^^^^^^^^
+.. _extended_dry_run_overview_module_load_available:
+
+Available modules are loaded
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``module load`` statements are fairly light-weight, so they are effectively executed if the module being loaded is
 available.
 
-The dry run output includes an overview of the modules being loaded. In addition, an overview of
+The dry run output includes an overview of the modules being loaded. In addition an overview of
 all loaded modules, including the ones that were loaded indirectly, is shown.
 
 For example::
@@ -266,8 +270,10 @@ For example::
       1) GCC/4.8.2
       2) M4/1.4.17-GCC-4.9.2
 
-Non-available modules
-^^^^^^^^^^^^^^^^^^^^^
+.. _extended_dry_run_overview_module_load_simulated:
+
+Loading of non-available modules is simulated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the module file required to execute a particular ``module load`` statement is not available, the dry run mechanism
 will *simulate* the loading of the module.
@@ -292,8 +298,10 @@ The ``module load`` statements that were simulated rather than actually performe
 Only modules that were effectively loaded will appear in the full list of modules being printed; modules for which
 the load was simulated will not be included.
 
-Non-available modules for dependencies
-######################################
+.. _extended_dry_run_overview_module_load_simulated_deps:
+
+Simulated loading of non-available *dependency* modules
+#######################################################
 
 For dependencies, simulating a ``module load`` statement basically (only) entails defining the ``$EBROOT*`` and
 ``$EBVERSION*`` environment variables (the full variable names are determined by the software name), which are picked
@@ -314,14 +322,17 @@ the dry run output::
         setenv	NETCDF		"$EBROOTNETCDF"
         setenv	NETCDFF		"$EBROOTNETCDFMINFORTRAN"
 
-Non-available module for toolchain
-##################################
+.. _extended_dry_run_overview_module_load_simulated_toolchain:
+
+Simulated loading of non-available *toolchain* module
+#####################################################
 
 When the module that corresponds to the toolchain being used is not available, the dry run mechanism will also simulate
 the ``module load`` statements for the individual toolchain components, to ensure that version checks on the toolchain
 components can work as expected.
 
-For example, if the toolchain module ``intel/2015a`` is not available::
+For example, if the toolchain module ``intel/2015a`` is not available, the loading of the ``icc``, ``ifort``, ``impi``
+and ``imkl`` modules that would be loaded by the ``intel`` module is also simulated::
 
     [prepare_step method]
     Defining build environment, based on toolchain (options) and specified dependencies...
@@ -343,8 +354,8 @@ Build environment is reported
 The build environment that is set up based on the toolchain (and toolchain options) being used, and the dependencies
 being loaded is reported as a part of the dry run output.
 
-For example, when ``GCC`` is used as a toolchain something like this will be included (in the ``prepare_step`` part
-of the dry run output)::
+For example, when ``GCC`` is used as a toolchain something like this will be included in the ``prepare_step`` part
+of the dry run output::
 
     Defining build environment...
 
@@ -376,7 +387,8 @@ Shell commands are not executed
 Any shell commands that are executed via the ``run_cmd`` and ``run_cmd_qa`` functions that are provided by the
 EasyBuild framework via the ``easybuild.tools.run`` are *not* executed, only reported.
 
-This typically includes the configure/build/install commands.
+This typically includes the commands that are defined in the easyblockto be run as a part of the
+configure/build/install steps.
 
 For example::
 
@@ -404,8 +416,9 @@ For example::
       running command " make install "
       (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
 
-There are a couple of minor exceptions though, some (light-weight) commands are always run by the EasyBuild framework,
-even in dry run mode.
+There are a couple of minor exceptions though. Some (light-weight) commands are always run by the EasyBuild framework,
+even in dry run mode, and an easyblock can specify that particular commands *must* always be run
+(see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`).
 
 .. _extended_dry_run_overview_sanity_check:
 
@@ -414,8 +427,8 @@ Sanity check paths/commands are not checked
 
 Since nothing is actually being installed during a dry run, the sanity check paths/commands can not be checked.
 
-Instead, the dry run mechanism will produce a clear overview of which paths are expected to be found, and which
-commands are expected to work.
+Instead, the dry run mechanism will produce a clear overview of which paths are expected to be found in the
+installation directory, and which commands are expected to work (if any).
 
 For example::
 
@@ -444,11 +457,12 @@ Module file is incomplete and only printed
 During a dry run, the contents of the module file that would be installed is still generated, but only printed; it
 is not actually written to file.
 
-More importantly however, the module file being reported is bound to be incomplete, since the module generator only
-includes some statements under the condition that the files/directories to which they relate actually exist.
-This typically affects ``prepend-path`` statements, for example for ``$PATH``, ``$LD_LIBRARY_PATH``, etc.
+More importantly however, the module file being reported is bound to be **incomplete**, since the module generator
+only includes certain statements conditionally, for example only if the files/directories to which they relate
+actually exist. This typically affects ``prepend-path`` statements, e.g. for ``$PATH``, ``$LD_LIBRARY_PATH``,
+etc.
 
-For example, the reported module file for make v3.82 built with ``GCC/4.8.2`` looks something like::
+For example, the reported module file for make v3.82 built with ``GCC/4.8.2`` may look something like::
 
     creating module... [DRY RUN]
 
@@ -486,23 +500,165 @@ Guidelines for easyblocks
 -------------------------
 
 To ensure useful output under ``--extended-dry-run``, easyblocks should be implemented keeping in mind that some
-operations are possible not performed, to avoid running generating errors. Although errors are ignored by the dry run
-mechanism on a per-step basis, they may hide subsequent operations and useful information for the remainder of the step.
+operations are possible not performed, to avoid generating errors in dry run mode.
+
+Although errors are just ignored by the dry run mechanism on a per-step basis, they may hide subsequent operations and
+useful information for the remainder of the step.
+
+.. _extended_dry_run_guidelines_easyblocks_detect_dry_run:
+
+Detecting dry run mode and enhancing the dry run output
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To detect whether an easyblock is being used in dry run mode, it suffices to check the ``self.dry_run`` class variable.
+
+Additional messages can be included in the dry run output using the ``self.dry_run_msg`` method.
+
+For example::
+
+    class ExampleEasyBlock(EasyBlock):
+
+        def configure_step(self):
+
+            if self.dry_run:
+                self.dry_run_msg("Dry run mode detected, not reading template configuration files")
+                ...
 
 .. _extended_dry_run_guidelines_easyblocks_framework_functions:
 
 Use functions provided by the EasyBuild framework
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``setvar``, ``write_file``, ``apply_regex_substitutions``, ``run_cmd``, ``run_cmd_qa``
+The EasyBuild framework provides a bunch of functions that are "*dry run-aware*", and which can significantly help
+in keeping easyblocks free from conditional statements checking ``self.dry_run``.
 
-.. _extended_dry_run_guidelines_easyblocks_verbosity:
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_setvar:
 
-Disable verbosity for selected operations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Defining environment variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``run_cmd(..., verbose=False)``
-``setvar(..., verbose=False)``
+For defining environment variables, the ``setvar`` function available in the ``easybuild.tools.environment`` module
+should be used.
+
+For example, from the WRF easyblock::
+
+    jasper = get_software_root('JasPer')
+    if jasper:
+        env.setvar('JASPERINC', os.path.join(jasper, 'include'))
+
+When triggered in dry run mode, this will result in a clear dry run message like::
+
+      export JASPERINC="$EBROOTJASPER/include"
+ 
+The actual output depends on whether or not the required module for ``JasPer`` is available
+(see :ref:`extended_dry_run_overview_module_load_simulated_deps`).
+
+Silently defining environment variables
+#######################################
+
+The ``setvar`` function also supports defining environment variables *silently*, i.e. without producing a
+corresponding dry run message, via the named argument ``verbose``.
+
+This is used in a couple of places in the EasyBuild framework, to avoid some environment variables being defined
+cluttering the dry run output without added value. It can be used for similar reasons in easyblocks.
+
+For example, the ``PythonPackage`` uses it in the *install* step, to modify ``$PYTHONPATH`` as required by the
+``python setup.py install`` procedure (which is considered not relevant to include in the dry run output, since
+it's a technicality)::
+
+    env.setvar('PYTHONPATH', new_pythonpath, verbose=False)
+
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_write_file:
+
+Writing or appending to files: ``write_file``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For writing and appending to files, the EasyBuild framework provides the ``write_file`` function (available from
+the ``easybuild.tools.filetools`` module).
+
+Using it is straightforward, for example::
+
+    write_file('example.txt', "Contents for the example file")
+
+To append to an existing file, ``write_file`` support a named argument ``append``.
+
+When used in dry run mode, ``write_file`` does not actually (attempt to) write to the file; instead, it just produces
+an appropriate dry run message and returns.
+
+For example::
+
+    file written: /tmp/eb-ksVC07/tmp.conf
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching:
+
+Runtime patching of files: ``apply_regex_substitutions``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To make runtime patching of files in easyblocks easier, and to do it with taking the possibility of being in dry run
+module into account, the EasyBuild framework provides the ``apply_regex_substitutions`` function (available from the
+``easybuild.tools.filetools`` module, since EasyBuild v2.4.0).
+
+This function takes two arguments: a path to the file that should be patched, and a list of tuples specifying the regular
+expression pattern to match on, and the string value that should be used as replacement text.
+
+For example (simple fictional example)::
+
+    # replace value for C++ compiler
+    apply_regex_substitutions('config.mk', [('^(CPLUSPLUS\s*=).*', '\1 %s' % os.environ['CXX'])])
+
+When used in dry run mode, it will produce a message like::
+
+    applying regex substitutions to file config.mk
+      * regex pattern '^(CPLUSPLUS\s*=\s).*', replacement string '\1 g++'
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd:
+
+Executing commands: ``run_cmd`` and ``run_cmd_qa``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To execute shell commands, the ``run_cmd`` and ``run_cmd_qa`` functions are provided by the EasyBuild framework in the
+``easybuild.tools.run`` module, with the latter providing support for running interactive commands.
+
+In their simplest form, they simply take the command to execute as a string. For example::
+
+      run_cmd("tcsh ./compile -j %s wrf" % self.cfg['parallel'])
+
+In dry run mode, these functions just produce a dry run message, rather than actually executing the specified command.
+For example::
+
+      running command "tcsh ./compile -j 4 wrf"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+
+Take into account that the directory included in the message may not be 100% accurate,
+see :ref:`extended_dry_run_overview_build_dir_guess`.
+
+Silently executing commands
+###########################
+
+The ``verbose`` named argument supported by the ``run_cmd`` function allows to execute a particular command silently,
+i.e. without producing a dry run message.
+
+For example::
+
+    # only run for debugging purposes
+    run_cmd("ulimit -v", verbose=False)
+
+Forced execution of particular commands
+#######################################
+
+Sometimes, it can be required that specific (light-weight) commands are *always* executed, because they have
+side-effects that are assumed to have taken place later in the easyblock.
+
+For this, the ``run_cmd`` function support another named argument, i.e. ``forced``.
+When set to ``True``, the specified command will always be executed, even when in dry run mode.
+
+This is mainly intended for use in the EasyBuild framework itself, where commands that verify certain things must
+be executed, but it can also be useful for easyblocks (if used correctly).
+
+For example::
+
+    out, exit_code = run_cmd("type module", simple=False, forced=True)
 
 .. _extended_dry_run_guidelines_files_dirs_checks:
 
