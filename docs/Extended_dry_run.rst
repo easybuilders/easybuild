@@ -712,7 +712,7 @@ Forced execution of particular commands
 Sometimes, it can be required that specific (light-weight) commands are *always* executed, because they have
 side-effects that are assumed to have taken place later in the easyblock.
 
-For this, the ``run_cmd`` function support another named argument, i.e. ``forced``.
+For this, the ``run_cmd`` function support another named argument, i.e. ``force_in_dry_run``.
 When set to ``True``, the specified command will always be executed, even when in dry run mode.
 
 This is mainly intended for use in the EasyBuild framework itself, where commands that verify certain things must
@@ -720,7 +720,7 @@ be executed, but it can also be useful for easyblocks (if used correctly).
 
 For example::
 
-    out, exit_code = run_cmd("type module", simple=False, forced=True)
+    out, exit_code = run_cmd("type module", simple=False, force_in_dry_run=True)
 
 
 Example output
