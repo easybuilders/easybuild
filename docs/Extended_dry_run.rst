@@ -69,6 +69,20 @@ At the end of dry run output, anonother warning message is shown if any ignored 
     !!! WARNING: One or more errors were ignored, see warnings above
     !!!
 
+.. _extended_dry_run_notes_ignored_errors_disabling:
+
+Disabling ignoring errors during dry run
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ignoring errors that occur during a dry run is enabled by default; it can be disabled using the configuration option
+that is available for it, i.e. by:
+
+* the ``--disable-extended-dry-run-ignore-errors`` command line option
+* by defining the ``$EASYBUILD_DISABLE_EXTENDED_DRY_RUN_IGNORE_ERRORS`` environment variable
+* or by defining ``disable-extended-dry-run-ignore-errors`` in an EasyBuild configuration file
+
+(see also :ref:`configuring_easybuild`)
+
 .. _extended_dry_run_overview:
 
 Overview of dry run mechanism
