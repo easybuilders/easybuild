@@ -17,7 +17,7 @@ make v3.82 with GCC/4.8.2
 .. code::
 
     $ eb make-3.82-GCC-4.8.2.eb -x
-    == temporary log file in case of crash /tmp/eb-id7Ccr/easybuild-TyhJr9.log
+    == temporary log file in case of crash /tmp/eb-ksVC07/easybuild-MmAugb.log
 
     == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/m/make/make-3.82-GCC-4.8.2.eb
 
@@ -76,6 +76,10 @@ make v3.82 with GCC/4.8.2
 
     Loading modules for dependencies...
 
+
+    Full list of loaded modules:
+      1) GCC/4.8.2
+
     Defining build environment...
 
       export CC="gcc"
@@ -91,9 +95,6 @@ make v3.82 with GCC/4.8.2
       export LIBS="-lm -lpthread"
       export OPTFLAGS="-O2"
       export PRECFLAGS=""
-
-    Full list of loaded modules:
-      1) GCC/4.8.2
 
     configuring... [DRY RUN]
 
@@ -190,8 +191,8 @@ make v3.82 with GCC/4.8.2
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-id7Ccr/easybuild-TyhJr9.log* have been removed.
-    == Temporary directory /tmp/eb-id7Ccr has been removed.
+    == Temporary log file(s) /tmp/eb-ksVC07/easybuild-MmAugb.log* have been removed.
+    == Temporary directory /tmp/eb-ksVC07 has been removed.
 
 
 .. _extended_dry_run_examples_WRF361_intel2015a:
@@ -202,7 +203,7 @@ WRF v3.6.1 with intel/2015a
 .. code::
 
     $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
-    == temporary log file in case of crash /tmp/eb-koVbqn/easybuild-rcZcuy.log
+    == temporary log file in case of crash /tmp/eb-Dh1wOp/easybuild-0bu9u9.log
 
     == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
 
@@ -212,7 +213,7 @@ WRF v3.6.1 with intel/2015a
     Any errors that may occur are ignored and reported as warnings, on a per-step basis.
     Please be aware of this, and only use the information below for quick debugging purposes.
 
-    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.pyc) ***
+    *** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***
 
     == building and installing WRF/3.6.1-intel-2015a-dmpar...
     fetching files... [DRY RUN]
@@ -290,6 +291,10 @@ WRF v3.6.1 with intel/2015a
     module load netCDF-Fortran/4.4.0-intel-2015a [SIMULATED]
     module load tcsh/6.18.01-intel-2015a [SIMULATED]
 
+    Full list of loaded modules:
+      (none)
+
+
     !!!
     !!! WARNING: Not all FFTW interface libraries ['fftw3xc_intel', 'mkl_intel_lp64', 'mkl_sequential', 'mkl_core'] are found in ['$EBROOTIMKL/mkl/lib/intel64', '$EBROOTIMKL/compiler/lib/intel64'], can't set $FFT_LIB.
     !!!
@@ -365,9 +370,6 @@ WRF v3.6.1 with intel/2015a
       export SCALAPACK_MT_STATIC_LIBS="libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a"
       export SCALAPACK_STATIC_LIBS="libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a"
 
-    Full list of loaded modules:
-      (none)
-
     configuring... [DRY RUN]
 
     [configure_step method]
@@ -402,16 +404,16 @@ WRF v3.6.1 with intel/2015a
     testing... [DRY RUN]
 
     [test_step method]
-      export I_MPI_MPD_TMPDIR="/tmp/eb-koVbqn"
+      export I_MPI_MPD_TMPDIR="/tmp/eb-Dh1wOp"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-koVbqn/mpi_cmd_for-Ei6agl/mpdboot
-    file written: /tmp/eb-koVbqn/mpi_cmd_for-Ei6agl/nodes
-      export I_MPI_MPD_TMPDIR="/tmp/eb-koVbqn"
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-nzyh5V/mpdboot
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-nzyh5V/nodes
+      export I_MPI_MPD_TMPDIR="/tmp/eb-Dh1wOp"
       export PBS_ENVIRONMENT="PBS_BATCH_MPI"
       export I_MPI_PROCESS_MANAGER="mpd"
-    file written: /tmp/eb-koVbqn/mpi_cmd_for-aK20sY/mpdboot
-    file written: /tmp/eb-koVbqn/mpi_cmd_for-aK20sY/nodes
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-hIOEd_/mpdboot
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-hIOEd_/nodes
 
     installing... [DRY RUN]
 
@@ -515,6 +517,6 @@ WRF v3.6.1 with intel/2015a
     (no ignored errors during dry run)
 
     == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-koVbqn/easybuild-rcZcuy.log* have been removed.
-    == Temporary directory /tmp/eb-koVbqn has been removed.
+    == Temporary log file(s) /tmp/eb-Dh1wOp/easybuild-0bu9u9.log* have been removed.
+    == Temporary directory /tmp/eb-Dh1wOp has been removed.
 

@@ -21,19 +21,38 @@ Important notes
 ---------------
 
 There are a couple of things you should be aware of when using ``--extended-dry-run`` and interpreting the output it
-produces:
+produces.
 
-* The **actual build and install procedure may differ** from the one reported by ``--extended-dry-run``,
-  due to conditional checks in the easyblock being used. For example, statements that are conditional on the presence
-  of certain files or directories in the build directory will always be false, since the build directory is never
-  actually populated. See for example :ref:`extended_dry_run_overview_wrong_build_dir`.
+.. _extended_dry_run_notes_differences:
 
-* **Any errors that occur are ignored**, and are reported with a clear warning message. This is done because it is not
-  unlikely that these errors occur because of the dry run mechanism; for example, the install step could require that
-  certain files created during a previous step are present. However, it is also possible that these errors occur due
-  to a bug in the easyblock being used, so it is important to pay attention to them.
+Reported build/install procedure may be (slightly) different
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  Ignored errors are reported as follows::
+The actual build and install procedure may (slightly) differ from the one reported by ``--extended-dry-run``,
+due to conditional checks in the easyblock being used.
+
+For example, expressions that are conditional on the presence of certain files or directories in the build directory
+will always be false, since the build directory is never actually populated.
+
+.. _extended_dry_run_notes_ignored_errors:
+
+Errors are ignored
+~~~~~~~~~~~~~~~~~~
+
+Any errors that occur are ignored, and are reported with a clear warning message.
+This is done because it is not unlikely that these errors occur because of the dry run mechanism.
+
+For example, the install step could assume that certain files created by a previous step will be present, but they
+will not be there since the commands that are supposed to produce them were not actually performed in dry run mode.
+
+Errors are ignored *on a per-step basis*. When an error is ignored in a particular step, that step is aborted,
+which may result in partial dry run output for that particular step. Subsequent steps will still be run (in dry run
+mode), however.
+
+Since it's possible that these errors occur due to a bug in the easyblock being used, it's important to pay
+attention to these ignored errors.
+
+Ignored errors are reported as follows, for example::
 
     == testing... [DRY RUN]
 
@@ -42,7 +61,7 @@ produces:
     !!! WARNING: ignoring error "[Errno 2] No such file or directory: 'test'"
     !!!
 
-  At the end of dry run output, anonother warning message is shown if any ignored errors occurred::
+At the end of dry run output, anonother warning message is shown if any ignored errors occurred::
 
     == COMPLETED: Installation ended successfully
 
@@ -72,29 +91,34 @@ values in easyconfig files.
 
 Although the build and install directories are effectively temporary directories during a dry run (under a prefix like
 ``/tmp/eb-aD_yNu/__ROOT__``), this is not visible in the dry run output: the 'fake' build and install directories are
-replaced by the corresponding original value in the dry run output::
+replaced by the corresponding original value in the dry run output. For example::
 
     [extract_step method]
       running command "tar xzf /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz"
       (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
 
-.. _extended_dry_run_overview_wrong_build_dir:
+.. _extended_dry_run_overview_build_dir_guess:
 
 Note on build directory in dry run mode
-#######################################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The build directory used during an actual (non-dry run) EasyBuild session is most likely going to be slightly
-different, since EasyBuild typically moves into the subdirectory that is created by unpacking the first
-source file.
+The build (sub)directory used during an actual (non-dry run) EasyBuild session may be different than the one mentioned
+in the dry run output.
 
-For example, while you may see this in the dry run output::
+This is because during a dry run, EasyBuild will *guess* the name of the subdirectory that is created by unpacking the
+first source file in the build directory as being ``<name>-<version>``.
+Although this is a common pattern, it is not always 100% correct.
+
+For example, you may see this in the dry run output for WRF (for which a build-in-installdir procedure is used)::
 
     [build_step method]
-      running command " make -j 4"
-      (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
+      running command "tcsh ./compile -j 4 wrf"
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
 
-However, the actual build directory is more likely to be one level deeper, for example
-``/tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2/bzip2-1.0.6``.
+
+The actual build (and install) subdirectory is slightly different while not in dry run mode however, i.e.:
+``/home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRFV3``.
+
 
 .. _extended_dry_run_overview_downloading:
 
@@ -103,7 +127,7 @@ No downloading of missing source files/patches
 
 Required files (source files/patches) are not downloaded during a dry run if they are not available yet.
 
-The dry run output will specify whether files are have been found (and if so, at which path) or not; the exact output
+The dry run output will specify whether files are found (and if so, at which path) or not; the exact output
 for files that were not found depends on whether or not source URLs are available.
 
 For example: if the required source file for ``bzip2`` is not available yet, it is indicated where EasyBuild
@@ -132,6 +156,10 @@ In case no source URLs are available and required files are missing, they are si
     List of sources:
       * bzip2-1.0.6.tar.bz2 (MISSING)
 
+However, since the dry run mechanism never actually uses the source files/patches, this does not affect the
+remainder of the output of ``--extended-dry-run``/``-x``.
+
+
 .. _extended_dry_run_overview_checksum_verification:
 
 Checksum verification is skipped
@@ -139,7 +167,16 @@ Checksum verification is skipped
 
 Computing checksums of sources files/patches, and verifying them against specified checksums (if available) is
 *skipped* during a dry run, because it is considered potentially too time-consuming.
-In addition source files/patches may not be available anyway.
+In addition, source files/patches may not be available anyway.
+
+If checksums are available they are only reported, for example (for GCC v4.9.3)::
+
+    [checksum_step method]
+    * expected checksum for gcc-4.9.3.tar.bz2: 6f831b4d251872736e8e9cc09746f327
+    * expected checksum for gmp-6.0.0a.tar.bz2: b7ff2d88cae7f8085bd5006096eed470
+    * expected checksum for mpfr-3.1.2.tar.gz: 181aa7bb0e452c409f2788a4a7f38476
+    * expected checksum for mpc-1.0.2.tar.gz: 68fadff3358fb3e7976c7a398a0af4c3
+    * expected checksum for mpfr-3.1.2-allpatches-20141204.patch: 58aec98d15982f9744a043d2f1c5af82
 
 .. _extended_dry_run_overview_unpacking_sources:
 
@@ -152,11 +189,11 @@ Additionally, source files may not be available anyway.
 This has a number of implications:
 
 * files or directories that may be expected to be there are not, which may lead to (ignored) errors
-  if the used easyblock does not take this into account (see also :ref:`extended_dry_run_notes`)
-* the build directory in which commands are executed is likely incorrect in the dry run output
-  (see also :ref:`extended_dry_run_overview_wrong_build_dir`)
+  if the used easyblock does not take this into account (see also :ref:`extended_dry_run_notes_ignored_errors`)
+* the build directory in which commands are executed may be incorrect in the dry run output
+  (see also :ref:`extended_dry_run_overview_build_dir_guess`)
 
-The extraction command is mentioned however::
+The extraction command is mentioned in the dry run output however, for example::
 
     [extract_step method]
       running command "tar xjf bzip2-1.0.6.tar.bz2"
@@ -181,7 +218,7 @@ and how they are applied::
       (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
 
 Likewise, runtime patching performed by the easyblock itself can not work either. If the ``apply_regex_substitutions``
-function (available from ``easybuild.tools.filetools``), is used, a clear overview is included in the dry run output.
+function (available from ``easybuild.tools.filetools``) is used, a clear overview is included in the dry run output.
 
 For example, in the ``configure`` step of the WRF easyblock when using the Intel compilers, this yields::
 
@@ -191,35 +228,256 @@ For example, in the ``configure`` step of the WRF easyblock when using the Intel
       * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'
       * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'
 
+If the ``apply_regex_substitutions`` function provided for runtime patching is not used (and ``fileinput`` is used
+directly, for example), runtime patching performed by the easyblock will most likely result in an error, leading to
+the step in which it is being performed being aborted (see :ref:`extended_dry_run_notes_ignored_errors`).
+
 .. _extended_dry_run_overview_module_load:
 
 ``module load`` statements are executed or simulated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``module load`` statements for dependencies and toolchain for which no module file is available yet are *simulated*;
-  if the module file does exist, it is loaded
+``module load`` statements are either effectively executed or simulated, dependending on whether the corresponding
+module files are available or not.
+
+Available modules
+^^^^^^^^^^^^^^^^^
+
+``module load`` statements are fairly light-weight, so they are effectively executed if the module being loaded is
+available.
+
+The dry run output includes an overview of the modules being loaded. In addition, an overview of
+all loaded modules, including the ones that were loaded indirectly, is shown.
+
+For example::
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load GCC/4.9.2
+
+    Loading modules for dependencies...
+
+    module load M4/1.4.17-GCC-4.9.2
+
+    Full list of loaded modules:
+      1) GCC/4.8.2
+      2) M4/1.4.17-GCC-4.9.2
+
+Non-available modules
+^^^^^^^^^^^^^^^^^^^^^
+
+If the module file required to execute a particular ``module load`` statement is not available, the dry run mechanism
+will *simulate* the loading of the module.
+
+The ``module load`` statements that were simulated rather than actually performed are clearly indicated using
+``[SIMULATED]`` in the dry run output, for example::
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load intel/2015a
+
+    Loading modules for dependencies...
+
+    module load JasPer/1.900.1-intel-2015a
+    module load netCDF/4.3.2-intel-2015a [SIMULATED]
+    module load netCDF-Fortran/4.4.0-intel-2015a [SIMULATED]
+    module load tcsh/6.18.01-intel-2015a
+
+Only modules that were effectively loaded will appear in the full list of modules being printed; modules for which
+the load was simulated will not be included.
+
+Non-available modules for dependencies
+######################################
+
+For dependencies, simulating a ``module load`` statement basically (only) entails defining the ``$EBROOT*`` and
+``$EBVERSION*`` environment variables (the full variable names are determined by the software name), which are picked
+up by resp. the ``get_software_root`` and ``get_software_version`` functions often used in easyblocks.
+
+The ``$EBVERSION*`` environment variable is defined with the actual software version of the dependency.
+
+For the ``$EBROOT*`` environment variable, the name of the environment variable itself prefixed with a '``$``'
+is used as a dummy value, rather than using an fake installation software prefix.
+For example, when simulating the load statement for a ``GCC`` module, the environment variable ``$EBROOTGCC`` is
+defined as the string value ``'$EBROOTGCC'`` (literally).
+
+This results in sensible output when this value is picked up via ``get_software_root`` by the easyblock.
+
+For example, for netCDF used as a dependency for WRF the following is included in the module file contents included in
+the dry run output::
+
+        setenv	NETCDF		"$EBROOTNETCDF"
+        setenv	NETCDFF		"$EBROOTNETCDFMINFORTRAN"
+
+Non-available module for toolchain
+##################################
+
+When the module that corresponds to the toolchain being used is not available, the dry run mechanism will also simulate
+the ``module load`` statements for the individual toolchain components, to ensure that version checks on the toolchain
+components can work as expected.
+
+For example, if the toolchain module ``intel/2015a`` is not available::
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load icc/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load ifort/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2 [SIMULATED]
+    module load intel/2015a [SIMULATED]
+
+
+.. _extended_dry_run_build_environment:
+
+Build environment is reported
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The build environment that is set up based on the toolchain (and toolchain options) being used, and the dependencies
+being loaded is reported as a part of the dry run output.
+
+For example, when ``GCC`` is used as a toolchain something like this will be included (in the ``prepare_step`` part
+of the dry run output)::
+
+    Defining build environment...
+
+      export CC="gcc"
+      export CFLAGS="-O2"
+      export CXX="g++"
+      export CXXFLAGS="-O2"
+      export F77="gfortran"
+      export F90="gfortran"
+      export F90FLAGS="-O2"
+      export FFLAGS="-O2"
+      export FLIBS="-lgfortran"
+      export LDFLAGS="-L/home/example/eb/software/GCC/4.8.2/lib"
+      export LIBS="-lm -lpthread"
+      export OPTFLAGS="-O2"
+      export PRECFLAGS=""
+
+This is particularly useful as an overview of which environment variables that are defined by the toolchain mechanism,
+and to assess the effect of changing toolchain options.
+
+The output is deliberately formatted such that is can be easily copy-pasted, which can be useful to mimic the
+environment in which EasyBuild will perform the build and install procedure.
 
 .. _extended_dry_run_overview_run_cmd:
 
 Shell commands are not executed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* shell commands, typically including configure/build/install commands, are *not* executed
-  (except for some light-weight commands that are forcibly run by the EasyBuild framework)
+Any shell commands that are executed via the ``run_cmd`` and ``run_cmd_qa`` functions that are provided by the
+EasyBuild framework via the ``easybuild.tools.run`` are *not* executed, only reported.
+
+This typically includes the configure/build/install commands.
+
+For example::
+
+    configuring... [DRY RUN]
+
+    [configure_step method]
+      running command " ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 "
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    building... [DRY RUN]
+
+    [build_step method]
+      running command " make -j 4 "
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    ...
+
+    installing... [DRY RUN]
+
+    [stage_install_step method]
+
+    [make_installdir method]
+
+    [install_step method]
+      running command " make install "
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+There are a couple of minor exceptions though, some (light-weight) commands are always run by the EasyBuild framework,
+even in dry run mode.
 
 .. _extended_dry_run_overview_sanity_check:
 
 Sanity check paths/commands are not checked
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* the sanity check paths/commands are *not* checked (since they would fail anyway), and are only reported
+Since nothing is actually being installed during a dry run, the sanity check paths/commands can not be checked.
+
+Instead, the dry run mechanism will produce a clear overview of which paths are expected to be found, and which
+commands are expected to work.
+
+For example::
+
+    sanity checking... [DRY RUN]
+
+    [sanity_check_step method]
+    Sanity check paths - file ['files']
+      * WRFV3/main/ideal.exe
+      * WRFV3/main/libwrflib.a
+      * WRFV3/main/ndown.exe
+      * WRFV3/main/nup.exe
+      * WRFV3/main/real.exe
+      * WRFV3/main/tc.exe
+      * WRFV3/main/wrf.exe
+    Sanity check paths - (non-empty) directory ['dirs']
+      * WRFV3/main
+      * WRFV3/run
+    Sanity check commands
+      (none)
 
 .. _extended_dry_run_overview_no_downloading:
 
 Module file is incomplete and only printed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* no module file is generated; the contents of the would-be generated module is printed (but is very likely incomplete)
+During a dry run, the contents of the module file that would be installed is still generated, but only printed; it
+is not actually written to file.
+
+More importantly however, the module file being reported is bound to be incomplete, since the module generator only
+includes some statements under the condition that the files/directories to which they relate actually exist.
+This typically affects ``prepend-path`` statements, for example for ``$PATH``, ``$LD_LIBRARY_PATH``, etc.
+
+For example, the reported module file for make v3.82 built with ``GCC/4.8.2`` looks something like::
+
+    creating module... [DRY RUN]
+
+    [make_module_step method]
+    Generating module file /home/example/eb/modules/all/make/3.82-GCC-4.8.2, with contents:
+
+        #%Module
+        proc ModulesHelp { } {
+            puts stderr { make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html
+            }
+        }
+        
+        module-whatis {Description: make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html}
+        
+        set root /home/example/eb/software/make/3.82-GCC-4.8.2
+        
+        conflict make
+        
+        if { ![ is-loaded GCC/4.8.2 ] } {
+            module load GCC/4.8.2
+        }
+        
+        setenv	EBROOTMAKE		"$root"
+        setenv	EBVERSIONMAKE		"3.82"
+        setenv	EBDEVELMAKE		"$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel"
+        
+        # Built with EasyBuild version 2.4.0
+
+Note that there is no ``prepend-path PATH`` statement for the ``bin`` subdirectory, for example.
 
 
 .. _extended_dry_run_guidelines_easyblocks:
@@ -259,4 +517,5 @@ Example output
 
 Output examples for ``eb --extended-dry-run``/``eb -x``:
 
+* :ref:`extended_dry_run_examples_make382_GCC482`
 * :ref:`extended_dry_run_examples_WRF361_intel2015a`
