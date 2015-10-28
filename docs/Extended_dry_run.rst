@@ -570,12 +570,17 @@ Use functions provided by the EasyBuild framework
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The EasyBuild framework provides a bunch of functions that are "*dry run-aware*", and which can significantly help
-in keeping easyblocks free from conditional statements checking ``self.dry_run``.
+in keeping easyblocks free from conditional statements checking ``self.dry_run``:
+
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_setvar`
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_write_file`
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching`
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`
 
 .. _extended_dry_run_guidelines_easyblocks_framework_functions_setvar:
 
-Defining environment variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Defining environment variables: ``setvar``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For defining environment variables, the ``setvar`` function available in the ``easybuild.tools.environment`` module
 should be used.
