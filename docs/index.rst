@@ -55,6 +55,7 @@ Advanced usage topics
     :maxdepth: 3
 
     Experimental_features
+    Extended_dry_run
     Including_additional_Python_modules
     Integration_with_GitHub
     Manipulating_dependencies

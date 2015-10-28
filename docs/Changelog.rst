@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20151028.01** (`October 28th 2015`): document extended dry run mechanism (see :ref:`extended_dry_run`)
 * **release 20151021.01** (`October 21st 2015`):
 
   * include initial documentation on experimental support for easyconfig files in YAML syntax (``.yeb``),

@@ -7,6 +7,21 @@ The latest version of EasyBuild provides support for building and installing **6
 using 34 different (compiler) toolchains. It contains 152 software-specific easyblocks and 25 generic easyblocks,
 alongside 4,260 easyconfig files.
 
+.. _release_notes_eb240:
+
+v2.4.0 (November 10th 2015)
+---------------------------
+
+.. FIXME WIP
+
+feature + bugfix release
+
+**framework**
+
+* add support for ``eb --extended-dry-run`` (`#1388 <https://github.com/hpcugent/easybuild-framework/pull/1388>`_)
+
+  * detailed documentation is available at :ref:`extended_dry_run`
+
 .. _release_notes_eb230:
 
 v2.3.0 (September 2nd 2015)
