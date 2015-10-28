@@ -371,18 +371,19 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
 
 
 
-Python-2.7.10-intel-2015b
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Python-2.7.10-intel-2015b.yeb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
     _internal_variables_:
         - &numpyversion 1.9.2
         - &scipyversion 0.15.1
-        - &version 2.7.10
+
+    easyblock: ConfigureMake
 
     name: Python
-    version: *version
+    version: 2.7.10
 
     homepage: http://python.org/
     description: |
@@ -392,7 +393,7 @@ Python-2.7.10-intel-2015b
     toolchain: {name: intel, version: 2015b}
     toolchainopts: {pic: True, opt: True, optarch: True}
 
-    source_urls: [!join ["http://www.python.org/ftp/python/", *version, /]]
+    source_urls: ['http://www.python.org/ftp/python/%(version)s/']
     sources: [*SOURCE_TGZ]
 
     # python needs bzip2 to build the bz2 package
@@ -462,7 +463,8 @@ Python-2.7.10-intel-2015b
             source_urls: ["https://pypi.python.org/packages/source/p/python-dateutil/"],
         }],
         [deap, 1.0.2, {
-            source_tmpl: "%(name)s-%(version)s.post2.tar.gz", # escaped with quotes because yaml values can't start with %
+            # escaped with quotes because yaml values can't start with %
+            source_tmpl: "%(name)s-%(version)s.post2.tar.gz",
             source_urls: ["https://pypi.python.org/packages/source/d/deap/"],
         }],
         [decorator, 3.4.2, {
@@ -501,3 +503,5 @@ Python-2.7.10-intel-2015b
             source_urls: ["https://pypi.python.org/packages/source/p/pandas"],
         }],
     ]
+
+    moduleclass: lang
