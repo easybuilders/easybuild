@@ -503,7 +503,7 @@ To ensure useful output under ``--extended-dry-run``, easyblocks should be imple
 operations are possible not performed, to avoid generating errors in dry run mode.
 
 Although errors are just ignored by the dry run mechanism on a per-step basis, they may hide subsequent operations and
-useful information for the remainder of the step.
+useful information for the remainder of the step (see also :ref:`extended_dry_run_notes_ignored_errors`).
 
 .. _extended_dry_run_guidelines_easyblocks_detect_dry_run:
 
@@ -516,13 +516,53 @@ Additional messages can be included in the dry run output using the ``self.dry_r
 
 For example::
 
-    class ExampleEasyBlock(EasyBlock):
+    class Example(EasyBlock):
 
         def configure_step(self):
 
             if self.dry_run:
                 self.dry_run_msg("Dry run mode detected, not reading template configuration files")
                 ...
+
+.. _extended_dry_run_guidelines_files_dirs_checks:
+
+Check whether files/directories exist before accessing them
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Rather than assuming that particular files or directories will be there, easyblocks should take into that they may
+not be, for example because EasyBuild is being run in dry run mode.
+
+For example, instead of simply assuming that a directory named '``test``' will be there, the existence should be
+checked first. If not, an appropriate error should be produced, but only when the easyblock is *not* being used in
+dry run mode.
+
+**Bad** example::
+
+    # *BAD* example: maybe the 'test' directory is not there (e.g., because we're in dry run mode)!
+    try:
+        testcases = os.listdir('test')
+    except OSError as err:
+        raise EasyBuildError("Unexpected error when determining list of test cases: %s", err)
+
+Good example::
+
+    # make sure the 'test' directory is there before trying to access it
+    if os.path.exists('test'):
+        try:
+            testcases = os.listdir('test')
+        except OSError as err:
+            raise EasyBuildError("Unexpected error when determining list of test cases: %s", err)
+
+    # only raise an error if we're not in dry run mode
+    elif not self.dry_run:
+        raise EasyBuildError("Test directory not found, failed to determine list of test cases")
+
+Easyblocks that do not take this into account are likely to result in ignored errors during a dry run (see also
+:ref:`extended_dry_run_notes_ignored_errors`). For example, for the bad example shown above::
+
+    !!!
+    !!! WARNING: ignoring error "Unexpected error when determining list of test cases: [Errno 2] No such file or directory: 'test'"
+    !!!
 
 .. _extended_dry_run_guidelines_easyblocks_framework_functions:
 
@@ -659,13 +699,6 @@ be executed, but it can also be useful for easyblocks (if used correctly).
 For example::
 
     out, exit_code = run_cmd("type module", simple=False, forced=True)
-
-.. _extended_dry_run_guidelines_files_dirs_checks:
-
-Check whether files/directories exist before accessing them
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``read_file``, ``chdir``, ...
 
 
 Example output
