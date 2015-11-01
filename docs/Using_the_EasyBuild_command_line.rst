@@ -250,16 +250,6 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
-Forced reinstallation, ``--force`` / ``-f``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
-
-.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
-
-.. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
-   (cfr. :ref:`get_an_overview`)
-
 Rebuild installation, ``--rebuild``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -268,6 +258,19 @@ Use ``eb --rebuild`` to rebuild a given easyconfig/module.
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
 .. tip:: Combine ``--rebuild`` with ``--dry-run`` to get a good view on which installations will be rebuilt.
+   (cfr. :ref:`get_an_overview`)
+
+.. _force_option:
+
+Forced reinstallation, ``--force`` / ``-f``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module. The behaviour of ``--force`` is the same as 
+``--rebuild`` and ``--ignore-osdeps``.
+
+.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
+
+.. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
    (cfr. :ref:`get_an_overview`)
 
 .. _searching_for_easyconfigs:
