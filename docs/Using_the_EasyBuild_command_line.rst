@@ -260,6 +260,16 @@ Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
    (cfr. :ref:`get_an_overview`)
 
+Rebuild installation, ``--rebuild``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use ``eb --rebuild`` to rebuild a given easyconfig/module.
+
+.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
+
+.. tip:: Combine ``--rebuild`` with ``--dry-run`` to get a good view on which installations will be rebuilt.
+   (cfr. :ref:`get_an_overview`)
+
 .. _searching_for_easyconfigs:
 
 Searching for easyconfigs, ``--search`` / ``-S``
@@ -532,6 +542,7 @@ Note how the different status symbols denote distinct handling states by EasyBui
 * ``[ ]`` The build is not available, EasyBuild will deliver it
 * ``[x]`` The build is available, EasyBuild will skip building this module
 * ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild and will do so
+* ``[R]`` The build is available, and the application will be rebuilt as request by rebuild flag
 
 
 .. note:: Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
