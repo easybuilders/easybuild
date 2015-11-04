@@ -116,6 +116,22 @@ elsewhere too) can be done as follows::
 
     versionsuffix: !join [-Python-, *pyver]
 
+.. _easyconfig_yeb_format_syntax_version_majorminor:
+
+Extract major.minor from the version string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since it is often needed in easyconfig files to extract the major and minor version number from the version string, the
+EasyBuild framework defines an operator ``!majmin``.
+
+This function takes a sequence node with one element as parameter::
+
+    _internal_variables_:
+        - &version 2.40.0
+
+    version_str: !majmin [*version] # will return 2.40
+    source_urls: [!join ['http://ftp.gnome.org/pub/gnome/sources/glib/', !majmin [*version], / ]
+
 
 .. _easyconfig_yeb_format_syntax_easyconfig_parameters:
 
