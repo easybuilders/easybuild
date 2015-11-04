@@ -295,6 +295,22 @@ A more complicated example from a toolchain easyconfig, where also the ``!join``
 For the full version of this easyconfig file, see the example ``.yeb`` easyconfig
 :ref:`easyconfig_yeb_format_examples_goolf1410`.
 
+.. _easyconfig_yeb_format_new:
+
+New in this format
+~~~~~~~~~~~~~~~~~~
+
+Toolchain format
+################
+
+The easyconfig parameter ``toolchain`` in .eb files is defined as a dictionary ``{'name':'foo', 'version':'bar'}``. In
+the .yeb format, this can be done much easier by just using ``name, version``. E.g::
+
+    toolchain = {'name':'intel', 'version':'2015b'}
+
+becomes::
+
+    toolchain: intel, 2015b
 
 .. _easyconfig_yeb_format_examples:
 
