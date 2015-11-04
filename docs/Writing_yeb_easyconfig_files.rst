@@ -297,8 +297,8 @@ For the full version of this easyconfig file, see the example ``.yeb`` easyconfi
 
 .. _easyconfig_yeb_format_new:
 
-New in this format
-~~~~~~~~~~~~~~~~~~
+Shorthands for common easyconfig parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Toolchain format
 ################
