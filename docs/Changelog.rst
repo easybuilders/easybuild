@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20151108.01** (`November 8th 2015`):
+
+  * document (experimental) support for using minimal toolchains (see :ref:`minimal_toolchains`)
+
 * **release 20151028.01** (`October 28th 2015`): document extended dry run mechanism (see :ref:`extended_dry_run`)
 * **release 20151021.01** (`October 21st 2015`):
 
