@@ -147,9 +147,9 @@ Consider the following (partial) easyconfig file for Python v2.7.9 with the ``fo
         ('zlib', '1.2.8'),
     ]
 
-For the ``foss/2015b`` toolchain, EasyBuild will also consider ``GCC/4.9.3`` and ``gompi/2015b`` subtoolchains
-as potential minimal toolchains (in that order) when determining the toolchain to use for dependencies, if the
-``--minimal-toolchains`` configuration option is enabled.
+When the ``--minimal-toolchains`` configuration option is enabled, EasyBuild will also consider the subtoolchains
+``GCC/4.9.3`` and ``gompi/2015b`` of the ``foss/2015b`` toolchain (in that order) as potential minimal toolchains
+when determining the toolchain to use for dependencies.
 
 So, for the zlib v1.2.8 dependency included in the example above, the following scenarios are possible:
 
