@@ -368,3 +368,140 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
     ]
 
     moduleclass: toolchain
+
+
+
+Python-2.7.10-intel-2015b.yeb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code::
+
+    _internal_variables_:
+        - &numpyversion 1.9.2
+        - &scipyversion 0.15.1
+
+    easyblock: ConfigureMake
+
+    name: Python
+    version: 2.7.10
+
+    homepage: http://python.org/
+    description: |
+        Python is a programming language that lets you work more quickly and integrate your systems
+        more effectively.
+
+    toolchain: {name: intel, version: 2015b}
+    toolchainopts: {pic: True, opt: True, optarch: True}
+
+    source_urls: ['http://www.python.org/ftp/python/%(version)s/']
+    sources: [*SOURCE_TGZ]
+
+    # python needs bzip2 to build the bz2 package
+    dependencies: [
+        [bzip2, 1.0.6],
+        [zlib, 1.2.8],
+        [libreadline, '6.3'],
+        [ncurses, '5.9'],
+        [SQLite, 3.8.10.2],
+        [Tk, 8.6.4, -no-X11],
+    #   [OpenSSL, 1.0.1m],  # OS dependency should be preferred if the os version is more recent then this version, its
+    #   nice to have an up to date openssl for security reasons
+    ]
+
+    osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]]
+
+    # order is important!
+    # package versions updated May 28th 2015
+    exts_list: [
+        [setuptools, '16.0', {
+            source_urls: ["https://pypi.python.org/packages/source/s/setuptools/"],
+        }],
+        [pip, 7.0.1, {
+            source_urls: ["https://pypi.python.org/packages/source/p/pip/"],
+        }],
+        [nose, 1.3.6, {
+            source_urls: ["https://pypi.python.org/packages/source/n/nose/"],
+        }],
+        [numpy, *numpyversion, {
+            source_urls: [
+                [!join ["http://sourceforge.net/projects/numpy/files/NumPy/", *numpyversion], download]
+            ],
+            patches: [
+                numpy-1.8.0-mkl.patch, # % numpyversion,
+            ],
+        }],
+        [scipy, *scipyversion, {
+            source_urls: [
+                [!join ["http://sourceforge.net/projects/scipy/files/scipy/", *scipyversion], download]],
+        }],
+        [blist, 1.3.6, {
+            source_urls: ["https://pypi.python.org/packages/source/b/blist/"],
+        }],
+        [mpi4py, 1.3.1, {
+            source_urls: ["http://bitbucket.org/mpi4py/mpi4py/downloads/"],
+        }],
+        [paycheck, 1.0.2, {
+            source_urls: ["https://pypi.python.org/packages/source/p/paycheck/"],
+        }],
+        [argparse, 1.3.0, {
+            source_urls: ["https://pypi.python.org/packages/source/a/argparse/"],
+        }],
+        [pbr, 1.0.1, {
+            source_urls: ["https://pypi.python.org/packages/source/p/pbr/"],
+        }],
+        [lockfile, 0.10.2, {
+            source_urls: ["https://pypi.python.org/packages/source/l/lockfile/"],
+        }],
+        [Cython, '0.22', {
+            source_urls: ["http://www.cython.org/release/"],
+        }],
+        [six, 1.9.0, {
+            source_urls: ["https://pypi.python.org/packages/source/s/six/"],
+        }],
+        [dateutil, 2.4.2, {
+            source_tmpl: python-%(name)s-%(version)s.tar.gz,
+            source_urls: ["https://pypi.python.org/packages/source/p/python-dateutil/"],
+        }],
+        [deap, 1.0.2, {
+            # escaped with quotes because yaml values can't start with %
+            source_tmpl: "%(name)s-%(version)s.post2.tar.gz",
+            source_urls: ["https://pypi.python.org/packages/source/d/deap/"],
+        }],
+        [decorator, 3.4.2, {
+            source_urls: ["https://pypi.python.org/packages/source/d/decorator/"],
+        }],
+        [arff, 2.0.2, {
+            source_tmpl: liac-%(name)s-%(version)s.zip,
+            source_urls: ["https://pypi.python.org/packages/source/l/liac-arff/"],
+        }],
+        [pycrypto, 2.6.1, {
+            modulename: Crypto,
+            source_urls: ["http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/"],
+        }],
+        [ecdsa, '0.13', {
+            source_urls: ["https://pypi.python.org/packages/source/e/ecdsa/"],
+        }],
+        [paramiko, 1.15.2, {
+            source_urls: ["https://pypi.python.org/packages/source/p/paramiko/"],
+        }],
+        [pyparsing, 2.0.3, {
+            source_urls: ["https://pypi.python.org/packages/source/p/pyparsing/"],
+        }],
+        [netifaces, 0.10.4, {
+            source_urls: ["https://pypi.python.org/packages/source/n/netifaces"],
+        }],
+        [netaddr, 0.7.14, {
+            source_urls: ["https://pypi.python.org/packages/source/n/netaddr"],
+        }],
+        [mock, 1.0.1, {
+            source_urls: ["https://pypi.python.org/packages/source/m/mock"],
+        }],
+        [pytz, '2015.4', {
+            source_urls: ["https://pypi.python.org/packages/source/p/pytz"],
+        }],
+        [pandas, 0.16.1, {
+            source_urls: ["https://pypi.python.org/packages/source/p/pandas"],
+        }],
+    ]
+
+    moduleclass: lang

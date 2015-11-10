@@ -169,8 +169,14 @@ For each of the specified (build) dependencies, the corresponding module will be
 defined by EasyBuild. For the *runtime* dependencies, ``module load`` statements will be included in the generated
 module file.
 
-.. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the software being installed.
-  A different toolchain can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the example above).
+.. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the
+  software being installed.
+
+  A different toolchain can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the
+  example above).
+
+  Alternatively, you can instruct EasyBuild to use the most minimal (sub)toolchain when resolving dependencies,
+  see :ref:`minimal_toolchains`.
 
 Loading of modules for dependencies with a ``dummy`` toolchain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
