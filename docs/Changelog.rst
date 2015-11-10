@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20151110.01** (`November 10th 2015`): update release notes for EasyBuild v2.4.0 (see :ref:`release_notes`)
 * **release 20151108.01** (`November 8th 2015`):
 
   * document (experimental) support for using minimal toolchains (see :ref:`minimal_toolchains`)
