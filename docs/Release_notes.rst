@@ -27,11 +27,11 @@ feature + bugfix release
 * make '``eb``' script aware of Python v3.x, fall back to using ``python2`` if required (`#1411 <https://github.com/hpcugent/easybuild-framework/pull/1411>`_)
 * add experimental support for parsing .yeb easyconfig files in YAML syntax (`#1447 <https://github.com/hpcugent/easybuild-framework/pull/1447>`_, `#1448 <https://github.com/hpcugent/easybuild-framework/pull/1448>`_, `#1449 <https://github.com/hpcugent/easybuild-framework/pull/1449>`_)
 
-  * see also http://easybuild.readthedocs.org/en/latest/Writing_yeb_easyconfig_files.html
+  * see also :ref:`easyconfig_yeb_format`
 
 * add experimental support for resolving dependencies with minimal toolchains (`#1306 <https://github.com/hpcugent/easybuild-framework/pull/1306>`_)
 
-  * see also http://easybuild.readthedocs.org/en/latest/Manipulating_dependencies.html#using-minimal-toolchains-for-dependencies
+  * see also :ref:`minimal_toolchains`
 
 * various other enhancements, including:
 
@@ -90,7 +90,7 @@ feature + bugfix release
   * specify sequential compiler to use in compiler command that gets injected in OpenFOAM easyblock (`#692 <https://github.com/hpcugent/easybuild-easyblocks/pull/692>`_)
   * make ``PythonPackage`` and WRF easyblocks dry-run aware (`#696 <https://github.com/hpcugent/easybuild-easyblocks/pull/696>`_)
 
-    * see also http://easybuild.readthedocs.org/en/latest/Extended_dry_run.html#guidelines-for-easyblocks
+    * see also :ref:`extended_dry_run_guidelines_easyblocks`
 
   * add support in ``PythonPackage`` for installing with ``easy_install`` + installing zipped eggs (`#698 <https://github.com/hpcugent/easybuild-easyblocks/pull/698>`_, `#711 <https://github.com/hpcugent/easybuild-easyblocks/pull/711>`_, `#715 <https://github.com/hpcugent/easybuild-easyblocks/pull/715>`_)
   * update Bowtie easyblock for recent Bowtie versions (`#707 <https://github.com/hpcugent/easybuild-easyblocks/pull/707>`_)
@@ -280,15 +280,15 @@ feature + bugfix release
 
 * add support for using GC3Pie as a backend for ``--job`` (`#1008 <https://github.com/hpcugent/easybuild-framework/pull/1008>`_)
 
-  * see also http://easybuild.readthedocs.org/en/latest/Submitting_jobs.html
+  * see also :ref:`submitting_jobs`
 
 * add support for ``--include-*`` configuration options to include additional easyblocks, toolchains, etc. (`#1301 <https://github.com/hpcugent/easybuild-framework/pull/1301>`_)
 
-  * see http://easybuild.readthedocs.org/en/latest/Including_additional_Python_modules.html
+  * see :ref:`including_additional_python_modules`
 
 * add (experimental) support for packaging installed software using FPM (`#1224 <https://github.com/hpcugent/easybuild-framework/pull/1224>`_)
 
-  * see http://easybuild.readthedocs.org/en/latest/Packaging_support.html
+  * see :ref:`packaging_support`
 
 * various other enhancements, including:
 
