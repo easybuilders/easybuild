@@ -124,7 +124,7 @@ feature + bugfix release
   * fix OpenSSL sanity check paths: lib/engines is a directory (`#731 <https://github.com/hpcugent/easybuild-easyblocks/pull/731>`_, `#733 <https://github.com/hpcugent/easybuild-easyblocks/pull/733>`_)
   * fix sanity check paths for netcdf-python (`#735 <https://github.com/hpcugent/easybuild-easyblocks/pull/735>`_)
 
-**easyconfigs****
+**easyconfigs**
 
 * added example easyconfig files for 45 new software packages:
 
