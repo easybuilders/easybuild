@@ -51,6 +51,14 @@ import sys
 import tempfile
 from distutils.version import LooseVersion
 
+# argparse preferrred, optparse deprecated >=2.7
+HAVE_ARGPARSE=False
+try: 
+    import argparse
+    HAVE_ARGPARSE = True
+except ImportError:
+    import optparse
+
 PYPI_SOURCE_URL = 'https://pypi.python.org/packages/source'
 
 VSC_BASE = 'vsc-base'
@@ -437,10 +445,30 @@ def main():
         error("Don't run the EasyBuild bootstrap script as root, "
               "since stage 2 (installing EasyBuild with EasyBuild) will fail.")
 
-    # see if an install dir was specified
-    if not len(sys.argv) == 2:
-        error("Usage: %s <install path>" % sys.argv[0])
-    install_path = os.path.abspath(sys.argv[1])
+    # general option/argument parser
+    if HAVE_ARGPARSE:
+        bs_argparser = argparse.ArgumentParser()
+        bs_argparser.add_argument(
+          "prefix", help="Installation prefix directory",
+          type=str)
+        bs_args = bs_argparser.parse_args()
+
+        # prefix specification
+        install_path = os.path.abspath(bs_args.prefix)
+    else:
+        bs_argparser = optparse.OptionParser(usage="usage: %prog [options] prefix")
+        (bs_opts,bs_args) = bs_argparser.parse_args()
+
+        # poor method, but should prefer argparse module for better pos arg support.
+        if len(bs_args) < 1:
+            error("Too few arguments\n" + bs_argparser.get_usage())
+        elif len(bs_args) > 1:
+            error("Too many arguments\n" + bs_argparser.get_usage())
+        
+        # prefix specification	
+	install_path = os.path.abspath(str(bs_args[0]))
+
+    info("Installation prefix %s" % install_path)
 
     sourcepath = EASYBUILD_BOOTSTRAP_SOURCEPATH
     if sourcepath is not None:
