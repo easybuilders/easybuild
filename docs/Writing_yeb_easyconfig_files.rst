@@ -256,18 +256,18 @@ Dependencies
 
 We updated the way dependencies are specified to match with the new toolchain format (:ref:`easyconfig_yeb_format_new`)
 The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
-and space (- ). Each entry can specify a ``name_version``, ``versionsuffix`` and ``toolchain``, of which only the
-``name_version`` is obligatory.
+and space (- ). Each entry can specify a ``name: version`` key-value pair, and a ``versionsuffix`` and ``toolchain``.
+Only the ``name: version`` pair is required.
 
 A straightforward example::
 
     dependencies:
-        - name_version: libreadline, 6.3
-        - name_version: Tcl, 8.6.4
+        - libreadline: 6.3
+        - Tcl: 8.6.4
 
     builddependencies:
         # empty versionsuffix, different toolchain (GCC/4.9.2)
-        - name_version: CMake, 3.2.2
+        - CMake: 3.2.2
           toolchain: GCC, 4.9.2
 
 A more complicated example from a toolchain easyconfig, where also the ``!join`` operator
@@ -287,15 +287,15 @@ A more complicated example from a toolchain easyconfig, where also the ``!join``
         - &comp_mpi_tc [gompi, 1.4.10]
 
     dependencies:
-        - name_version: *comp
-        - name_version: OpenMPI, 1.6.4
+        - *comp_name: *comp_version
+        - OpenMPI: 1.6.4
           toolchain: *comp
-        - name_version: [*blaslib, *blasver]
+        - *blaslib: *blasver
           versionsuffix: *blas_suff
           toolchain: *comp_mpi_tc
-        - name_version: FFTW, 3.3.3
+        - FFTW: 3.3.3
           toolchain: *comp_mpi_tc
-        - name_version: ScaLAPACK, 2.0.2
+        - ScaLAPACK: 2.0.2
           versionsuffix: !join [-, *blas, *blas_suff]
           toolchain: *comp_mpi_tc
 
