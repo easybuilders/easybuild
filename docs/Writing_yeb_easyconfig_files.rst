@@ -122,15 +122,15 @@ Extract major.minor from the version string
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since it is often needed in easyconfig files to extract the major and minor version number from the version string, the
-EasyBuild framework defines an operator ``!majmin``.
+EasyBuild framework defines an operator ``!majorminor``.
 
 This function takes a sequence node with one element as parameter::
 
     _internal_variables_:
         - &version 2.40.0
 
-    version_str: !majmin [*version] # will return 2.40
-    source_urls: [!join ['http://ftp.gnome.org/pub/gnome/sources/glib/', !majmin [*version], / ]
+    version_str: !majorminor [*version] # will return 2.40
+    source_urls: [!join ['http://ftp.gnome.org/pub/gnome/sources/glib/', !majorminor [*version], / ]
 
 
 .. _easyconfig_yeb_format_syntax_easyconfig_parameters:
@@ -256,8 +256,8 @@ Dependencies
 
 We updated the way dependencies are specified to match with the new toolchain format (:ref:`easyconfig_yeb_format_new`)
 The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
-and space (`- `). Each entry can specify a `name_version`, `versionsuffix` and `toolchain`, of which only the
-`name_version` is obligatory.
+and space (- ). Each entry can specify a ``name_version``, ``versionsuffix`` and ``toolchain``, of which only the
+``name_version`` is obligatory.
 
 A straightforward example::
 
