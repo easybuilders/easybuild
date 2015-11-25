@@ -399,17 +399,17 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
     # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
     # because of toolchain preperation functions
         dependencies:
-          - name_version: *comp
-          - name_version: OpenMPI, 1.6.4
-            toolchain: *comp
-          - name_version: [*blaslib, *blasver]
-            versionsuffix: *blas_suff
-            toolchain: *comp_mpi_tc
-          - name_version: FFTW, 3.3.3
-            toolchain: *comp_mpi_tc
-          - name_version: ScaLAPACK, 2.0.2
-            versionsuffix: !join [-, *blas, *blas_suff]
-            toolchain: *comp_mpi_tc :
+            - *comp_name: *comp_version
+            - OpenMPI: 1.6.4
+              toolchain: *comp
+            - *blaslib: *blasver
+              versionsuffix: *blas_suff
+              toolchain: *comp_mpi_tc
+            - FFTW: 3.3.3
+              toolchain: *comp_mpi_tc
+            - ScaLAPACK: 2.0.2
+              versionsuffix: !join [-, *blas, *blas_suff]
+              toolchain: *comp_mpi_tc
 
     moduleclass: toolchain
 
@@ -442,15 +442,15 @@ Python-2.7.10-intel-2015b.yeb
 
     # python needs bzip2 to build the bz2 package
     dependencies: [
-        - name_version: bzip2, 1.0.6
-        - name_version: zlib, 1.2.8
-        - name_version: libreadline, 6.3
-        - name_version: ncurses, 5.9
-        - name_version: SQLite, 3.8.10.2
-        - name_version: Tk, 8.4.6
+        - bzip2: 1.0.6
+        - zlib: 1.2.8
+        - libreadline: 6.3
+        - ncurses: 5.9
+        - SQLite: 3.8.10.2
+        - Tk: 8.4.6
           versionsuffix: -no-X11
-      # - name_version: OpenSSL, 1.0.1m
-      #   [OpenSSL, 1.0.1m],  # OS dependency should be preferred if the os version is more recent then this version, its
+      # - OpenSSL: 1.0.1m
+      #   OS dependency should be preferred if the os version is more recent then this version, its
       #   nice to have an up to date openssl for security reasons
     ]
 
