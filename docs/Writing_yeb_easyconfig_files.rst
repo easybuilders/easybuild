@@ -254,19 +254,21 @@ See also :ref:`easyconfig_param_templates`.
 Dependencies
 ~~~~~~~~~~~~
 
-The list of (build) dependencies can be specified as list of lists, see also
-:ref:`easyconfig_yeb_format_syntax_nesting`.
+We updated the way dependencies are specified to match with the new toolchain format (:ref:`easyconfig_yeb_format_new`)
+The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
+and space (`- `). Each entry can specify a `name_version`, `versionsuffix` and `toolchain`, of which only the
+`name_version` is obligatory.
 
 A straightforward example::
 
-    dependencies: [
-        [libreadline, 6.3],
-        [Tcl, 8.6.4],
-    ]
-    builddependencies: [
+    dependencies:
+        - name_version: libreadline, 6.3
+        - name_version: Tcl, 8.6.4
+
+    builddependencies:
         # empty versionsuffix, different toolchain (GCC/4.9.2)
-        [CMake, 3.2.2, '', [GCC, 4.9.2],
-    ]
+        - name_version: CMake, 3.2.2
+          toolchain: GCC, 4.9.2
 
 A more complicated example from a toolchain easyconfig, where also the ``!join`` operator
 (see :ref:`easyconfig_yeb_format_syntax_string_concatenation`) and internal variables
@@ -277,20 +279,25 @@ A more complicated example from a toolchain easyconfig, where also the ``!join``
         - &comp_version 4.7.2
         - &comp [*comp_name, *comp_version]
 
-        - &blaslib OpenBLAS
+        - & OpenBLAS
         - &blasver 0.2.6
         - &blas !join [*blaslib, -, *blasver]
         - &blas_suff -LAPACK-3.4.2
 
         - &comp_mpi_tc [gompi, 1.4.10]
 
-    dependencies: [
-        *comp,
-        [OpenMPI, 1.6.4, '', *comp],
-        [*blaslib, *blasver, *blas_suff, *comp_mpi_tc],
-        [FFTW, 3.3.3, '', *comp_mpi_tc],
-        [ScaLAPACK, 2.0.2, !join [-, *blas, *blas_suff], *comp_mpi_tc]
-    ]
+    dependencies:
+        - name_version: *comp
+        - name_version: OpenMPI, 1.6.4
+          toolchain: *comp
+        - name_version: [*blaslib, *blasver]
+          versionsuffix: *blas_suff
+          toolchain: *comp_mpi_tc
+        - name_version: FFTW, 3.3.3
+          toolchain: *comp_mpi_tc
+        - name_version: ScaLAPACK, 2.0.2
+          versionsuffix: !join [-, *blas, *blas_suff]
+          toolchain: *comp_mpi_tc
 
 For the full version of this easyconfig file, see the example ``.yeb`` easyconfig
 :ref:`easyconfig_yeb_format_examples_goolf1410`.
@@ -338,7 +345,7 @@ Example easyconfig for gzip v1.6 using the ``GCC/4.9.2`` toolchain.
         gzip is a popular data compression program
         as a replacement for compress
 
-    toolchain: {name: GCC, version: 4.9.2}
+    toolchain: GCC, 4.9.2
 
     # http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz
     source_urls: [*GNU_SOURCE]
@@ -391,13 +398,18 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
     # compiler toolchain dependencies
     # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
     # because of toolchain preperation functions
-    dependencies: [
-        *comp,
-        [OpenMPI, 1.6.4, '', *comp],
-        [*blaslib, *blasver, *blas_suff, *comp_mpi_tc],
-        [FFTW, 3.3.3, '', *comp_mpi_tc],
-        [ScaLAPACK, 2.0.2, !join [-, *blas, *blas_suff], *comp_mpi_tc]
-    ]
+        dependencies:
+          - name_version: *comp
+          - name_version: OpenMPI, 1.6.4
+            toolchain: *comp
+          - name_version: [*blaslib, *blasver]
+            versionsuffix: *blas_suff
+            toolchain: *comp_mpi_tc
+          - name_version: FFTW, 3.3.3
+            toolchain: *comp_mpi_tc
+          - name_version: ScaLAPACK, 2.0.2
+            versionsuffix: !join [-, *blas, *blas_suff]
+            toolchain: *comp_mpi_tc :
 
     moduleclass: toolchain
 
@@ -422,7 +434,7 @@ Python-2.7.10-intel-2015b.yeb
         Python is a programming language that lets you work more quickly and integrate your systems
         more effectively.
 
-    toolchain: {name: intel, version: 2015b}
+    toolchain: intel, 2015b
     toolchainopts: {pic: True, opt: True, optarch: True}
 
     source_urls: ['http://www.python.org/ftp/python/%(version)s/']
@@ -430,14 +442,16 @@ Python-2.7.10-intel-2015b.yeb
 
     # python needs bzip2 to build the bz2 package
     dependencies: [
-        [bzip2, 1.0.6],
-        [zlib, 1.2.8],
-        [libreadline, '6.3'],
-        [ncurses, '5.9'],
-        [SQLite, 3.8.10.2],
-        [Tk, 8.6.4, -no-X11],
-    #   [OpenSSL, 1.0.1m],  # OS dependency should be preferred if the os version is more recent then this version, its
-    #   nice to have an up to date openssl for security reasons
+        - name_version: bzip2, 1.0.6
+        - name_version: zlib, 1.2.8
+        - name_version: libreadline, 6.3
+        - name_version: ncurses, 5.9
+        - name_version: SQLite, 3.8.10.2
+        - name_version: Tk, 8.4.6
+          versionsuffix: -no-X11
+      # - name_version: OpenSSL, 1.0.1m
+      #   [OpenSSL, 1.0.1m],  # OS dependency should be preferred if the os version is more recent then this version, its
+      #   nice to have an up to date openssl for security reasons
     ]
 
     osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]]
