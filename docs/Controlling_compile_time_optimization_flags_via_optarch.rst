@@ -17,7 +17,7 @@ Or this for intel toolchains:
 
 This option gives you flexibility allowing to define the specific optimization flags you want but requires that you take care of specifying different flags for different compilers and choose the right optimization flag depending on your specific hardware.
 
-The most generic approach is doing ``eb --optarch=GENERIC``. When easybuild finds the special key "optarch=GENERIC" it will use the right compiler flags so the compilation is as much generic as possible. The generated binary should run in any x86_64 cpu. Be aware that only GCC and Intel toolchains/compilers are supported when using "optarch=GENERIC".
+The most generic approach is doing ``eb --optarch=GENERIC``. When easybuild finds the special key "optarch=GENERIC" it will use the right compiler flags so the compilation is as much generic as possible. The generated binary should run in any x86_64 cpu. Be aware that only GCC and Intel toolchains/compilers are supported when using "optarch=GENERIC" and this feature requires EasyBuild version => 2.5.
 
 This means, if you do "eb --optarch=GENERIC" with GCC you will get this:
 
