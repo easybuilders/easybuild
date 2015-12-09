@@ -21,8 +21,11 @@ The most generic approach is doing ``eb --optarch=GENERIC``. When easybuild find
 
 This means, if you do "eb --optarch=GENERIC" with GCC you will get this:
 
-$> gcc -march=x86-64 -mtune=generic
+``$> gcc -march=x86-64 -mtune=generic``
 
 And if you use "eb --optarch=GENERIC" with an Intel toolchain you will get this:
 
-$> icc -xSSE2 
+``$> icc -xSSE2``
+
+.. note:: Be aware that that using --optarch option doesn't mean the build will be generic in any case. EasyBuild will setup the required environment variables and compiler flags to generate a generic x86_64 binary but some MakeFiles or build systems could have hardcoded values and that's something that EasyBuild cannot fix. As example, if you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig. See these links: https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt https://github.com/xianyi/OpenBLAS/issues/685
+
