@@ -64,7 +64,7 @@ Build environment vs hardcoding in build scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Be aware that that using ``--optarch`` as described below does not provide hard guarantees that the build
-will be exeucted using the intened compiler flags.
+will be executed using the intended compiler flags.
 
 EasyBuild will define the appropriate environment variables (``$CFLAGS`` and co) to use the compiler flags as
 specified, but some MakeFiles or build systems could have hardcoded values that have not been dealt with yet
