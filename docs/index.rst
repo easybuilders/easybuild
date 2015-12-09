@@ -54,6 +54,7 @@ Advanced usage topics
     :glob:
     :maxdepth: 3
 
+    Controlling_compile_time_optimization_flags
     Experimental_features
     Extended_dry_run
     Including_additional_Python_modules
