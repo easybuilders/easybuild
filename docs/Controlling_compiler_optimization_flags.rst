@@ -121,8 +121,9 @@ When this is the case, EasyBuild will use the right compiler flags to optimize f
 architecture, i.e. avoid using machine instructions that are only supported by very recent processors.
 
 The ``GENERIC`` keyword for ``--optarch`` is recognized since EasyBuild v2.5.0, and is supported for GCC and Intel
-compilers. For other compilers that can be used in toolchains, the necessary compiler flags will be defined
-in later EasyBuild versions.
+compilers on x86-64 systems (Intel or AMD).
+For other compilers that can be used in toolchains and other system architectures,
+the necessary compiler flags will be defined in later EasyBuild versions.
 
 Currently, using ``--optarch=GENERIC`` will result in the following target architecture optimization flags being used:
 
