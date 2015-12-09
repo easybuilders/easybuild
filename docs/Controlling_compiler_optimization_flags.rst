@@ -7,7 +7,7 @@ This page provides an overview on the different ways in which compiler optimizat
 can be controlled.
 
 .. contents::
-    :depth: 2
+    :depth: 3
     :backlinks: none
 
 .. _controlling_compiler_optimization_flags_optarch:
