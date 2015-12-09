@@ -78,7 +78,7 @@ software name (cfr. :ref:`depr_ConfigureMake_fallback_eb1`).
 
 .. XXX - UPDATE BY VERSION
 
-The most recent release of EasyBuild (version |version|) includes 139 software-specific easyblocks and 20 generic
+EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
 easyblocks (see also :ref:`basic_usage_easyblocks`), providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
 like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
