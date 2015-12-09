@@ -26,8 +26,3 @@ $> gcc -march=x86-64 -mtune=generic
 And if you use "eb --optarch=GENERIC" with an Intel toolchain you will get this:
 
 $> icc -xSSE2 
-
-
-
-
-
