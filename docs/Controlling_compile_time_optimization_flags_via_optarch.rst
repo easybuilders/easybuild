@@ -27,5 +27,5 @@ And if you use "eb --optarch=GENERIC" with an Intel toolchain you will get this:
 
 ``$> icc -xSSE2``
 
-.. note:: Be aware that that using --optarch option doesn't mean the build will be generic in any case. EasyBuild will setup the required environment variables and compiler flags to generate a generic x86_64 binary but some MakeFiles or build systems could have hardcoded values and that's something that EasyBuild cannot fix. As example, if you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig. See these links: https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt https://github.com/xianyi/OpenBLAS/issues/685
+.. note:: Be aware that that using --optarch option doesn't mean the build will be generic in any case. EasyBuild will setup the required environment variables and compiler flags to generate a generic x86_64 binary but some MakeFiles or build systems could have hardcoded values and that's something that EasyBuild cannot fix. As example, if you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig to use `` buildopts = 'TARGET=PRESCOTT BINARY=64 ' + threading + ' CC="$CC" FC="$F77"' ``. See these links: https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt https://github.com/xianyi/OpenBLAS/issues/685
 
