@@ -227,9 +227,9 @@ For example, sequence values can be used in a mapping::
 
 And sequences of sequences are also supported::
 
-    dependencies:
-        - [bzip2, 1.0.6]
-        - [Python, 2.7.10]
+    osdependencies
+        - zlib
+        - [openssl-devel, libssl-dev, libopenssl-devel]
 
 
 .. _easyconfig_yeb_format_syntax_template_values_constants:
@@ -259,11 +259,17 @@ The format is a bit more verbose than before, but easier to read. Each dependenc
 and space (- ). Each entry can specify a ``name: version`` key-value pair, and a ``versionsuffix`` and ``toolchain``.
 Only the ``name: version`` pair is required.
 
+Dependencies can also be external modules. In this case, the dependency has to be specified with a ``name`` and the marker 
+``external_module: True``. The boolean value is not case-sensitive.
+
+
 A straightforward example::
 
     dependencies:
         - libreadline: 6.3
         - Tcl: 8.6.4
+        - name: fftw/3.3.4.4
+          external_module: True
 
     builddependencies:
         # empty versionsuffix, different toolchain (GCC/4.9.2)
@@ -303,6 +309,27 @@ For the full version of this easyconfig file, see the example ``.yeb`` easyconfi
 :ref:`easyconfig_yeb_format_examples_goolf1410`.
 
 .. _easyconfig_yeb_format_new:
+
+OS dependencies and sanity check paths
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To specify parameters that used to contain tuples such as ``osdependencies`` and ``sanity_check_paths``, simply use
+list (sequences) instead of tuples.
+
+For example::
+    osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+Becomes::
+    osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]] 
+
+And::
+    sanity_check_paths = {
+        'files': ['fileA', ('fileB', 'fileC')],
+        'dirs' : ['dirA', 'dirB'],
+    }
+Becomes::
+    sanity_check_paths: {
+        files: [fileA, [fileB, fileC]],
+        dirs: [dirA, dirB]
+    }
 
 Shorthands for common easyconfig parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
