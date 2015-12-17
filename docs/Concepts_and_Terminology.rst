@@ -71,14 +71,14 @@ methods implemented by a particular easyblock can be reused in others via inheri
 enabling code reuse across build procedure implementations.
 
 For each software package being built, the EasyBuild framework will determine which easyblock
-should be used, based on the name of the software package or the value of the easyblock
-specification parameter. In case an easyblock specification is not provided and no (software-specific)
-easyblock matching the software name could be found, a fallback mechanism will resort to using
-the generic ``ConfigureMake`` easyblock, which implements the common ``configure`` / ``make`` / ``make install`` procedure.
+should be used, based on the name of the software package or the value of the ``easyblock``
+specification parameter (see :ref:`writing_easyconfigs_easyblock_spec`).
+Since EasyBuild v2.0, an easyblock *must* be specified in case no matching easyblock is found based on the
+software name (cfr. :ref:`depr_ConfigureMake_fallback_eb1`).
 
 .. XXX - UPDATE BY VERSION
 
-The most recent release of EasyBuild (version |version|) includes 139 software-specific easyblocks and 20 generic
+EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
 easyblocks (see also :ref:`basic_usage_easyblocks`), providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
 like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
