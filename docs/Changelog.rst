@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20151217.01** (`December 17th 2015`): update release notes for EasyBuild v2.5.0 (see :ref:`release_notes_eb250`)
 * **release 20151209.01** (`December 9th 2015`):
 
   * add documentation on controlling compiler optimizations flags, see :ref:`controlling_compiler_optimization_flags`
