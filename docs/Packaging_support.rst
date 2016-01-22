@@ -3,12 +3,13 @@
 Packaging support
 =================
 
-Experimental support (see :ref:`experimental_features`) for packaging software that was built and installed using
-EasyBuild is included since EasyBuild v2.2.0.
-
 .. contents::
     :depth: 2
     :backlinks: none
+
+.. note::
+  Packaging support was added as an experimental feature in EasyBuild v2.2.0
+  (cfr. :ref:`experimental_features`). Since EasyBuild v2.5.0, it is considered stable.
 
 
 .. _packaging_prereq:
@@ -86,11 +87,11 @@ Several configuration options related to packaging support are available.
 Usage
 -----
 
-To make EasyBuild generate packages, just use ``--experimental --package``.
+To make EasyBuild generate packages, just use ``--package``.
 By default, this will make EasyBuild leverage FPM to create RPMs::
 
     $ export EASYBUILD_PREFIX=/home/example
-    $ eb --experimental --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
+    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
     [...]
     == building and installing Perl/5.20.1-GCC-4.9.2-bare...
     == fetching files...
@@ -154,7 +155,7 @@ Packaging existing installations
 To create packages for existing software installations (performed using EasyBuild), combine ``--package`` with
 ``--skip``::
 
-    $ eb --experimental --package --skip Perl-5.20.1-GCC-4.9.2-bare.eb --robot
+    $ eb --package --skip Perl-5.20.1-GCC-4.9.2-bare.eb --robot
     [...]
     == building and installing Perl/5.20.1-GCC-4.9.2-bare...
     == fetching files...
