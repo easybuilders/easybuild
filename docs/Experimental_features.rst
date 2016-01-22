@@ -13,3 +13,4 @@ Currently enabled experimental features include:
  * Cray support (see https://github.com/hpcugent/easybuild/wiki/EasyBuild-on-Cray)
  * support for easyconfig files in YAML syntax (see :ref:`easyconfig_yeb_format`)
  * support for using minimal toolchains for dependencies (see :ref:`minimal_toolchains`)
+ * support for creating and updating (easyconfig) pull requests (see :ref:`new_pr` and :ref:`update_pr`)

@@ -8,13 +8,18 @@ EasyBuild provides some integration with GitHub, where the different EasyBuild r
 From the EasyBuild command line ``eb`` several options are available to reach out to GitHub,
 which are documented below:
 
-* :ref:`github_token`
-* :ref:`from_pr`
+.. contents::
+    :depth: 2
+    :backlinks: none
+
+
+Configuration
+-------------
 
 .. _github_token:
 
 Using a GitHub token to enable authenticated access via ``--github-user``
--------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To specify that a particular GitHub account should be used to query the GitHub API, use ``--github-user``.
 A matching GitHub token must be available for the specified account if ``-github-user`` is used.
@@ -30,15 +35,15 @@ https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#sett
 Using easyconfigs from pull requests via ``--from-pr``
 ------------------------------------------------------
 
+*(supported since EasyBuild v1.13.0)*
+
 Via the ``--from-pr`` command line option (available since EasyBuild v1.13.0), easyconfig files that are added or
 modified by a particular pull request to the `easybuild-easyconfigs GitHub repository
 <https://github.com/hpcugent/easybuild-easyconfigs>`_ can be used (regardless of whether the pull request is still
 open or not).
 
 This can be useful to use easyconfig files that are not available yet in the active EasyBuild installation,
-or to test new contributions by combining ``--from-pr`` with ``-upload-test-report`` (see
-https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests
-).
+or to test new contributions by combining ``--from-pr`` with ``-upload-test-report`` (see :ref:`upload_test_report`).
 
 When ``--from-pr`` is used, EasyBuild will download all modified files (easyconfig files and patches) to a temporary
 directory before processing them.
@@ -121,3 +126,40 @@ in that same pull request for netCDF, WRF, ...::
     == temporary directory /tmp/eb-QhM_qc has been removed.
 
 Again, note that locally available easyconfigs that are required to resolve dependencies are being picked up as needed.
+
+
+.. _upload_test_report:
+
+Uploading test reports via ``--upload-test-report``
+---------------------------------------------------
+
+*(supported since EasyBuild v1.13.0)*
+
+https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests
+
+
+.. _review_pr:
+
+Reviewing easyconfig pull requests via ``--review-pr``
+------------------------------------------------------
+
+
+.. _new_pr:
+
+Opening new pull requests via ``--new-pr``
+------------------------------------------
+
+*(supported since EasyBuild v2.6.0)*
+
+.. note::
+    This is an experimental feature, see :ref:`experimental_features`.
+
+.. _update_pr:
+
+Updating existing pull requests via ``--update-pr``
+---------------------------------------------------
+
+*(supported since EasyBuild v2.6.0)*
+
+.. note::
+    This is an experimental feature, see :ref:`experimental_features`.
