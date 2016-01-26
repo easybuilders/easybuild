@@ -75,7 +75,7 @@ feature + bugfix release
 
 **easyconfigs**
 
-* add easyconfigs for foss/2016a and intel/2016 common toolchains (`#2310 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2310>`_, `#2311 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2311>`_, `#2339 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2339>`_, `#2363 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2363>`_)
+* add easyconfigs for ``foss/2016a`` and ``intel/2016`` common toolchains (`#2310 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2310>`_, `#2311 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2311>`_, `#2339 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2339>`_, `#2363 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2363>`_)
 
   * incl. easyconfigs for Boost, CMake, Python, Perl using these toolchains
 
