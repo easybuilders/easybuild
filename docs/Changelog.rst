@@ -3,7 +3,8 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
-* **release 20160122.01** (`January 22nd 2016`): packaging support is stable since EasyBuild v2.5.0 (see :ref:`packaging_support`)
+* **release 20160126.02** (`January 26th 2016`): packaging support is stable since EasyBuild v2.5.0 (see :ref:`packaging_support`)
+* **release 20160126.01** (`January 26th 2016`): update release notes for EasyBuild v2.6.0 (see :ref:`release_notes_eb260`)
 * **release 20151217.01** (`December 17th 2015`): update release notes for EasyBuild v2.5.0 (see :ref:`release_notes_eb250`)
 * **release 20151209.01** (`December 9th 2015`):
 
