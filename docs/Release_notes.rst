@@ -3,9 +3,104 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **778** different software packages,
-using 34 different (compiler) toolchains. It contains 157 software-specific easyblocks and 28 generic easyblocks,
-alongside 4,819 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **799** different software packages,
+using 34 different (compiler) toolchains. It contains 159 software-specific easyblocks and 28 generic easyblocks,
+alongside 5,093 easyconfig files.
+
+.. _release_notes_eb260:
+
+v2.6.0 (January 26th 2016)
+--------------------------
+
+feature + bugfix release
+
+**framework**
+
+* add (experimental) support for opening/updating (easyconfigs) pull requests (``--new-pr``, ``--update-pr``) (`#1528 <https://github.com/hpcugent/easybuild-framework/pull/1528>`_)
+* sanitize environment before each installation by undefining ``$PYTHON*`` (`#1569 <https://github.com/hpcugent/easybuild-framework/pull/1569>`_, `#1572 <https://github.com/hpcugent/easybuild-framework/pull/1572>`_)
+* various other enhancements, including:
+
+  * allow user-local modules with hierarchical naming schemes (``--subdir-user-modules``) (`#1472 <https://github.com/hpcugent/easybuild-framework/pull/1472>`_)
+  * enhance ``--extended-dry-run`` output to include paths for requirements in ``make_module_req`` (`#1520 <https://github.com/hpcugent/easybuild-framework/pull/1520>`_)
+  * rewrite read_file to use '``with``' (`#1534 <https://github.com/hpcugent/easybuild-framework/pull/1534>`_)
+  * add support for ``eb --last-log`` (`#1541 <https://github.com/hpcugent/easybuild-framework/pull/1541>`_)
+  * support using fixed install dir scheme (``--fixed-installdir-naming-scheme``) (`#1546 <https://github.com/hpcugent/easybuild-framework/pull/1546>`_)
+  * add edge attributes for build dependencies in ``--dep-graph`` output (`#1548 <https://github.com/hpcugent/easybuild-framework/pull/1548>`_)
+  * check whether dependencies marked as external module are hidden (`#1552 <https://github.com/hpcugent/easybuild-framework/pull/1552>`_)
+  * implement support for ``--modules-header`` (`#1558 <https://github.com/hpcugent/easybuild-framework/pull/1558>`_)
+  * add support to specify '``else``' body for conditional statements in modules (`#1559 <https://github.com/hpcugent/easybuild-framework/pull/1559>`_)
+  * add extra test for ``--include-easyblocks`` for generic easyblocks (`#1562 <https://github.com/hpcugent/easybuild-framework/pull/1562>`_)
+  * allow user to define the default compiler optimization level (``--default-opt-level``) (`#1565 <https://github.com/hpcugent/easybuild-framework/pull/1565>`_)
+  * make ``toolchain.get_variable`` more robust w.r.t. dummy toolchain (`#1566 <https://github.com/hpcugent/easybuild-framework/pull/1566>`_)
+
+* various bug fixes, including:
+
+  * fix missing '``yaml``' module check in tests (`#1525 <https://github.com/hpcugent/easybuild-framework/pull/1525>`_)
+  * fix 'develop' install script (`#1529 <https://github.com/hpcugent/easybuild-framework/pull/1529>`_)
+  * correctly quote FPM option values in packagin support (`#1530 <https://github.com/hpcugent/easybuild-framework/pull/1530>`_)
+  * correctly handle '``.``' in software name w.r.t. ``$EB*`` environment variables (`#1538 <https://github.com/hpcugent/easybuild-framework/pull/1538>`_)
+  * exclude logs and test reports from packages (`#1544 <https://github.com/hpcugent/easybuild-framework/pull/1544>`_)
+  * also pass down ``--job-cores`` for ``pbs_python`` job backend (`#1547 <https://github.com/hpcugent/easybuild-framework/pull/1547>`_)
+  * skip dependencies marked as external modules when packaging (`#1550 <https://github.com/hpcugent/easybuild-framework/pull/1550>`_)
+  * fix syntax for ``set_alias`` statement in Lua syntax (`#1554 <https://github.com/hpcugent/easybuild-framework/pull/1554>`_)
+  * handle the case of all 'offline' nodes correctly for ``--job`` (`#1560 <https://github.com/hpcugent/easybuild-framework/pull/1560>`_)
+  * fix ``test_modules_tool_stateless`` unit test for stateless ModulesTool with Lmod as modules tool (`#1570 <https://github.com/hpcugent/easybuild-framework/pull/1570>`_)
+
+**easyblocks**
+
+* add generic easyblock for Cray toolchains (`#766 <https://github.com/hpcugent/easybuild-easyblocks/pull/766>`_)
+* new easyblocks for 2 software packages that require customized support:
+
+  * EggLib (`#811 <https://github.com/hpcugent/easybuild-easyblocks/pull/811>`_), PGI (`#658 <https://github.com/hpcugent/easybuild-easyblocks/pull/658>`_)
+
+* various other enhancements, including:
+
+  * update BamTools easyblock for versions 2.3.x and newer: some shared libraries are now static) (`#785 <https://github.com/hpcugent/easybuild-easyblocks/pull/785>`_)
+  * don't hardcode ``.so``, use ``get_shared_lib_ext`` instead (`#789 <https://github.com/hpcugent/easybuild-easyblocks/pull/789>`_, `#790 <https://github.com/hpcugent/easybuild-easyblocks/pull/790>`_, `#791 <https://github.com/hpcugent/easybuild-easyblocks/pull/791>`_, `#793 <https://github.com/hpcugent/easybuild-easyblocks/pull/793>`_, `#794 <https://github.com/hpcugent/easybuild-easyblocks/pull/794>`_, `#803 <https://github.com/hpcugent/easybuild-easyblocks/pull/803>`_, `#815 <https://github.com/hpcugent/easybuild-easyblocks/pull/815>`_)
+  * enhance CPLEX easyblock by adding more subdirs to ``$PATH``, define ``$LD_LIBRARY`` and ``$CPLEXDIR`` (`#797 <https://github.com/hpcugent/easybuild-easyblocks/pull/797>`_)
+  * make sanity check for netcdf4-python work with both egg and non-egg installs (`#799 <https://github.com/hpcugent/easybuild-easyblocks/pull/799>`_)
+  * update sanity check in PETSc/SLEPc easyblocks for v3.6.x (`#800 <https://github.com/hpcugent/easybuild-easyblocks/pull/800>`_)
+  * update Trinity easyblock for 2.x versions (`#802 <https://github.com/hpcugent/easybuild-easyblocks/pull/802>`_)
+  * update DOLFIN easyblock for v1.6.0 (`#804 <https://github.com/hpcugent/easybuild-easyblocks/pull/804>`_)
+  * check for ``libkokkoscore.a`` rather than ``libkokkos.a`` for Trilinos 12.x (`#805 <https://github.com/hpcugent/easybuild-easyblocks/pull/805>`_)
+  * add an option to skip the sanitizer tests of Clang (`#806 <https://github.com/hpcugent/easybuild-easyblocks/pull/806>`_)
+  * update Molpro easyblock to support binary installs and 2015 version (`#807 <https://github.com/hpcugent/easybuild-easyblocks/pull/807>`_)
+  * make ``ConfigureMake`` more robust w.r.t. custom easyconfig parameters (`#810 <https://github.com/hpcugent/easybuild-easyblocks/pull/810>`_)
+
+* various bug fixes, including:
+
+  * add back support for Eigen 2.x in Eigen easyblock (`#798 <https://github.com/hpcugent/easybuild-easyblocks/pull/798>`_)
+  * fix for vsc-base being picked up from OS in EasyBuildMeta easyblock (`#813 <https://github.com/hpcugent/easybuild-easyblocks/pull/813>`_)
+  * remove ``setuptools.pth`` if it includes absolute paths after installing EasyBuild (`#813 <https://github.com/hpcugent/easybuild-easyblocks/pull/813>`_)
+
+**easyconfigs**
+
+* add easyconfigs for ``foss/2016a`` and ``intel/2016`` common toolchains (`#2310 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2310>`_, `#2311 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2311>`_, `#2339 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2339>`_, `#2363 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2363>`_)
+
+  * incl. easyconfigs for Boost, CMake, Python, Perl using these toolchains
+
+* added example easyconfig files for 21 new software packages:
+
+  * BLASR (`#922 <https://github.com/hpcugent/easybuild-easyconfigs/pull/922>`_), BioKanga (`#2247 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2247>`_), BoltzTraP (`#2365 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2365>`_), basemap (`#2221 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2221>`_), CppUnit (`#2271 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2271>`_), EggLib (`#2335 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2335>`_), FLASH (`#2281 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2281>`_), GLM (`#2288 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2288>`_), hub (`#2249 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2249>`_), MACS2 (`#1983 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1983>`_), MotEvo (`#843 <https://github.com/hpcugent/easybuild-easyconfigs/pull/843>`_), numba (`#2243 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2243>`_), PGI (`#1833 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1833>`_, `#2367 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2367>`_), PLY (`#2305 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2305>`_), PaStiX (`#2319 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2319>`_, `#2326 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2326>`_), patchelf (`#2327 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2327>`_), pip (`#2284 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2284>`_), RSEM (`#2316 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2316>`_), RcppArmadillo (`#2289 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2289>`_), SCDE (`#2289 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2289>`_), slepc4py (`#2318 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2318>`_)
+* added additional easyconfigs for various supported software packages: version updates, different toolchains, ...
+
+  * including BamTools 2.4.0, Boost 1.60.0, Clang 3.7.1, DOLFIN/FFC/FIAT/Instant/UFL 1.6.0, GATE 7.0, GCC 5.3.0, LLVM 3.7.1, pandas 0.17.1, PETSc 3.6.3, SAMtools 1.3, scipy 0.16.1, SLEPc 3.6.2, Trilinos 12.4.2, Trinity 2.1.1, VTK 6.3.0
+
+* various other enhancements, including:
+
+  * added new ``Cray*`` toolchain versions with pinned dependency versions (`#2222 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2222>`_)
+  * don't hardcode ``.so``, use ``SHLIB_EXT`` constant instead (`#2245 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2245>`_)
+  * add custom sanity check in GEOS easyconfigs (`#2285 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2285>`_)
+
+* various bug fixes, including:
+
+  * add Autotools (M4) as a build dependency in GMP v6.x easyconfigs (`#2096 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2096>`_)
+  * remove argparse from list of extensions in Python 3.2+ easyconfigs, since it became part of stdlib (`#2323 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2323>`_)
+
+* various style fixes, including:
+
+  * get rid of tabs (`#2302 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2302>`_)
+  * remove trailing whitespace (`#2341 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2341>`_)
 
 .. _release_notes_eb250:
 
