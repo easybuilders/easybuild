@@ -27,7 +27,7 @@ produces.
 .. _extended_dry_run_notes_differences:
 
 Build/install procedure reported by dry run may be (slightly) different
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The actual build and install procedure may (slightly) differ from the one reported by ``--extended-dry-run``,
 due to conditional checks in the easyblock being used.
