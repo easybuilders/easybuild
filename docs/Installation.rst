@@ -73,24 +73,26 @@ subdirectory of the specified installation prefix into ``$MODULEPATH``.
 For example::
 
   # pick an installation prefix to install EasyBuild to (change this to your liking)
-  PREFIX=$HOME/.local/easybuild
+  EASYBUILD_PREFIX=$HOME/.local/easybuild
 
   # download script
   curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 
   # bootstrap EasyBuild
-  python bootstrap_eb.py $PREFIX
+  python bootstrap_eb.py $EASYBUILD_PREFIX
 
   # update $MODULEPATH, and load the EasyBuild module
-  module use $PREFIX/modules/all
+  module use $EASYBUILD_PREFIX/modules/all
   module load EasyBuild
 
 .. note::
 
   The path you specify to the bootstrap script is where EasyBuild should be installed.
   If you also want software that is built/installed using EasyBuild to be located there, you will need
-  to configure EasyBuild accordingly (see :ref:`configuring_easybuild`), for example by defining
-  ``$EASYBUILD_INSTALLPATH``.
+  to configure EasyBuild accordingly (see :ref:`configuring_easybuild`), for example by
+  putting the definition for ``$EASYBUILD_PREFIX`` in your ``.bashrc``.
+
+  See also :ref:`configuring_easybuild`.
 
 .. XXX - UPDATE BY VERSION
 
