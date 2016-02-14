@@ -7,7 +7,7 @@ This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
 .. contents::
-    :depth: 2
+    :depth: 3
     :backlinks: none
 
 .. _configuration_types:
