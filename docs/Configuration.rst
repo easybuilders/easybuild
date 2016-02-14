@@ -292,6 +292,45 @@ Examples (more below):
 Overview of current configuration (``--show-config``, ``--show-full-config``)
 -----------------------------------------------------------------------------
 
+To get an overview of the current EasyBuild configuration across all configuration types,
+you can use ``eb --show-config``.
+
+The output will specify:
+
+* any configuration setting for which the current value is different from the default value 
+* a couple of selected important configuration settings (even if they are still set to the default value), i.e.:
+
+  * :ref:`buildpath`
+  * :ref:`installpath`
+  * path to easyconfigs repository (see :ref:`easyconfigs_repo`)
+  * the robot search path (see :ref:`robot_search_path`)
+  * :ref:`sourcepath`
+
+* through which configuration type each setting was defined
+
+  * i.e., default value, configuration file, environment variable or command line argument
+
+Example output::
+
+    $  eb --show-config --prefix $HOME/EasyBuild --installpath=$HOME/apps --job-cores=4
+    #
+    # Current EasyBuild configuration
+    # (C: command line argument, D: default value, E: environment variable, F: configuration file)
+    #
+    buildpath      (F) = /tmp/eb-build
+    installpath    (C) = /Users/example/apps
+    job-cores      (C) = 4
+    modules-tool   (E) = Lmod
+    optarch        (E) = ''
+    packagepath    (C) = /Users/example/EasyBuild/packages
+    prefix         (C) = /Users/example/EasyBuild
+    repositorypath (C) = /Users/example/EasyBuild/ebfiles_repo
+    robot-paths    (D) = /Users/example/easybuild-easyconfigs/easybuild/easyconfigs
+    sourcepath     (C) = /Users/example/EasyBuild/sources
+
+For a full overview of the current configuration, including *all* configuration settings,
+see ``eb --show-full-config``.
+
 .. _configuration_available_settings:
 
 Available configuration settings
