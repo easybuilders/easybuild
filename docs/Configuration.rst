@@ -318,8 +318,9 @@ Example output::
     
     $ export EASYBUILD_MODULES_TOOL=Lmod
     $ export EASYBUILD_OPTARCH=''
-     
-    $  eb --show-config --prefix $HOME/EasyBuild --installpath=$HOME/apps --job-cores=4
+
+
+    $ eb --show-config --installpath=$HOME/apps --job-cores=4
     #
     # Current EasyBuild configuration
     # (C: command line argument, D: default value, E: environment variable, F: configuration file)
@@ -329,11 +330,9 @@ Example output::
     job-cores      (C) = 4
     modules-tool   (E) = Lmod
     optarch        (E) = ''
-    packagepath    (C) = /Users/example/EasyBuild/packages
-    prefix         (C) = /Users/example/EasyBuild
-    repositorypath (C) = /Users/example/EasyBuild/ebfiles_repo
+    repositorypath (D) = /Users/example/.local/easybuild/ebfiles_repo
     robot-paths    (D) = /Users/example/easybuild-easyconfigs/easybuild/easyconfigs
-    sourcepath     (C) = /Users/example/EasyBuild/sources
+    sourcepath     (D) = /Users/example/.local/easybuild/sources
 
 For a full overview of the current configuration, including *all* configuration settings,
 see ``eb --show-full-config``.
