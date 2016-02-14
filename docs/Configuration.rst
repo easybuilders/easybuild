@@ -300,11 +300,11 @@ The output will specify:
 * any configuration setting for which the current value is different from the default value 
 * a couple of selected important configuration settings (even if they are still set to the default value), i.e.:
 
-  * :ref:`buildpath`
-  * :ref:`installpath`
+  * build path (see :ref:`buildpath`)
+  * install path (see :ref:`installpath`)
   * path to easyconfigs repository (see :ref:`easyconfigs_repo`)
   * the robot search path (see :ref:`robot_search_path`)
-  * :ref:`sourcepath`
+  * source path (see :ref:`sourcepath`)
 
 * through which configuration type each setting was defined
 
@@ -318,7 +318,6 @@ Example output::
     
     $ export EASYBUILD_MODULES_TOOL=Lmod
     $ export EASYBUILD_OPTARCH=''
-
 
     $ eb --show-config --installpath=$HOME/apps --job-cores=4
     #
