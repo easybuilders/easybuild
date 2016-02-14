@@ -312,6 +312,13 @@ The output will specify:
 
 Example output::
 
+    $ cat $HOME/.config/easybuild/config.cfg
+    [config]
+    buildpath = /tmp/eb-build
+    
+    $ export EASYBUILD_MODULES_TOOL=Lmod
+    $ export EASYBUILD_OPTARCH=''
+     
     $  eb --show-config --prefix $HOME/EasyBuild --installpath=$HOME/apps --job-cores=4
     #
     # Current EasyBuild configuration
