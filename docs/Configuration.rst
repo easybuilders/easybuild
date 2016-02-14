@@ -1,7 +1,3 @@
-
-.. toctree::
-     :maxdepth: 1
-
 .. _configuring_easybuild:
 
 Configuring EasyBuild
@@ -9,6 +5,10 @@ Configuring EasyBuild
 
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
+
+.. contents::
+    :depth: 2
+    :backlinks: none
 
 .. _configuration_types:
 
@@ -287,6 +287,13 @@ Examples (more below):
 
     $ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
 
+.. _configuration_show_config:
+
+Overview of current configuration (``--show-config``, ``--show-full-config``)
+-----------------------------------------------------------------------------
+
+.. _configuration_available_settings:
+
 Available configuration settings
 --------------------------------
 
@@ -295,6 +302,8 @@ settings, see ``eb --help``. We refrain from listing all available configuration
 
 A couple of selected configuration settings are discussed below,
 in particular the mandatory settings.
+
+.. _configuration_mandatory_settings:
 
 Mandatory configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -536,9 +545,12 @@ template value here)::
 
     logfile-format = easybuild,easybuild-%%(name)s.log
 
+.. _configuration_optional_settings:
 
 Optional configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The subsections below discuss a couple of commonly used optional configuration settings.
 
 .. _prefix:
 
