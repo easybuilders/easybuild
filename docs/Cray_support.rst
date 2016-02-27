@@ -79,7 +79,7 @@ Major supported/tested applications
 (in alphabetical order)
 
 CP2K
-~~~
+~~~~
 
 * http://www.cp2k.org
 * version(s): 2.6.0
@@ -89,7 +89,7 @@ CP2K
  $ eb CP2K-2.6.0-CrayGNU-2015.06-XC.eb --dr 
 
 GROMACS
-~~~~~~
+~~~~~~~
 
 * http://www.gromacs.org
 * version(s): 4.6.7
@@ -99,7 +99,7 @@ GROMACS
  eb GROMACS-4.6.7-CrayGNU-2015.06-XC-mpi.eb --dr 
 
 HPL
-~~
+~~~
 
 * http://www.netlib.org/benchmark/hpl
 * version(s): 2.1
@@ -122,7 +122,7 @@ Python + numpy/scipy
  # note: Python and numpy will be installed as dependencies
 
 WRF
-~~
+~~~
 
 * http://www.wrf-model.org
 * version(s): 3.6.1
