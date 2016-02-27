@@ -31,6 +31,8 @@ The order of preference for the different configuration types is as listed above
   configuration file
 
 
+.. _configuration_consistency:
+
 Consistentency across supported configuration types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -65,6 +67,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
    $ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
+
 
 .. _configuration_file:
 
@@ -175,9 +178,13 @@ Templates and constants supported in configuration files
 Two types of template values ``%(...)s`` are supported in configuration files:
 
 * for configuration options defined in the configuration file (and only those)
+
   * *syntax:* ``%(opt)s``, i.e., using the (lowercase) name of the configuration option
+  
 * for the default value of selected configuration options (see ``eb --avail-cfgfile-constants``)
+
   * *syntax:* ``%(DEFAULT_OPT)s``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
+  
 
 .. note::
   These template values are only supported in configuration files, *not* in environment variable values or 
@@ -442,14 +449,17 @@ so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 Easyconfigs repository (``--repository``, ``--repositorypath``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo`` (determined via :ref:`prefix`)
+*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo``
+(determined via :ref:`prefix`)
 
 EasyBuild has support for archiving (tested) ``.eb`` easyconfig files.
 After successfully installing a software package using EasyBuild, the
-corresponding ``.eb`` file is uploaded to a repository defined by the ``repository`` and ``repositorypath`` configuration settings.
+corresponding ``.eb`` file is uploaded to a repository defined by the
+``repository`` and ``repositorypath`` configuration settings.
 
 Currently, EasyBuild supports the following repository types (see also
 ``eb --avail-repositories``):
+
 * ``FileRepository('path', 'subdir')``: a plain flat file repository;
   ``path`` is the path where files will be stored, ``subdir`` is an
   *optional* subdirectory of that path where the files should be stored

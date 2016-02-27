@@ -23,7 +23,7 @@ This can be done in a number of ways:
 * :ref:`specifying_easyconfigs_set_of_easyconfigs`
 * :ref:`from_pr`
 
-Whenever EasyBuild searches for easyconfig files, it considers a couple of locations, i.e. (in order of preference):
+Whenever EasyBuild searches for *explicitely specified* easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
 (i)   the local working directory
 (ii)  the robot search path (see :ref:`robot_search_path`)
@@ -31,7 +31,7 @@ Whenever EasyBuild searches for easyconfig files, it considers a couple of locat
       (which is included in the default robot search path)
 
 These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
-*not* for easyconfig files that are specified via an absolute path.
+*not* for easyconfig files that are specified via an absolute path. The dependencies are resolved using the robot search path (see :ref:`robot_search_path`).
 
 .. note::
   For easyconfig files specified on the ``eb`` command line, the *full* robot search path is only considered since
@@ -217,6 +217,9 @@ For example, a list of easyblocks can be obtained with::
 
   $ eb --list-easyblocks
 
+To see more details about the available easyblocks, i.e., in which Python module the class is defined, and where it is
+located, use ``--list-easyblocks=detailed``.
+
 Refer to page :ref:`basic_usage_easyblocks` for more information.
 
 .. _avail_easyconfig_params:
@@ -389,7 +392,10 @@ For example, when looking for an easyconfig for ``OpenMPI`` version ``1.6.4`` an
 * ``o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
 * ``OpenMPI-1.6.4-GCC-4.7.2-test.eb``
 
-.. note:: Sometimes easyconfig files are needed even when the modules for the dependencies are already available, i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version suffix) is not sufficient. This is the case when using ``--dry-run`` to construct the complete dependency graph, or when the active module naming scheme requires some additional information (e.g., the ``moduleclass``).
+.. note:: Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
+ i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version
+ suffix) is not sufficient. This is the case when using ``--dry-run`` to construct the complete dependency graph, or
+ when the active module naming scheme requires some additional information (e.g., the ``moduleclass``).
 
 .. note:: If EasyBuild is unable to locate required easyconfigs, an appropriate error message will be shown. For example::
 
@@ -527,6 +533,9 @@ Note how the different status symbols denote distinct handling states by EasyBui
 * ``[x]`` The build is available, EasyBuild will skip building this module
 * ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild and will do so
 
+
+.. note:: Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
+ will be execute can be obtained using ``--extended-dry-run`` or ``-x``, see :ref:`extended_dry_run`.
 
 .. _tweaking_easyconfigs_using_try:
 
