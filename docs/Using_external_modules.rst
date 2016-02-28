@@ -9,7 +9,7 @@ We refer to such modules as *external modules*.
 This can be useful to reuse vendor-supplied modules, for example on Cray systems.
 
 .. contents::
-    :depth: 2
+    :depth: 3
     :backlinks: none
 
 
