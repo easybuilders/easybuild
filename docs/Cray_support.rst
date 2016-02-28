@@ -3,7 +3,7 @@
 EasyBuild on Cray
 =================
 
-Since EasyBuild v2.1, experimental support is available for building and installing software on Cray systems using the PrgEnv modules provided by Cray. This page provides an overview of the current status.
+As of EasyBuild v2.7.0, Cray support (XC series) is considered stable and it enables building/installing software using the PrgEnv modules provided by Cray. This page provides an overview of the current status.
 
  For more information about this, contact Kenneth Hoste (HPC-UGent, Belgium; kenneth.hoste@ugent.be) and Petar Forai (IMBA/IMP, Austria; petar.forai@imp.ac.at).
 
@@ -20,9 +20,9 @@ Test systems
 EasyBuild toolchains
 --------------------
 
-* CrayGNU: PrgEnv-gnu with pinned dependencies for gcc, cray-libsci and cray-mpich
-* CrayIntel: PrgEnv-intel with pinned dependencies for intel, cray-libsci and cray-mpich
-* CrayCCE: PrgEnv-cray with pinned dependencies for cce, cray-libsci and cray-mpich
+* CrayGNU: PrgEnv-gnu with pinned versions of gcc, cray-libsci and cray-mpich
+* CrayIntel: PrgEnv-intel with pinned versions of intel, cray-libsci and cray-mpich
+* CrayCCE: PrgEnv-cray with pinned versions of cce, cray-libsci and cray-mpich
 
 versions:
 
@@ -33,10 +33,10 @@ What works already?
 -------------------
 (see below for more information)
 
-*  HPL (LINPACK) benchmark version 2.1
+*  **HPL** (LINPACK) benchmark version 2.1
 
 Major scientific software applications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **CP2K** 2.6.0
 * **GROMACS** 4.6.7
@@ -46,32 +46,40 @@ Major scientific software applications
 Required EasyBuild configuration
 --------------------------------
 
-* enabling experimental mode using --experimental is required
-* support for using the Cray toolchains is still experimental, while we collect feedback and suggestions from experienced users of Cray systems
-* the craype-<target> module to load must be specified using --optarch
-
-  * e.g., --optarch=sandybridge results in craype-sandybridge being loaded in the build environment used by EasyBuild metadata for external (Cray-provided) modules can be specified using --external-modules-metadata
-
-
-Notes/setup
------------
 
 Modules tool 
-~~~~~~~~~~~
+~~~~~~~~~~~~
 * Sisu: self-installed Lmod 5.8
 * Piz Daint, Dora, Swan, Santis, Brisi: system-provided environment modules 3.2.10 
 
 Example for C-modules::
 
- source /opt/modules/3.2.10.2/init/bash
- export PATH=/opt/modules/3.2.10.2/bin/:$PATH
+ source /opt/modules/3.2.10.3/init/bash
+ export PATH=/opt/modules/3.2.10.3/bin/:$PATH
 
 Architecture 
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
-Example for sandybridge::
+* the craype-<target> module to load must be specified using --optarch
+
+  * e.g., --optarch=sandybridge results in craype-sandybridge being loaded in the build environment used by EasyBuild 
+
+You can also export this option as a shell variable: Example for sandybridge::
 
  $ export EASYBUILD_OPTARCH=sandybridge
+
+Metadata for Cray-provided modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Easybuild provides a sample metadata file in order to use modules provided by Cray:
+
+::
+
+ easybuild-framework/etc/cray_external_modules_metadata.cfg
+
+
+* This file is loaded by default and contains enough information to build the easyconfig files shipped with EasyBuild
+* If you need to use a customized file, it can be specified using --external-modules-metadata
 
 Major supported/tested applications
 -----------------------------------
@@ -86,7 +94,7 @@ CP2K
 
 ::
  
- $ eb CP2K-2.6.0-CrayGNU-2015.06-XC.eb --dr 
+ $ eb CP2K-2.6.0-CrayGNU-2015.06-XC.eb -dr 
 
 GROMACS
 ~~~~~~~
@@ -96,7 +104,7 @@ GROMACS
 
 ::
 
- eb GROMACS-4.6.7-CrayGNU-2015.06-XC-mpi.eb --dr 
+ eb GROMACS-4.6.7-CrayGNU-2015.06-XC-mpi.eb -dr 
 
 HPL
 ~~~
@@ -106,20 +114,20 @@ HPL
 
 ::
 
- eb HPL-2.1-CrayCCE-2015.06-XC.eb --dr
- eb HPL-2.1-CrayGNU-2015.06-XC.eb --dr 
- eb HPL-2.1-CrayIntel-2015.06-XC.eb --dr 
+ eb HPL-2.1-CrayCCE-2015.06-XC.eb -dr
+ eb HPL-2.1-CrayGNU-2015.06-XC.eb -dr 
+ eb HPL-2.1-CrayIntel-2015.06-XC.eb -dr 
 
 Python + numpy/scipy
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 * http://python.org, http://www.numpy.org, http://www.scipy.org
 * version(s): Python 2.7.9, numpy 1.9.2, scipy 0.15.1
 
 ::
 
- eb scipy-0.15.1-CrayGNU-2015.06-XC-Python-2.7.9.eb --dr 
- # note: Python and numpy will be installed as dependencies
+ eb Python-2.7.9-CrayGNU-2015.06-XC.eb -dr 
+ # includes a few python packages (such as mpi4py, numpy and scipy)
 
 WRF
 ~~~
@@ -130,4 +138,3 @@ WRF
 ::
 
  eb WRF-3.6.1-CrayGNU-2015.06-XC-dmpar.eb --dr 
-
