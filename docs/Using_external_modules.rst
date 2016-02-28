@@ -8,6 +8,10 @@ We refer to such modules as *external modules*.
 
 This can be useful to reuse vendor-supplied modules, for example on Cray systems.
 
+.. contents::
+    :depth: 2
+    :backlinks: none
+
 
 Using external modules as dependencies
 ---------------------------------------
