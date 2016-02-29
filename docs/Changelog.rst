@@ -3,6 +3,10 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20160228.01** (`February 28th 2016`):
+
+  * update documentation on external modules metadata (see :ref:`using_external_modules_metadata`)
+
 * **release 20160214.01** (`February 14th 2016`):
 
  * add section on ``--show-config`` (see :ref:`configuration_show_config`)
