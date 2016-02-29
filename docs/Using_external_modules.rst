@@ -53,7 +53,7 @@ Format::
 Default
 ~~~~~~~
 
-Up until EasyBuild v2.7.0, no metadata for external modules was available by default.
+Up until EasyBuild v2.6.0, no metadata for external modules was available by default.
 
 Since EasyBuild v2.7.0, a file providing metadata for Cray-provided modules on Cray systems is included,
 and is active by default (i.e., unless other files are specified via ``--external-modules-metadata``);
