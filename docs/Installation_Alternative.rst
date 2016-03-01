@@ -200,7 +200,7 @@ It can be used as follows::
     # run downloaded script, specifying *your* GitHub username and the installation prefix
     bash install-EasyBuild-develop.sh GITHUB_USERNAME $INSTALL_PREFIX
     # update $MODULEPATH via 'module use', and load the module
-    module use $INSTALL_PREFIX
+    module use $INSTALL_PREFIX/modules
     module load EasyBuild-develop
     eb --version  ## This should ensure you have a reasonable instance of EasyBuild
 
