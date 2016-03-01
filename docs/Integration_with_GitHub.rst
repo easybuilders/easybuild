@@ -3,37 +3,138 @@
 Integration with GitHub
 =======================
 
-EasyBuild provides some integration with GitHub, where the different EasyBuild repositories are located.
+EasyBuild provides several features that integrate with GitHub, where the different EasyBuild repositories are located.
 
 From the EasyBuild command line ``eb`` several options are available to reach out to GitHub,
-which are documented below:
+which are documented below.
 
 .. contents::
     :depth: 2
     :backlinks: none
 
+.. _github_requirements:
+
+Requirements
+------------
+
+Depending on which GitHub integration features you want to use, there are a couple of requirements:
+
+* **a GitHub user name**
+
+  * only required for authenticated access to the GitHub API, which can help to avoid rate limitations
+  * *not* strictly necessary for read-only operations (:ref:`github_from_pr` and :ref:`github_review_pr`)
+  * see :ref:`github_user`
+
+* **a GitHub token** + ``keyring`` **Python package**
+
+  * allows accessing the GitHub API with authentication
+  * only strictly required for features that require GitHub write permissions
+    (:ref:`github_upload_test_report` and :ref:`github_new_pr`)
+  * see :ref:`github_token`
+
+* ``git`` **command** / ``GitPython`` **Python package**
+
+  * only required when local ``git`` commands need to be executed, e.g. to manipulate a Git repository
+    (:ref:`github_new_pr` and :ref:`github_update_pr`)
+
+* **SSH public key registered on GitHub**
+
+  * only required when push access to Git repositories that reside on GitHub is required
+    (:ref:`github_new_pr` and :ref:`github_update_pr`)
+  * see https://github.com/settings/ssh
+
+* **fork of the EasyBuild repositories on GitHub**
+
+  * only required for submitting pull requests (:ref:`github_new_pr` and :ref:`github_update_pr`)
+  * see ``Fork`` button (top right) at https://github.com/hpcugent/easybuild-easyconfigs (for example)
+
+.. _github_configuration:
 
 Configuration
 -------------
 
+The following sections discuss the EasyBuild configuration options relevant to the GitHub integration features.
+
+.. _github_user:
+
+Providing a GitHub username (``--github-user``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To specify your GitHub username, do one of the following:
+
+* use the ``--github-user`` configuration option on the ``eb`` command line
+* define the ``$EASYBUILD_GITHUB_USER`` environment variable
+* specify ``github-user`` in your EasyBuild configuraton file
+
+(see also :ref:`configuring_easybuild`)
+
+
 .. _github_token:
 
-Using a GitHub token to enable authenticated access via ``--github-user``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installing a GitHub token (``--install-github-token``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To specify that a particular GitHub account should be used to query the GitHub API, use ``--github-user``.
-A matching GitHub token must be available for the specified account if ``-github-user`` is used.
+.. note:: *requires*: GitHub username + ``keyring`` Python package
 
-If a GitHub token is available EasyBuild can access the GitHub API authenticated. This is beneficial with respect
-to rate limiting constraints, and required for posting comments or when another form of write/push access is needed.
+A GitHub token is a string of 40 hexidecimal (lowercase) characters that is tied to your GitHub account,
+allowing you to access the GitHub API authenticated.
 
-For more information on obtaining a GitHub token and providing it to EasyBuild, see
-https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#setting-things-up .
+Using a GitHub token is beneficial with respect to rate limitations, and enables write permissions on GitHub
+(e.g., posting comments, creating gists, opening pull requests, etc.).
 
-.. _from_pr:
+To obtain a GitHub token:
 
-Using easyconfigs from pull requests via ``--from-pr``
-------------------------------------------------------
+* visit https://github.com/settings/tokens/new and log in with your GitHub account
+* enter a token description, for example: "``EasyBuild``"
+* make sure (only) the ``gist`` and ``repo`` scopes are fully enabled
+* click ``Generate token``
+* *copy-paste* the generated token
+
+.. note:: You will only be able to copy-paste the generated token right after you have created it.
+          The value corresponding to an existing token can *not* be retrieved later through the GitHub interface.
+
+          **Please keep your token secret at all times**; it allows fully authenticated access to your GitHub account!
+
+
+You can install the GitHub token in your keyring using EasyBuild, so it can pick it up when it needs to,
+using ``eb --install-github-token``::
+
+    $ eb --github-user example --install-github-token
+    Token: <copy-paste-your-40-character-token-here>
+    Validating token...
+    Token seems to be valid, installing it.
+    Token 'e3a..0c2' installed!
+
+EasyBuild will validate the provided token, to check that authenticated access to your GitHub account works as expected.
+
+.. note:: EasyBuild will never print the full token value, to avoid leaking it.
+          For debugging purposes, only the first and last 3 characters will be shown.
+
+
+.. _github_requirements_check:
+
+Checking status of GitHub integration (``--check-github``)
+----------------------------------------------------------
+
+To check the status of your setup w.r.t. GitHub integration, the ``--check-github`` command line option can be used.
+
+Using this will trigger EasyBuild to perform a number of checks, and report back on what the test results mean
+for the different GitHub integration features.
+
+If all requirements are taken care of in your setup, you should see output like this::
+
+    $ eb --check-github
+
+    FIXME
+
+.. note:: Checking whether push access to GitHub works may take some time, since a recent clone of
+          the easybuild-easyconfigs GitHub repository will be created in the process (at a temporary location).
+
+
+.. _github_from_pr:
+
+Using easyconfigs from pull requests (``--from-pr``)
+----------------------------------------------------
 
 *(supported since EasyBuild v1.13.0)*
 
@@ -65,10 +166,10 @@ For example, to use the GCC v4.9.2 easyconfigs contributed via `easyconfigs pull
   To avoid GitHub rate limiting, let EasyBuild know which GitHub account should be used to query the GitHub API,
   via ``--github-user``. 
 
-.. _from_pr_robot_synergy:
+.. _github_from_pr_robot_synergy:
 
-Synergy with --robot
-~~~~~~~~~~~~~~~~~~~~
+Synergy with ``--robot``
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since EasyBuild v1.15.0, the temporary directory containing the easyconfigs (and patch files) from the specified
 pull request is *prepended* to the robot search path, to ensure that easyconfigs
@@ -97,7 +198,7 @@ For example, to build and install HPL with the ``intel/2015a`` toolchain, both o
 Note that the easyconfigs that are required to resolve dependencies and are available locally in
 ``$HOME/easyconfigs`` are being picked up as needed.
 
-.. _from_pr_specifying_easyconfigs:
+.. _github_from_pr_specifying_easyconfigs:
 
 Specifying particular easyconfig files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,38 +229,32 @@ in that same pull request for netCDF, WRF, ...::
 Again, note that locally available easyconfigs that are required to resolve dependencies are being picked up as needed.
 
 
-.. _upload_test_report:
+.. _github_upload_test_report:
 
-Uploading test reports via ``--upload-test-report``
----------------------------------------------------
+Uploading test reports (``--upload-test-report``)
+-------------------------------------------------
 
 *(supported since EasyBuild v1.13.0)*
 
 https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests
 
 
-.. _review_pr:
+.. _github_review_pr:
 
-Reviewing easyconfig pull requests via ``--review-pr``
-------------------------------------------------------
+Reviewing easyconfig pull requests (``--review-pr``)
+----------------------------------------------------
 
 
-.. _new_pr:
+.. _github_new_pr:
 
-Opening new pull requests via ``--new-pr``
-------------------------------------------
-
-*(supported since EasyBuild v2.6.0)*
-
-.. note::
-    This is an experimental feature, see :ref:`experimental_features`.
-
-.. _update_pr:
-
-Updating existing pull requests via ``--update-pr``
----------------------------------------------------
+Submitting new pull requests (``--new-pr``)
+-------------------------------------------
 
 *(supported since EasyBuild v2.6.0)*
 
-.. note::
-    This is an experimental feature, see :ref:`experimental_features`.
+.. _github_update_pr:
+
+Updating existing pull requests (``--update-pr``)
+-------------------------------------------------
+
+*(supported since EasyBuild v2.6.0)*
