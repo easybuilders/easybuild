@@ -79,7 +79,7 @@ Metadata for Cray-provided modules
 
 
 * This file is loaded by default and contains enough information to build the easyconfig files shipped with EasyBuild
-* If you need to use a customized file, it can be specified using --external-modules-metadata
+* If you need to use a customized file, it can be specified using --external-modules-metadata. For more details see :ref:`using_external_modules_metadata`
 
 Major supported/tested applications
 -----------------------------------
