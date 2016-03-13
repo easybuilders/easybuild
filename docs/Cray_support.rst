@@ -16,6 +16,7 @@ Test systems
 * Santis & Brisi (TDS) @ CSCS.ch
 * Sisu @ CSC.fi (https://research.csc.fi/sisu-supercomputer)
 * Swan (TDS) @ Cray
+* Blue Waters @ NCSA
 
 EasyBuild toolchains
 --------------------
@@ -26,8 +27,8 @@ EasyBuild toolchains
 
 versions:
 
-* Cray*/2015.06-XC: PrgEnv-(*)/5.2.40 (Requires Cray PE June/2015)
-* Cray*/2015.11-XC: PrgEnv-(*)/5.2.82 (Requires Cray PE November/2015)
+* Cray*/2015.06: PrgEnv-(*)/5.2.40 (Requires Cray PE June/2015)
+* Cray*/2015.11: PrgEnv-(*)/5.2.82 (Requires Cray PE November/2015)
 
 What works already?
 -------------------
@@ -94,7 +95,7 @@ CP2K
 
 ::
  
- $ eb CP2K-2.6.0-CrayGNU-2015.06-XC.eb -dr 
+ $ eb CP2K-2.6.0-CrayGNU-2015.06.eb -dr 
 
 GROMACS
 ~~~~~~~
@@ -104,7 +105,7 @@ GROMACS
 
 ::
 
- eb GROMACS-4.6.7-CrayGNU-2015.06-XC-mpi.eb -dr 
+ eb GROMACS-4.6.7-CrayGNU-2015.06-mpi.eb -dr 
 
 HPL
 ~~~
@@ -114,9 +115,9 @@ HPL
 
 ::
 
- eb HPL-2.1-CrayCCE-2015.06-XC.eb -dr
- eb HPL-2.1-CrayGNU-2015.06-XC.eb -dr 
- eb HPL-2.1-CrayIntel-2015.06-XC.eb -dr 
+ eb HPL-2.1-CrayCCE-2015.06.eb -dr
+ eb HPL-2.1-CrayGNU-2015.06.eb -dr 
+ eb HPL-2.1-CrayIntel-2015.06.eb -dr 
 
 Python + numpy/scipy
 ~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +127,7 @@ Python + numpy/scipy
 
 ::
 
- eb Python-2.7.9-CrayGNU-2015.06-XC.eb -dr 
+ eb Python-2.7.9-CrayGNU-2015.06.eb -dr 
  # includes a few python packages (such as mpi4py, numpy and scipy)
 
 WRF
@@ -137,4 +138,4 @@ WRF
 
 ::
 
- eb WRF-3.6.1-CrayGNU-2015.06-XC-dmpar.eb --dr 
+ eb WRF-3.6.1-CrayGNU-2015.06-dmpar.eb --dr 
