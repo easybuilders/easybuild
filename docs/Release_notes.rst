@@ -80,6 +80,7 @@ feature + bugfix release
   * fix bootstrap script for environment where '``python``' is Python 3.x (`#1660 <https://github.com/hpcugent/easybuild-framework/pull/1660>`_)
   * remove ``--experimental`` for tests related to ``--package`` (`#1665 <https://github.com/hpcugent/easybuild-framework/pull/1665>`_)
   * ensure path to setuptools is included in ``$PYTHONPATH`` being used to test scripts (`#1671 <https://github.com/hpcugent/easybuild-framework/pull/1671>`_)
+  * sanitize environment before initializing easyblocks (`#1676 <https://github.com/hpcugent/easybuild-framework/pull/1676>`_)
 
 
 **easyblocks**
