@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20160318.01** (`March 18th 2016`): update release notes for EasyBuild v2.7.0 (see :ref:`release_notes_eb270`)
 * **release 20160228.01** (`February 28th 2016`):
 
   * update documentation on external modules metadata (see :ref:`using_external_modules_metadata`)
