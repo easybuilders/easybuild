@@ -48,6 +48,8 @@ Depending on which GitHub integration features you want to use, there are a coup
   * only required for submitting pull requests (:ref:`github_new_pr` and :ref:`github_update_pr`)
   * see ``Fork`` button (top right) at https://github.com/hpcugent/easybuild-easyconfigs (for example)
 
+See also :ref:`github_requirements_check`.
+
 .. _github_configuration:
 
 Configuration
@@ -126,9 +128,16 @@ If all requirements are taken care of in your setup, you should see output like 
     $ eb --check-github
 
     FIXME
+    FIXME
+    FIXME
+    FIXME
+    FIXME
+    FIXME
 
 .. note:: Checking whether push access to GitHub works may take some time, since a recent clone of
           the easybuild-easyconfigs GitHub repository will be created in the process (at a temporary location).
+
+See also :ref:`github_requirements`.
 
 
 .. _github_from_pr:
@@ -140,11 +149,12 @@ Using easyconfigs from pull requests (``--from-pr``)
 
 Via the ``--from-pr`` command line option (available since EasyBuild v1.13.0), easyconfig files that are added or
 modified by a particular pull request to the `easybuild-easyconfigs GitHub repository
-<https://github.com/hpcugent/easybuild-easyconfigs>`_ can be used (regardless of whether the pull request is still
-open or not).
+<https://github.com/hpcugent/easybuild-easyconfigs>`_ can be used (regardless of whether the pull request is merged
+or not).
 
-This can be useful to use easyconfig files that are not available yet in the active EasyBuild installation,
-or to test new contributions by combining ``--from-pr`` with ``-upload-test-report`` (see :ref:`upload_test_report`).
+This can be useful to employ easyconfig files that are not available yet in the active EasyBuild installation,
+or to test new contributions by combining ``--from-pr`` with ``-upload-test-report``
+(see :ref:`github_upload_test_report`).
 
 When ``--from-pr`` is used, EasyBuild will download all modified files (easyconfig files and patches) to a temporary
 directory before processing them.
@@ -164,7 +174,7 @@ For example, to use the GCC v4.9.2 easyconfigs contributed via `easyconfigs pull
 .. note::
 
   To avoid GitHub rate limiting, let EasyBuild know which GitHub account should be used to query the GitHub API,
-  via ``--github-user``. 
+  and provide a matching GitHub token; see also :ref:`github_token`.
 
 .. _github_from_pr_robot_synergy:
 
@@ -236,7 +246,53 @@ Uploading test reports (``--upload-test-report``)
 
 *(supported since EasyBuild v1.13.0)*
 
+.. note:: requires that a GitHub token was required ``gist`` permissions is available, cfr. :ref:`github_token`
+
+For every installation performed with EasyBuild, a test report is generated.
+By default, the test report is copied in the installation directory, right next to the log file
+(see also :ref:`understanding_easyBuild_logs`).
+
+Using ``--upload-test-report``, the test report can also be pushed to GitHub
+(as a *gist*, cfr. https://gist.github.com) to share it with others.
+
+Each test report includes:
+
+* an overview of the easyconfigs being processed
+* time & date
+* the exact ``eb`` command line that was used
+* the full EasyBuild configuration that was in place
+* information about the system on which EasyBuild was used (hostname, OS, architecture, etc.)
+* the list of modules that was loaded
+* the full environment of the session in which ``eb`` was run
+  (note: can be filtered, see :ref:`github_test_report_env_filter`)
+
+For each easyconfig that *failed* to install a partial log will be uploaded as a separate gist,
+and a link to this gist will be included in the test report.
+
+If ``--upload-test-report`` is combined with ``--from-pr``, a comment referring to the test report (incl. a brief
+summary) will be placed in the respective pull request. This makes it a very powerful tool when testing contributions.
+
+.. note:: If you want to easily access a test report without uploading it to GitHub, use ``--dump-test-report``.
+
 https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests
+
+
+.. _github_test_report_env_filter:
+
+Filtering the environment details (``--test-report-env-filter``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since the environment of the session in which ``eb`` was used may contain sensitive information,
+it can be filtered through ``--test-report-env-filter``.
+
+This configuration option takes a regular expression that is used to determine which environment variables
+can be included in the test report (based on their name).
+Environment variables for which the name *matches* the specified regular expression will *not* be included
+in the test report.
+
+An example of a typical setting::
+
+    export EASYBUILD_TEST_REPORT_ENV_FILTER='^SSH|USER|HOSTNAME|UID|.*COOKIE.*'
 
 
 .. _github_review_pr:
