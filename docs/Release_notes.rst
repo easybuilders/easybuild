@@ -60,9 +60,13 @@ feature + bugfix release
 * various bug fixes, including:
 
   * fix Lmod spider output in generated modules (`#1583 <https://github.com/hpcugent/easybuild-framework/pull/1583>`_)
-  * correctly define '``easybuild``' namespaces (`#1593 <https://github.com/hpcugent/easybuild-framework/pull/1593>`_, `#1666 <https://github.com/hpcugent/easybuild-framework/pull/1666>`_)
+  * correctly define '``easybuild``' namespaces (`#1593 <https://github.com/hpcugent/easybuild-framework/pull/1593>`_, `#1666 <https://github.com/hpcugent/easybuild-framework/pull/1666>`_, `#1680 <https://github.com/hpcugent/easybuild-framework/pull/1680>`_)
 
     * this change requires that the ``setuptools`` Python package is available (at runtime)
+    * using custom easyblocks by adding them in the Python search path (``$PYTHONPATH``) may require adjustments,
+      i.e. also using ``pkg_resources.declare_namespace`` in the ``__init__.py`` files;
+      *we highly recommend to use* ``--include-easyblocks`` *instead*,
+      see http://easybuild.readthedocs.org/en/latest/Including_additional_Python_modules.html
     * note: this has the side-effect of not being able anymore to reliably use '``eb``' in the parent directory of
       the easybuild-framework repository (`#1667 <https://github.com/hpcugent/easybuild-framework/pull/1667>`_)
 
@@ -81,6 +85,7 @@ feature + bugfix release
   * remove ``--experimental`` for tests related to ``--package`` (`#1665 <https://github.com/hpcugent/easybuild-framework/pull/1665>`_)
   * ensure path to setuptools is included in ``$PYTHONPATH`` being used to test scripts (`#1671 <https://github.com/hpcugent/easybuild-framework/pull/1671>`_)
   * sanitize environment before initializing easyblocks (`#1676 <https://github.com/hpcugent/easybuild-framework/pull/1676>`_)
+  * remove ``reload`` statements in ``include.py``, since they are not required and break ``--include-toolchains`` (`#1679 <https://github.com/hpcugent/easybuild-framework/pull/1679>`_)
 
 
 **easyblocks**
