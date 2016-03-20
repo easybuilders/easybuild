@@ -9,7 +9,7 @@ alongside 5,580 easyconfig files.
 
 .. _release_notes_eb270:
 
-v2.7.0 (March 18th 2016)
+v2.7.0 (March 20th 2016)
 ------------------------
 
 feature + bugfix release
