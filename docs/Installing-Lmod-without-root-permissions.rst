@@ -51,11 +51,11 @@ Lmod
 ~~~~
 
 **Step 1**: Download and unpack the latest available Lmod version,
-`Lmod-6.0.1.tar.bz2`_ at the time of writing.
+`Lmod-6.1.tar.bz2`_ at the time of writing.
 
 .. code:: bash
 
-    tar xfvj Lmod-6.0.1.tar.bz2 && cd Lmod-6.0.1
+    tar xfvj Lmod-6.1.tar.bz2 && cd Lmod-6.1
 
 **Step 2**: Configure, build and install Lmod build, in a custom prefix:
 
@@ -68,7 +68,7 @@ Lmod
 
 .. code:: bash
 
-    export PATH=$HOME/lmod/6.0.1/libexec:$PATH
+    export PATH=$HOME/lmod/6.1/libexec:$PATH
 
 Optionally, give it a spin:
 
@@ -76,7 +76,7 @@ Optionally, give it a spin:
 
     $ lmod --version
 
-    Modules based on Lua: Version 6.0.1  2015-06-10 16:45
+    Modules based on Lua: Version 6.1  2016-02-05 16:31
         by Robert McLay mclay@tacc.utexas.edu
 
 **Step 4**: Define ``module`` function to use ``lmod`` (optional for use
@@ -84,10 +84,10 @@ with EasyBuild):
 
 .. code:: bash
 
-    source $HOME/lmod/6.0.1/init/bash
-    export LMOD_CMD=$HOME/lmod/6.0.1/libexec/lmod
+    source $HOME/lmod/6.1/init/bash
+    export LMOD_CMD=$HOME/lmod/6.1/libexec/lmod
 
 .. _`http://sourceforge.net/projects/lmod/files/`: http://sourceforge.net/projects/lmod/files/
 .. _lua-5.1.4.8.tar.gz: http://sourceforge.net/projects/lmod/files/lua-5.1.4.8.tar.gz/download
-.. _Lmod-6.0.1.tar.bz2: http://sourceforge.net/projects/lmod/files/Lmod-6.0.1.tar.bz2/download
+.. _Lmod-6.1.tar.bz2: http://sourceforge.net/projects/lmod/files/Lmod-6.1.tar.bz2/download
 
