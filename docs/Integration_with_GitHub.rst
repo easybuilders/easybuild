@@ -17,7 +17,7 @@ Using a GitHub token to enable authenticated access via ``--github-user``
 -------------------------------------------------------------------------
 
 To specify that a particular GitHub account should be used to query the GitHub API, use ``--github-user``.
-A matching GitHub token must be available for the specified account if ``-github-user`` is used.
+A matching GitHub token must be available for the specified account if ``--github-user`` is used.
 
 If a GitHub token is available EasyBuild can access the GitHub API authenticated. This is beneficial with respect
 to rate limiting constraints, and required for posting comments or when another form of write/push access is needed.
