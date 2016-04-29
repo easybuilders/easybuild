@@ -4,14 +4,19 @@ Installing EasyBuild
 ====================
 
 EasyBuild is Python software, so there are a couple of ways to install it.
-Because of various issues with the different installation tools that are available
-for Python packages, we recommend using the **bootstrap** install procedure described here.
+
+We recommend using the **bootstrap** install procedure described at :ref:`bootstrapping`, because of various issues
+with the different installation tools that are available for Python packages.
 
 Do take into account the required and optional dependencies (see :ref:`requirements` and :ref:`dependencies`).
 
 For advanced options, see :ref:`bootstrap_advanced_options`.
 
 Notes on other ways of installing EasyBuild are available under section :ref:`alt_inst_methods`.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 --------------
 
@@ -325,7 +330,7 @@ Updating an existing EasyBuild installation
 
 To upgrade to a newer EasyBuild version (say, |version|) than the one currently installed there are several options:
 
-     (i) (re)bootstrap EasyBuild to obtain an 'EasyBuild/|version|' module to load, using the instructions above, see :ref:`bootstrapping`.
+     (i) (re)bootstrap EasyBuild to obtain an `EasyBuild` module for version |version|, using the instructions above, see :ref:`bootstrapping`.
      (ii) install EasyBuild version |version| with a previous version of EasyBuild, using the easyconfig file available `on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
      (iii) install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (`easy_install`, `pip`, ...), see also :ref:`alt_inst_easy_install_pip`
      (iv) update the `master` branch of your Git working copies of the different EasyBuild repositories
