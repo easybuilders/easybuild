@@ -323,11 +323,11 @@ Example usage, with the relevant output at the start of stage 1 of the bootstrap
 Updating an existing EasyBuild installation
 -------------------------------------------
 
-To upgrade to a newer EasyBuild version (say, *|version|*) than the one currently installed there are several options:
+To upgrade to a newer EasyBuild version (say, |version|) than the one currently installed there are several options:
 
-     (i) (re)bootstrap EasyBuild to obtain an `EasyBuild/|version|` module to load, using the instructions above, see :ref:`bootstrapping`.
-     (ii) install EasyBuild v|version| with a previous version of EasyBuild, using the easyconfig file available `on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
-     (iii) install EasyBuild v|version| from PyPI, using one of the standard Python installation tools (`easy_install`, `pip`, ...), see also :ref:`alt_inst_easy_install_pip`
+     (i) (re)bootstrap EasyBuild to obtain an 'EasyBuild/|version|' module to load, using the instructions above, see :ref:`bootstrapping`.
+     (ii) install EasyBuild version |version| with a previous version of EasyBuild, using the easyconfig file available `on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
+     (iii) install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (`easy_install`, `pip`, ...), see also :ref:`alt_inst_easy_install_pip`
      (iv) update the `master` branch of your Git working copies of the different EasyBuild repositories
 
 .. _dependencies:
