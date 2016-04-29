@@ -31,6 +31,8 @@ Python provides a couple of ways to do that.
 Every version of the EasyBuild packages is released via PyPi.
 
 
+.. _alt_inst_easy_install_pip:
+
 Installing EasyBuild without admin rights
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -42,12 +44,16 @@ you can use one of the following simple commands:
 
        easy_install --prefix $HOME/EasyBuild easybuild
 
+   .. note:: If you already have `easybuild` installed, you may need to instruct ``easy_install`` to install a newer version,
+             using ``--upgrade`` or ``-U``.
+
 -  using ``pip`` (more recent and better installation tool for Python software)::
 
        pip install --install-option "--prefix=$HOME/EasyBuild" easybuild
 
-The ``--prefix $HOME/EasyBuild`` part in these commands allows you to install EasyBuild without admin rights into ``$HOME/EasyBuild``.
+   The ``--prefix $HOME/EasyBuild`` part in these commands allows you to install EasyBuild without admin rights into ``$HOME/EasyBuild``.
 
+   .. note:: For pip v8.0 and newer, ``pip install --prefix=$HOM/EasyBuild easybuild`` works too.
 
 Adjusting ``$PATH`` and ``$PYTHONPATH`` environment variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
