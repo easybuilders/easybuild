@@ -110,7 +110,7 @@ Acknowledgements
 ~~~~~~~~~~~~~~~~
 
 EasyBuild was created with support of `Ghent University <http://www.ugent.be/en>`_ ,
-`the Flemish Supercomputer Centre (VSC) <https://vscentrum.be/nl/en>`_ ,
+`the Flemish Supercomputer Centre (VSC) <https://www.vscentrum.be>`_ ,
 `the Hercules foundation <http://www.herculesstichting.be/in_English>`_ and
 `the Department of Economy, Science and Innovation (EWI) <http://www.ewi-vlaanderen.be/en>`_ .
 
