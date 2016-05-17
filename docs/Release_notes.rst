@@ -3,9 +3,179 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **862** different software packages,
-using 34 different (compiler) toolchains. It contains 165 software-specific easyblocks and 28 generic easyblocks,
-alongside 5,580 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **931** different software packages,
+using 37 different (compiler) toolchains. It contains 169 software-specific easyblocks and 29 generic easyblocks,
+alongside 6,064 easyconfig files.
+
+.. _release_notes_eb280:
+
+v2.8.0 (May 18th 2016)
+----------------------
+
+feature + bugfix release
+
+**framework**
+
+* significant speedup improvements of EasyBuild itself, thanks to:
+
+  * stop creating ``ModulesTool`` instances over and over again (#1735)
+  * cache result of '``module avail``' calls (#1742)
+
+* add support for using PGI as toolchain compiler (#1342, #1664, #1759, #1761, #1764)
+
+  * incl. new toolchain definitions ``pompi`` and ``pomkl`` (#1724)
+
+* add test configuration for Travis (#1733, #1737, #1743, #1767)
+* various other enhancements, including:
+
+  * add ``get_total_memory()`` function in ``systemtools`` module (#1623)
+  * ignore ``__init__.py`` files in ``--include-*`` (#1704)
+  * use ``-fopenmp`` rather than ``-openmp`` for Intel compilers, since ``-openmp`` is deprecated (#1718)
+  * add modules to metadata for Cray modules (#1721)
+  * make sure user write permissions are set after failed removal attempt of installation directory (#1722)
+  * escape special characters in software name in ``find_related_easyconfigs`` (#1726)
+  * add support for ``CrayPGI`` compiler toolchain (#1729)
+  * ensure read permission to all installed files for everybody (unless other options specify otherwise) (#1731)
+  * also consider ``$LMOD_CMD`` in bootstrap script (#1736)
+  * translate PyPI download URL to alternate URL with a hash (#1749)
+  * make ``get_software_libdir`` compatible with ``-x`` (#1750)
+  * set ``$LMOD_REDIRECT`` to '``no``' when initialising Lmod (#1755)
+  * add test for broken modules tool setup affecting '``module use``' (#1758)
+
+* various bug fixes, including:
+
+  * isolate '``options``' tests from easyblocks other than the ones included in the tests (#1699)
+  * don't run '``module purge``' in tests, since EasyBuild may be made available through a module (#1702)
+  * avoid rehandling ``--include-*`` options over and over again during ``--show-config`` (#1705)
+  * remove useless ``test_cwd`` (#1706)
+  * fix bootstrap script: make sure setuptools installed in stage0 is still available at end of stage1 (#1727)
+  * forcibly create target branch in ``--update-pr`` (#1728)
+  * remove check whether '``easybuild``' is being imported from dir that contains ``easybuild/__init__.py`` (#1730)
+  * (re)install vsc-base during stage1 using ``--always-copy`` in bootstrap script, if needed (#1732)
+  * use ``os.path.realpath`` in ``test_wrong_modulepath`` to avoid symlinked path breaking the test (#1740)
+  * unset ``$PYTHONPATH`` in before tested bootstrapped EasyBuild module (#1743)
+  * take into account that paths in modulepath may be symlinks in ``test_module_caches`` (#1745)
+  * change to install dir rather than buildpath in sanity check of extension, latter may not exist (#1746, #1748)
+  * only load modules using short module names (#1754)
+  * (re)load modules for build deps in extensions_step (#1762)
+  * fix ``modpath_extensions_for method``: take into account modules in Lua syntax (#1766)
+  * fix broken link to VSC website in license headers (#1768)
+
+**easyblocks**
+
+* add test configuration for Travis (#895, #897, #900, #926)
+* new easyblocks for 4 software packages that require customized support:
+
+  * binutils (#907), libQGLViewer (#890), SuperLU (#860), wxPython (#883)
+
+* various other enhancements, including:
+
+  * update SuiteSparse easyblock for version >= 4.5 (#863)
+  * enhance imkl easyblock to install on top of PGI (#866, #916)
+  * enable runtime logging of install cmd in ``IntelBase`` (#874)
+  * enhance Qt easyblock to support installing with ``dummy`` toolchain (#881)
+  * delete libnuma symbolic links in PGI installation directory (#888)
+  * enhance PDT easyblock to support installing with ``dummy`` toolchain (#894)
+  * add support for building Clang with OpenMP support (#898)
+  * update Score-P easyblock for additional compilers, MPI libraries & dependencies (#889)
+  * drop deprecated '``testrb``' from sanity check in Ruby easyblock (#901)
+  * enhance WRF easyblock to support versions >= 3.7 (#902)
+  * update QuantumESPRESSO easyblock for version 5.3.0 (#904)
+  * add support in PythonPackage easyblock to use '``setup.py develop``' (#905)
+  * update Qt easyblock for Qt 5.6.0 (#908)
+  * extend bzip2 easyblock to also build dynamic libraries (#910)
+  * make threading an explicit option rather than relying on MPI library in SCOTCH easyblock (#914)
+  * update PGI easyblock to install siterc file so PGI picks up ``$LIBRARY_PATH`` (#919)
+  * enhance sanity check paths for compiler commands in PGI easyblock (#919)
+  * also filter out ``-ldl`` from $LIBBLAS & co for Intel MKL in numpy easyblock (#920)
+  * define ``$MIC_LD_LIBRARY_PATH`` for impi (#925)
+
+* various bug fixes, including:
+
+  * don't hardcode Python version in ``test_make_module_pythonpackage`` (#876)
+  * make PythonPackage easyblock compatible with ``--module-only`` (#884, #906)
+  * remove check whether '``easybuild``' is being imported from dir that contains ``easybuild/__init__.py`` (#891)
+  * fix passing compiler configure option in PDT easyblock (#894)
+  * fix bug in Score-P easyblock w.r.t. ``--with-libbfd`` (#889)
+  * fix extension filter for Ruby (#901)
+  * fix ``ACTIVATION_TYPES`` list in IntelBase + minor style change (#913)
+  * correctly define ``$MIC_LD_LIBRARY_PATH`` in imkl 11.3.x and newer (#915)
+  * fix broken link to VSC website in license headers (#927)
+
+**easyconfigs**
+
+* added example easyconfig files for 69 new software packages:
+
+  * ALPS (#2888), annovar (#3010), BayeScEnv (#2765), BayesAss (#2870), BerkeleyGW (#2925), Blitz++ (#2784, #3004),
+    bam-readcount (#2850), Commet (#2938), CrossTalkZ (#2939), cuDNN (#2882), DBus (#2855), DFT-D3 (#2107),
+    DIAL (#3056), dask (#2885), dbus-glib (#2855), FFLAS-FFPACK (#2793), FLAC (#2824), FLANN (#3015, #3029),
+    FLEUR (#3043), GConf (#2855), GROMOS++ (#1297), GST-plugins-base (#2855), GStreamer (#2855), GTOOL (#2805),
+    Givaro (#2793), gdist (#2935), gromosXX (#1297), HISAT2 (#2809), i-PI (#2940), Kraken (#3037, #3041), LAME (#2823),
+    LASTZ (#3002), LinBox (#2793), Loki (#2839), libQGLViewer (#2923, #3008), libXxf86vm (#2855),
+    MDSplus (#2787, #2838, #3027), MRIcron (#2831), Mawk (#2732), minieigen (#2839), mpmath (#3058), NBO (#3047, 3048),
+    NGS (#2803), NGS-Python (#2810), ncbi-vdb (#2808), OptiX (#2795), PCL (#3024), PEAR (#2731), PLplot (#2990),
+    Postgres-XL (#2891), PyGTS (#2969), RSeQC (#2788), Rust (#2920, #2943), rainbow (#2730), SHAPEIT (#2806),
+    SIONlib (#2908), Saxon-HE (#2773), Singularity (#2901), SoX (#2825), Subread (#2790), SuperLU (#2665),
+    travis (#2953), VASP (#2950), Wannier90 (#2906, #3042), wget (#3041), wxPython (#2855), xf86vidmodeproto (#2855),
+    Yade (#2839), Yambo (#2932)
+
+* add test configuration for Travis (#2942, #2944, #2954, #3061)
+* added easyconfigs for new PGI-based toolchains
+
+  * ``pomkl/2016.03`` (#2899, #2900, #3046), ``pomkl/2016.04`` (#3044), ``CrayPGI/2016.04`` (#2927)
+
+* added new easyconfigs for existing toolchains:
+
+  * ``foss/2016.04`` (#3013), ``intel/2016.02-GCC-5.3`` (#2523), ``intel/2016.03-GCC-5.3`` (#3009)
+
+* added additional easyconfigs for various supported software packages: version updates, different toolchains, ...
+
+  * incl. CGAL 4.8, Clang 3.8.0, icc/ifort 2016.2.181 & 2016.3.210, imkl 11.3.2.181 & 11.3.3.210, impi 5.1.3.181,
+          LLVM 3.8.0, OpenCV 2.4.12, pandas 0.18.0, Qt 5.6.0, Scalasca 2.3, Score-P 2.0.1, SuiteSparse 4.5.2, WRF 3.8
+
+* various other enhancements, including:
+
+  * enhance ORCA easyconfig for compatibility with SLURM (#1819)
+  * enable ``-fPIC`` in GraphicsMagick easyconfig, required by Octave (#2764)
+  * clean up binutils easyconfigs to use binutils easyblock (#3006)
+  * add ``include/GraphicsMagick`` to ``$CPATH`` in GraphicsMagick easyconfigs (#3034)
+  * update SuiteSparse easyconfigs according to updated SuiteSparse easyblock (#3050)
+
+* various bug fixes, including:
+
+  * fix Perl extensions download urls (#2738)
+  * add Autoconf as build dep for ``GCCcore`` (#2772)
+  * fix versions of extensions in Bioconductor 3.2 bundles (#2769)
+  * fix (build) deps for ``intel/2016a`` easyconfigs of cairo, libXext, libXrender (#2785, #2874)
+  * use '``env``' wherever preconfig/build/installopts is used to set environmental variables (#2807, #2811, #2812)
+  * add zlib as explicit dep in Tk easyconfigs (#2815)
+  * consistently specify to use ``-fgnu89-inline`` flag in M4 1.4.17 easyconfigs (#2774, #2779, #2816)
+  * fix homepage and description in Pygments easyconfigs (#2822)
+  * include pkg-config as build dependencies for libXau, libXdmcp, libxcb (#2827)
+  * consistently use ``XORG_*_SOURCE`` constants (#2829, #2830, #2848)
+  * update source URLs in ScientificPython easyconfig files (#2847)
+  * add checksums in SuiteSparse easyconfigs (#2849)
+  * fix build deps for GObject-Introspection (#2852)
+  * correctly specify Perl location in git easyconfig (#2866)
+  * fix bitstring 3.1.3 download URL in Python easyconfigs, source tarball on PyPI disappeared (#2880)
+  * fix Perl dependency in worker easyconfigs, it requires non-standard Perl modules (#2884)
+  * add XZ as dependency in Python 3.5.1 easyconfigs, required for lzma (#2887)
+  * fix download URL for packmol (#2902)
+  * drop ``usempi`` toolchain in numexpr easyconfigs, not needed (#2937)
+  * fix use of ``resolve_dependencies`` in tests according to changes in framework (#2952)
+  * add dependency extensions for MarkupSafe and jsonscheme in IPython 3.2.3 easyconfigs (#2967)
+  * add patch for matplotlib 1.5.1 to fix Tcl/Tk library paths being used (#2971)
+  * add xproto build dependency for makedepend v1.0.5 (#2982)
+  * disable parallel build for Doxygen (#2986)
+  * fix source URLs for ``FreezeThaw`` and ``Tie::Function`` extensions for Perl v5.22.1 (#2988)
+  * add ``sed`` command in worker easyconfig files to fix module_path in conf/worker.conf (#2997, #3000)
+  * drop toolchainopts from Eigen easyconfigs, since it is headers-only (#3025)
+  * clean up dummy bzip2 easyconfig, define buildopts rather than defining ``$CC`` and ``$CFLAGS`` via ``os.environ`` (#3036)
+  * use ``%(pyshortver)s`` template rather than hardcoding 2.7 in VTK easyconfigs (#3052)
+  * correct install location of OpenCV Python bindings (#3054)
+  * include XZ as dependency for libunwind (#3055)
+  * add patch to fix broken OpenSSL tests due to expired certificates (#3057)
+  * fix broken link to VSC website in license headers (#3062)
 
 .. _release_notes_eb270:
 
