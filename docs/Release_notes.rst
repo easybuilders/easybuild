@@ -3,9 +3,55 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **931** different software packages,
+The latest version of EasyBuild provides support for building and installing **944** different software packages,
 using 37 different (compiler) toolchains. It contains 169 software-specific easyblocks and 29 generic easyblocks,
-alongside 6,064 easyconfig files.
+alongside 6,193 easyconfig files.
+
+.. _release_notes_eb281:
+
+v2.8.1 (May 30th 2016)
+----------------------
+
+bugfix release
+
+**framework**
+
+* various bug fixes, including:
+
+  * fix error message on missing module command in bootstrap script (`#1772 <https://github.com/hpcugent/easybuild-framework/pull/1772>`_)
+  * expand '``~``' in paths specified to ``--include-*`` (`#1774 <https://github.com/hpcugent/easybuild-framework/pull/1774>`_)
+  * break after deleting cache entry to avoid attempt to delete cache entry again (`#1776 <https://github.com/hpcugent/easybuild-framework/pull/1776>`_)
+  * avoid changing ``$MODULEPATH`` when prepending with symlink of path already at head of ``$MODULEPATH`` (`#1777 <https://github.com/hpcugent/easybuild-framework/pull/1777>`_)
+  * filter out duplicates in ``find_flexlm_license`` (`#1779 <https://github.com/hpcugent/easybuild-framework/pull/1779>`_)
+  * stick with GitPython < 2.0 with Py2.6 in Travis configuration (`#1781 <https://github.com/hpcugent/easybuild-framework/pull/1781>`_)
+  * don't use ``LooseVersion`` to define ``version_major``/``version_minor`` (`#1783 <https://github.com/hpcugent/easybuild-framework/pull/1783>`_)
+
+
+**easyblocks**
+
+* various enhancements, including:
+
+  * update MRtrix easyblock for version 0.3.14 (`#932 <https://github.com/hpcugent/easybuild-easyblocks/pull/932>`_)
+  * update Inspector easyblock for recent versions (`#934 <https://github.com/hpcugent/easybuild-easyblocks/pull/934>`_)
+  * update VTune easyblock for recent versions (`#935 <https://github.com/hpcugent/easybuild-easyblocks/pull/935>`_)
+  * add debug message to IntelBase easyblock w.r.t. switching to 'exist_lic' (`#936 <https://github.com/hpcugent/easybuild-easyblocks/pull/936>`_)
+
+
+**easyconfigs**
+
+* added example easyconfig files for 13 new software packages:
+
+  * drFAST (`#906 <https://github.com/hpcugent/easybuild-easyconfigs/pull/906>`_), git-lfs (`#2478 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2478>`_), grabix (`#3127 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3127>`_), JWM (`#3007 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3007>`_), libcroco (`#3007 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3007>`_), librsvg (`#3007 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3007>`_), MaCH (`#3136 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3136>`_), mayavi (`#3106 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3106>`_), OpenMM (`#2762 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2762>`_), Pysam (`#3080 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3080>`_), SeqPrep (`#3097 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3097>`_), vt (`#3128 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3128>`_), wkhtmltopdf (`#3098 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3098>`_)
+
+* added new easyconfigs for existing toolchains: ``intel/2016.03-GCC-4.9`` (`#3088 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3088>`_)
+* added additional easyconfigs for various supported software packages, including:
+
+  * Boost 1.61.0, ESMF 7.0.0, Inspector 2016 update 3, IPython 4.2, netCDF-C++4 4.3.0, netCDF-Fortran 4.4.4,
+    Perl 5.22.2, VTune 2016 update 3
+
+* various bug fixes, including:
+
+  * apply libreadline patch to fix bug triggering segmentation fault (`#3086 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3086>`_)
 
 .. _release_notes_eb280:
 
