@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20160530.01** (`May 30th 2016`): update release notes for EasyBuild v2.8.1 (see :ref:`release_notes_eb281`)
 * **release 20160518.01** (`May 18th 2016`): update release notes for EasyBuild v2.8.0 (see :ref:`release_notes_eb280`)
 * **release 20160429.01** (`April 29th 2016`): add section on updating EasyBuild, see :ref:`updating`
 * **release 20160320.01** (`March 20th 2016`): update release notes for EasyBuild v2.7.0 (see :ref:`release_notes_eb270`)
