@@ -9,7 +9,7 @@ From the EasyBuild command line ``eb`` several options are available to reach ou
 which are documented below.
 
 .. contents::
-    :depth: 2
+    :depth: 3
     :backlinks: none
 
 .. _github_requirements:
@@ -22,30 +22,38 @@ Depending on which GitHub integration features you want to use, there are a coup
 * **a GitHub user name**
 
   * only required for authenticated access to the GitHub API, which can help to avoid rate limitations
-  * *not* strictly necessary for read-only operations (:ref:`github_from_pr` and :ref:`github_review_pr`)
+  * *not* strictly necessary for read-only operations
+
+    * i.e. *not* required for :ref:`github_from_pr` and :ref:`github_review_pr` (but it can help)
+
   * see :ref:`github_user`
 
 * **a GitHub token** + ``keyring`` **Python package**
 
   * allows accessing the GitHub API with authentication
-  * only strictly required for features that require GitHub write permissions
-    (:ref:`github_upload_test_report` and :ref:`github_new_pr`)
+  * only strictly required for features that require GitHub 'write' permissions
+
+    * i.e. for :ref:`github_upload_test_report` and :ref:`github_new_pr`
+
   * see :ref:`github_token`
 
 * ``git`` **command** / ``GitPython`` **Python package**
 
   * only required when local ``git`` commands need to be executed, e.g. to manipulate a Git repository
-    (:ref:`github_new_pr` and :ref:`github_update_pr`)
+
+    * i.e. for :ref:`github_new_pr` and :ref:`github_update_pr`
 
 * **SSH public key registered on GitHub**
 
-  * only required when push access to Git repositories that reside on GitHub is required
-    (:ref:`github_new_pr` and :ref:`github_update_pr`)
+  * only required when ``push`` access to Git repositories that reside on GitHub is required
+
+    * i.e. for :ref:`github_new_pr` and :ref:`github_update_pr`
+
   * see https://github.com/settings/ssh
 
 * **fork of the EasyBuild repositories on GitHub**
 
-  * only required for submitting pull requests (:ref:`github_new_pr` and :ref:`github_update_pr`)
+  * only required for submitting/updating pull requests (:ref:`github_new_pr` and :ref:`github_update_pr`)
   * see ``Fork`` button (top right) at https://github.com/hpcugent/easybuild-easyconfigs (for example)
 
 See also :ref:`github_requirements_check`.
@@ -113,6 +121,15 @@ EasyBuild will validate the provided token, to check that authenticated access t
           For debugging purposes, only the first and last 3 characters will be shown.
 
 
+Specify location of working directories (``--git-working-dirs-path``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can specify the location of your Git working directories using ``--git-working-dirs-path``.
+
+Although not strictly required, this is useful for speeding up ``--new-pr`` and ``--update-pr``,
+since it allows that the repository can be copied & updated, rather than being cloned from scratch.
+
+
 .. _github_requirements_check:
 
 Checking status of GitHub integration (``--check-github``)
@@ -127,12 +144,28 @@ If all requirements are taken care of in your setup, you should see output like 
 
     $ eb --check-github
 
-    FIXME
-    FIXME
-    FIXME
-    FIXME
-    FIXME
-    FIXME
+    == temporary log file in case of crash /tmp/eb-xWCpWl/easybuild-hGnKS5.log
+
+    Checking status of GitHub integration...
+
+    Making sure we're online... OK
+
+    * GitHub user... example => OK
+    * GitHub token... e3f..0c8 (len: 40) => OK (validated)
+    * git command... OK ("git version 2.7.4 (Apple Git-66); ")
+    * GitPython module... OK
+    * push access to example/easybuild-easyconfigs repo @ GitHub... OK
+    * creating gists... OK
+    * location to Git working dirs...  OK (/home/example/git-working-dirs)
+
+    All checks PASSed!
+
+    Status of GitHub integration:
+    * --from-pr: OK
+    * --new-pr: OK
+    * --review-pr: OK
+    * --update-pr: OK
+    * --upload-test-report: OK
 
 .. note:: Checking whether push access to GitHub works may take some time, since a recent clone of
           the easybuild-easyconfigs GitHub repository will be created in the process (at a temporary location).
@@ -187,7 +220,7 @@ that were modified in the respective pull request are picked up via ``--robot`` 
 Thus, for easyconfig files that are both available in the pull request and are available locally, the ones from the
 specified pull request will be preferred.
 
-For example, to build and install HPL with the ``intel/2015a`` toolchain, both of which are contributed via
+For example, to build and install ``HPL`` with the ``intel/2015a`` toolchain, both of which are contributed via
 `easyconfigs pull request #1238 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1238>`_::
 
     $ eb --from-pr 1238 --dry-run --robot $HOME/easyconfigs
@@ -274,8 +307,24 @@ summary) will be placed in the respective pull request. This makes it a very pow
 
 .. note:: If you want to easily access a test report without uploading it to GitHub, use ``--dump-test-report``.
 
-https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests
+Example::
 
+    $ eb --from-pr 3153 --force --upload-test-report
+    == temporary log file in case of crash /tmp/eb-aqk20q/easybuild-wuyZBV.log
+    == processing EasyBuild easyconfig /tmp/eb-aqk20q/files_pr3153/EasyBuild/EasyBuild-2.8.1.eb
+    == building and installing EasyBuild/2.8.1...
+    ...
+    == COMPLETED: Installation ended successfully
+    == Results of the build can be found in the log file /home/example/software/EasyBuild/2.8.1/easybuild/easybuild-EasyBuild-2.8.1-20160603.090702.log
+    == Test report uploaded to https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c and mentioned in a comment in easyconfigs PR#3153
+    == Build succeeded for 1 out of 1
+    == Temporary log file(s) /tmp/eb-aqk20q/easybuild-wuyZBV.log* have been removed.
+    == Temporary directory /tmp/eb-aqk20q has been removed.
+
+The resulting test report can be viewed at https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c .
+
+.. note:: It is common to use --force in combination with --upload-test-report, to ensure that all easyconfigs
+          in the pull request are rebuilt, resulting in a complete test report.
 
 .. _github_test_report_env_filter:
 
@@ -300,6 +349,45 @@ An example of a typical setting::
 Reviewing easyconfig pull requests (``--review-pr``)
 ----------------------------------------------------
 
+A useful tool when reviewing pull requests for the `easybuild-easyconfigs repository
+<https://github.com/hpcugent/easybuild-easyconfigs>`_ that add new or update existing easyconfig files is
+``--review-pr``.
+
+The 'files' tab in the GitHub interface shows the changes being made to existing files;
+using ``--review-pr`` the differences with one or more other *similar* easyconfig files, for example the one(s)
+with the same toolchain (version) and/or software version, can also be evaluated.
+
+This is very useful to quickly see how easyconfig files in pull requests differ from existing easyconfig files,
+and to maintain consistency across easyconfig files where desired.
+
+The ``--review-pr`` output consists of a 'multidiff' view per easyconfig file that is being touched by
+the specified pull request. The exact format of the output depends on whether EasyBuild is configured to allow
+colored output (enabled by default, see ``--color``).
+
+Search criteria for similar easyconfigs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The set of existing similar easyconfig files is determined by specific search criteria; the first one that results
+in a non-empty set of easyconfigs is retained.
+
+The search criteria consists of a combination of the *software version criterion* with additional restrictions.
+
+The software version criterion is one of the criterions below (considered in order), with ``x.y.z`` the software
+version of the easyconfig file from the pull request:
+
+* exact same software version
+* same major/minor software version (same ``x`` and ``y``)
+* same major software version (same ``x``)
+* no (partial) version match (so consider any version)
+
+The addition restrictions are the following (also considered in order):
+
+* matching versionsuffix and toolchain name/version
+* matching versionsuffix and toolchain name (any toolchain version)
+* matching versionsuffix (any toolchain name/version)
+* matching toolchain name/version (any versionsuffix)
+* matching toolchain name (any versionsuffix, toolchain version)
+* no extra requirements (any versionsuffix, toolchain name/version)
 
 .. _github_new_pr:
 
