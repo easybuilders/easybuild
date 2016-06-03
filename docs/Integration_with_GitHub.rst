@@ -19,6 +19,10 @@ Requirements
 
 Depending on which GitHub integration features you want to use, there are a couple of requirements:
 
+* **a GitHub account**
+
+  * see https://github.com; creating an account is free but requires registration
+
 * **a GitHub user name**
 
   * only required for authenticated access to the GitHub API, which can help to avoid rate limitations
@@ -120,6 +124,8 @@ EasyBuild will validate the provided token, to check that authenticated access t
 .. note:: EasyBuild will never print the full token value, to avoid leaking it.
           For debugging purposes, only the first and last 3 characters will be shown.
 
+
+.. _github_git_working_dirs_path:
 
 Specify location of working directories (``--git-working-dirs-path``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -323,7 +329,7 @@ Example::
 
 The resulting test report can be viewed at https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c .
 
-.. note:: It is common to use --force in combination with --upload-test-report, to ensure that all easyconfigs
+.. note:: It is common to use ``--force`` in combination with ``--upload-test-report``, to ensure that all easyconfigs
           in the pull request are rebuilt, resulting in a complete test report.
 
 .. _github_test_report_env_filter:
@@ -389,16 +395,242 @@ The addition restrictions are the following (also considered in order):
 * matching toolchain name (any versionsuffix, toolchain version)
 * no extra requirements (any versionsuffix, toolchain name/version)
 
-.. _github_new_pr:
+.. _github_new_update_pr:
 
-Submitting new pull requests (``--new-pr``)
--------------------------------------------
+Submitting new and updating pull requests (``--new-pr``, ``--update-pr``)
+-------------------------------------------------------------------------
 
 *(supported since EasyBuild v2.6.0)*
+
+EasyBuild provides two simple yet powerful features that make contributing back to the central EasyBuild repositories
+significantly easier and less error-prone, especially for people who are not very familiar with ``git`` and/or GitHub
+yet:
+
+* ``--new-pr`` to create new pull requests
+* ``--update-pr`` to update existing pull requests
+
+.. note:: Both ``--new-pr`` and ``--update-pr`` are still **experimental**, meaning that their behaviour may change in
+          future releases and that they require having ``--experimental`` enabled;
+          see also :ref:`experimental_features`.
+
+.. _github_new_pr:
+
+Submitting pull requests (``--new-pr``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To create a new pull request, the ``--new-pr`` command line option can be used, provided that the necessary
+requirements are fullfilled (see :ref:`github_requirements`).
+
+In its simplest form, you just provide the location of the file(s) that you want to include in the pull request::
+
+    $ eb --new-pr test.eb --experimental
+
+This takes care of all the steps required to make a contribution, i.e.:
+
+* set up a working copy of the relevant EasyBuild repository (e.g., ``easybuild-easyconfigs``)
+* create a new 'feature' branch, starting from the up-to-date ``develop`` branch
+* renaming easyconfig files according to their ``name``, ``version``, ``versionsuffix`` and ``toolchain``
+* moving easyconfig files to the right location in the repository (e.g. ``easybuild/easyconfigs/e/EasyBuild/``)
+* staging and committing the files in the feature branch
+* pushing the feature branch to your fork of the relevant EasyBuild repository on GitHub
+* creating the pull request, targetting the ``develop`` branch of the central EasyBuild repository (e.g. ``hpcugent/easybuild-easyconfigs``)
+
+It should be clear that automating this whole procedure with a single simple ``eb`` command greatly lowers the bar
+for contributing back, especially since it even alleviates the need for interacting directly with ``git`` entirely!
+
+The working copy of the EasyBuild repository is created in a temporary location, and cleaned up once the pull request
+has been created. EasyBuild does *not* make changes to an existing working copy you may have in place already
+(cfr. :ref:`github_git_working_dirs_path`).
+
+Example
++++++++
+
+For example, to create a pull request for a new version of, let's say, EasyBuild::
+
+    $ eb --new-pr ~/WIP/newEB.eb --experimental
+    == temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log
+    == copying /home/example/git-working-dirs/easybuild-easyconfigs...
+    == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
+
+    Opening pull request
+    * target: hpcugent/easybuild-easyconfigs:develop
+    * from: boegel/easybuild-easyconfigs:20160530131447_new_pr_EasyBuild281
+    * title: "{tools}[dummy/dummy] EasyBuild v2.8.1"
+    * description:
+    """
+    (created using `eb --new-pr`)
+
+    """
+    * overview of changes:
+     .../easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb     | 35 ++++++++++++++++++++++
+     1 file changed, 35 insertions(+)
+
+    Opened pull request: https://github.com/hpcugent/easybuild-easyconfigs/pull/3153
+
+Yes, it's that easy!
 
 .. _github_update_pr:
 
 Updating existing pull requests (``--update-pr``)
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*(supported since EasyBuild v2.6.0)*
+Similarly to creating new pull requests, existing pull requests can be easily updated using ``eb --update-pr``
+(regardless of whether or not they were created with ``--new-pr``).
+
+The usage is equally simple, for example to update pull request ``#1234`` just list the changed/new file(s)::
+
+    $ eb --update-pr 1234 ~/WIP/changed.eb --experimental
+
+Again, this take care of the whole procedure required to update an existing pull request:
+
+* set up a working copy of the relevant EasyBuild repository (e.g., ``easybuild-easyconfigs``)
+* determining the branch corresponding to the pull request, which should be updated by pushing a new commit to it
+* checking out that branch
+* renaming easyconfig files according to their ``name``, ``version``, ``versionsuffix`` and ``toolchain``
+* moving easyconfig files to the right location in the repository (e.g. ``easybuild/easyconfigs/e/EasyBuild/``)
+* staging and committing the (changed/new) files
+* pushing the updated branch to GitHub
+
+Again, not a single ``git`` command to be executed; the only thing that is required is the ID of the pull request
+that should be updated.
+
+Just like with ``--new-pr``, this is done in a temporary working copy of the repository, no changes are made to
+a possible existing working copy.
+
+Example
++++++++
+
+For example, to update pull request #3153 with a changed easyconfig file::
+
+    eb --update-pr 3153 ~/WIP/newEB.eb --experimental
+    == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log
+    == Determined branch name corresponding to hpcugent/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281 
+    == copying /home/example/git-working-dirs/easybuild-easyconfigs...
+    == fetching branch '20160530131447_new_pr_EasyBuild281' from https://github.com/boegel/easybuild-easyconfigs.git...
+    Overview of changes:
+     easybuild/easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb | 3 +++
+     1 file changed, 3 insertions(+)
+
+    Updated hpcugent/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
+
+.. _github_controlling_pr_metadata:
+
+Controlling pull request metadata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can control the metadata for pull requests using the following configuration options:
+
+* ``--pr-branch-name``: branch name for new pull requests
+* ``--pr-commit-msg``: commit message to use when creating new or updating existing pull requests
+* ``--pr-descr``: pull request description
+* ``--pr-title``: pull request title
+
+EasyBuild will use sensible defaults for each of these, see below.
+
+Default branch name for new pull requests
++++++++++++++++++++++++++++++++++++++++++
+
+The branch name for new pull requests will be composed from:
+
+* a timestamp, down to the second in an attempt to make it unique
+
+  * example: ``20160513141133`` for a pull request created on May 13th 2016, 2:11:33 PM
+
+* a label ``new_pr``
+
+* the software name and version of the first easyconfig file, with some filtering (e.g. remove ``.``'s)
+
+  * example: ``GCC530`` for GCC v5.3.0
+
+Full example: ``20160513141133_new_pr_GCC530``
+
+Although there is usually no reason to change this default, it can be done if desired using ``--pr-branch-name``
+when opening a new pull request with ``--new-pr``.
+
+Default commit message
+++++++++++++++++++++++
+
+The default commit message is very simple: it specifies for each easyconfig file whether it was a new file being added,
+or an existing file being modifed, for example "``add easyconfig GCC-5.3.0.eb, modify easyconfig GCC-4.9.3.eb``".
+
+*It is highly recommended to provide a more descriptive commit message via* ``--pr-commit-msg`` *whenever existing
+easyconfig files are being modified, both with* ``--new-pr`` *and* ``--update-pr``.
+
+Default pull request description
+++++++++++++++++++++++++++++++++
+
+By default, the pull description will only contain the following text::
+
+    (created using eb --new-pr)
+
+It is generally advised to provide more descriptive information, although the changes made by the pull request
+may be self-explanatory (e.g. when only adding new easyconfig files).
+
+To change this default text, you can either use ``--pr-descr`` or edit the description via the GitHub interface
+after the pull request has been opened.
+
+Particularly useful information to specify here is dependencies on other pull requests, by copy-pasting the
+respective URLs with a short descriptive message like '``depends on PR <URL>``'.
+
+Default pull request title
+++++++++++++++++++++++++++
+
+The pull request title is derived from the easyconfig files being changed/added, taking into account the
+recommendation for easyconfig pull requests to clearly specify module class, toolchain, software name/version, as
+follows: ``{<module_class>}[<toolchain>] <software_name> v<software_version>``.
+
+For example, when opening a pull request for an easyconfig for Python 2.7.11 with the ``intel/2016a`` toolchain,
+the default pull request title will be something like: ``{lang}[intel/2016a] Python v2.7.11`` .
+
+If multiple easyconfig files are provided, the respective software names/versions will be included separated by a ``,``,
+up until the first 3 easyconfig files (to avoid excessively lenghty pull request titles).
+
+In case (only) existing easyconfig files are being changed, it's advisable to provide a more descriptive title
+using ``--pr-title``.
+
+.. _github_configuring_new_update_pr:
+
+Configuring ``--new-pr`` and ``--update-pr``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, ``--new-pr`` and ``--update-pr`` affect pull requests to the central ``hpcugent/easybuild-easyconfigs``
+repository.
+
+However, this can be changed with the following configurations options:
+
+* ``--pr-target-account`` (default: ``hpcugent``): target GitHub account for new pull requests
+* ``--pr-target-branch`` (default: ``develop``): target branch for new pull requests
+* ``--pr-target-repo`` (default: ``easybuild-easyconfigs``): target repository for new pull requests
+
+.. _github_synergy_new_update_pr_dry_run:
+
+Synergy with ``--dry-run``/``-D`` and ``--extended-dry-run``/``-x``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Both ``--new-pr`` and ``--update-pr`` are 'dry run-aware', in the sense that you can combine them with either
+``--dry-run``/``-D-`` or ``--extended-dry-run``/``-x`` to preview the pull request they would create/update without
+actually doing so.
+
+For example::
+
+    $ eb --new-pr EasyBuild-2.9.0.eb --experimental -D
+    == temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log
+    == copying /home/example/git-working-dirs/easybuild-easyconfigs...
+    == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
+
+    Opening pull request [DRY RUN]
+    * target: hpcugent/easybuild-easyconfigs:develop
+    * from: boegel/easybuild-easyconfigs:20160603105641_new_pr_EasyBuild290
+    * title: "{tools}[dummy/dummy] EasyBuild v2.9.0"
+    * description:
+    """
+    (created using `eb --new-pr`)
+
+    """
+    * overview of changes:
+     .../easyconfigs/e/EasyBuild/EasyBuild-2.9.0.eb     | 35 ++++++++++++++++++++++
+     1 file changed, 35 insertions(+)
+
+The only difference between using ``--dry-run`` and ``--extended-dry-run`` is that the latter will show the full diff
+of the changes (equivalent to ``git diff``), while the former will only show a summary of the changes
+(equivalent to ``git diff --stat``, see example above).
