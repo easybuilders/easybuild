@@ -132,6 +132,10 @@ Specify location of working directories (``--git-working-dirs-path``)
 
 You can specify the location of your Git working directories using ``--git-working-dirs-path``.
 
+The provided path should be the *parent* directory of the location of the working directories (i.e. clones)
+of the EasyBuild repositories (``easybuild-easyconfigs``, etc.); the assumption is that you keep them all in a single
+parent directory.
+
 Although not strictly required, this is useful for speeding up ``--new-pr`` and ``--update-pr``,
 since it allows that the repository can be copied & updated, rather than being cloned from scratch.
 
