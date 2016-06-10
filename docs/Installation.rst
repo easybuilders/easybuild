@@ -57,7 +57,7 @@ i.e., installing the latest EasyBuild release (obtained from PyPI) using EasyBui
 
 To bootstrap EasyBuild:
 
-* download the bootstrap script from https://github.com/hpcugent/easybuild-framework/tree/develop/easybuild/scripts/bootstrap_eb.py
+* download the bootstrap script from https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 * execute it, and specify an installation prefix as an argument
 
 Yes, it's that easy!
@@ -256,7 +256,7 @@ Advanced bootstrapping options
 ------------------------------
 
 To use these advanced options, make sure you are using the latest version of the bootstrap script, available
-at https://github.com/hpcugent/easybuild-framework/tree/develop/easybuild/scripts/bootstrap_eb.py .
+at https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py .
 
 Skipping the installation of ``easy_install`` (stage 0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
