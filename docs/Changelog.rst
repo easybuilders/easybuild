@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20160613.01** (`June 13rd 2016`): clarify required dependencies (setuptools, vsc-install) (see :ref:`required_python_packages`)
 * **release 20160607.01** (`June 7th 2016`): update/complete documentation on GitHub integration (see :ref:`integration_with_github`)
 * **release 20160530.01** (`May 30th 2016`): update release notes for EasyBuild v2.8.1 (see :ref:`release_notes_eb281`)
 * **release 20160518.01** (`May 18th 2016`): update release notes for EasyBuild v2.8.0 (see :ref:`release_notes_eb280`)
