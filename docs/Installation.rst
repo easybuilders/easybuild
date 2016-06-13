@@ -28,7 +28,10 @@ Requirements
 The only strict requirements are:
 
 * Linux (or OS X)
-* **Python version 2.6**, or a more recent 2.x version
+* **Python version 2.6**, or a more recent 2.x version + ``setuptools``, ``vsc-install`` & ``vsc-base``
+
+  * see also :ref:`required_python_packages`
+
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
   * the actual module command/script (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) *must* be available via ``$PATH``
@@ -442,6 +445,18 @@ Additional notes:
 
 Required Python packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+* ``setuptools``: used to define the ``easybuild`` namespace across different directories
+
+  * available at https://pypi.python.org/pypi/setuptools
+  * must be version 0.6 or more recent
+  * strictly required since EasyBuild v2.7.0
+
+* ``vsc-install``: provides setuptools functions and support for unit test suites for Python tools
+
+  * also required to install ``vsc-base`` (see below)
+  * available at https://pypi.python.org/pypi/vsc-install
+  * the required version depends primarily on the ``vsc-base`` version
 
 * ``vsc-base``: a Python library providing the ``fancylogger`` and ``generaloption`` Python modules
 
