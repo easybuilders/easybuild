@@ -4,7 +4,7 @@
 # This file is part of EasyBuild,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
 # with support of Ghent University (http://ugent.be/hpc),
-# the Flemish Supercomputer Centre (VSC) (https://vscentrum.be/nl/en),
+# the Flemish Supercomputer Centre (VSC) (https://www.vscentrum.be),
 # the Hercules foundation (http://www.herculesstichting.be/in_English)
 # and the Department of Economy, Science and Innovation (EWI) (http://www.ewi-vlaanderen.be/en).
 #
@@ -35,7 +35,7 @@ from distutils import log
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = '2.3.0'
+VERSION = '2.8.1'
 
 # Utility function to read README file
 def read(fname):
@@ -76,8 +76,8 @@ on High Performance Computing (HPC) systems in an efficient way.""",
     ],
     platforms = "Linux",
     install_requires = [
-        "easybuild-easyconfigs == 2.3.0",
-        "easybuild-easyblocks == 2.3.0",
-        "easybuild-framework == 2.3.0",  # order matters here, framework should be after easyblocks!
+        "easybuild-easyconfigs == 2.8.1",
+        "easybuild-easyblocks == 2.8.1",
+        "easybuild-framework == 2.8.1",  # order matters here, framework should be after easyblocks!
     ]
 )

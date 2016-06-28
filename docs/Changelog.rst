@@ -3,13 +3,40 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20160613.01** (`June 13rd 2016`): clarify required dependencies (setuptools, vsc-install) (see :ref:`required_python_packages`)
+* **release 20160607.01** (`June 7th 2016`): update/complete documentation on GitHub integration (see :ref:`integration_with_github`)
+* **release 20160530.01** (`May 30th 2016`): update release notes for EasyBuild v2.8.1 (see :ref:`release_notes_eb281`)
+* **release 20160518.01** (`May 18th 2016`): update release notes for EasyBuild v2.8.0 (see :ref:`release_notes_eb280`)
+* **release 20160429.01** (`April 29th 2016`): add section on updating EasyBuild, see :ref:`updating`
+* **release 20160320.01** (`March 20th 2016`): update release notes for EasyBuild v2.7.0 (see :ref:`release_notes_eb270`)
+* **release 20160228.01** (`February 28th 2016`):
+
+  * update documentation on external modules metadata (see :ref:`using_external_modules_metadata`)
+
+* **release 20160214.01** (`February 14th 2016`):
+
+ * add section on ``--show-config`` (see :ref:`configuration_show_config`)
+
+* **release 20160126.02** (`January 26th 2016`): packaging support is stable since EasyBuild v2.5.0 (see :ref:`packaging_support`)
+* **release 20160126.01** (`January 26th 2016`): update release notes for EasyBuild v2.6.0 (see :ref:`release_notes_eb260`)
+* **release 20151217.01** (`December 17th 2015`): update release notes for EasyBuild v2.5.0 (see :ref:`release_notes_eb250`)
+* **release 20151209.01** (`December 9th 2015`):
+
+  * add documentation on controlling compiler optimizations flags, see :ref:`controlling_compiler_optimization_flags`
+
+* **release 20151110.01** (`November 10th 2015`): update release notes for EasyBuild v2.4.0 (see :ref:`release_notes_eb240`)
+* **release 20151108.01** (`November 8th 2015`):
+
+  * document (experimental) support for using minimal toolchains (see :ref:`minimal_toolchains`)
+
+* **release 20151028.01** (`October 28th 2015`): document extended dry run mechanism (see :ref:`extended_dry_run`)
 * **release 20151021.01** (`October 21st 2015`):
 
   * include initial documentation on experimental support for easyconfig files in YAML syntax (``.yeb``),
     see :ref:`easyconfig_yeb_format`
 
-* **release 20150902.01** (`September 2nd 2015`): update release notes for EasyBuild v2.3.0 (see :ref:`release_notes`)
-* **release 20150715.01** (`July 15th 2015`): update release notes for EasyBuild v2.2.0 (see :ref:`release_notes`)
+* **release 20150902.01** (`September 2nd 2015`): update release notes for EasyBuild v2.3.0 (see :ref:`release_notes_eb230`)
+* **release 20150715.01** (`July 15th 2015`): update release notes for EasyBuild v2.2.0 (see :ref:`release_notes_eb220`)
 * **release 20150714.01** (`July 14th 2015`): add documentation on :ref:`packaging_support`
 * **release 20150709.01** (`July 9th 2015`): add documentation on :ref:`submitting_jobs`
 * **release 20150708.01** (`July 8th 2015`):
@@ -27,7 +54,7 @@ Changelog for EasyBuild documentation
 * **release 20150518.01** (`May 18th 2015`):
 
   * update section on ``--search``: better examples + highlight ability to search via regular expression (see :ref:`searching_for_easyconfigs`)
-  * update release notes for EasyBuild v2.1.1 (see :ref:`release_notes`)
+  * update release notes for EasyBuild v2.1.1 (see :ref:`release_notes_eb211`)
 
 * **release 20150506.01** (`May 6th 2015`): updated documentation for EasyBuild v2.1.1
 

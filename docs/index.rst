@@ -54,7 +54,9 @@ Advanced usage topics
     :glob:
     :maxdepth: 3
 
+    Controlling_compiler_optimization_flags
     Experimental_features
+    Extended_dry_run
     Including_additional_Python_modules
     Integration_with_GitHub
     Manipulating_dependencies
