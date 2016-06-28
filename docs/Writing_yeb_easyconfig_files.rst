@@ -116,6 +116,21 @@ elsewhere too) can be done as follows::
 
     versionsuffix: !join [-Python-, *pyver]
 
+
+.. _easyconfig_yeb_format_syntax_escaping:
+
+Escaping string values with single or double quotes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Strings in YAML can be unquoted. However, when they contain special characters they need to be escaped by either single-
+or double-quoting the string.
+
+Special characters that require single quotes are: `:` `{` `}` `[` `]` `,` `&` `*` `#` `?` `|` `-` `<` `>` `=` `!` `%` `@` and `\``.
+When using single-quoted strings, any single quote inside the string must be doubled to escape it.
+
+If the string contains control characters such as `\n`, it must be escaped with double quotes. 
+
+
 .. _easyconfig_yeb_format_syntax_version_majorminor:
 
 Extract major.minor from the version string
@@ -154,6 +169,7 @@ Using scalar values is straight-forward, no special syntax is required.
 
 For string values, no quotes must be used (in general).
 However, quotes are sometimes required to escape characters that have special meaning in YAML (like '``:``').
+(Also see: :ref:`_easyconfig_yeb_format_syntax_escaping`)
 It's worth noting that there's a subtle difference between using single and double quotes, see
 `Flow Scalar Styles <http://www.yaml.org/spec/1.2/spec.html#id2786942>`_.
 
@@ -316,16 +332,22 @@ To specify parameters that used to contain tuples such as ``osdependencies`` and
 list (sequences) instead of tuples.
 
 For example::
+
     osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
 Becomes::
+
     osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]] 
 
 And::
+
     sanity_check_paths = {
         'files': ['fileA', ('fileB', 'fileC')],
         'dirs' : ['dirA', 'dirB'],
     }
+
 Becomes::
+
     sanity_check_paths: {
         files: [fileA, [fileB, fileC]],
         dirs: [dirA, dirB]
