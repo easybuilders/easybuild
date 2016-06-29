@@ -60,9 +60,9 @@ fi
 python $generate_api_script
 
 #  generic easyblocks doc
-echo ".. _generic_easyblocks:" > $VERSION_SPECIFIC_DIR/Generic_easyblocks.rst
-echo "" >> $VERSION_SPECIFIC_DIR/Generic_easyblocks.rst
-python $generic_easyblocks_script >> $VERSION_SPECIFIC_DIR/Generic_easyblocks.rst
+echo ".. _generic_easyblocks:" > $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
+echo "" >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
+python $generic_easyblocks_script >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
 
 #  help doc
 echo ".. _eb_help:" > $VERSION_SPECIFIC_DIR/help.rst
