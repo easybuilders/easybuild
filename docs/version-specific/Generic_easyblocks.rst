@@ -49,11 +49,10 @@ Customised steps in ``Binary`` easyblock
 * ``configure_step`` - No configuration, this is binary software
 * ``install_step`` - Copy all files in build directory to the install directory
 
+Example easyconfig for ``Binary`` easyblock
+-------------------------------------------
 
-Example for ``Binary`` easyblock
---------------------------------
-
-::
+.. code::
 
     easyblock = 'Binary'
     
@@ -71,8 +70,8 @@ Example for ``Binary`` easyblock
     checksums = ['02cf92847ec704d010a54df293b9c60a']
     
     sanity_check_paths = {
-    'files': ['platanus'],
-    'dirs': [],
+        'files': ['platanus'],
+        'dirs': [],
     }
     
     moduleclass = 'bio'
@@ -122,11 +121,10 @@ Customised steps in ``Bundle`` easyblock
 * ``configure_step`` - Collect altroot/altversion info.
 * ``install_step`` - Do nothing.
 
+Example easyconfig for ``Bundle`` easyblock
+-------------------------------------------
 
-Example for ``Bundle`` easyblock
---------------------------------
-
-::
+.. code::
 
     easyblock = 'Bundle'
     
@@ -139,9 +137,9 @@ Example for ``Bundle`` easyblock
     toolchain = {'name': 'GCC', 'version': '4.9.2'}
     
     dependencies = [
-    ('Autoconf', '2.69'), # 20120424
-    ('Automake', '1.15'), # 20150105
-    ('libtool', '2.4.5'), # 20150119
+        ('Autoconf', '2.69'), # 20120424
+        ('Automake', '1.15'), # 20150105
+        ('libtool', '2.4.5'), # 20150119
     ]
     
     moduleclass = 'devel'
@@ -174,11 +172,10 @@ Customised steps in ``CMakeMake`` easyblock
 * ``configure_step`` - Configure build using cmake
 * ``install_step`` - Configure build using cmake
 
+Example easyconfig for ``CMakeMake`` easyblock
+----------------------------------------------
 
-Example for ``CMakeMake`` easyblock
------------------------------------
-
-::
+.. code::
 
     easyblock = 'CMakeMake'
     
@@ -187,7 +184,7 @@ Example for ``CMakeMake`` easyblock
     
     homepage = 'http://stnava.github.io/ANTs/'
     description = """ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing,
-    interpreting and visualizing multidimensional data."""
+     interpreting and visualizing multidimensional data."""
     
     toolchain = {'name': 'goolf', 'version': '1.5.14'}
     toolchainopts = {'pic': True}
@@ -205,8 +202,8 @@ Example for ``CMakeMake`` easyblock
     separate_build_dir = True
     
     sanity_check_paths = {
-    'files': ['bin/ANTS'],
-    'dirs': ['lib'],
+        'files': ['bin/ANTS'],
+        'dirs': ['lib'],
     }
     
     moduleclass = 'data'
@@ -309,6 +306,7 @@ easyconfig parameter        description                                         
 
 Commonly used easyconfig parameters with ``ConfigureMake`` easyblock
 --------------------------------------------------------------------
+
 ====================    ================================================================
 easyconfig parameter    description                                                     
 ====================    ================================================================
@@ -327,11 +325,10 @@ Customised steps in ``ConfigureMake`` easyblock
 * ``install_step`` - Create the installation in correct location
         - typical: make install
 
+Example easyconfig for ``ConfigureMake`` easyblock
+--------------------------------------------------
 
-Example for ``ConfigureMake`` easyblock
----------------------------------------
-
-::
+.. code::
 
     easyblock = 'ConfigureMake'
     
@@ -341,15 +338,14 @@ Example for ``ConfigureMake`` easyblock
     homepage = 'http://zsync.moria.org.uk/'
     description = """zsync-0.6.2: Optimising file distribution program, a 1-to-many rsync"""
     
+    toolchain = {'name': 'ictce', 'version': '5.3.0'}
+    
     sources = [SOURCE_TAR_BZ2]
     source_urls = ['http://zsync.moria.org.uk/download/']
     
-    
-    toolchain = {'name': 'ictce', 'version': '5.3.0'}
-    
     sanity_check_paths = {
-    'files': ['bin/zsync'],
-    'dirs': []
+        'files': ['bin/zsync'],
+        'dirs': []
     }
     
     moduleclass = 'tools'
@@ -395,16 +391,16 @@ Customised steps in ``ConfigureMakePythonPackage`` easyblock
 * ``configure_step`` - Configure build using 'python configure'.
 * ``install_step`` - Install with 'make install'.
 
+Example easyconfig for ``ConfigureMakePythonPackage`` easyblock
+---------------------------------------------------------------
 
-Example for ``ConfigureMakePythonPackage`` easyblock
-----------------------------------------------------
-
-::
+.. code::
 
     easyblock = 'ConfigureMakePythonPackage'
     
     name = 'PyQt'
     version = '4.11.3'
+    versionsuffix = '-Python-%(pyver)s'
     
     homepage = 'http://www.riverbankcomputing.co.uk/software/pyqt'
     description = """PyQt is a set of Python v2 and v3 bindings for Digia's Qt application framework."""
@@ -414,24 +410,19 @@ Example for ``ConfigureMakePythonPackage`` easyblock
     sources = ['%(name)s-x11-gpl-%(version)s.tar.gz']
     source_urls = ['http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-%(version)s']
     
-    python = 'Python'
-    pyver = '2.7.9'
-    pythonshortver = '.'.join(pyver.split('.')[:2])
-    versionsuffix = '-%s-%s' % (python, pyver)
-    
     dependencies = [
-    (python, pyver),
-    ('SIP', '4.16.4', versionsuffix),
-    ('Qt', '4.8.6'),
+        ('Python', '2.7.9'),
+        ('SIP', '4.16.4', versionsuffix),
+        ('Qt', '4.8.6'),
     ]
     
     configopts = "configure-ng.py --confirm-license"
-    configopts += " --destdir=%%(installdir)s/lib/python%s/site-packages " % pythonshortver
+    configopts += " --destdir=%%(installdir)s/lib/python%(pyshortver)s/site-packages "
     configopts += " --no-sip-files"
     
     options = {'modulename': 'PyQt4'}
     
-    modextrapaths = {'PYTHONPATH': 'lib/python%s/site-packages' % pythonshortver}
+    modextrapaths = {'PYTHONPATH': 'lib/python%(pyshortver)s/site-packages'}
     
     moduleclass = 'vis'
     
