@@ -152,7 +152,7 @@ Using scalar values is straight-forward, no special syntax is required.
 
 For string values, no quotes must be used (in general).
 However, quotes are sometimes required to escape characters that have special meaning in YAML (like '``:``').
-(Also see: :ref:`_easyconfig_yeb_format_syntax_escaping`)
+(Also see: :ref:`easyconfig_yeb_format_syntax_escaping`)
 It's worth noting that there's a subtle difference between using single and double quotes, see
 `Flow Scalar Styles <http://www.yaml.org/spec/1.2/spec.html#id2786942>`_.
 
@@ -255,7 +255,7 @@ Dependencies
 
 We updated the way dependencies are specified to match with the new toolchain format (:ref:`easyconfig_yeb_format_new`)
 The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
-and space (- ). Each entry can specify a ``name: version`` key-value pair, and a ``versionsuffix`` and ``toolchain``.
+and space (`- `). Each entry can specify a ``name: version`` key-value pair, and a ``versionsuffix`` and ``toolchain``.
 Only the ``name: version`` pair is required.
 
 Dependencies can also be external modules. In this case, the dependency has to be specified with a ``name`` and the marker 
@@ -284,7 +284,7 @@ A more complicated example from a toolchain easyconfig, where also the ``!join``
         - &comp_version 4.7.2
         - &comp [*comp_name, *comp_version]
 
-        - & OpenBLAS
+        - &blaslib OpenBLAS
         - &blasver 0.2.6
         - &blas !join [*blaslib, -, *blasver]
         - &blas_suff -LAPACK-3.4.2
@@ -311,11 +311,13 @@ For the full version of this easyconfig file, see the example ``.yeb`` easyconfi
 
 OS dependencies and sanity check paths
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To specify parameters that used to contain tuples such as ``osdependencies`` and ``sanity_check_paths``, simply use
-list (sequences) instead of tuples.
+lists (sequences) instead of tuples.
 
 For example::
 
+    # note: this is eb syntax, will not work in .yeb files
     osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
 
 Becomes::
@@ -324,6 +326,7 @@ Becomes::
 
 And::
 
+    # note: this is eb syntax, will not work in .yeb files
     sanity_check_paths = {
         'files': ['fileA', ('fileB', 'fileC')],
         'dirs' : ['dirA', 'dirB'],
@@ -345,6 +348,7 @@ Toolchain format
 The easyconfig parameter ``toolchain`` in .eb files is defined as a dictionary ``{'name':'foo', 'version':'bar'}``. In
 the .yeb format, this can be done much easier by just using ``name, version``. E.g::
 
+    # note: this is eb syntax, will not work in yeb files
     toolchain = {'name':'intel', 'version':'2015b'}
 
 becomes::
