@@ -77,29 +77,35 @@ eb -a --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 #  available configfile constants
 echo ".. _avail_cfgfile_constants:" > $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo "*(see also* \`\`eb --avail-cfgfile-constants\`\`*)*" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
+echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 eb --avail-cfgfile-constants --output-format rst >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 
 # available easyconfig constants
 echo ".. _avail_easyconfig_constants:" > $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 eb --avail-easyconfig-constants --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 
 # available easyconfig licenses
 echo ".. _avail_easyconfig_licenses:" > $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 eb --avail-easyconfig-licenses --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 
 # available easyconfig templates
 echo ".. _avail_easyconfig_templates" > $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 eb --avail-easyconfig-templates --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 
 #  list-easyblocks doc
 echo ".. _list_easyblocks:" > $VERSION_SPECIFIC_DIR/easyblocks.rst
 echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyblocks.rst
+echo >> $VERSION_SPECIFIC_DIR/easyblocks.rst
 eb --list-easyblocks --output-format rst >> $VERSION_SPECIFIC_DIR/easyblocks.rst
 
 #  list-toolchain doc
 echo ".. _list_toolchains:" > $VERSION_SPECIFIC_DIR/toolchains.rst
 echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
 eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
