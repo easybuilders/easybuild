@@ -131,23 +131,6 @@ When using single-quoted strings, any single quote inside the string must be dou
 If the string contains control characters such as `\n`, it must be escaped with double quotes. 
 
 
-.. _easyconfig_yeb_format_syntax_version_majorminor:
-
-Extract major.minor from the version string
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Since it is often needed in easyconfig files to extract the major and minor version number from the version string, the
-EasyBuild framework defines an operator ``!majorminor``.
-
-This function takes a sequence node with one element as parameter::
-
-    _internal_variables_:
-        - &version 2.40.0
-
-    version_str: !majorminor [*version] # will return 2.40
-    source_urls: [!join ['http://ftp.gnome.org/pub/gnome/sources/glib/', !majorminor [*version], / ]
-
-
 .. _easyconfig_yeb_format_syntax_easyconfig_parameters:
 
 Easyconfig parameter values
