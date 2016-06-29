@@ -63,25 +63,43 @@ python $generate_api_script
 python $generic_easyblocks_script > $VERSION_SPECIFIC_DIR/Generic_easyblocks.rst
 
 #  help doc
-eb --help=rst > $VERSION_SPECIFIC_DIR/generated_configuration_options.rst
+echo ".. _eb_help:" > $VERSION_SPECIFIC_DIR/help.rst
+echo "*(see also* \`\`eb --help\`\` *)*" >> $VERSION_SPECIFIC_DIR/help.rst
+echo >> $VERSION_SPECIFIC_DIR/help.rst
+eb --help=rst >> $VERSION_SPECIFIC_DIR/help.rst
 
 #  available easyconfig params
-eb -a --output-format rst > $VERSION_SPECIFIC_DIR/generated_ec_params.rst
+echo ".. _avail_easyconfig_params:" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+eb -a --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 
 #  available configfile constants
-eb --avail-cfgfile-constants --output-format rst > $VERSION_SPECIFIC_DIR/generated_cfgfile_constants.rst
+echo ".. _avail_cfgfile_constants:" > $VERSION_SPECIFIC_DIR/config_file_constants.rst
+echo "*(see also* \`\`eb --avail-cfgfile-constants\`\`*)*" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
+eb --avail-cfgfile-constants --output-format rst >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 
 # available easyconfig constants
-eb --avail-easyconfig-constants --output-format rst > $VERSION_SPECIFIC_DIR/generated_ec_constants.rst
+echo ".. _avail_easyconfig_constants:" > $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
+echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
+eb --avail-easyconfig-constants --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 
 # available easyconfig licenses
-eb --avail-easyconfig-licenses --output-format rst > $VERSION_SPECIFIC_DIR/generated_ec_licenses.rst
+echo ".. _avail_easyconfig_licenses:" > $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
+echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
+eb --avail-easyconfig-licenses --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 
 # available easyconfig templates
-eb --avail-easyconfig-templates --output-format rst > $VERSION_SPECIFIC_DIR/generated_ec_templates.rst
+echo ".. _avail_easyconfig_templates" > $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
+echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
+eb --avail-easyconfig-templates --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 
 #  list-easyblocks doc
-eb --list-easyblocks --output-format rst > $VERSION_SPECIFIC_DIR/generated_list_easyblocks.rst
+echo ".. _list_easyblocks:" > $VERSION_SPECIFIC_DIR/easyblocks.rst
+echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/easyblocks.rst
+eb --list-easyblocks --output-format rst >> $VERSION_SPECIFIC_DIR/easyblocks.rst
 
 #  list-toolchain doc
-eb --list-toolchains --output-format rst > $VERSION_SPECIFIC_DIR/generated_list_toolchains.rst
+echo ".. _list_toolchains:" > $VERSION_SPECIFIC_DIR/toolchains.rst
+echo "*(see also* ``eb --help``*)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
+eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
