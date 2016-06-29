@@ -8,6 +8,7 @@ Submodules
 
    easybuild.tools.repository.filerepo
    easybuild.tools.repository.gitrepo
+   easybuild.tools.repository.hgrepo
    easybuild.tools.repository.repository
    easybuild.tools.repository.svnrepo
 

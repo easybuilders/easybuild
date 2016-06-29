@@ -26,9 +26,11 @@ Submodules
    easybuild.toolchains.craycce
    easybuild.toolchains.craygnu
    easybuild.toolchains.crayintel
+   easybuild.toolchains.craypgi
    easybuild.toolchains.dummy
    easybuild.toolchains.foss
    easybuild.toolchains.gcc
+   easybuild.toolchains.gcccore
    easybuild.toolchains.gcccuda
    easybuild.toolchains.gimkl
    easybuild.toolchains.gimpi
@@ -60,6 +62,14 @@ Submodules
    easybuild.toolchains.ipsmpi
    easybuild.toolchains.iqacml
    easybuild.toolchains.ismkl
+   easybuild.toolchains.pgi
+   easybuild.toolchains.pomkl
+   easybuild.toolchains.pompi
+   easybuild.toolchains.xlcxlf
+   easybuild.toolchains.xlmpich
+   easybuild.toolchains.xlmpich2
+   easybuild.toolchains.xlmvapich2
+   easybuild.toolchains.xlompi
 
 Module contents
 ---------------
