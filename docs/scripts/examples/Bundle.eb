@@ -1,0 +1,17 @@
+easyblock = 'Bundle'
+
+name = 'Autotools'
+version = '20150119' # date of the most recent change
+
+homepage = 'http://autotools.io'
+description = """This bundle collect the standard GNU build tools: Autoconf, Automake and libtool"""
+
+toolchain = {'name': 'GCC', 'version': '4.9.2'}
+
+dependencies = [
+    ('Autoconf', '2.69'), # 20120424
+    ('Automake', '1.15'), # 20150105
+    ('libtool', '2.4.5'), # 20150119
+]
+
+moduleclass = 'devel'
