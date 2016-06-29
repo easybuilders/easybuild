@@ -6,7 +6,6 @@ Submodules
 
 .. toctree::
 
-   easybuild.toolchains.fft.crayfftw
    easybuild.toolchains.fft.fftw
    easybuild.toolchains.fft.intelfftw
 

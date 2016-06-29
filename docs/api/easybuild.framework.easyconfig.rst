@@ -21,6 +21,7 @@ Submodules
    easybuild.framework.easyconfig.templates
    easybuild.framework.easyconfig.tools
    easybuild.framework.easyconfig.tweak
+   easybuild.framework.easyconfig.types
 
 Module contents
 ---------------

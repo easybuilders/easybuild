@@ -32,6 +32,7 @@ Submodules
    easybuild.tools.jenkins
    easybuild.tools.module_generator
    easybuild.tools.modules
+   easybuild.tools.multidiff
    easybuild.tools.options
    easybuild.tools.ordereddict
    easybuild.tools.parallelbuild

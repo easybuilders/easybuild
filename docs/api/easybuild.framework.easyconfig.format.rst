@@ -12,6 +12,7 @@ Submodules
    easybuild.framework.easyconfig.format.pyheaderconfigobj
    easybuild.framework.easyconfig.format.two
    easybuild.framework.easyconfig.format.version
+   easybuild.framework.easyconfig.format.yeb
 
 Module contents
 ---------------

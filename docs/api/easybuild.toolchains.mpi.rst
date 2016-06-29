@@ -12,6 +12,7 @@ Submodules
    easybuild.toolchains.mpi.mpich2
    easybuild.toolchains.mpi.mvapich2
    easybuild.toolchains.mpi.openmpi
+   easybuild.toolchains.mpi.psmpi
    easybuild.toolchains.mpi.qlogicmpi
 
 Module contents
