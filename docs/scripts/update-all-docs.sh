@@ -111,3 +111,9 @@ echo ".. _list_toolchains:" > $VERSION_SPECIFIC_DIR/toolchains.rst
 echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
 echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
 eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
+
+#  available toolchain options
+echo ".. _avail_toolchain_opts:" > $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo "*(see also* \`\`eb --avail-toolchain-opts <tcname>\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+eb --avail-toolchain-opts intel --output-format rst >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
