@@ -114,12 +114,24 @@ eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
 
 #  available toolchain options
 echo ".. _avail_toolchain_opts:" > $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 echo "*(see also* \`\`eb --avail-toolchain-opts <tcname>\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 IFS=$'\n'
-for i in `eb --list-toolchains | sed 1d`
+
+for i in `eb --list-toolchains | sed 1d | sort`
 do
     tc=`echo $i | cut -d ':' -f1`
+    echo "- ${tc//[[:blank:]]/}_" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+done
+
+
+for i in `eb --list-toolchains | sed 1d | sort`
+do
+    tc=`echo $i | cut -d ':' -f1`
+    echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+    echo ".. _${tc//[[:blank:]]/}:" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+    echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
     eb --avail-toolchain-opts ${tc//[[:blank:]]/} --output-format rst >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 done
 
