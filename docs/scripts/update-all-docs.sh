@@ -119,7 +119,7 @@ echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 IFS=$'\n'
 for i in `eb --list-toolchains | sed 1d`
 do
-    tc=`echo $i | cut -d ':' -f1 | sed 's/[ \t]*//g'`
-    eb --avail-toolchain-opts $tc --output-format rst >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+    tc=`echo $i | cut -d ':' -f1`
+    eb --avail-toolchain-opts ${tc//[[:blank:]]/} --output-format rst >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 done
 
