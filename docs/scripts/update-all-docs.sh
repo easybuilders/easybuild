@@ -74,7 +74,7 @@ eb --help=rst >> $VERSION_SPECIFIC_DIR/help.rst
 #  available easyconfig params
 echo ".. _avail_easyconfig_params:" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 echo ".. _easyconfig_params:" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
-echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 eb -a --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 
