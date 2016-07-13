@@ -175,12 +175,33 @@ modules corresponding to subgroups of tests (note: ``__init__.py`` and ``utiliti
 
 For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool::
 
-    export TEST_EASYBUILD_MODULES_TOOL=Lmod
-    python -m test.framework.suite
+    $ export TEST_EASYBUILD_MODULES_TOOL=Lmod
+    $ python -m test.framework.suite
 
 To only run the subgroup of tests for ``filetools``::
 
-    python -m test.framework.filetools
+    $ python -m test.framework.filetools
+
+Since EasyBuild v2.8.2, tests can be *filtered* by name. Simply add the string to filter with to the test command.
+
+For example, to run only the tests containing the word ``load`` in the subgroup ``modules``, run::
+
+    $ python -m test.framework.modules load
+
+    Filtered ModulesTest tests using 'load', retained 2/19 tests: test_load, test_load_in_hierarchy
+    ..
+    ----------------------------------------------------------------------
+    Ran 2 tests in 2.688s
+
+    OK
+
+
+This works with as many filter words as you want to use. For example, to run every test method in ``modules``
+containing the words ``load`` or ``bash``: ::
+
+    $ python -m test.framework.modules load bash
+
+
 
 Results
 ~~~~~~~
@@ -201,7 +222,7 @@ Examples
 
 A successful run of the EasyBuild framework test suite, without skipped tests::
 
-    $ python -m test.framework.suite 
+    $ python -m test.framework.suite
     Running tests...
     ----------------------------------------------------------------------
     ..........................................................................................................................................................................................................................................................
