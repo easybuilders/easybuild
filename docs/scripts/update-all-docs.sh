@@ -111,3 +111,42 @@ echo ".. _list_toolchains:" > $VERSION_SPECIFIC_DIR/toolchains.rst
 echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
 echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
 eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
+
+#  available toolchain options
+echo ".. _avail_toolchain_opts:" > $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+title="Available toolchain options (by toolchain)"
+length=${#title}
+echo $title >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+printf '=%.0s' $(seq 1 $length) >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo "*(see also* \`\`eb --avail-toolchain-opts <tcname>\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+IFS=$'\n'
+
+temp_tc="$(mktemp)"
+
+for i in `eb --list-toolchains | sed 1d | sort`
+do
+    tc=`echo $i | cut -d ':' -f1`
+    echo "${tc//[[:blank:]]/}" >> $temp_tc
+done
+
+echo -n `cat $temp_tc | sed -n 1p`"_" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+
+cat $temp_tc | sed 1d | while read line
+do
+    echo -n " - ""$line""_" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+done
+echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+
+cat $temp_tc | while read line
+do
+    echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+    echo ".. _""$line"":" >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+    echo >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+    eb --avail-toolchain-opts $line --output-format rst >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
+done
+
+rm $temp_tc
