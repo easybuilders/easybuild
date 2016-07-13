@@ -1,1 +1,1 @@
-*(replaced by* :ref:`easyconfig_params` *)*
+*(replaced by* :ref:`avail_easyconfig_params` *)*
