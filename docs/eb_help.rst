@@ -1,1 +1,1 @@
-*(replaced by* :ref:`eb_help`_ *)*
+*(replaced by* :ref:`eb_help` *)*
