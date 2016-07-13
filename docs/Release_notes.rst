@@ -30,6 +30,7 @@ bugfix release
   * add support for filtering tests by name (`#1828 <https://github.com/hpcugent/easybuild-framework/pull/1828>`_)
   * add support for ``--avail-toolchain-opts`` (`#1830 <https://github.com/hpcugent/easybuild-framework/pull/1830>`_, `#1839 <https://github.com/hpcugent/easybuild-framework/pull/1839>`_)
   * use absolute path for robot and easyconfig files (`#1834 <https://github.com/hpcugent/easybuild-framework/pull/1834>`_)
+  * add backup URL for tarballs hosted on SourceForge in install_eb_deps.sh script (`#1843 <https://github.com/hpcugent/easybuild-framework/pull/1843>`_)
 
 * various bug fixes, including:
 
