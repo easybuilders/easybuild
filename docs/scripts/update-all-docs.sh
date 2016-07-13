@@ -66,13 +66,19 @@ python $generic_easyblocks_script >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rs
 
 #  help doc
 echo ".. _eb_help:" > $VERSION_SPECIFIC_DIR/help.rst
+echo >> $VERSION_SPECIFIC_DIR/help.rst
+echo ".. _basic_usage_help:" >> $VERSION_SPECIFIC_DIR/help.rst
+echo >> $VERSION_SPECIFIC_DIR/help.rst
 echo "*(see also* \`\`eb --help\`\` *)*" >> $VERSION_SPECIFIC_DIR/help.rst
 echo >> $VERSION_SPECIFIC_DIR/help.rst
 eb --help=rst >> $VERSION_SPECIFIC_DIR/help.rst
 
 #  available easyconfig params
 echo ".. _avail_easyconfig_params:" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
-echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo ".. _easyconfig_params:" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 eb -a --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 

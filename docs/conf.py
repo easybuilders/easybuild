@@ -35,15 +35,15 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'EasyBuild'
-copyright = '2012-2015, Ghent University, CC-BY-SA'
+copyright = '2012-2016, Ghent University, CC-BY-SA'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '2.8.1'  # this is meant to reference the version of EasyBuild
+version = '2.8.2'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '20160613.01'  # this is meant to reference the version of the documentation itself
+release = '20160713.01'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
