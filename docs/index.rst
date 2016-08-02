@@ -78,6 +78,16 @@ Other topics
     Deprecated-functionality
     Removed-functionality
 
+API
+===
+
+.. toctree::
+    :glob:
+    :maxdepth: 2
+
+    Easybuild API <api/easybuild>
+
+
 Getting help
 ============
 
