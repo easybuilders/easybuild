@@ -104,7 +104,7 @@ directory using ``pip`` would be::
   In our experience, using ``--user`` creates more problems than it solves.
   We have run into unexpected behavior with Python software installed in your
   home directory using ``--user``, for example it **always** being preferred over
-  versions installed somewhere else. Hence, we strongly discourage using `--user`
+  versions installed somewhere else. Hence, we strongly discourage using ``--user``
   to install EasyBuild (or other Python software).
 
 Installing the EasyBuild packages separately
