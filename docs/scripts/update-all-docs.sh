@@ -73,7 +73,7 @@ echo ".. _generic_easyblocks:" > $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
 echo "" >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
 python $generic_easyblocks_script >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
 
-echo "* :ref:\`Generic EasyBlocks <generic_easyblocks>\`" >> $overview
+echo "* :ref:\`Overview of generic easyblocks <generic_easyblocks>\`" >> $overview
 echo >> $overview
 
 #  help doc
@@ -85,7 +85,7 @@ echo "*(see also* \`\`eb --help\`\` *)*" >> $VERSION_SPECIFIC_DIR/help.rst
 echo >> $VERSION_SPECIFIC_DIR/help.rst
 eb --help=rst >> $VERSION_SPECIFIC_DIR/help.rst
 
-echo "* :ref:\`General EasyBuild Help <eb_help>\`" >> $overview
+echo "* :ref:\`Overview of configuration options (eb --help)\`" >> $overview
 echo >> $overview
 
 #  available easyconfig params
@@ -97,7 +97,7 @@ echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" >> 
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 eb -a --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 
-echo "* :ref:\`Available EasyConfig Parameters <vsd_avail_easyconfig_params>\`" >> $overview
+echo "* :ref:\`Available easyconfig parameters <vsd_avail_easyconfig_params>\`" >> $overview
 echo >> $overview
 
 #  available configfile constants
@@ -115,7 +115,7 @@ echo "*(see also* \`\`eb --avail-easyconfig-constants\`\` *)*" >> $VERSION_SPECI
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 eb --avail-easyconfig-constants --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 
-echo "* :ref:\`Available EasyConfig constants <avail_easyconfig_constants>\`" >> $overview
+echo "* :ref:\`Constants available for easyconfig files <avail_easyconfig_constants>\`" >> $overview
 echo >> $overview
 
 # available easyconfig licenses
@@ -124,7 +124,7 @@ echo "*(see also* \`\`eb --avail-easyconfig-licenses\`\` *)*" >> $VERSION_SPECIF
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 eb --avail-easyconfig-licenses --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 
-echo "* :ref:\`Available EasyConfig Licenses <avail_easyconfig_licenses>\`" >> $overview
+echo "* :ref:\`License constants available for easyconfig files <avail_easyconfig_licenses>\`" >> $overview
 echo >> $overview
 
 # available easyconfig templates
@@ -133,7 +133,7 @@ echo "*(see also* \`\`eb --avail-easyconfig-templates\`\` *)*" >> $VERSION_SPECI
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 eb --avail-easyconfig-templates --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 
-echo "* :ref:\`Available EasyConfig templates <avail_easyconfig_templates>\`" >> $overview
+echo "* :ref:\`Templates available for easyconfig files <avail_easyconfig_templates>\`" >> $overview
 echo >> $overview
 
 #  list-easyblocks doc
@@ -142,7 +142,7 @@ echo ".. _vsd_list_easyblocks:" > $VERSION_SPECIFIC_DIR/easyblocks.rst
 echo >> $VERSION_SPECIFIC_DIR/easyblocks.rst
 eb --list-easyblocks --output-format rst >> $VERSION_SPECIFIC_DIR/easyblocks.rst
 
-echo "* :ref:\`List of available EasyBlocks <vsd_list_easyblocks>\`" >> $overview
+echo "* :ref:\`List of available easyblocks <vsd_list_easyblocks>\`" >> $overview
 echo >> $overview
 
 #  list-toolchain doc
