@@ -85,7 +85,7 @@ echo "*(see also* \`\`eb --help\`\` *)*" >> $VERSION_SPECIFIC_DIR/help.rst
 echo >> $VERSION_SPECIFIC_DIR/help.rst
 eb --help=rst >> $VERSION_SPECIFIC_DIR/help.rst
 
-echo "* :ref:\`Overview of configuration options (eb --help)\`" >> $overview
+echo "* :ref:\`Overview of configuration options (eb --help) <eb_help>\`" >> $overview
 echo >> $overview
 
 #  available easyconfig params
