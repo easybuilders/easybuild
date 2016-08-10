@@ -221,8 +221,8 @@ For example, to use the GCC v4.9.2 easyconfigs contributed via `easyconfigs pull
 
 .. _github_from_pr_vs_develop:
 
-Relation between pull request and current ``develop`` branch
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Relation between pull requests and current ``develop`` branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since EasyBuild v2.9.0, the current ``develop`` branch of the central ``easybuild-easyconfigs`` GitHub repository
 is taken into account when applicable with ``--from-pr``. Before, only the branch corresponding to the specified pull
