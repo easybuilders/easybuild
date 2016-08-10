@@ -196,7 +196,7 @@ modified by a particular pull request to the `easybuild-easyconfigs GitHub repos
 or not).
 
 This can be useful to employ easyconfig files that are not available yet in the active EasyBuild installation,
-or to test new contributions by combining ``--from-pr`` with ``-upload-test-report``
+or to test new contributions by combining ``--from-pr`` with ``--upload-test-report``
 (see :ref:`github_upload_test_report`).
 
 When ``--from-pr`` is used, EasyBuild will download all modified files (easyconfig files and patches) to a temporary
@@ -219,16 +219,80 @@ For example, to use the GCC v4.9.2 easyconfigs contributed via `easyconfigs pull
   To avoid GitHub rate limiting, let EasyBuild know which GitHub account should be used to query the GitHub API,
   and provide a matching GitHub token; see also :ref:`github_token`.
 
+.. _github_from_pr_vs_develop:
+
+Relation between pull request and current ``develop`` branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since EasyBuild v2.9.0, the current ``develop`` branch of the central ``easybuild-easyconfigs`` GitHub repository
+is taken into account when applicable with ``--from-pr``. Before, only the branch corresponding to the specified pull
+request itself was being considered, which potentially did not reflect the correct state of things, in particular
+for pull requests based on an outdated branch in which easyconfigs are changed that have been updated in ``develop``
+as well.
+
+As such, the exact semantics of ``--from-pr`` depends on the state of the specified pull request, i.e. whether or not
+the pull request was merged already, whether the pull request is mergeable and stable (as indicated by Travis), etc.
+
+.. _github_from_pr_vs_develop_open_stable_prs:
+
+Open stable pull requests
++++++++++++++++++++++++++
+
+For *open* pull requests that are *stable* (i.e. tests pass and no merge conflicts), the pull request is effectively
+treated as a patch to the current ``develop`` branch. This is done to ensure that contributions that are picked
+up via ``--from-pr`` are correctly evaluated.
+
+First, the current ``develop`` branch of the central ``easybuild-easyconfigs`` GitHub repository is downloaded to a
+temporary directory. Afterwards, the patch corresponding to the specified pull request is applied on top of the
+``develop`` branch. This results in a correct reflection of how the easyconfig files would look
+like if the pull request would be merged, which is particularly important for testing of contributions (see also
+:ref:`github_upload_test_report`).
+
+Easyconfig files touched by the pull request that are explicitely specified are then picked up from this location;
+see also :ref:`github_from_pr_specifying_easyconfigs`.
+
+.. _github_from_pr_vs_develop_merged_prs:
+
+Merged pull requests
+++++++++++++++++++++
+
+For merged pull requests, the current ``develop`` branch is considered to be the correct state of
+the easyconfigs touched by the pull request.
+
+Note that this implies that the easyconfig files being picked up are potentially different from the ones that
+appear in the specified pull request itself, taking into account that further updates may have been applied
+in the ``develop`` branch since the pull request got merged.
+
+.. _github_from_pr_vs_develop_closed_unstable_prs:
+
+Closed or unstable pull requests
+++++++++++++++++++++++++++++++++
+
+For closed and unstable pull requests, only the branch corresponding to the pull request itself is being considered,
+which aligns with the semantics of ``--from-pr`` as it was before EasyBuild v2.9.0. In this case, the current
+``develop`` branch is *not* taken into account.
+
+.. note:: A pull request is considered unstable when GitHub reports merge conflicts or when Travis reports
+          one or more failing tests.
+
+
 .. _github_from_pr_robot_synergy:
 
 Synergy with ``--robot``
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since EasyBuild v1.15.0, the temporary directory containing the easyconfigs (and patch files) from the specified
-pull request is *prepended* to the robot search path, to ensure that easyconfigs
+pull request is included in the robot search path.
+
+Up until EasyBuild v2.9.0, this directory was *prepended* to the robot search path, to ensure that easyconfigs
 that were modified in the respective pull request are picked up via ``--robot`` when they are required.
-Thus, for easyconfig files that are both available in the pull request and are available locally, the ones from the
-specified pull request will be preferred.
+Thus, for easyconfig files that were available in the pull request as well as locally, the ones from the
+specified pull request were preferred.
+
+This was changed in EasyBuild v2.9.0, where the directory containing the easyconfigs touched by the pull request
+is *appended* to the robot search path. This change was made to ensure that customized easyconfig files that are
+available in the robot search path are preferred over the (patched) easyconfig files from the ``develop`` branch
+(see also :ref:`github_from_pr_vs_develop`).
 
 For example, to build and install ``HPL`` with the ``intel/2015a`` toolchain, both of which are contributed via
 `easyconfigs pull request #1238 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1238>`_::
