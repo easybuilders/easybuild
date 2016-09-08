@@ -2,7 +2,7 @@ List of supported software
 ==========================
 
 
- :ref:`list_software_a <A>` :ref:`list_software_b <B>` :ref:`list_software_c <C>` :ref:`list_software_d <D>` :ref:`list_software_e <E>` :ref:`list_software_f <F>` :ref:`list_software_g <G>` :ref:`list_software_h <H>` :ref:`list_software_i <I>` :ref:`list_software_j <J>` :ref:`list_software_k <K>` :ref:`list_software_l <L>` :ref:`list_software_m <M>` :ref:`list_software_n <N>` :ref:`list_software_o <O>` :ref:`list_software_p <P>` :ref:`list_software_q <Q>` :ref:`list_software_r <R>` :ref:`list_software_s <S>` :ref:`list_software_t <T>` :ref:`list_software_u <U>` :ref:`list_software_v <V>` :ref:`list_software_w <W>` :ref:`list_software_x <X>` :ref:`list_software_y <Y>` :ref:`list_software_z <Z>`
+:ref:`list_software_a` :ref:`list_software_b` :ref:`list_software_c` :ref:`list_software_d` :ref:`list_software_e` :ref:`list_software_f` :ref:`list_software_g` :ref:`list_software_h` :ref:`list_software_i` :ref:`list_software_j` :ref:`list_software_k` :ref:`list_software_l` :ref:`list_software_m` :ref:`list_software_n` :ref:`list_software_o` :ref:`list_software_p` :ref:`list_software_q` :ref:`list_software_r` :ref:`list_software_s` :ref:`list_software_t` :ref:`list_software_u` :ref:`list_software_v` :ref:`list_software_w` :ref:`list_software_x` :ref:`list_software_y` :ref:`list_software_z` 
 
 .. _list_software_a:
 *(A)*
