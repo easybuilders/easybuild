@@ -1,18 +1,18 @@
 List of supported software
 ==========================
 
-EasyBuild v|version| supports 1128 different software packages (incl. toolchains, bundles):
+EasyBuild |version| supports 1128 different software packages (incl. toolchains, bundles):
 
-:ref:`list_software_a` :ref:`list_software_b` :ref:`list_software_c` :ref:`list_software_d` :ref:`list_software_e` :ref:`list_software_f` :ref:`list_software_g` :ref:`list_software_h` :ref:`list_software_i` :ref:`list_software_j` :ref:`list_software_k` :ref:`list_software_l` :ref:`list_software_m` :ref:`list_software_n` :ref:`list_software_o` :ref:`list_software_p` :ref:`list_software_q` :ref:`list_software_r` :ref:`list_software_s` :ref:`list_software_t` :ref:`list_software_u` :ref:`list_software_v` :ref:`list_software_w` :ref:`list_software_x` :ref:`list_software_y` :ref:`list_software_z` 
+:ref:`list_software_letter_a` - :ref:`list_software_letter_b` - :ref:`list_software_letter_c` - :ref:`list_software_letter_d` - :ref:`list_software_letter_e` - :ref:`list_software_letter_f` - :ref:`list_software_letter_g` - :ref:`list_software_letter_h` - :ref:`list_software_letter_i` - :ref:`list_software_letter_j` - :ref:`list_software_letter_k` - :ref:`list_software_letter_l` - :ref:`list_software_letter_m` - :ref:`list_software_letter_n` - :ref:`list_software_letter_o` - :ref:`list_software_letter_p` - :ref:`list_software_letter_q` - :ref:`list_software_letter_r` - :ref:`list_software_letter_s` - :ref:`list_software_letter_t` - :ref:`list_software_letter_u` - :ref:`list_software_letter_v` - :ref:`list_software_letter_w` - :ref:`list_software_letter_x` - :ref:`list_software_letter_y` - :ref:`list_software_letter_z`
 
 
-.. _list_software_a:
+.. _list_software_letter_a:
 
 *A*
 ---
 
 
-:ref:`list_software_a2ps` :ref:`list_software_ABAQUS` :ref:`list_software_ABINIT` :ref:`list_software_ABySS` :ref:`list_software_ACML` :ref:`list_software_ADF` :ref:`list_software_ADMIXTURE` :ref:`list_software_Advisor` :ref:`list_software_AFNI` :ref:`list_software_ALADIN` :ref:`list_software_Allinea` :ref:`list_software_ALLPATHS-LG` :ref:`list_software_ALPS` :ref:`list_software_Amber` :ref:`list_software_AMOS` :ref:`list_software_AnalyzeFMRI` :ref:`list_software_animation` :ref:`list_software_annovar` :ref:`list_software_ANSYS` :ref:`list_software_ANSYS_CFD` :ref:`list_software_ant` :ref:`list_software_ANTLR` :ref:`list_software_ANTs` :ref:`list_software_APBS` :ref:`list_software_APR` :ref:`list_software_APR-util` :ref:`list_software_ARB` :ref:`list_software_argtable` :ref:`list_software_aria2` :ref:`list_software_Armadillo` :ref:`list_software_arpack-ng` :ref:`list_software_ASE` :ref:`list_software_ASHS` :ref:`list_software_Aspera-Connect` :ref:`list_software_astropy` :ref:`list_software_ATK` :ref:`list_software_Atkmm` :ref:`list_software_ATLAS` :ref:`list_software_ATSAS` :ref:`list_software_attr` :ref:`list_software_Autoconf` :ref:`list_software_AutoDock` :ref:`list_software_AutoDock_Vina` :ref:`list_software_AutoGrid` :ref:`list_software_Automake` :ref:`list_software_Autotools`
+:ref:`list_software_a2ps` - :ref:`list_software_ABAQUS` - :ref:`list_software_ABINIT` - :ref:`list_software_ABySS` - :ref:`list_software_ACML` - :ref:`list_software_ADF` - :ref:`list_software_ADMIXTURE` - :ref:`list_software_Advisor` - :ref:`list_software_AFNI` - :ref:`list_software_ALADIN` - :ref:`list_software_Allinea` - :ref:`list_software_ALLPATHS-LG` - :ref:`list_software_ALPS` - :ref:`list_software_Amber` - :ref:`list_software_AMOS` - :ref:`list_software_AnalyzeFMRI` - :ref:`list_software_animation` - :ref:`list_software_annovar` - :ref:`list_software_ANSYS` - :ref:`list_software_ANSYS_CFD` - :ref:`list_software_ant` - :ref:`list_software_ANTLR` - :ref:`list_software_ANTs` - :ref:`list_software_APBS` - :ref:`list_software_APR` - :ref:`list_software_APR-util` - :ref:`list_software_ARB` - :ref:`list_software_argtable` - :ref:`list_software_aria2` - :ref:`list_software_Armadillo` - :ref:`list_software_arpack-ng` - :ref:`list_software_ASE` - :ref:`list_software_ASHS` - :ref:`list_software_Aspera-Connect` - :ref:`list_software_astropy` - :ref:`list_software_ATK` - :ref:`list_software_Atkmm` - :ref:`list_software_ATLAS` - :ref:`list_software_ATSAS` - :ref:`list_software_attr` - :ref:`list_software_Autoconf` - :ref:`list_software_AutoDock` - :ref:`list_software_AutoDock_Vina` - :ref:`list_software_AutoGrid` - :ref:`list_software_Automake` - :ref:`list_software_Autotools`
 
 
 .. _list_software_a2ps:
@@ -613,13 +613,13 @@ version     toolchains
 ========    =============================================================================================================================================================================================================================================================================================
 
 
-.. _list_software_b:
+.. _list_software_letter_b:
 
 *B*
 ---
 
 
-:ref:`list_software_bam-readcount` :ref:`list_software_bam2fastq` :ref:`list_software_BamTools` :ref:`list_software_BamUtil` :ref:`list_software_basemap` :ref:`list_software_Bash` :ref:`list_software_BayesAss` :ref:`list_software_BayeScan` :ref:`list_software_BayeScEnv` :ref:`list_software_BayesTraits` :ref:`list_software_BayPass` :ref:`list_software_Bazel` :ref:`list_software_bbcp` :ref:`list_software_bbFTP` :ref:`list_software_bbftpPRO` :ref:`list_software_BBMap` :ref:`list_software_bc` :ref:`list_software_BCFtools` :ref:`list_software_beagle-lib` :ref:`list_software_Beast` :ref:`list_software_BEDOPS` :ref:`list_software_BEDTools` :ref:`list_software_BEEF` :ref:`list_software_BerkeleyGW` :ref:`list_software_BFAST` :ref:`list_software_BH` :ref:`list_software_bibtexparser` :ref:`list_software_Biggus` :ref:`list_software_binutils` :ref:`list_software_biodeps` :ref:`list_software_BioKanga` :ref:`list_software_BioPerl` :ref:`list_software_Biopython` :ref:`list_software_BiSearch` :ref:`list_software_Bismark` :ref:`list_software_Bison` :ref:`list_software_BitSeq` :ref:`list_software_BLACS` :ref:`list_software_blasr` :ref:`list_software_BLASR` :ref:`list_software_BLAST` :ref:`list_software_BLAST+` :ref:`list_software_BLAT` :ref:`list_software_Blender` :ref:`list_software_Blitz++` :ref:`list_software_BOINC` :ref:`list_software_BoltzTraP` :ref:`list_software_Bonnie++` :ref:`list_software_Boost` :ref:`list_software_Bowtie` :ref:`list_software_Bowtie2` :ref:`list_software_BSMAP` :ref:`list_software_bsoft` :ref:`list_software_buildenv` :ref:`list_software_Bullet` :ref:`list_software_BWA` :ref:`list_software_BXH_XCEDE_TOOLS` :ref:`list_software_byacc` :ref:`list_software_bzip2`
+:ref:`list_software_bam-readcount` - :ref:`list_software_bam2fastq` - :ref:`list_software_BamTools` - :ref:`list_software_BamUtil` - :ref:`list_software_basemap` - :ref:`list_software_Bash` - :ref:`list_software_BayesAss` - :ref:`list_software_BayeScan` - :ref:`list_software_BayeScEnv` - :ref:`list_software_BayesTraits` - :ref:`list_software_BayPass` - :ref:`list_software_Bazel` - :ref:`list_software_bbcp` - :ref:`list_software_bbFTP` - :ref:`list_software_bbftpPRO` - :ref:`list_software_BBMap` - :ref:`list_software_bc` - :ref:`list_software_BCFtools` - :ref:`list_software_beagle-lib` - :ref:`list_software_Beast` - :ref:`list_software_BEDOPS` - :ref:`list_software_BEDTools` - :ref:`list_software_BEEF` - :ref:`list_software_BerkeleyGW` - :ref:`list_software_BFAST` - :ref:`list_software_BH` - :ref:`list_software_bibtexparser` - :ref:`list_software_Biggus` - :ref:`list_software_binutils` - :ref:`list_software_biodeps` - :ref:`list_software_BioKanga` - :ref:`list_software_BioPerl` - :ref:`list_software_Biopython` - :ref:`list_software_BiSearch` - :ref:`list_software_Bismark` - :ref:`list_software_Bison` - :ref:`list_software_BitSeq` - :ref:`list_software_BLACS` - :ref:`list_software_blasr` - :ref:`list_software_BLASR` - :ref:`list_software_BLAST` - :ref:`list_software_BLAST+` - :ref:`list_software_BLAT` - :ref:`list_software_Blender` - :ref:`list_software_Blitz++` - :ref:`list_software_BOINC` - :ref:`list_software_BoltzTraP` - :ref:`list_software_Bonnie++` - :ref:`list_software_Boost` - :ref:`list_software_Bowtie` - :ref:`list_software_Bowtie2` - :ref:`list_software_BSMAP` - :ref:`list_software_bsoft` - :ref:`list_software_buildenv` - :ref:`list_software_Bullet` - :ref:`list_software_BWA` - :ref:`list_software_BXH_XCEDE_TOOLS` - :ref:`list_software_byacc` - :ref:`list_software_bzip2`
 
 
 .. _list_software_bam-readcount:
@@ -1403,13 +1403,13 @@ version    toolchains
 =======    ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
-.. _list_software_c:
+.. _list_software_letter_c:
 
 *C*
 ---
 
 
-:ref:`list_software_cairo` :ref:`list_software_cairomm` :ref:`list_software_CAP3` :ref:`list_software_CastXML` :ref:`list_software_CBLAS` :ref:`list_software_ccache` :ref:`list_software_CCfits` :ref:`list_software_CD-HIT` :ref:`list_software_CDO` :ref:`list_software_CEM` :ref:`list_software_CFITSIO` :ref:`list_software_cflow` :ref:`list_software_CGAL` :ref:`list_software_cgdb` :ref:`list_software_cgmpich` :ref:`list_software_cgmpolf` :ref:`list_software_cgmvapich2` :ref:`list_software_cgmvolf` :ref:`list_software_cgompi` :ref:`list_software_cgoolf` :ref:`list_software_Chapel` :ref:`list_software_CHARMM` :ref:`list_software_CHASE` :ref:`list_software_Check` :ref:`list_software_CheMPS2` :ref:`list_software_Chimera` :ref:`list_software_ChIP-Seq` :ref:`list_software_Circos` :ref:`list_software_Circuitscape` :ref:`list_software_Clang` :ref:`list_software_ClangGCC` :ref:`list_software_CLHEP` :ref:`list_software_CLooG` :ref:`list_software_Clustal-Omega` :ref:`list_software_ClustalW2` :ref:`list_software_Cluster-Buster` :ref:`list_software_CMake` :ref:`list_software_Commet` :ref:`list_software_configparser` :ref:`list_software_configurable-http-proxy` :ref:`list_software_CONTRAfold` :ref:`list_software_CONTRAlign` :ref:`list_software_Coot` :ref:`list_software_Coreutils` :ref:`list_software_Corkscrew` :ref:`list_software_CosmoloPy` :ref:`list_software_CP2K` :ref:`list_software_CPLEX` :ref:`list_software_cppcheck` :ref:`list_software_CppUnit` :ref:`list_software_cramtools` :ref:`list_software_CrayCCE` :ref:`list_software_CrayGNU` :ref:`list_software_CrayIntel` :ref:`list_software_CrayPGI` :ref:`list_software_CRF++` :ref:`list_software_CrossTalkZ` :ref:`list_software_CRPropa` :ref:`list_software_csvkit` :ref:`list_software_ctffind` :ref:`list_software_Cube` :ref:`list_software_Cuby` :ref:`list_software_CUDA` :ref:`list_software_cuDNN` :ref:`list_software_Cufflinks` :ref:`list_software_cURL` :ref:`list_software_cutadapt` :ref:`list_software_CVS` :ref:`list_software_CVXOPT` :ref:`list_software_Cython`
+:ref:`list_software_cairo` - :ref:`list_software_cairomm` - :ref:`list_software_CAP3` - :ref:`list_software_CastXML` - :ref:`list_software_CBLAS` - :ref:`list_software_ccache` - :ref:`list_software_CCfits` - :ref:`list_software_CD-HIT` - :ref:`list_software_CDO` - :ref:`list_software_CEM` - :ref:`list_software_CFITSIO` - :ref:`list_software_cflow` - :ref:`list_software_CGAL` - :ref:`list_software_cgdb` - :ref:`list_software_cgmpich` - :ref:`list_software_cgmpolf` - :ref:`list_software_cgmvapich2` - :ref:`list_software_cgmvolf` - :ref:`list_software_cgompi` - :ref:`list_software_cgoolf` - :ref:`list_software_Chapel` - :ref:`list_software_CHARMM` - :ref:`list_software_CHASE` - :ref:`list_software_Check` - :ref:`list_software_CheMPS2` - :ref:`list_software_Chimera` - :ref:`list_software_ChIP-Seq` - :ref:`list_software_Circos` - :ref:`list_software_Circuitscape` - :ref:`list_software_Clang` - :ref:`list_software_ClangGCC` - :ref:`list_software_CLHEP` - :ref:`list_software_CLooG` - :ref:`list_software_Clustal-Omega` - :ref:`list_software_ClustalW2` - :ref:`list_software_Cluster-Buster` - :ref:`list_software_CMake` - :ref:`list_software_Commet` - :ref:`list_software_configparser` - :ref:`list_software_configurable-http-proxy` - :ref:`list_software_CONTRAfold` - :ref:`list_software_CONTRAlign` - :ref:`list_software_Coot` - :ref:`list_software_Coreutils` - :ref:`list_software_Corkscrew` - :ref:`list_software_CosmoloPy` - :ref:`list_software_CP2K` - :ref:`list_software_CPLEX` - :ref:`list_software_cppcheck` - :ref:`list_software_CppUnit` - :ref:`list_software_cramtools` - :ref:`list_software_CrayCCE` - :ref:`list_software_CrayGNU` - :ref:`list_software_CrayIntel` - :ref:`list_software_CrayPGI` - :ref:`list_software_CRF++` - :ref:`list_software_CrossTalkZ` - :ref:`list_software_CRPropa` - :ref:`list_software_csvkit` - :ref:`list_software_ctffind` - :ref:`list_software_Cube` - :ref:`list_software_Cuby` - :ref:`list_software_CUDA` - :ref:`list_software_cuDNN` - :ref:`list_software_Cufflinks` - :ref:`list_software_cURL` - :ref:`list_software_cutadapt` - :ref:`list_software_CVS` - :ref:`list_software_CVXOPT` - :ref:`list_software_Cython`
 
 
 .. _list_software_cairo:
@@ -2378,13 +2378,13 @@ version    toolchains
 =======    =========================================================================
 
 
-.. _list_software_d:
+.. _list_software_letter_d:
 
 *D*
 ---
 
 
-:ref:`list_software_damageproto` :ref:`list_software_dask` :ref:`list_software_DB` :ref:`list_software_DB_File` :ref:`list_software_DBD-mysql` :ref:`list_software_DBD-Pg` :ref:`list_software_DBD-SQLite` :ref:`list_software_DBus` :ref:`list_software_dbus-glib` :ref:`list_software_DCA++` :ref:`list_software_deap` :ref:`list_software_DendroPy` :ref:`list_software_DFT-D3` :ref:`list_software_DIAL` :ref:`list_software_DIALIGN-TX` :ref:`list_software_DicomBrowser` :ref:`list_software_Diffutils` :ref:`list_software_DIRAC` :ref:`list_software_DISCOVARdenovo` :ref:`list_software_DL_POLY_Classic` :ref:`list_software_DMTCP` :ref:`list_software_Docutils` :ref:`list_software_DOLFIN` :ref:`list_software_Doxygen` :ref:`list_software_drFAST` :ref:`list_software_DSRC`
+:ref:`list_software_damageproto` - :ref:`list_software_dask` - :ref:`list_software_DB` - :ref:`list_software_DB_File` - :ref:`list_software_DBD-mysql` - :ref:`list_software_DBD-Pg` - :ref:`list_software_DBD-SQLite` - :ref:`list_software_DBus` - :ref:`list_software_dbus-glib` - :ref:`list_software_DCA++` - :ref:`list_software_deap` - :ref:`list_software_DendroPy` - :ref:`list_software_DFT-D3` - :ref:`list_software_DIAL` - :ref:`list_software_DIALIGN-TX` - :ref:`list_software_DicomBrowser` - :ref:`list_software_Diffutils` - :ref:`list_software_DIRAC` - :ref:`list_software_DISCOVARdenovo` - :ref:`list_software_DL_POLY_Classic` - :ref:`list_software_DMTCP` - :ref:`list_software_Docutils` - :ref:`list_software_DOLFIN` - :ref:`list_software_Doxygen` - :ref:`list_software_drFAST` - :ref:`list_software_DSRC`
 
 
 .. _list_software_damageproto:
@@ -2720,13 +2720,13 @@ version    toolchains
 =======    ==========
 
 
-.. _list_software_e:
+.. _list_software_letter_e:
 
 *E*
 ---
 
 
-:ref:`list_software_EasyBuild` :ref:`list_software_ECore` :ref:`list_software_ed` :ref:`list_software_EggLib` :ref:`list_software_Eigen` :ref:`list_software_EIGENSOFT` :ref:`list_software_ELinks` :ref:`list_software_ELPA` :ref:`list_software_ELPH` :ref:`list_software_Emacs` :ref:`list_software_EMAN2` :ref:`list_software_EMBOSS` :ref:`list_software_entrypoints` :ref:`list_software_EPD` :ref:`list_software_ErlangOTP` :ref:`list_software_ESMF` :ref:`list_software_ESPResSo` :ref:`list_software_ETSF_IO` :ref:`list_software_eudev` :ref:`list_software_evmix` :ref:`list_software_Exonerate` :ref:`list_software_expat` :ref:`list_software_eXpress` :ref:`list_software_Extrae`
+:ref:`list_software_EasyBuild` - :ref:`list_software_ECore` - :ref:`list_software_ed` - :ref:`list_software_EggLib` - :ref:`list_software_Eigen` - :ref:`list_software_EIGENSOFT` - :ref:`list_software_ELinks` - :ref:`list_software_ELPA` - :ref:`list_software_ELPH` - :ref:`list_software_Emacs` - :ref:`list_software_EMAN2` - :ref:`list_software_EMBOSS` - :ref:`list_software_entrypoints` - :ref:`list_software_EPD` - :ref:`list_software_ErlangOTP` - :ref:`list_software_ESMF` - :ref:`list_software_ESPResSo` - :ref:`list_software_ETSF_IO` - :ref:`list_software_eudev` - :ref:`list_software_evmix` - :ref:`list_software_Exonerate` - :ref:`list_software_expat` - :ref:`list_software_eXpress` - :ref:`list_software_Extrae`
 
 
 .. _list_software_EasyBuild:
@@ -3077,13 +3077,13 @@ version    toolchains
 =======    ====================
 
 
-.. _list_software_f:
+.. _list_software_letter_f:
 
 *F*
 ---
 
 
-:ref:`list_software_FASTA` :ref:`list_software_fastahack` :ref:`list_software_fastPHASE` :ref:`list_software_FastQC` :ref:`list_software_fastQValidator` :ref:`list_software_fastqz` :ref:`list_software_FastTree` :ref:`list_software_FASTX-Toolkit` :ref:`list_software_FCM` :ref:`list_software_FDS` :ref:`list_software_fdstools` :ref:`list_software_FDTD_Solutions` :ref:`list_software_Ferret` :ref:`list_software_FFC` :ref:`list_software_FFindex` :ref:`list_software_FFLAS-FFPACK` :ref:`list_software_FFmpeg` :ref:`list_software_ffnet` :ref:`list_software_FFTW` :ref:`list_software_FIAT` :ref:`list_software_file` :ref:`list_software_findutils` :ref:`list_software_Firefox` :ref:`list_software_fixesproto` :ref:`list_software_FLAC` :ref:`list_software_FLANN` :ref:`list_software_FLASH` :ref:`list_software_FLEUR` :ref:`list_software_flex` :ref:`list_software_FLTK` :ref:`list_software_FLUENT` :ref:`list_software_fmri` :ref:`list_software_FoldX` :ref:`list_software_fontconfig` :ref:`list_software_fontsproto` :ref:`list_software_foss` :ref:`list_software_FPM` :ref:`list_software_fqzcomp` :ref:`list_software_FragGeneScan` :ref:`list_software_FRC_align` :ref:`list_software_frealign` :ref:`list_software_freeglut` :ref:`list_software_FreeSurfer` :ref:`list_software_freetype` :ref:`list_software_FreeXL` :ref:`list_software_FSA` :ref:`list_software_FSL`
+:ref:`list_software_FASTA` - :ref:`list_software_fastahack` - :ref:`list_software_fastPHASE` - :ref:`list_software_FastQC` - :ref:`list_software_fastQValidator` - :ref:`list_software_fastqz` - :ref:`list_software_FastTree` - :ref:`list_software_FASTX-Toolkit` - :ref:`list_software_FCM` - :ref:`list_software_FDS` - :ref:`list_software_fdstools` - :ref:`list_software_FDTD_Solutions` - :ref:`list_software_Ferret` - :ref:`list_software_FFC` - :ref:`list_software_FFindex` - :ref:`list_software_FFLAS-FFPACK` - :ref:`list_software_FFmpeg` - :ref:`list_software_ffnet` - :ref:`list_software_FFTW` - :ref:`list_software_FIAT` - :ref:`list_software_file` - :ref:`list_software_findutils` - :ref:`list_software_Firefox` - :ref:`list_software_fixesproto` - :ref:`list_software_FLAC` - :ref:`list_software_FLANN` - :ref:`list_software_FLASH` - :ref:`list_software_FLEUR` - :ref:`list_software_flex` - :ref:`list_software_FLTK` - :ref:`list_software_FLUENT` - :ref:`list_software_fmri` - :ref:`list_software_FoldX` - :ref:`list_software_fontconfig` - :ref:`list_software_fontsproto` - :ref:`list_software_foss` - :ref:`list_software_FPM` - :ref:`list_software_fqzcomp` - :ref:`list_software_FragGeneScan` - :ref:`list_software_FRC_align` - :ref:`list_software_frealign` - :ref:`list_software_freeglut` - :ref:`list_software_FreeSurfer` - :ref:`list_software_freetype` - :ref:`list_software_FreeXL` - :ref:`list_software_FSA` - :ref:`list_software_FSL`
 
 
 .. _list_software_FASTA:
@@ -3721,13 +3721,13 @@ version    toolchains
 =======    ===========================================================
 
 
-.. _list_software_g:
+.. _list_software_letter_g:
 
 *G*
 ---
 
 
-:ref:`list_software_g2clib` :ref:`list_software_g2lib` :ref:`list_software_g2log` :ref:`list_software_GAMESS-US` :ref:`list_software_GATE` :ref:`list_software_GATK` :ref:`list_software_gawk` :ref:`list_software_gc` :ref:`list_software_GC3Pie` :ref:`list_software_GCC` :ref:`list_software_GCCcore` :ref:`list_software_gcccuda` :ref:`list_software_GConf` :ref:`list_software_GD` :ref:`list_software_GDAL` :ref:`list_software_GDB` :ref:`list_software_gdc-client` :ref:`list_software_gdist` :ref:`list_software_Gdk-Pixbuf` :ref:`list_software_Geant4` :ref:`list_software_GEM-library` :ref:`list_software_GEMSTAT` :ref:`list_software_GenotypeHarmonizer` :ref:`list_software_gensim` :ref:`list_software_GeoIP` :ref:`list_software_GeoIP-C` :ref:`list_software_GEOS` :ref:`list_software_getdp` :ref:`list_software_gettext` :ref:`list_software_gflags` :ref:`list_software_GHC` :ref:`list_software_Ghostscript` :ref:`list_software_gimkl` :ref:`list_software_gimpi` :ref:`list_software_GIMPS` :ref:`list_software_git` :ref:`list_software_git-lfs` :ref:`list_software_Givaro` :ref:`list_software_GL2PS` :ref:`list_software_Glade` :ref:`list_software_GLib` :ref:`list_software_GLibmm` :ref:`list_software_GLIMMER` :ref:`list_software_GLM` :ref:`list_software_GlobalArrays` :ref:`list_software_glog` :ref:`list_software_GLPK` :ref:`list_software_glproto` :ref:`list_software_gmacml` :ref:`list_software_GMAP-GSNAP` :ref:`list_software_GMP` :ref:`list_software_gmpich` :ref:`list_software_gmpolf` :ref:`list_software_gmsh` :ref:`list_software_GMT` :ref:`list_software_gmvapich2` :ref:`list_software_gmvolf` :ref:`list_software_GNU` :ref:`list_software_gnuplot` :ref:`list_software_GnuTLS` :ref:`list_software_Go` :ref:`list_software_goalf` :ref:`list_software_GObject-Introspection` :ref:`list_software_gompi` :ref:`list_software_gompic` :ref:`list_software_goolf` :ref:`list_software_goolfc` :ref:`list_software_GP2C` :ref:`list_software_GPAW` :ref:`list_software_gperf` :ref:`list_software_gperftools` :ref:`list_software_gpsmpi` :ref:`list_software_gpsolf` :ref:`list_software_gputools` :ref:`list_software_grabix` :ref:`list_software_grace` :ref:`list_software_graph-tool` :ref:`list_software_GraphicsMagick` :ref:`list_software_Graphviz` :ref:`list_software_GraphViz` :ref:`list_software_GraphViz2` :ref:`list_software_Greenlet` :ref:`list_software_grep` :ref:`list_software_Grep` :ref:`list_software_grib_api` :ref:`list_software_GRIT` :ref:`list_software_GROMACS` :ref:`list_software_GROMOS++` :ref:`list_software_gromosXX` :ref:`list_software_gsl` :ref:`list_software_GSL` :ref:`list_software_GSSAPI` :ref:`list_software_GST-plugins-base` :ref:`list_software_GStreamer` :ref:`list_software_gtest` :ref:`list_software_GTI` :ref:`list_software_GTK+` :ref:`list_software_gtkglext` :ref:`list_software_Gtkmm` :ref:`list_software_GTOOL` :ref:`list_software_GTS` :ref:`list_software_Guile` :ref:`list_software_Gurobi` :ref:`list_software_gzip`
+:ref:`list_software_g2clib` - :ref:`list_software_g2lib` - :ref:`list_software_g2log` - :ref:`list_software_GAMESS-US` - :ref:`list_software_GATE` - :ref:`list_software_GATK` - :ref:`list_software_gawk` - :ref:`list_software_gc` - :ref:`list_software_GC3Pie` - :ref:`list_software_GCC` - :ref:`list_software_GCCcore` - :ref:`list_software_gcccuda` - :ref:`list_software_GConf` - :ref:`list_software_GD` - :ref:`list_software_GDAL` - :ref:`list_software_GDB` - :ref:`list_software_gdc-client` - :ref:`list_software_gdist` - :ref:`list_software_Gdk-Pixbuf` - :ref:`list_software_Geant4` - :ref:`list_software_GEM-library` - :ref:`list_software_GEMSTAT` - :ref:`list_software_GenotypeHarmonizer` - :ref:`list_software_gensim` - :ref:`list_software_GeoIP` - :ref:`list_software_GeoIP-C` - :ref:`list_software_GEOS` - :ref:`list_software_getdp` - :ref:`list_software_gettext` - :ref:`list_software_gflags` - :ref:`list_software_GHC` - :ref:`list_software_Ghostscript` - :ref:`list_software_gimkl` - :ref:`list_software_gimpi` - :ref:`list_software_GIMPS` - :ref:`list_software_git` - :ref:`list_software_git-lfs` - :ref:`list_software_Givaro` - :ref:`list_software_GL2PS` - :ref:`list_software_Glade` - :ref:`list_software_GLib` - :ref:`list_software_GLibmm` - :ref:`list_software_GLIMMER` - :ref:`list_software_GLM` - :ref:`list_software_GlobalArrays` - :ref:`list_software_glog` - :ref:`list_software_GLPK` - :ref:`list_software_glproto` - :ref:`list_software_gmacml` - :ref:`list_software_GMAP-GSNAP` - :ref:`list_software_GMP` - :ref:`list_software_gmpich` - :ref:`list_software_gmpolf` - :ref:`list_software_gmsh` - :ref:`list_software_GMT` - :ref:`list_software_gmvapich2` - :ref:`list_software_gmvolf` - :ref:`list_software_GNU` - :ref:`list_software_gnuplot` - :ref:`list_software_GnuTLS` - :ref:`list_software_Go` - :ref:`list_software_goalf` - :ref:`list_software_GObject-Introspection` - :ref:`list_software_gompi` - :ref:`list_software_gompic` - :ref:`list_software_goolf` - :ref:`list_software_goolfc` - :ref:`list_software_GP2C` - :ref:`list_software_GPAW` - :ref:`list_software_gperf` - :ref:`list_software_gperftools` - :ref:`list_software_gpsmpi` - :ref:`list_software_gpsolf` - :ref:`list_software_gputools` - :ref:`list_software_grabix` - :ref:`list_software_grace` - :ref:`list_software_graph-tool` - :ref:`list_software_GraphicsMagick` - :ref:`list_software_Graphviz` - :ref:`list_software_GraphViz` - :ref:`list_software_GraphViz2` - :ref:`list_software_Greenlet` - :ref:`list_software_grep` - :ref:`list_software_Grep` - :ref:`list_software_grib_api` - :ref:`list_software_GRIT` - :ref:`list_software_GROMACS` - :ref:`list_software_GROMOS++` - :ref:`list_software_gromosXX` - :ref:`list_software_gsl` - :ref:`list_software_GSL` - :ref:`list_software_GSSAPI` - :ref:`list_software_GST-plugins-base` - :ref:`list_software_GStreamer` - :ref:`list_software_gtest` - :ref:`list_software_GTI` - :ref:`list_software_GTK+` - :ref:`list_software_gtkglext` - :ref:`list_software_Gtkmm` - :ref:`list_software_GTOOL` - :ref:`list_software_GTS` - :ref:`list_software_Guile` - :ref:`list_software_Gurobi` - :ref:`list_software_gzip`
 
 
 .. _list_software_g2clib:
@@ -5181,13 +5181,13 @@ version    toolchains
 =======    ======================================================================================================================================================
 
 
-.. _list_software_h:
+.. _list_software_letter_h:
 
 *H*
 ---
 
 
-:ref:`list_software_h4toh5` :ref:`list_software_H5hut` :ref:`list_software_h5py` :ref:`list_software_h5utils` :ref:`list_software_Hadoop` :ref:`list_software_hanythingondemand` :ref:`list_software_HAPGEN2` :ref:`list_software_HarfBuzz` :ref:`list_software_Harminv` :ref:`list_software_HBase` :ref:`list_software_HDF` :ref:`list_software_HDF5` :ref:`list_software_HEALPix` :ref:`list_software_HH-suite` :ref:`list_software_hisat` :ref:`list_software_HISAT2` :ref:`list_software_HMMER` :ref:`list_software_Hoard` :ref:`list_software_horton` :ref:`list_software_HPCBIOS_Bioinfo` :ref:`list_software_HPCBIOS_Debuggers` :ref:`list_software_HPCBIOS_LifeSciences` :ref:`list_software_HPCBIOS_Math` :ref:`list_software_HPCBIOS_Profilers` :ref:`list_software_HPCG` :ref:`list_software_HPL` :ref:`list_software_htop` :ref:`list_software_HTSeq` :ref:`list_software_HTSlib` :ref:`list_software_hub` :ref:`list_software_hwloc` :ref:`list_software_Hypre`
+:ref:`list_software_h4toh5` - :ref:`list_software_H5hut` - :ref:`list_software_h5py` - :ref:`list_software_h5utils` - :ref:`list_software_Hadoop` - :ref:`list_software_hanythingondemand` - :ref:`list_software_HAPGEN2` - :ref:`list_software_HarfBuzz` - :ref:`list_software_Harminv` - :ref:`list_software_HBase` - :ref:`list_software_HDF` - :ref:`list_software_HDF5` - :ref:`list_software_HEALPix` - :ref:`list_software_HH-suite` - :ref:`list_software_hisat` - :ref:`list_software_HISAT2` - :ref:`list_software_HMMER` - :ref:`list_software_Hoard` - :ref:`list_software_horton` - :ref:`list_software_HPCBIOS_Bioinfo` - :ref:`list_software_HPCBIOS_Debuggers` - :ref:`list_software_HPCBIOS_LifeSciences` - :ref:`list_software_HPCBIOS_Math` - :ref:`list_software_HPCBIOS_Profilers` - :ref:`list_software_HPCG` - :ref:`list_software_HPL` - :ref:`list_software_htop` - :ref:`list_software_HTSeq` - :ref:`list_software_HTSlib` - :ref:`list_software_hub` - :ref:`list_software_hwloc` - :ref:`list_software_Hypre`
 
 
 .. _list_software_h4toh5:
@@ -5644,13 +5644,13 @@ version    toolchains
 =======    ===========================================================
 
 
-.. _list_software_i:
+.. _list_software_letter_i:
 
 *I*
 ---
 
 
-:ref:`list_software_i-cisTarget` :ref:`list_software_i-PI` :ref:`list_software_icc` :ref:`list_software_iccifort` :ref:`list_software_icmake` :ref:`list_software_ictce` :ref:`list_software_IDBA-UD` :ref:`list_software_ifort` :ref:`list_software_IGV` :ref:`list_software_IGVTools` :ref:`list_software_iimpi` :ref:`list_software_iiqmpi` :ref:`list_software_IMa2` :ref:`list_software_IMa2p` :ref:`list_software_ImageMagick` :ref:`list_software_imake` :ref:`list_software_IMB` :ref:`list_software_imkl` :ref:`list_software_IMOD` :ref:`list_software_impi` :ref:`list_software_IMPUTE2` :ref:`list_software_Infernal` :ref:`list_software_inputproto` :ref:`list_software_Inspector` :ref:`list_software_Instant` :ref:`list_software_intel` :ref:`list_software_intel-para` :ref:`list_software_InterProScan` :ref:`list_software_intltool` :ref:`list_software_io_lib` :ref:`list_software_iomkl` :ref:`list_software_iompi` :ref:`list_software_IOR` :ref:`list_software_IOzone` :ref:`list_software_Iperf` :ref:`list_software_ipp` :ref:`list_software_ipsmpi` :ref:`list_software_IPython` :ref:`list_software_iqacml` :ref:`list_software_IronPython` :ref:`list_software_ISIS` :ref:`list_software_ISL` :ref:`list_software_IsoInfer` :ref:`list_software_ispc` :ref:`list_software_itac`
+:ref:`list_software_i-cisTarget` - :ref:`list_software_i-PI` - :ref:`list_software_icc` - :ref:`list_software_iccifort` - :ref:`list_software_icmake` - :ref:`list_software_ictce` - :ref:`list_software_IDBA-UD` - :ref:`list_software_ifort` - :ref:`list_software_IGV` - :ref:`list_software_IGVTools` - :ref:`list_software_iimpi` - :ref:`list_software_iiqmpi` - :ref:`list_software_IMa2` - :ref:`list_software_IMa2p` - :ref:`list_software_ImageMagick` - :ref:`list_software_imake` - :ref:`list_software_IMB` - :ref:`list_software_imkl` - :ref:`list_software_IMOD` - :ref:`list_software_impi` - :ref:`list_software_IMPUTE2` - :ref:`list_software_Infernal` - :ref:`list_software_inputproto` - :ref:`list_software_Inspector` - :ref:`list_software_Instant` - :ref:`list_software_intel` - :ref:`list_software_intel-para` - :ref:`list_software_InterProScan` - :ref:`list_software_intltool` - :ref:`list_software_io_lib` - :ref:`list_software_iomkl` - :ref:`list_software_iompi` - :ref:`list_software_IOR` - :ref:`list_software_IOzone` - :ref:`list_software_Iperf` - :ref:`list_software_ipp` - :ref:`list_software_ipsmpi` - :ref:`list_software_IPython` - :ref:`list_software_iqacml` - :ref:`list_software_IronPython` - :ref:`list_software_ISIS` - :ref:`list_software_ISL` - :ref:`list_software_IsoInfer` - :ref:`list_software_ispc` - :ref:`list_software_itac`
 
 
 .. _list_software_i-cisTarget:
@@ -6396,13 +6396,13 @@ version      toolchains
 =========    ==========
 
 
-.. _list_software_j:
+.. _list_software_letter_j:
 
 *J*
 ---
 
 
-:ref:`list_software_JAGS` :ref:`list_software_Jansson` :ref:`list_software_JasPer` :ref:`list_software_Java` :ref:`list_software_Jellyfish` :ref:`list_software_jemalloc` :ref:`list_software_jhbuild` :ref:`list_software_Jinja2` :ref:`list_software_jModelTest` :ref:`list_software_JUBE` :ref:`list_software_JUnit` :ref:`list_software_jupyterhub` :ref:`list_software_JWM`
+:ref:`list_software_JAGS` - :ref:`list_software_Jansson` - :ref:`list_software_JasPer` - :ref:`list_software_Java` - :ref:`list_software_Jellyfish` - :ref:`list_software_jemalloc` - :ref:`list_software_jhbuild` - :ref:`list_software_Jinja2` - :ref:`list_software_jModelTest` - :ref:`list_software_JUBE` - :ref:`list_software_JUnit` - :ref:`list_software_jupyterhub` - :ref:`list_software_JWM`
 
 
 .. _list_software_JAGS:
@@ -6594,13 +6594,13 @@ version    toolchains
 =======    ===========
 
 
-.. _list_software_k:
+.. _list_software_letter_k:
 
 *K*
 ---
 
 
-:ref:`list_software_kallisto` :ref:`list_software_kbproto` :ref:`list_software_KEALib` :ref:`list_software_Kent_tools` :ref:`list_software_Kerberos_V5` :ref:`list_software_khmer` :ref:`list_software_Kraken`
+:ref:`list_software_kallisto` - :ref:`list_software_kbproto` - :ref:`list_software_KEALib` - :ref:`list_software_Kent_tools` - :ref:`list_software_Kerberos_V5` - :ref:`list_software_khmer` - :ref:`list_software_Kraken`
 
 
 .. _list_software_kallisto:
@@ -6690,13 +6690,13 @@ version        toolchains
 ===========    ==========
 
 
-.. _list_software_l:
+.. _list_software_letter_l:
 
 *L*
 ---
 
 
-:ref:`list_software_LAMARC` :ref:`list_software_LAME` :ref:`list_software_LAPACK` :ref:`list_software_LASTZ` :ref:`list_software_less` :ref:`list_software_LevelDB` :ref:`list_software_lftp` :ref:`list_software_libbitmask` :ref:`list_software_libcerf` :ref:`list_software_libcircle` :ref:`list_software_libcmaes` :ref:`list_software_libcpuset` :ref:`list_software_libcroco` :ref:`list_software_libctl` :ref:`list_software_libdap` :ref:`list_software_libdrm` :ref:`list_software_libdwarf` :ref:`list_software_libedit` :ref:`list_software_libelf` :ref:`list_software_libevent` :ref:`list_software_libffi` :ref:`list_software_libfontenc` :ref:`list_software_libgcrypt` :ref:`list_software_libgd` :ref:`list_software_libglade` :ref:`list_software_libGLU` :ref:`list_software_libgpg-error` :ref:`list_software_libgtextutils` :ref:`list_software_libharu` :ref:`list_software_libibmad` :ref:`list_software_libibumad` :ref:`list_software_libibverbs` :ref:`list_software_libICE` :ref:`list_software_libidn` :ref:`list_software_Libint` :ref:`list_software_libjpeg-turbo` :ref:`list_software_libmatheval` :ref:`list_software_libpciaccess` :ref:`list_software_libpng` :ref:`list_software_libpsortb` :ref:`list_software_libpthread-stubs` :ref:`list_software_libQGLViewer` :ref:`list_software_libreadline` :ref:`list_software_librsvg` :ref:`list_software_libsigc++` :ref:`list_software_libSM` :ref:`list_software_libsmm` :ref:`list_software_libsodium` :ref:`list_software_libspatialite` :ref:`list_software_LIBSVM` :ref:`list_software_libtasn1` :ref:`list_software_LibTIFF` :ref:`list_software_libtool` :ref:`list_software_libungif` :ref:`list_software_libunistring` :ref:`list_software_libunwind` :ref:`list_software_LibUUID` :ref:`list_software_libX11` :ref:`list_software_libXau` :ref:`list_software_libXaw` :ref:`list_software_libxc` :ref:`list_software_libxcb` :ref:`list_software_libXcursor` :ref:`list_software_libXdamage` :ref:`list_software_libXdmcp` :ref:`list_software_libXext` :ref:`list_software_libXfixes` :ref:`list_software_libXfont` :ref:`list_software_libXft` :ref:`list_software_libXi` :ref:`list_software_libXinerama` :ref:`list_software_libxkbcommon` :ref:`list_software_libxml2` :ref:`list_software_libXmu` :ref:`list_software_libXp` :ref:`list_software_libXpm` :ref:`list_software_libXrandr` :ref:`list_software_libXrender` :ref:`list_software_libXScrnSaver` :ref:`list_software_libxslt` :ref:`list_software_libxsmm` :ref:`list_software_libXt` :ref:`list_software_libXtst` :ref:`list_software_libXxf86vm` :ref:`list_software_libyaml` :ref:`list_software_likwid` :ref:`list_software_LinBox` :ref:`list_software_LittleCMS` :ref:`list_software_LLVM` :ref:`list_software_LMDB` :ref:`list_software_Lmod` :ref:`list_software_log4cplus` :ref:`list_software_Loki` :ref:`list_software_Lua` :ref:`list_software_LuaJIT` :ref:`list_software_LWM2` :ref:`list_software_lxml` :ref:`list_software_lynx` :ref:`list_software_LZO`
+:ref:`list_software_LAMARC` - :ref:`list_software_LAME` - :ref:`list_software_LAPACK` - :ref:`list_software_LASTZ` - :ref:`list_software_less` - :ref:`list_software_LevelDB` - :ref:`list_software_lftp` - :ref:`list_software_libbitmask` - :ref:`list_software_libcerf` - :ref:`list_software_libcircle` - :ref:`list_software_libcmaes` - :ref:`list_software_libcpuset` - :ref:`list_software_libcroco` - :ref:`list_software_libctl` - :ref:`list_software_libdap` - :ref:`list_software_libdrm` - :ref:`list_software_libdwarf` - :ref:`list_software_libedit` - :ref:`list_software_libelf` - :ref:`list_software_libevent` - :ref:`list_software_libffi` - :ref:`list_software_libfontenc` - :ref:`list_software_libgcrypt` - :ref:`list_software_libgd` - :ref:`list_software_libglade` - :ref:`list_software_libGLU` - :ref:`list_software_libgpg-error` - :ref:`list_software_libgtextutils` - :ref:`list_software_libharu` - :ref:`list_software_libibmad` - :ref:`list_software_libibumad` - :ref:`list_software_libibverbs` - :ref:`list_software_libICE` - :ref:`list_software_libidn` - :ref:`list_software_Libint` - :ref:`list_software_libjpeg-turbo` - :ref:`list_software_libmatheval` - :ref:`list_software_libpciaccess` - :ref:`list_software_libpng` - :ref:`list_software_libpsortb` - :ref:`list_software_libpthread-stubs` - :ref:`list_software_libQGLViewer` - :ref:`list_software_libreadline` - :ref:`list_software_librsvg` - :ref:`list_software_libsigc++` - :ref:`list_software_libSM` - :ref:`list_software_libsmm` - :ref:`list_software_libsodium` - :ref:`list_software_libspatialite` - :ref:`list_software_LIBSVM` - :ref:`list_software_libtasn1` - :ref:`list_software_LibTIFF` - :ref:`list_software_libtool` - :ref:`list_software_libungif` - :ref:`list_software_libunistring` - :ref:`list_software_libunwind` - :ref:`list_software_LibUUID` - :ref:`list_software_libX11` - :ref:`list_software_libXau` - :ref:`list_software_libXaw` - :ref:`list_software_libxc` - :ref:`list_software_libxcb` - :ref:`list_software_libXcursor` - :ref:`list_software_libXdamage` - :ref:`list_software_libXdmcp` - :ref:`list_software_libXext` - :ref:`list_software_libXfixes` - :ref:`list_software_libXfont` - :ref:`list_software_libXft` - :ref:`list_software_libXi` - :ref:`list_software_libXinerama` - :ref:`list_software_libxkbcommon` - :ref:`list_software_libxml2` - :ref:`list_software_libXmu` - :ref:`list_software_libXp` - :ref:`list_software_libXpm` - :ref:`list_software_libXrandr` - :ref:`list_software_libXrender` - :ref:`list_software_libXScrnSaver` - :ref:`list_software_libxslt` - :ref:`list_software_libxsmm` - :ref:`list_software_libXt` - :ref:`list_software_libXtst` - :ref:`list_software_libXxf86vm` - :ref:`list_software_libyaml` - :ref:`list_software_likwid` - :ref:`list_software_LinBox` - :ref:`list_software_LittleCMS` - :ref:`list_software_LLVM` - :ref:`list_software_LMDB` - :ref:`list_software_Lmod` - :ref:`list_software_log4cplus` - :ref:`list_software_Loki` - :ref:`list_software_Lua` - :ref:`list_software_LuaJIT` - :ref:`list_software_LWM2` - :ref:`list_software_lxml` - :ref:`list_software_lynx` - :ref:`list_software_LZO`
 
 
 .. _list_software_LAMARC:
@@ -8004,13 +8004,13 @@ version    toolchains
 =======    ========================================================================
 
 
-.. _list_software_m:
+.. _list_software_letter_m:
 
 *M*
 ---
 
 
-:ref:`list_software_M4` :ref:`list_software_MaCH` :ref:`list_software_MACH` :ref:`list_software_MACS` :ref:`list_software_MACS2` :ref:`list_software_MAFFT` :ref:`list_software_magma` :ref:`list_software_make` :ref:`list_software_makedepend` :ref:`list_software_Mako` :ref:`list_software_Maple` :ref:`list_software_Maq` :ref:`list_software_MariaDB` :ref:`list_software_MAST` :ref:`list_software_Mathematica` :ref:`list_software_MATIO` :ref:`list_software_MATLAB` :ref:`list_software_matplotlib` :ref:`list_software_Maven` :ref:`list_software_mawk` :ref:`list_software_Mawk` :ref:`list_software_mayavi` :ref:`list_software_mc` :ref:`list_software_MCL` :ref:`list_software_mcpp` :ref:`list_software_MCR` :ref:`list_software_MDP` :ref:`list_software_MDSplus` :ref:`list_software_mdtest` :ref:`list_software_Meep` :ref:`list_software_MEGACC` :ref:`list_software_MEME` :ref:`list_software_Mercurial` :ref:`list_software_Mesa` :ref:`list_software_Mesquite` :ref:`list_software_MetaGeneAnnotator` :ref:`list_software_Metal` :ref:`list_software_MetaVelvet` :ref:`list_software_MethPipe` :ref:`list_software_METIS` :ref:`list_software_MIGRATE-N` :ref:`list_software_minieigen` :ref:`list_software_Minimac` :ref:`list_software_Minimac3` :ref:`list_software_MIRA` :ref:`list_software_MLC` :ref:`list_software_MM-align` :ref:`list_software_MMSEQ` :ref:`list_software_Modeller` :ref:`list_software_Molden` :ref:`list_software_Molekel` :ref:`list_software_molmod` :ref:`list_software_Molpro` :ref:`list_software_Mono` :ref:`list_software_monty` :ref:`list_software_MOSAIK` :ref:`list_software_MotEvo` :ref:`list_software_Mothur` :ref:`list_software_motif` :ref:`list_software_MPC` :ref:`list_software_MPFR` :ref:`list_software_mpi4py` :ref:`list_software_mpiBLAST` :ref:`list_software_MPICH` :ref:`list_software_MPICH2` :ref:`list_software_MPJ-Express` :ref:`list_software_mpmath` :ref:`list_software_MrBayes` :ref:`list_software_mrFAST` :ref:`list_software_MRIcron` :ref:`list_software_mrsFAST` :ref:`list_software_MRtrix` :ref:`list_software_MTL4` :ref:`list_software_MultiNest` :ref:`list_software_multitail` :ref:`list_software_MUMmer` :ref:`list_software_MUMPS` :ref:`list_software_MUSCLE` :ref:`list_software_MUST` :ref:`list_software_MUSTANG` :ref:`list_software_MuTect` :ref:`list_software_mutil` :ref:`list_software_MVAPICH2` :ref:`list_software_MView` :ref:`list_software_MyMediaLite` :ref:`list_software_mympingpong` :ref:`list_software_MySQL` :ref:`list_software_MySQL-python` :ref:`list_software_mysqlclient` :ref:`list_software_MySQLdb`
+:ref:`list_software_M4` - :ref:`list_software_MaCH` - :ref:`list_software_MACH` - :ref:`list_software_MACS` - :ref:`list_software_MACS2` - :ref:`list_software_MAFFT` - :ref:`list_software_magma` - :ref:`list_software_make` - :ref:`list_software_makedepend` - :ref:`list_software_Mako` - :ref:`list_software_Maple` - :ref:`list_software_Maq` - :ref:`list_software_MariaDB` - :ref:`list_software_MAST` - :ref:`list_software_Mathematica` - :ref:`list_software_MATIO` - :ref:`list_software_MATLAB` - :ref:`list_software_matplotlib` - :ref:`list_software_Maven` - :ref:`list_software_mawk` - :ref:`list_software_Mawk` - :ref:`list_software_mayavi` - :ref:`list_software_mc` - :ref:`list_software_MCL` - :ref:`list_software_mcpp` - :ref:`list_software_MCR` - :ref:`list_software_MDP` - :ref:`list_software_MDSplus` - :ref:`list_software_mdtest` - :ref:`list_software_Meep` - :ref:`list_software_MEGACC` - :ref:`list_software_MEME` - :ref:`list_software_Mercurial` - :ref:`list_software_Mesa` - :ref:`list_software_Mesquite` - :ref:`list_software_MetaGeneAnnotator` - :ref:`list_software_Metal` - :ref:`list_software_MetaVelvet` - :ref:`list_software_MethPipe` - :ref:`list_software_METIS` - :ref:`list_software_MIGRATE-N` - :ref:`list_software_minieigen` - :ref:`list_software_Minimac` - :ref:`list_software_Minimac3` - :ref:`list_software_MIRA` - :ref:`list_software_MLC` - :ref:`list_software_MM-align` - :ref:`list_software_MMSEQ` - :ref:`list_software_Modeller` - :ref:`list_software_Molden` - :ref:`list_software_Molekel` - :ref:`list_software_molmod` - :ref:`list_software_Molpro` - :ref:`list_software_Mono` - :ref:`list_software_monty` - :ref:`list_software_MOSAIK` - :ref:`list_software_MotEvo` - :ref:`list_software_Mothur` - :ref:`list_software_motif` - :ref:`list_software_MPC` - :ref:`list_software_MPFR` - :ref:`list_software_mpi4py` - :ref:`list_software_mpiBLAST` - :ref:`list_software_MPICH` - :ref:`list_software_MPICH2` - :ref:`list_software_MPJ-Express` - :ref:`list_software_mpmath` - :ref:`list_software_MrBayes` - :ref:`list_software_mrFAST` - :ref:`list_software_MRIcron` - :ref:`list_software_mrsFAST` - :ref:`list_software_MRtrix` - :ref:`list_software_MTL4` - :ref:`list_software_MultiNest` - :ref:`list_software_multitail` - :ref:`list_software_MUMmer` - :ref:`list_software_MUMPS` - :ref:`list_software_MUSCLE` - :ref:`list_software_MUST` - :ref:`list_software_MUSTANG` - :ref:`list_software_MuTect` - :ref:`list_software_mutil` - :ref:`list_software_MVAPICH2` - :ref:`list_software_MView` - :ref:`list_software_MyMediaLite` - :ref:`list_software_mympingpong` - :ref:`list_software_MySQL` - :ref:`list_software_MySQL-python` - :ref:`list_software_mysqlclient` - :ref:`list_software_MySQLdb`
 
 
 .. _list_software_M4:
@@ -9172,13 +9172,13 @@ version    toolchains
 =======    ===========
 
 
-.. _list_software_n:
+.. _list_software_letter_n:
 
 *N*
 ---
 
 
-:ref:`list_software_NAMD` :ref:`list_software_nano` :ref:`list_software_NASM` :ref:`list_software_NBO` :ref:`list_software_NCBI-Toolkit` :ref:`list_software_ncbi-vdb` :ref:`list_software_ncdf` :ref:`list_software_ncdf4` :ref:`list_software_NCL` :ref:`list_software_nco` :ref:`list_software_NCO` :ref:`list_software_ncurses` :ref:`list_software_ncview` :ref:`list_software_NEdit` :ref:`list_software_NEMO` :ref:`list_software_neon` :ref:`list_software_Net-LibIDN` :ref:`list_software_netaddr` :ref:`list_software_netCDF` :ref:`list_software_netCDF-C++` :ref:`list_software_netCDF-C++4` :ref:`list_software_netCDF-Fortran` :ref:`list_software_netcdf4-python` :ref:`list_software_netifaces` :ref:`list_software_netloc` :ref:`list_software_nettle` :ref:`list_software_networkx` :ref:`list_software_NEURON` :ref:`list_software_NextClip` :ref:`list_software_NFFT` :ref:`list_software_NGS` :ref:`list_software_NGS-Python` :ref:`list_software_ngspice` :ref:`list_software_NiBabel` :ref:`list_software_Nilearn` :ref:`list_software_NIPY` :ref:`list_software_Nipype` :ref:`list_software_nodejs` :ref:`list_software_npstat` :ref:`list_software_ns` :ref:`list_software_NTL` :ref:`list_software_numactl` :ref:`list_software_numba` :ref:`list_software_numexpr` :ref:`list_software_numpy` :ref:`list_software_NWChem`
+:ref:`list_software_NAMD` - :ref:`list_software_nano` - :ref:`list_software_NASM` - :ref:`list_software_NBO` - :ref:`list_software_NCBI-Toolkit` - :ref:`list_software_ncbi-vdb` - :ref:`list_software_ncdf` - :ref:`list_software_ncdf4` - :ref:`list_software_NCL` - :ref:`list_software_nco` - :ref:`list_software_NCO` - :ref:`list_software_ncurses` - :ref:`list_software_ncview` - :ref:`list_software_NEdit` - :ref:`list_software_NEMO` - :ref:`list_software_neon` - :ref:`list_software_Net-LibIDN` - :ref:`list_software_netaddr` - :ref:`list_software_netCDF` - :ref:`list_software_netCDF-C++` - :ref:`list_software_netCDF-C++4` - :ref:`list_software_netCDF-Fortran` - :ref:`list_software_netcdf4-python` - :ref:`list_software_netifaces` - :ref:`list_software_netloc` - :ref:`list_software_nettle` - :ref:`list_software_networkx` - :ref:`list_software_NEURON` - :ref:`list_software_NextClip` - :ref:`list_software_NFFT` - :ref:`list_software_NGS` - :ref:`list_software_NGS-Python` - :ref:`list_software_ngspice` - :ref:`list_software_NiBabel` - :ref:`list_software_Nilearn` - :ref:`list_software_NIPY` - :ref:`list_software_Nipype` - :ref:`list_software_nodejs` - :ref:`list_software_npstat` - :ref:`list_software_ns` - :ref:`list_software_NTL` - :ref:`list_software_numactl` - :ref:`list_software_numba` - :ref:`list_software_numexpr` - :ref:`list_software_numpy` - :ref:`list_software_NWChem`
 
 
 .. _list_software_NAMD:
@@ -9789,13 +9789,13 @@ version              toolchains
 =================    ===============================================
 
 
-.. _list_software_o:
+.. _list_software_letter_o:
 
 *O*
 ---
 
 
-:ref:`list_software_o2scl` :ref:`list_software_Oases` :ref:`list_software_OCaml` :ref:`list_software_Octave` :ref:`list_software_Octopus` :ref:`list_software_Oger` :ref:`list_software_OPARI2` :ref:`list_software_OpenBabel` :ref:`list_software_OpenBLAS` :ref:`list_software_OpenCV` :ref:`list_software_OpenEXR` :ref:`list_software_OpenFOAM` :ref:`list_software_OpenFOAM-Extend` :ref:`list_software_OpenIFS` :ref:`list_software_OpenImageIO` :ref:`list_software_OpenMD` :ref:`list_software_OpenMM` :ref:`list_software_OpenMPI` :ref:`list_software_OpenPGM` :ref:`list_software_OpenSSL` :ref:`list_software_OptiX` :ref:`list_software_ORCA` :ref:`list_software_ordereddict` :ref:`list_software_orthomcl` :ref:`list_software_OSU-Micro-Benchmarks` :ref:`list_software_otcl` :ref:`list_software_OTF` :ref:`list_software_OTF2`
+:ref:`list_software_o2scl` - :ref:`list_software_Oases` - :ref:`list_software_OCaml` - :ref:`list_software_Octave` - :ref:`list_software_Octopus` - :ref:`list_software_Oger` - :ref:`list_software_OPARI2` - :ref:`list_software_OpenBabel` - :ref:`list_software_OpenBLAS` - :ref:`list_software_OpenCV` - :ref:`list_software_OpenEXR` - :ref:`list_software_OpenFOAM` - :ref:`list_software_OpenFOAM-Extend` - :ref:`list_software_OpenIFS` - :ref:`list_software_OpenImageIO` - :ref:`list_software_OpenMD` - :ref:`list_software_OpenMM` - :ref:`list_software_OpenMPI` - :ref:`list_software_OpenPGM` - :ref:`list_software_OpenSSL` - :ref:`list_software_OptiX` - :ref:`list_software_ORCA` - :ref:`list_software_ordereddict` - :ref:`list_software_orthomcl` - :ref:`list_software_OSU-Micro-Benchmarks` - :ref:`list_software_otcl` - :ref:`list_software_OTF` - :ref:`list_software_OTF2`
 
 
 .. _list_software_o2scl:
@@ -10193,13 +10193,13 @@ version    toolchains
 =======    ===============================================
 
 
-.. _list_software_p:
+.. _list_software_letter_p:
 
 *P*
 ---
 
 
-:ref:`list_software_p11-kit` :ref:`list_software_p4vasp` :ref:`list_software_p7zip` :ref:`list_software_packmol` :ref:`list_software_PAML` :ref:`list_software_pandas` :ref:`list_software_PANDAseq` :ref:`list_software_Pango` :ref:`list_software_Pangomm` :ref:`list_software_pangox-compat` :ref:`list_software_PAPI` :ref:`list_software_parallel` :ref:`list_software_Parallel-ForkManager` :ref:`list_software_Paraver` :ref:`list_software_ParaView` :ref:`list_software_ParFlow` :ref:`list_software_PARI-GP` :ref:`list_software_ParMETIS` :ref:`list_software_ParMGridGen` :ref:`list_software_Pasha` :ref:`list_software_PaStiX` :ref:`list_software_patch` :ref:`list_software_patchelf` :ref:`list_software_path.py` :ref:`list_software_paycheck` :ref:`list_software_pbs_python` :ref:`list_software_pBWA` :ref:`list_software_PBZIP2` :ref:`list_software_PCC` :ref:`list_software_PCL` :ref:`list_software_PCMSolver` :ref:`list_software_PCRE` :ref:`list_software_PCRE2` :ref:`list_software_PDT` :ref:`list_software_PeakSeq` :ref:`list_software_PEAR` :ref:`list_software_Perl` :ref:`list_software_PETSc` :ref:`list_software_petsc4py` :ref:`list_software_PFFT` :ref:`list_software_pftoolsV3` :ref:`list_software_PGI` :ref:`list_software_PHASE` :ref:`list_software_phonopy` :ref:`list_software_PHYLIP` :ref:`list_software_PhyloCSF` :ref:`list_software_PhyML` :ref:`list_software_picard` :ref:`list_software_pigz` :ref:`list_software_PIL` :ref:`list_software_Pillow` :ref:`list_software_Pindel` :ref:`list_software_pip` :ref:`list_software_pixman` :ref:`list_software_pkg-config` :ref:`list_software_pkgconfig` :ref:`list_software_PLAST` :ref:`list_software_Platanus` :ref:`list_software_Platypus` :ref:`list_software_PLINK` :ref:`list_software_PLINKSEQ` :ref:`list_software_PLplot` :ref:`list_software_PLUMED` :ref:`list_software_PLY` :ref:`list_software_Pmw` :ref:`list_software_PnMPI` :ref:`list_software_pomkl` :ref:`list_software_pompi` :ref:`list_software_popt` :ref:`list_software_Postgres-XL` :ref:`list_software_PostgreSQL` :ref:`list_software_POV-Ray` :ref:`list_software_PP` :ref:`list_software_PPfold` :ref:`list_software_pplacer` :ref:`list_software_PRACE` :ref:`list_software_PRANK` :ref:`list_software_Primer3` :ref:`list_software_PRINSEQ` :ref:`list_software_printproto` :ref:`list_software_ProbABEL` :ref:`list_software_problog` :ref:`list_software_PROJ` :ref:`list_software_prompt-toolkit` :ref:`list_software_protobuf` :ref:`list_software_pscom` :ref:`list_software_PSI` :ref:`list_software_PSI4` :ref:`list_software_psmpi` :ref:`list_software_psmpi2` :ref:`list_software_PSORTb` :ref:`list_software_psutil` :ref:`list_software_py` :ref:`list_software_PyAMG` :ref:`list_software_PyCairo` :ref:`list_software_pycosat` :ref:`list_software_pydicom` :ref:`list_software_PyFFmpeg` :ref:`list_software_pygccxml` :ref:`list_software_pyGIMLi` :ref:`list_software_Pygments` :ref:`list_software_PyGObject` :ref:`list_software_pygraphviz` :ref:`list_software_PyGTK` :ref:`list_software_PyGTS` :ref:`list_software_pyhull` :ref:`list_software_Pyke` :ref:`list_software_pymatgen` :ref:`list_software_PyOpenGL` :ref:`list_software_pyplusplus` :ref:`list_software_PyQt` :ref:`list_software_PyQt5` :ref:`list_software_PyQuante` :ref:`list_software_pyringe` :ref:`list_software_Pyro4` :ref:`list_software_Pysam` :ref:`list_software_pysqlite` :ref:`list_software_pyTables` :ref:`list_software_pytest` :ref:`list_software_Python` :ref:`list_software_python-dateutil` :ref:`list_software_python-meep` :ref:`list_software_PyYAML` :ref:`list_software_PyZMQ`
+:ref:`list_software_p11-kit` - :ref:`list_software_p4vasp` - :ref:`list_software_p7zip` - :ref:`list_software_packmol` - :ref:`list_software_PAML` - :ref:`list_software_pandas` - :ref:`list_software_PANDAseq` - :ref:`list_software_Pango` - :ref:`list_software_Pangomm` - :ref:`list_software_pangox-compat` - :ref:`list_software_PAPI` - :ref:`list_software_parallel` - :ref:`list_software_Parallel-ForkManager` - :ref:`list_software_Paraver` - :ref:`list_software_ParaView` - :ref:`list_software_ParFlow` - :ref:`list_software_PARI-GP` - :ref:`list_software_ParMETIS` - :ref:`list_software_ParMGridGen` - :ref:`list_software_Pasha` - :ref:`list_software_PaStiX` - :ref:`list_software_patch` - :ref:`list_software_patchelf` - :ref:`list_software_path.py` - :ref:`list_software_paycheck` - :ref:`list_software_pbs_python` - :ref:`list_software_pBWA` - :ref:`list_software_PBZIP2` - :ref:`list_software_PCC` - :ref:`list_software_PCL` - :ref:`list_software_PCMSolver` - :ref:`list_software_PCRE` - :ref:`list_software_PCRE2` - :ref:`list_software_PDT` - :ref:`list_software_PeakSeq` - :ref:`list_software_PEAR` - :ref:`list_software_Perl` - :ref:`list_software_PETSc` - :ref:`list_software_petsc4py` - :ref:`list_software_PFFT` - :ref:`list_software_pftoolsV3` - :ref:`list_software_PGI` - :ref:`list_software_PHASE` - :ref:`list_software_phonopy` - :ref:`list_software_PHYLIP` - :ref:`list_software_PhyloCSF` - :ref:`list_software_PhyML` - :ref:`list_software_picard` - :ref:`list_software_pigz` - :ref:`list_software_PIL` - :ref:`list_software_Pillow` - :ref:`list_software_Pindel` - :ref:`list_software_pip` - :ref:`list_software_pixman` - :ref:`list_software_pkg-config` - :ref:`list_software_pkgconfig` - :ref:`list_software_PLAST` - :ref:`list_software_Platanus` - :ref:`list_software_Platypus` - :ref:`list_software_PLINK` - :ref:`list_software_PLINKSEQ` - :ref:`list_software_PLplot` - :ref:`list_software_PLUMED` - :ref:`list_software_PLY` - :ref:`list_software_Pmw` - :ref:`list_software_PnMPI` - :ref:`list_software_pomkl` - :ref:`list_software_pompi` - :ref:`list_software_popt` - :ref:`list_software_Postgres-XL` - :ref:`list_software_PostgreSQL` - :ref:`list_software_POV-Ray` - :ref:`list_software_PP` - :ref:`list_software_PPfold` - :ref:`list_software_pplacer` - :ref:`list_software_PRACE` - :ref:`list_software_PRANK` - :ref:`list_software_Primer3` - :ref:`list_software_PRINSEQ` - :ref:`list_software_printproto` - :ref:`list_software_ProbABEL` - :ref:`list_software_problog` - :ref:`list_software_PROJ` - :ref:`list_software_prompt-toolkit` - :ref:`list_software_protobuf` - :ref:`list_software_pscom` - :ref:`list_software_PSI` - :ref:`list_software_PSI4` - :ref:`list_software_psmpi` - :ref:`list_software_psmpi2` - :ref:`list_software_PSORTb` - :ref:`list_software_psutil` - :ref:`list_software_py` - :ref:`list_software_PyAMG` - :ref:`list_software_PyCairo` - :ref:`list_software_pycosat` - :ref:`list_software_pydicom` - :ref:`list_software_PyFFmpeg` - :ref:`list_software_pygccxml` - :ref:`list_software_pyGIMLi` - :ref:`list_software_Pygments` - :ref:`list_software_PyGObject` - :ref:`list_software_pygraphviz` - :ref:`list_software_PyGTK` - :ref:`list_software_PyGTS` - :ref:`list_software_pyhull` - :ref:`list_software_Pyke` - :ref:`list_software_pymatgen` - :ref:`list_software_PyOpenGL` - :ref:`list_software_pyplusplus` - :ref:`list_software_PyQt` - :ref:`list_software_PyQt5` - :ref:`list_software_PyQuante` - :ref:`list_software_pyringe` - :ref:`list_software_Pyro4` - :ref:`list_software_Pysam` - :ref:`list_software_pysqlite` - :ref:`list_software_pyTables` - :ref:`list_software_pytest` - :ref:`list_software_Python` - :ref:`list_software_python-dateutil` - :ref:`list_software_python-meep` - :ref:`list_software_PyYAML` - :ref:`list_software_PyZMQ`
 
 
 .. _list_software_p11-kit:
@@ -11832,13 +11832,13 @@ version    toolchains
 =======    =========================================================================
 
 
-.. _list_software_q:
+.. _list_software_letter_q:
 
 *Q*
 ---
 
 
-:ref:`list_software_Qhull` :ref:`list_software_QLogicMPI` :ref:`list_software_qrupdate` :ref:`list_software_Qt` :ref:`list_software_Qt5` :ref:`list_software_qtop` :ref:`list_software_QuadProg++` :ref:`list_software_QuantumESPRESSO` :ref:`list_software_QuickFF` :ref:`list_software_Quip` :ref:`list_software_Qwt`
+:ref:`list_software_Qhull` - :ref:`list_software_QLogicMPI` - :ref:`list_software_qrupdate` - :ref:`list_software_Qt` - :ref:`list_software_Qt5` - :ref:`list_software_qtop` - :ref:`list_software_QuadProg++` - :ref:`list_software_QuantumESPRESSO` - :ref:`list_software_QuickFF` - :ref:`list_software_Quip` - :ref:`list_software_Qwt`
 
 
 .. _list_software_Qhull:
@@ -11985,13 +11985,13 @@ version    toolchains
 =======    ===========
 
 
-.. _list_software_r:
+.. _list_software_letter_r:
 
 *R*
 ---
 
 
-:ref:`list_software_R` :ref:`list_software_R-bundle-Bioconductor` :ref:`list_software_R-bundle-devtools` :ref:`list_software_R-bundle-extra` :ref:`list_software_R-bundle-pbd` :ref:`list_software_rainbow` :ref:`list_software_randrproto` :ref:`list_software_RAxML` :ref:`list_software_Ray` :ref:`list_software_RcppArmadillo` :ref:`list_software_RCS` :ref:`list_software_rCUDA` :ref:`list_software_RDMC` :ref:`list_software_RDP-Classifier` :ref:`list_software_RELION` :ref:`list_software_renderproto` :ref:`list_software_requests` :ref:`list_software_rgeos` :ref:`list_software_rhdf5` :ref:`list_software_rjags` :ref:`list_software_RMBlast` :ref:`list_software_RNAz` :ref:`list_software_ROOT` :ref:`list_software_Rosetta` :ref:`list_software_rpmrebuild` :ref:`list_software_rpy2` :ref:`list_software_RSEM` :ref:`list_software_rSeq` :ref:`list_software_RSeQC` :ref:`list_software_RSEQtools` :ref:`list_software_Ruby` :ref:`list_software_runjags` :ref:`list_software_Rust`
+:ref:`list_software_R` - :ref:`list_software_R-bundle-Bioconductor` - :ref:`list_software_R-bundle-devtools` - :ref:`list_software_R-bundle-extra` - :ref:`list_software_R-bundle-pbd` - :ref:`list_software_rainbow` - :ref:`list_software_randrproto` - :ref:`list_software_RAxML` - :ref:`list_software_Ray` - :ref:`list_software_RcppArmadillo` - :ref:`list_software_RCS` - :ref:`list_software_rCUDA` - :ref:`list_software_RDMC` - :ref:`list_software_RDP-Classifier` - :ref:`list_software_RELION` - :ref:`list_software_renderproto` - :ref:`list_software_requests` - :ref:`list_software_rgeos` - :ref:`list_software_rhdf5` - :ref:`list_software_rjags` - :ref:`list_software_RMBlast` - :ref:`list_software_RNAz` - :ref:`list_software_ROOT` - :ref:`list_software_Rosetta` - :ref:`list_software_rpmrebuild` - :ref:`list_software_rpy2` - :ref:`list_software_RSEM` - :ref:`list_software_rSeq` - :ref:`list_software_RSeQC` - :ref:`list_software_RSEQtools` - :ref:`list_software_Ruby` - :ref:`list_software_runjags` - :ref:`list_software_Rust`
 
 
 .. _list_software_R:
@@ -12422,13 +12422,13 @@ version    toolchains
 =======    ==========
 
 
-.. _list_software_s:
+.. _list_software_letter_s:
 
 *S*
 ---
 
 
-:ref:`list_software_S-Lang` :ref:`list_software_S.A.G.E.` :ref:`list_software_Sablotron` :ref:`list_software_SaguaroGW` :ref:`list_software_Sailfish` :ref:`list_software_Salmon` :ref:`list_software_Samcef` :ref:`list_software_SAMtools` :ref:`list_software_Saxon-HE` :ref:`list_software_ScaLAPACK` :ref:`list_software_Scalasca` :ref:`list_software_SCALCE` :ref:`list_software_SCANMS` :ref:`list_software_SCDE` :ref:`list_software_ScientificPython` :ref:`list_software_scikit-image` :ref:`list_software_scikit-learn` :ref:`list_software_scikit-umfpack` :ref:`list_software_scipy` :ref:`list_software_SCons` :ref:`list_software_SCOOP` :ref:`list_software_Score-P` :ref:`list_software_SCOTCH` :ref:`list_software_scp` :ref:`list_software_SDCC` :ref:`list_software_SDL2` :ref:`list_software_SDPA` :ref:`list_software_Seaborn` :ref:`list_software_sed` :ref:`list_software_segemehl` :ref:`list_software_Seqmagick` :ref:`list_software_SeqPrep` :ref:`list_software_seqtk` :ref:`list_software_Serf` :ref:`list_software_setuptools` :ref:`list_software_SHAPEIT` :ref:`list_software_Shapely` :ref:`list_software_shift` :ref:`list_software_SHORE` :ref:`list_software_SHRiMP` :ref:`list_software_SIBELia` :ref:`list_software_sickle` :ref:`list_software_Silo` :ref:`list_software_SimVascular` :ref:`list_software_Singularity` :ref:`list_software_SIONlib` :ref:`list_software_SIP` :ref:`list_software_slalib-c` :ref:`list_software_SLEPc` :ref:`list_software_slepc4py` :ref:`list_software_sleuth` :ref:`list_software_SMALT` :ref:`list_software_SNAPE-pooled` :ref:`list_software_snappy` :ref:`list_software_snpEff` :ref:`list_software_SNPhylo` :ref:`list_software_SOAPaligner` :ref:`list_software_SOAPdenovo` :ref:`list_software_SOAPdenovo2` :ref:`list_software_SOAPec` :ref:`list_software_SOBAcl` :ref:`list_software_SortMeRNA` :ref:`list_software_SoX` :ref:`list_software_SPAdes` :ref:`list_software_Spark` :ref:`list_software_sparsehash` :ref:`list_software_spglib` :ref:`list_software_Sphinx` :ref:`list_software_SPIDER` :ref:`list_software_splitRef` :ref:`list_software_SPRNG` :ref:`list_software_SQLite` :ref:`list_software_SRA-Toolkit` :ref:`list_software_sratoolkit` :ref:`list_software_SSAHA2` :ref:`list_software_Stacks` :ref:`list_software_STAMP` :ref:`list_software_Stampy` :ref:`list_software_STAR` :ref:`list_software_STAR-Fusion` :ref:`list_software_statsmodels` :ref:`list_software_stemming` :ref:`list_software_Stow` :ref:`list_software_STREAM` :ref:`list_software_Stride` :ref:`list_software_StringTie` :ref:`list_software_Subread` :ref:`list_software_Subversion` :ref:`list_software_SuiteSparse` :ref:`list_software_SUMACLUST` :ref:`list_software_SUMATRA` :ref:`list_software_SuperLU` :ref:`list_software_SURF` :ref:`list_software_SWASH` :ref:`list_software_SWIG` :ref:`list_software_sympy` :ref:`list_software_synchronicity` :ref:`list_software_Szip`
+:ref:`list_software_S-Lang` - :ref:`list_software_S.A.G.E.` - :ref:`list_software_Sablotron` - :ref:`list_software_SaguaroGW` - :ref:`list_software_Sailfish` - :ref:`list_software_Salmon` - :ref:`list_software_Samcef` - :ref:`list_software_SAMtools` - :ref:`list_software_Saxon-HE` - :ref:`list_software_ScaLAPACK` - :ref:`list_software_Scalasca` - :ref:`list_software_SCALCE` - :ref:`list_software_SCANMS` - :ref:`list_software_SCDE` - :ref:`list_software_ScientificPython` - :ref:`list_software_scikit-image` - :ref:`list_software_scikit-learn` - :ref:`list_software_scikit-umfpack` - :ref:`list_software_scipy` - :ref:`list_software_SCons` - :ref:`list_software_SCOOP` - :ref:`list_software_Score-P` - :ref:`list_software_SCOTCH` - :ref:`list_software_scp` - :ref:`list_software_SDCC` - :ref:`list_software_SDL2` - :ref:`list_software_SDPA` - :ref:`list_software_Seaborn` - :ref:`list_software_sed` - :ref:`list_software_segemehl` - :ref:`list_software_Seqmagick` - :ref:`list_software_SeqPrep` - :ref:`list_software_seqtk` - :ref:`list_software_Serf` - :ref:`list_software_setuptools` - :ref:`list_software_SHAPEIT` - :ref:`list_software_Shapely` - :ref:`list_software_shift` - :ref:`list_software_SHORE` - :ref:`list_software_SHRiMP` - :ref:`list_software_SIBELia` - :ref:`list_software_sickle` - :ref:`list_software_Silo` - :ref:`list_software_SimVascular` - :ref:`list_software_Singularity` - :ref:`list_software_SIONlib` - :ref:`list_software_SIP` - :ref:`list_software_slalib-c` - :ref:`list_software_SLEPc` - :ref:`list_software_slepc4py` - :ref:`list_software_sleuth` - :ref:`list_software_SMALT` - :ref:`list_software_SNAPE-pooled` - :ref:`list_software_snappy` - :ref:`list_software_snpEff` - :ref:`list_software_SNPhylo` - :ref:`list_software_SOAPaligner` - :ref:`list_software_SOAPdenovo` - :ref:`list_software_SOAPdenovo2` - :ref:`list_software_SOAPec` - :ref:`list_software_SOBAcl` - :ref:`list_software_SortMeRNA` - :ref:`list_software_SoX` - :ref:`list_software_SPAdes` - :ref:`list_software_Spark` - :ref:`list_software_sparsehash` - :ref:`list_software_spglib` - :ref:`list_software_Sphinx` - :ref:`list_software_SPIDER` - :ref:`list_software_splitRef` - :ref:`list_software_SPRNG` - :ref:`list_software_SQLite` - :ref:`list_software_SRA-Toolkit` - :ref:`list_software_sratoolkit` - :ref:`list_software_SSAHA2` - :ref:`list_software_Stacks` - :ref:`list_software_STAMP` - :ref:`list_software_Stampy` - :ref:`list_software_STAR` - :ref:`list_software_STAR-Fusion` - :ref:`list_software_statsmodels` - :ref:`list_software_stemming` - :ref:`list_software_Stow` - :ref:`list_software_STREAM` - :ref:`list_software_Stride` - :ref:`list_software_StringTie` - :ref:`list_software_Subread` - :ref:`list_software_Subversion` - :ref:`list_software_SuiteSparse` - :ref:`list_software_SUMACLUST` - :ref:`list_software_SUMATRA` - :ref:`list_software_SuperLU` - :ref:`list_software_SURF` - :ref:`list_software_SWASH` - :ref:`list_software_SWIG` - :ref:`list_software_sympy` - :ref:`list_software_synchronicity` - :ref:`list_software_Szip`
 
 
 .. _list_software_S-Lang:
@@ -13699,13 +13699,13 @@ version    toolchains
 =======    ===================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
-.. _list_software_t:
+.. _list_software_letter_t:
 
 *T*
 ---
 
 
-:ref:`list_software_tabix` :ref:`list_software_TAMkin` :ref:`list_software_Tar` :ref:`list_software_TAU` :ref:`list_software_tbb` :ref:`list_software_TCC` :ref:`list_software_Tcl` :ref:`list_software_tclcl` :ref:`list_software_tcsh` :ref:`list_software_tecplot360ex` :ref:`list_software_Tesla-Deployment-Kit` :ref:`list_software_testpath` :ref:`list_software_texinfo` :ref:`list_software_Text-CSV` :ref:`list_software_Theano` :ref:`list_software_TiCCutils` :ref:`list_software_TiMBL` :ref:`list_software_time` :ref:`list_software_TINKER` :ref:`list_software_TinySVM` :ref:`list_software_Tk` :ref:`list_software_tmux` :ref:`list_software_TopHat` :ref:`list_software_Tornado` :ref:`list_software_TotalView` :ref:`list_software_traits` :ref:`list_software_travis` :ref:`list_software_TREE-PUZZLE` :ref:`list_software_TRF` :ref:`list_software_Triangle` :ref:`list_software_Trilinos` :ref:`list_software_Trim_Galore` :ref:`list_software_Trimmomatic` :ref:`list_software_Trinity` :ref:`list_software_TVB` :ref:`list_software_tvb-data` :ref:`list_software_TVB-deps` :ref:`list_software_tvb-framework` :ref:`list_software_tvb-library`
+:ref:`list_software_tabix` - :ref:`list_software_TAMkin` - :ref:`list_software_Tar` - :ref:`list_software_TAU` - :ref:`list_software_tbb` - :ref:`list_software_TCC` - :ref:`list_software_Tcl` - :ref:`list_software_tclcl` - :ref:`list_software_tcsh` - :ref:`list_software_tecplot360ex` - :ref:`list_software_Tesla-Deployment-Kit` - :ref:`list_software_testpath` - :ref:`list_software_texinfo` - :ref:`list_software_Text-CSV` - :ref:`list_software_Theano` - :ref:`list_software_TiCCutils` - :ref:`list_software_TiMBL` - :ref:`list_software_time` - :ref:`list_software_TINKER` - :ref:`list_software_TinySVM` - :ref:`list_software_Tk` - :ref:`list_software_tmux` - :ref:`list_software_TopHat` - :ref:`list_software_Tornado` - :ref:`list_software_TotalView` - :ref:`list_software_traits` - :ref:`list_software_travis` - :ref:`list_software_TREE-PUZZLE` - :ref:`list_software_TRF` - :ref:`list_software_Triangle` - :ref:`list_software_Trilinos` - :ref:`list_software_Trim_Galore` - :ref:`list_software_Trimmomatic` - :ref:`list_software_Trinity` - :ref:`list_software_TVB` - :ref:`list_software_tvb-data` - :ref:`list_software_TVB-deps` - :ref:`list_software_tvb-framework` - :ref:`list_software_tvb-library`
 
 
 .. _list_software_tabix:
@@ -14223,13 +14223,13 @@ version     toolchains
 ========    ===========
 
 
-.. _list_software_u:
+.. _list_software_letter_u:
 
 *U*
 ---
 
 
-:ref:`list_software_UDUNITS` :ref:`list_software_UFC` :ref:`list_software_UFL` :ref:`list_software_USEARCH` :ref:`list_software_util-linux`
+:ref:`list_software_UDUNITS` - :ref:`list_software_UFC` - :ref:`list_software_UFL` - :ref:`list_software_USEARCH` - :ref:`list_software_util-linux`
 
 
 .. _list_software_UDUNITS:
@@ -14304,13 +14304,13 @@ version    toolchains
 =======    ======================================================================================
 
 
-.. _list_software_v:
+.. _list_software_letter_v:
 
 *V*
 ---
 
 
-:ref:`list_software_Valgrind` :ref:`list_software_Vampir` :ref:`list_software_VampirServer` :ref:`list_software_VampirTrace` :ref:`list_software_VarScan` :ref:`list_software_VASP` :ref:`list_software_VCFtools` :ref:`list_software_VEGAS` :ref:`list_software_Velvet` :ref:`list_software_verifyBamID` :ref:`list_software_ViennaRNA` :ref:`list_software_Vim` :ref:`list_software_vincent` :ref:`list_software_Viper` :ref:`list_software_VirSorter` :ref:`list_software_Voro++` :ref:`list_software_vsc-base` :ref:`list_software_vsc-install` :ref:`list_software_vsc-mympirun` :ref:`list_software_vsc-mympirun-scoop` :ref:`list_software_vsc-processcontrol` :ref:`list_software_VSC-tools` :ref:`list_software_vt` :ref:`list_software_VTK` :ref:`list_software_VTune`
+:ref:`list_software_Valgrind` - :ref:`list_software_Vampir` - :ref:`list_software_VampirServer` - :ref:`list_software_VampirTrace` - :ref:`list_software_VarScan` - :ref:`list_software_VASP` - :ref:`list_software_VCFtools` - :ref:`list_software_VEGAS` - :ref:`list_software_Velvet` - :ref:`list_software_verifyBamID` - :ref:`list_software_ViennaRNA` - :ref:`list_software_Vim` - :ref:`list_software_vincent` - :ref:`list_software_Viper` - :ref:`list_software_VirSorter` - :ref:`list_software_Voro++` - :ref:`list_software_vsc-base` - :ref:`list_software_vsc-install` - :ref:`list_software_vsc-mympirun` - :ref:`list_software_vsc-mympirun-scoop` - :ref:`list_software_vsc-processcontrol` - :ref:`list_software_VSC-tools` - :ref:`list_software_vt` - :ref:`list_software_VTK` - :ref:`list_software_VTune`
 
 
 .. _list_software_Valgrind:
@@ -14642,13 +14642,13 @@ version          toolchains
 =============    ==========
 
 
-.. _list_software_w:
+.. _list_software_letter_w:
 
 *W*
 ---
 
 
-:ref:`list_software_Wannier90` :ref:`list_software_wcwidth` :ref:`list_software_WEKA` :ref:`list_software_wget` :ref:`list_software_WHAM` :ref:`list_software_wheel` :ref:`list_software_Whoosh` :ref:`list_software_WIEN2k` :ref:`list_software_wiki2beamer` :ref:`list_software_wkhtmltopdf` :ref:`list_software_worker` :ref:`list_software_WPS` :ref:`list_software_WRF` :ref:`list_software_wxPropertyGrid` :ref:`list_software_wxPython`
+:ref:`list_software_Wannier90` - :ref:`list_software_wcwidth` - :ref:`list_software_WEKA` - :ref:`list_software_wget` - :ref:`list_software_WHAM` - :ref:`list_software_wheel` - :ref:`list_software_Whoosh` - :ref:`list_software_WIEN2k` - :ref:`list_software_wiki2beamer` - :ref:`list_software_wkhtmltopdf` - :ref:`list_software_worker` - :ref:`list_software_WPS` - :ref:`list_software_WRF` - :ref:`list_software_wxPropertyGrid` - :ref:`list_software_wxPython`
 
 
 .. _list_software_Wannier90:
@@ -14848,13 +14848,13 @@ version    toolchains
 =======    ===========
 
 
-.. _list_software_x:
+.. _list_software_letter_x:
 
 *X*
 ---
 
 
-:ref:`list_software_X11` :ref:`list_software_x264` :ref:`list_software_xbitmaps` :ref:`list_software_xcb-proto` :ref:`list_software_xcb-util` :ref:`list_software_xcb-util-image` :ref:`list_software_xcb-util-keysyms` :ref:`list_software_xcb-util-renderutil` :ref:`list_software_xcb-util-wm` :ref:`list_software_XCrySDen` :ref:`list_software_Xerces-C++` :ref:`list_software_xextproto` :ref:`list_software_xf86vidmodeproto` :ref:`list_software_xineramaproto` :ref:`list_software_XKeyboardConfig` :ref:`list_software_Xmipp` :ref:`list_software_XML` :ref:`list_software_XML-Dumper` :ref:`list_software_XML-LibXML` :ref:`list_software_XML-Parser` :ref:`list_software_XML-Simple` :ref:`list_software_XML-Twig` :ref:`list_software_xonsh` :ref:`list_software_xorg-macros` :ref:`list_software_xprop` :ref:`list_software_xproto` :ref:`list_software_XQilla` :ref:`list_software_xtrans` :ref:`list_software_XZ`
+:ref:`list_software_X11` - :ref:`list_software_x264` - :ref:`list_software_xbitmaps` - :ref:`list_software_xcb-proto` - :ref:`list_software_xcb-util` - :ref:`list_software_xcb-util-image` - :ref:`list_software_xcb-util-keysyms` - :ref:`list_software_xcb-util-renderutil` - :ref:`list_software_xcb-util-wm` - :ref:`list_software_XCrySDen` - :ref:`list_software_Xerces-C++` - :ref:`list_software_xextproto` - :ref:`list_software_xf86vidmodeproto` - :ref:`list_software_xineramaproto` - :ref:`list_software_XKeyboardConfig` - :ref:`list_software_Xmipp` - :ref:`list_software_XML` - :ref:`list_software_XML-Dumper` - :ref:`list_software_XML-LibXML` - :ref:`list_software_XML-Parser` - :ref:`list_software_XML-Simple` - :ref:`list_software_XML-Twig` - :ref:`list_software_xonsh` - :ref:`list_software_xorg-macros` - :ref:`list_software_xprop` - :ref:`list_software_xproto` - :ref:`list_software_XQilla` - :ref:`list_software_xtrans` - :ref:`list_software_XZ`
 
 
 .. _list_software_X11:
@@ -15226,13 +15226,13 @@ version    toolchains
 =======    =====================================================================================================
 
 
-.. _list_software_y:
+.. _list_software_letter_y:
 
 *Y*
 ---
 
 
-:ref:`list_software_Yade` :ref:`list_software_yaff` :ref:`list_software_Yambo` :ref:`list_software_YamCha` :ref:`list_software_YAML-Syck` :ref:`list_software_Yasm` :ref:`list_software_YAXT`
+:ref:`list_software_Yade` - :ref:`list_software_yaff` - :ref:`list_software_Yambo` - :ref:`list_software_YamCha` - :ref:`list_software_YAML-Syck` - :ref:`list_software_Yasm` - :ref:`list_software_YAXT`
 
 
 .. _list_software_Yade:
@@ -15324,13 +15324,13 @@ version    toolchains
 =======    ===========
 
 
-.. _list_software_z:
+.. _list_software_letter_z:
 
 *Z*
 ---
 
 
-:ref:`list_software_ZeroMQ` :ref:`list_software_zlib` :ref:`list_software_zlibbioc` :ref:`list_software_ZPAQ` :ref:`list_software_zsh` :ref:`list_software_zsync`
+:ref:`list_software_ZeroMQ` - :ref:`list_software_zlib` - :ref:`list_software_zlibbioc` - :ref:`list_software_ZPAQ` - :ref:`list_software_zsh` - :ref:`list_software_zsync`
 
 
 .. _list_software_ZeroMQ:
