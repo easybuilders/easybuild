@@ -20,6 +20,10 @@ EasyBuild |version| supports 1128 different software packages (incl. toolchains,
 *a2ps*
 ++++++
 
+a2ps-4.14: Formats an ascii file for printing on a postscript printer
+
+*homepage*: http://www-inf.enst.fr/~demaille/a2ps/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -31,6 +35,10 @@ version    toolchains
 
 *ABAQUS*
 ++++++++
+
+Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit dynamics FEA.
+
+*homepage*: http://www.simulia.com/products/abaqus_fea.html
 
 =======    ==========
 version    toolchains
@@ -45,6 +53,10 @@ version    toolchains
 
 *ABINIT*
 ++++++++
+
+ABINIT is a package whose main program allows one to find the total energy, charge density and  electronic structure of systems made of electrons and nuclei (molecules and periodic solids) within Density Functional  Theory (DFT), using pseudopotentials and a planewave or wavelet basis.
+
+*homepage*: http://www.abinit.org/
 
 =======    =====================
 version    toolchains           
@@ -66,6 +78,10 @@ version    toolchains
 *ABySS*
 +++++++
 
+Assembly By Short Sequences - a de novo, parallel, paired-end sequence assembler
+
+*homepage*: http://www.bcgsc.ca/platform/bioinfo/software/abyss
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -82,6 +98,10 @@ version    toolchains
 *ACML*
 ++++++
 
+ACML provides a free set of thoroughly optimized and threaded math routines for HPC, scientific, engineering and related compute-intensive applications. ACML is ideal for weather modeling, computational fluid dynamics, financial analysis, oil and gas applications and more. 
+
+*homepage*: http://developer.amd.com/libraries/acml
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -96,6 +116,10 @@ version    toolchains
 
 *ADF*
 +++++
+
+ADF is an accurate, parallelized, powerful computational chemistry program to understand and  predict chemical structure and reactivity with density functional theory (DFT).
+
+*homepage*: http://www.scm.com/ADF/
 
 ============================    ===========
 version                         toolchains 
@@ -112,6 +136,10 @@ version                         toolchains
 *ADMIXTURE*
 +++++++++++
 
+ADMIXTURE is a software tool for maximum likelihood estimation of individual ancestries from  multilocus SNP genotype datasets. It uses the same statistical model as STRUCTURE but calculates estimates much  more rapidly using a fast numerical optimization algorithm.
+
+*homepage*: https://www.genetics.ucla.edu/software/admixture
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -124,6 +152,10 @@ version    toolchains
 *Advisor*
 +++++++++
 
+Vectorization Optimization and Thread Prototyping  - Vectorize & thread code or performance “dies”  - Easy workflow + data + tips = faster code faster  - Prioritize, Prototype & Predict performance gain  
+
+*homepage*: https://software.intel.com/intel-advisor-xe
+
 ============    ==========
 version         toolchains
 ============    ==========
@@ -135,6 +167,10 @@ version         toolchains
 
 *AFNI*
 ++++++
+
+Free software for analysis and display of FMRI data 
+
+*homepage*: http://afni.nimh.nih.gov
 
 ===============    =========================
 version            toolchains               
@@ -150,6 +186,10 @@ linux_openmp_64    goolf/1.5.14, intel/2015a
 *ALADIN*
 ++++++++
 
+ALADIN was entirely built on the notion of compatibility with its mother system, IFS/ARPEG.  The latter, a joint development between the European Centre for Medium-Range Weather Forecasts (ECMWF) and  Meteo-France, was only meant to consider global Numerical Weather Prediction applications; hence the idea,  for ALADIN, to complement the IFS/ARPEGE project with a limited area model (LAM) version, while keeping the  differences between the two softwares as small as possible.
+
+*homepage*: http://www.cnrm.meteo.fr/aladin/
+
 ===========    ======================================================================================
 version        toolchains                                                                            
 ===========    ======================================================================================
@@ -161,6 +201,10 @@ version        toolchains
 
 *Allinea*
 +++++++++
+
+The Allinea environment is an essential toolkit for developers and computational scientists looking to get results faster.
+
+*homepage*: http://www.allinea.com
 
 ===========================    ==========
 version                        toolchains
@@ -175,6 +219,10 @@ version                        toolchains
 *ALLPATHS-LG*
 +++++++++++++
 
+ALLPATHS-LG, the new short read genome assembler.
+
+*homepage*: http://www.broadinstitute.org/software/allpaths-lg/blog/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -186,6 +234,10 @@ version    toolchains
 
 *ALPS*
 ++++++
+
+ The ALPS project (Algorithms and Libraries for Physics Simulations) is an open source effort aiming at providing high-end simulation codes for strongly correlated quantum mechanical systems as well as C++ libraries for simplifying the development of such code.
+
+*homepage*: http://www.example.com
 
 =======    ===========
 version    toolchains 
@@ -199,6 +251,10 @@ version    toolchains
 *Amber*
 +++++++
 
+Amber (originally Assisted Model Building with Energy  Refinement) is software for performing molecular dynamics and structure  prediction.
+
+*homepage*: http://ambermd.org/amber.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -210,6 +266,10 @@ version    toolchains
 
 *AMOS*
 ++++++
+
+The AMOS consortium is committed to the development of open-source whole genome assembly software
+
+*homepage*: http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -223,6 +283,10 @@ version    toolchains
 *AnalyzeFMRI*
 +++++++++++++
 
+Functions for I/O, visualisation and analysis of functional Magnetic Resonance Imaging (fMRI)  datasets stored in the ANALYZE or NIFTI format.
+
+*homepage*: http://cran.r-project.org/web/packages/AnalyzeFMRI
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -234,6 +298,10 @@ version    toolchains
 
 *animation*
 +++++++++++
+
+animation: A Gallery of Animations in Statistics and Utilities to Create Animations
+
+*homepage*: http://cran.r-project.org/web/packages/%(name)s
 
 =======    ===========
 version    toolchains 
@@ -247,6 +315,10 @@ version    toolchains
 *annovar*
 +++++++++
 
+ ANNOVAR is an efficient software tool to utilize update-to-date information   to functionally annotate genetic variants detected from diverse genomes (including human   genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others).
+
+*homepage*: http://annovar.openbioinformatics.org/en/latest/
+
 =========    ==========
 version      toolchains
 =========    ==========
@@ -258,6 +330,10 @@ version      toolchains
 
 *ANSYS*
 +++++++
+
+ANSYS simulation software enables organizations to confidently predict      how their products will operate in the real world. We believe that every product is      a promise of something greater. 
+
+*homepage*: http://www.ansys.com
 
 =======    ==========
 version    toolchains
@@ -271,6 +347,10 @@ version    toolchains
 *ANSYS_CFD*
 +++++++++++
 
+ANSYS computational fluid dynamics (CFD) simulation software allows you to predict, with confidence,  the impact of fluid flows on your product throughout design and manufacturing as well as during end use.  ANSYS renowned CFD analysis tools include the widely used and well-validated ANSYS Fluent and ANSYS CFX.
+
+*homepage*: http://www.ansys.com/Products/Simulation+Technology/Fluid+Dynamics
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -283,6 +363,10 @@ version    toolchains
 
 *ant*
 +++++
+
+Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files  as targets and extension points dependent upon each other. The main known usage of Ant is the build of Java applications.
+
+*homepage*: http://ant.apache.org/
 
 =======    ==========
 version    toolchains
@@ -300,6 +384,10 @@ version    toolchains
 *ANTLR*
 +++++++
 
+ANTLR, ANother Tool for Language Recognition, (formerly PCCTS)  is a language tool that provides a framework for constructing recognizers,  compilers, and translators from grammatical descriptions containing  Java, C#, C++, or Python actions.
+
+*homepage*: http://www.antlr2.org/
+
 =======    ==============================================================
 version    toolchains                                                    
 =======    ==============================================================
@@ -311,6 +399,10 @@ version    toolchains
 
 *ANTs*
 ++++++
+
+ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing,  interpreting and visualizing multidimensional data.
+
+*homepage*: http://stnava.github.io/ANTs/
 
 ========    ============
 version     toolchains  
@@ -324,6 +416,10 @@ version     toolchains
 *APBS*
 ++++++
 
+ APBS is a software package for modeling biomolecular solvation   through solution of the Poisson-Boltzmann equation (PBE), one of the most popular   continuum models for describing electrostatic interactions between molecular solutes   in salty, aqueous media. 
+
+*homepage*: http://www.poissonboltzmann.org/apbs
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -335,6 +431,10 @@ version    toolchains
 
 *APR*
 +++++
+
+Apache Portable Runtime (APR) libraries.
+
+*homepage*: http://apr.apache.org/
 
 =======    ============
 version    toolchains  
@@ -349,6 +449,10 @@ version    toolchains
 *APR-util*
 ++++++++++
 
+Apache Portable Runtime (APR) util libraries.
+
+*homepage*: http://apr.apache.org/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -362,6 +466,10 @@ version    toolchains
 *ARB*
 +++++
 
+The ARB software is a graphically oriented package comprising various tools for sequence database handling and data analysis. A central database of processed (aligned) sequences and any type of additional data linked to the respective sequence entries is structured according to phylogeny or other user defined criteria.
+
+*homepage*: http://www.arb-home.de/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -373,6 +481,10 @@ version    toolchains
 
 *argtable*
 ++++++++++
+
+ Argtable is an ANSI C library for parsing GNU style   command line options with a minimum of fuss. 
+
+*homepage*: http://argtable.sourceforge.net/
 
 =======    ====================================
 version    toolchains                          
@@ -386,6 +498,10 @@ version    toolchains
 *aria2*
 +++++++
 
+aria2-1.15.1: Multi-threaded, multi-protocol, flexible download accelerator
+
+*homepage*: http://aria2.sourceforge.net/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -397,6 +513,10 @@ version    toolchains
 
 *Armadillo*
 +++++++++++
+
+Armadillo is an open-source C++ linear algebra library (matrix maths) aiming towards  a good balance between speed and ease of use. Integer, floating point and complex numbers are supported,  as well as a subset of trigonometric and statistics functions.
+
+*homepage*: http://arma.sourceforge.net/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -411,6 +531,10 @@ version    toolchains
 
 *arpack-ng*
 +++++++++++
+
+ARPACK is a collection of Fortran77 subroutines designed to solve large scale eigenvalue problems.
+
+*homepage*: http://forge.scilab.org/index.php/p/arpack-ng/
 
 =======    ========================
 version    toolchains              
@@ -427,6 +551,10 @@ version    toolchains
 *ASE*
 +++++
 
+ASE is a python package providing an open source Atomic Simulation Environment  in the Python scripting language.
+
+*homepage*: https://wiki.fysik.dtu.dk/ase/
+
 ==========    ===========================================================
 version       toolchains                                                 
 ==========    ===========================================================
@@ -442,6 +570,10 @@ version       toolchains
 *ASHS*
 ++++++
 
+ Automatic Segmentation of Hippocampal Subfields (ASHS) 
+
+*homepage*: https://sites.google.com/site/hipposubfields/home
+
 ===============    ==========
 version            toolchains
 ===============    ==========
@@ -453,6 +585,10 @@ rev103_20140612    dummy
 
 *Aspera-Connect*
 ++++++++++++++++
+
+Connect is an install-on-demand Web browser plug-in that facilitates high-speed uploads and  downloads with an Aspera transfer server.
+
+*homepage*: http://downloads.asperasoft.com/connect2/
 
 =======    ==========
 version    toolchains
@@ -466,6 +602,10 @@ version    toolchains
 *astropy*
 +++++++++
 
+The Astropy Project is a community effort to develop  a single core package for Astronomy in Python and foster interoperability  between Python astronomy packages.
+
+*homepage*: http://www.astropy.org/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -477,6 +617,10 @@ version    toolchains
 
 *ATK*
 +++++
+
+  ATK provides the set of accessibility interfaces that are implemented by other  toolkits and applications. Using the ATK interfaces, accessibility tools have  full access to view and control running applications. 
+
+*homepage*: https://developer.gnome.org/ATK/stable/
 
 =======    ========================
 version    toolchains              
@@ -492,6 +636,10 @@ version    toolchains
 *Atkmm*
 +++++++
 
+  Atkmm is the official C++ interface for the ATK accessibility toolkit library.  
+
+*homepage*: https://developer.gnome.org/ATK/stable/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -503,6 +651,10 @@ version    toolchains
 
 *ATLAS*
 +++++++
+
+ATLAS (Automatically Tuned Linear Algebra Software) is the application of  the AEOS (Automated Empirical Optimization of Software) paradigm, with the present emphasis   on the Basic Linear Algebra Subprograms (BLAS), a widely used, performance-critical, linear   algebra kernel library.
+
+*homepage*: http://math-atlas.sourceforge.net
 
 =======    ==================================
 version    toolchains                        
@@ -517,6 +669,10 @@ version    toolchains
 *ATSAS*
 +++++++
 
+ATSAS is a program suite for small-angle scattering data analysis from biological macromolecules.
+
+*homepage*: http://www.embl-hamburg.de/ExternalInfo/Research/Sax/software.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -530,6 +686,10 @@ version    toolchains
 *attr*
 ++++++
 
+Commands for Manipulating Filesystem Extended Attributes
+
+*homepage*: http://savannah.nongnu.org/projects/attr
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -541,6 +701,10 @@ version    toolchains
 
 *Autoconf*
 ++++++++++
+
+Autoconf is an extensible package of M4 macros that produce shell scripts  to automatically configure software source code packages. These scripts can adapt the  packages to many kinds of UNIX-like systems without manual user intervention. Autoconf  creates a configuration script for a package from a template file that lists the  operating system features that the package can use, in the form of M4 macro calls.
+
+*homepage*: http://www.gnu.org/software/autoconf/
 
 =======    ===================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                         
@@ -554,6 +718,10 @@ version    toolchains
 *AutoDock*
 ++++++++++
 
+AutoDock is a suite of automated docking tools. It is designed to   predict how small molecules, such as substrates or drug candidates, bind to   a receptor of known 3D structure.
+
+*homepage*: http://autodock.scripps.edu/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -565,6 +733,10 @@ version    toolchains
 
 *AutoDock_Vina*
 +++++++++++++++
+
+ AutoDock Vina is an open-source program for doing molecular docking. 
+
+*homepage*: http://vina.scripps.edu/index.html
 
 =======    ==========
 version    toolchains
@@ -578,6 +750,10 @@ version    toolchains
 *AutoGrid*
 ++++++++++
 
+AutoDock is a suite of automated docking tools. It is designed to   predict how small molecules, such as substrates or drug candidates, bind to   a receptor of known 3D structure.
+
+*homepage*: http://autodock.scripps.edu/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -589,6 +765,10 @@ version    toolchains
 
 *Automake*
 ++++++++++
+
+Automake: GNU Standards-compliant Makefile generator
+
+*homepage*: http://www.gnu.org/software/automake/automake.html
 
 =======    ==========================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                
@@ -604,6 +784,10 @@ version    toolchains
 
 *Autotools*
 +++++++++++
+
+This bundle collect the standard GNU build tools: Autoconf, Automake and libtool
+
+*homepage*: http://autotools.io
 
 ========    =============================================================================================================================================================================================================================================================================================
 version     toolchains                                                                                                                                                                                                                                                                                   
@@ -627,6 +811,10 @@ version     toolchains
 *bam-readcount*
 +++++++++++++++
 
+Count DNA sequence reads in BAM files
+
+*homepage*: https://github.com/genome/bam-readcount
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -639,6 +827,10 @@ version    toolchains
 *bam2fastq*
 +++++++++++
 
+The BAM format is an efficient method for storing and sharing data   from modern, highly parallel sequencers. While primarily used for storing alignment information,   BAMs can (and frequently do) store unaligned reads as well.
+
+*homepage*: http://www.hudsonalpha.org/gsl/information/software/bam2fastq
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -650,6 +842,10 @@ version    toolchains
 
 *BamTools*
 ++++++++++
+
+BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
+
+*homepage*: https://github.com/pezmaster31/bamtools
 
 =======    ==============================================
 version    toolchains                                    
@@ -664,6 +860,10 @@ version    toolchains
 *BamUtil*
 +++++++++
 
+BamUtil is a repository that contains several programs   that perform operations on SAM/BAM files. All of these programs   are built into a single executable, bam.
+
+*homepage*: http://genome.sph.umich.edu/wiki/BamUtil
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -676,6 +876,10 @@ version    toolchains
 *basemap*
 +++++++++
 
+The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python
+
+*homepage*: http://matplotlib.org/basemap/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -687,6 +891,10 @@ version    toolchains
 
 *Bash*
 ++++++
+
+Bash is an sh-compatible command language interpreter that executes commands    read from the standard input or from a file.  Bash also incorporates useful features from the    Korn and C shells (ksh and csh).
+
+*homepage*: http://www.gnu.org/software/bash
 
 =======    ==============================================
 version    toolchains                                    
@@ -701,6 +909,10 @@ version    toolchains
 *BayesAss*
 ++++++++++
 
+  BayesAss: Bayesian Inference of Recent Migration Using Multilocus Genotypes  
+
+*homepage*: http://www.rannala.org/?page_id=245
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -712,6 +924,10 @@ version    toolchains
 
 *BayeScan*
 ++++++++++
+
+BayeScan aims at identifying candidate loci under natural selection from genetic data,   using differences in allele frequencies between populations.
+
+*homepage*: http://cmpg.unibe.ch/software/BayeScan/
 
 =======    ============
 version    toolchains  
@@ -725,6 +941,10 @@ version    toolchains
 *BayeScEnv*
 +++++++++++
 
+BayeScEnv is a Fst-based, genome-scan method that uses environmental variables to detect local adaptation.
+
+*homepage*: https://github.com/devillemereuil/bayescenv
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -736,6 +956,10 @@ version    toolchains
 
 *BayesTraits*
 +++++++++++++
+
+ BayesTraits is a computer package for performing analyses of trait   evolution among groups of species for which a phylogeny or sample of phylogenies is   available. This new package incoporates our earlier and separate programes Multistate,   Discrete and Continuous. BayesTraits can be applied to the analysis of traits that adopt   a finite number of discrete states, or to the analysis of continuously varying traits.   Hypotheses can be tested about models of evolution, about ancestral states and about   correlations among pairs of traits. 
+
+*homepage*: http://www.evolution.reading.ac.uk/BayesTraitsV1.html
 
 ===========    ==========
 version        toolchains
@@ -750,6 +974,10 @@ version        toolchains
 *BayPass*
 +++++++++
 
+The package BayPass is a population genomics software which is primarily  aimed at identifying genetic markers subjected to selection and/or associated to  population-specific covariates (e.g., environmental variables, quantitative or  categorical phenotypic characteristics).
+
+*homepage*: http://www1.montpellier.inra.fr/CBGP/software/baypass/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -761,6 +989,10 @@ version    toolchains
 
 *Bazel*
 +++++++
+
+Bazel is a build tool that builds code quickly and reliably.  It is used to build the majority of Google's software.
+
+*homepage*: http://bazel.io/
 
 =======    ===============
 version    toolchains     
@@ -774,6 +1006,10 @@ version    toolchains
 *bbcp*
 ++++++
 
+BBCP is an alternative to Gridftp when transferring large amounts of data,  capable of breaking up your transfer into multiple simultaneous transferring streams,  thereby transferring data much faster than single-streaming utilities such as SCP and SFTP.  See details at http://pcbunn.cithep.caltech.edu/bbcp/using_bbcp.htm  or http://www.nics.tennessee.edu/computing-resources/data-transfer/bbcp
+
+*homepage*: http://www.slac.stanford.edu/~abh/bbcp/
+
 =============    ==========
 version          toolchains
 =============    ==========
@@ -785,6 +1021,10 @@ version          toolchains
 
 *bbFTP*
 +++++++
+
+bbFTP is a file transfer software. It implements its own transfer protocol,   which is optimized for large files (larger than 2GB) and secure as it does not read the   password in a file and encrypts the connection information. bbFTP main features are:   * Encoded username and password at connection * SSH and Certificate authentication modules   * Multi-stream transfer * Big windows as defined in RFC1323 * On-the-fly data compression   * Automatic retry * Customizable time-outs * Transfer simulation   * AFS authentication integration * RFIO interface
+
+*homepage*: http://doc.in2p3.fr/bbftp/
 
 =======    =================================
 version    toolchains                       
@@ -799,6 +1039,10 @@ version    toolchains
 *bbftpPRO*
 ++++++++++
 
+bbftpPRO is a data transfer program - as opposed to ordinary file transfer programs,  capable of transferring arbitrary data over LAN/WANs at parallel speed. bbftpPRO has been started  at the Particle Physics Dept. of Weizmann Institute of Science as an enhancement of bbftp,  developed at IN2P3, ref: http://doc.in2p3.fr/bbftp/
+
+*homepage*: http://bbftppro.myftp.org/
+
 =======    ==============================================
 version    toolchains                                    
 =======    ==============================================
@@ -810,6 +1054,10 @@ version    toolchains
 
 *BBMap*
 +++++++
+
+BBMap short read aligner, and other bioinformatic tools.
+
+*homepage*: https://sourceforge.net/projects/bbmap/
 
 =======    ==========
 version    toolchains
@@ -823,6 +1071,10 @@ version    toolchains
 *bc*
 ++++
 
+bc is an arbitrary precision numeric processing language.
+
+*homepage*: https://www.gnu.org/software/bc/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -834,6 +1086,10 @@ version    toolchains
 
 *BCFtools*
 ++++++++++
+
+BCFtools is a set of utilities that manipulate variant calls in the   Variant Call Format (VCF) and its binary counterpart BCF
+
+*homepage*: http://www.htslib.org/
 
 =======    =======================
 version    toolchains             
@@ -850,6 +1106,10 @@ version    toolchains
 *beagle-lib*
 ++++++++++++
 
+beagle-lib is a high-performance library that can perform the core  calculations at the heart of most Bayesian and Maximum Likelihood  phylogenetics packages.
+
+*homepage*: http://code.google.com/p/beagle-lib/
+
 ========    ===========================================================
 version     toolchains                                                 
 ========    ===========================================================
@@ -864,6 +1124,10 @@ version     toolchains
 *Beast*
 +++++++
 
+ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular   sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using   strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies   but is also a framework for testing evolutionary hypotheses without conditioning on a single   tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted   proportional to its posterior probability. 
+
+*homepage*: http://beast2.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -877,6 +1141,10 @@ version    toolchains
 *BEDOPS*
 ++++++++
 
+ BEDOPS is an open-source command-line toolkit that performs highly   efficient and scalable Boolean and other set operations, statistical calculations,   archiving, conversion and other management of genomic data of arbitrary scale.
+
+*homepage*: https://github.com/bedops/bedops
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -889,6 +1157,10 @@ version    toolchains
 
 *BEDTools*
 ++++++++++
+
+The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps  and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,  and SAM/BAM.
+
+*homepage*: https://github.com/arq5x/bedtools2
 
 =======    =============================================================
 version    toolchains                                                   
@@ -908,6 +1180,10 @@ version    toolchains
 *BEEF*
 ++++++
 
+BEEF is a library-based implementation of the Bayesian Error Estimation Functional, suitable for linking against by Fortran- or C-based DFT codes. A description of BEEF can be found at http://dx.doi.org/10.1103/PhysRevB.85.235149.
+
+*homepage*: http://suncat.stanford.edu/facility/software/functional
+
 =========    =========================
 version      toolchains               
 =========    =========================
@@ -920,6 +1196,10 @@ version      toolchains
 
 *BerkeleyGW*
 ++++++++++++
+
+The BerkeleyGW Package is a set of computer codes that calculates the quasiparticle  properties and the optical responses of a large variety of materials from bulk periodic crystals to  nanostructures such as slabs, wires and molecules.
+
+*homepage*: http://www.berkeleygw.org
 
 =========    =====================
 version      toolchains           
@@ -934,6 +1214,10 @@ version      toolchains
 *BFAST*
 +++++++
 
+BFAST facilitates the fast and accurate mapping of short reads to reference sequences.  Some advantages of BFAST include:  1) Speed: enables billions of short reads to be mapped quickly.   2) Accuracy: A priori probabilities for mapping reads with defined set of variants.   3) An easy way to measurably tune accuracy at the expense of speed.
+
+*homepage*: http://bfast.sourceforge.net/
+
 =======    =========================================================================
 version    toolchains                                                               
 =======    =========================================================================
@@ -946,6 +1230,10 @@ version    toolchains
 *BH*
 ++++
 
+BH: Boost C++ Header Files for R
+
+*homepage*: http://cran.r-project.org/web/packages/%(name)s
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -957,6 +1245,10 @@ version     toolchains
 
 *bibtexparser*
 ++++++++++++++
+
+Bibtex parser in Python 2.7 and 3.x
+
+*homepage*: https://github.com/sciunto-org/python-bibtexparser
 
 =======    =======================
 version    toolchains             
@@ -971,6 +1263,10 @@ version    toolchains
 *Biggus*
 ++++++++
 
+Virtual large arrays and lazy evaluation.
+
+*homepage*: https://github.com/SciTools/biggus
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -983,6 +1279,10 @@ version    toolchains
 
 *binutils*
 ++++++++++
+
+binutils: GNU binary utilities
+
+*homepage*: http://directory.fsf.org/project/binutils/
 
 =======    ===================================================================================================================================================
 version    toolchains                                                                                                                                         
@@ -1001,6 +1301,10 @@ version    toolchains
 *biodeps*
 +++++++++
 
+The purpose of this collection is to provide common dependencies in a bundle,  so that software/modules can be mixed and matched easily for composite pipelines in Life Sciences
+
+*homepage*: http://hpcbios.readthedocs.org/en/latest/HPCBIOS_2013-01.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -1013,6 +1317,10 @@ version    toolchains
 *BioKanga*
 ++++++++++
 
+BioKanga is an integrated toolkit of high performance bioinformatics   subprocesses targeting the challenges of next generation sequencing analytics.   Kanga is an acronym standing for 'K-mer Adaptive Next Generation Aligner'.
+
+*homepage*: http://sourceforge.net/projects/biokanga
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1024,6 +1332,10 @@ version    toolchains
 
 *BioPerl*
 +++++++++
+
+Bioperl is the product of a community effort to produce Perl code which is useful in biology.  Examples include Sequence objects, Alignment objects and database searching objects.
+
+*homepage*: http://www.bioperl.org/
 
 =======    =======================================
 version    toolchains                             
@@ -1039,6 +1351,10 @@ version    toolchains
 *Biopython*
 +++++++++++
 
+Biopython is a set of freely available tools for biological computation written in Python by an international team of developers. It is a distributed collaborative effort to develop Python libraries and applications which address the needs of current and future work in bioinformatics. 
+
+*homepage*: http://www.biopython.org
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -1052,6 +1368,10 @@ version    toolchains
 *BiSearch*
 ++++++++++
 
+BiSearch is a primer-design algorithm for DNA sequences.
+
+*homepage*: http://bisearch.enzim.hu/
+
 ========    ===========================================================
 version     toolchains                                                 
 ========    ===========================================================
@@ -1064,6 +1384,10 @@ version     toolchains
 *Bismark*
 +++++++++
 
+A tool to map bisulfite converted sequence reads and  determine cytosine methylation states
+
+*homepage*: http://www.bioinformatics.babraham.ac.uk/projects/bismark/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1075,6 +1399,10 @@ version    toolchains
 
 *Bison*
 +++++++
+
+Bison is a general-purpose parser generator that converts an annotated context-free grammar into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
+
+*homepage*: http://www.gnu.org/software/bison
 
 =======    ========================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                              
@@ -1095,6 +1423,10 @@ version    toolchains
 *BitSeq*
 ++++++++
 
+ BitSeq (Bayesian Inference of Transcripts from Sequencing Data) is an   application for inferring expression levels of individual transcripts from sequencing (RNA-Seq)   data and estimating differential expression (DE) between conditions. An advantage of this   approach is the ability to account for both technical uncertainty and intrinsic biological   variance in order to avoid false DE calls. The technical contribution to the uncertainty comes   both from finite read-depth and the possibly ambiguous mapping of reads to multiple transcripts.
+
+*homepage*: https://code.google.com/p/bitseq/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1106,6 +1438,10 @@ version    toolchains
 
 *BLACS*
 +++++++
+
+The BLACS (Basic Linear Algebra Communication Subprograms) project is  an ongoing investigation whose purpose is to create a linear algebra oriented message passing interface  that may be implemented efficiently and uniformly across a large range of distributed memory platforms.
+
+*homepage*: http://www.netlib.org/blacs/
 
 =======    ===================================================================================
 version    toolchains                                                                         
@@ -1119,6 +1455,10 @@ version    toolchains
 *blasr*
 +++++++
 
+BLASR (Basic Local Alignment with Successive Refinement) rapidly maps reads to genomes by finding the  highest scoring local alignment or set of local alignments between the read and the genome. Optimized for PacBio's  extraordinarily long reads and taking advantage of rich quality values, BLASR maps reads rapidly with high accuracy.
+
+*homepage*: https://github.com/PacificBiosciences/blasr
+
 ================    ============
 version             toolchains  
 ================    ============
@@ -1130,6 +1470,10 @@ smrtanalysis-2.1    goolf/1.4.10
 
 *BLASR*
 +++++++
+
+ BLASR (Basic Local Alignment with Successive Refinement) rapidly maps   reads to genomes by finding the highest scoring local alignment or set of local alignments   between the read and the genome. Optimized for PacBio's extraordinarily long reads and   taking advantage of rich quality values, BLASR maps reads rapidly with high accuracy. 
+
+*homepage*: https://github.com/PacificBiosciences/blasr
 
 =======    ============
 version    toolchains  
@@ -1143,6 +1487,10 @@ version    toolchains
 *BLAST*
 +++++++
 
+Basic Local Alignment Search Tool, or BLAST, is an algorithm  for comparing primary biological sequence information, such as the amino-acid  sequences of different proteins or the nucleotides of DNA sequences.
+
+*homepage*: http://blast.ncbi.nlm.nih.gov/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1154,6 +1502,10 @@ version    toolchains
 
 *BLAST+*
 ++++++++
+
+Basic Local Alignment Search Tool, or BLAST, is an algorithm  for comparing primary biological sequence information, such as the amino-acid  sequences of different proteins or the nucleotides of DNA sequences.
+
+*homepage*: http://blast.ncbi.nlm.nih.gov/
 
 =======    ==============================================
 version    toolchains                                    
@@ -1171,6 +1523,10 @@ version    toolchains
 *BLAT*
 ++++++
 
+BLAT on DNA is designed to quickly find sequences of 95% and greater similarity of length 25 bases or more.
+
+*homepage*: http://genome.ucsc.edu/FAQ/FAQblat.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -1182,6 +1538,10 @@ version    toolchains
 
 *Blender*
 +++++++++
+
+Blender is the free and open source 3D creation suite. It supports  the entirety of the 3D pipeline-modeling, rigging, animation, simulation, rendering,  compositing and motion tracking, even video editing and game creation.
+
+*homepage*: https://www.blender.org/
 
 =======    ===========
 version    toolchains 
@@ -1195,6 +1555,10 @@ version    toolchains
 *Blitz++*
 +++++++++
 
+Blitz++ is a (LGPLv3+) licensed meta-template library for array manipulation in C++  with a speed comparable to Fortran implementations, while preserving an object-oriented interface
+
+*homepage*: http://blitz.sourceforge.net/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -1206,6 +1570,10 @@ version    toolchains
 
 *BOINC*
 +++++++
+
+BOINC is a program that lets you donate your idle computer time to science projects  like SETI@home, Climateprediction.net, Rosetta@home, World Community Grid, and many others.
+
+*homepage*: https://boinc.berkeley.edu
 
 =======    ======================
 version    toolchains            
@@ -1220,6 +1588,10 @@ version    toolchains
 *BoltzTraP*
 +++++++++++
 
+Boltzmann Transport Properties (BoltzTraP) is a program for calculating the semi-classic transport  coefficients.
+
+*homepage*: http://www.icams.de/content/departments/cmat/boltztrap/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -1231,6 +1603,10 @@ version    toolchains
 
 *Bonnie++*
 ++++++++++
+
+Bonnie++-1.97: Enhanced performance Test of Filesystem I/O
+
+*homepage*: http://www.coker.com.au/bonnie++/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -1244,6 +1620,10 @@ version    toolchains
 
 *Boost*
 +++++++
+
+Boost provides free peer-reviewed portable C++ source libraries.
+
+*homepage*: http://www.boost.org/
 
 =======    ===================================================================================================================================================
 version    toolchains                                                                                                                                         
@@ -1268,6 +1648,10 @@ version    toolchains
 *Bowtie*
 ++++++++
 
+Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome. 
+
+*homepage*: http://bowtie-bio.sourceforge.net/index.shtml
+
 =======    ================================================
 version    toolchains                                      
 =======    ================================================
@@ -1281,6 +1665,10 @@ version    toolchains
 
 *Bowtie2*
 +++++++++
+
+ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads   to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s   of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.   Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,   its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
+
+*homepage*: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -1305,6 +1693,10 @@ version    toolchains
 *BSMAP*
 +++++++
 
+BSMAP is a short reads mapping software for bisulfite sequencing reads.
+
+*homepage*: https://code.google.com/p/bsmap/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1316,6 +1708,10 @@ version    toolchains
 
 *bsoft*
 +++++++
+
+Bsoft is a collection of programs and a platform for development of software  for image and molecular processing in structural biology. Problems in structural biology  are approached with a highly modular design, allowing fast development of new algorithms  without the burden of issues such as file I/O. It provides an easily accessible interface,  a resource that can be and has been used in other packages.
+
+*homepage*: http://lsbr.niams.nih.gov/bsoft/
 
 =======    ============
 version    toolchains  
@@ -1329,6 +1725,10 @@ version    toolchains
 *buildenv*
 ++++++++++
 
+This module sets a group of environment variables for compilers, linkers, maths libraries, etc., that  you can use to easily transition between toolchains when building your software. To query the variables being set  please use: module show <this module name>
+
+*homepage*: None
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -1341,6 +1741,10 @@ default    intel/2015a
 *Bullet*
 ++++++++
 
+Bullet professional 3D Game Multiphysics Library provides state  of the art collision detection, soft body and rigid body dynamics.
+
+*homepage*: http://bulletphysics.org/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -1352,6 +1756,10 @@ version    toolchains
 
 *BWA*
 +++++
+
+Burrows-Wheeler Aligner (BWA) is an efficient program that aligns  relatively short nucleotide sequences against a long reference sequence such as the human genome.
+
+*homepage*: http://bio-bwa.sourceforge.net/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -1369,6 +1777,10 @@ version    toolchains
 *BXH_XCEDE_TOOLS*
 +++++++++++++++++
 
+A collection of data processing and image analysis  tools for data in BXH or XCEDE format. This includes data format  encapsulation/conversion, event-related analysis, QA tools, and more.  These tools form the basis of the fBIRN QA procedures and are also  distributed as part of the fBIRN Data Upload Scripts.
+
+*homepage*: http://www.nitrc.org/projects/bxh_xcede_tools/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1380,6 +1792,10 @@ version    toolchains
 
 *byacc*
 +++++++
+
+Berkeley Yacc (byacc) is generally conceded to be the best yacc variant available.  In contrast to bison, it is written to avoid dependencies upon a particular compiler.
+
+*homepage*: http://invisible-island.net/byacc/byacc.html
 
 ========    ===========================================================
 version     toolchains                                                 
@@ -1395,6 +1811,10 @@ version     toolchains
 
 *bzip2*
 +++++++
+
+bzip2 is a freely available, patent free, high-quality data compressor. It typically  compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical  compressors), whilst being around twice as fast at compression and six times faster at decompression.
+
+*homepage*: http://www.bzip.org/
 
 =======    ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
@@ -1417,6 +1837,10 @@ version    toolchains
 *cairo*
 +++++++
 
+Cairo is a 2D graphics library with support for multiple output devices.  Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers,  PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB
+
+*homepage*: http://cairographics.org
+
 =======    ===============================================================
 version    toolchains                                                     
 =======    ===============================================================
@@ -1433,6 +1857,10 @@ version    toolchains
 *cairomm*
 +++++++++
 
+  The Cairomm package provides a C++ interface to Cairo.  
+
+*homepage*: http://cairographics.org
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -1444,6 +1872,10 @@ version    toolchains
 
 *CAP3*
 ++++++
+
+CAP3 assembly program 
+
+*homepage*: http://seq.cs.iastate.edu/
 
 =====================    ==========
 version                  toolchains
@@ -1459,6 +1891,10 @@ version                  toolchains
 *CastXML*
 +++++++++
 
+CastXML is a C-family abstract syntax tree XML output tool.
+
+*homepage*: https://github.com/CastXML/CastXML
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -1471,6 +1907,10 @@ version     toolchains
 *CBLAS*
 +++++++
 
+C interface to the BLAS
+
+*homepage*: http://www.netlib.org/blas/
+
 ========    ============
 version     toolchains  
 ========    ============
@@ -1482,6 +1922,10 @@ version     toolchains
 
 *ccache*
 ++++++++
+
+ccache-3.1.9: Cache for C/C++ compilers
+
+*homepage*: http://ccache.samba.org/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -1496,6 +1940,10 @@ version    toolchains
 *CCfits*
 ++++++++
 
+CCfits is an object oriented interface to the cfitsio library. It is designed to make the capabilities of cfitsio available to programmers working in C++.
+
+*homepage*: http://heasarc.gsfc.nasa.gov/fitsio/CCfits/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -1507,6 +1955,10 @@ version    toolchains
 
 *CD-HIT*
 ++++++++
+
+ CD-HIT is a very widely used program for clustering and   comparing protein or nucleotide sequences.
+
+*homepage*: http://weizhong-lab.ucsd.edu/cd-hit/
 
 =======    =====================================
 version    toolchains                           
@@ -1522,6 +1974,10 @@ version    toolchains
 *CDO*
 +++++
 
+CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data.
+
+*homepage*: https://code.zmaw.de/projects/cdo
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1536,6 +1992,10 @@ version    toolchains
 *CEM*
 +++++
 
+ CEM: Transcriptome Assembly and Isoform Expression Level Estimation   from Biased RNA-Seq Reads. CEM is an algorithm to assemble transcripts and estimate   their expression levels from RNA-Seq reads. 
+
+*homepage*: http://alumni.cs.ucr.edu/~liw/cem.html
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1547,6 +2007,10 @@ version    toolchains
 
 *CFITSIO*
 +++++++++
+
+CFITSIO is a library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format.
+
+*homepage*: http://heasarc.gsfc.nasa.gov/fitsio/
 
 =======    ====================================================
 version    toolchains                                          
@@ -1564,6 +2028,10 @@ version    toolchains
 *cflow*
 +++++++
 
+cflow-1.4: Code-path flow analyzer for C
+
+*homepage*: http://www.gnu.org/software/cflow/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -1575,6 +2043,10 @@ version    toolchains
 
 *CGAL*
 ++++++
+
+The goal of the CGAL Open Source Project is to provide easy access to efficient  and reliable geometric algorithms in the form of a C++ library.
+
+*homepage*: http://www.cgal.org/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -1593,6 +2065,10 @@ version    toolchains
 *cgdb*
 ++++++
 
+cgdb-0.6.5: Curses-based interface to the GNU Debugger GDB 
+
+*homepage*: http://cgdb.sourceforge.net/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -1604,6 +2080,10 @@ version    toolchains
 
 *cgmpich*
 +++++++++
+
+Clang and GFortran based compiler toolchain,  including OpenMPI for MPI support.
+
+*homepage*: (none)
 
 =======    ==========
 version    toolchains
@@ -1617,6 +2097,10 @@ version    toolchains
 *cgmpolf*
 +++++++++
 
+Clang and GFortran based compiler toolchain,  MPICH for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1628,6 +2112,10 @@ version    toolchains
 
 *cgmvapich2*
 ++++++++++++
+
+Clang and GFortran based compiler toolchain,  including MVAPICH2 for MPI support.
+
+*homepage*: (none)
 
 =========    ==========
 version      toolchains
@@ -1642,6 +2130,10 @@ version      toolchains
 *cgmvolf*
 +++++++++
 
+Clang and GFortran based compiler toolchain,  MVAPICH2 for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
+
 =========    ==========
 version      toolchains
 =========    ==========
@@ -1655,6 +2147,10 @@ version      toolchains
 *cgompi*
 ++++++++
 
+Clang and GFortran based compiler toolchain,  including OpenMPI for MPI support.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1667,6 +2163,10 @@ version    toolchains
 *cgoolf*
 ++++++++
 
+Clang and GFortran based compiler toolchain,  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1678,6 +2178,10 @@ version    toolchains
 
 *Chapel*
 ++++++++
+
+ Chapel is an emerging parallel programming language whose design and development  is being led by Cray Inc. Chapel is designed to improve the productivity of high-end computer users  while also serving as a portable parallel programming model that can be used on commodity clusters  or desktop multicore systems. Chapel strives to vastly improve the programmability of large-scale  parallel computers while matching or beating the performance and portability of current programming  models like MPI.
+
+*homepage*: http://chapel.cray.com
 
 =======    ========================================
 version    toolchains                              
@@ -1695,6 +2199,10 @@ version    toolchains
 *CHARMM*
 ++++++++
 
+CHARMM (Chemistry at HARvard Macromolecular Mechanics) is a versatile and widely used molecular simulation program with broad application to many-particle systems.
+
+*homepage*: http://www.charmm.org
+
 =======    ====================================================================================
 version    toolchains                                                                          
 =======    ====================================================================================
@@ -1706,6 +2214,10 @@ version    toolchains
 
 *CHASE*
 +++++++
+
+Case-control HAplotype Sharing analyses.   Haplotype sharing analyses for genome-wide association studies.
+
+*homepage*: http://people.duke.edu/~asallen/Software.html
 
 ========    ==========
 version     toolchains
@@ -1719,6 +2231,10 @@ version     toolchains
 *Check*
 +++++++
 
+ Check is a unit testing framework for C. It features a simple interface   for defining unit tests, putting little in the way of the developer. Tests are run in a   separate address space, so both assertion failures and code errors that cause segmentation   faults or other signals can be caught. Test results are reportable in the following:   Subunit, TAP, XML, and a generic logging format.
+
+*homepage*: http://check.sourceforge.net
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1730,6 +2246,10 @@ version    toolchains
 
 *CheMPS2*
 +++++++++
+
+CheMPS2 is a scientific library which contains a spin-adapted implementation of the density matrix renormalization group (DMRG) for ab initio quantum chemistry.
+
+*homepage*: https://github.com/SebWouters/CheMPS2
 
 =======    ===========
 version    toolchains 
@@ -1747,6 +2267,10 @@ version    toolchains
 *Chimera*
 +++++++++
 
+ UCSF Chimera is a highly extensible program for interactive visualization   and analysis of molecular structures and related data, including density maps, supramolecular   assemblies, sequence alignments, docking results, trajectories, and conformational ensembles. 
+
+*homepage*: https://www.cgl.ucsf.edu/chimera/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1759,6 +2283,10 @@ version    toolchains
 *ChIP-Seq*
 ++++++++++
 
+The ChIP-Seq software provides methods for the analysis of ChIP-seq data and   other types of mass genome annotation data. The most common analysis tasks include positional   correlation analysis, peak detection, and genome partitioning into signal-rich and signal-depleted regions.
+
+*homepage*: http://chip-seq.sourceforge.net/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -1770,6 +2298,10 @@ version    toolchains
 
 *Circos*
 ++++++++
+
+Circos is a software package for visualizing data and information.  It visualizes data in a circular layout - this makes Circos ideal for exploring  relationships between objects or positions.
+
+*homepage*: http://www.circos.ca/
 
 =======    ===========
 version    toolchains 
@@ -1784,6 +2316,10 @@ version    toolchains
 *Circuitscape*
 ++++++++++++++
 
+Circuitscape is a free, open-source program which borrows algorithms  from electronic circuit theory to predict patterns of movement, gene flow,  and genetic differentiation among plant and animal populations in  heterogeneous landscapes. Circuit theory complements least-cost path  approaches because it considers effects of all possible pathways  across a landscape simultaneously.
+
+*homepage*: http://www.circuitscape.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -1795,6 +2331,10 @@ version    toolchains
 
 *Clang*
 +++++++
+
+C, C++, Objective-C compiler, based on LLVM.  Does not  include C++ standard library -- use libstdc++ from GCC.
+
+*homepage*: http://clang.llvm.org/
 
 =======    ==========================
 version    toolchains                
@@ -1818,6 +2358,10 @@ version    toolchains
 *ClangGCC*
 ++++++++++
 
+Clang and GCC based compiler toolchain.  Clang will use libstdc++. GFortran will be used to compile Fortran code.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1831,6 +2375,10 @@ version    toolchains
 
 *CLHEP*
 +++++++
+
+The CLHEP project is intended to be a set of HEP-specific foundation and  utility classes such as random generators, physics vectors, geometry and linear algebra.  CLHEP is structured in a set of packages independent of any external package.
+
+*homepage*: http://proj-clhep.web.cern.ch/proj-clhep/
 
 =======    =====================================================================================
 version    toolchains                                                                           
@@ -1848,6 +2396,10 @@ version    toolchains
 *CLooG*
 +++++++
 
+CLooG is a free software and library to generate code for scanning Z-polyhedra. That is, it finds a code (e.g. in C, FORTRAN...) that reaches each integral point of one or more parameterized polyhedra. CLooG has been originally written to solve the code generation problem for optimizing compilers based on the polytope model. Nevertheless it is used now in various area e.g. to build control automata for high-level synthesis or to find the best  polynomial approximation of a function. CLooG may help in any situation where scanning polyhedra matters. While the user  has full control on generated code quality, CLooG is designed to avoid control overhead and to produce a very effective code. 
+
+*homepage*: http://www.bastoul.net/cloog/index.php
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1859,6 +2411,10 @@ version    toolchains
 
 *Clustal-Omega*
 +++++++++++++++
+
+ Clustal Omega is a multiple sequence alignment   program for proteins. It produces biologically meaningful multiple   sequence alignments of divergent sequences. Evolutionary relationships   can be seen via viewing Cladograms or Phylograms 
+
+*homepage*: http://www.clustal.org/omega/
 
 =======    ====================================
 version    toolchains                          
@@ -1872,6 +2428,10 @@ version    toolchains
 *ClustalW2*
 +++++++++++
 
+ClustalW2 is a general purpose multiple sequence alignment program for DNA or proteins.
+
+*homepage*: http://www.ebi.ac.uk/Tools/msa/clustalw2/
+
 =======    =======================================================================
 version    toolchains                                                             
 =======    =======================================================================
@@ -1884,6 +2444,10 @@ version    toolchains
 *Cluster-Buster*
 ++++++++++++++++
 
+Cluster-Buster: Finding dense clusters of motifs in DNA sequences
+
+*homepage*: https://github.com/weng-lab/cluster-buster/
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -1895,6 +2459,10 @@ version     toolchains
 
 *CMake*
 +++++++
+
+CMake, the cross-platform, open-source build system.  CMake is a family of tools designed to build, test and package software.
+
+*homepage*: http://www.cmake.org
 
 ========    ===============================================================================================================================================================================================================================================
 version     toolchains                                                                                                                                                                                                                                     
@@ -1927,6 +2495,10 @@ version     toolchains
 *Commet*
 ++++++++
 
+ COMMET ("COmpare Multiple METagenomes") provides a global similarity overview between all datasets of  a large metagenomic project.  
+
+*homepage*: https://colibread.inria.fr/software/commet/
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -1938,6 +2510,10 @@ version     toolchains
 
 *configparser*
 ++++++++++++++
+
+configparser is a Python library that brings the updated configparser from Python 3.5 to Python 2.6-3.5
+
+*homepage*: http://docs.python.org/3/library/configparser.html
 
 =======    =======================
 version    toolchains             
@@ -1951,6 +2527,10 @@ version    toolchains
 *configurable-http-proxy*
 +++++++++++++++++++++++++
 
+HTTP proxy for node.js including a REST API for updating the routing table.  Developed as a part of the Jupyter Hub multi-user server.
+
+*homepage*: https://github.com/jupyterhub/configurable-http-proxy
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1962,6 +2542,10 @@ version    toolchains
 
 *CONTRAfold*
 ++++++++++++
+
+ CONditional TRAining for RNA Secondary Structure Prediction  
+
+*homepage*: http://contra.stanford.edu/contrafold/
 
 =======    ============
 version    toolchains  
@@ -1975,6 +2559,10 @@ version    toolchains
 *CONTRAlign*
 ++++++++++++
 
+CONditional TRAining for Protein Sequence Alignment
+
+*homepage*: http://contra.stanford.edu/contralign/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -1987,6 +2575,10 @@ version    toolchains
 *Coot*
 ++++++
 
+Coot is for macromolecular model building, model completion  and validation, particularly suitable for protein modelling using X-ray data.
+
+*homepage*: http://www2.mrc-lmb.cam.ac.uk/Personal/pemsley/coot
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -1998,6 +2590,10 @@ version    toolchains
 
 *Coreutils*
 +++++++++++
+
+The GNU Core Utilities are the basic file, shell and text manipulation utilities of the  GNU operating system.  These are the core utilities which are expected to exist on every operating system.
+
+*homepage*: http://www.gnu.org/software/coreutils/
 
 =======    =========================
 version    toolchains               
@@ -2012,6 +2608,10 @@ version    toolchains
 *Corkscrew*
 +++++++++++
 
+Corkscrew-2.0: Tool for tunneling SSH through HTTP proxies
+
+*homepage*: http://www.agroman.net/corkscrew/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -2024,6 +2624,10 @@ version    toolchains
 *CosmoloPy*
 +++++++++++
 
+A cosmology package for Python. CosmoloPy is  built on and designed for use with NumPy and SciPy.
+
+*homepage*: https://github.com/roban/CosmoloPy
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -2035,6 +2639,10 @@ version    toolchains
 
 *CP2K*
 ++++++
+
+CP2K is a freely available (GPL) program, written in Fortran 95, to perform atomistic and molecular  simulations of solid state, liquid, molecular and biological systems. It provides a general framework for different  methods such as e.g. density functional theory (DFT) using a mixed Gaussian and plane waves approach (GPW), and  classical pair and many-body potentials. 
+
+*homepage*: http://www.cp2k.org/
 
 ========    =========================================================================================
 version     toolchains                                                                               
@@ -2056,6 +2664,10 @@ version     toolchains
 *CPLEX*
 +++++++
 
+IBM ILOG CPLEX Optimizer's mathematical programming technology enables  analytical decision support for improving efficiency,  reducing costs, and increasing profitability.
+
+*homepage*: http://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2069,6 +2681,10 @@ version    toolchains
 *cppcheck*
 ++++++++++
 
+Cppcheck is a static analysis tool for C/C++ code
+
+*homepage*: http://cppcheck.sourceforge.net/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2081,6 +2697,10 @@ version    toolchains
 *CppUnit*
 +++++++++
 
+CppUnit is the C++ port of the famous JUnit framework for unit testing.
+
+*homepage*: http://sourceforge.net/projects/cppunit/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -2092,6 +2712,10 @@ version    toolchains
 
 *cramtools*
 +++++++++++
+
+CRAMTools is a set of Java tools and APIs for efficient compression of sequence  read data. Although this is intended as a stable version the code is released as early access. Parts of the CRAMTools are experimental and may not be supported in the future.
+
+*homepage*: https://github.com/enasequence/cramtools/
 
 =======    ==========
 version    toolchains
@@ -2106,6 +2730,10 @@ version    toolchains
 *CrayCCE*
 +++++++++
 
+Toolchain using Cray compiler wrapper, using PrgEnv-cray module (PE release: November 2015). 
+
+*homepage*: http://docs.cray.com/books/S-9407-1511
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2118,6 +2746,10 @@ version    toolchains
 
 *CrayGNU*
 +++++++++
+
+Toolchain using Cray compiler wrapper, using PrgEnv-gnu module (PE release: June 2016). 
+
+*homepage*: http://docs.cray.com/books/S-9408-1606/
 
 =======    ==========
 version    toolchains
@@ -2135,6 +2767,10 @@ version    toolchains
 *CrayIntel*
 +++++++++++
 
+Toolchain using Cray compiler wrapper, using PrgEnv-intel module (PE release: June 2016). 
+
+*homepage*: http://docs.cray.com/books/S-9407-1606
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2149,6 +2785,10 @@ version    toolchains
 *CrayPGI*
 +++++++++
 
+Toolchain using Cray compiler wrapper, using PrgEnv-pgi module.
+
+*homepage*: http://www.pgroup.com/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2160,6 +2800,10 @@ version    toolchains
 
 *CRF++*
 +++++++
+
+CRF++ is a simple, customizable, and open source implementation of  Conditional Random Fields (CRFs) for segmenting/labeling sequential data. CRF++ is  designed for generic purpose and will be applied to a variety of NLP tasks, such as  Named Entity Recognition, Information Extraction and Text Chunking. 
+
+*homepage*: https://taku910.github.io/crfpp/
 
 =======    ============================================================
 version    toolchains                                                  
@@ -2174,6 +2818,10 @@ version    toolchains
 *CrossTalkZ*
 ++++++++++++
 
+ CrossTalkZ is a statistical method and software to assess the significance of crosstalk enrichment  between pairs of gene or protein groups in large biological networks. 
+
+*homepage*: http://sonnhammer.sbc.su.se/download/software/CrossTalkZ/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2185,6 +2833,10 @@ version    toolchains
 
 *CRPropa*
 +++++++++
+
+CRPropa is a publicly available code to study the propagation of ultra high energy nuclei up to iron  on their voyage through an extra galactic environment.
+
+*homepage*: https://crpropa.desy.de
 
 =======    ===========
 version    toolchains 
@@ -2198,6 +2850,10 @@ version    toolchains
 *csvkit*
 ++++++++
 
+csvkit is a suite of command-line tools for converting to and working with CSV,  the king of tabular file formats.
+
+*homepage*: https://github.com/wireservice/csvkit
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2209,6 +2865,10 @@ version    toolchains
 
 *ctffind*
 +++++++++
+
+CTFFIND and CTFTILT are two programs for finding CTFs of electron micrographs.
+
+*homepage*: http://grigoriefflab.janelia.org/ctf
 
 =======    =======================
 version    toolchains             
@@ -2223,6 +2883,10 @@ version    toolchains
 
 *Cube*
 ++++++
+
+Cube, which is used as performance report explorer for Scalasca and  Score-P, is a generic tool for displaying a multi-dimensional performance space  consisting of the dimensions (i) performance metric, (ii) call path, and (iii) system  resource. Each dimension can be represented as a tree, where non-leaf nodes of the tree  can be collapsed or expanded to achieve the desired level of granularity.
+
+*homepage*: http://www.scalasca.org/software/cube-4.x/download.html
 
 =======    ================================
 version    toolchains                      
@@ -2241,6 +2905,10 @@ version    toolchains
 *Cuby*
 ++++++
 
+Cuby is a computational chemistry framework written in ruby.  For users, it provides an unified access to various computational  methods available in difefrent software packages. For developers,  Cuby is much more - it is a complex framework that provides  object-oriented access to the data enetering the calculations and  to their results, making it easy to create new computational  protocols by combining existing blocks of the framework.
+
+*homepage*: http://cuby.molecular.cz/cuby4/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2252,6 +2920,10 @@ version    toolchains
 
 *CUDA*
 ++++++
+
+CUDA (formerly Compute Unified Device Architecture) is a parallel  computing platform and programming model created by NVIDIA and implemented by the  graphics processing units (GPUs) that they produce. CUDA gives developers access  to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.
+
+*homepage*: https://developer.nvidia.com/cuda-toolkit
 
 =======    =========================================
 version    toolchains                               
@@ -2270,6 +2942,10 @@ version    toolchains
 *cuDNN*
 +++++++
 
+The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for     deep neural networks.
+
+*homepage*: https://developer.nvidia.com/cudnn
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2283,6 +2959,10 @@ version    toolchains
 
 *Cufflinks*
 +++++++++++
+
+Transcript assembly, differential expression, and differential regulation for RNA-Seq
+
+*homepage*: http://cole-trapnell-lab.github.io/cufflinks/
 
 =======    ============================================================================
 version    toolchains                                                                  
@@ -2298,6 +2978,10 @@ version    toolchains
 
 *cURL*
 ++++++
+
+libcurl is a free and easy-to-use client-side URL transfer library,  supporting DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS,  POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and TFTP. libcurl supports  SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload,  proxies, cookies, user+password authentication (Basic, Digest, NTLM, Negotiate,  Kerberos), file transfer resume, http proxy tunneling and more.
+
+*homepage*: http://curl.haxx.se
 
 =======    ============================================================================================================
 version    toolchains                                                                                                  
@@ -2324,6 +3008,10 @@ version    toolchains
 *cutadapt*
 ++++++++++
 
+ Cutadapt finds and removes adapter sequences, primers, poly-A tails and  other types of unwanted sequence from your high-throughput sequencing reads. 
+
+*homepage*: http://opensource.scilifelab.se/projects/cutadapt/
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -2343,6 +3031,10 @@ version    toolchains
 *CVS*
 +++++
 
+CVS is a version control system, an important component of  Source Configuration Management (SCM).
+
+*homepage*: https://savannah.nongnu.org/projects/cvs
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -2355,6 +3047,10 @@ version    toolchains
 *CVXOPT*
 ++++++++
 
+CVXOPT is a free software package for convex optimization based on the Python programming language.  Its main purpose is to make the development of software for convex optimization applications straightforward  by building on Python's extensive standard library and on the strengths of Python as a high-level programming language.
+
+*homepage*: http://abel.ee.ucla.edu/cvxopt/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -2366,6 +3062,10 @@ version    toolchains
 
 *Cython*
 ++++++++
+
+The Cython language makes writing C extensions for the Python language as easy as Python itself. Cython is a source code translator based on the well-known Pyrex, but supports more cutting edge functionality and optimizations.
+
+*homepage*: https://pypi.python.org/pypi/Cython/
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -2392,6 +3092,10 @@ version    toolchains
 *damageproto*
 +++++++++++++
 
+X protocol and ancillary headers for xinerama
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -2403,6 +3107,10 @@ version    toolchains
 
 *dask*
 ++++++
+
+Dask provides multi-core execution on larger-than-memory datasets using blocked algorithms  and task scheduling.
+
+*homepage*: http://github.com/dask/dask/
 
 =======    ===========
 version    toolchains 
@@ -2416,6 +3124,10 @@ version    toolchains
 
 *DB*
 ++++
+
+Berkeley DB enables the development of custom data management solutions,  without the overhead traditionally associated with such custom projects.
+
+*homepage*: http://www.oracle.com/technetwork/products/berkeleydb
 
 =======    ===================================================
 version    toolchains                                         
@@ -2435,6 +3147,10 @@ version    toolchains
 *DB_File*
 +++++++++
 
+Perl5 access to Berkeley DB version 1.x.
+
+*homepage*: http://perldoc.perl.org/DB_File.html
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -2447,6 +3163,10 @@ version    toolchains
 
 *DBD-mysql*
 +++++++++++
+
+Perl binding for MySQL
+
+*homepage*: http://search.cpan.org/~capttofu/DBD-mysql-%(version)s/
 
 =======    ========================
 version    toolchains              
@@ -2462,6 +3182,10 @@ version    toolchains
 *DBD-Pg*
 ++++++++
 
+Perl binding for PostgreSQL
+
+*homepage*: http://search.cpan.org/~turnstep/DBD-Pg-3.4.1/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2473,6 +3197,10 @@ version    toolchains
 
 *DBD-SQLite*
 ++++++++++++
+
+Perl binding for SQLite
+
+*homepage*: http://search.cpan.org/~ishigaki/DBD-SQLite-1.42/
 
 =======    ===========
 version    toolchains 
@@ -2486,6 +3214,10 @@ version    toolchains
 *DBus*
 ++++++
 
+D-Bus is a message bus system, a simple way for applications to talk  to one another.  In addition to interprocess communication, D-Bus helps  coordinate process lifecycle; it makes it simple and reliable to code  a "single instance" application or daemon, and to launch applications  and daemons on demand when their services are needed.
+
+*homepage*: http://dbus.freedesktop.org/doc/dbus-glib
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2497,6 +3229,10 @@ version    toolchains
 
 *dbus-glib*
 +++++++++++
+
+D-Bus is a message bus system, a simple way for applications to talk to one another.
+
+*homepage*: http://dbus.freedesktop.org/doc/dbus-glib
 
 =======    ===========
 version    toolchains 
@@ -2510,6 +3246,10 @@ version    toolchains
 *DCA++*
 +++++++
 
+The DCA++ software project is a C++ implementation of the dynamical cluster  approximation (DCA) and its DCA+ extension. It aims to solve lattice models of strongly correlated  electron systems. This module bundles all the dependencies for the CPU+GPU version.
+
+*homepage*: http://www.itp.phys.ethz.ch/research/comp/computation.html
+
 =======    ===============
 version    toolchains     
 =======    ===============
@@ -2521,6 +3261,10 @@ version    toolchains
 
 *deap*
 ++++++
+
+DEAP is a novel evolutionary computation framework for rapid prototyping and testing of ideas.  It seeks to make algorithms explicit and data structures transparent.
+
+*homepage*: http://deap.readthedocs.org/en/master/
 
 =======    ===========
 version    toolchains 
@@ -2534,6 +3278,10 @@ version    toolchains
 *DendroPy*
 ++++++++++
 
+A Python library for phylogenetics and phylogenetic computing:  reading, writing, simulation, processing and manipulation of phylogenetic trees  (phylogenies) and characters.
+
+*homepage*: https://pypi.python.org/pypi/DendroPy/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -2545,6 +3293,10 @@ version    toolchains
 
 *DFT-D3*
 ++++++++
+
+DFT-D3 implements a dispersion correction for density functionals, Hartree-Fock and semi-empirical quantum chemical methods.
+
+*homepage*: http://www.thch.uni-bonn.de/tc/index.php?section=downloads&subsection=DFT-D3&lang=english
 
 =======    ===========
 version    toolchains 
@@ -2558,6 +3310,10 @@ version    toolchains
 *DIAL*
 ++++++
 
+DIAL (De novo Identification of Alleles) is a collection of programs  to automate the discovery of alleles for a species where we lack a reference sequence.   The SNPs/alleles are specifically selected for a low error rate in genotyping assays.   
+
+*homepage*: http://www.bx.psu.edu/miller_lab/
+
 ==========    ==========
 version       toolchains
 ==========    ==========
@@ -2569,6 +3325,10 @@ version       toolchains
 
 *DIALIGN-TX*
 ++++++++++++
+
+ greedy and progressive approaches for segment-based   multiple sequence alignment 
+
+*homepage*: http://dialign-tx.gobics.de/
 
 =======    ============
 version    toolchains  
@@ -2582,6 +3342,10 @@ version    toolchains
 *DicomBrowser*
 ++++++++++++++
 
+DicomBrowser is an application for inspecting and modifying DICOM metadata in many files at once.
+
+*homepage*: http://nrg.wustl.edu/software/dicom-browser/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -2593,6 +3357,10 @@ version    toolchains
 
 *Diffutils*
 +++++++++++
+
+Diffutils: GNU diff utilities - find the differences between files
+
+*homepage*: http://www.gnu.org/software/diffutils/diffutils.html
 
 =======    =========================
 version    toolchains               
@@ -2607,6 +3375,10 @@ version    toolchains
 *DIRAC*
 +++++++
 
+The DIRAC program computes molecular properties using relativistic quantum chemical methods.
+
+*homepage*: http://diracprogram.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2618,6 +3390,10 @@ version    toolchains
 
 *DISCOVARdenovo*
 ++++++++++++++++
+
+DISCOVAR de novo can generate de novo assemblies for both large and small genomes.  It currently does not call variants.
+
+*homepage*: http://www.broadinstitute.org/software/discovar/blog/
 
 =======    ==========
 version    toolchains
@@ -2631,6 +3407,10 @@ version    toolchains
 *DL_POLY_Classic*
 +++++++++++++++++
 
+DL_POLY Classic is a freely available molecular dynamics program developed  from the DL_POLY_2 package. This version does not install the java gui.
+
+*homepage*: http://ccpforge.cse.rl.ac.uk/gf/project/dl_poly_classic/
+
 =======    ==============================================
 version    toolchains                                    
 =======    ==============================================
@@ -2642,6 +3422,10 @@ version    toolchains
 
 *DMTCP*
 +++++++
+
+DMTCP (Distributed MultiThreaded Checkpointing)  transparently checkpoints a single-host or distributed computation  in user-space -- with no modifications to user code or to the O/S.
+
+*homepage*: http://dmtcp.sourceforge.net/index.html
 
 =======    ==========
 version    toolchains
@@ -2655,6 +3439,10 @@ version    toolchains
 *Docutils*
 ++++++++++
 
+Docutils is an open-source text processing system for processing plaintext  documentation into useful formats, such as HTML, LaTeX, man-pages, open-document or XML.  It includes reStructuredText, the easy to read, easy to use, what-you-see-is-what-you-get  plaintext markup language.
+
+*homepage*: http://docutils.sourceforge.net/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -2666,6 +3454,10 @@ version    toolchains
 
 *DOLFIN*
 ++++++++
+
+DOLFIN is the C++/Python interface of FEniCS, providing a consistent PSE   (Problem Solving Environment) for ordinary and partial differential equations.
+
+*homepage*: https://bitbucket.org/fenics-project/dolfin
 
 =======    ==============================================
 version    toolchains                                    
@@ -2679,6 +3471,10 @@ version    toolchains
 
 *Doxygen*
 +++++++++
+
+Doxygen is a documentation system for C++, C, Java, Objective-C, Python,   IDL (Corba and Microsoft flavors), Fortran, VHDL, PHP, C#, and to some extent D.
+
+*homepage*: http://www.doxygen.org
 
 =======    ==========================================================================================================
 version    toolchains                                                                                                
@@ -2701,6 +3497,10 @@ version    toolchains
 *drFAST*
 ++++++++
 
+ drFAST is designed to map di-base reads (SOLiD color space reads)   to reference genome assemblies; in a fast and memory-efficient manner. 
+
+*homepage*: http://drfast.sourceforge.net/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -2712,6 +3512,10 @@ version    toolchains
 
 *DSRC*
 ++++++
+
+DNA Sequence Reads Compression is an application designed for compression of data files  containing reads from DNA sequencing in FASTQ format. The amount of such files can be huge, e.g., a few  (or tens) of gigabytes, so a need for a robust data compression tool is clear. Usually universal compression  programs like gzip or bzip2 are used for this purpose, but it is obvious that a specialized tool can work better.
+
+*homepage*: http://sun.aei.polsl.pl/dsrc
 
 =======    ==========
 version    toolchains
@@ -2733,6 +3537,10 @@ version    toolchains
 
 *EasyBuild*
 +++++++++++
+
+EasyBuild is a software build and installation framework  written in Python that allows you to install software in a structured,  repeatable and robust way.
+
+*homepage*: http://hpcugent.github.com/easybuild/
 
 =======    ==========
 version    toolchains
@@ -2784,6 +3592,10 @@ version    toolchains
 *ECore*
 +++++++
 
+The e-Core technology simulates the natural processes of sedimentary rock formation; i.e.  sedimentation, compaction and diagenesis.
+
+*homepage*: http://www.numericalrocks.com/index.php?option=com_content&task=blogcategory&id=25&Itemid=25
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2795,6 +3607,10 @@ version    toolchains
 
 *ed*
 ++++
+
+GNU ed is a line-oriented text editor.
+
+*homepage*: http://www.gnu.org/software/ed/ed.html
 
 =======    =========================
 version    toolchains               
@@ -2808,6 +3624,10 @@ version    toolchains
 *EggLib*
 ++++++++
 
+EggLib is a C++/Python library and program package for evolutionary genetics and genomics.
+
+*homepage*: http://egglib.sourceforge.net/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -2819,6 +3639,10 @@ version    toolchains
 
 *Eigen*
 +++++++
+
+Eigen is a C++ template library for linear algebra:  matrices, vectors, numerical solvers, and related algorithms.
+
+*homepage*: http://eigen.tuxfamily.org/index.php?title=Main_Page
 
 =======    ==========================================================================
 version    toolchains                                                                
@@ -2842,6 +3666,10 @@ version    toolchains
 *EIGENSOFT*
 +++++++++++
 
+The EIGENSOFT package combines functionality from our population genetics methods (Patterson et al. 2006)   and our EIGENSTRAT stratification correction method (Price et al. 2006). The EIGENSTRAT method uses principal components   analysis to explicitly model ancestry differences between cases and controls along continuous axes of variation;   the resulting correction is specific to a candidate marker’s variation in frequency across ancestral populations,   minimizing spurious associations while maximizing power to detect true associations. The EIGENSOFT package has a built-in   plotting script and supports multiple file formats and quantitative phenotypes.
+
+*homepage*: http://www.hsph.harvard.edu/alkes-price/software/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -2853,6 +3681,10 @@ version    toolchains
 
 *ELinks*
 ++++++++
+
+ELinks-0.12pre5: Extended/Enhanced Links
+
+*homepage*: http://elinks.or.cz/
 
 ========    ===========================================================
 version     toolchains                                                 
@@ -2866,6 +3698,10 @@ version     toolchains
 *ELPA*
 ++++++
 
+Eigenvalue SoLvers for Petaflop-Applications .
+
+*homepage*: http://elpa.rzg.mpg.de
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -2878,6 +3714,10 @@ version    toolchains
 *ELPH*
 ++++++
 
+ ELPH is a general-purpose Gibbs sampler for finding motifs in a set   of DNA or protein sequences. The program takes as input a set containing anywhere from   a few dozen to thousands of sequences, and searches through them for the most common motif,   assuming that each sequence contains one copy of the motif. We have used ELPH to find   patterns such as ribosome binding sites (RBSs) and exon splicing enhancers (ESEs). 
+
+*homepage*: http://ccb.jhu.edu/software/ELPH/index.shtml
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -2889,6 +3729,10 @@ version    toolchains
 
 *Emacs*
 +++++++
+
+GNU Emacs is an extensible, customizable text editor—and more.  At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language  with extensions to support text editing.
+
+*homepage*: http://www.gnu.org/software/emacs/
 
 =======    ==============
 version    toolchains    
@@ -2904,6 +3748,10 @@ version    toolchains
 *EMAN2*
 +++++++
 
+EMAN2 is the successor to EMAN1. It is a broadly based greyscale scientific image processing suite  with a primary focus on processing data from transmission electron microscopes. 
+
+*homepage*: http://blake.bcm.edu/emanwiki/EMAN2
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -2915,6 +3763,10 @@ version    toolchains
 
 *EMBOSS*
 ++++++++
+
+EMBOSS is 'The European Molecular Biology Open Software Suite'.  EMBOSS is a free Open Source software analysis package specially developed for  the needs of the molecular biology (e.g. EMBnet) user community.
+
+*homepage*: http://emboss.sourceforge.net/
 
 =======    =======================================
 version    toolchains                             
@@ -2928,6 +3780,10 @@ version    toolchains
 *entrypoints*
 +++++++++++++
 
+Entry points are a way for Python packages to advertise objects with some common interface.
+
+*homepage*: https://github.com/takluyver/entrypoints
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -2939,6 +3795,10 @@ version    toolchains
 
 *EPD*
 +++++
+
+The Enthought Python Distribution provides scientists with a comprehensive set of tools to perform  rigorous data analysis and visualization. Python, distinguished by its flexibility, coherence, and ease-of-use,  is rapidly becoming the programming language of choice for researchers worldwide.  EPD extends this capacity with a powerful collection of Python libraries to enable interactive technical computing and  cross-platform rapid application development.
+
+*homepage*: http://www.enthought.com/products/edudownload.php
 
 =========    ==========
 version      toolchains
@@ -2952,6 +3812,10 @@ version      toolchains
 *ErlangOTP*
 +++++++++++
 
+Erlang is a programming language used to build massively scalable  soft real-time systems with requirements on high availability. Some of its uses are  in telecoms, banking, e-commerce, computer telephony and instant messaging. Erlang's  runtime system has built-in support for concurrency, distribution and fault tolerance.
+
+*homepage*: http://www.erlang.org/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -2963,6 +3827,10 @@ R16B02     GCC/4.7.2, goolf/1.4.10
 
 *ESMF*
 ++++++
+
+The Earth System Modeling Framework (ESMF) is software for building and coupling weather,  climate, and related models.
+
+*homepage*: http://sourceforge.net/projects/esmf
 
 =======    =================================================
 version    toolchains                                       
@@ -2978,6 +3846,10 @@ version    toolchains
 *ESPResSo*
 ++++++++++
 
+ESPResSo is a highly versatile software package for performing                  and analyzing scientific Molecular Dynamics many-particle simulations                  of coarse-grained atomistic or bead-spring models as they are used in                  soft-matter research in physics, chemistry and molecular biology.
+
+*homepage*: http://espressomd.org/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -2990,6 +3862,10 @@ version    toolchains
 *ETSF_IO*
 +++++++++
 
+A library of F90 routines to read/write the ETSF file  format has been written. It is called ETSF_IO and available under LGPL. 
+
+*homepage*: http://www.etsf.eu/resources/software/libraries_and_tools
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3001,6 +3877,10 @@ version    toolchains
 
 *eudev*
 +++++++
+
+eudev is a fork of systemd-udev with the goal of obtaining  better compatibility with existing software such as  OpenRC and Upstart, older kernels, various toolchains  and anything else required by users and various distributions.
+
+*homepage*: https://wiki.gentoo.org/wiki/Project:Eudev
 
 =======    ==================================================
 version    toolchains                                        
@@ -3017,6 +3897,10 @@ version    toolchains
 *evmix*
 +++++++
 
+evmix: Extreme Value Mixture Modelling,  Threshold Estimation and Boundary Corrected Kernel Density Estimation
+
+*homepage*: http://cran.r-project.org/web/packages/evmix
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3030,6 +3914,10 @@ version    toolchains
 *Exonerate*
 +++++++++++
 
+ Exonerate is a generic tool for pairwise sequence comparison.  It allows you to align sequences using a many alignment models, using either   exhaustive dynamic programming, or a variety of heuristics. 
+
+*homepage*: http://www.ebi.ac.uk/~guy/exonerate/
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -3042,6 +3930,10 @@ version    toolchains
 
 *expat*
 +++++++
+
+Expat is an XML parser library written in C. It is a stream-oriented parser in which an application  registers handlers for things the parser might find in the XML document (like start tags)
+
+*homepage*: http://expat.sourceforge.net/
 
 =======    ================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                      
@@ -3057,6 +3949,10 @@ version    toolchains
 *eXpress*
 +++++++++
 
+ eXpress is a streaming tool for quantifying the abundances of a set   of target sequences from sampled subsequences. Example applications include transcript-level   RNA-Seq quantification, allele-specific/haplotype expression analysis (from RNA-Seq),   transcription factor binding quantification in ChIP-Seq, and analysis of metagenomic data.
+
+*homepage*: http://bio.math.berkeley.edu/eXpress/index.html
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -3068,6 +3964,10 @@ version    toolchains
 
 *Extrae*
 ++++++++
+
+Extrae is the core instrumentation package developed by the Performance Tools  group at BSC. Extrae is capable of instrumenting applications based on MPI, OpenMP, pthreads,  CUDA1, OpenCL1, and StarSs1 using different instrumentation approaches. The information gathered  by Extrae typically includes timestamped events of runtime calls, performance counters and source  code references. Besides, Extrae provides its own API to allow the user to manually instrument his  or her application.
+
+*homepage*: http://www.bsc.es/computer-sciences/performance-tools
 
 =======    ====================
 version    toolchains          
@@ -3091,6 +3991,10 @@ version    toolchains
 *FASTA*
 +++++++
 
+The FASTA programs find regions of local or global (new) similarity between  protein or DNA sequences, either by searching Protein or DNA databases, or by identifying  local duplications within a sequence.
+
+*homepage*: http://fasta.bioch.virginia.edu
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3102,6 +4006,10 @@ version    toolchains
 
 *fastahack*
 +++++++++++
+
+Utilities for indexing and sequence extraction from FASTA files
+
+*homepage*: https://github.com/ekg/fastahack
 
 ========    ==========================
 version     toolchains                
@@ -3115,6 +4023,10 @@ version     toolchains
 *fastPHASE*
 +++++++++++
 
+ fastPHASE: software for haplotype reconstruction,  and estimating missing genotypes from population data Documentation: http://scheet.org/code/fastphase_doc_1.4.pdf
+
+*homepage*: http://stephenslab.uchicago.edu/software.html#fastphase
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3126,6 +4038,10 @@ version    toolchains
 
 *FastQC*
 ++++++++
+
+FastQC is a quality control application for high throughput sequence data.  It reads in sequence data in a variety of formats and can either provide an interactive  application to review the results of several different QC checks, or create an HTML based  report which can be integrated into a pipeline.
+
+*homepage*: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
 =======    ==========
 version    toolchains
@@ -3143,6 +4059,10 @@ version    toolchains
 *fastQValidator*
 ++++++++++++++++
 
+Validate FastQ Files
+
+*homepage*: http://genome.sph.umich.edu/wiki/FastQValidator
+
 ===============    ============
 version            toolchains  
 ===============    ============
@@ -3154,6 +4074,10 @@ version            toolchains
 
 *fastqz*
 ++++++++
+
+fastqz is a compressor for FASTQ files. FASTQ is the output of DNA sequencing machines.  It is one of the compressors described in the paper: Bonfield JK, Mahoney MV (2013) Compression of  FASTQ and SAM Format Sequencing Data. (mirror) PLoS ONE 8(3): e59190. doi:10.1371/journal.pone.0059190
+
+*homepage*: http://mattmahoney.net/dc/fastqz/
 
 =======    ==========
 version    toolchains
@@ -3167,6 +4091,10 @@ version    toolchains
 *FastTree*
 ++++++++++
 
+FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of  time and memory. 
+
+*homepage*: http://www.microbesonline.org/fasttree/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3178,6 +4106,10 @@ version    toolchains
 
 *FASTX-Toolkit*
 +++++++++++++++
+
+The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/FASTQ files preprocessing.
+
+*homepage*: http://hannonlab.cshl.edu/fastx_toolkit/
 
 ========    ===========================================================
 version     toolchains                                                 
@@ -3192,6 +4124,10 @@ version     toolchains
 *FCM*
 +++++
 
+FCM is a set of tools for managing and building source code.
+
+*homepage*: http://www.metoffice.gov.uk/research/collaboration/fcm
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3203,6 +4139,10 @@ version    toolchains
 
 *FDS*
 +++++
+
+Fire Dynamics Simulator (FDS) is a large-eddy simulation (LES) code for low-speed flows,  with an emphasis on smoke and heat transport from fires.
+
+*homepage*: https://code.google.com/p/fds-smv/
 
 =======    ======================================
 version    toolchains                            
@@ -3220,6 +4160,10 @@ r22681     intel/2015a
 *fdstools*
 ++++++++++
 
+Forensic DNA Sequencing Tools Tools for characterisation and filtering of PCR stutter artefacts  and other systemic noise in Next Generation Sequencing data of forensic STR markers.
+
+*homepage*: https://git.lumc.nl/jerryhoogenboom/fdstools
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -3231,6 +4175,10 @@ version     toolchains
 
 *FDTD_Solutions*
 ++++++++++++++++
+
+High performance FDTD-method Maxwell solver for the design, analysis and optimization of nanophotonic devices, processes and materials.
+
+*homepage*: http://www.lumerical.com/tcad-products/fdtd/
 
 ========    ==========
 version     toolchains
@@ -3245,6 +4193,10 @@ version     toolchains
 *Ferret*
 ++++++++
 
+Ferret is an interactive computer visualization and analysis environment designed to meet the needs of oceanographers and meteorologists analyzing large and complex gridded data sets.
+
+*homepage*: http://ferret.pmel.noaa.gov/
+
 =======    =================================
 version    toolchains                       
 =======    =================================
@@ -3256,6 +4208,10 @@ version    toolchains
 
 *FFC*
 +++++
+
+FEniCS Form Compiler (FFC) works as a compiler for multilinear forms by generating  code (C++) for the evaluation of a multilinear form given in mathematical notation.
+
+*homepage*: https://bitbucket.org/fenics-project/ffc
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -3270,6 +4226,10 @@ version    toolchains
 *FFindex*
 +++++++++
 
+simple index/database for huge amounts of small files
+
+*homepage*: http://www.splashground.de/~andy/programs/FFindex/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -3282,6 +4242,10 @@ version    toolchains
 *FFLAS-FFPACK*
 ++++++++++++++
 
+Finite Field Linear Algebra Subroutines / Package
+
+*homepage*: https://linbox-team.github.io/fflas-ffpack/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3293,6 +4257,10 @@ version    toolchains
 
 *FFmpeg*
 ++++++++
+
+A complete, cross-platform solution to record, convert and stream audio and video.
+
+*homepage*: https://www.ffmpeg.org/
 
 =======    =======================================
 version    toolchains                             
@@ -3314,6 +4282,10 @@ version    toolchains
 *ffnet*
 +++++++
 
+Feed-forward neural network solution for python
+
+*homepage*: http://ffnet.sourceforge.net/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3325,6 +4297,10 @@ version    toolchains
 
 *FFTW*
 ++++++
+
+FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)  in one or more dimensions, of arbitrary input size, and of both real and complex data.
+
+*homepage*: http://www.fftw.org
 
 =======    ============================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                  
@@ -3343,6 +4319,10 @@ version    toolchains
 *FIAT*
 ++++++
 
+The FInite element Automatic Tabulator FIAT supports generation of arbitrary order  instances of the Lagrange elements on lines, triangles, and tetrahedra. It is also capable of generating  arbitrary order instances of Jacobi-type quadrature rules on the same element shapes.
+
+*homepage*: https://bitbucket.org/fenics-project/fiat
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -3358,6 +4338,10 @@ version    toolchains
 *file*
 ++++++
 
+The file command is 'a file type guesser', that is, a command-line tool  that tells you in words what kind of data a file contains.
+
+*homepage*: http://www.darwinsys.com/file/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3372,6 +4356,10 @@ version    toolchains
 *findutils*
 +++++++++++
 
+findutils: The GNU find, locate, updatedb, and xargs utilities
+
+*homepage*: http://www.gnu.org/software/findutils/findutils.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3385,6 +4373,10 @@ version    toolchains
 *Firefox*
 +++++++++
 
+Firefox is a free, open source Web browser for Windows, Linux and Mac OS X. It is based on the Mozilla code   base and offers customization options and features such as its capability to block pop-up windows, tabbed browsing, privacy   and security measures, smart searching, and RSS live bookmarks.
+
+*homepage*: https://www.mozilla.org/en-US/firefox/new/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3396,6 +4388,10 @@ version    toolchains
 
 *fixesproto*
 ++++++++++++
+
+X.org FixesProto protocol headers.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    ========================================================================================================
 version    toolchains                                                                                              
@@ -3409,6 +4405,10 @@ version    toolchains
 *FLAC*
 ++++++
 
+Programs and libraries for working with Free Lossless Audio Codec (FLAC) files.
+
+*homepage*: https://xiph.org/flac/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3420,6 +4420,10 @@ version    toolchains
 
 *FLANN*
 +++++++
+
+FLANN is a library for performing fast approximate nearest neighbor searches in high dimensional spaces.
+
+*homepage*: http://www.cs.ubc.ca/research/flann/
 
 =======    ===========
 version    toolchains 
@@ -3433,6 +4437,10 @@ version    toolchains
 *FLASH*
 +++++++
 
+FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate software   tool to merge paired-end reads from next-generation sequencing experiments. FLASH is designed to   merge pairs of reads when the original DNA fragments are shorter than twice the length of reads.   The resulting longer reads can significantly improve genome assemblies. They can also improve   transcriptome assembly when FLASH is used to merge RNA-seq data.
+
+*homepage*: https://ccb.jhu.edu/software/FLASH/
+
 =======    ======================
 version    toolchains            
 =======    ======================
@@ -3445,6 +4453,10 @@ version    toolchains
 *FLEUR*
 +++++++
 
+FLEUR is a feature-full, freely available FLAPW (full potential linearized augmented planewave) code,  based on density-functional theory.
+
+*homepage*: http://www.flapw.de/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3456,6 +4468,10 @@ version    toolchains
 
 *flex*
 ++++++
+
+Flex (Fast Lexical Analyzer) is a tool for generating scanners. A scanner,   sometimes called a tokenizer, is a program which recognizes lexical patterns in text.
+
+*homepage*: http://flex.sourceforge.net/
 
 =======    ==============================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                    
@@ -3473,6 +4489,10 @@ version    toolchains
 *FLTK*
 ++++++
 
+FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,  and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL  and its built-in GLUT emulation.
+
+*homepage*: http://www.fltk.org
+
 =======    ==================================================
 version    toolchains                                        
 =======    ==================================================
@@ -3485,6 +4505,10 @@ version    toolchains
 
 *FLUENT*
 ++++++++
+
+ANSYS FLUENT software contains the broad physical modeling capabilities needed to model flow, turbulence, heat transfer, and reactions for industrial applications ranging from air flow over an aircraft wing to combustion in a furnace, from bubble columns to oil platforms, from blood flow to semiconductor manufacturing, and from clean room design to wastewater treatment plants.
+
+*homepage*: http://www.ansys.com/Products/Simulation+Technology/Fluid+Dynamics/Fluid+Dynamics+Products/ANSYS+Fluent
 
 =======    ==========
 version    toolchains
@@ -3500,6 +4524,10 @@ version    toolchains
 *fmri*
 ++++++
 
+The package contains R-functions to perform an fmri analysis as described in K. Tabelow,  J. Polzehl, H.U. Voss, and V. Spokoiny, Analysing fMRI experiments with structure adaptive smoothing procedures,  NeuroImage, 33:55-62 (2006) and J. Polzehl, H.U. Voss, K. Tabelow, Structural adaptive segmentation for statistical  parametric mapping, NeuroImage, 52:515-523 (2010).
+
+*homepage*: http://cran.r-project.org/web/packages/fmri
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3512,6 +4540,10 @@ version    toolchains
 
 *FoldX*
 +++++++
+
+FoldX is used to provide a fast and quantitative estimation of the importance of the interactions  contributing to the stability of proteins and protein complexes.
+
+*homepage*: http://foldx.crg.es/
 
 ===========    ==========
 version        toolchains
@@ -3527,6 +4559,10 @@ version        toolchains
 
 *fontconfig*
 ++++++++++++
+
+Fontconfig is a library designed to provide system-wide font configuration, customization and application access.
+
+*homepage*: http://www.freedesktop.org/software/fontconfig
 
 =======    ===============================================================
 version    toolchains                                                     
@@ -3545,6 +4581,10 @@ version    toolchains
 *fontsproto*
 ++++++++++++
 
+X11 font extension wire protocol
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===============================================================
 version    toolchains                                                     
 =======    ===============================================================
@@ -3556,6 +4596,10 @@ version    toolchains
 
 *foss*
 ++++++
+
+GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
 
 =======    ==========
 version    toolchains
@@ -3578,6 +4622,10 @@ version    toolchains
 *FPM*
 +++++
 
+Effing package management! Build packages for multiple platforms (deb, rpm, etc) with great ease  and sanity.
+
+*homepage*: https://github.com/jordansissel/fpm
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3589,6 +4637,10 @@ version    toolchains
 
 *fqzcomp*
 +++++++++
+
+Fqzcomp is a basic fastq compressor, designed primarily for high performance.  Despite that it is comparable to bzip2 for compression levels.
+
+*homepage*: http://sourceforge.net/projects/fqzcomp/
 
 =======    ==========
 version    toolchains
@@ -3602,6 +4654,10 @@ version    toolchains
 *FragGeneScan*
 ++++++++++++++
 
+FragGeneScan is an application for finding (fragmented) genes in short reads.
+
+*homepage*: http://omics.informatics.indiana.edu/FragGeneScan/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3613,6 +4669,10 @@ version    toolchains
 
 *FRC_align*
 +++++++++++
+
+Computes FRC from SAM/BAM file and not from afg files.
+
+*homepage*: https://github.com/vezzi/FRC_align
 
 ========    ==========================
 version     toolchains                
@@ -3626,6 +4686,10 @@ version     toolchains
 *frealign*
 ++++++++++
 
+Frealign is a program for high-resolution refinement of 3D reconstructions from cryo-EM images of  single particles.
+
+*homepage*: http://grigoriefflab.janelia.org/frealign
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3637,6 +4701,10 @@ version    toolchains
 
 *freeglut*
 ++++++++++
+
+freeglut is a completely OpenSourced alternative to the OpenGL Utility Toolkit (GLUT) library.
+
+*homepage*: http://freeglut.sourceforge.net/
 
 =======    =================================================================
 version    toolchains                                                       
@@ -3651,6 +4719,10 @@ version    toolchains
 *FreeSurfer*
 ++++++++++++
 
+FreeSurfer is a software package for the analysis and visualization of structural and functional   neuroimaging data from cross-sectional or longitudinal studies. It is developed by the Laboratory for Computational   Neuroimaging at the Athinoula A. Martinos Center for Biomedical Imaging.
+
+*homepage*: http://freesurfer.net/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3662,6 +4734,10 @@ version    toolchains
 
 *freetype*
 ++++++++++
+
+FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and  portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display  servers, font conversion tools, text image generation tools, and many other products as well.
+
+*homepage*: http://freetype.org
 
 =======    ===========================================================================================
 version    toolchains                                                                                 
@@ -3685,6 +4761,10 @@ version    toolchains
 *FreeXL*
 ++++++++
 
+FreeXL is an open source library to extract valid data from within an Excel (.xls) spreadsheet.
+
+*homepage*: https://www.gaia-gis.it/fossil/freexl/index
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -3699,6 +4779,10 @@ version    toolchains
 *FSA*
 +++++
 
+ FSA:Fast Statistical Alignment, is a probabilistic multiple sequence   alignment algorithm which uses a distance-based approach to aligning homologous protein,   RNA or DNA sequences.
+
+*homepage*: http://fsa.sourceforge.net/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3710,6 +4794,10 @@ version    toolchains
 
 *FSL*
 +++++
+
+FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data.
+
+*homepage*: http://www.fmrib.ox.ac.uk/fsl/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -3735,6 +4823,10 @@ version    toolchains
 *g2clib*
 ++++++++
 
+Library contains GRIB2 encoder/decoder ('C' version).
+
+*homepage*: http://www.nco.ncep.noaa.gov/pmb/codes/GRIB2/
+
 =======    ==============================================================
 version    toolchains                                                    
 =======    ==============================================================
@@ -3747,6 +4839,10 @@ version    toolchains
 
 *g2lib*
 +++++++
+
+Library contains GRIB2 encoder/decoder and search/indexing routines.
+
+*homepage*: http://www.nco.ncep.noaa.gov/pmb/codes/GRIB2/
 
 =======    ==============================================================
 version    toolchains                                                    
@@ -3761,6 +4857,10 @@ version    toolchains
 *g2log*
 +++++++
 
+g2log, efficient asynchronous logger using C++11
+
+*homepage*: https://sites.google.com/site/kjellhedstrom2//g2log-efficient-background-io-processign-with-c11
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -3772,6 +4872,10 @@ version    toolchains
 
 *GAMESS-US*
 +++++++++++
+
+ The General Atomic and Molecular Electronic Structure System (GAMESS)  is a general ab initio quantum chemistry package. 
+
+*homepage*: http://www.msg.chem.iastate.edu/gamess/index.html
 
 ===========    =================================
 version        toolchains                       
@@ -3785,6 +4889,10 @@ version        toolchains
 
 *GATE*
 ++++++
+
+GATE is an advanced opensource software developed by the international OpenGATE collaboration and  dedicated to the numerical simulations in medical imaging. It currently supports simulations of Emission Tomography  (Positron Emission Tomography - PET and Single Photon Emission Computed Tomography - SPECT), and Computed Tomography
+
+*homepage*: http://www.opengatecollaboration.org/
 
 =======    ========================================================================
 version    toolchains                                                              
@@ -3801,6 +4909,10 @@ version    toolchains
 
 *GATK*
 ++++++
+
+The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute  to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on  data quality assurance. Its robust architecture, powerful processing engine and  high-performance computing features make it capable of taking on projects of any size.
+
+*homepage*: http://www.broadinstitute.org/gatk/
 
 ========    ==========
 version     toolchains
@@ -3822,6 +4934,10 @@ version     toolchains
 *gawk*
 ++++++
 
+gawk: GNU awk
+
+*homepage*: http://www.gnu.org/software/gawk/gawk.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -3834,6 +4950,10 @@ version    toolchains
 *gc*
 ++++
 
+The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage collecting   replacement for C malloc or C++ new.
+
+*homepage*: http://hboehm.info/gc/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -3845,6 +4965,10 @@ version    toolchains
 
 *GC3Pie*
 ++++++++
+
+GC3Pie is a Python package for running large job campaigns on diverse batch-oriented execution  environments.
+
+*homepage*: https://gc3pie.readthedocs.org
 
 =======    ==========
 version    toolchains
@@ -3861,6 +4985,10 @@ version    toolchains
 
 *GCC*
 +++++
+
+The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,  as well as libraries for these languages (libstdc++, libgcj,...).
+
+*homepage*: http://gcc.gnu.org/
 
 =======    ==========
 version    toolchains
@@ -3904,6 +5032,10 @@ system     dummy
 *GCCcore*
 +++++++++
 
+The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,  as well as libraries for these languages (libstdc++, libgcj,...).
+
+*homepage*: http://gcc.gnu.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3922,6 +5054,10 @@ version    toolchains
 *gcccuda*
 +++++++++
 
+GNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -3933,6 +5069,10 @@ version    toolchains
 
 *GConf*
 +++++++
+
+GConf is a system for storing application preferences.  It is intended for user preferences; not configuration  of something like Apache, or arbitrary data storage.
+
+*homepage*: https://projects.gnome.org/gconf/
 
 =======    ===========
 version    toolchains 
@@ -3946,6 +5086,10 @@ version    toolchains
 *GD*
 ++++
 
+GD.pm - Interface to Gd Graphics Library
+
+*homepage*: http://search.cpan.org/~lds/GD/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -3957,6 +5101,10 @@ version    toolchains
 
 *GDAL*
 ++++++
+
+GDAL is a translator library for raster geospatial data formats that is released under an X/MIT style  Open Source license by the Open Source Geospatial Foundation. As a library, it presents a single abstract data model  to the calling application for all supported formats. It also comes with a variety of useful commandline utilities for  data translation and processing.
+
+*homepage*: http://www.gdal.org/
 
 =======    ===================================================================
 version    toolchains                                                         
@@ -3976,6 +5124,10 @@ version    toolchains
 *GDB*
 +++++
 
+The GNU Project Debugger
+
+*homepage*: http://www.gnu.org/software/gdb/gdb.html
+
 =======    =================================================================================================================================
 version    toolchains                                                                                                                       
 =======    =================================================================================================================================
@@ -3994,6 +5146,10 @@ version    toolchains
 *gdc-client*
 ++++++++++++
 
+The gdc-client provides several convenience functions over the GDC API which provides general  download/upload via HTTPS.
+
+*homepage*: https://gdc.nci.nih.gov/access-data/gdc-data-transfer-tool
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4006,6 +5162,10 @@ version    toolchains
 *gdist*
 +++++++
 
+The gdist module is a Cython interface to a C++ library (http://code.google.com/p/geodesic/) for  computing geodesic distance which is the length of shortest line between two vertices on a triangulated mesh in three  dimensions, such that the line lies on the surface.
+
+*homepage*: https://pypi.python.org/pypi/gdist
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4017,6 +5177,10 @@ version    toolchains
 
 *Gdk-Pixbuf*
 ++++++++++++
+
+  The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.  It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it  was distributed as part of GTK+ 2 but it was split off into a separate package  in preparation for the change to GTK+ 3. 
+
+*homepage*: https://developer.gnome.org/gdk-pixbuf/stable/
 
 =======    ========================
 version    toolchains              
@@ -4031,6 +5195,10 @@ version    toolchains
 
 *Geant4*
 ++++++++
+
+Geant4 is a toolkit for the simulation of the passage of particles through matter.  Its areas of application include high energy, nuclear and accelerator physics,   as well as studies in medical and space science.
+
+*homepage*: http://geant4.cern.ch/
 
 =========    ========================================================================
 version      toolchains                                                              
@@ -4050,6 +5218,10 @@ version      toolchains
 *GEM-library*
 +++++++++++++
 
+ Next-generation sequencing platforms (Illumina/Solexa, ABI/SOLiD, etc.)   call for powerful and very optimized tools to index/analyze huge genomes. The GEM library   strives to be a true "next-generation" tool for handling any kind of sequence data, offering   state-of-the-art algorithms and data structures specifically tailored to this demanding task.   At the moment, efficient indexing and searching algorithms based on the Burrows-Wheeler   transform (BWT) have been implemented. The library core is written in C for maximum speed,   with concise interfaces to higher-level programming languages like OCaml and Python.   Many high-performance standalone programs (mapper, splice mapper, etc.) are provided along   with the library; in general, new algorithms and tools can be easily implemented on the top of it. 
+
+*homepage*: http://algorithms.cnag.cat/wiki/The_GEM_library
+
 ===============    ==========
 version            toolchains
 ===============    ==========
@@ -4061,6 +5233,10 @@ version            toolchains
 
 *GEMSTAT*
 +++++++++
+
+ thermodynamics-based model to predict gene expression driven by any   DNA sequence, as a function of transcription factor concentrations and their DNA-binding   specificities. 
+
+*homepage*: http://veda.cs.uiuc.edu/Seq2Expr/
 
 =======    ============
 version    toolchains  
@@ -4074,6 +5250,10 @@ version    toolchains
 *GenotypeHarmonizer*
 ++++++++++++++++++++
 
+The Genotype Harmonizer is an easy to use command-line tool that allows harmonization of genotype data  stored using different file formats with different and potentially unknown strands.
+
+*homepage*: https://github.com/molgenis/systemsgenetics/wiki/Genotype-Harmonizer
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4085,6 +5265,10 @@ version    toolchains
 
 *gensim*
 ++++++++
+
+Gensim is a Python library for topic modelling, document indexing and similarity retrieval with  large corpora.
+
+*homepage*: https://pypi.python.org/pypi/gensim
 
 ========    ===========
 version     toolchains 
@@ -4099,6 +5283,10 @@ version     toolchains
 *GeoIP*
 +++++++
 
+MaxMind GeoIP Legacy Database - Python API
+
+*homepage*: https://pypi.python.org/pypi/GeoIP
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -4111,6 +5299,10 @@ version    toolchains
 *GeoIP-C*
 +++++++++
 
+GeoIP Legacy C Library
+
+*homepage*: https://github.com/maxmind/geoip-api-c
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -4122,6 +5314,10 @@ version    toolchains
 
 *GEOS*
 ++++++
+
+GEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)
+
+*homepage*: http://trac.osgeo.org/geos
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -4136,6 +5332,10 @@ version    toolchains
 *getdp*
 +++++++
 
+GetDP is an open source finite element solver using mixed elements to discretize de Rham-type  complexes in one, two and three dimensions.
+
+*homepage*: http://geuz.org/getdp
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4147,6 +5347,10 @@ version    toolchains
 
 *gettext*
 +++++++++
+
+GNU `gettext' is an important step for the GNU Translation Project, as it is an asset on which we may build many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools and documentation
+
+*homepage*: http://www.gnu.org/software/gettext/
 
 =======    ====================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                          
@@ -4165,6 +5369,10 @@ version    toolchains
 *gflags*
 ++++++++
 
+ The gflags package contains a C++ library that implements commandline flags  processing.  It includes built-in support for standard types such as string  and the ability to define flags in the source file in which they are used.  
+
+*homepage*: https://github.com/gflags/gflags
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4176,6 +5384,10 @@ version    toolchains
 
 *GHC*
 +++++
+
+GHC is the Glasgow Haskell Compiler.
+
+*homepage*: http://www.haskell.org/ghc
 
 =======    =================================
 version    toolchains                       
@@ -4192,6 +5404,10 @@ version    toolchains
 *Ghostscript*
 +++++++++++++
 
+Ghostscript is a versatile processor for PostScript data with the ability to render PostScript to  different targets. It used to be part of the cups printing stack, but is no longer used for that.
+
+*homepage*: http://ghostscript.com
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -4207,6 +5423,10 @@ version    toolchains
 *gimkl*
 +++++++
 
+GNU Compiler Collection (GCC) based compiler toolchain, next to Intel MPI and  Intel MKL (BLAS, (Sca)LAPACK, FFTW).
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4219,6 +5439,10 @@ version    toolchains
 
 *gimpi*
 +++++++
+
+GNU Compiler Collection (GCC) based compiler toolchain, next to Intel MPI.
+
+*homepage*: (none)
 
 =======    ==========
 version    toolchains
@@ -4233,6 +5457,10 @@ version    toolchains
 *GIMPS*
 +++++++
 
+GIMPS: Great Internet Mersenne Prime Search;  it can be useful for limited stress testing of nodes, in user space
+
+*homepage*: http://www.mersenne.org/
+
 ===============    ==========
 version            toolchains
 ===============    ==========
@@ -4245,6 +5473,10 @@ p95v279.linux64    dummy
 
 *git*
 +++++
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+*homepage*: http://git-scm.com/
 
 =======    ============================================================================================================
 version    toolchains                                                                                                  
@@ -4264,6 +5496,10 @@ version    toolchains
 *git-lfs*
 +++++++++
 
+Git Large File Storage (LFS) replaces large files such as audio samples, videos,   datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server   like GitHub.com or GitHub Enterprise.
+
+*homepage*: https://git-lfs.github.com/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4275,6 +5511,10 @@ version    toolchains
 
 *Givaro*
 ++++++++
+
+C++ library for arithmetic and algebraic computations
+
+*homepage*: http://givaro.forge.imag.fr/
 
 =======    ==========
 version    toolchains
@@ -4288,6 +5528,10 @@ version    toolchains
 *GL2PS*
 +++++++
 
+GL2PS: an OpenGL to PostScript printing library
+
+*homepage*: http://www.geuz.org/gl2ps/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -4300,6 +5544,10 @@ version    toolchains
 *Glade*
 +++++++
 
+Glade is a RAD tool to enable quick & easy development of user interfaces for the GTK+ toolkit  and the GNOME desktop environment.
+
+*homepage*: https://glade.gnome.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4311,6 +5559,10 @@ version    toolchains
 
 *GLib*
 ++++++
+
+GLib is one of the base libraries of the GTK+ project
+
+*homepage*: http://www.gtk.org/
 
 =======    ====================================================================================================================================================
 version    toolchains                                                                                                                                          
@@ -4335,6 +5587,10 @@ version    toolchains
 *GLibmm*
 ++++++++
 
+GLib is one of the base libraries of the GTK+ project
+
+*homepage*: http://www.gtk.org/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -4346,6 +5602,10 @@ version    toolchains
 
 *GLIMMER*
 +++++++++
+
+Glimmer is a system for finding genes in microbial DNA, especially the genomes of bacteria, archaea, and viruses.
+
+*homepage*: http://www.cbcb.umd.edu/software/glimmer/
 
 =======    =========================
 version    toolchains               
@@ -4359,6 +5619,10 @@ version    toolchains
 *GLM*
 +++++
 
+OpenGL Mathematics (GLM) is a header only C++ mathematics library for graphics software based on  the OpenGL Shading Language (GLSL) specifications.
+
+*homepage*: https://github.com/g-truc/glm
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4370,6 +5634,10 @@ version    toolchains
 
 *GlobalArrays*
 ++++++++++++++
+
+Global Arrays (GA) is a Partitioned Global Address Space (PGAS) programming model
+
+*homepage*: http://hpc.pnl.gov/globalarrays
 
 =======    ===========
 version    toolchains 
@@ -4384,6 +5652,10 @@ version    toolchains
 *glog*
 ++++++
 
+ A C++ implementation of the Google logging module. 
+
+*homepage*: https://github.com/google/glog
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4395,6 +5667,10 @@ version    toolchains
 
 *GLPK*
 ++++++
+
+The GLPK (GNU Linear Programming Kit) package is intended for  solving large-scale linear programming (LP),  mixed integer programming (MIP), and other related problems.  It is a set of routines written in ANSI C   and organized in the form of a callable library.
+
+*homepage*: https://www.gnu.org/software/glpk/
 
 =======    =========================
 version    toolchains               
@@ -4411,6 +5687,10 @@ version    toolchains
 *glproto*
 +++++++++
 
+X protocol and ancillary headers
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ======================================================================================
 version    toolchains                                                                            
 =======    ======================================================================================
@@ -4424,6 +5704,10 @@ version    toolchains
 *gmacml*
 ++++++++
 
+Compiler toolchain with GCC, MVAPICH2 and AMD Core Math Library (ACML)
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4435,6 +5719,10 @@ version    toolchains
 
 *GMAP-GSNAP*
 ++++++++++++
+
+GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences  GSNAP: Genomic Short-read Nucleotide Alignment Program
+
+*homepage*: http://research-pub.gene.com/gmap/
 
 =============    ======================================
 version          toolchains                            
@@ -4451,6 +5739,10 @@ version          toolchains
 
 *GMP*
 +++++
+
+GMP is a free library for arbitrary precision arithmetic,  operating on signed integers, rational numbers, and floating point numbers. 
+
+*homepage*: http://gmplib.org/
 
 =======    =====================================================================================================================================================
 version    toolchains                                                                                                                                           
@@ -4471,6 +5763,10 @@ version    toolchains
 *gmpich*
 ++++++++
 
+gcc and GFortran based compiler toolchain,  including MPICH for MPI support.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4483,6 +5779,10 @@ version    toolchains
 
 *gmpolf*
 ++++++++
+
+gcc and GFortran based compiler toolchain,  MPICH for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
 
 =======    ==========
 version    toolchains
@@ -4497,6 +5797,10 @@ version    toolchains
 *gmsh*
 ++++++
 
+Gmsh is a 3D finite element grid generator with a build-in CAD engine and post-processor.
+
+*homepage*: http://geuz.org/gmsh
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4508,6 +5812,10 @@ version    toolchains
 
 *GMT*
 +++++
+
+GMT is an open source collection of about 80 command-line tools for manipulating  geographic and Cartesian data sets (including filtering, trend fitting, gridding, projecting,  etc.) and producing PostScript illustrations ranging from simple x-y plots via contour maps  to artificially illuminated surfaces and 3D perspective views; the GMT supplements add another  40 more specialized and discipline-specific tools. 
+
+*homepage*: http://gmt.soest.hawaii.edu/
 
 =======    ============
 version    toolchains  
@@ -4521,6 +5829,10 @@ version    toolchains
 
 *gmvapich2*
 +++++++++++
+
+GNU Compiler Collection (GCC) based compiler toolchain,  including MVAPICH2 for MPI support.
+
+*homepage*: (none)
 
 =========    ==========
 version      toolchains
@@ -4540,6 +5852,10 @@ version      toolchains
 *gmvolf*
 ++++++++
 
+GNU Compiler Collection (GCC) based compiler toolchain, including  MVAPICH2 for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
+
 =========    ==========
 version      toolchains
 =========    ==========
@@ -4555,6 +5871,10 @@ version      toolchains
 *GNU*
 +++++
 
+Compiler-only toolchain with GCC and binutils.
+
+*homepage*: http://www.gnu.org/software/
+
 ==========    ==========
 version       toolchains
 ==========    ==========
@@ -4568,6 +5888,10 @@ version       toolchains
 
 *gnuplot*
 +++++++++
+
+Portable interactive, function plotting utility
+
+*homepage*: http://gnuplot.sourceforge.net/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -4585,6 +5909,10 @@ version    toolchains
 *GnuTLS*
 ++++++++
 
+GnuTLS is a secure communications library implementing the SSL, TLS  and DTLS protocols and technologies around them. It provides a simple  C language application programming interface (API) to access the secure  communications protocols as well as APIs to parse and write X.509, PKCS #12,  OpenPGP and other required structures. It is aimed to be portable  and efficient with focus on security and interoperability.
+
+*homepage*: http://www.gnutls.org/
+
 =======    =================================
 version    toolchains                       
 =======    =================================
@@ -4600,6 +5928,10 @@ version    toolchains
 *Go*
 ++++
 
+Go is an open source programming language that makes it easy to build  simple, reliable, and efficient software.
+
+*homepage*: http://www.golang.org
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4614,6 +5946,10 @@ version    toolchains
 *goalf*
 +++++++
 
+GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, ATLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
+
 =============    ==========
 version          toolchains
 =============    ==========
@@ -4626,6 +5962,10 @@ version          toolchains
 
 *GObject-Introspection*
 +++++++++++++++++++++++
+
+GObject introspection is a middleware layer between C libraries  (using GObject) and language bindings. The C library can be scanned at  compile time and generate a metadata file, in addition to the actual  native C library. Then at runtime, language bindings can read this  metadata and automatically provide bindings to call into the C library.
+
+*homepage*: https://wiki.gnome.org/GObjectIntrospection/
 
 =======    ====================================
 version    toolchains                          
@@ -4641,6 +5981,10 @@ version    toolchains
 
 *gompi*
 +++++++
+
+GNU Compiler Collection (GCC) based compiler toolchain,  including OpenMPI for MPI support.
+
+*homepage*: (none)
 
 =============    ==========
 version          toolchains
@@ -4672,6 +6016,10 @@ version          toolchains
 *gompic*
 ++++++++
 
+GNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,  including OpenMPI for MPI support with CUDA features enabled.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4683,6 +6031,10 @@ version    toolchains
 
 *goolf*
 +++++++
+
+GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
 
 =======    ==========
 version    toolchains
@@ -4700,6 +6052,10 @@ version    toolchains
 *goolfc*
 ++++++++
 
+GCC based compiler toolchain __with CUDA support__, and including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4714,6 +6070,10 @@ version    toolchains
 *GP2C*
 ++++++
 
+The gp2c compiler is a package for translating GP routines into the C programming language, so that  they can  be compiled and used with the PARI system or the GP calculator. 
+
+*homepage*: http://pari.math.u-bordeaux.fr/pub/pari/manuals/gp2c/gp2c.html
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -4725,6 +6085,10 @@ version     toolchains
 
 *GPAW*
 ++++++
+
+GPAW is a density-functional theory (DFT) Python code based on the projector-augmented wave (PAW)  method and the atomic simulation environment (ASE). It uses real-space uniform grids and multigrid methods or   atom-centered basis-functions.
+
+*homepage*: https://wiki.fysik.dtu.dk/gpaw/
 
 ==========    ===========================================================
 version       toolchains                                                 
@@ -4738,6 +6102,10 @@ version       toolchains
 *gperf*
 +++++++
 
+GNU gperf is a perfect hash function generator. For a given list of strings, it produces a hash  function and hash table, in form of C or C++ code, for looking up a value depending on the input string. The hash  function is perfect, which means that the hash table has no collisions, and the hash table lookup needs a single  string comparison only.
+
+*homepage*: http://www.gnu.org/software/gperf/
+
 =======    ========================================================================================================================================================
 version    toolchains                                                                                                                                              
 =======    ========================================================================================================================================================
@@ -4749,6 +6117,10 @@ version    toolchains
 
 *gperftools*
 ++++++++++++
+
+gperftools are for use by developers so that they can create more robust applications.  Especially of use to those developing multi-threaded applications in C++ with templates.  Includes TCMalloc, heap-checker, heap-profiler and cpu-profiler.
+
+*homepage*: http://github.com/gperftools/gperftools
 
 =======    =========================
 version    toolchains               
@@ -4764,6 +6136,10 @@ version    toolchains
 *gpsmpi*
 ++++++++
 
+gcc and GFortran based compiler toolchain,  including Parastation MPICH2 for MPI support.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4775,6 +6151,10 @@ version    toolchains
 
 *gpsolf*
 ++++++++
+
+gcc and GFortran based compiler toolchain,  ParaStation MPICH variant for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: (none)
 
 =======    ==========
 version    toolchains
@@ -4788,6 +6168,10 @@ version    toolchains
 *gputools*
 ++++++++++
 
+This package provides R interfaces to a handful of common functions implemented  using the Nvidia CUDA toolkit. Some of the functions require at least GPU Compute Capability 1.3.
+
+*homepage*: https://github.com/nullsatz/gputools/wiki
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4800,6 +6184,10 @@ version    toolchains
 *grabix*
 ++++++++
 
+a wee tool for random access into BGZF files
+
+*homepage*: https://github.com/arq5x/grabix
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -4811,6 +6199,10 @@ version    toolchains
 
 *grace*
 +++++++
+
+Grace is a WYSIWYG 2D plotting tool for X Windows System and Motif.
+
+*homepage*: http://freecode.com/projects/grace
 
 =======    ========================
 version    toolchains              
@@ -4825,6 +6217,10 @@ version    toolchains
 *graph-tool*
 ++++++++++++
 
+Graph-tool is an efficient Python module for manipulation and  statistical analysis of graphs (a.k.a. networks). Contrary to  most other python modules with similar functionality, the core  data structures and algorithms are implemented in C++, making  extensive use of template metaprogramming, based heavily on  the Boost Graph Library. This confers it a level of  performance that is comparable (both in memory usage and  computation time) to that of a pure C/C++ library.
+
+*homepage*: https://graph-tool.skewed.de/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4836,6 +6232,10 @@ version    toolchains
 
 *GraphicsMagick*
 ++++++++++++++++
+
+GraphicsMagick is the swiss army knife of image processing.
+
+*homepage*: http://www.graphicsmagick.org/
 
 =======    =======================
 version    toolchains             
@@ -4850,6 +6250,10 @@ version    toolchains
 *Graphviz*
 ++++++++++
 
+Graphviz is open source graph visualization software. Graph visualization  is a way of representing structural information as diagrams of  abstract graphs and networks. It has important applications in networking,  bioinformatics,  software engineering, database and web design, machine learning,  and in visual interfaces for other technical domains.
+
+*homepage*: http://www.graphviz.org/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -4861,6 +6265,10 @@ version    toolchains
 
 *GraphViz*
 ++++++++++
+
+This module provides a Perl interface to the amazing Graphviz, an open source graph visualization tool from AT&T.
+
+*homepage*: https://metacpan.org/pod/GraphViz
 
 =======    ===========
 version    toolchains 
@@ -4874,6 +6282,10 @@ version    toolchains
 *GraphViz2*
 +++++++++++
 
+This module provides a Perl interface to the amazing Graphviz, an open source graph visualization tool from AT&T.
+
+*homepage*: https://metacpan.org/pod/GraphViz2
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4885,6 +6297,10 @@ version    toolchains
 
 *Greenlet*
 ++++++++++
+
+The greenlet package is a spin-off of Stackless, a version of CPython that supports micro-threads called "tasklets". Tasklets run pseudo-concurrently (typically in a single or a few OS-level threads) and are synchronized with data exchanges on "channels". A "greenlet", on the other hand, is a still more primitive notion of micro-thread with no implicit scheduling; coroutines, in other words. This is useful when you want to control exactly when your code runs. 
+
+*homepage*: https://github.com/python-greenlet/greenlet
 
 =======    ============================================================
 version    toolchains                                                  
@@ -4900,6 +6316,10 @@ version    toolchains
 *grep*
 ++++++
 
+grep: GNU grep
+
+*homepage*: http://www.gnu.org/software/grep/grep.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -4912,6 +6332,10 @@ version    toolchains
 *Grep*
 ++++++
 
+The grep command searches one or more input files for lines containing a match to a specified pattern. By default, grep prints the matching lines.
+
+*homepage*: http://www.gnu.org/software/grep/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -4923,6 +6347,10 @@ version    toolchains
 
 *grib_api*
 ++++++++++
+
+The ECMWF GRIB API is an application program interface accessible from C, FORTRAN and Python  programs developed for encoding and decoding WMO FM-92 GRIB edition 1 and edition 2 messages. A useful set of  command line tools is also provided to give quick access to GRIB messages.
+
+*homepage*: https://software.ecmwf.int/wiki/display/GRIB/Home
 
 =======    ============================================================
 version    toolchains                                                  
@@ -4939,6 +6367,10 @@ version    toolchains
 *GRIT*
 ++++++
 
+GRIT - A tool for the integrative analysis of RNA-seq type assays
+
+*homepage*: https://github.com/nboley/grit
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -4950,6 +6382,10 @@ version    toolchains
 
 *GROMACS*
 +++++++++
+
+GROMACS is a versatile package to perform molecular dynamics,  i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.
+
+*homepage*: http://www.gromacs.org
 
 =======    =======================================================================================================
 version    toolchains                                                                                             
@@ -4972,6 +6408,10 @@ version    toolchains
 *GROMOS++*
 ++++++++++
 
+ GROMOS™ is an acronym of the GROningen MOlecular Simulation computer program package, which has been developed since 1978 for the dynamic modelling of (bio)molecules, until 1990 at the University of Groningen, The Netherlands, and since then at the ETH, the Swiss Federal Institute of Technology, in Zürich, Switzerland. 
+
+*homepage*: http://www.gromos.net/
+
 ========    ============
 version     toolchains  
 ========    ============
@@ -4983,6 +6423,10 @@ version     toolchains
 
 *gromosXX*
 ++++++++++
+
+ GROMOS™ is an acronym of the GROningen MOlecular Simulation computer program package, which has been developed since 1978 for the dynamic modelling of (bio)molecules, until 1990 at the University of Groningen, The Netherlands, and since then at the ETH, the Swiss Federal Institute of Technology, in Zürich, Switzerland. 
+
+*homepage*: http://www.gromos.net/
 
 ========    ============
 version     toolchains  
@@ -4996,6 +6440,10 @@ version     toolchains
 *gsl*
 +++++
 
+An R wrapper for the special functions and quasi random number generators of the Gnu Scientific  Library (GSL).
+
+*homepage*: http://cran.r-project.org/web/packages/gsl
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -5007,6 +6455,10 @@ version    toolchains
 
 *GSL*
 +++++
+
+The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers.  The library provides a wide range of mathematical routines such as random number generators, special functions  and least-squares fitting.
+
+*homepage*: http://www.gnu.org/software/gsl/
 
 =======    ==================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                        
@@ -5022,6 +6474,10 @@ version    toolchains
 *GSSAPI*
 ++++++++
 
+Perl extension providing access to the GSSAPIv2 library.
+
+*homepage*: http://search.cpan.org/~agrolms/GSSAPI-0.28/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -5034,12 +6490,15 @@ version    toolchains
 *GST-plugins-base*
 ++++++++++++++++++
 
+GStreamer is a library for constructing graphs of media-handling  components. The applications it supports range from simple  Ogg/Vorbis playback, audio/video streaming to complex audio  (mixing) and video (non-linear editing) processing.
+
+*homepage*: http://gstreamer.freedesktop.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
 0.10.36    intel/2016a
 1.6.4      foss/2016a 
-1.8.3      foss/2016a 
 =======    ===========
 
 
@@ -5048,12 +6507,15 @@ version    toolchains
 *GStreamer*
 +++++++++++
 
+GStreamer is a library for constructing graphs of media-handling  components. The applications it supports range from simple  Ogg/Vorbis playback, audio/video streaming to complex audio  (mixing) and video (non-linear editing) processing.
+
+*homepage*: http://gstreamer.freedesktop.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
 0.10.36    intel/2016a
 1.6.4      foss/2016a 
-1.8.3      foss/2016a 
 =======    ===========
 
 
@@ -5061,6 +6523,10 @@ version    toolchains
 
 *gtest*
 +++++++
+
+Google's framework for writing C++ tests on a variety of platforms
+
+*homepage*: https://code.google.com/p/googletest/
 
 =======    ===============
 version    toolchains     
@@ -5075,6 +6541,10 @@ version    toolchains
 *GTI*
 +++++
 
+A Generic Tools Infrastructure for Event-Based Tools in Parallel Systems.
+
+*homepage*: http://www.tu-dresden.de/zih/must/
+
 =======    ====================
 version    toolchains          
 =======    ====================
@@ -5086,6 +6556,10 @@ version    toolchains
 
 *GTK+*
 ++++++
+
+  The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications. 
+
+*homepage*: https://developer.gnome.org/gtk+/stable/
 
 =======    =====================================
 version    toolchains                           
@@ -5100,6 +6574,10 @@ version    toolchains
 *gtkglext*
 ++++++++++
 
+GtkGLExt is an OpenGL extension to GTK+.
+
+*homepage*: https://projects.gnome.org/gtkglext
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -5111,6 +6589,10 @@ version    toolchains
 
 *Gtkmm*
 +++++++
+
+  The Gtkmm package provides a C++ interface to GTK+ 2.  
+
+*homepage*: https://developer.gnome.org/gtk+/stable/
 
 =======    ========================
 version    toolchains              
@@ -5124,6 +6606,10 @@ version    toolchains
 *GTOOL*
 +++++++
 
+ GTOOL is a program for transforming sets of genotype data for use with  the programs SNPTEST and IMPUTE.  
+
+*homepage*: http://www.well.ox.ac.uk/~cfreeman/software/gwas/gtool.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5136,6 +6622,10 @@ version    toolchains
 *GTS*
 +++++
 
+GTS stands for the GNU Triangulated Surface Library.  It is an Open Source Free Software Library intended to provide a set of useful  functions to deal with 3D surfaces meshed with interconnected triangles.
+
+*homepage*: http://gts.sourceforge.net/
+
 =======    ==============================================================
 version    toolchains                                                    
 =======    ==============================================================
@@ -5147,6 +6637,10 @@ version    toolchains
 
 *Guile*
 +++++++
+
+Guile is a programming language, designed to help programmers create flexible applications that  can be extended by users or other programmers with plug-ins, modules, or scripts.
+
+*homepage*: https://www.gnu.org/software/guile/
 
 =======    =======================================================================================================================================================
 version    toolchains                                                                                                                                             
@@ -5161,6 +6655,10 @@ version    toolchains
 *Gurobi*
 ++++++++
 
+The Gurobi Optimizer is a state-of-the-art solver for mathematical programming. The solvers in the Gurobi Optimizer were designed from the ground up to exploit modern  architectures and multi-core processors, using the most advanced implementations of the  latest algorithms.
+
+*homepage*: http://www.gurobi.com
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5172,6 +6670,10 @@ version    toolchains
 
 *gzip*
 ++++++
+
+gzip (GNU zip) is a popular data compression program as a replacement for compress
+
+*homepage*: http://www.gnu.org/software/gzip/
 
 =======    ======================================================================================================================================================
 version    toolchains                                                                                                                                            
@@ -5195,6 +6697,10 @@ version    toolchains
 *h4toh5*
 ++++++++
 
+The h4toh5 software consists of the h4toh5 and h5toh4 command-line utilities,  as well as a conversion library for converting between individual HDF4 and HDF5 objects.
+
+*homepage*: http://www.hdfgroup.org/h4toh5/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5207,6 +6713,10 @@ version    toolchains
 *H5hut*
 +++++++
 
+HDF5 Utility Toolkit: High-Performance I/O Library for Particle-based Simulations
+
+*homepage*: https://amas.psi.ch/H5hut/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -5218,6 +6728,10 @@ version    toolchains
 
 *h5py*
 ++++++
+
+HDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical Data Format library,  version 5. HDF5 is a versatile, mature scientific software library designed for the fast, flexible storage of enormous  amounts of data.
+
+*homepage*: http://www.h5py.org/
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -5236,6 +6750,10 @@ version    toolchains
 *h5utils*
 +++++++++
 
+h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable  HDF5 format. Besides providing a simple tool for batch visualization as PNG images, h5utils also includes programs to  convert HDF5 datasets into the formats required by other free visualization software (e.g. plain text, Vis5d, and VTK).
+
+*homepage*: http://ab-initio.mit.edu/wiki/index.php/H5utils
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -5247,6 +6765,10 @@ version    toolchains
 
 *Hadoop*
 ++++++++
+
+Hadoop MapReduce by Cloudera
+
+*homepage*: http://archive.cloudera.com/cdh5/cdh/5/
 
 ==============    ==========
 version           toolchains
@@ -5264,6 +6786,10 @@ version           toolchains
 *hanythingondemand*
 +++++++++++++++++++
 
+HanythingOnDemand (HOD) is a system for provisioning virtual Hadoop clusters over a large physical cluster. It uses the Torque resource manager to do node allocation.
+
+*homepage*: https://github.com/hpcugent/hanythingondemand
+
 =======    ==================
 version    toolchains        
 =======    ==================
@@ -5280,6 +6806,7 @@ version    toolchains
 3.1.1      dummy, intel/2016a
 3.1.2      dummy, intel/2016a
 3.1.3      dummy, intel/2016b
+3.1.4      dummy, intel/2016b
 =======    ==================
 
 
@@ -5287,6 +6814,10 @@ version    toolchains
 
 *HAPGEN2*
 +++++++++
+
+'HAPGEN2' simulates case control datasets at SNP markers.
+
+*homepage*: https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html
 
 =======    ==========
 version    toolchains
@@ -5299,6 +6830,10 @@ version    toolchains
 
 *HarfBuzz*
 ++++++++++
+
+HarfBuzz is an OpenType text shaping engine.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/HarfBuzz
 
 =======    ========================
 version    toolchains              
@@ -5317,6 +6852,10 @@ version    toolchains
 *Harminv*
 +++++++++
 
+Harminv is a free program (and accompanying library) to solve the problem of harmonic inversion - given  a discrete-time, finite-length signal that consists of a sum of finitely-many sinusoids (possibly exponentially decaying)  in a given bandwidth, it determines the frequencies, decay constants, amplitudes, and phases of those sinusoids.
+
+*homepage*: http://ab-initio.mit.edu/wiki/index.php/Harminv
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -5330,6 +6869,10 @@ version    toolchains
 *HBase*
 +++++++
 
+Apache HBase. is the Hadoop database, a distributed, scalable, big data store. 
+
+*homepage*: http://hbase.apache.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5341,6 +6884,10 @@ version    toolchains
 
 *HDF*
 +++++
+
+HDF (also known as HDF4) is a library and multi-object file format for storing  and managing data between machines.
+
+*homepage*: http://www.hdfgroup.org/products/hdf4/
 
 ============    ==============================================================
 version         toolchains                                                    
@@ -5355,6 +6902,10 @@ version         toolchains
 
 *HDF5*
 ++++++
+
+HDF5 is a unique technology suite that makes possible the management of   extremely large and complex data collections.
+
+*homepage*: http://www.hdfgroup.org/HDF5/
 
 =============    =================================================================================================================================
 version          toolchains                                                                                                                       
@@ -5379,6 +6930,10 @@ version          toolchains
 *HEALPix*
 +++++++++
 
+Hierarchical Equal Area isoLatitude Pixelation of a sphere.
+
+*homepage*: http://healpix.sourceforge.net/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -5390,6 +6945,10 @@ version    toolchains
 
 *HH-suite*
 ++++++++++
+
+HH-suite is an open-source software package for sensitive protein sequence searching.  It contains programs that can search for similar protein sequences in protein sequence databases.
+
+*homepage*: http://en.wikipedia.org/wiki/HH-suite
 
 =======    =================================
 version    toolchains                       
@@ -5403,6 +6962,10 @@ version    toolchains
 *hisat*
 +++++++
 
+HISAT is a fast and sensitive spliced alignment program for mapping RNA-seq reads. In addition to one   global FM index that represents a whole genome, HISAT uses a large set of small FM indexes that collectively cover   the whole genome (each index represents a genomic region of ~64,000 bp and ~48,000 indexes are needed to cover the   human genome). These small indexes (called local indexes) combined with several alignment strategies enable effective   alignment of RNA-seq reads, in particular, reads spanning multiple exons. The memory footprint of HISAT is relatively   low (~4.3GB for the human genome). We have developed HISAT based on the Bowtie2 implementation to handle most of the   operations on the FM index. 
+
+*homepage*: http://ccb.jhu.edu/software/hisat/index.shtml
+
 ==========    ============
 version       toolchains  
 ==========    ============
@@ -5414,6 +6977,10 @@ version       toolchains
 
 *HISAT2*
 ++++++++
+
+HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads  (both DNA and RNA) against the general human population (as well as against a single reference genome).
+
+*homepage*: https://ccb.jhu.edu/software/hisat2/index.shtml
 
 ==========    ===========
 version       toolchains 
@@ -5427,6 +6994,10 @@ version       toolchains
 
 *HMMER*
 +++++++
+
+HMMER is used for searching sequence databases for homologs of protein sequences,  and for making protein sequence alignments. It implements methods using probabilistic models  called profile hidden Markov models (profile HMMs).  Compared to BLAST, FASTA, and other  sequence alignment and database search tools based on older scoring methodology,  HMMER aims to be significantly more accurate and more able to detect remote homologs  because of the strength of its underlying mathematical models. In the past, this strength  came at significant computational expense, but in the new HMMER3 project, HMMER is now  essentially as fast as BLAST.
+
+*homepage*: http://hmmer.org/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -5442,6 +7013,10 @@ version    toolchains
 *Hoard*
 +++++++
 
+Hoard is a fast, scalable, and memory-efficient memory allocator that can speed up your applications.
+
+*homepage*: http://www.hoard.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -5453,6 +7028,10 @@ version    toolchains
 
 *horton*
 ++++++++
+
+HORTON is a Helpful Open-source Research TOol for N-fermion systems, written  primarily in the Python programming language. (HORTON is named after the helpful  pachyderm, not the Canadian caffeine supply store.) The ultimate goal of HORTON  is to provide a platform for testing new ideas on the quantum many-body problem  at a reasonable computational cost. Although HORTON is primarily designed to be  a quantum-chemistry program, it can perform computations involving model  Hamiltonians, and could be extended for computations in nuclear physics.
+
+*homepage*: http://theochem.github.io/horton
 
 =======    ==========================
 version    toolchains                
@@ -5470,6 +7049,10 @@ version    toolchains
 *HPCBIOS_Bioinfo*
 +++++++++++++++++
 
+Bioinformatics & Computational Biology productivity environment includes a set of HPC tools,  which are needed for scientific computing and visualization in the respective domain. 
+
+*homepage*: http://hpcbios.readthedocs.org/en/latest/HPCBIOS_2012-94.html
+
 ========    =========================
 version     toolchains               
 ========    =========================
@@ -5481,6 +7064,10 @@ version     toolchains
 
 *HPCBIOS_Debuggers*
 +++++++++++++++++++
+
+Common Set of Debuggers includes a set of debuggers that can assist HPC users for managing parallel codes.
+
+*homepage*: http://hpcbios.readthedocs.org/en/latest/HPCBIOS_06-05.html
 
 ========    ============
 version     toolchains  
@@ -5494,6 +7081,10 @@ version     toolchains
 *HPCBIOS_LifeSciences*
 ++++++++++++++++++++++
 
+Life Sciences productivity environment includes a set of HPC tools,  which are needed for scientific computing and visualization in the respective domain.
+
+*homepage*: http://hpcbios.readthedocs.org/en/latest/HPCBIOS_2012-93.html
+
 ========    =========================
 version     toolchains               
 ========    =========================
@@ -5505,6 +7096,10 @@ version     toolchains
 
 *HPCBIOS_Math*
 ++++++++++++++
+
+Common Set of Open Source Math Libraries includes a set of HPC tools  which are needed for scientific computing in multiple occasions; As of August 2013, ictce/5.3.0  loads all of: * icc/2013.4.183 * ifort/2013.4.183 * impi/4.1.0.030 * imkl/11.0.4.183
+
+*homepage*: http://hpcbios.readthedocs.org/en/latest/HPCBIOS_06-01.html
 
 ========    ==============================================
 version     toolchains                                    
@@ -5518,6 +7113,10 @@ version     toolchains
 *HPCBIOS_Profilers*
 +++++++++++++++++++
 
+Common Set of Profilers
+
+*homepage*: http://hpcbios.readthedocs.org/en/latest/HPCBIOS_07-02.html
+
 ========    ============
 version     toolchains  
 ========    ============
@@ -5530,6 +7129,10 @@ version     toolchains
 *HPCG*
 ++++++
 
+The HPCG Benchmark project is an effort to create a more relevant metric for ranking HPC systems than  the High Performance LINPACK (HPL) benchmark, that is currently used by the TOP500 benchmark.
+
+*homepage*: https://software.sandia.gov/hpcg
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -5541,6 +7144,10 @@ version    toolchains
 
 *HPL*
 +++++
+
+HPL is a software package that solves a (random) dense linear system in double precision (64 bits) arithmetic   on distributed-memory computers. It can thus be regarded as a portable as well as freely available implementation of the   High Performance Computing Linpack Benchmark.
+
+*homepage*: http://www.netlib.org/benchmark/hpl/
 
 =======    =========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
@@ -5556,6 +7163,10 @@ version    toolchains
 *htop*
 ++++++
 
+An interactive process viewer for Unix
+
+*homepage*: http://hisham.hm/htop/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5567,6 +7178,10 @@ version    toolchains
 
 *HTSeq*
 +++++++
+
+A framework to process and analyze data from high-throughput sequencing (HTS) assays
+
+*homepage*: http://www-huber.embl.de/users/anders/HTSeq/
 
 =======    ====================================================
 version    toolchains                                          
@@ -5580,6 +7195,10 @@ version    toolchains
 
 *HTSlib*
 ++++++++
+
+A C library for reading/writing high-throughput sequencing data.  HTSlib also provides the bgzip, htsfile, and tabix utilities
+
+*homepage*: http://www.htslib.org/
 
 =======    ==================================================
 version    toolchains                                        
@@ -5596,6 +7215,10 @@ version    toolchains
 *hub*
 +++++
 
+hub is a command-line wrapper for git that makes you better at GitHub.
+
+*homepage*: https://hub.github.com/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5607,6 +7230,10 @@ version    toolchains
 
 *hwloc*
 +++++++
+
+The Portable Hardware Locality (hwloc) software package provides a portable abstraction   (across OS, versions, architectures, ...) of the hierarchical topology of modern architectures, including  NUMA memory nodes, sockets, shared caches, cores and simultaneous multithreading. It also gathers various  system attributes such as cache and memory information as well as the locality of I/O devices such as  network interfaces, InfiniBand HCAs or GPUs. It primarily aims at helping applications with gathering  information about modern computing hardware so as to exploit it accordingly and efficiently.
+
+*homepage*: http://www.open-mpi.org/projects/hwloc/
 
 =======    =========================================================================================================================================================================
 version    toolchains                                                                                                                                                               
@@ -5633,6 +7260,10 @@ version    toolchains
 *Hypre*
 +++++++
 
+Hypre is a library for solving large, sparse linear systems of equations on massively parallel computers.  The problems of interest arise in the simulation codes being developed at LLNL and elsewhere   to study physical phenomena in the defense, environmental, energy, and biological sciences.
+
+*homepage*: https://computation.llnl.gov/casc/linear_solvers/sls_hypre.html
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -5658,6 +7289,10 @@ version    toolchains
 *i-cisTarget*
 +++++++++++++
 
+An integrative genomics method for the prediction of regulatory features and cis-regulatory modules  in Human, Mouse, and Fly
+
+*homepage*: https://gbiomed.kuleuven.be/apps/lcb/i-cisTarget
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -5670,6 +7305,10 @@ version     toolchains
 *i-PI*
 ++++++
 
+A Python wrapper for (ab initio) (path integrals) molecular dynamics
+
+*homepage*: https://github.com/i-pi/i-pi
+
 ============    ===========
 version         toolchains 
 ============    ===========
@@ -5681,6 +7320,10 @@ version         toolchains
 
 *icc*
 +++++
+
+C and C++ compiler from Intel
+
+*homepage*: http://software.intel.com/en-us/intel-compilers/
 
 ==============    ==========
 version           toolchains
@@ -5718,6 +7361,10 @@ version           toolchains
 *iccifort*
 ++++++++++
 
+Intel Cluster Toolkit Compiler Edition provides Intel C,C++ and fortran compilers, Intel MPI and Intel MKL
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
+
 ==============    ==========
 version           toolchains
 ==============    ==========
@@ -5752,6 +7399,10 @@ version           toolchains
 *icmake*
 ++++++++
 
+Icmake is a hybrid between a 'make' utility and a 'shell script' language. Originally, it was written to  provide a useful tool for automatic program maintenance and system administrative tasks on old MS-DOS platforms.
+
+*homepage*: http://icmake.sourceforge.net/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5763,6 +7414,10 @@ version    toolchains
 
 *ictce*
 +++++++
+
+Intel Cluster Toolkit Compiler Edition provides Intel C/C++ and Fortran compilers, Intel MPI & Intel MKL.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
 
 ========    ==========
 version     toolchains
@@ -5790,6 +7445,10 @@ version     toolchains
 *IDBA-UD*
 +++++++++
 
+ IDBA-UD is a iterative De Bruijn Graph De Novo Assembler for Short Reads   Sequencing data with Highly Uneven Sequencing Depth. It is an extension of IDBA algorithm.   IDBA-UD also iterates from small k to a large k. In each iteration, short and low-depth   contigs are removed iteratively with cutoff threshold from low to high to reduce the errors   in low-depth and high-depth regions. Paired-end reads are aligned to contigs and assembled   locally to generate some missing k-mers in low-depth regions. With these technologies, IDBA-UD   can iterate k value of de Bruijn graph to a very large value with less gaps and less branches   to form long contigs in both low-depth and high-depth regions.
+
+*homepage*: http://i.cs.hku.hk/~alse/hkubrg/projects/idba_ud/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -5801,6 +7460,10 @@ version    toolchains
 
 *ifort*
 +++++++
+
+C and C++ compiler from Intel
+
+*homepage*: http://software.intel.com/en-us/intel-compilers/
 
 ==============    ==========
 version           toolchains
@@ -5838,6 +7501,10 @@ version           toolchains
 *IGV*
 +++++
 
+ The Integrative Genomics Viewer (IGV) is a high-performance visualization   tool for interactive exploration of large, integrated genomic datasets. It supports a wide   variety of data types, including array-based and next-generation sequence data, and genomic annotations. 
+
+*homepage*: http://www.broadinstitute.org/software/igv/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5850,6 +7517,10 @@ version    toolchains
 
 *IGVTools*
 ++++++++++
+
+ This package contains command line utilities for preprocessing,   computing feature count density (coverage),  sorting, and indexing data files.  See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
+
+*homepage*: http://www.broadinstitute.org/software/igv/
 
 =======    ==========
 version    toolchains
@@ -5864,6 +7535,10 @@ version    toolchains
 
 *iimpi*
 +++++++
+
+Intel C/C++ and Fortran compilers, alongside Intel MPI.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
 
 ========    ==========
 version     toolchains
@@ -5901,6 +7576,10 @@ version     toolchains
 *iiqmpi*
 ++++++++
 
+Compiler toolchain with Intel compilers (icc, ifort) and QLogic MPI.
+
+*homepage*: (none)
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -5914,6 +7593,10 @@ version    toolchains
 *IMa2*
 ++++++
 
+IMa2 is a progam for population genetic analysis that can handle two or more populations.
+
+*homepage*: https://bio.cst.temple.edu/~hey/software/software.htm#IMa2
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -5925,6 +7608,10 @@ version    toolchains
 
 *IMa2p*
 +++++++
+
+ IMa2p is a parallel implementation of IMa2, using OpenMPI-C++ - a Bayesian MCMC  based method for inferring population demography under the IM (Isolation with  Migration) model. http://dx.doi.org/10.1111/1755-0998.12437 
+
+*homepage*: https://github.com/arunsethuraman/ima2p
 
 ========    ===========
 version     toolchains 
@@ -5938,6 +7625,10 @@ version     toolchains
 
 *ImageMagick*
 +++++++++++++
+
+ImageMagick is a software suite to create, edit, compose, or convert bitmap images
+
+*homepage*: http://www.imagemagick.org/
 
 =======    ============
 version    toolchains  
@@ -5955,6 +7646,10 @@ version    toolchains
 *imake*
 +++++++
 
+imake is a Makefile-generator that is intended to make it easier to develop software  portably for multiple systems.
+
+*homepage*: http://www.x.org/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -5968,6 +7663,10 @@ version    toolchains
 *IMB*
 +++++
 
+The Intel MPI Benchmarks perform a set of MPI performance measurements for point-to-point and  global communication operations for a range of message sizes
+
+*homepage*: https://software.intel.com/en-us/articles/intel-mpi-benchmarks
+
 =======    ===============================================
 version    toolchains                                     
 =======    ===============================================
@@ -5979,6 +7678,10 @@ version    toolchains
 
 *imkl*
 ++++++
+
+Intel Math Kernel Library is a library of highly optimized,  extensively threaded math routines for science, engineering, and financial  applications that require maximum performance. Core math functions include  BLAS, LAPACK, ScaLAPACK, Sparse Solvers, Fast Fourier Transforms, Vector Math, and more.
+
+*homepage*: http://software.intel.com/en-us/intel-mkl/
 
 ===========    ==================================================================================================================================================
 version        toolchains                                                                                                                                        
@@ -6013,6 +7716,10 @@ version        toolchains
 *IMOD*
 ++++++
 
+IMOD is a set of image processing, modeling and display programs used for tomographic reconstruction and for 3D reconstruction of EM serial sections and optical sections. The package contains tools for assembling and aligning data within multiple types and sizes of image stacks, viewing 3-D data from any orientation, and modeling and display of the image files. IMOD was developed primarily by David Mastronarde, Rick Gaudette, Sue Held, Jim Kremer, Quanren Xiong, and John Heumann at the University of Colorado.
+
+*homepage*: http://bio3d.colorado.edu/imod/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6024,6 +7731,10 @@ version    toolchains
 
 *impi*
 ++++++
+
+The Intel(R) MPI Library for Linux* OS is a multi-fabric message  passing library based on ANL MPICH2 and OSU MVAPICH2. The Intel MPI Library for  Linux OS implements the Message Passing Interface, version 2 (MPI-2) specification.
+
+*homepage*: http://software.intel.com/en-us/intel-mpi-library/
 
 =========    ==================================================================================================================================================================================
 version      toolchains                                                                                                                                                                        
@@ -6052,6 +7763,10 @@ version      toolchains
 *IMPUTE2*
 +++++++++
 
+  IMPUTE version 2 (also known as IMPUTE2) is a genotype imputation   and haplotype phasing program based on ideas from Howie et al. 2009 
+
+*homepage*: http://mathgen.stats.ox.ac.uk/impute/impute_v2.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6065,6 +7780,10 @@ version    toolchains
 *Infernal*
 ++++++++++
 
+Infernal ('INFERence of RNA ALignment') is for searching DNA sequence databases  for RNA structure and sequence similarities.
+
+*homepage*: http://infernal.janelia.org/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -6077,6 +7796,10 @@ version    toolchains
 
 *inputproto*
 ++++++++++++
+
+X.org InputProto protocol headers.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    ===========================================================================================
 version    toolchains                                                                                 
@@ -6092,6 +7815,10 @@ version    toolchains
 *Inspector*
 +++++++++++
 
+Intel Inspector XE is an easy to use memory error checker and thread checker for serial  and parallel applications
+
+*homepage*: http://software.intel.com/en-us/intel-inspector-xe
+
 ============    ==========
 version         toolchains
 ============    ==========
@@ -6106,6 +7833,10 @@ version         toolchains
 *Instant*
 +++++++++
 
+Instant is a Python module that allows for instant inlining of C and C++ code in Python.  It is a small Python module built on top of SWIG and Distutils.
+
+*homepage*: https://bitbucket.org/fenics-project/instant
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -6118,6 +7849,10 @@ version    toolchains
 
 *intel*
 +++++++
+
+Intel Cluster Toolkit Compiler Edition provides Intel C/C++ and Fortran compilers, Intel MPI & Intel MKL.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
 
 =======    ==========
 version    toolchains
@@ -6144,6 +7879,10 @@ version    toolchains
 *intel-para*
 ++++++++++++
 
+Intel Cluster Toolkit Compiler Edition provides Intel C/C++ and Fortran compilers, ParaStation MPI & Intel MKL.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6155,6 +7894,10 @@ version    toolchains
 
 *InterProScan*
 ++++++++++++++
+
+InterProScan is a sequence analysis application (nucleotide and protein sequences) that combines  different protein signature recognition methods into one resource.
+
+*homepage*: http://www.ebi.ac.uk/interpro/
 
 =========    ===========
 version      toolchains 
@@ -6168,6 +7911,10 @@ version      toolchains
 *intltool*
 ++++++++++
 
+intltool is a set of tools to centralize translation of  many different file formats using GNU gettext-compatible PO files.
+
+*homepage*: http://freedesktop.org/wiki/Software/intltool/
+
 =======    ===================================================
 version    toolchains                                         
 =======    ===================================================
@@ -6180,6 +7927,10 @@ version    toolchains
 *io_lib*
 ++++++++
 
+Io_lib is a library of file reading and writing code to provide a general purpose trace file (and Experiment  File) reading interface. The programmer simply calls the (eg) read_reading to create a "Read" C structure with the data loaded  into memory. It has been compiled and tested on a variety of unix systems, MacOS X and MS Windows.  
+
+*homepage*: http://sourceforge.net/projects/staden/files/io_lib/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6191,6 +7942,10 @@ version    toolchains
 
 *iomkl*
 +++++++
+
+Intel Cluster Toolchain Compiler Edition provides Intel C/C++ and Fortran compilers, Intel MKL & OpenMPI.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
 
 =======    ==========
 version    toolchains
@@ -6208,6 +7963,10 @@ version    toolchains
 
 *iompi*
 +++++++
+
+Toolchain with Intel C, C++ and Fortran compilers, alongside OpenMPI.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
 
 =======    ==========
 version    toolchains
@@ -6227,6 +7986,10 @@ version    toolchains
 *IOR*
 +++++
 
+ The IOR software is used for benchmarking parallel file systems using POSIX, MPIIO,  or HDF5 interfaces. 
+
+*homepage*: https://github.com/chaos/ior
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -6240,6 +8003,10 @@ version    toolchains
 *IOzone*
 ++++++++
 
+ IOzone is a filesystem benchmark tool. The benchmark generates and measures a variety of file operations. Iozone has been ported  to many machines and runs under many operating systems.  
+
+*homepage*: http://www.iozone.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6252,6 +8019,10 @@ version    toolchains
 *Iperf*
 +++++++
 
+Iperf-2.0.5: TCP and UDP bandwidth performance measurement tool
+
+*homepage*: http://iperf.sourceforge.net/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -6263,6 +8034,10 @@ version    toolchains
 
 *ipp*
 +++++
+
+Intel Integrated Performance Primitives (Intel IPP) is an extensive library  of multicore-ready, highly optimized software functions for multimedia, data processing,  and communications applications. Intel IPP offers thousands of optimized functions  covering frequently used fundamental algorithms.
+
+*homepage*: http://software.intel.com/en-us/articles/intel-ipp/
 
 =========    ==========
 version      toolchains
@@ -6278,6 +8053,10 @@ version      toolchains
 *ipsmpi*
 ++++++++
 
+Intel Cluster Toolkit Compiler Edition provides Intel C/C++ and Fortran compilers, Intel MKL combined with ParaStation MPI.
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6289,6 +8068,10 @@ version    toolchains
 
 *IPython*
 +++++++++
+
+IPython provides a rich architecture for interactive computing with:  Powerful interactive shells (terminal and Qt-based).  A browser-based notebook with support for code, text, mathematical expressions, inline plots and other rich media.  Support for interactive data visualization and use of GUI toolkits.  Flexible, embeddable interpreters to load into your own projects.  Easy to use, high performance tools for parallel computing.
+
+*homepage*: http://ipython.org/index.html
 
 =======    ================================================
 version    toolchains                                      
@@ -6311,6 +8094,10 @@ version    toolchains
 *iqacml*
 ++++++++
 
+Intel Cluster Toolkit Compiler Edition provides Intel C,C++ and fortran compilers, QLogic MPI and AMD Core Math Library (ACML).
+
+*homepage*: http://software.intel.com/en-us/intel-cluster-toolkit-compiler/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6324,6 +8111,10 @@ version    toolchains
 *IronPython*
 ++++++++++++
 
+IronPython is an open-source implementation of the Python programming language  which is tightly integrated with the .NET Framework. IronPython can use the .NET Framework and Python libraries, and other .NET languages can use Python code just as easily.
+
+*homepage*: http://ironpython.net/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -6336,6 +8127,10 @@ version    toolchains
 *ISIS*
 ++++++
 
+ISIS is Computational Fluid Dynamics software based on CALIF3S and PELICANS libraries. It is  intensively used for simulation of fires and copes with a wide range of applications, including laminar or turbulent  flows, possibly reactive, governed by incompressible or low Mach number Navier-Stokes equations.
+
+*homepage*: https://gforge.irsn.fr/gf/project/isis/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -6347,6 +8142,10 @@ version    toolchains
 
 *ISL*
 +++++
+
+isl is a library for manipulating sets and relations of integer points bounded by linear constraints.
+
+*homepage*: http://isl.gforge.inria.fr/
 
 =======    ==========================================
 version    toolchains                                
@@ -6363,6 +8162,10 @@ version    toolchains
 *IsoInfer*
 ++++++++++
 
+IsoInfer is a C/C++ program  to infer isoforms based on short RNA-Seq   (single-end and paired-end) reads, exon-intron boundary and TSS/PAS information.   This version of IsoInfer uses a unified way to handle different types of short reads   with different lengths. 
+
+*homepage*: http://www.cs.ucr.edu/~jianxing/IsoInfer.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -6375,6 +8178,10 @@ version    toolchains
 *ispc*
 ++++++
 
+Intel SPMD Program Compilers; An open-source compiler for high-performance  SIMD programming on the CPU. ispc is a compiler for a variant of the C programming language,  with extensions for 'single program, multiple data' (SPMD) programming.  Under the SPMD model, the programmer writes a program that generally appears  to be a regular serial program, though the execution model is actually that  a number of program instances execute in parallel on the hardware.
+
+*homepage*: http://ispc.github.io/ , https://github.com/ispc/ispc/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6386,6 +8193,10 @@ version    toolchains
 
 *itac*
 ++++++
+
+The Intel Trace Collector is a low-overhead tracing library that performs  event-based tracing in applications. The Intel Trace Analyzer provides a convenient way to monitor application  activities gathered by the Intel Trace Collector through graphical displays. 
+
+*homepage*: http://software.intel.com/en-us/intel-trace-analyzer/
 
 =========    ==========
 version      toolchains
@@ -6410,6 +8221,10 @@ version      toolchains
 *JAGS*
 ++++++
 
+JAGS is Just Another Gibbs Sampler.  It is a program for analysis   of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
+
+*homepage*: http://mcmc-jags.sourceforge.net/
+
 =======    ======================================
 version    toolchains                            
 =======    ======================================
@@ -6422,6 +8237,10 @@ version    toolchains
 
 *Jansson*
 +++++++++
+
+Jansson is a C library for encoding, decoding and manipulating JSON data.  Its main features and design principles are:  * Simple and intuitive API and data model  * Comprehensive documentation  * No dependencies on other libraries  * Full Unicode support (UTF-8)  * Extensive test suite
+
+*homepage*: http://www.digip.org/jansson/
 
 =======    ==============
 version    toolchains    
@@ -6436,6 +8255,10 @@ version    toolchains
 *JasPer*
 ++++++++
 
+The JasPer Project is an open-source initiative to provide a free  software-based reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
+
+*homepage*: http://www.ece.uvic.ca/~frodo/jasper/
+
 =======    ==================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                        
 =======    ==================================================================================================================================================================================================================================================================================
@@ -6447,6 +8270,10 @@ version    toolchains
 
 *Java*
 ++++++
+
+Java Platform, Standard Edition (Java SE) lets you develop and deploy  Java applications on desktops and servers.
+
+*homepage*: http://java.com/
 
 ========    ==========
 version     toolchains
@@ -6481,6 +8308,10 @@ version     toolchains
 *Jellyfish*
 +++++++++++
 
+ Jellyfish is a tool for fast, memory-efficient counting of k-mers in DNA.
+
+*homepage*: http://www.genome.umd.edu/jellyfish.html
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -6495,6 +8326,10 @@ version    toolchains
 
 *jemalloc*
 ++++++++++
+
+jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and  scalable concurrency support.
+
+*homepage*: http://www.canonware.com/jemalloc
 
 =======    =======================
 version    toolchains             
@@ -6511,6 +8346,10 @@ version    toolchains
 *jhbuild*
 +++++++++
 
+JHBuild allows you to automatically download and compile “modules” (i.e. source code packages).  Modules are listed in “module set” files, which also include dependency information so that JHBuild can discover  what modules need to be built and in what order.
+
+*homepage*: https://wiki.gnome.org/action/show/Projects/Jhbuild
+
 =======    =============
 version    toolchains   
 =======    =============
@@ -6522,6 +8361,10 @@ version    toolchains
 
 *Jinja2*
 ++++++++
+
+Jinja2 is a template engine written in pure Python. It provides a Django inspired  non-XML syntax but supports inline expressions and an optional sandboxed environment.
+
+*homepage*: https://pypi.python.org/pypi/Jinja2
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -6535,6 +8378,10 @@ version    toolchains
 *jModelTest*
 ++++++++++++
 
+jModelTest is a tool to carry out statistical selection of best-fit models of nucleotide substitution.
+
+*homepage*: https://github.com/ddarriba/jmodeltest2
+
 ==============    ============
 version           toolchains  
 ==============    ============
@@ -6546,6 +8393,10 @@ version           toolchains
 
 *JUBE*
 ++++++
+
+The JUBE benchmarking environment provides a script based framework to easily create benchmark sets,  run those sets on different computer systems and evaluate the results.
+
+*homepage*: http://www.fz-juelich.de/jsc/jube
 
 =======    ==========
 version    toolchains
@@ -6561,6 +8412,10 @@ version    toolchains
 *JUnit*
 +++++++
 
+A programmer-oriented testing framework for Java.
+
+*homepage*: http://sourceforge.net/projects/junit
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6575,6 +8430,10 @@ version    toolchains
 *jupyterhub*
 ++++++++++++
 
+JupyterHub is a multiuser version of the Jupyter (IPython) notebook designed for  centralized deployments in companies, university classrooms and research labs.
+
+*homepage*: http://jupyter.org
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6586,6 +8445,10 @@ version    toolchains
 
 *JWM*
 +++++
+
+JWM is a light-weight window manager for the X11 Window System.
+
+*homepage*: https://joewing.net/projects/jwm/
 
 =======    ===========
 version    toolchains 
@@ -6608,6 +8471,10 @@ version    toolchains
 *kallisto*
 ++++++++++
 
+kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally  of target sequences using high-throughput sequencing reads.
+
+*homepage*: http://pachterlab.github.io/kallisto/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -6622,6 +8489,10 @@ version    toolchains
 *kbproto*
 +++++++++
 
+X.org KBProto protocol headers.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===========================================================================================
 version    toolchains                                                                                 
 =======    ===========================================================================================
@@ -6635,6 +8506,10 @@ version    toolchains
 *KEALib*
 ++++++++
 
+KEALib provides an implementation of the GDAL data model. The format supports raster attribute tables, image pyramids, meta-data and in-built statistics while also handling very large files and compression throughout. Based on the HDF5 standard, it also provides a base from which other formats can be derived and is a good choice for long term data archiving. An independent software library (libkea) provides complete access to the KEA image format and a GDAL driver allowing KEA images to be used from any GDAL supported software.
+
+*homepage*: http://www.kealib.org
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6646,6 +8521,10 @@ version    toolchains
 
 *Kent_tools*
 ++++++++++++
+
+Kent tools: collection of tools used by the UCSC genome browser.
+
+*homepage*: http://genome.cse.ucsc.edu/
 
 ========    ==========
 version     toolchains
@@ -6659,6 +8538,10 @@ version     toolchains
 *Kerberos_V5*
 +++++++++++++
 
+Kerberos is a network authentication protocol.  It is designed to provide strong authentication for client/server  applications by using secret-key cryptography.  A free implementation of this protocol is available from the  Massachusetts Institute of Technology.
+
+*homepage*: http://web.mit.edu/kerberos/dist/index.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -6671,6 +8554,10 @@ version    toolchains
 *khmer*
 +++++++
 
+ In-memory nucleotide sequence k-mer counting, filtering, graph traversal and more 
+
+*homepage*: https://github.com/ged-lab/khmer/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -6682,6 +8569,10 @@ version    toolchains
 
 *Kraken*
 ++++++++
+
+Kraken is a system for assigning taxonomic labels to short DNA sequences,  usually obtained through metagenomic studies. Previous attempts by other  bioinformatics software to accomplish this task have often used sequence  alignment or machine learning techniques that were quite slow, leading to  the development of less sensitive but much faster abundance estimation  programs. Kraken aims to achieve high sensitivity and high speed by  utilizing exact alignments of k-mers and a novel classification algorithm.
+
+*homepage*: http://ccb.jhu.edu/software/kraken/
 
 ===========    ==========
 version        toolchains
@@ -6704,6 +8595,10 @@ version        toolchains
 *LAMARC*
 ++++++++
 
+LAMARC is a program which estimates population-genetic parameters such as population size,  population growth rate, recombination rate, and migration rates.
+
+*homepage*: http://evolution.genetics.washington.edu/lamarc/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -6716,6 +8611,10 @@ version    toolchains
 *LAME*
 ++++++
 
+LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
+
+*homepage*: http://lame.sourceforge.net/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6727,6 +8626,10 @@ version    toolchains
 
 *LAPACK*
 ++++++++
+
+LAPACK is written in Fortran90 and provides routines for solving systems of  simultaneous linear equations, least-squares solutions of linear systems of equations, eigenvalue  problems, and singular value problems.
+
+*homepage*: http://www.netlib.org/lapack/
 
 =======    ============================================================================
 version    toolchains                                                                  
@@ -6742,6 +8645,10 @@ version    toolchains
 *LASTZ*
 +++++++
 
+ LASTZ is a program for aligning DNA sequences, a pairwise aligner. Originally designed to handle  sequences the size of human chromosomes and from different species, it is also useful for sequences produced by NGS   sequencing technologies such as Roche 454. 
+
+*homepage*: http://www.bx.psu.edu/~rsharris/lastz/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6753,6 +8660,10 @@ version    toolchains
 
 *less*
 ++++++
+
+Less is a free, open-source file pager. It can be found on most versions of Linux,  Unix and Mac OS, as well as on many other operating systems.
+
+*homepage*: http://www.greenwoodsoftware.com/less/
 
 =======    ==========
 version    toolchains
@@ -6766,6 +8677,10 @@ version    toolchains
 *LevelDB*
 +++++++++
 
+ LevelDB is a fast key-value storage library written at Google that provides an  ordered mapping from string keys to string values. 
+
+*homepage*: https://github.com/google/leveldb
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6777,6 +8692,10 @@ version    toolchains
 
 *lftp*
 ++++++
+
+LFTP is a sophisticated ftp/http client, and a file transfer program supporting   a number of network protocols. Like BASH, it has job control and uses the readline library for   input. It has bookmarks, a built-in mirror command, and can transfer several files in parallel.   It was designed with reliability in mind.
+
+*homepage*: http://lftp.yar.ru
 
 =======    =================================
 version    toolchains                       
@@ -6791,6 +8710,10 @@ version    toolchains
 *libbitmask*
 ++++++++++++
 
+libbitmask provides a convenient, powerful bitmask data type
+
+*homepage*: http://oss.sgi.com/projects/cpusets/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6802,6 +8725,10 @@ version    toolchains
 
 *libcerf*
 +++++++++
+
+libcerf is a self-contained numeric library that provides an efficient and accurate  implementation of complex error functions, along with Dawson, Faddeeva, and Voigt functions.
+
+*homepage*: http://gnuplot.sourceforge.net/
 
 =======    =======================
 version    toolchains             
@@ -6815,6 +8742,10 @@ version    toolchains
 *libcircle*
 +++++++++++
 
+An API to provide an efficient distributed queue on a cluster. libcircle is an API for distributing  embarrassingly parallel workloads using self-stabilization.
+
+*homepage*: https://github.com/hpc/libcircle/
+
 ==========    =========================
 version       toolchains               
 ==========    =========================
@@ -6826,6 +8757,10 @@ version       toolchains
 
 *libcmaes*
 ++++++++++
+
+libcmaes is a multithreaded C++11 library for high performance blackbox stochastic optimization using the CMA-ES algorithm for Covariance Matrix Adaptation Evolution Strategy.
+
+*homepage*: http://beniz.github.io/libcmaes/
 
 =======    ==========
 version    toolchains
@@ -6839,6 +8774,10 @@ version    toolchains
 *libcpuset*
 +++++++++++
 
+libcpuset provides full access to cpuset capabilities
+
+*homepage*: http://oss.sgi.com/projects/cpusets/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -6851,6 +8790,10 @@ version    toolchains
 *libcroco*
 ++++++++++
 
+Libcroco is a standalone css2 parsing and manipulation library.
+
+*homepage*: https://github.com/GNOME/libcroco
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -6862,6 +8805,10 @@ version    toolchains
 
 *libctl*
 ++++++++
+
+libctl is a free Guile-based library implementing flexible control files for scientific simulations.
+
+*homepage*: http://ab-initio.mit.edu/libctl
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -6876,6 +8823,10 @@ version    toolchains
 *libdap*
 ++++++++
 
+A C++ SDK which contains an implementation of DAP 2.0  and the development versions of DAP3, up to 3.4.  This includes both Client- and Server-side support classes.
+
+*homepage*: http://opendap.org/download/libdap
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -6888,6 +8839,10 @@ version    toolchains
 
 *libdrm*
 ++++++++
+
+Direct Rendering Manager runtime library.
+
+*homepage*: http://dri.freedesktop.org
 
 =======    ======================================================================================
 version    toolchains                                                                            
@@ -6907,6 +8862,10 @@ version    toolchains
 *libdwarf*
 ++++++++++
 
+The DWARF Debugging Information Format is of interest to programmers working on compilers and debuggers (and anyone interested in reading or writing DWARF information))
+
+*homepage*: http://www.prevanders.net/dwarf.html
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -6920,6 +8879,10 @@ version     toolchains
 *libedit*
 +++++++++
 
+ This BSD-style licensed command line editor library provides generic line editing, history, and tokenization functions, similar to those found in GNU Readline. 
+
+*homepage*: http://thrysoee.dk/editline/
+
 ========    ==============
 version     toolchains    
 ========    ==============
@@ -6931,6 +8894,10 @@ version     toolchains
 
 *libelf*
 ++++++++
+
+libelf is a free ELF object file access library
+
+*homepage*: http://www.mr511.de/software/english.html
 
 =======    ====================
 version    toolchains          
@@ -6944,6 +8911,10 @@ version    toolchains
 *libevent*
 ++++++++++
 
+The libevent API provides a mechanism to execute a callback function when a specific  event occurs on a file descriptor or after a timeout has been reached.  Furthermore, libevent also support callbacks due to signals or regular timeouts.
+
+*homepage*: http://libevent.org/
+
 =======    ========================================
 version    toolchains                              
 =======    ========================================
@@ -6956,6 +8927,10 @@ version    toolchains
 
 *libffi*
 ++++++++
+
+The libffi library provides a portable, high level programming interface to various calling conventions. This allows a programmer to call any function specified by a call interface description at run-time.
+
+*homepage*: http://sourceware.org/libffi/
 
 =======    =========================================================================================================================================================================================
 version    toolchains                                                                                                                                                                               
@@ -6972,6 +8947,10 @@ version    toolchains
 *libfontenc*
 ++++++++++++
 
+X11 font encoding library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs/
+
 =======    ===============================================================
 version    toolchains                                                     
 =======    ===============================================================
@@ -6984,6 +8963,10 @@ version    toolchains
 *libgcrypt*
 +++++++++++
 
+Libgpg-error is a small library that defines common error values for all GnuPG components.
+
+*homepage*: https://gnupg.org/related_software/libgcrypt/index.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -6995,6 +8978,10 @@ version    toolchains
 
 *libgd*
 +++++++
+
+GD is an open source code library for the dynamic creation of images by programmers.
+
+*homepage*: http://libgd.bitbucket.org/
 
 =======    ====================================
 version    toolchains                          
@@ -7009,6 +8996,10 @@ version    toolchains
 *libglade*
 ++++++++++
 
+Libglade is a library for constructing user interfaces dynamically from XML descriptions.
+
+*homepage*: https://developer.gnome.org/libglade/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -7020,6 +9011,10 @@ version    toolchains
 
 *libGLU*
 ++++++++
+
+The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL. 
+
+*homepage*: ftp://ftp.freedesktop.org/pub/mesa/glu/
 
 =======    ============================================================================
 version    toolchains                                                                  
@@ -7033,6 +9028,10 @@ version    toolchains
 *libgpg-error*
 ++++++++++++++
 
+Libgpg-error is a small library that defines common error values for all GnuPG components.
+
+*homepage*: https://gnupg.org/related_software/libgpg-error/index.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -7044,6 +9043,10 @@ version    toolchains
 
 *libgtextutils*
 +++++++++++++++
+
+ligtextutils is a dependency of fastx-toolkit and is provided via the same upstream
+
+*homepage*: http://hannonlab.cshl.edu/fastx_toolkit/
 
 =======    ======================================================================================
 version    toolchains                                                                            
@@ -7058,6 +9061,10 @@ version    toolchains
 *libharu*
 +++++++++
 
+libHaru is a free, cross platform, open source library for generating PDF files.
+
+*homepage*: http://libharu.org/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -7069,6 +9076,10 @@ version    toolchains
 
 *libibmad*
 ++++++++++
+
+libibmad is a convenience library to encode, decode, and dump IB MAD packets. It  is implemented on top of and in conjunction with libibumad (the umad kernel  interface library.)
+
+*homepage*: http://www.openfabrics.org
 
 =======    ====================
 version    toolchains          
@@ -7082,6 +9093,10 @@ version    toolchains
 *libibumad*
 +++++++++++
 
+libibumad is the umad kernel interface library.
+
+*homepage*: http://www.openfabrics.org
+
 =======    ====================
 version    toolchains          
 =======    ====================
@@ -7093,6 +9108,10 @@ version    toolchains
 
 *libibverbs*
 ++++++++++++
+
+libibverbs is a library that allows programs to use RDMA "verbs" for  direct access to RDMA (currently InfiniBand and iWARP) hardware from userspace.
+
+*homepage*: http://www.openfabrics.org/downloads/libibverbs/
 
 =======    ====================
 version    toolchains          
@@ -7106,6 +9125,10 @@ version    toolchains
 *libICE*
 ++++++++
 
+X Inter-Client Exchange library for freedesktop.org
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ==================================================================
 version    toolchains                                                        
 =======    ==================================================================
@@ -7118,6 +9141,10 @@ version    toolchains
 
 *libidn*
 ++++++++
+
+GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications. Libidn's purpose is to encode and decode internationalized domain names.
+
+*homepage*: http://www.gnu.org/software/libidn
 
 =======    ==============================================
 version    toolchains                                    
@@ -7133,6 +9160,10 @@ version    toolchains
 *Libint*
 ++++++++
 
+Libint library is used to evaluate the traditional (electron repulsion) and certain novel two-body  matrix elements (integrals) over Cartesian Gaussian functions used in modern atomic and molecular theory.
+
+*homepage*: https://github.com/evaleev/libint
+
 =======    =============================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                   
 =======    =============================================================================================================================================================================================================================
@@ -7147,6 +9178,10 @@ version    toolchains
 
 *libjpeg-turbo*
 +++++++++++++++
+
+libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression. libjpeg is a library that implements JPEG image encoding, decoding and transcoding. 
+
+*homepage*: http://sourceforge.net/projects/libjpeg-turbo/
 
 =======    ============================================================================================
 version    toolchains                                                                                  
@@ -7165,6 +9200,10 @@ version    toolchains
 *libmatheval*
 +++++++++++++
 
+GNU libmatheval is a library (callable from C and Fortran) to parse  and evaluate symbolic expressions input as text.
+
+*homepage*: http://www.gnu.org/software/libmatheval/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -7177,6 +9216,10 @@ version    toolchains
 
 *libpciaccess*
 ++++++++++++++
+
+Generic PCI access library.
+
+*homepage*: http://cgit.freedesktop.org/xorg/lib/libpciaccess/
 
 =======    ==============================================================================================================
 version    toolchains                                                                                                    
@@ -7191,6 +9234,10 @@ version    toolchains
 
 *libpng*
 ++++++++
+
+libpng is the official PNG reference library
+
+*homepage*: http://www.libpng.org/pub/png/libpng.html
 
 =======    ===========================================================================================
 version    toolchains                                                                                 
@@ -7221,6 +9268,10 @@ version    toolchains
 *libpsortb*
 +++++++++++
 
+PSORT family of programs for subcellular localization prediction as well as other datasets and  resources relevant to localization prediction.
+
+*homepage*: http://psort.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -7232,6 +9283,10 @@ version    toolchains
 
 *libpthread-stubs*
 ++++++++++++++++++
+
+The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint, latency hiding, direct access to the protocol, improved threading support, and extensibility.
+
+*homepage*: http://xcb.freedesktop.org/
 
 =======    ================================================================================================================================================================================
 version    toolchains                                                                                                                                                                      
@@ -7245,6 +9300,10 @@ version    toolchains
 *libQGLViewer*
 ++++++++++++++
 
+libQGLViewer is a C++ library based on Qt that eases the creation of OpenGL 3D viewers.
+
+*homepage*: http://libqglviewer.com/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -7256,6 +9315,10 @@ version    toolchains
 
 *libreadline*
 +++++++++++++
+
+The GNU Readline library provides a set of functions for use by applications that  allow users to edit command lines as they are typed in. Both Emacs and vi editing modes are available.  The Readline library includes additional functions to maintain a list of previously-entered command lines,  to recall and perhaps reedit those lines, and perform csh-like history expansion on previous commands.
+
+*homepage*: http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
 
 =======    ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
@@ -7270,6 +9333,10 @@ version    toolchains
 *librsvg*
 +++++++++
 
+librsvg is a library to render SVG files using cairo.
+
+*homepage*: https://wiki.gnome.org/action/show/Projects/LibRsvg
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -7282,6 +9349,10 @@ version    toolchains
 *libsigc++*
 +++++++++++
 
+The libsigc++ package implements a typesafe callback system for standard C++.
+
+*homepage*: http://www.gtk.org/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -7293,6 +9364,10 @@ version    toolchains
 
 *libSM*
 +++++++
+
+X11 Session Management library, which allows for applications to both manage sessions,  and make use of session managers to save and restore their state for later use.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    ==================================================================
 version    toolchains                                                        
@@ -7307,6 +9382,10 @@ version    toolchains
 *libsmm*
 ++++++++
 
+libsmm is part of CP2K. It is a library tuned for small size matrix multiplication,   an area where regular BLAS is not so well-tuned. The source can be found in the tools/build_libssm directory of CP2K code.
+
+*homepage*: http://cp2k.berlios.de/index.html
+
 ========    ===============================================
 version     toolchains                                     
 ========    ===============================================
@@ -7318,6 +9397,10 @@ version     toolchains
 
 *libsodium*
 +++++++++++
+
+Sodium is a modern, easy-to-use software library for encryption, decryption, signatures,  password hashing and more.
+
+*homepage*: http://doc.libsodium.org/
 
 =======    ====================================
 version    toolchains                          
@@ -7334,6 +9417,10 @@ version    toolchains
 *libspatialite*
 +++++++++++++++
 
+SpatiaLite is an open source library intended to extend the SQLite core to support  fully fledged Spatial SQL capabilities.
+
+*homepage*: https://www.gaia-gis.it/fossil/libspatialite/home
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -7345,6 +9432,10 @@ version    toolchains
 
 *LIBSVM*
 ++++++++
+
+LIBSVM is an integrated software for support vector classification, (C-SVC, nu-SVC), regression  (epsilon-SVR, nu-SVR) and distribution estimation (one-class SVM). It supports multi-class classification.
+
+*homepage*: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
 =======    ============
 version    toolchains  
@@ -7359,6 +9450,10 @@ version    toolchains
 *libtasn1*
 ++++++++++
 
+Libtasn1 is the ASN.1 library used by GnuTLS, GNU Shishi and some other packages.  It was written by Fabio Fiorina, and has been shipped as part of GnuTLS  for some time but is now a proper GNU package.
+
+*homepage*: https://www.gnu.org/software/libtasn1/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -7370,6 +9465,10 @@ version    toolchains
 
 *LibTIFF*
 +++++++++
+
+tiff: Library and tools for reading and writing TIFF data files
+
+*homepage*: http://www.remotesensing.org/libtiff/
 
 =========    ===========================================================================================================
 version      toolchains                                                                                                 
@@ -7386,6 +9485,10 @@ version      toolchains
 *libtool*
 +++++++++
 
+GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries  behind a consistent, portable interface.
+
+*homepage*: http://www.gnu.org/software/libtool
+
 =======    =============================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                   
 =======    =============================================================================================================================================================================================================================================================================================
@@ -7400,6 +9503,10 @@ version    toolchains
 *libungif*
 ++++++++++
 
+libungif: Tools and library routines for working with GIF images
+
+*homepage*: http://libungif.sourceforge.net/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -7411,6 +9518,10 @@ version    toolchains
 
 *libunistring*
 ++++++++++++++
+
+This library provides functions for manipulating Unicode strings and for manipulating C strings  according to the Unicode standard.
+
+*homepage*: http://www.gnu.org/software/libunistring/
 
 =======    ==========================================================================================================================================================
 version    toolchains                                                                                                                                                
@@ -7425,6 +9536,10 @@ version    toolchains
 *libunwind*
 +++++++++++
 
+The primary goal of libunwind is to define a portable and efficient C programming interface  (API) to determine the call-chain of a program. The API additionally provides the means to manipulate the  preserved (callee-saved) state of each call-frame and to resume execution at any point in the call-chain  (non-local goto). The API supports both local (same-process) and remote (across-process) operation.  As such, the API is useful in a number of applications
+
+*homepage*: http://www.nongnu.org/libunwind/
+
 =======    ===============================================================================================
 version    toolchains                                                                                     
 =======    ===============================================================================================
@@ -7437,6 +9552,10 @@ version    toolchains
 *LibUUID*
 +++++++++
 
+Portable uuid C library
+
+*homepage*: http://sourceforge.net/projects/libuuid/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -7448,6 +9567,10 @@ version    toolchains
 
 *libX11*
 ++++++++
+
+X11 client-side library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =============================================================================
 version    toolchains                                                                   
@@ -7463,6 +9586,10 @@ version    toolchains
 *libXau*
 ++++++++
 
+The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===============================================================================================================================================
 version    toolchains                                                                                                                                     
 =======    ===============================================================================================================================================
@@ -7475,6 +9602,10 @@ version    toolchains
 *libXaw*
 ++++++++
 
+libXaw provides the Athena Widgets toolkit
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    =====================================================
 version    toolchains                                           
 =======    =====================================================
@@ -7486,6 +9617,10 @@ version    toolchains
 
 *libxc*
 +++++++
+
+Libxc is a library of exchange-correlation functionals for density-functional theory.  The aim is to provide a portable, well tested and reliable set of exchange and correlation functionals.
+
+*homepage*: http://www.tddft.org/programs/octopus/wiki/index.php/Libxc
 
 =======    ======================================================================================
 version    toolchains                                                                            
@@ -7506,6 +9641,10 @@ version    toolchains
 *libxcb*
 ++++++++
 
+The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint,  latency hiding, direct access to the protocol, improved threading support, and extensibility.
+
+*homepage*: http://xcb.freedesktop.org/
+
 =======    ====================================================================================================
 version    toolchains                                                                                          
 =======    ====================================================================================================
@@ -7521,6 +9660,10 @@ version    toolchains
 *libXcursor*
 ++++++++++++
 
+X Cursor management library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -7533,6 +9676,10 @@ version    toolchains
 *libXdamage*
 ++++++++++++
 
+X Damage extension library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===============================================================
 version    toolchains                                                     
 =======    ===============================================================
@@ -7544,6 +9691,10 @@ version    toolchains
 
 *libXdmcp*
 ++++++++++
+
+The libXdmcp package contains a library implementing the X Display Manager Control Protocol. This is useful for allowing clients to interact with the X Display Manager. 
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =============================================================================
 version    toolchains                                                                   
@@ -7558,6 +9709,10 @@ version    toolchains
 *libXext*
 +++++++++
 
+Common X Extensions library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    =============================================================================
 version    toolchains                                                                   
 =======    =============================================================================
@@ -7570,6 +9725,10 @@ version    toolchains
 
 *libXfixes*
 +++++++++++
+
+X Fixes extension library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    ========================================================================================================
 version    toolchains                                                                                              
@@ -7584,6 +9743,10 @@ version    toolchains
 *libXfont*
 ++++++++++
 
+X font libary
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===============================================================
 version    toolchains                                                     
 =======    ===============================================================
@@ -7596,6 +9759,10 @@ version    toolchains
 *libXft*
 ++++++++
 
+X11 client-side library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ==========================================================================
 version    toolchains                                                                
 =======    ==========================================================================
@@ -7607,6 +9774,10 @@ version    toolchains
 
 *libXi*
 +++++++
+
+LibXi provides an X Window System client interface to the XINPUT extension to the X protocol.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =======================================
 version    toolchains                             
@@ -7622,6 +9793,10 @@ version    toolchains
 *libXinerama*
 +++++++++++++
 
+Xinerama multiple monitor library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    =============================================================
 version    toolchains                                                   
 =======    =============================================================
@@ -7633,6 +9808,10 @@ version    toolchains
 
 *libxkbcommon*
 ++++++++++++++
+
+xkbcommon is a library to handle keyboard descriptions,  including loading them from disk, parsing them and handling their state.  It's mainly meant for client toolkits, window systems,  and other system applications.
+
+*homepage*: http://xkbcommon.org/
 
 =======    =======================
 version    toolchains             
@@ -7646,6 +9825,10 @@ version    toolchains
 
 *libxml2*
 +++++++++
+
+Libxml2 is the XML C parser and  toolchain developed for the Gnome project  (but usable outside of the Gnome platform).
+
+*homepage*: http://xmlsoft.org/
 
 =======    =================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                       
@@ -7664,6 +9847,10 @@ version    toolchains
 *libXmu*
 ++++++++
 
+libXmu provides a set of miscellaneous utility convenience functions for X libraries to use.  libXmuu is a lighter-weight version that does not depend on libXt or libXext
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===========================================================================================
 version    toolchains                                                                                 
 =======    ===========================================================================================
@@ -7675,6 +9862,10 @@ version    toolchains
 
 *libXp*
 +++++++
+
+libXp provides the X print library.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =======================================
 version    toolchains                             
@@ -7689,6 +9880,10 @@ version    toolchains
 *libXpm*
 ++++++++
 
+libXp provides the X print library.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===========================================================================================
 version    toolchains                                                                                 
 =======    ===========================================================================================
@@ -7701,6 +9896,10 @@ version    toolchains
 *libXrandr*
 +++++++++++
 
+X Resize, Rotate and Reflection extension library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -7712,6 +9911,10 @@ version    toolchains
 
 *libXrender*
 ++++++++++++
+
+X11 client-side library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    ===============================================================
 version    toolchains                                                     
@@ -7726,6 +9929,10 @@ version    toolchains
 *libXScrnSaver*
 +++++++++++++++
 
+X11 Screen Saver extension client library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -7737,6 +9944,10 @@ version    toolchains
 
 *libxslt*
 +++++++++
+
+Libxslt is the XSLT C library developed for the GNOME project  (but usable outside of the Gnome platform).
+
+*homepage*: http://xmlsoft.org/
 
 =======    =====================================================================================================================================================
 version    toolchains                                                                                                                                           
@@ -7751,6 +9962,10 @@ version    toolchains
 *libxsmm*
 +++++++++
 
+LIBXSMM is a library for small dense and small sparse matrix-matrix multiplications targeting Intel Architecture (x86).
+
+*homepage*: https://github.com/hfp/libxsmm
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -7763,6 +9978,10 @@ version    toolchains
 
 *libXt*
 +++++++
+
+libXt provides the X Toolkit Intrinsics, an abstract widget library upon which other toolkits are  based. Xt is the basis for many toolkits, including the Athena widgets (Xaw), and LessTif (a Motif implementation).
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    ===============================================================================
 version    toolchains                                                                     
@@ -7777,6 +9996,10 @@ version    toolchains
 *libXtst*
 +++++++++
 
+Client library for X Record and Test extensions.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ==================================================================
 version    toolchains                                                        
 =======    ==================================================================
@@ -7788,6 +10011,10 @@ version    toolchains
 
 *libXxf86vm*
 ++++++++++++
+
+X11 XFree86 video mode extension library
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =======================
 version    toolchains             
@@ -7801,6 +10028,10 @@ version    toolchains
 *libyaml*
 +++++++++
 
+LibYAML is a YAML 1.1 parser and emitter written in C.
+
+*homepage*: http://pyyaml.org/wiki/LibYAML
+
 =======    ==================================================
 version    toolchains                                        
 =======    ==================================================
@@ -7813,6 +10044,10 @@ version    toolchains
 
 *likwid*
 ++++++++
+
+Likwid stands for Like I knew what I am doing. This project contributes easy to use  command line tools for Linux to support programmers in developing high performance multi threaded programs.
+
+*homepage*: http://code.google.com/p/likwid/
 
 =======    ============================================================
 version    toolchains                                                  
@@ -7829,6 +10064,10 @@ version    toolchains
 *LinBox*
 ++++++++
 
+C++ library for exact, high-performance linear algebra
+
+*homepage*: http://linalg.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -7841,6 +10080,10 @@ version    toolchains
 *LittleCMS*
 +++++++++++
 
+ Little CMS intends to be an OPEN SOURCE small-footprint color management engine,   with special focus on accuracy and performance. 
+
+*homepage*: http://www.littlecms.com/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -7852,6 +10095,10 @@ version    toolchains
 
 *LLVM*
 ++++++
+
+The LLVM Core libraries provide a modern source- and target-independent  optimizer, along with code generation support for many popular CPUs  (as well as some less common ones!) These libraries are built around a well  specified code representation known as the LLVM intermediate representation  ("LLVM IR"). The LLVM Core libraries are well documented, and it is  particularly easy to invent your own language (or port an existing compiler)  to use LLVM as an optimizer and code generator.
+
+*homepage*: http://llvm.org/
 
 =======    ==================================================
 version    toolchains                                        
@@ -7870,6 +10117,10 @@ version    toolchains
 *LMDB*
 ++++++
 
+ OpenLDAP's Lightning Memory-Mapped Database (LMDB) library. 
+
+*homepage*: https://github.com/LMDB/lmdb
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -7881,6 +10132,10 @@ version    toolchains
 
 *Lmod*
 ++++++
+
+Lmod is a Lua based module system. Modules allow for dynamic modification  of a user's environment under Unix systems. See www.tacc.utexas.edu/tacc-projects/lmod  for a complete description. Lmod is a new implementation that easily handles the MODULEPATH  Hierarchical problem. It is drop-in replacement for TCL/C modules and reads TCL modulefiles directly.
+
+*homepage*: http://sourceforge.net/projects/lmod/
 
 =======    ==================================
 version    toolchains                        
@@ -7906,6 +10161,10 @@ version    toolchains
 *log4cplus*
 +++++++++++
 
+log4cplus is a simple to use C++ logging API providing thread-safe, flexible, and arbitrarily granular control over log management and configuration. It is modelled after the Java log4j API.
+
+*homepage*: http://sourceforge.net/p/log4cplus
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -7919,6 +10178,10 @@ version    toolchains
 *Loki*
 ++++++
 
+ Loki is a C++ library of designs, containing flexible implementations of common design patterns and   idioms. 
+
+*homepage*: http://loki-lib.sourceforge.net/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -7930,6 +10193,10 @@ version    toolchains
 
 *Lua*
 +++++
+
+Lua is a powerful, fast, lightweight, embeddable scripting language.  Lua combines simple procedural syntax with powerful data description constructs based  on associative arrays and extensible semantics. Lua is dynamically typed,  runs by interpreting bytecode for a register-based virtual machine,  and has automatic memory management with incremental garbage collection,  making it ideal for configuration, scripting, and rapid prototyping.
+
+*homepage*: http://www.lua.org/
 
 =======    ==================================
 version    toolchains                        
@@ -7944,6 +10211,10 @@ version    toolchains
 *LuaJIT*
 ++++++++
 
+LuaJIT is a Just-In-Time Compiler (JIT) for the Lua programming language. Lua is a powerful, dynamic and light-weight programming language. It may be embedded or used as a general-purpose, stand-alone language. 
+
+*homepage*: http://luajit.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -7956,6 +10227,10 @@ version    toolchains
 *LWM2*
 ++++++
 
+The lightweight measurement module (LWM2) is a low overhead profiler developed  during the course of the HOPSA project. It can profile applications without any modification by  a user. The lightweight measurement module uses a hybrid approach to profile an application. It  samples the profiled application at regular intervals to keep track of application activity. To  keep the overhead low, LWM2 avoids stack unwinding at each application sample. Instead, it utilizes  direct instrumentation to earmark regions of interest in an application. When an application is  sampled, the earmarks are checked to identify the region of application execution. As a result,  LWM2 is able to profile application with reasonable knowledge of application activity while  maintaining low overhead. This hybrid approach also allows LWM2 to keep track of the time spent  by an application in different regions of execution without directly measuring the time in these  regions. The hybrid profiling approach is also used to collect additional dat a of interest for  some specific application activities. This includes the MPI communication calls and the amount of  data transfer, the POSIX file I/O calls and associated data transfers, etc.
+
+*homepage*: http://www.vi-hps.org/Tools/LWM2.html
+
 =======    =================================
 version    toolchains                       
 =======    =================================
@@ -7967,6 +10242,10 @@ version    toolchains
 
 *lxml*
 ++++++
+
+The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and libxslt.
+
+*homepage*: http://lxml.de/
 
 =======    =========================
 version    toolchains               
@@ -7985,6 +10264,10 @@ version    toolchains
 *lynx*
 ++++++
 
+lynx is an alphanumeric display oriented World-Wide Web Client
+
+*homepage*: http://lynx.isc.org/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -7996,6 +10279,10 @@ version    toolchains
 
 *LZO*
 +++++
+
+LZO-2.06: Portable lossless data compression library
+
+*homepage*: http://www.oberhumer.com/opensource/lzo/
 
 =======    ========================================================================
 version    toolchains                                                              
@@ -8018,6 +10305,10 @@ version    toolchains
 *M4*
 ++++
 
+GNU M4 is an implementation of the traditional Unix macro processor.  It is mostly SVR4 compatible although it has some extensions   (for example, handling more than 9 positional parameters to macros).  GNU M4 also has built-in functions for including files, running shell commands, doing arithmetic, etc. 
+
+*homepage*: http://www.gnu.org/software/m4/m4.html
+
 =======    =============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 =======    =============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -8031,6 +10322,10 @@ version    toolchains
 *MaCH*
 ++++++
 
+ MaCH 1.0 is a Markov Chain based haplotyper. It can resolve long   haplotypes or infer missing genotypes in samples of unrelated individuals. The   current version is a pre-release. 
+
+*homepage*: http://www.sph.umich.edu/csg/abecasis/MaCH/
+
 ========    =========================
 version     toolchains               
 ========    =========================
@@ -8042,6 +10337,10 @@ version     toolchains
 
 *MACH*
 ++++++
+
+MACH 1.0 is a Markov Chain based haplotyper  that can resolve long haplotypes or infer missing genotypes  in samples of unrelated individuals.
+
+*homepage*: http://csg.sph.umich.edu/abecasis/MACH/
 
 =======    ==========
 version    toolchains
@@ -8055,6 +10354,10 @@ version    toolchains
 *MACS*
 ++++++
 
+ Model-based Analysis of ChIP-Seq (MACS) on short reads sequencers   such as Genome Analyzer (Illumina / Solexa). MACS empirically models the length of   the sequenced ChIP fragments, which tends to be shorter than sonication or library   construction size estimates, and uses it to improve the spatial resolution of predicted   binding sites. MACS also uses a dynamic Poisson distribution to effectively capture   local biases in the genome sequence, allowing for more sensitive and robust prediction.
+
+*homepage*: http://liulab.dfci.harvard.edu/MACS/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -8066,6 +10369,10 @@ version    toolchains
 
 *MACS2*
 +++++++
+
+Model Based Analysis for ChIP-Seq data
+
+*homepage*: https://github.com/taoliu/MACS/
 
 ==============    ============
 version           toolchains  
@@ -8079,6 +10386,10 @@ version           toolchains
 *MAFFT*
 +++++++
 
+MAFFT is a multiple sequence alignment program   for unix-like operating systems.  It offers a range of multiple  alignment methods, L-INS-i (accurate; for alignment of <∼200 sequences),   FFT-NS-2 (fast; for alignment of <∼10,000 sequences), etc.
+
+*homepage*: http://mafft.cbrc.jp/alignment/software/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -8091,6 +10402,10 @@ version    toolchains
 *magma*
 +++++++
 
+The MAGMA project aims to develop a dense linear algebra library similar to  LAPACK but for heterogeneous/hybrid architectures, starting with current Multicore+GPU systems.
+
+*homepage*: http://icl.cs.utk.edu/magma/
+
 =======    ===============
 version    toolchains     
 =======    ===============
@@ -8102,6 +10417,10 @@ version    toolchains
 
 *make*
 ++++++
+
+GNU version of make utility
+
+*homepage*: http://www.gnu.org/software/make/make.html
 
 =======    =================================================
 version    toolchains                                       
@@ -8116,6 +10435,10 @@ version    toolchains
 *makedepend*
 ++++++++++++
 
+The makedepend package contains a C-preprocessor like utility to determine build-time dependencies.
+
+*homepage*: http://www.linuxfromscratch.org/blfs/view/svn/x/makedepend.html
+
 =======    ====================================================================================================================
 version    toolchains                                                                                                          
 =======    ====================================================================================================================
@@ -8129,6 +10452,10 @@ version    toolchains
 *Mako*
 ++++++
 
+A super-fast templating language that borrows the best ideas from the existing templating languages
+
+*homepage*: http://www.makotemplates.org
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -8140,6 +10467,10 @@ version    toolchains
 
 *Maple*
 +++++++
+
+Maple combines the world's most powerful mathematical computation engine with an intuitive,    'clickable' user interface.
+
+*homepage*: http://www.maplesoft.com/products/maple/
 
 =======    ==========
 version    toolchains
@@ -8153,6 +10484,10 @@ version    toolchains
 *Maq*
 +++++
 
+ Maq is a software that builds mapping  assemblies from short reads generated by the  next-generation sequencing machines. 
+
+*homepage*: http://maq.sourceforge.net/maq-man.shtml
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8164,6 +10499,10 @@ version    toolchains
 
 *MariaDB*
 +++++++++
+
+MariaDB An enhanced, drop-in replacement for MySQL.
+
+*homepage*: https://mariadb.org/
 
 =======    =======================
 version    toolchains             
@@ -8181,6 +10520,10 @@ version    toolchains
 *MAST*
 ++++++
 
+Tools and methods for analysis of single cell assay data in R
+
+*homepage*: https://github.com/RGLab/MAST
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -8192,6 +10535,10 @@ version     toolchains
 
 *Mathematica*
 +++++++++++++
+
+Mathematica is a computational software program used in many scientific, engineering, mathematical and computing fields.
+
+*homepage*: http://www.wolfram.com/mathematica
 
 =======    ==========
 version    toolchains
@@ -8208,6 +10555,10 @@ version    toolchains
 *MATIO*
 +++++++
 
+matio is an C library for reading and writing Matlab MAT files.
+
+*homepage*: http://sourceforge.net/projects/matio/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -8219,6 +10570,10 @@ version    toolchains
 
 *MATLAB*
 ++++++++
+
+MATLAB is a high-level language and interactive environment  that enables you to perform computationally intensive tasks faster than with  traditional programming languages such as C, C++, and Fortran.
+
+*homepage*: http://www.mathworks.com/products/matlab
 
 =======    ==========
 version    toolchains
@@ -8233,6 +10588,10 @@ version    toolchains
 
 *matplotlib*
 ++++++++++++
+
+matplotlib is a python 2D plotting library which produces publication quality figures in a variety of  hardcopy formats and interactive environments across platforms. matplotlib can be used in python scripts, the python  and ipython shell, web application servers, and six graphical user interface toolkits.
+
+*homepage*: http://matplotlib.org
 
 =======    ==============================================================================
 version    toolchains                                                                    
@@ -8254,6 +10613,10 @@ version    toolchains
 *Maven*
 +++++++
 
+Binary maven install, Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information. 
+
+*homepage*: http://maven.apache.org/index.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8268,6 +10631,10 @@ version    toolchains
 *mawk*
 ++++++
 
+mawk is an interpreter for the AWK Programming Language.
+
+*homepage*: http://invisible-island.net/mawk/mawk.html
+
 ==============    ==========
 version           toolchains
 ==============    ==========
@@ -8279,6 +10646,10 @@ version           toolchains
 
 *Mawk*
 ++++++
+
+mawk is an interpreter for the AWK Programming Language.
+
+*homepage*: http://invisible-island.net/mawk/
 
 =======    ============
 version    toolchains  
@@ -8292,6 +10663,10 @@ version    toolchains
 *mayavi*
 ++++++++
 
+The Mayavi scientific data 3-dimensional visualizer
+
+*homepage*: http://code.enthought.com/projects/mayavi/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -8303,6 +10678,10 @@ version    toolchains
 
 *mc*
 ++++
+
+mc-4.6.1: User-friendly file manager and visual shell
+
+*homepage*: https://www.midnight-commander.org/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -8317,6 +10696,10 @@ version    toolchains
 *MCL*
 +++++
 
+The MCL algorithm is short for the Markov Cluster Algorithm, a fast and scalable unsupervised cluster algorithm for graphs (also known as networks) based on simulation of (stochastic) flow in graphs. 
+
+*homepage*: http://micans.org/mcl/
+
 =======    =========================================================================
 version    toolchains                                                               
 =======    =========================================================================
@@ -8330,6 +10713,10 @@ version    toolchains
 *mcpp*
 ++++++
 
+MCPP is a portable C/C++ preprocessor, supporting GCC, Visual C++, etc.  Its source is highly configurable and can generate executables of various specs.  It accompanies a validation suite to check preprocessor's conformance and quality exhaustively.
+
+*homepage*: http://mcpp.sourceforge.net/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8341,6 +10728,10 @@ version    toolchains
 
 *MCR*
 +++++
+
+The MATLAB Runtime is a standalone set of shared libraries  that enables the execution of compiled MATLAB applications  or components on computers that do not have MATLAB installed.
+
+*homepage*: http://www.mathworks.com/products/compiler/mcr/
 
 =======    ==========
 version    toolchains
@@ -8356,6 +10747,10 @@ R2015a     dummy
 *MDP*
 +++++
 
+From the user's perspective, MDP is a collection of supervised and unsupervised learning algorithms  and other data processing units that can be combined into data processing sequences and more complex feed-forward  network architectures.
+
+*homepage*: http://mdp-toolkit.sourceforge.net
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -8368,6 +10763,10 @@ version    toolchains
 *MDSplus*
 +++++++++
 
+MDSplus is a set of software tools for data acquisition and storage and a methodology  for management of complex scientific data.
+
+*homepage*: http://mdsplus.org/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -8379,6 +10778,10 @@ version    toolchains
 
 *mdtest*
 ++++++++
+
+ mdtest is an MPI-coordinated metadata benchmark test that performs   open/stat/close operations on files and directories and then reports the performance.
+
+*homepage*: http://sourceforge.net/projects/mdtest/
 
 =======    =========================
 version    toolchains               
@@ -8393,6 +10796,10 @@ version    toolchains
 *Meep*
 ++++++
 
+Meep (or MEEP) is a free finite-difference time-domain (FDTD) simulation software package  developed at MIT to model electromagnetic systems.
+
+*homepage*: http://ab-initio.mit.edu/wiki/index.php/Meep
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -8406,6 +10813,10 @@ version    toolchains
 *MEGACC*
 ++++++++
 
+MEGA-Computing Core - Sophisticated and user-friendly software suite for analyzing DNA and   protein sequence data from species and populations.
+
+*homepage*: http://www.megasoftware.net
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -8418,6 +10829,10 @@ version     toolchains
 *MEME*
 ++++++
 
+The MEME Suite allows you to: * discover motifs using MEME, DREME (DNA only) or  GLAM2 on groups of related DNA or protein sequences, * search sequence databases with motifs using  MAST, FIMO, MCAST or GLAM2SCAN, * compare a motif to all motifs in a database of motifs, * associate  motifs with Gene Ontology terms via their putative target genes, and * analyse motif enrichment  using SpaMo or CentriMo.
+
+*homepage*: http://meme.nbcr.net/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -8429,6 +10844,10 @@ version    toolchains
 
 *Mercurial*
 +++++++++++
+
+Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an easy and intuitive interface. 
+
+*homepage*: http://mercurial.selenic.com/
 
 =======    =========================================================================================================================
 version    toolchains                                                                                                               
@@ -8444,6 +10863,10 @@ version    toolchains
 
 *Mesa*
 ++++++
+
+Mesa is an open-source implementation of the OpenGL specification -  a system for rendering interactive 3D graphics.
+
+*homepage*: http://www.mesa3d.org/
 
 =======    ======================================================================================
 version    toolchains                                                                            
@@ -8464,6 +10887,10 @@ version    toolchains
 *Mesquite*
 ++++++++++
 
+Mesh-Quality Improvement Library
+
+*homepage*: https://software.sandia.gov/mesquite/
+
 =======    ==================================================================
 version    toolchains                                                        
 =======    ==================================================================
@@ -8475,6 +10902,10 @@ version    toolchains
 
 *MetaGeneAnnotator*
 +++++++++++++++++++
+
+MetaGeneAnnotator is a gene-finding program for prokaryote and phage.
+
+*homepage*: http://metagene.nig.ac.jp/
 
 ========    ==========
 version     toolchains
@@ -8488,6 +10919,10 @@ version     toolchains
 *Metal*
 +++++++
 
+ Metal - Meta Analysis Helper The METAL software is designed to facilitate meta-analysis of large datasets (such as several whole genome scans) in a  convenient, rapid and memory efficient manner. 
+
+*homepage*: http://csg.sph.umich.edu/abecasis/Metal/
+
 ==========    ==========
 version       toolchains
 ==========    ==========
@@ -8499,6 +10934,10 @@ version       toolchains
 
 *MetaVelvet*
 ++++++++++++
+
+A short read assember for metagenomics
+
+*homepage*: http://metavelvet.dna.bio.keio.ac.jp/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -8512,6 +10951,10 @@ version    toolchains
 *MethPipe*
 ++++++++++
 
+The MethPipe software package is a computational pipeline for   analyzing bisulfite sequencing data (BS-seq, WGBS and RRBS).
+
+*homepage*: http://smithlab.usc.edu/methpipe/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -8523,6 +10966,10 @@ version    toolchains
 
 *METIS*
 +++++++
+
+METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes.
+
+*homepage*: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 
 =======    ==============================================================================================================================================
 version    toolchains                                                                                                                                    
@@ -8539,6 +10986,10 @@ version    toolchains
 *MIGRATE-N*
 +++++++++++
 
+ Migrate estimates population parameters, effective population sizes and migration rates of n populations, using genetic data.  It  uses a coalescent theory approach taking into account history of  mutations and uncertainty of the genealogy.  
+
+*homepage*: http://popgen.sc.fsu.edu/Migrate/Migrate-n.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -8553,6 +11004,10 @@ version    toolchains
 *minieigen*
 +++++++++++
 
+A small wrapper for core parts of EIgen, c++ library for linear algebra.
+
+*homepage*: https://launchpad.net/minieigen/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -8564,6 +11019,10 @@ version    toolchains
 
 *Minimac*
 +++++++++
+
+ Minimac is a low memory, computationally efficient implementation   of the MaCH algorithm for genotype imputation. It is designed to work on phased genotypes  and can handle very large reference panels with hundreds or thousands of haplotypes.   The name has two parts. The first, 'mini', refers to the modest amount of computational  resources it requires. The second, 'mac', is short hand for MaCH, our widely used   algorithm for genotype imputation.  
+
+*homepage*: http://genome.sph.umich.edu/wiki/Minimac
 
 ========    ============
 version     toolchains  
@@ -8577,6 +11036,10 @@ version     toolchains
 *Minimac3*
 ++++++++++
 
+Minimac3 is a lower memory and more computationally efficient implementation of the genotype  imputation algorithms in minimac and minimac2. Minimac3 is designed to handle very large reference panels in a more  computationally efficient way with no loss of accuracy.
+
+*homepage*: http://genome.sph.umich.edu/wiki/Minimac3
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -8588,6 +11051,10 @@ version    toolchains
 
 *MIRA*
 ++++++
+
+MIRA is a whole genome shotgun and EST sequence assembler for Sanger, 454, Solexa (Illumina),     IonTorrent data and PacBio (the later at the moment only CCS and error-corrected CLR reads).
+
+*homepage*: http://sourceforge.net/p/mira-assembler/wiki/Home/
 
 =======    ======================
 version    toolchains            
@@ -8601,6 +11068,10 @@ version    toolchains
 *MLC*
 +++++
 
+Intel Memory Latency Checker (Intel MLC) is a tool used to measure memory latencies and b/w,  and how they change with increasing load on the system.
+
+*homepage*: https://software.intel.com/en-us/articles/intelr-memory-latency-checker
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8612,6 +11083,10 @@ version    toolchains
 
 *MM-align*
 ++++++++++
+
+ MM-align is an algorithm for structurally aligning   multiple-chain protein-protein complexes. 
+
+*homepage*: http://zhanglab.ccmb.med.umich.edu/MM-align/
 
 ========    ============
 version     toolchains  
@@ -8625,6 +11100,10 @@ version     toolchains
 *MMSEQ*
 +++++++
 
+ The MMSEQ package contains a collection of statistical tools  for analysing RNA-seq expression data. 
+
+*homepage*: https://github.com/eturro/mmseq
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8637,6 +11116,10 @@ version    toolchains
 *Modeller*
 ++++++++++
 
+  MODELLER is used for homology or comparative modeling of protein   three-dimensional structures (1,2). The user provides an alignment of a sequence to   be modeled with known related structures and MODELLER automatically calculates   a model containing all non-hydrogen atoms.
+
+*homepage*: http://salilab.org/modeller/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -8648,6 +11131,10 @@ version    toolchains
 
 *Molden*
 ++++++++
+
+Molden is a package for displaying Molecular Density from the  Ab Initio packages GAMESS-UK, GAMESS-US and GAUSSIAN and the Semi-Empirical  packages Mopac/Ampac
+
+*homepage*: http://www.cmbi.ru.nl/molden/
 
 =======    ============
 version    toolchains  
@@ -8662,6 +11149,10 @@ version    toolchains
 *Molekel*
 +++++++++
 
+Molekel is an open-source multi-platform molecular visualization program.
+
+*homepage*: http://molekel.cscs.ch/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8673,6 +11164,10 @@ version    toolchains
 
 *molmod*
 ++++++++
+
+MolMod is a Python library with many compoments that are useful to write molecular modeling programs.
+
+*homepage*: http://molmod.github.io/molmod/
 
 =======    ====================================================
 version    toolchains                                          
@@ -8686,6 +11181,10 @@ version    toolchains
 
 *Molpro*
 ++++++++
+
+Molpro is a complete system of ab initio programs for molecular electronic structure calculations.
+
+*homepage*: https://www.molpro.net
 
 =========    ===========
 version      toolchains 
@@ -8703,6 +11202,10 @@ version      toolchains
 *Mono*
 ++++++
 
+An open source, cross-platform, implementation of C# and the CLR that is  binary compatible with Microsoft.NET.
+
+*homepage*: http://mono-framework.com
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -8714,6 +11217,10 @@ version    toolchains
 
 *monty*
 +++++++
+
+Monty implements supplementary useful functions for Python that are not part of the standard library.  Examples include useful utilities like transparent support for zipped files, useful design patterns such as singleton  and cached_class, and many more.
+
+*homepage*: https://pypi.python.org/pypi/monty/
 
 =======    ===========
 version    toolchains 
@@ -8727,6 +11234,10 @@ version    toolchains
 *MOSAIK*
 ++++++++
 
+ MOSAIK is a reference-guided aligner for next-generation   sequencing technologies 
+
+*homepage*: https://code.google.com/p/mosaik-aligner/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -8739,6 +11250,10 @@ version    toolchains
 *MotEvo*
 ++++++++
 
+ MotEvo: a integrated suite of Bayesian probabilistic methods for   the prediction of TFBSs and inference of regulatory motifs from multiple alignments   of phylogenetically related DNA sequences 
+
+*homepage*: http://swissregulon.unibas.ch/fcgi/sr/software
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -8750,6 +11265,10 @@ version    toolchains
 
 *Mothur*
 ++++++++
+
+Mothur is a single piece of open-source, expandable software  to fill the bioinformatics needs of the microbial ecology community.
+
+*homepage*: http://www.mothur.org/
 
 =======    =======================================
 version    toolchains                             
@@ -8765,6 +11284,10 @@ version    toolchains
 *motif*
 +++++++
 
+Motif refers to both a graphical user interface (GUI) specification and the widget toolkit for building  applications that follow that specification under the X Window System on Unix and other POSIX-compliant systems.  It was the standard toolkit for the Common Desktop Environment and thus for Unix.
+
+*homepage*: http://motif.ics.com/
+
 =======    ====================================================
 version    toolchains                                          
 =======    ====================================================
@@ -8779,6 +11302,10 @@ version    toolchains
 *MPC*
 +++++
 
+Gnu Mpc is a C library for the arithmetic of  complex numbers with arbitrarily high precision and correct  rounding of the result. It extends the principles of the IEEE-754  standard for fixed precision real floating point numbers to  complex numbers, providing well-defined semantics for every  operation. At the same time, speed of operation at high precision  is a major design goal.
+
+*homepage*: http://www.multiprecision.org/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -8790,6 +11317,10 @@ version    toolchains
 
 *MPFR*
 ++++++
+
+The MPFR library is a C library for multiple-precision   floating-point computations with correct rounding.
+
+*homepage*: http://www.mpfr.org
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -8807,6 +11338,10 @@ version    toolchains
 *mpi4py*
 ++++++++
 
+MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for  the Python programming language, allowing any Python program to exploit multiple processors.
+
+*homepage*: https://bitbucket.org/mpi4py/mpi4py
+
 =======    ======================================================================================
 version    toolchains                                                                            
 =======    ======================================================================================
@@ -8821,6 +11356,10 @@ version    toolchains
 *mpiBLAST*
 ++++++++++
 
+mpiBLAST is a freely available, open-source, parallel implementation of NCBI BLAST.  By efficiently utilizing distributed computational resources through database fragmentation,  query segmentation, intelligent scheduling, and parallel I/O, mpiBLAST improves NCBI BLAST  performance by several orders of magnitude while scaling to hundreds of processors.  mpiBLAST is also portable across many different platforms and operating systems.
+
+*homepage*: http://www.mpiblast.org/
+
 =======    ========================================================================
 version    toolchains                                                              
 =======    ========================================================================
@@ -8832,6 +11371,10 @@ version    toolchains
 
 *MPICH*
 +++++++
+
+MPICH v3.x is an open source high-performance MPI 3.0 implementation. It does not support InfiniBand (use MVAPICH2 with InfiniBand devices).
+
+*homepage*: http://www.mpich.org/
 
 =======    ==============
 version    toolchains    
@@ -8847,6 +11390,10 @@ version    toolchains
 *MPICH2*
 ++++++++
 
+MPICH v3.x is an open source high-performance MPI 3.0 implementation. It does not support InfiniBand (use MVAPICH2 with InfiniBand devices).
+
+*homepage*: http://www.mpich.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -8858,6 +11405,10 @@ version    toolchains
 
 *MPJ-Express*
 +++++++++++++
+
+MPJ Express is an open source Java message passing library that allows application   developers to write and execute parallel applications for multicore processors and compute clusters/clouds.
+
+*homepage*: http://mpj-express.org/
 
 =======    ============
 version    toolchains  
@@ -8871,6 +11422,10 @@ version    toolchains
 *mpmath*
 ++++++++
 
+mpmath can be used as an arbitrary-precision substitute for Python's float/complex   types and math/cmath modules, but also does much more advanced mathematics. Almost any calculation  can be performed just as well at 10-digit or 1000-digit precision, with either real or complex   numbers, and in many cases mpmath implements efficient algorithms that scale well for extremely   high precision work.
+
+*homepage*: http://mpmath.org/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -8882,6 +11437,10 @@ version    toolchains
 
 *MrBayes*
 +++++++++
+
+MrBayes is a program for the Bayesian estimation of phylogeny.
+
+*homepage*: http://mrbayes.csit.fsu.edu
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -8897,6 +11456,10 @@ version    toolchains
 *mrFAST*
 ++++++++
 
+ mrFAST & mrsFAST are designed to map short reads generated with the   Illumina platform to reference genome assemblies; in a fast and memory-efficient manner. 
+
+*homepage*: http://mrfast.sourceforge.net/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -8908,6 +11471,10 @@ version    toolchains
 
 *MRIcron*
 +++++++++
+
+ MRIcron allows viewing of medical images. It  includes tools to complement SPM and FSL. Native format is NIFTI  but includes a conversion program (see dcm2nii) for converting DICOM images.  Features layers, ROIs, and volume rendering.  
+
+*homepage*: http://www.mccauslandcenter.sc.edu/mricro/mricron/
 
 ========    ==========
 version     toolchains
@@ -8921,6 +11488,10 @@ version     toolchains
 *mrsFAST*
 +++++++++
 
+ mrsFAST is designed to map short reads to reference genome assemblies   in a fast and memory-efficient manner. mrsFAST is a cache-oblivous short read mapper that   optimizes cache usage to get higher performance. 
+
+*homepage*: http://mrsfast.sourceforge.net
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -8932,6 +11503,10 @@ version    toolchains
 
 *MRtrix*
 ++++++++
+
+MRtrix provides a set of tools to perform diffusion-weighted MR white-matter tractography in a manner  robust to crossing fibres, using constrained spherical deconvolution (CSD) and probabilistic streamlines.
+
+*homepage*: http://www.brain.org.au/software/index.html#mrtrix
 
 =======    ===========
 version    toolchains 
@@ -8947,6 +11522,10 @@ version    toolchains
 *MTL4*
 ++++++
 
+The Matrix Template Library 4 incorporates the most modern programming techniques  to provide an easy and intuitive interface to users while enabling optimal performance. The natural  mathematical notation in MTL4 empowers all engineers and scientists to implement their algorithms and  models in minimal time. All technical aspects are encapsulated in the library.
+
+*homepage*: http://www.simunova.com/mtl4
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -8960,6 +11539,10 @@ version     toolchains
 *MultiNest*
 +++++++++++
 
+MultiNest is a Bayesian inference tool which calculates the evidence and explores the parameter space  which may contain multiple posterior modes and pronounced (curving) degeneracies in moderately high dimensions.
+
+*homepage*: https://ccpforge.cse.rl.ac.uk/gf/project/multinest/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -8971,6 +11554,10 @@ version    toolchains
 
 *multitail*
 +++++++++++
+
+MultiTail allows you to monitor logfiles and command output in multiple windows in a terminal, colorize, filter and merge.
+
+*homepage*: http://www.vanheusden.com/multitail/
 
 =======    ===========
 version    toolchains 
@@ -8984,6 +11571,10 @@ version    toolchains
 *MUMmer*
 ++++++++
 
+MUMmer is a system for rapidly aligning entire genomes,  whether in complete or draft form. AMOS makes use of it.
+
+*homepage*: http://mummer.sourceforge.net/
+
 =======    =========================================================================
 version    toolchains                                                               
 =======    =========================================================================
@@ -8995,6 +11586,10 @@ version    toolchains
 
 *MUMPS*
 +++++++
+
+A parallel sparse direct solver
+
+*homepage*: http://graal.ens-lyon.fr/MUMPS/
 
 =======    =====================================================
 version    toolchains                                           
@@ -9009,6 +11604,10 @@ version    toolchains
 *MUSCLE*
 ++++++++
 
+ MUSCLE is one of the best-performing multiple alignment programs   according to published benchmark tests, with accuracy and speed that are consistently   better than CLUSTALW. MUSCLE can align hundreds of sequences in seconds. Most users   learn everything they need to know about MUSCLE in a few minutes—only a handful of   command-line options are needed to perform common alignment tasks.
+
+*homepage*: http://drive5.com/muscle/
+
 =======    =========================================================
 version    toolchains                                               
 =======    =========================================================
@@ -9020,6 +11619,10 @@ version    toolchains
 
 *MUST*
 ++++++
+
+MUST detects usage errors of the Message Passing Interface (MPI) and reports them  to the user. As MPI calls are complex and usage errors common, this functionality is extremely helpful  for application developers that want to develop correct MPI applications. This includes errors that  already manifest --segmentation faults or incorrect results -- as well as many errors that are not  visible to the application developer or do not manifest on a certain system or MPI implementation.
+
+*homepage*: http://www.tu-dresden.de/zih/must/
 
 =======    ====================
 version    toolchains          
@@ -9033,6 +11636,10 @@ version    toolchains
 *MUSTANG*
 +++++++++
 
+ MUSTANG (MUltiple STructural AligNment AlGorithm), for the alignment   of multiple protein structures. Given a set of protein structures, the program constructs   a multiple alignment using the spatial information of the Cα atoms in the set. 
+
+*homepage*: http://www.csse.monash.edu.au/~karun/Site/mustang.html
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -9044,6 +11651,10 @@ version    toolchains
 
 *MuTect*
 ++++++++
+
+ MuTect is a method developed at the Broad Institute for the reliable  and accurate identification of somatic point mutations in next generation sequencing  data of cancer genomes. 
+
+*homepage*: http://www.broadinstitute.org/cancer/cga/mutect
 
 =======    ==========
 version    toolchains
@@ -9058,6 +11669,10 @@ version    toolchains
 *mutil*
 +++++++
 
+Mutil is a set of standard utilities that have been parallelized to maximize performance on  modern file systems. These currently include multi-threaded drop-in replacements for cp and md5sum from GNU coreutils, which have achieved 10/30x rates on one/many nodes. 
+
+*homepage*: http://people.nas.nasa.gov/~kolano/projects/mutil.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9069,6 +11684,10 @@ version    toolchains
 
 *MVAPICH2*
 ++++++++++
+
+This is an MPI 3.0 implementation.  It is based on MPICH2 and MVICH.
+
+*homepage*: http://mvapich.cse.ohio-state.edu/overview/mvapich2/
 
 =======    ===============================================================
 version    toolchains                                                     
@@ -9090,6 +11709,10 @@ version    toolchains
 *MView*
 +++++++
 
+ MView reformats the results of a sequence database search or a   multiple alignment, optionally adding HTML markup.
+
+*homepage*: http://sourceforge.net/projects/bio-mview/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -9102,6 +11725,10 @@ version    toolchains
 *MyMediaLite*
 +++++++++++++
 
+MyMediaLite is a lightweight, multi-purpose library of recommender system algorithms.
+
+*homepage*: http://www.ismll.uni-hildesheim.de/mymedialite/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -9113,6 +11740,10 @@ version    toolchains
 
 *mympingpong*
 +++++++++++++
+
+A mpi4py based random pair pingpong network stress test.
+
+*homepage*: https://github.com/hpcugent/mympingpong
 
 =======    ========================
 version    toolchains              
@@ -9128,6 +11759,10 @@ version    toolchains
 *MySQL*
 +++++++
 
+MySQL is (as of March 2014) the world's second most widely used  open-source relational database management system (RDBMS).
+
+*homepage*: http://www.mysql.com/
+
 =======    ==============
 version    toolchains    
 =======    ==============
@@ -9141,6 +11776,10 @@ version    toolchains
 *MySQL-python*
 ++++++++++++++
 
+MySQL database connector for Python
+
+*homepage*: https://github.com/farcepest/MySQLdb1
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9153,6 +11792,10 @@ version    toolchains
 *mysqlclient*
 +++++++++++++
 
+Python interface to MySQL
+
+*homepage*: https://github.com/PyMySQL/mysqlclient-python
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -9164,6 +11807,10 @@ version    toolchains
 
 *MySQLdb*
 +++++++++
+
+MySQLdb is an interface to the popular MySQL database server for Python.
+
+*homepage*: https://pypi.python.org/pypi/MySQL-python/
 
 =======    ===========
 version    toolchains 
@@ -9186,6 +11833,10 @@ version    toolchains
 *NAMD*
 ++++++
 
+NAMD is a parallel molecular dynamics code designed for high-performance simulation of  large biomolecular systems.
+
+*homepage*: http://www.ks.uiuc.edu/Research/namd/
+
 =======    ==========================================================
 version    toolchains                                                
 =======    ==========================================================
@@ -9199,6 +11850,10 @@ version    toolchains
 *nano*
 ++++++
 
+nano-2.2.6: Small and friendly text editor a free replacement for Pico
+
+*homepage*: http://www.nano-editor.org/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -9210,6 +11865,10 @@ version    toolchains
 
 *NASM*
 ++++++
+
+NASM: General-purpose x86 assembler
+
+*homepage*: http://www.nasm.us/
 
 =======    =====================================================================================================
 version    toolchains                                                                                           
@@ -9228,6 +11887,10 @@ version    toolchains
 *NBO*
 +++++
 
+Generalized Natural Bond Orbital algorithm to handle systems characterized by periodic symmetry.
+
+*homepage*: http://schmidt.chem.wisc.edu/nbosoftware
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9240,6 +11903,10 @@ version    toolchains
 *NCBI-Toolkit*
 ++++++++++++++
 
+The NCBI Toolkit is a collection of utilities developed for the  production and distribution of GenBank, Entrez, BLAST, and related services  by the National Center for Biotechnology Information.
+
+*homepage*: http://www.ncbi.nlm.nih.gov/toolkit
+
 =======    ==============================================
 version    toolchains                                    
 =======    ==============================================
@@ -9251,6 +11918,10 @@ version    toolchains
 
 *ncbi-vdb*
 ++++++++++
+
+The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for  using data in the INSDC Sequence Read Archives.
+
+*homepage*: https://github.com/ncbi/ncbi-vdb
 
 =======    =======================
 version    toolchains             
@@ -9265,6 +11936,10 @@ version    toolchains
 *ncdf*
 ++++++
 
+This package provides a high-level R interface to data files written using Unidata's netCDF library  (version 4 or earlier), which are binary data files that are portable across platforms and include metadata  information in addition to the data sets.
+
+*homepage*: http://cran.r-project.org/web/packages/ncdf4
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9276,6 +11951,10 @@ version    toolchains
 
 *ncdf4*
 +++++++
+
+This package provides a high-level R interface to data files written using Unidata's netCDF library  (version 4 or earlier), which are binary data files that are portable across platforms and include metadata  information in addition to the data sets.
+
+*homepage*: http://cran.r-project.org/web/packages/ncdf4
 
 =======    ===========
 version    toolchains 
@@ -9292,6 +11971,10 @@ version    toolchains
 *NCL*
 +++++
 
+NCL is an interpreted language designed specifically for scientific data analysis and   visualization.
+
+*homepage*: http://www.ncl.ucar.edu
+
 =======    =================================================
 version    toolchains                                       
 =======    =================================================
@@ -9306,6 +11989,10 @@ version    toolchains
 *nco*
 +++++
 
+Python bindings for NCO
+
+*homepage*: https://github.com/nco/pynco
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9317,6 +12004,10 @@ version    toolchains
 
 *NCO*
 +++++
+
+manipulates and analyzes data stored in netCDF-accessible formats, including DAP, HDF4, and HDF5
+
+*homepage*: http://nco.sourceforge.net
 
 =======    ========================
 version    toolchains              
@@ -9333,6 +12024,10 @@ version    toolchains
 *ncurses*
 +++++++++
 
+The Ncurses (new curses) library is a free software emulation of curses in System V Release 4.0,  and more. It uses Terminfo format, supports pads and color and multiple highlights and forms characters and  function-key mapping, and has all the other SYSV-curses enhancements over BSD Curses.
+
+*homepage*: http://www.gnu.org/software/ncurses/
+
 ============    =============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version         toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 ============    =============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -9347,6 +12042,10 @@ version         toolchains
 *ncview*
 ++++++++
 
+Ncview is a visual browser for netCDF format files.  Typically you would use ncview to get a quick and easy, push-button  look at your netCDF files. You can view simple movies of the data,  view along various dimensions, take a look at the actual data values,  change color maps, invert the data, etc.
+
+*homepage*: http://meteora.ucsd.edu/~pierce/ncview_home_page.html
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -9358,6 +12057,10 @@ version    toolchains
 
 *NEdit*
 +++++++
+
+NEdit is a multi-purpose text editor for the X Window System,  which combines a standard, easy to use, graphical user interface with the thorough  functionality and stability required by users who edit text eight hours a day.
+
+*homepage*: http://www.nedit.org
 
 =======    ==========
 version    toolchains
@@ -9371,6 +12074,10 @@ version    toolchains
 *NEMO*
 ++++++
 
+NEMO (Nucleus for European Modelling of the Ocean) is a state-of-the-art modeling framework for  oceanographic research, operational oceanography seasonal forecast and climate studies.
+
+*homepage*: http://www.nemo-ocean.eu/
+
 =========    ===========
 version      toolchains 
 =========    ===========
@@ -9382,6 +12089,10 @@ version      toolchains
 
 *neon*
 ++++++
+
+neon is an HTTP and WebDAV client library, with a C interface.
+
+*homepage*: http://www.webdav.org/neon/
 
 =======    ============
 version    toolchains  
@@ -9395,6 +12106,10 @@ version    toolchains
 *Net-LibIDN*
 ++++++++++++
 
+This module provides Perl bindings for GNU Libidn.
+
+*homepage*: http://search.cpan.org/~thor/Net-LibIDN-0.12/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9406,6 +12121,10 @@ version    toolchains
 
 *netaddr*
 +++++++++
+
+Pythonic manipulation of IPv4, IPv6, CIDR, EUI and MAC network addresses
+
+*homepage*: https://pypi.python.org/pypi/netaddr
 
 =======    ===========
 version    toolchains 
@@ -9419,6 +12138,10 @@ version    toolchains
 
 *netCDF*
 ++++++++
+
+NetCDF (network Common Data Form) is a set of software libraries   and machine-independent data formats that support the creation, access, and sharing of array-oriented   scientific data.
+
+*homepage*: http://www.unidata.ucar.edu/software/netcdf/
 
 =======    =======================================================================================================================
 version    toolchains                                                                                                             
@@ -9439,6 +12162,10 @@ version    toolchains
 *netCDF-C++*
 ++++++++++++
 
+NetCDF (network Common Data Form) is a set of software libraries   and machine-independent data formats that support the creation, access, and sharing of array-oriented   scientific data.
+
+*homepage*: http://www.unidata.ucar.edu/software/netcdf/
+
 =======    =================================================================
 version    toolchains                                                       
 =======    =================================================================
@@ -9450,6 +12177,10 @@ version    toolchains
 
 *netCDF-C++4*
 +++++++++++++
+
+NetCDF (network Common Data Form) is a set of software libraries   and machine-independent data formats that support the creation, access, and sharing of array-oriented   scientific data.
+
+*homepage*: http://www.unidata.ucar.edu/software/netcdf/
 
 =======    ========================
 version    toolchains              
@@ -9463,6 +12194,10 @@ version    toolchains
 
 *netCDF-Fortran*
 ++++++++++++++++
+
+NetCDF (network Common Data Form) is a set of software libraries   and machine-independent data formats that support the creation, access, and sharing of array-oriented   scientific data.
+
+*homepage*: http://www.unidata.ucar.edu/software/netcdf/
 
 =======    =====================================================================================================================
 version    toolchains                                                                                                           
@@ -9480,6 +12215,10 @@ version    toolchains
 *netcdf4-python*
 ++++++++++++++++
 
+Python/numpy interface to netCDF.
+
+*homepage*: https://unidata.github.io/netcdf4-python/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9494,6 +12233,10 @@ version    toolchains
 *netifaces*
 +++++++++++
 
+netifaces provides a (hopefully portable-ish) way for Python  programmers to get access to a list of the network interfaces on the local  machine, and to obtain the addresses of those network interfaces.
+
+*homepage*: https://pypi.python.org/pypi/netifaces
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9507,6 +12250,10 @@ version    toolchains
 *netloc*
 ++++++++
 
+The Portable Network Locality (netloc) software package provides  network topology discovery tools, and an abstract representation of those networks  topologies for a range of network types and configurations.  It is provided as a companion to the Portable Hardware Locality (hwloc) package.
+
+*homepage*: http://www.open-mpi.org/software/netloc
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -9518,6 +12265,10 @@ version    toolchains
 
 *nettle*
 ++++++++
+
+Nettle is a cryptographic library that is designed to fit easily  in more or less any context: In crypto toolkits for object-oriented  languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,  or even in kernel space.
+
+*homepage*: http://www.lysator.liu.se/~nisse/nettle/
 
 =======    =======================================
 version    toolchains                             
@@ -9533,6 +12284,10 @@ version    toolchains
 *networkx*
 ++++++++++
 
+NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics,  and functions of complex networks.
+
+*homepage*: https://pypi.python.org/pypi/networkx
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -9546,6 +12301,10 @@ version    toolchains
 *NEURON*
 ++++++++
 
+Empirically-based simulations of neurons and networks of neurons.
+
+*homepage*: http://www.neuron.yale.edu/neuron
+
 =======    ============================================================
 version    toolchains                                                  
 =======    ============================================================
@@ -9557,6 +12316,10 @@ version    toolchains
 
 *NextClip*
 ++++++++++
+
+Nextera Long Mate Pair analysis and processing tool.
+
+*homepage*: https://github.com/richardmleggett/nextclip
 
 =======    ==========
 version    toolchains
@@ -9570,6 +12333,10 @@ version    toolchains
 *NFFT*
 ++++++
 
+The NFFT (nonequispaced fast Fourier transform or nonuniform fast Fourier transform) is a C subroutine  library for computing the nonequispaced discrete Fourier transform (NDFT) and its generalisations in one or more  dimensions, of arbitrary input size, and of complex data.
+
+*homepage*: https://www-user.tu-chemnitz.de/~potts/nfft/
+
 =======    =========================================================
 version    toolchains                                               
 =======    =========================================================
@@ -9581,6 +12348,10 @@ version    toolchains
 
 *NGS*
 +++++
+
+NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from  Next Generation Sequencing.
+
+*homepage*: https://github.com/ncbi/ngs
 
 =======    =======================
 version    toolchains             
@@ -9595,6 +12366,10 @@ version    toolchains
 *NGS-Python*
 ++++++++++++
 
+NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from  Next Generation Sequencing.
+
+*homepage*: https://github.com/ncbi/ngs
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9607,6 +12382,10 @@ version    toolchains
 *ngspice*
 +++++++++
 
+Ngspice is a mixed-level/mixed-signal circuit simulator. Its code  is based on three open source software packages: Spice3f5, Cider1b1  and Xspice. 
+
+*homepage*: http://ngspice.sourceforge.net
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9618,6 +12397,10 @@ version    toolchains
 
 *NiBabel*
 +++++++++
+
+NiBabel provides read/write access to some common medical and neuroimaging file formats,  including: ANALYZE (plain, SPM99, SPM2 and later), GIFTI, NIfTI1, NIfTI2, MINC1, MINC2, MGH and ECAT  as well as Philips PAR/REC. We can read and write Freesurfer geometry, and read Freesurfer morphometry and  annotation files. There is some very limited support for DICOM. NiBabel is the successor of PyNIfTI.
+
+*homepage*: https://nipy.github.io/nibabel
 
 =======    ===========
 version    toolchains 
@@ -9632,6 +12415,10 @@ version    toolchains
 *Nilearn*
 +++++++++
 
+Nilearn is a Python module for fast and easy statistical learning on NeuroImaging data.
+
+*homepage*: http://nilearn.github.io/
+
 ===========    ===========
 version        toolchains 
 ===========    ===========
@@ -9643,6 +12430,10 @@ version        toolchains
 
 *NIPY*
 ++++++
+
+NIPY is a python project for analysis of structural and functional neuroimaging data.
+
+*homepage*: http://nipy.org/nipy/
 
 =======    ===========
 version    toolchains 
@@ -9656,6 +12447,10 @@ version    toolchains
 *Nipype*
 ++++++++
 
+Nipype is a Python project that provides a uniform interface to existing neuroimaging software and  facilitates interaction between these packages within a single workflow.
+
+*homepage*: http://nipy.org/nipype
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9667,6 +12462,10 @@ version    toolchains
 
 *nodejs*
 ++++++++
+
+Node.js is a platform built on Chrome's JavaScript runtime   for easily building fast, scalable network applications. Node.js uses an   event-driven, non-blocking I/O model that makes it lightweight and efficient,   perfect for data-intensive real-time applications that run across distributed devices.
+
+*homepage*: http://nodejs.org
 
 =======    ============
 version    toolchains  
@@ -9681,6 +12480,10 @@ version    toolchains
 *npstat*
 ++++++++
 
+npstat implements some population genetics tests and estimators that can be applied  to pooled sequences from Next Generation Sequencing experiments.
+
+*homepage*: https://code.google.com/archive/p/npstat/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -9692,6 +12495,10 @@ version    toolchains
 
 *ns*
 ++++
+
+Ns-2 is a discrete event simulator targeted at networking research. 
+
+*homepage*: http://nsnam.isi.edu/nsnam
 
 =======    ==============================================
 version    toolchains                                    
@@ -9705,6 +12512,10 @@ version    toolchains
 *NTL*
 +++++
 
+NTL is a high-performance, portable C++ library providing data structures and algorithms  for manipulating signed, arbitrary length integers, and for vectors, matrices, and polynomials over the  integers and over finite fields.
+
+*homepage*: http://www.shoup.net/ntl/
+
 =======    ===============
 version    toolchains     
 =======    ===============
@@ -9716,6 +12527,10 @@ version    toolchains
 
 *numactl*
 +++++++++
+
+The numactl program allows you to run your application program on specific cpu's and memory nodes. It does this by supplying a NUMA memory policy to the operating system before running your program. The libnuma library provides convenient ways for you to add NUMA memory policies into your own program.
+
+*homepage*: http://oss.sgi.com/projects/libnuma/
 
 =======    ==========================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                
@@ -9732,6 +12547,10 @@ version    toolchains
 *numba*
 +++++++
 
+Numba is an Open Source NumPy-aware optimizing compiler for Python sponsored by Continuum Analytics,  Inc. It uses the remarkable LLVM compiler infrastructure to compile Python syntax to machine code.
+
+*homepage*: http://numba.pydata.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9745,6 +12564,10 @@ version    toolchains
 
 *numexpr*
 +++++++++
+
+The numexpr package evaluates multiple-operator array expressions many times faster than NumPy can.  It accepts the expression as a string, analyzes it, rewrites it more efficiently, and compiles it on the fly into  code for its internal virtual machine (VM). Due to its integrated just-in-time (JIT) compiler, it does not require a  compiler at runtime.
+
+*homepage*: http://code.google.com/p/numexpr/
 
 =======    =========================
 version    toolchains               
@@ -9760,6 +12583,10 @@ version    toolchains
 
 *numpy*
 +++++++
+
+NumPy is the fundamental package for scientific computing with Python. It contains among other things:  a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran  code, useful linear algebra, Fourier transform, and random number capabilities. Besides its obvious scientific uses,  NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be   defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases.
+
+*homepage*: http://www.numpy.org
 
 =======    =======================================================================================
 version    toolchains                                                                             
@@ -9779,6 +12606,10 @@ version    toolchains
 
 *NWChem*
 ++++++++
+
+NWChem aims to provide its users with computational chemistry tools that are scalable both in  their ability to treat large scientific computational chemistry problems efficiently, and in their use of available  parallel computing resources from high-performance parallel supercomputers to conventional workstation clusters.  NWChem software can handle: biomolecules, nanostructures, and solid-state; from quantum to classical, and all  combinations; Gaussian basis functions or plane-waves; scaling from one to thousands of processors; properties  and relativity.
+
+*homepage*: http://www.nwchem-sw.org
 
 =================    ===============================================
 version              toolchains                                     
@@ -9803,6 +12634,10 @@ version              toolchains
 *o2scl*
 +++++++
 
+ An object-oriented library for scientific  computing in C++ useful for solving, minimizing, differentiating, integrating, interpolating, optimizing, approximating, analyzing,  fitting, and more.
+
+*homepage*: http://o2scl.sourceforge.net/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -9815,6 +12650,10 @@ version    toolchains
 *Oases*
 +++++++
 
+Oases is a de novo transcriptome assembler designed to produce transcripts from  short read sequencing technologies, such as Illumina, SOLiD, or 454 in the absence of any genomic assembly.
+
+*homepage*: http://www.ebi.ac.uk/~zerbino/oases/
+
 =======    ======================================
 version    toolchains                            
 =======    ======================================
@@ -9826,6 +12665,10 @@ version    toolchains
 
 *OCaml*
 +++++++
+
+OCaml is a general purpose industrial-strength programming language  with an emphasis on expressiveness and safety. Developed for more than 20 years at Inria  it benefits from one of the most advanced type systems and supports functional,  imperative and object-oriented styles of programming.
+
+*homepage*: http://ocaml.org/
 
 =======    =========================
 version    toolchains               
@@ -9840,6 +12683,10 @@ version    toolchains
 *Octave*
 ++++++++
 
+GNU Octave is a high-level interpreted language, primarily intended for numerical computations.
+
+*homepage*: http://www.gnu.org/software/octave/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -9853,6 +12700,10 @@ version    toolchains
 *Octopus*
 +++++++++
 
+Octopus is a scientific program aimed at the ab initio virtual experimentation  on a hopefully ever-increasing range of system types. Electrons are described quantum-mechanically  within density-functional theory (DFT), in its time-dependent form (TDDFT) when doing simulations  in time. Nuclei are described classically as point particles.  Electron-nucleus interaction is described within the pseudopotential approximation.
+
+*homepage*: http://www.tddft.org/programs/octopus/wiki/index.php/Main_Page
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9865,6 +12716,10 @@ version    toolchains
 *Oger*
 ++++++
 
+The OrGanic Environment for Reservoir computing (Oger) toolbox is a Python toolbox, released under the  LGPL, for rapidly building, training and evaluating modular learning architectures on large datasets.  It builds functionality on top of the Modular toolkit for Data Processing (MDP).
+
+*homepage*: http://reservoir-computing.org/organic/engine
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -9876,6 +12731,10 @@ version    toolchains
 
 *OPARI2*
 ++++++++
+
+OPARI2, the successor of Forschungszentrum Juelich's OPARI,  is a source-to-source instrumentation tool for OpenMP and hybrid codes.  It surrounds OpenMP directives and runtime library calls with calls to  the POMP2 measurement interface.
+
+*homepage*: http://www.score-p.org
 
 =======    ========================
 version    toolchains              
@@ -9892,6 +12751,10 @@ version    toolchains
 *OpenBabel*
 +++++++++++
 
+Open Babel is a chemical toolbox designed to speak the many  languages of chemical data. It's an open, collaborative project allowing anyone  to search, convert, analyze, or store data from molecular modeling, chemistry,  solid-state materials, biochemistry, or related areas.
+
+*homepage*: http://openbabel.org
+
 =======    =====================================================================================
 version    toolchains                                                                           
 =======    =====================================================================================
@@ -9903,6 +12766,10 @@ version    toolchains
 
 *OpenBLAS*
 ++++++++++
+
+OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
+
+*homepage*: http://xianyi.github.com/OpenBLAS/
 
 =======    =======================================================================================================================================================================================
 version    toolchains                                                                                                                                                                             
@@ -9924,6 +12791,10 @@ version    toolchains
 *OpenCV*
 ++++++++
 
+OpenCV (Open Source Computer Vision Library) is an open source computer vision  and machine learning software library. OpenCV was built to provide  a common infrastructure for computer vision applications and to accelerate  the use of machine perception in the commercial products.
+
+*homepage*: http://opencv.org/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -9938,6 +12809,10 @@ version    toolchains
 *OpenEXR*
 +++++++++
 
+OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic  for use in computer imaging applications
+
+*homepage*: http://www.openexr.com/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -9949,6 +12824,10 @@ version    toolchains
 
 *OpenFOAM*
 ++++++++++
+
+OpenFOAM is a free, open source CFD software package.  OpenFOAM has an extensive range of features to solve anything from complex fluid flows  involving chemical reactions, turbulence and heat transfer,  to solid dynamics and electromagnetics.
+
+*homepage*: http://www.openfoam.com/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -9970,6 +12849,10 @@ version    toolchains
 *OpenFOAM-Extend*
 +++++++++++++++++
 
+OpenFOAM is a free, open source CFD software package.  OpenFOAM has an extensive range of features to solve anything from complex fluid flows involving chemical reactions, turbulence and heat transfer,  to solid dynamics and electromagnetics.
+
+*homepage*: http://www.extend-project.de/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -9985,6 +12868,10 @@ version    toolchains
 *OpenIFS*
 +++++++++
 
+OpenIFS is an ECMWF led project which provides an easy-to-use, exportable version of the IFS system in use at ECMWF for operational weather forecasting. The project aims to develop and promote research, teaching and training on numerical weather prediction (NWP) and NWP-related topics with academic and research institutions.
+
+*homepage*: https://software.ecmwf.int/wiki/display/OIFS/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -9996,6 +12883,10 @@ version    toolchains
 
 *OpenImageIO*
 +++++++++++++
+
+OpenImageIO is a library for reading and writing images, and a bunch of related classes, utilities,  and applications.
+
+*homepage*: http://openimageio.org/
 
 =======    ===========
 version    toolchains 
@@ -10009,6 +12900,10 @@ version    toolchains
 *OpenMD*
 ++++++++
 
+ OpenMD is an open source molecular dynamics engine which is capable of efficiently simulating liquids, proteins, nanoparticles, interfaces, and other complex systems using atom types with orientational degrees of freedom. 
+
+*homepage*: http://openmd.org
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -10021,6 +12916,10 @@ version    toolchains
 *OpenMM*
 ++++++++
 
+OpenMM is a toolkit for molecular simulation.
+
+*homepage*: https://simtk.org/home/openmm
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10032,6 +12931,10 @@ version    toolchains
 
 *OpenMPI*
 +++++++++
+
+The Open MPI Project is an open source MPI-2 implementation.
+
+*homepage*: http://www.open-mpi.org/
 
 =======    =======================================================================================================
 version    toolchains                                                                                             
@@ -10061,6 +12964,10 @@ version    toolchains
 *OpenPGM*
 +++++++++
 
+OpenPGM is an open source implementation of the Pragmatic General Multicast (PGM)  specification in RFC 3208 available at www.ietf.org. PGM is a reliable and scalable multicast protocol  that enables receivers to detect loss, request retransmission of lost data, or notify an application  of unrecoverable loss. PGM is a receiver-reliable protocol, which means the receiver is responsible  for ensuring all data is received, absolving the sender of reception responsibility.
+
+*homepage*: http://code.google.com/p/openpgm/
+
 =======    ===================================================================================================================================================================
 version    toolchains                                                                                                                                                         
 =======    ===================================================================================================================================================================
@@ -10072,6 +12979,10 @@ version    toolchains
 
 *OpenSSL*
 +++++++++
+
+The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured,  and Open Source toolchain implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1)   protocols as well as a full-strength general purpose cryptography library. 
+
+*homepage*: http://www.openssl.org/
 
 =======    ==================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                        
@@ -10095,6 +13006,10 @@ version    toolchains
 *OptiX*
 +++++++
 
+OptiX is NVIDIA SDK for easy ray tracing performance.  It provides a simple framework for accessing the GPU’s massive ray tracing  power using state-of-the-art GPU algorithms.
+
+*homepage*: https://developer.nvidia.com/optix
+
 =======    ==============
 version    toolchains    
 =======    ==============
@@ -10107,6 +13022,10 @@ version    toolchains
 
 *ORCA*
 ++++++
+
+ORCA is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry  with specific emphasis on spectroscopic properties of open-shell molecules.   It features a wide variety of standard quantum chemical methods ranging from semiempirical methods to DFT to single-  and multireference correlated ab initio methods.  It can also treat environmental and relativistic effects.
+
+*homepage*: http://cec.mpg.de/forum/
 
 ==============================    ==========
 version                           toolchains
@@ -10123,6 +13042,10 @@ version                           toolchains
 *ordereddict*
 +++++++++++++
 
+Drop-in substitute for Py2.7's new collections.OrderedDict.  The recipe has big-oh performance that matches regular dictionaries (amortized  O(1) insertion/deletion/lookup and O(n) iteration/repr/copy/equality_testing).
+
+*homepage*: https://pypi.python.org/pypi/ordereddict
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10135,6 +13058,10 @@ version    toolchains
 *orthomcl*
 ++++++++++
 
+OrthoMCL is a genome-scale algorithm for grouping orthologous protein sequences.
+
+*homepage*: http://orthomcl.org/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -10146,6 +13073,10 @@ version    toolchains
 
 *OSU-Micro-Benchmarks*
 ++++++++++++++++++++++
+
+OSU Micro-Benchmarks
+
+*homepage*: http://mvapich.cse.ohio-state.edu/benchmarks/
 
 =======    ============
 version    toolchains  
@@ -10160,6 +13091,10 @@ version    toolchains
 *otcl*
 ++++++
 
+OTcl, short for MIT Object Tcl, is an extension to Tcl/Tk for object-oriented programming.
+
+*homepage*: http://otcl-tclcl.sourceforge.net/otcl/
+
 =======    ==============================================
 version    toolchains                                    
 =======    ==============================================
@@ -10172,6 +13107,10 @@ version    toolchains
 *OTF*
 +++++
 
+The Open Trace Format is a highly scalable, memory efficient event  trace data format plus support library. It is the standard trace format  for Vampir, and is open for other tools. [NOW OBSOLETE: use OTF2]
+
+*homepage*: http://www.tu-dresden.de/zih/otf/
+
 =======    =================================
 version    toolchains                       
 =======    =================================
@@ -10183,6 +13122,10 @@ version    toolchains
 
 *OTF2*
 ++++++
+
+The Open Trace Format 2 is a highly scalable, memory efficient event  trace data format plus support library. It is the new standard trace format for  Scalasca, Vampir, and TAU and is open for other tools.
+
+*homepage*: http://www.score-p.org
 
 =======    ===============================================
 version    toolchains                                     
@@ -10207,6 +13150,10 @@ version    toolchains
 *p11-kit*
 +++++++++
 
+Provides a way to load and enumerate PKCS#11 modules.  Provides a standard configuration setup for installing  PKCS#11 modules in such a way that they're discoverable.  Also solves problems with coordinating the use of PKCS#11  by different components or libraries living in the same process.
+
+*homepage*: http://p11-glue.freedesktop.org/p11-kit.html
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -10218,6 +13165,10 @@ version    toolchains
 
 *p4vasp*
 ++++++++
+
+Visualization suite for VASP
+
+*homepage*: http://www.p4vasp.at/
 
 =======    ===========
 version    toolchains 
@@ -10231,6 +13182,10 @@ version    toolchains
 *p7zip*
 +++++++
 
+p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip) for Unix.  7-Zip is a file archiver with highest compression ratio.
+
+*homepage*: http://p7zip.sourceforge.net/
+
 =======    ================
 version    toolchains      
 =======    ================
@@ -10242,6 +13197,10 @@ version    toolchains
 
 *packmol*
 +++++++++
+
+Packing Optimization for Molecular Dynamics Simulations
+
+*homepage*: http://www.ime.unicamp.br/~martinez/packmol/
 
 =======    ============
 version    toolchains  
@@ -10256,6 +13215,10 @@ version    toolchains
 *PAML*
 ++++++
 
+PAML is a package of programs for phylogenetic   analyses of DNA or protein sequences using maximum likelihood.
+
+*homepage*: http://abacus.gene.ucl.ac.uk/software/paml.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -10267,6 +13230,10 @@ version    toolchains
 
 *pandas*
 ++++++++
+
+pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures  and data analysis tools for the Python programming language.
+
+*homepage*: https://pypi.python.org/pypi/pandas/
 
 =======    =======================================
 version    toolchains                             
@@ -10287,6 +13254,10 @@ version    toolchains
 *PANDAseq*
 ++++++++++
 
+PANDAseq assembles Illumina Solexa overlapping pair-end reads.
+
+*homepage*: https://github.com/neufeld/pandaseq
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -10298,6 +13269,10 @@ version    toolchains
 
 *Pango*
 +++++++
+
+Pango is a library for laying out and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the context of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.
+
+*homepage*: http://www.pango.org/
 
 =======    ========================
 version    toolchains              
@@ -10316,6 +13291,10 @@ version    toolchains
 *Pangomm*
 +++++++++
 
+ The Pangomm package provides a C++ interface to Pango. 
+
+*homepage*: http://www.pango.org/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -10328,6 +13307,10 @@ version    toolchains
 *pangox-compat*
 +++++++++++++++
 
+PangoX compatibility library
+
+*homepage*: https://github.com/GNOME/pangox-compat
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -10339,6 +13322,10 @@ version    toolchains
 
 *PAPI*
 ++++++
+
+PAPI provides the tool designer and application engineer with a consistent interface and  methodology for use of the performance counter hardware found in most major microprocessors. PAPI enables  software engineers to see, in near real time, the relation between software performance and processor events.  In addition Component PAPI provides access to a collection of components  that expose performance measurement opportunites across the hardware and software stack.
+
+*homepage*: http://icl.cs.utk.edu/projects/papi/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -10355,6 +13342,10 @@ version    toolchains
 
 *parallel*
 ++++++++++
+
+parallel: Build and execute shell commands in parallel
+
+*homepage*: http://savannah.gnu.org/projects/parallel/
 
 ========    ===========================================================
 version     toolchains                                                 
@@ -10373,6 +13364,10 @@ version     toolchains
 *Parallel-ForkManager*
 ++++++++++++++++++++++
 
+A simple parallel processing fork manager
+
+*homepage*: http://search.cpan.org/~szabgab/Parallel-ForkManager-1.06/lib/Parallel/ForkManager.pm
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10384,6 +13379,10 @@ version    toolchains
 
 *Paraver*
 +++++++++
+
+A very powerful performance visualization and analysis tool based on  traces that can be used to analyse any information that is expressed on its input trace format.  Traces for parallel MPI, OpenMP and other programs can be genereated with Extrae.
+
+*homepage*: http://www.bsc.es/computer-sciences/performance-tools/paraver
 
 =======    ==========
 version    toolchains
@@ -10397,6 +13396,10 @@ version    toolchains
 
 *ParaView*
 ++++++++++
+
+ParaView is a scientific parallel visualizer.
+
+*homepage*: http://www.paraview.org
 
 =======    =======================================
 version    toolchains                             
@@ -10414,6 +13417,10 @@ version    toolchains
 *ParFlow*
 +++++++++
 
+ParFlow is an integrated, parallel watershed model that makes use of high-performance computing to simulate surface and subsurface fluid flow.
+
+*homepage*: http://computation.llnl.gov/casc/parflow/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10426,6 +13433,10 @@ version    toolchains
 *PARI-GP*
 +++++++++
 
+PARI/GP is a widely used computer algebra system designed for fast computations in number theory  (factorizations, algebraic  number theory, elliptic curves...), but also contains a large number of other useful  functions to compute with mathematical entities such as matrices, polynomials, power series, algebraic numbers etc.,  and a lot of transcendental functions. PARI is  also available as a C library to allow for faster computations. 
+
+*homepage*: http://pari.math.u-bordeaux.fr
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -10437,6 +13448,10 @@ version    toolchains
 
 *ParMETIS*
 ++++++++++
+
+ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs,  meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the functionality provided by METIS and includes  routines that are especially suited for parallel AMR computations and large scale numerical simulations. The algorithms implemented in  ParMETIS are based on the parallel multilevel k-way graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning  schemes.
+
+*homepage*: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
 
 =======    =======================================================================================================
 version    toolchains                                                                                             
@@ -10453,6 +13468,10 @@ version    toolchains
 *ParMGridGen*
 +++++++++++++
 
+ParMGridGen is an MPI-based parallel library that is based on the serial package MGridGen,  that implements (serial) algorithms for obtaining a sequence of successive coarse grids that are well-suited  for geometric multigrid methods.
+
+*homepage*: http://www-users.cs.umn.edu/~moulitsa/software.html
+
 =======    =====================================================
 version    toolchains                                           
 =======    =====================================================
@@ -10464,6 +13483,10 @@ version    toolchains
 
 *Pasha*
 +++++++
+
+PASHA is a parallel short read assembler for large genomes using de Bruijn graphs.
+
+*homepage*: http://pasha.sourceforge.net/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -10478,6 +13501,10 @@ version    toolchains
 *PaStiX*
 ++++++++
 
+PaStiX (Parallel Sparse matriX package) is a scientific library that provides a high performance  parallel solver for very large sparse linear systems based on direct methods.
+
+*homepage*: http://pastix.gforge.inria.fr/
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -10490,6 +13517,10 @@ version     toolchains
 *patch*
 +++++++
 
+Patch takes a patch file containing a difference listing produced by the diff  program and applies those differences to one or more original files, producing patched versions.
+
+*homepage*: http://www.gnu.org/software/coreutils/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -10501,6 +13532,10 @@ version    toolchains
 
 *patchelf*
 ++++++++++
+
+PatchELF is a small utility to modify the dynamic linker and RPATH of ELF executables.
+
+*homepage*: http://nixos.org/patchelf.html
 
 =======    ==============
 version    toolchains    
@@ -10515,6 +13550,10 @@ version    toolchains
 *path.py*
 +++++++++
 
+path.py is a Python library implementing path objects as first-class entities,  allowing common operations on files to be invoked on those path objects directly.
+
+*homepage*: https://github.com/jaraco/path.py
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -10526,6 +13565,10 @@ version    toolchains
 
 *paycheck*
 ++++++++++
+
+PayCheck is a half-baked implementation of ScalaCheck, which itself is an implementation of QuickCheck for Haskell.  PayCheck is useful for defining a specification of what a function should do, rather than testing its results for a given input.
+
+*homepage*: https://pypi.python.org/pypi/paycheck/
 
 =======    ==========================================================================
 version    toolchains                                                                
@@ -10539,6 +13582,10 @@ version    toolchains
 *pbs_python*
 ++++++++++++
 
+The pbs_python package is a wrapper class for the Torque C library. With this package you now can  write utilities/extensions in Python instead of C. We developed this package because we want to replace xpbsmon by  an ascii version named pbsmon. PBSQuery is also included in this package. This is a python module build on top of  the pbs python module to simplify querying the batch server, eg: how many jobs, how many nodes, ...
+
+*homepage*: https://oss.trac.surfsara.nl/pbs_python
+
 =======    =========================================================
 version    toolchains                                               
 =======    =========================================================
@@ -10550,6 +13597,10 @@ version    toolchains
 
 *pBWA*
 ++++++
+
+pBWA is a parallel implementation of the popular software BWA.
+
+*homepage*: http://pbwa.sourceforge.net/
 
 =============    ============
 version          toolchains  
@@ -10563,6 +13614,10 @@ version          toolchains
 *PBZIP2*
 ++++++++
 
+ PBZIP2 is a parallel implementation of the bzip2 block-sorting file   compressor that uses pthreads and achieves near-linear speedup on SMP machines. The output   of this version is fully compatible with bzip2 v1.0.2 or newer (ie: anything compressed   with pbzip2 can be decompressed with bzip2).
+
+*homepage*: http://compression.ca/pbzip2/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -10574,6 +13629,10 @@ version    toolchains
 
 *PCC*
 +++++
+
+The compiler is based on the original Portable C Compiler by S. C. Johnson,  written in the late 70's. About 50% of the frontend code and 80% of the backend code has been modified.
+
+*homepage*: http://pcc.ludd.ltu.se/
 
 ========    ==========
 version     toolchains
@@ -10587,6 +13646,10 @@ version     toolchains
 *PCL*
 +++++
 
+The Point Cloud Library (PCL) is a standalone, large scale, open project for 2D/3D image and  point cloud processing.
+
+*homepage*: http://pointclouds.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -10598,6 +13661,10 @@ version    toolchains
 
 *PCMSolver*
 +++++++++++
+
+An API for the Polarizable Continuum Model.
+
+*homepage*: https://pcmsolver.readthedocs.org
 
 ========    ===========
 version     toolchains 
@@ -10611,6 +13678,10 @@ version     toolchains
 
 *PCRE*
 ++++++
+
+  The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax  and semantics as Perl 5. 
+
+*homepage*: http://www.pcre.org/
 
 =======    ===========================================================================
 version    toolchains                                                                 
@@ -10629,6 +13700,10 @@ version    toolchains
 *PCRE2*
 +++++++
 
+  The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax  and semantics as Perl 5. 
+
+*homepage*: http://www.pcre.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -10640,6 +13715,10 @@ version    toolchains
 
 *PDT*
 +++++
+
+Program Database Toolkit (PDT) is a framework for analyzing source  code written in several programming languages and for making rich program knowledge  accessible to developers of static and dynamic analysis tools. PDT implements a standard  program representation, the program database (PDB), that can be accessed in a uniform way  through a class library supporting common PDB operations.
+
+*homepage*: http://www.cs.uoregon.edu/research/pdt/
 
 =======    =================================
 version    toolchains                       
@@ -10655,6 +13734,10 @@ version    toolchains
 *PeakSeq*
 +++++++++
 
+ PeakSeq is a program for identifying and ranking peak regions in ChIP-Seq   experiments. It takes as input, mapped reads from a ChIP-Seq experiment, mapped reads from   a control experiment and outputs a file with peak regions ranked with increasing Q-values.
+
+*homepage*: http://info.gersteinlab.org/PeakSeq
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10667,6 +13750,10 @@ version    toolchains
 *PEAR*
 ++++++
 
+PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger.   It is fully parallelized and can run with as low as just a few kilobytes of memory.
+
+*homepage*: http://sco.h-its.org/exelixis/web/software/pear/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10678,6 +13765,10 @@ version    toolchains
 
 *Perl*
 ++++++
+
+Larry Wall's Practical Extraction and Report Language
+
+*homepage*: http://www.perl.org/
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -10700,6 +13791,10 @@ version    toolchains
 *PETSc*
 +++++++
 
+PETSc, pronounced PET-see (the S is silent), is a suite of data structures and routines for the  scalable (parallel) solution of scientific applications modeled by partial differential equations.
+
+*homepage*: http://www.mcs.anl.gov/petsc
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -10717,6 +13812,10 @@ version    toolchains
 *petsc4py*
 ++++++++++
 
+petsc4py are Python bindings for PETSc, the Portable, Extensible Toolchain for Scientific Computation.
+
+*homepage*: https://bitbucket.org/petsc/petsc4py
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -10730,6 +13829,10 @@ version    toolchains
 *PFFT*
 ++++++
 
+PFFT is a software library for computing massively parallel, fast Fourier  transformations on distributed memory architectures. PFFT can be understood as a generalization of FFTW-MPI to multidimensional data decomposition.
+
+*homepage*: https://www-user.tu-chemnitz.de/~mpip/software.php?lang=en
+
 ===========    ===========
 version        toolchains 
 ===========    ===========
@@ -10742,6 +13845,10 @@ version        toolchains
 *pftoolsV3*
 +++++++++++
 
+The pftools package contains all the software necessary to build protein and DNA generalized profiles and use  them to scan and align sequences, and search databases. 
+
+*homepage*: http://web.expasy.org/pftools/
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -10753,6 +13860,10 @@ version     toolchains
 
 *PGI*
 +++++
+
+C, C++ and Fortran compilers from The Portland Group - PGI
+
+*homepage*: http://www.pgroup.com/
 
 =======    ==========
 version    toolchains
@@ -10770,6 +13881,10 @@ version    toolchains
 *PHASE*
 +++++++
 
+ The program PHASE implements a Bayesian statistical  method for reconstructing haplotypes from population genotype data. Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf
+
+*homepage*: http://stephenslab.uchicago.edu/phase/download.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -10781,6 +13896,10 @@ version    toolchains
 
 *phonopy*
 +++++++++
+
+Phonopy is an open source package of phonon calculations based on the supercell approach.
+
+*homepage*: http://phonopy.sourceforge.net/
 
 =======    =========================
 version    toolchains               
@@ -10797,6 +13916,10 @@ version    toolchains
 *PHYLIP*
 ++++++++
 
+PHYLIP is a free package of programs for inferring phylogenies.
+
+*homepage*: http://evolution.genetics.washington.edu/phylip
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -10808,6 +13931,10 @@ version    toolchains
 
 *PhyloCSF*
 ++++++++++
+
+Phylogenetic analysis of multi-species genome sequence alignments to identify conserved  protein-coding regions
+
+*homepage*: http://compbio.mit.edu/PhyloCSF
 
 ========    ==========
 version     toolchains
@@ -10821,6 +13948,10 @@ version     toolchains
 *PhyML*
 +++++++
 
+ PhyML is a software that estimates maximum likelihood   phylogenies from alignments of nucleotide or amino acid sequences.   The main strength of PhyML lies in the large number of substitution   models coupled to various options to search the space of phylogenetic   tree topologies, going from very fast and efficient methods to slower   but generally more accurate approaches. PhyML was designed to process   moderate to large data sets. In theory, alignments with up to 4,000   sequences 2,000,000 character-long can be processed. 
+
+*homepage*: http://code.google.com/p/phyml
+
 ========    ============
 version     toolchains  
 ========    ============
@@ -10833,6 +13964,10 @@ version     toolchains
 
 *picard*
 ++++++++
+
+A set of tools (in Java) for working with next generation sequencing data in the BAM   (http://samtools.github.io/hts-specs) format.
+
+*homepage*: http://broadinstitute.github.io/picard/
 
 =======    ==========
 version    toolchains
@@ -10854,6 +13989,10 @@ version    toolchains
 *pigz*
 ++++++
 
+ pigz, which stands for parallel implementation of gzip, is a fully   functional replacement for gzip that exploits multiple processors and multiple cores   to the hilt when compressing data. pigz was written by Mark Adler, and uses the zlib   and pthread libraries. 
+
+*homepage*: http://zlib.net/pigz/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -10867,6 +14006,10 @@ version    toolchains
 *PIL*
 +++++
 
+The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter.  This library supports many file formats, and provides powerful image processing and graphics capabilities.
+
+*homepage*: http://www.pythonware.com/products/pil
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -10878,6 +14021,10 @@ version    toolchains
 
 *Pillow*
 ++++++++
+
+Pillow is the 'friendly PIL fork' by Alex Clark and Contributors.  PIL is the Python Imaging Library by Fredrik Lundh and Contributors.
+
+*homepage*: http://pillow.readthedocs.org/
 
 =======    =======================
 version    toolchains             
@@ -10893,6 +14040,10 @@ version    toolchains
 *Pindel*
 ++++++++
 
+ Pindel can detect breakpoints of large deletions, medium sized   insertions, inversions, tandem duplications and other structural variants at single-based   resolution from next-gen sequence data. It uses a pattern growth approach to identify the   breakpoints of these variants from paired-end short reads. 
+
+*homepage*: http://gmt.genome.wustl.edu/packages/pindel/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -10904,6 +14055,10 @@ version    toolchains
 
 *pip*
 +++++
+
+The PyPA recommended tool for installing Python packages.
+
+*homepage*: https://pip.pypa.io
 
 =======    ================================================================
 version    toolchains                                                      
@@ -10918,6 +14073,10 @@ version    toolchains
 
 *pixman*
 ++++++++
+
+Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization. Important users of pixman are the cairo graphics library and the X server.
+
+*homepage*: http://www.pixman.org/
 
 =======    ============================================================================
 version    toolchains                                                                  
@@ -10934,6 +14093,10 @@ version    toolchains
 *pkg-config*
 ++++++++++++
 
+pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the  correct compiler options on the command line so an application can use   gcc -o test test.c `pkg-config --libs --cflags glib-2.0`  for instance, rather than hard-coding values on where to find glib (or other libraries).
+
+*homepage*: http://www.freedesktop.org/wiki/Software/pkg-config/
+
 =======    ==============================================================================================================
 version    toolchains                                                                                                    
 =======    ==============================================================================================================
@@ -10949,6 +14112,10 @@ version    toolchains
 *pkgconfig*
 +++++++++++
 
+pkgconfig is a Python module to interface with the pkg-config command line tool
+
+*homepage*: http://github.com/matze/pkgconfig
+
 =======    ==============================================================
 version    toolchains                                                    
 =======    ==============================================================
@@ -10960,6 +14127,10 @@ version    toolchains
 
 *PLAST*
 +++++++
+
+PLAST is a parallel alignment search tool for comparing large protein banks
+
+*homepage*: http://www.irisa.fr/symbiose/projects/plast/
 
 =======    ==========
 version    toolchains
@@ -10973,6 +14144,10 @@ version    toolchains
 *Platanus*
 ++++++++++
 
+PLATform for Assembling NUcleotide Sequences
+
+*homepage*: http://platanus.bio.titech.ac.jp/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -10985,6 +14160,10 @@ version    toolchains
 *Platypus*
 ++++++++++
 
+Platypus is a tool designed for efficient and accurate variant-detection  in high-throughput sequencing data.
+
+*homepage*: http://www.well.ox.ac.uk/platypus
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -10996,6 +14175,10 @@ version    toolchains
 
 *PLINK*
 +++++++
+
+plink-1.07-src: Whole-genome association analysis toolset
+
+*homepage*: http://pngu.mgh.harvard.edu/~purcell/plink/
 
 ===========    =====================================================================
 version        toolchains                                                           
@@ -11010,6 +14193,10 @@ version        toolchains
 *PLINKSEQ*
 ++++++++++
 
+ PLINK/SEQ is an open-source C/C++ library for working with human   genetic variation data. The specific focus is to provide a platform for analytic tool   development for variation data from large-scale resequencing and genotyping projects,   particularly whole-exome and whole-genome studies. It is independent of (but designed   to be complementary to) the existing PLINK package. 
+
+*homepage*: https://atgu.mgh.harvard.edu/plinkseq/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -11022,6 +14209,10 @@ version    toolchains
 *PLplot*
 ++++++++
 
+PLplot is a cross-platform software package for creating scientific plots whose (UTF-8) plot symbols  and text are limited in practice only by what Unicode-aware system fonts are installed on a user's computer.
+
+*homepage*: http://plplot.sourceforge.net
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11033,6 +14224,10 @@ version    toolchains
 
 *PLUMED*
 ++++++++
+
+PLUMED is an open source library for free energy calculations in molecular systems which  works together with some of the most popular molecular dynamics engines. Free energy calculations can be  performed as a function of many order parameters with a particular  focus on biological problems, using  state of the art methods such as metadynamics, umbrella sampling and Jarzynski-equation based steered MD.  The software, written in C++, can be easily interfaced with both fortran and C/C++ codes. 
+
+*homepage*: http://www.plumed-code.org
 
 =======    =======================
 version    toolchains             
@@ -11052,6 +14247,10 @@ version    toolchains
 *PLY*
 +++++
 
+PLY is yet another implementation of lex and yacc for Python.
+
+*homepage*: http://www.dabeaz.com/ply/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11063,6 +14262,10 @@ version    toolchains
 
 *Pmw*
 +++++
+
+Pmw is a toolkit for building high-level compound widgets in Python  using the Tkinter module. 
+
+*homepage*: http://pmw.sourceforge.net
 
 =======    ============
 version    toolchains  
@@ -11076,6 +14279,10 @@ version    toolchains
 *PnMPI*
 +++++++
 
+MPI Tool Virtualization and Interoperability library.
+
+*homepage*: https://scalability.llnl.gov/pnmpi/
+
 =======    ====================
 version    toolchains          
 =======    ====================
@@ -11087,6 +14294,10 @@ version    toolchains
 
 *pomkl*
 +++++++
+
+Toolchain with PGI C, C++ and Fortran compilers, alongside Intel MKL & OpenMPI.
+
+*homepage*: http://www.pgroup.com/index.htm
 
 =======    ==========
 version    toolchains
@@ -11102,6 +14313,10 @@ version    toolchains
 *pompi*
 +++++++
 
+Toolchain with PGI C, C++ and Fortran compilers, alongside OpenMPI.
+
+*homepage*: http://www.pgroup.com/index.htm
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11116,6 +14331,10 @@ version    toolchains
 *popt*
 ++++++
 
+Popt is a C library for parsing command line parameters.
+
+*homepage*: http://freecode.com/projects/popt
+
 =======    ==============================
 version    toolchains                    
 =======    ==============================
@@ -11129,6 +14348,10 @@ version    toolchains
 *Postgres-XL*
 +++++++++++++
 
+Postgres-XL is a horizontally scalable open source SQL database cluster, flexible enough to handle varying database workloads:
+
+*homepage*: http://www.postgres-xl.org
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11140,6 +14363,10 @@ version    toolchains
 
 *PostgreSQL*
 ++++++++++++
+
+PostgreSQL is a powerful, open source object-relational database system.  It is fully ACID compliant, has full support for foreign keys,  joins, views, triggers, and stored procedures (in multiple languages).  It includes most SQL:2008 data types, including INTEGER,  NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.  It also supports storage of binary large objects, including pictures,  sounds, or video. It has native programming interfaces for C/C++, Java,  .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
+
+*homepage*: http://www.mysql.com/
 
 =======    ===========
 version    toolchains 
@@ -11155,6 +14382,10 @@ version    toolchains
 *POV-Ray*
 +++++++++
 
+The Persistence of Vision Raytracer, or POV-Ray, is a ray tracing program  which generates images from a text-based scene description, and is available for a variety  of computer platforms. POV-Ray is a high-quality, Free Software tool for creating stunning  three-dimensional graphics. The source code is available for those wanting to do their own ports.
+
+*homepage*: http://www.povray.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11166,6 +14397,10 @@ version    toolchains
 
 *PP*
 ++++
+
+PP is a python module which provides mechanism for parallel execution of python code on SMP  (systems with multiple processors or cores) and clusters (computers connected via network).
+
+*homepage*: http://www.parallelpython.com/
 
 =======    =======================================
 version    toolchains                             
@@ -11179,6 +14414,10 @@ version    toolchains
 *PPfold*
 ++++++++
 
+PPfold is a new implementation of pfold, written in Java 6.0. It can predict the consensus secondary  structure of RNA alignments through a stochastic context-free grammar coupled to an evolutionary model.  It can also use data from chemical probing experiments to predict RNA secondary structure. PPfold is multithreaded,  and can solve the structure of much longer alignments than pfold.
+
+*homepage*: ihttp://www.daimi.au.dk/~compbio/pfold/downloads.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11190,6 +14429,10 @@ version    toolchains
 
 *pplacer*
 +++++++++
+
+Pplacer places query sequences on a fixed reference phylogenetic tree to maximize phylogenetic  likelihood or posterior probability according to a reference alignment. Pplacer is designed to be fast, to give  useful information about uncertainty, and to offer advanced visualization and downstream analysis.
+
+*homepage*: http://matsen.fhcrc.org/pplacer/
 
 ===========    ===========
 version        toolchains 
@@ -11203,6 +14446,10 @@ version        toolchains
 *PRACE*
 +++++++
 
+The PRACE Common Production Environment (PCPE) is a set of software tools and libraries  that are planned to be available on all PRACE execution sites. The PCPE also defines a set of environment  variables that try to make compilation on all sites as homogeneous and simple as possible.
+
+*homepage*: http://www.prace-ri.eu/PRACE-Common-Production
+
 ========    =========================
 version     toolchains               
 ========    =========================
@@ -11214,6 +14461,10 @@ version     toolchains
 
 *PRANK*
 +++++++
+
+ PRANK is a probabilistic multiple alignment program for DNA,   codon and amino-acid sequences. PRANK is based on a novel algorithm that treats   insertions correctly and avoids over-estimation of the number of deletion events.
+
+*homepage*: http://code.google.com/p/prank-msa/
 
 =======    =========================
 version    toolchains               
@@ -11228,6 +14479,10 @@ version    toolchains
 *Primer3*
 +++++++++
 
+Primer3 is a widely used program for designing PCR primers (PCR = 'Polymerase Chain Reaction').  PCR is an essential and ubiquitous tool in genetics and molecular biology.  Primer3 can also design hybridization probes and sequencing primers.
+
+*homepage*: http://primer3.sourceforge.net
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -11239,6 +14494,10 @@ version    toolchains
 
 *PRINSEQ*
 +++++++++
+
+A bioinformatics tool to PRe-process and show INformation of SEQuence data.
+
+*homepage*: http://prinseq.sourceforge.net
 
 =======    ========================
 version    toolchains              
@@ -11252,6 +14511,10 @@ version    toolchains
 *printproto*
 ++++++++++++
 
+X.org PrintProto protocol headers.
+
+*homepage*: http://xorg.freedesktop.org/
+
 =======    ===============================================================================
 version    toolchains                                                                     
 =======    ===============================================================================
@@ -11263,6 +14526,10 @@ version    toolchains
 
 *ProbABEL*
 ++++++++++
+
+Tool for genome-wide association  analysis of imputed genetic data.
+
+*homepage*: http://www.genabel.org/packages/ProbABEL
 
 =======    ==========
 version    toolchains
@@ -11276,6 +14543,10 @@ version    toolchains
 *problog*
 +++++++++
 
+ProbLog is a probabilistic Prolog, a probabilistic logic programming language.
+
+*homepage*: http://dtai.cs.kuleuven.be/problog/problog1.html
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -11287,6 +14558,10 @@ version    toolchains
 
 *PROJ*
 ++++++
+
+Program proj is a standard Unix filter function which converts  geographic longitude and latitude coordinates into cartesian coordinates
+
+*homepage*: http://trac.osgeo.org/proj/
 
 =======    ================================================
 version    toolchains                                      
@@ -11302,6 +14577,10 @@ version    toolchains
 *prompt-toolkit*
 ++++++++++++++++
 
+prompt_toolkit is a Python library for building powerful interactive command lines and terminal applications.
+
+*homepage*: https://github.com/jonathanslenders/python-prompt-toolkit
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11314,6 +14593,10 @@ version    toolchains
 
 *protobuf*
 ++++++++++
+
+Google Protocol Buffers
+
+*homepage*: https://github.com/google/protobuf/
 
 =======    =================================
 version    toolchains                       
@@ -11329,6 +14612,10 @@ version    toolchains
 *pscom*
 +++++++
 
+ParaStation is a robust and efficient cluster middleware, consisting of a high-performance communication layer (MPI) and a sophisticated management layer.
+
+*homepage*: http://www.par-tec.com
+
 ========    ==============================
 version     toolchains                    
 ========    ==============================
@@ -11342,6 +14629,10 @@ version     toolchains
 
 *PSI*
 +++++
+
+PSI4 is an open-source suite of ab initio quantum chemistry programs designed for  efficient, high-accuracy simulations of a variety of molecular properties. We can routinely perform  computations with more than 2500 basis functions running serially or in parallel.
+
+*homepage*: http://www.psicode.org/
 
 ==============    ===========================================================
 version           toolchains                                                 
@@ -11359,6 +14650,10 @@ version           toolchains
 *PSI4*
 ++++++
 
+PSI4 is an open-source suite of ab initio quantum chemistry programs designed for  efficient, high-accuracy simulations of a variety of molecular properties. We can routinely perform  computations with more than 2500 basis functions running serially or in parallel.
+
+*homepage*: http://www.psicode.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11370,6 +14665,10 @@ version    toolchains
 
 *psmpi*
 +++++++
+
+ParaStation MPI is an open source high-performance MPI 3.0 implementation, based on MPICH v3. It provides extra low level communication libraries and integration with  various batch systems for tighter process control. 
+
+*homepage*: https://github.com/ParaStation/psmpi2
 
 =======    ==============================
 version    toolchains                    
@@ -11384,6 +14683,10 @@ version    toolchains
 *psmpi2*
 ++++++++
 
+ParaStation is a robust and efficient cluster middleware, consisting  of a high-performance communication layer (MPI) and a sophisticated management layer.
+
+*homepage*: http://www.par-tec.com
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11396,6 +14699,10 @@ version    toolchains
 *PSORTb*
 ++++++++
 
+PSORTb v3.0.4 is the most precise bacterial localization prediction tool available.
+
+*homepage*: http://psort.org/psortb/index.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11407,6 +14714,10 @@ version    toolchains
 
 *psutil*
 ++++++++
+
+A cross-platform process and system utilities module for Python
+
+*homepage*: https://github.com/giampaolo/psutil
 
 =======    =======================
 version    toolchains             
@@ -11421,6 +14732,10 @@ version    toolchains
 *py*
 ++++
 
+library with cross-python path, ini-parsing, io, code, log facilities
+
+*homepage*:  http://pylib.readthedocs.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11432,6 +14747,10 @@ version    toolchains
 
 *PyAMG*
 +++++++
+
+PyAMG is a library of Algebraic Multigrid (AMG) solvers with a convenient Python interface.
+
+*homepage*: http://pyamg.org
 
 =======    ===========
 version    toolchains 
@@ -11446,6 +14765,10 @@ version    toolchains
 *PyCairo*
 +++++++++
 
+Python bindings for the cairo library
+
+*homepage*: http://cairographics.org/pycairo/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -11457,6 +14780,10 @@ version    toolchains
 
 *pycosat*
 +++++++++
+
+pycosat provides efficient Python bindings to picosat on the C level, i.e. when importing pycosat,  the picosat solver becomes part of the Python process itself.
+
+*homepage*: https://pypi.python.org/pypi/pycosat
 
 =======    ===========
 version    toolchains 
@@ -11471,6 +14798,10 @@ version    toolchains
 *pydicom*
 +++++++++
 
+Read, modify and write DICOM files with python code
+
+*homepage*: https://github.com/darcymason/pydicom
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -11482,6 +14813,10 @@ version    toolchains
 
 *PyFFmpeg*
 ++++++++++
+
+Python FFmpeg wrapper
+
+*homepage*: https://github.com/mhaller/pyffmpeg
 
 =======    =========================
 version    toolchains               
@@ -11495,6 +14830,10 @@ version    toolchains
 *pygccxml*
 ++++++++++
 
+Python package for easy C++ declarations navigation.
+
+*homepage*: https://pypi.python.org/pypi/pygccxml
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -11507,6 +14846,10 @@ version     toolchains
 *pyGIMLi*
 +++++++++
 
+pyGIMLi is an open-source multi-method library for solving inverse  and forward tasks related to geophysical problems. Written in C++ and Python,  it offers both efficiency and flexibility allowing you to quickly build  your own robust inversion applications for the geophysical problem at hand.
+
+*homepage*: http://www.pygimli.org/
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -11518,6 +14861,10 @@ version     toolchains
 
 *Pygments*
 ++++++++++
+
+Generic syntax highlighter suitable for use in code hosting, forums, wikis or other applications  that need to prettify source code.
+
+*homepage*: http://pygments.org/
 
 =======    =======================
 version    toolchains             
@@ -11532,6 +14879,10 @@ version    toolchains
 *PyGObject*
 +++++++++++
 
+Python Bindings for GLib/GObject/GIO/GTK+
+
+*homepage*: http://www.pygtk.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11543,6 +14894,10 @@ version    toolchains
 
 *pygraphviz*
 ++++++++++++
+
+pycosat provides efficient Python bindings to picosat on the C level, i.e. when importing pycosat,  the picosat solver becomes part of the Python process itself.
+
+*homepage*: https://pypi.python.org/pypi/pycosat
 
 =======    ===========
 version    toolchains 
@@ -11556,6 +14911,10 @@ version    toolchains
 *PyGTK*
 +++++++
 
+PyGTK lets you to easily create programs with a graphical user interface  using the Python programming language.
+
+*homepage*: http://www.pygtk.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11567,6 +14926,10 @@ version    toolchains
 
 *PyGTS*
 +++++++
+
+ PyGTS is a python package used to construct, manipulate,   and perform computations on triangulated surfaces.   It is a hand-crafted and pythonic binding for the GNU Triangulated Surface (GTS) Library. 
+
+*homepage*: https://sourceforge.net/projects/pygts/
 
 =======    ====================================
 version    toolchains                          
@@ -11580,6 +14943,10 @@ version    toolchains
 *pyhull*
 ++++++++
 
+Pyhull is a Python wrapper to qhull (http://www.qhull.org/) for the computation of the convex hull,  Delaunay triangulation and Voronoi diagram. It is written as a Python C extension, with both high-level and low-level  interfaces to qhull. 
+
+*homepage*: http://pythonhosted.org/pyhull/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11592,6 +14959,10 @@ version    toolchains
 *Pyke*
 ++++++
 
+Pyke introduces a form of Logic Programming (inspired by Prolog)  to the Python community by providing a knowledge-based inference engine  (expert system) written in 100% Python.
+
+*homepage*: http://sourceforge.net/projects/pyke/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -11603,6 +14974,10 @@ version    toolchains
 
 *pymatgen*
 ++++++++++
+
+Python Materials Genomics is a robust materials analysis code that defines core object  representations for structures and molecules with support for many electronic structure codes.
+
+*homepage*: https://pypi.python.org/pypi/pymatgen
 
 =======    =====================
 version    toolchains           
@@ -11618,6 +14993,10 @@ version    toolchains
 *PyOpenGL*
 ++++++++++
 
+PyOpenGL is the most common cross platform Python binding to OpenGL and related APIs.
+
+*homepage*: http://pyopengl.sourceforge.net
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11630,6 +15009,10 @@ version    toolchains
 *pyplusplus*
 ++++++++++++
 
+Py++ is a code generator for Boost.Python that simplifies  writing Python bindings of a C/C++ library  The tool is implemented as a Python module which is controlled by a user script.
+
+*homepage*: https://bitbucket.org/ompl/pyplusplus
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -11641,6 +15024,10 @@ version     toolchains
 
 *PyQt*
 ++++++
+
+PyQt is a set of Python v2 and v3 bindings for Digia's Qt application framework.
+
+*homepage*: http://www.riverbankcomputing.co.uk/software/pyqt
 
 =======    =================================================
 version    toolchains                                       
@@ -11655,6 +15042,10 @@ version    toolchains
 *PyQt5*
 +++++++
 
+PyQt5 is a set of Python bindings for v5 of the Qt application framework from The Qt Company.
+
+*homepage*: http://www.riverbankcomputing.co.uk/software/pyqt
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11666,6 +15057,10 @@ version    toolchains
 
 *PyQuante*
 ++++++++++
+
+PyQuante is an open-source suite of programs for developing quantum chemistry methods.  The program is written in the Python programming language, but has many 'rate-determining' modules also  written in C for speed. The resulting code, though not as fast as Jaguar, NWChem, Gaussian, or MPQC, is  much easier to understand and modify. The goal of this software is not necessarily to provide a working  quantum chemistry program (although it will hopefully do that), but rather to provide a well-engineered  set of tools so that scientists can construct their own quantum chemistry programs without going through  the tedium of having to write every low-level routine.
+
+*homepage*: http://pyquante.sourceforge.net
 
 =======    ===========
 version    toolchains 
@@ -11679,6 +15074,10 @@ version    toolchains
 *pyringe*
 +++++++++
 
+Debugger capable of attaching to and injecting code into python processes.
+
+*homepage*: https://github.com/google/pyringe
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11690,6 +15089,10 @@ version    toolchains
 
 *Pyro4*
 +++++++
+
+Pyro means PYthon Remote Objects. It is a library that enables you to build applications in which  objects can talk to eachother over the network, with minimal programming effort.
+
+*homepage*: https://pypi.python.org/pypi/Pyro4
 
 =======    ==========
 version    toolchains
@@ -11703,6 +15106,10 @@ version    toolchains
 *Pysam*
 +++++++
 
+Pysam is a python module for reading and manipulating Samfiles.   It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.
+
+*homepage*: https://github.com/pysam-developers/pysam
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -11714,6 +15121,10 @@ version    toolchains
 
 *pysqlite*
 ++++++++++
+
+pysqlite is an interface to the SQLite 3.x embedded relational database engine.  It is almost fully compliant with the Python database API version 2.0 also exposes the unique features of SQLite.
+
+*homepage*: https://pypi.python.org/pypi/pysqlite
 
 =======    ==================================================
 version    toolchains                                        
@@ -11727,6 +15138,10 @@ version    toolchains
 
 *pyTables*
 ++++++++++
+
+PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope  with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the  NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical  parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browse,  process and search very large amounts of data. One important feature of PyTables is that it optimizes memory and disk  resources so that data takes much less space (specially if on-flight compression is used) than other solutions such as  relational or object oriented databases.
+
+*homepage*: http://www.pytables.org
 
 =======    ============
 version    toolchains  
@@ -11742,6 +15157,10 @@ version    toolchains
 *pytest*
 ++++++++
 
+pytest: simple powerful testing with Python
+
+*homepage*: http://pytest.org
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11753,6 +15172,10 @@ version    toolchains
 
 *Python*
 ++++++++
+
+Python is a programming language that lets you work more quickly and integrate your systems  more effectively.
+
+*homepage*: http://python.org/
 
 =======    =======================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                             
@@ -11781,6 +15204,10 @@ version    toolchains
 *python-dateutil*
 +++++++++++++++++
 
+The dateutil module provides powerful extensions to the datetime module available in the Python standard library.
+
+*homepage*: https://pypi.python.org/pypi/python-dateutil
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -11792,6 +15219,10 @@ version    toolchains
 
 *python-meep*
 +++++++++++++
+
+Python wrapper for the Meep FDTD solver.
+
+*homepage*: https://code.launchpad.net/python-meep
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -11805,6 +15236,10 @@ version    toolchains
 *PyYAML*
 ++++++++
 
+PyYAML is a YAML parser and emitter for the Python programming language.
+
+*homepage*: https://pypi.python.org/pypi/PyYAML/
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -11817,6 +15252,10 @@ version    toolchains
 
 *PyZMQ*
 +++++++
+
+Python bindings for ZeroMQ
+
+*homepage*: http://www.zeromq.org/bindings:python
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -11846,6 +15285,10 @@ version    toolchains
 *Qhull*
 +++++++
 
+ Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and higher dimensions. Qhull implements the Quickhull algorithm for computing the convex hull. 
+
+*homepage*: http://www.qhull.org
+
 =======    ==================================================
 version    toolchains                                        
 =======    ==================================================
@@ -11859,6 +15302,10 @@ version    toolchains
 *QLogicMPI*
 +++++++++++
 
+QLogic's implementation of the MPI standard is derived from the MPICH reference implementation  version 1.2.7. The QLogic MPI (TrueScale) libraries have been highly tuned for the QLogic interconnect, and will  not run over other interconnects.   QLogic MPI is an implementation of the original MPI 1.2 standard. The MPI-2 standard provides several enhancements  of the original standard. Of the MPI-2 features, QLogic MPI includes only the MPI-IO features implemented in ROMIO  version 126 and the generalized MPI_All to allow communication exchange. The QLogic MPI implementation in this  release supports hybrid MPI/OpenMP and other multi-threaded programs, as long as only one thread uses MPI.  For more information, see QLogic MPI and Hybrid MPI/OpenMP Applications on page 4-26.
+
+*homepage*: http://www.qlogic.com
+
 ======================    ==========
 version                   toolchains
 ======================    ==========
@@ -11871,6 +15318,10 @@ version                   toolchains
 *qrupdate*
 ++++++++++
 
+qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions.
+
+*homepage*: https://sourceforge.net/projects/qrupdate/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -11882,6 +15333,10 @@ version    toolchains
 
 *Qt*
 ++++
+
+Qt is a comprehensive cross-platform C++ application framework.
+
+*homepage*: http://qt.io/
 
 =======    =============================================================================================================
 version    toolchains                                                                                                   
@@ -11899,6 +15354,10 @@ version    toolchains
 *Qt5*
 +++++
 
+Qt is a comprehensive cross-platform C++ application framework.
+
+*homepage*: http://qt.io/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -11913,6 +15372,10 @@ version    toolchains
 *qtop*
 ++++++
 
+qtop is a nifty command-line tool for monitoring queueing systems, esp. PBS/torque.  It tries to fit as much information as possible in your screen's real estate,  by stitching together the output of commands like pbsnodes -a, qstat & qstat -q.  It is possible to write wrappers for other platforms -people have done so for SGE, OAR etc-  or, even examine traces offline and present the sampled information.
+
+*homepage*: http://cern.ch/fotis/QTOP/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11925,6 +15388,10 @@ version    toolchains
 *QuadProg++*
 ++++++++++++
 
+ A C++ library for Quadratic Programming which implements the   Goldfarb-Idnani active-set dual method. At present it is limited to the solution   of strictly convex quadratic programs. 
+
+*homepage*: http://sourceforge.net/projects/quadprog/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -11936,6 +15403,10 @@ version    toolchains
 
 *QuantumESPRESSO*
 +++++++++++++++++
+
+Quantum ESPRESSO  is an integrated suite of computer codes  for electronic-structure calculations and materials modeling at the nanoscale.  It is based on density-functional theory, plane waves, and pseudopotentials   (both norm-conserving and ultrasoft).
+
+*homepage*: http://www.pwscf.org/
 
 =======    ========================================================================
 version    toolchains                                                              
@@ -11954,6 +15425,10 @@ version    toolchains
 *QuickFF*
 +++++++++
 
+QuickFF is a Python package developed at the Center for Molecular Modeling (CMM) to quickly derive accurate force fields from ab initio calculations.
+
+*homepage*: http://molmod.github.io/QuickFF/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -11966,6 +15441,10 @@ version    toolchains
 *Quip*
 ++++++
 
+Quip compresses next-generation sequencing data with extreme prejudice.  It supports input and output in the FASTQ and SAM/BAM formats,  compressing large datasets to as little as 15% of their original size.
+
+*homepage*: http://homes.cs.washington.edu/~dcjones/quip
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -11977,6 +15456,10 @@ version    toolchains
 
 *Qwt*
 +++++
+
+The Qwt library contains GUI Components and utility classes which are primarily useful for programs  with a technical background.
+
+*homepage*: http://qwt.sourceforge.net/
 
 =======    ===========
 version    toolchains 
@@ -11998,6 +15481,10 @@ version    toolchains
 
 *R*
 +++
+
+R is a free software environment for statistical computing and graphics.
+
+*homepage*: http://www.r-project.org/
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -12022,6 +15509,10 @@ version    toolchains
 *R-bundle-Bioconductor*
 +++++++++++++++++++++++
 
+R is a free software environment for statistical computing and graphics.
+
+*homepage*: http://www.r-project.org/
+
 =======    ======================================
 version    toolchains                            
 =======    ======================================
@@ -12036,6 +15527,10 @@ version    toolchains
 *R-bundle-devtools*
 +++++++++++++++++++
 
+R is a free software environment for statistical computing and graphics.
+
+*homepage*: http://www.r-project.org/
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -12047,6 +15542,10 @@ version     toolchains
 
 *R-bundle-extra*
 ++++++++++++++++
+
+R is a free software environment for statistical computing and graphics.
+
+*homepage*: http://www.r-project.org/
 
 ========    ===========
 version     toolchains 
@@ -12060,6 +15559,10 @@ version     toolchains
 *R-bundle-pbd*
 ++++++++++++++
 
+R is a free software environment for statistical computing and graphics.
+
+*homepage*: http://www.r-project.org/
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -12071,6 +15574,10 @@ version     toolchains
 
 *rainbow*
 +++++++++
+
+Efficient tool for clustering and assembling short reads, especially for RAD.
+
+*homepage*: https://sourceforge.net/projects/bio-rainbow/
 
 =======    ============
 version    toolchains  
@@ -12084,6 +15591,10 @@ version    toolchains
 *randrproto*
 ++++++++++++
 
+Xrandr protocol and ancillary headers
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -12095,6 +15606,10 @@ version    toolchains
 
 *RAxML*
 +++++++
+
+RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.
+
+*homepage*: https://github.com/stamatak/standard-RAxML
 
 =======    =======================================
 version    toolchains                             
@@ -12111,6 +15626,10 @@ version    toolchains
 *Ray*
 +++++
 
+Ray -- Parallel genome assemblies for parallel DNA sequencing.
+
+*homepage*: http://sourceforge.net/projects/denovoassembler/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12122,6 +15641,10 @@ version    toolchains
 
 *RcppArmadillo*
 +++++++++++++++
+
+'Armadillo' is a templated C++ linear algebra library that aims towards a good balance  between speed and ease of use
+
+*homepage*: http://cran.r-project.org/web/packages/%(name)s
 
 ===========    ===========
 version        toolchains 
@@ -12135,6 +15658,10 @@ version        toolchains
 *RCS*
 +++++
 
+RCS: GNU Revision Control System - version control software
+
+*homepage*: http://www.cs.purdue.edu/homes/trinkle/RCS/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -12146,6 +15673,10 @@ version    toolchains
 
 *rCUDA*
 +++++++
+
+The rCUDA Framework enables the concurrent usage of CUDA-compatible devices remotely.
+
+*homepage*: http://www.rcuda.net/
 
 =======    ==========
 version    toolchains
@@ -12160,6 +15691,10 @@ version    toolchains
 *RDMC*
 ++++++
 
+The AMANDA-era RDMC physics library
+
+*homepage*: http://code.icecube.wisc.edu/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12171,6 +15706,10 @@ version    toolchains
 
 *RDP-Classifier*
 ++++++++++++++++
+
+The RDP Classifier is a naive Bayesian classifier that can rapidly and accurately provides taxonomic  assignments from domain to genus, with confidence estimates for each assignment.
+
+*homepage*: http://sourceforge.net/projects/rdp-classifier
 
 =======    ==========
 version    toolchains
@@ -12184,6 +15723,10 @@ version    toolchains
 *RELION*
 ++++++++
 
+RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer  program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class  averages in electron cryo-microscopy (cryo-EM).
+
+*homepage*: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -12196,6 +15739,10 @@ version    toolchains
 *renderproto*
 +++++++++++++
 
+Xrender protocol and ancillary headers
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ========================================================================================
 version    toolchains                                                                              
 =======    ========================================================================================
@@ -12207,6 +15754,10 @@ version    toolchains
 
 *requests*
 ++++++++++
+
+Python http for humans
+
+*homepage*: https://pypi.python.org/pypi/requests/2.6.0
 
 =======    =======================
 version    toolchains             
@@ -12222,6 +15773,10 @@ version    toolchains
 *rgeos*
 +++++++
 
+R interface to Geometry Engine - Open Source (GEOS) using the C API for topology operations  on geometries
+
+*homepage*: https://cran.r-project.org/web/packages/rgeos/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12233,6 +15788,10 @@ version    toolchains
 
 *rhdf5*
 +++++++
+
+This R/Bioconductor package provides an interface between HDF5 and R.
+
+*homepage*: https://bioconductor.org/packages/release/bioc/html/rhdf5.html
 
 =======    ===========
 version    toolchains 
@@ -12247,6 +15806,10 @@ version    toolchains
 *rjags*
 +++++++
 
+The rjags package is an interface to the JAGS library.
+
+*homepage*: http://cran.r-project.org/web/packages/rjags
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12258,6 +15821,10 @@ version    toolchains
 
 *RMBlast*
 +++++++++
+
+RMBlast is a RepeatMasker compatible version of the standard NCBI BLAST suite. The primary difference between  this distribution and the NCBI distribution is the addition of a new program 'rmblastn' for use with RepeatMasker and  RepeatModeler.
+
+*homepage*: http://www.repeatmasker.org/RMBlast.html
 
 =======    ==========
 version    toolchains
@@ -12271,6 +15838,10 @@ version    toolchains
 *RNAz*
 ++++++
 
+RNAz is a program for predicting structurally conserved and thermodynamically stable RNA secondary structures in multiple sequence alignments.
+
+*homepage*: http://www.tbi.univie.ac.at/~wash/RNAz/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -12282,6 +15853,10 @@ version    toolchains
 
 *ROOT*
 ++++++
+
+The ROOT system provides a set of OO frameworks with all the functionality     needed to handle and analyze large amounts of data in a very efficient way.
+
+*homepage*: http://root.cern.ch/drupal/
 
 ========    ===========================================================
 version     toolchains                                                 
@@ -12301,6 +15876,10 @@ v5.34.36    intel/2016a
 *Rosetta*
 +++++++++
 
+Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids.
+
+*homepage*: https://www.rosettacommons.org
+
 =============    =========================
 version          toolchains               
 =============    =========================
@@ -12315,6 +15894,10 @@ version          toolchains
 *rpmrebuild*
 ++++++++++++
 
+rpmrebuild is a tool to build an RPM file from a package that has already been     installed in a basic use
+
+*homepage*: http://rpmrebuild.sourceforge.net/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12327,6 +15910,10 @@ version    toolchains
 *rpy2*
 ++++++
 
+rpy2 is a redesign and rewrite of rpy. It is providing a low-level  interface to R from Python, a proposed high-level interface, including wrappers to  graphical libraries, as well as R-like structures and functions. 
+
+*homepage*: http://rpy.sourceforge.net/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -12338,6 +15925,10 @@ version    toolchains
 
 *RSEM*
 ++++++
+
+RNA-Seq by Expectation-Maximization
+
+*homepage*: http://deweylab.github.io/RSEM/
 
 =======    ===========================
 version    toolchains                 
@@ -12352,6 +15943,10 @@ version    toolchains
 *rSeq*
 ++++++
 
+ rSeq is a set of tools for RNA-Seq data analysis. It consists of programs   that deal with many aspects of RNA-Seq data analysis, such as read quality assessment,   reference sequence generation, sequence mapping, gene and isoform expressions (RPKMs) estimation, etc.   There are also many other features that will be gradually added into rSeq in the future. 
+
+*homepage*: http://www-personal.umich.edu/~jianghui/rseq/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -12363,6 +15958,10 @@ version    toolchains
 
 *RSeQC*
 +++++++
+
+RSeQC provides a number of useful modules that can   comprehensively evaluate high throughput sequence data especially RNA-seq   data. Some basic modules quickly inspect sequence quality, nucleotide   composition bias, PCR bias and GC bias, while RNA-seq specific modules   evaluate sequencing saturation, mapped reads distribution, coverage   uniformity, strand specificity, transcript level RNA integrity etc.
+
+*homepage*: http://rseqc.sourceforge.net/
 
 =======    ==========
 version    toolchains
@@ -12376,6 +15975,10 @@ version    toolchains
 *RSEQtools*
 +++++++++++
 
+ A modular framework to analyze RNA-Seq data using compact   and anonymized data summaries.
+
+*homepage*: http://rseqtools.gersteinlab.org
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -12387,6 +15990,10 @@ version    toolchains
 
 *Ruby*
 ++++++
+
+Ruby is a dynamic, open source programming language with   a focus on simplicity and productivity. It has an elegant syntax that is   natural to read and easy to write.
+
+*homepage*: https://www.ruby-lang.org
 
 =======    ============
 version    toolchains  
@@ -12403,6 +16010,10 @@ version    toolchains
 *runjags*
 +++++++++
 
+This package provides high-level interface utilities for Just Another Gibbs Sampler (JAGS).
+
+*homepage*: http://cran.r-project.org/web/packages/runjags
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12414,6 +16025,10 @@ version    toolchains
 
 *Rust*
 ++++++
+
+Rust is a systems programming language that runs blazingly fast, prevents segfaults,  and guarantees thread safety.
+
+*homepage*: https://www.rust-lang.org
 
 =======    ==========
 version    toolchains
@@ -12436,6 +16051,10 @@ version    toolchains
 *S-Lang*
 ++++++++
 
+S-Lang is a multi-platform programmer's library designed to allow  a developer to create robust multi-platform software. It provides facilities  required by interactive applications such as display/screen management, keyboard  input, keymaps, and so on.
+
+*homepage*: http://www.jedsoft.org/slang/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12447,6 +16066,10 @@ version    toolchains
 
 *S.A.G.E.*
 ++++++++++
+
+ S.A.G.E. (Statistical Analysis for Genetic  Epidemiology) is free software package containing programs for  use in the genetic analysis of family, pedigree and individual data.
+
+*homepage*: https://code.google.com/archive/p/opensage/
 
 =======    ==========
 version    toolchains
@@ -12460,6 +16083,10 @@ version    toolchains
 *Sablotron*
 +++++++++++
 
+Sablotron XML processor
+
+*homepage*: http://sablotron.sourceforge.net/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -12472,6 +16099,10 @@ version    toolchains
 *SaguaroGW*
 +++++++++++
 
+Saguaro Genome-Wide is a program to detect signatures of selection within populations, strains,  or species. It takes SNPs or nucleotides as input, and creates statistical local phylogenies for each region in the genome.
+
+*homepage*: http://sourceforge.net/projects/saguarogw/
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -12483,6 +16114,10 @@ version     toolchains
 
 *Sailfish*
 ++++++++++
+
+Sailfish is a software tool that implements a novel, alignment-free algorithm for the estimation of  isoform abundances directly from a set of reference sequences and RNA-seq reads. 
+
+*homepage*: http://www.cs.cmu.edu/~ckingsf/software/sailfish/
 
 =======    ===========
 version    toolchains 
@@ -12498,6 +16133,10 @@ version    toolchains
 *Salmon*
 ++++++++
 
+Salmon is a wicked-fast program to produce a highly-accurate,  transcript-level quantification estimates from RNA-seq data.
+
+*homepage*: https://github.com/COMBINE-lab/salmon
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12511,6 +16150,10 @@ version    toolchains
 *Samcef*
 ++++++++
 
+FEM solver solution suite for basic linear structures to advanced, flexible nonlinear mechanisms and  thermal applications.
+
+*homepage*: http://www.plm.automation.siemens.com/en_us/products/lms/samtech/samcef-solver-suite/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12522,6 +16165,10 @@ version    toolchains
 
 *SAMtools*
 ++++++++++
+
+SAM Tools provide various utilities for manipulating alignments in the SAM format,   including sorting, merging, indexing and generating alignments in a per-position format.
+
+*homepage*: http://www.htslib.org/
 
 =======    ============================================================================
 version    toolchains                                                                  
@@ -12541,6 +16188,10 @@ version    toolchains
 *Saxon-HE*
 ++++++++++
 
+Open Source SAXON XSLT processor developed by Saxonica Limited.
+
+*homepage*: http://saxon.sourceforge.net
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12552,6 +16203,10 @@ version    toolchains
 
 *ScaLAPACK*
 +++++++++++
+
+The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines redesigned for distributed memory MIMD parallel computers.
+
+*homepage*: http://www.netlib.org/scalapack/
 
 =======    ==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
@@ -12566,6 +16221,10 @@ version    toolchains
 
 *Scalasca*
 ++++++++++
+
+Scalasca is a software tool that supports the performance optimization of  parallel programs by measuring and analyzing their runtime behavior. The analysis identifies  potential performance bottlenecks -- in particular those concerning communication and  synchronization -- and offers guidance in exploring their causes.
+
+*homepage*: http://www.scalasca.org/
 
 =======    ====================
 version    toolchains          
@@ -12582,6 +16241,10 @@ version    toolchains
 *SCALCE*
 ++++++++
 
+SCALCE [skeɪlz] is a FASTQ compression tool that uses locally consistet parsing  to obtain better compression rate. SCALCE has been specifically designed for Illumina reads but it can  handle other technologies (that generate base pair reads) if the read length is the same throughout the file.
+
+*homepage*: http://scalce.sourceforge.net/Home
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12593,6 +16256,10 @@ version    toolchains
 
 *SCANMS*
 ++++++++
+
+SCANMS is an open source utility written in Perl that works in   conjunction with Richard Hudson’s coalescent simulator MS to do parametric   bootstrapping of a sliding window analysis of neutrality test statistics.   Currently supported statistics are Tajima’s D and Fu and Li’s D* and F*.   Its output of a joint distribution of window minima and maxima may then be   used to correct for multiple comparisons in such analyses.
+
+*homepage*: http://compbio.ucmerced.edu/ardell/software/scanms/
 
 =======    ============
 version    toolchains  
@@ -12606,6 +16273,10 @@ version    toolchains
 *SCDE*
 ++++++
 
+R package for analyzing single-cell RNA-seq data
+
+*homepage*: http://pklab.med.harvard.edu/scde
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -12617,6 +16288,10 @@ version     toolchains
 
 *ScientificPython*
 ++++++++++++++++++
+
+ScientificPython is a collection of Python modules for scientific computing.  It contains support for geometry, mathematical functions, statistics, physical units, IO, visualization,  and parallelization.
+
+*homepage*: https://sourcesup.cru.fr/projects/scientific-py/
 
 =======    ======================================================================================
 version    toolchains                                                                            
@@ -12632,6 +16307,10 @@ version    toolchains
 *scikit-image*
 ++++++++++++++
 
+Scikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world, building upon numpy, scipy, and matplotlib. As a machine-learning module, it provides versatile tools for data mining and analysis in any field of science and engineering. It strives to be simple and efficient, accessible to everybody, and reusable in various contexts.
+
+*homepage*: http://scikit-learn.org/stable/index.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12643,6 +16322,10 @@ version    toolchains
 
 *scikit-learn*
 ++++++++++++++
+
+Scikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world, building upon numpy, scipy, and matplotlib. As a machine-learning module, it provides versatile tools for data mining and analysis in any field of science and engineering. It strives to be simple and efficient, accessible to everybody, and reusable in various contexts.
+
+*homepage*: http://scikit-learn.org/stable/index.html
 
 =======    ==============================================
 version    toolchains                                    
@@ -12660,6 +16343,10 @@ version    toolchains
 *scikit-umfpack*
 ++++++++++++++++
 
+scikit-umfpack provides a wrapper of UMFPACK sparse direct solver to SciPy.
+
+*homepage*: http://rc.github.io/scikit-umfpack/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12671,6 +16358,10 @@ version    toolchains
 
 *scipy*
 +++++++
+
+SciPy is a collection of mathematical algorithms and convenience  functions built on the Numpy extension for Python.
+
+*homepage*: http://www.scipy.org
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -12689,6 +16380,10 @@ version    toolchains
 *SCons*
 +++++++
 
+SCons is a software construction tool.
+
+*homepage*: http://www.scons.org/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -12703,6 +16398,10 @@ version    toolchains
 *SCOOP*
 +++++++
 
+SCOOP (Scalable COncurrent Operations in Python) is a distributed task module  allowing concurrent parallel programming on various environments, from heterogeneous grids to supercomputers.
+
+*homepage*: http://code.google.com/p/scoop/
+
 =======    ============================================================
 version    toolchains                                                  
 =======    ============================================================
@@ -12716,6 +16415,10 @@ version    toolchains
 
 *Score-P*
 +++++++++
+
+The Score-P measurement infrastructure is a highly scalable and  easy-to-use tool suite for profiling, event tracing, and online analysis of HPC  applications.
+
+*homepage*: http://www.score-p.org
 
 =======    ====================
 version    toolchains          
@@ -12732,6 +16435,10 @@ version    toolchains
 *SCOTCH*
 ++++++++
 
+Software package and libraries for sequential and parallel graph partitioning, static mapping, and sparse matrix block ordering, and sequential mesh and hypergraph partitioning.
+
+*homepage*: http://gforge.inria.fr/projects/scotch/
+
 ===============    ===========================================================================================================
 version            toolchains                                                                                                 
 ===============    ===========================================================================================================
@@ -12747,6 +16454,10 @@ version            toolchains
 *scp*
 +++++
 
+The scp.py module uses a paramiko transport to send and recieve files via the scp1 protocol.
+
+*homepage*: https://github.com/jbardin/scp.py
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12758,6 +16469,10 @@ version    toolchains
 
 *SDCC*
 ++++++
+
+SDCC is a retargettable, optimizing ANSI - C compiler suite that targets  the Intel MCS51 based microprocessors (8031, 8032, 8051, 8052, etc.), Maxim (formerly Dallas)  DS80C390 variants, Freescale (formerly Motorola) HC08 based (hc08, s08) and Zilog Z80 based  MCUs (z80, z180, gbz80, Rabbit 2000/3000, Rabbit 3000A). Work is in progress on supporting the  Microchip PIC16 and PIC18 targets. It can be retargeted for other microprocessors.
+
+*homepage*: http://sdcc.sourceforge.net/
 
 =======    ==========
 version    toolchains
@@ -12771,6 +16486,10 @@ version    toolchains
 *SDL2*
 ++++++
 
+SDL: Simple DirectMedia Layer, a cross-platform multimedia library
+
+*homepage*: http://www.libsdl.org/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12782,6 +16501,10 @@ version    toolchains
 
 *SDPA*
 ++++++
+
+SDPA is one of the most efficient and stable software packages for solving SDPs based on the primal-dual interior-point method.
+
+*homepage*: http://sdpa.sourceforge.net
 
 =======    ===========
 version    toolchains 
@@ -12795,6 +16518,10 @@ version    toolchains
 *Seaborn*
 +++++++++
 
+ Seaborn is a Python visualization library based on matplotlib.   It provides a high-level interface for drawing attractive statistical graphics. 
+
+*homepage*: http://stanford.edu/~mwaskom/software/seaborn/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -12807,6 +16534,10 @@ version    toolchains
 *sed*
 +++++
 
+sed: GNU implementation of sed, the POSIX stream editor
+
+*homepage*: http://www.gnu.org/software/sed/sed.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -12818,6 +16549,10 @@ version    toolchains
 
 *segemehl*
 ++++++++++
+
+ segemehl is a software to map short sequencer reads to reference genomes.   Unlike other methods, segemehl is able to detect not only mismatches but also insertions   and deletions. Furthermore, segemehl is not limited to a specific read length and is able   to mapprimer- or polyadenylation contaminated reads correctly. segemehl implements a matching   strategy based on enhanced suffix arrays (ESA). Segemehl now supports the SAM format, reads   gziped queries to save both disk and memory space and allows bisulfite sequencing mapping   and split read mapping. 
+
+*homepage*: http://www.bioinf.uni-leipzig.de/Software/segemehl/
 
 =======    ============
 version    toolchains  
@@ -12832,6 +16567,10 @@ version    toolchains
 *Seqmagick*
 +++++++++++
 
+We often have to convert between sequence formats and do little tasks on them, and it's not worth   writing scripts for that. Seqmagick is a kickass little utility built in the spirit of imagemagick to expose the   file format conversion in Biopython in a convenient way. Instead of having a big mess of scripts, there is one that   takes arguments. 
+
+*homepage*: https://fhcrc.github.io/seqmagick/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12843,6 +16582,10 @@ version    toolchains
 
 *SeqPrep*
 +++++++++
+
+Tool for stripping adaptors and/or merging paired reads with overlap into single reads.
+
+*homepage*: https://github.com/jstjohn/SeqPrep
 
 =======    ============
 version    toolchains  
@@ -12856,6 +16599,10 @@ version    toolchains
 *seqtk*
 +++++++
 
+Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FASTQ format.   It seamlessly parses both FASTA and FASTQ files which can also be optionally compressed by gzip.
+
+*homepage*: https://github.com/lh3/seqtk/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12868,6 +16615,10 @@ sgdp       intel/2015a
 *Serf*
 ++++++
 
+The serf library is a high performance C-based HTTP client library  built upon the Apache Portable Runtime (APR) library
+
+*homepage*: http://serf.apache.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12879,6 +16630,10 @@ version    toolchains
 
 *setuptools*
 ++++++++++++
+
+Download, build, install, upgrade, and uninstall Python packages -- easily!
+
+*homepage*: http://pypi.python.org/pypi/setuptools/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -12894,6 +16649,10 @@ version    toolchains
 *SHAPEIT*
 +++++++++
 
+SHAPEIT is a fast and accurate method for estimation of  haplotypes (aka phasing) from genotype or sequencing data.
+
+*homepage*: https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -12905,6 +16664,10 @@ version    toolchains
 
 *Shapely*
 +++++++++
+
+Shapely is a BSD-licensed Python package for manipulation and analysis of planar geometric objects.  It is based on the widely deployed GEOS (the engine of PostGIS) and JTS (from which GEOS is ported) libraries.
+
+*homepage*: http://toblerity.github.com/shapely/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -12918,6 +16681,10 @@ version    toolchains
 *shift*
 +++++++
 
+ Shift is a framework for Self-Healing Independent File Transfer that provides high performance and resilience for local and remote transfers through a variety of techniques. 
+
+*homepage*: http://people.nas.nasa.gov/~kolano/projects/shift.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -12929,6 +16696,10 @@ version    toolchains
 
 *SHORE*
 +++++++
+
+SHORE, for Short Read, is a mapping and analysis pipeline for short read data produced on the Illumina platform. 
+
+*homepage*: http://1001genomes.org/software/shore.html
 
 =======    ==========
 version    toolchains
@@ -12942,6 +16713,10 @@ version    toolchains
 *SHRiMP*
 ++++++++
 
+SHRiMP is a software package for aligning genomic reads against a target genome.  It was primarily developed with the multitudinous short reads of next generation sequencing machines in mind,  as well as Applied Biosystem's colourspace genomic representation.
+
+*homepage*: http://compbio.cs.toronto.edu/shrimp/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -12953,6 +16728,10 @@ version    toolchains
 
 *SIBELia*
 +++++++++
+
+ Sibelia: A comparative genomics tool: It assists biologists in analysing   the genomic variations that correlate with pathogens, or the genomic changes that help   microorganisms adapt in different environments. Sibelia will also be helpful for the   evolutionary and genome rearrangement studies for multiple strains of microorganisms.  
+
+*homepage*: http://bioinf.spbau.ru/en/sibelia
 
 =======    ============
 version    toolchains  
@@ -12966,6 +16745,10 @@ version    toolchains
 *sickle*
 ++++++++
 
+ Windowed Adaptive Trimming for fastq files using quality 
+
+*homepage*: https://github.com/najoshi/sickle
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -12977,6 +16760,10 @@ version    toolchains
 
 *Silo*
 ++++++
+
+Silo is a library for reading and writing a wide variety of scientific data to binary, disk files
+
+*homepage*: https://wci.llnl.gov/codes/silo/
 
 =======    =========================
 version    toolchains               
@@ -12990,6 +16777,10 @@ version    toolchains
 *SimVascular*
 +++++++++++++
 
+SimVascular is an open source software suite for cardiovascular simulation, providing a complete  pipeline from medical image data to 3D model construction, meshing, and blood flow simulation.
+
+*homepage*: http://simvascular.github.io/
+
 =========    ===========
 version      toolchains 
 =========    ===========
@@ -13001,6 +16792,10 @@ version      toolchains
 
 *Singularity*
 +++++++++++++
+
+Singularity is a portable application stack packaging and runtime utility.
+
+*homepage*: http://gmkurtzer.github.io/singularity
 
 =======    ==============
 version    toolchains    
@@ -13014,6 +16809,10 @@ version    toolchains
 *SIONlib*
 +++++++++
 
+SIONlib is a scalable I/O library for parallel access to task-local files.  The library not only supports writing and reading binary data to or from several thousands of  processors into a single or a small number of physical files, but also provides global open  and close functions to access SIONlib files in parallel. SIONlib provides different interfaces:  parallel access using MPI, OpenMP, or their combination, and sequential access for post-processing  utilities.
+
+*homepage*: http://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/SIONlib/_node.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13025,6 +16824,10 @@ version    toolchains
 
 *SIP*
 +++++
+
+SIP is a tool that makes it very easy to create Python bindings for C and C++ libraries.
+
+*homepage*: http://www.riverbankcomputing.com/software/sip/
 
 =======    ====================================
 version    toolchains                          
@@ -13041,6 +16844,10 @@ version    toolchains
 *slalib-c*
 ++++++++++
 
+SLALIB is a library used by writers of positional-astronomy applications.
+
+*homepage*: http://star-www.rl.ac.uk/star/docs/sun67.htx/sun67.html
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -13052,6 +16859,10 @@ version    toolchains
 
 *SLEPc*
 +++++++
+
+SLEPc (Scalable Library for Eigenvalue Problem Computations) is a software library for the solution of  large scale sparse eigenvalue problems on parallel computers. It is an extension of PETSc and can be used for either  standard or generalized eigenproblems, with real or complex arithmetic. It can also be used for computing a partial  SVD of a large, sparse, rectangular matrix, and to solve quadratic eigenvalue problems.
+
+*homepage*: http://www.grycap.upv.es/slepc/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -13067,6 +16878,10 @@ version    toolchains
 *slepc4py*
 ++++++++++
 
+Python bindings for SLEPc, the Scalable Library for Eigenvalue Problem Computations.
+
+*homepage*: https://bitbucket.org/slepc/slepc4py
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13078,6 +16893,10 @@ version    toolchains
 
 *sleuth*
 ++++++++
+
+Investigate RNA-Seq transcript abundance from kallisto and perform differential expression analysis.
+
+*homepage*: http://pachterlab.github.io/sleuth
 
 =======    ===========
 version    toolchains 
@@ -13091,6 +16910,10 @@ version    toolchains
 *SMALT*
 +++++++
 
+SMALT efficiently aligns DNA sequencing reads with a reference genome.
+
+*homepage*: http://www.sanger.ac.uk/resources/software/smalt/
+
 =======    =========================
 version    toolchains               
 =======    =========================
@@ -13103,6 +16926,10 @@ version    toolchains
 *SNAPE-pooled*
 ++++++++++++++
 
+SNAPE-pooled computes the probability distribution for the frequency of the minor allele  in a certain population, at a certain position in the genome.
+
+*homepage*: https://code.google.com/archive/p/snape-pooled/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13114,6 +16941,10 @@ r32        foss/2016a
 
 *snappy*
 ++++++++
+
+Snappy is a compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.
+
+*homepage*: https://github.com/google/snappy
 
 =======    =========================
 version    toolchains               
@@ -13128,6 +16959,10 @@ version    toolchains
 *snpEff*
 ++++++++
 
+SnpEff is a variant annotation and effect prediction tool.   It annotates and predicts the effects of genetic variants (such as amino acid changes).
+
+*homepage*: http://sourceforge.net/projects/snpeff/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13141,6 +16976,10 @@ version    toolchains
 *SNPhylo*
 +++++++++
 
+SNPhylo: a pipeline to generate a phylogenetic tree from huge SNP data
+
+*homepage*: http://chibba.pgml.uga.edu/snphylo/
+
 ========    =======================
 version     toolchains             
 ========    =======================
@@ -13152,6 +16991,10 @@ version     toolchains
 
 *SOAPaligner*
 +++++++++++++
+
+ SOAPaligner/soap2 is a member of the SOAP (Short Oligonucleotide   Analysis Package). It is an updated version of SOAP software for short oligonucleotide   alignment. 
+
+*homepage*: http://soap.genomics.org.cn/soapaligner.html
 
 =======    ==========
 version    toolchains
@@ -13165,6 +17008,10 @@ version    toolchains
 *SOAPdenovo*
 ++++++++++++
 
+Short Oligonucleotide Analysis Package - novel short-read assembly method that can build a de novo draft assembly for the human-sized genomes
+
+*homepage*: http://soap.genomics.org.cn/index.html
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -13176,6 +17023,10 @@ version    toolchains
 
 *SOAPdenovo2*
 +++++++++++++
+
+SOAPdenovo is a novel short-read assembly method that can build a   de novo draft assembly for human-sized genomes. The program is specially designed to   assemble Illumina short reads. It creates new opportunities for building reference   sequences and carrying out accurate analyses of unexplored genomes in a cost effective way.   SOAPdenovo2 is the successor of SOAPdenovo.
+
+*homepage*: http://soap.genomics.org.cn/index.html
 
 =======    ================================================================
 version    toolchains                                                      
@@ -13189,6 +17040,10 @@ r240       goolf/1.4.10, ictce/5.3.0, ictce/5.5.0, intel/2015a, intel/2015b
 *SOAPec*
 ++++++++
 
+SOAPec is a short-read correction tool and part of SOAPdenovo.  It is specially designed to correct Illum ina GA short reads.
+
+*homepage*: http://soap.genomics.org.cn/index.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13200,6 +17055,10 @@ version    toolchains
 
 *SOBAcl*
 ++++++++
+
+SOBAcl is a command line tool for analyzing GFF3 annotations. GFF3 is a standard file format for genomic annotation data. SOBAcl gathers statistics from GFF3 files and can generate a wide variety of tables and graphs.
+
+*homepage*: http://www.sequenceontology.org/software/sobacl.html
 
 =======    ===========
 version    toolchains 
@@ -13213,6 +17072,10 @@ r18        intel/2014b
 *SortMeRNA*
 +++++++++++
 
+ SortMeRNA is a biological sequence analysis tool for filtering, mapping and OTU-picking NGS reads. 
+
+*homepage*: http://bioinfo.lifl.fr/RNA/sortmerna/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13225,6 +17088,10 @@ version    toolchains
 *SoX*
 +++++
 
+Sound eXchange, the Swiss Army knife of audio manipulation
+
+*homepage*: http://http://sox.sourceforge.net/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13236,6 +17103,10 @@ version    toolchains
 
 *SPAdes*
 ++++++++
+
+Genome assembler for single-cell and isolates data sets
+
+*homepage*: http://bioinf.spbau.ru/en/spades
 
 =======    ==========================
 version    toolchains                
@@ -13250,6 +17121,10 @@ version    toolchains
 
 *Spark*
 +++++++
+
+Spark is Hadoop MapReduce done in memory
+
+*homepage*: http://spark.apache.org
 
 =======    ==========
 version    toolchains
@@ -13268,6 +17143,10 @@ version    toolchains
 *sparsehash*
 ++++++++++++
 
+An extremely memory-efficient hash_map  implementation. 2 bits/entry overhead! The SparseHash library  contains several hash-map implementations, including  implementations that optimize for space or speed.
+
+*homepage*: https://code.google.com/p/sparsehash/
+
 =======    ================================================================================================
 version    toolchains                                                                                      
 =======    ================================================================================================
@@ -13279,6 +17158,10 @@ version    toolchains
 
 *spglib*
 ++++++++
+
+Spglib is a C library for finding and handling crystal symmetries.
+
+*homepage*: http://spglib.sourceforge.net/
 
 =======    =============================================
 version    toolchains                                   
@@ -13294,6 +17177,10 @@ version    toolchains
 *Sphinx*
 ++++++++
 
+Sphinx is a tool that makes it easy to create intelligent and beautiful documentation.  It was originally created for the new Python documentation, and it has excellent facilities for the   documentation of Python projects, but C/C++ is already supported as well, and it is planned to add   special support for other languages as well.
+
+*homepage*: http://sphinx.pocoo.org/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -13307,6 +17194,10 @@ version    toolchains
 *SPIDER*
 ++++++++
 
+SPIDER (System for Processing Image Data from Electron microscopy and Related fields) is  an image processing system for electron microscopy.
+
+*homepage*: http://spider.wadsworth.org/spider_doc/spider/docs/spider.html
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -13318,6 +17209,10 @@ version    toolchains
 
 *splitRef*
 ++++++++++
+
+ splitRef splits a reference haplotype file into smaller files   with subsets of markers. The current version is a pre-release. 
+
+*homepage*: http://www.sph.umich.edu/csg/yli/splitRef/index.html
 
 =======    ==========
 version    toolchains
@@ -13331,6 +17226,10 @@ version    toolchains
 *SPRNG*
 +++++++
 
+Scalable Parallel Pseudo Random Number Generators Library
+
+*homepage*: http://www.sprng.org/
+
 =======    ==================================================
 version    toolchains                                        
 =======    ==================================================
@@ -13343,6 +17242,10 @@ version    toolchains
 
 *SQLite*
 ++++++++
+
+SQLite: SQL Database Engine in a C Library
+
+*homepage*: http://www.sqlite.org/
 
 ========    =========================================================================================================================================
 version     toolchains                                                                                                                               
@@ -13366,6 +17269,10 @@ version     toolchains
 *SRA-Toolkit*
 +++++++++++++
 
+ The NCBI SRA Toolkit enables reading (dumping) of sequencing files  from the SRA database and writing (loading) files into the .sra format 
+
+*homepage*: http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=std
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13379,6 +17286,10 @@ version    toolchains
 *sratoolkit*
 ++++++++++++
 
+The SRA Toolkit, and the source-code SRA System Development   Kit (SDK), will allow you to programmatically access data housed within SRA  and convert it from the SRA format
+
+*homepage*: http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13391,6 +17302,10 @@ version    toolchains
 *SSAHA2*
 ++++++++
 
+ SSAHA2 (Sequence Search and Alignment by Hashing Algorithm) is a   pairwise sequence alignment program designed for the efficient mapping of sequencing   reads onto genomic reference sequences. SSAHA2 reads of most sequencing platforms   (ABI-Sanger, Roche 454, Illumina-Solexa) and a range of output formats (SAM, CIGAR, PSL etc.)   are supported. A pile-up pipeline for analysis and genotype calling is available as   a separate package. 
+
+*homepage*: http://www.sanger.ac.uk/resources/software/ssaha2/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13402,6 +17317,10 @@ version    toolchains
 
 *Stacks*
 ++++++++
+
+Stacks is a software pipeline for building loci from short-read sequences, such as those generated on  the Illumina platform. Stacks was developed to work with restriction enzyme-based data, such as RAD-seq, for the purpose  of building genetic maps and conducting population genomics and phylogeography. 
+
+*homepage*: http://creskolab.uoregon.edu/stacks/
 
 =======    =======================================
 version    toolchains                             
@@ -13417,6 +17336,10 @@ version    toolchains
 *STAMP*
 +++++++
 
+STAMP is a tool for characterizing similarities between transcription factor binding motifs
+
+*homepage*: ihttp://www.benoslab.pitt.edu/stamp/ - https://github.com/aertslab/stamp
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13429,6 +17352,10 @@ version    toolchains
 *Stampy*
 ++++++++
 
+Stampy is a package for the mapping of short reads from illumina sequencing machines onto  a reference genome.
+
+*homepage*: http://www.well.ox.ac.uk/stampy
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13440,6 +17367,10 @@ version    toolchains
 
 *STAR*
 ++++++
+
+ STAR aligns RNA-seq reads to a reference genome using   uncompressed suffix arrays. 
+
+*homepage*: https://github.com/alexdobin/STAR
 
 ========    ============================
 version     toolchains                  
@@ -13457,6 +17388,10 @@ version     toolchains
 *STAR-Fusion*
 +++++++++++++
 
+STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts   supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner   to map junction reads and spanning reads to a reference annotation set.
+
+*homepage*: https://github.com/STAR-Fusion/STAR-Fusion
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -13468,6 +17403,10 @@ version    toolchains
 
 *statsmodels*
 +++++++++++++
+
+Statsmodels is a Python package that provides a complement to scipy for statistical computations  including descriptive statistics and estimation and inference for statistical models.
+
+*homepage*: https://pypi.python.org/pypi/statsmodels
 
 =======    ===========
 version    toolchains 
@@ -13481,6 +17420,10 @@ version    toolchains
 *stemming*
 ++++++++++
 
+Python implementations of the Porter, Porter2, Paice-Husk, and Lovins stemming algorithms for English.
+
+*homepage*: https://pypi.python.org/pypi/stemming/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13492,6 +17435,10 @@ version    toolchains
 
 *Stow*
 ++++++
+
+Stow-1.3.3: Maps several separate packages into a tree without merging them
+
+*homepage*: http://www.gnu.org/software/stow/stow.html
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -13505,6 +17452,10 @@ version    toolchains
 *STREAM*
 ++++++++
 
+The STREAM benchmark is a simple synthetic benchmark program that measures sustainable  memory bandwidth (in MB/s) and the corresponding computation rate for simple vector kernels.
+
+*homepage*: http://www.cs.virginia.edu/stream/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13516,6 +17467,10 @@ version    toolchains
 
 *Stride*
 ++++++++
+
+STRIDE is a program to recognize secondary structural elements in proteins from their atomic coordinates
+
+*homepage*: http://structure.usc.edu/stride/
 
 =======    =========================
 version    toolchains               
@@ -13529,6 +17484,10 @@ version    toolchains
 *StringTie*
 +++++++++++
 
+StringTie is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts.
+
+*homepage*: http://ccb.jhu.edu/software/stringtie/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -13540,6 +17499,10 @@ version    toolchains
 
 *Subread*
 +++++++++
+
+High performance read alignment, quantification and mutation discovery
+
+*homepage*: http://subread.sourceforge.net/
 
 ========    ======================
 version     toolchains            
@@ -13553,6 +17516,10 @@ version     toolchains
 *Subversion*
 ++++++++++++
 
+ Subversion is an open source version control system.
+
+*homepage*: http://subversion.apache.org/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -13565,6 +17532,10 @@ version    toolchains
 
 *SuiteSparse*
 +++++++++++++
+
+SuiteSparse is a collection of libraries manipulate sparse matrices.
+
+*homepage*: http://faculty.cse.tamu.edu/davis/suitesparse.html
 
 =======    =========================================================================
 version    toolchains                                                               
@@ -13586,6 +17557,10 @@ version    toolchains
 *SUMACLUST*
 +++++++++++
 
+SUMATRA and SUMACLUST: fast and exact comparison and clustering of sequences.
+
+*homepage*: http://metabarcoding.org/sumatra
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13597,6 +17572,10 @@ version    toolchains
 
 *SUMATRA*
 +++++++++
+
+SUMATRA and SUMACLUST: fast and exact comparison and clustering of sequences.
+
+*homepage*: http://metabarcoding.org/sumatra
 
 =======    ==========
 version    toolchains
@@ -13610,6 +17589,10 @@ version    toolchains
 *SuperLU*
 +++++++++
 
+SuperLU is a general purpose library for the direct solution of large, sparse, nonsymmetric systems  of linear equations on high performance machines.
+
+*homepage*: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -13621,6 +17604,10 @@ version    toolchains
 
 *SURF*
 ++++++
+
+A molecular surface solver, which can be used as rendering method in VMD.
+
+*homepage*: http://www.ks.uiuc.edu/Research/vmd/vmd-1.7/ug/node65.html
 
 =======    =========================
 version    toolchains               
@@ -13634,6 +17621,10 @@ version    toolchains
 *SWASH*
 +++++++
 
+SWASH is a general-purpose numerical tool for simulating unsteady, non-hydrostatic, free-surface,  rotational flow and transport phenomena in coastal waters as driven by waves, tides, buoyancy and wind forces.
+
+*homepage*: http://swash.sourceforge.net/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -13645,6 +17636,10 @@ version    toolchains
 
 *SWIG*
 ++++++
+
+SWIG is a software development tool that connects programs written in C and C++ with  a variety of high-level programming languages.
+
+*homepage*: http://www.swig.org/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -13665,6 +17660,10 @@ version    toolchains
 *sympy*
 +++++++
 
+SymPy is a Python library for symbolic mathematics. It aims to  become a full-featured computer algebra system (CAS) while keeping the code as  simple as possible in order to be comprehensible and easily extensible. SymPy  is written entirely in Python and does not require any external libraries.
+
+*homepage*: http://sympy.org/
+
 =======    =======================================
 version    toolchains                             
 =======    =======================================
@@ -13680,6 +17679,10 @@ version    toolchains
 *synchronicity*
 +++++++++++++++
 
+synchronicity: Boost mutex functionality in R
+
+*homepage*: http://cran.r-project.org/web/packages/%(name)s
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13691,6 +17694,10 @@ version    toolchains
 
 *Szip*
 ++++++
+
+Szip compression software, providing lossless compression of scientific data
+
+*homepage*: http://www.hdfgroup.org/doc_resource/SZIP/
 
 =======    ===================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                         
@@ -13713,6 +17720,10 @@ version    toolchains
 *tabix*
 +++++++
 
+ Generic indexer for TAB-delimited genome position files 
+
+*homepage*: http://samtools.sourceforge.net
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -13724,6 +17735,10 @@ version    toolchains
 
 *TAMkin*
 ++++++++
+
+TAMkin is a post-processing toolkit for normal mode analysis,  thermochemistry and reaction kinetics. It uses a Hessian computation from a  standard computational chemistry program as its input.
+
+*homepage*: http://molmod.github.io/tamkin/
 
 =======    ============
 version    toolchains  
@@ -13739,6 +17754,10 @@ version    toolchains
 *Tar*
 +++++
 
+tar: The GNU tape archiver
+
+*homepage*: http://www.gnu.org/software/tar/tar.html
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -13751,6 +17770,10 @@ version    toolchains
 *TAU*
 +++++
 
+The TAU Performance System is a portable profiling and tracing toolkit  for performance analysis of parallel programs written in Fortran, C, C++, Java, Python.
+
+*homepage*: http://tau.uoregon.edu
+
 =======    ====================
 version    toolchains          
 =======    ====================
@@ -13762,6 +17785,10 @@ version    toolchains
 
 *tbb*
 +++++
+
+Intel Threading Building Blocks 4.0 (Intel TBB)  is a widely used, award-winning C++ template library for creating reliable,  portable, and scalable parallel applications.  Use Intel TBB for a simple and rapid way of developing robust task-based  parallel applications that scale to available processor cores, are compatible  with multiple environments, and are easier to maintain.  Intel TBB is the most proficient way to implement future-proof parallel applications  that tap into the power and performance of multicore and manycore hardware platforms.
+
+*homepage*: http://software.intel.com/en-us/articles/intel-tbb/
 
 =========    ==========
 version      toolchains
@@ -13778,6 +17805,10 @@ version      toolchains
 *TCC*
 +++++
 
+The Tiny C Compiler (aka TCC, tCc, or TinyCC) is an x86 and x86-64 C compiler  created by Fabrice Bellard. It is designed to work for slow computers with little disk space  and can run shebang style !/usr/bin/tcc . TCC is distributed under the LGPL. TCC claims to  implement all of ANSI C (C89/C90),[1] much of the new ISO C99 standard,  and many GNU C extensions including inline assembly.
+
+*homepage*: http://bellard.org/tcc/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13789,6 +17820,10 @@ version    toolchains
 
 *Tcl*
 +++++
+
+Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language, suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more.
+
+*homepage*: http://www.tcl.tk/
 
 =======    =========================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                               
@@ -13812,6 +17847,10 @@ version    toolchains
 *tclcl*
 +++++++
 
+TclCL (Tcl with classes) is a Tcl/C++ interface used by Mash,  vic, vat, rtp_play, ns, and nam. It provides a layer of C++ glue over OTcl.
+
+*homepage*: http://otcl-tclcl.sourceforge.net/tclcl/
+
 =======    ==============================================
 version    toolchains                                    
 =======    ==============================================
@@ -13823,6 +17862,10 @@ version    toolchains
 
 *tcsh*
 ++++++
+
+Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh).   It is a command language interpreter usable both as an interactive login shell and a shell script command   processor. It includes a command-line editor, programmable word completion, spelling correction, a history   mechanism, job control and a C-like syntax.
+
+*homepage*: http://www.tcsh.org
 
 =======    ===================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                         
@@ -13837,6 +17880,10 @@ version    toolchains
 *tecplot360ex*
 ++++++++++++++
 
+  Quickly plot and animate your CFD results exactly the way you want. Analyze complex solutions, arrange multiple layouts,  and communicate your results with professional images and animations. 
+
+*homepage*: http://www.tecplot.com/products/tecplot-360/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13849,6 +17896,10 @@ linux64    dummy
 *Tesla-Deployment-Kit*
 ++++++++++++++++++++++
 
+The Tesla Deployment Kit is a set of tools provided primarily for the NVIDIA Tesla  range of GPUs. They aim to empower users to better manage their NVIDIA GPUs by providing a broad  range of functionalities. The kit contains:  * NVIDIA Management Library (NVML),  * Tesla Deployment Kit - Linux Edition (Aug 1st, 2013)
+
+*homepage*: https://developer.nvidia.com/tesla-deployment-kit
+
 ========    ==========
 version     toolchains
 ========    ==========
@@ -13860,6 +17911,10 @@ version     toolchains
 
 *testpath*
 ++++++++++
+
+Test utilities for code working with files and commands
+
+*homepage*: https://github.com/jupyter/testpath
 
 =======    ================================================================
 version    toolchains                                                      
@@ -13874,6 +17929,10 @@ version    toolchains
 *texinfo*
 +++++++++
 
+Texinfo is the official documentation format of the GNU project.
+
+*homepage*: https://www.gnu.org/software/texinfo/
+
 =======    ======================
 version    toolchains            
 =======    ======================
@@ -13887,6 +17946,10 @@ version    toolchains
 *Text-CSV*
 ++++++++++
 
+Text-CSV parser
+
+*homepage*: https://metacpan.org/pod/Text::CSV
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13898,6 +17961,10 @@ version    toolchains
 
 *Theano*
 ++++++++
+
+Theano is a Python library that allows you to define, optimize,  and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+
+*homepage*: http://deeplearning.net/software/theano
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -13911,6 +17978,10 @@ version    toolchains
 
 *TiCCutils*
 +++++++++++
+
+TiCC utils is a collection of generic C++ software which is used in a lot of programs produced at  Tilburg centre for Cognition and Communication (TiCC) at Tilburg University and  Centre for Dutch Language and Speech at University of Antwerp.
+
+*homepage*: http://software.ticc.uvt.nl/
 
 =======    ============================================================
 version    toolchains                                                  
@@ -13926,6 +17997,10 @@ version    toolchains
 *TiMBL*
 +++++++
 
+TiMBL (Tilburg Memory Based Learner)  is an open source software package implementing several memory-based learning algorithms,  among which IB1-IG, an implementation of k-nearest neighbor classification with feature weighting suitable for  symbolic feature spaces, and IGTree, a decision-tree approximation of IB1-IG. All implemented algorithms have in  common that they store some representation of the training set explicitly in memory. During testing, new cases are  classified by extrapolation from the most similar stored cases.
+
+*homepage*: http://ilk.uvt.nl/timbl/
+
 =======    ============================================================
 version    toolchains                                                  
 =======    ============================================================
@@ -13940,6 +18015,10 @@ version    toolchains
 *time*
 ++++++
 
+The `time' command runs another program, then displays information about the resources used by that  program, collected by the system while the program was running.
+
+*homepage*: http://www.gnu.org/software/time/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -13951,6 +18030,10 @@ version    toolchains
 
 *TINKER*
 ++++++++
+
+The TINKER molecular modeling software is a complete and general package for molecular mechanics  and dynamics, with some special features for biopolymers.
+
+*homepage*: http://dasher.wustl.edu/tinker
 
 =======    ===========
 version    toolchains 
@@ -13964,6 +18047,10 @@ version    toolchains
 *TinySVM*
 +++++++++
 
+TinySVM is an implementation of Support Vector Machines (SVMs) for the problem  of pattern recognition. Support Vector Machines is a new generation learning algorithms based on  recent advances in statistical learning theory, and applied to large number of real-world  applications, such as text categorization, hand-written character recognition.
+
+*homepage*: http://chasen.org/~taku/software/TinySVM/
+
 =======    ============================================================
 version    toolchains                                                  
 =======    ============================================================
@@ -13975,6 +18062,10 @@ version    toolchains
 
 *Tk*
 ++++
+
+Tk is an open source, cross-platform widget toolchain that provides a library of basic elements for  building a graphical user interface (GUI) in many different programming languages.
+
+*homepage*: http://www.tcl.tk/
 
 =======    =========================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                               
@@ -13993,6 +18084,10 @@ version    toolchains
 *tmux*
 ++++++
 
+tmux is a terminal multiplexer. It lets you switch easily  between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.
+
+*homepage*: http://tmux.sourceforge.net/
+
 =======    =============
 version    toolchains   
 =======    =============
@@ -14005,6 +18100,10 @@ version    toolchains
 
 *TopHat*
 ++++++++
+
+TopHat is a fast splice junction mapper for RNA-Seq reads.
+
+*homepage*: http://ccb.jhu.edu/software/tophat/
 
 =======    ======================================
 version    toolchains                            
@@ -14024,6 +18123,10 @@ version    toolchains
 *Tornado*
 +++++++++
 
+Tornado is a new kernel for modelling and virtual experimentation (i.e. any evaluation of a model) in the domain of water quality management
+
+*homepage*: http://www.dhigroup.com/
+
 ==========    =================================
 version       toolchains                       
 ==========    =================================
@@ -14035,6 +18138,10 @@ version       toolchains
 
 *TotalView*
 +++++++++++
+
+TotalView is a GUI-based source code defect analysis tool that gives you unprecedented  control over processes and thread execution and visibility into program state and variables. It allows  you to debug one or many processes and/or threads in a single window with complete control over program  execution. This allows you to set breakpoints, stepping line by line through the code on a single thread,  or with coordinated groups of processes or threads, and run or halt arbitrary sets of processes or threads.  You can reproduce and troubleshoot difficult problems that can occur in concurrent programs that take  advantage of threads, OpenMP, MPI, GPUs or coprocessors.
+
+*homepage*: http://www.roguewave.com/products/totalview.aspx
 
 ========    ==========
 version     toolchains
@@ -14050,6 +18157,10 @@ version     toolchains
 *traits*
 ++++++++
 
+The Traits project allows Python programmers to use a special kind of type definition called a trait,  which gives object attributes some additional characteristics: initialization, validation, delegation, notification,  visualization.
+
+*homepage*: http://code.enthought.com/projects/traits/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -14061,6 +18172,10 @@ version    toolchains
 
 *travis*
 ++++++++
+
+Travis CI Client (CLI and Ruby library)
+
+*homepage*: https://github.com/travis-ci/travis.rb
 
 =======    ==========
 version    toolchains
@@ -14074,6 +18189,10 @@ version    toolchains
 *TREE-PUZZLE*
 +++++++++++++
 
+ TREE-PUZZLE is a computer program to reconstruct   phylogenetic trees from molecular sequence data by maximum likelihood.   It implements a fast tree search algorithm, quartet puzzling, that allows  analysis of large data sets and automatically assigns estimations of   support to each internal branch. 
+
+*homepage*: http://www.tree-puzzle.de/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -14085,6 +18204,10 @@ version    toolchains
 
 *TRF*
 +++++
+
+Tandem repeats finder: a program to analyze DNA sequences. Legacy version.
+
+*homepage*: https://tandem.bu.edu/trf/trf.html
 
 =======    ==========
 version    toolchains
@@ -14098,6 +18221,10 @@ version    toolchains
 *Triangle*
 ++++++++++
 
+Triangle generates exact Delaunay triangulations, constrained Delaunay triangulations,  conforming Delaunay triangulations, Voronoi diagrams, and high-quality triangular meshes.  The latter can be generated with no small or large angles,  and are thus suitable for finite element analysis.
+
+*homepage*: http://www.cs.cmu.edu/~quake/triangle.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14109,6 +18236,10 @@ version    toolchains
 
 *Trilinos*
 ++++++++++
+
+The Trilinos Project is an effort to develop algorithms and enabling technologies  within an object-oriented software framework for the solution of large-scale, complex multi-physics  engineering and scientific problems. A unique design feature of Trilinos is its focus on packages.
+
+*homepage*: http://trilinos.sandia.gov/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -14123,6 +18254,10 @@ version    toolchains
 *Trim_Galore*
 +++++++++++++
 
+A wrapper tool around Cutadapt and FastQC to consistently apply   quality and adapter trimming to FastQ files, with some extra functionality for   MspI-digested RRBS-type (Reduced Representation Bisufite-Seq) libraries.
+
+*homepage*: http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -14135,6 +18270,10 @@ version    toolchains
 *Trimmomatic*
 +++++++++++++
 
+Trimmomatic performs a variety of useful trimming tasks for illumina   paired-end and single ended data.The selection of trimming steps and their associated   parameters are supplied on the command line. 
+
+*homepage*: http://www.usadellab.org/cms/?page=trimmomatic
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14146,6 +18285,10 @@ version    toolchains
 
 *Trinity*
 +++++++++
+
+Trinity represents a novel method for the efficient and robust de novo reconstruction  of transcriptomes from RNA-Seq data. Trinity combines three independent software modules: Inchworm,  Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.
+
+*homepage*: http://trinityrnaseq.sourceforge.net/
 
 ==========    ==============================================================
 version       toolchains                                                    
@@ -14164,6 +18307,10 @@ version       toolchains
 *TVB*
 +++++
 
+The Virtual Brain will deliver the first open simulation of the human brain  based on individual large-scale connectivity.
+
+*homepage*: http://thevirtualbrain.org
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -14176,6 +18323,10 @@ version    toolchains
 
 *tvb-data*
 ++++++++++
+
+The Virtual Brain Project (TVB Project) has the purpose of offering some modern tools to the  Neurosciences community, for computing, simulating and analyzing functional and structural data of human brains.  Various demonstration data for use with TVB.
+
+*homepage*: http://www.thevirtualbrain.org/
 
 ========    ===========
 version     toolchains 
@@ -14190,6 +18341,10 @@ version     toolchains
 *TVB-deps*
 ++++++++++
 
+Bundle of dependency Python packages for TVB (The Virtual Brain)
+
+*homepage*: http://thevirtualbrain.org
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -14201,6 +18356,10 @@ version     toolchains
 
 *tvb-framework*
 +++++++++++++++
+
+The Virtual Brain Project (TVB Project) has the purpose of offering some modern tools to the  Neurosciences community, for computing, simulating and analyzing functional and structural data of human brains.  TVB Scientific Library is the most important scientific contribution of TVB Project.
+
+*homepage*: http://www.thevirtualbrain.org/
 
 ========    ===========
 version     toolchains 
@@ -14214,6 +18373,10 @@ version     toolchains
 
 *tvb-library*
 +++++++++++++
+
+The Virtual Brain Project (TVB Project) has the purpose of offering some modern tools to the  Neurosciences community, for computing, simulating and analyzing functional and structural data of human brains.  TVB Scientific Library is the most important scientific contribution of TVB Project.
+
+*homepage*: http://www.thevirtualbrain.org/
 
 ========    ===========
 version     toolchains 
@@ -14237,6 +18400,10 @@ version     toolchains
 *UDUNITS*
 +++++++++
 
+UDUNITS supports conversion of unit specifications between formatted and binary forms,  arithmetic manipulation of units, and conversion of values between compatible scales of measurement.
+
+*homepage*: http://www.unidata.ucar.edu/software/udunits/
+
 =======    ==============================================================================================================================================
 version    toolchains                                                                                                                                    
 =======    ==============================================================================================================================================
@@ -14251,6 +18418,10 @@ version    toolchains
 *UFC*
 +++++
 
+UFC (Unified Form-assembly Code) is a unified framework for finite element assembly.  More precisely, it defines a fixed interface for communicating low level routines (functions) for  evaluating and assembling finite element variational forms.
+
+*homepage*: https://launchpad.net/ufc
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -14262,6 +18433,10 @@ version    toolchains
 
 *UFL*
 +++++
+
+The Unified Form Language (UFL) is a domain specific language   for declaration of finite element discretizations of variational forms.   More precisely, it defines a flexible interface for choosing finite element   spaces and defining expressions for weak forms in a notation close to   mathematical notation.
+
+*homepage*: https://launchpad.net/ufl
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -14277,6 +18452,10 @@ version    toolchains
 *USEARCH*
 +++++++++
 
+USEARCH is a unique sequence analysis tool which offers search and clustering algorithms that are  often orders of magnitude faster than BLAST.
+
+*homepage*: http://www.drive5.com/usearch/index.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14289,6 +18468,10 @@ version    toolchains
 
 *util-linux*
 ++++++++++++
+
+Set of Linux utilities
+
+*homepage*: http://www.kernel.org/pub/linux/utils/util-linux
 
 =======    ======================================================================================
 version    toolchains                                                                            
@@ -14318,6 +18501,10 @@ version    toolchains
 *Valgrind*
 ++++++++++
 
+Valgrind: Debugging and profiling tools
+
+*homepage*: http://valgrind.org/downloads/
+
 =======    =================================================================================================================================
 version    toolchains                                                                                                                       
 =======    =================================================================================================================================
@@ -14332,6 +18519,10 @@ version    toolchains
 *Vampir*
 ++++++++
 
+The Vampir software tool provides an easy-to-use framework that enables  developers to quickly display and analyze arbitrary program behavior at any level of detail.  The tool suite implements optimized event analysis algorithms and customizable displays that  enable fast and interactive rendering of very complex performance monitoring data.
+
+*homepage*: http://www.vampir.eu
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14343,6 +18534,10 @@ version    toolchains
 
 *VampirServer*
 ++++++++++++++
+
+The Vampir software tool provides an easy-to-use framework that enables  developers to quickly display and analyze arbitrary program behavior at any level of detail.  The tool suite implements optimized event analysis algorithms and customizable displays that  enable fast and interactive rendering of very complex performance monitoring data.
+
+*homepage*: http://www.vampir.eu
 
 =======    ===========
 version    toolchains 
@@ -14356,6 +18551,10 @@ version    toolchains
 *VampirTrace*
 +++++++++++++
 
+VampirTrace is an open source library that allows detailed logging of program  execution for parallel applications using message passing (MPI) and threads (OpenMP), Pthreads).
+
+*homepage*: http:/www.tu-dresden.de/zih/vampirtrace/
+
 =======    ====================
 version    toolchains          
 =======    ====================
@@ -14367,6 +18566,10 @@ version    toolchains
 
 *VarScan*
 +++++++++
+
+Variant calling and somatic mutation/CNV detection for next-generation sequencing data
+
+*homepage*: https://github.com/dkoboldt/varscan
 
 =======    ==========
 version    toolchains
@@ -14381,6 +18584,10 @@ version    toolchains
 *VASP*
 ++++++
 
+The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles.
+
+*homepage*: http://www.vasp.at
+
 =======    =====================
 version    toolchains           
 =======    =====================
@@ -14392,6 +18599,10 @@ version    toolchains
 
 *VCFtools*
 ++++++++++
+
+The aim of VCFtools is to provide   easily accessible methods for working with complex   genetic variation data in the form of VCF files.
+
+*homepage*: https://vcftools.github.io
 
 =======    ===============================================================
 version    toolchains                                                     
@@ -14407,6 +18618,10 @@ version    toolchains
 *VEGAS*
 +++++++
 
+ VEGAS (Versatile Gene-based Association Study) is  a free program for performing gene-based tests for association using  the results from genetic association studies 
+
+*homepage*: http://gump.qimr.edu.au/VEGAS/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14418,6 +18633,10 @@ version    toolchains
 
 *Velvet*
 ++++++++
+
+Sequence assembler for very short reads
+
+*homepage*: http://www.ebi.ac.uk/~zerbino/velvet/
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -14433,6 +18652,10 @@ version    toolchains
 *verifyBamID*
 +++++++++++++
 
+verifyBamID is a software that verifies whether the reads in particular file match previously known   genotypes for an individual (or group of individuals), and checks whether the reads are contaminated as a mixture of   two samples. verifyBamID can detect sample contamination and swaps when external genotypes are available. When   external genotypes are not available, verifyBamID still robustly detects sample swaps. 
+
+*homepage*: http://csg.sph.umich.edu/kang/verifyBamID/index.html
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -14444,6 +18667,10 @@ version    toolchains
 
 *ViennaRNA*
 +++++++++++
+
+The Vienna RNA Package consists of a C code library and several stand-alone programs for the prediction and comparison of RNA secondary structures.
+
+*homepage*: http://www.tbi.univie.ac.at/~ronny/RNA/vrna2.html
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -14458,6 +18685,10 @@ version    toolchains
 *Vim*
 +++++
 
+ Vim is an advanced text editor that seeks to provide the power   of the de-facto Unix editor 'Vi', with a more complete feature set. 
+
+*homepage*: http://www.vim.org
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -14469,6 +18700,10 @@ version    toolchains
 
 *vincent*
 +++++++++
+
+Vincent takes Python data structures (tuples, lists, dicts, and Pandas DataFrames) and translates  them into Vega visualization grammar. It allows for quick iteration of visualization designs via simple addition and  subtraction of grammar elements, and outputs the final visualization to JSON.
+
+*homepage*: https://github.com/wrobstory/vincent
 
 =======    ========================
 version    toolchains              
@@ -14482,6 +18717,10 @@ version    toolchains
 *Viper*
 +++++++
 
+Viper is a minimalistic scientific plotter and run-time visualization module.   Viper has support for visualizing meshes and solutions in DOLFIN.
+
+*homepage*: https://launchpad.net/fenics-viper
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -14493,6 +18732,10 @@ version    toolchains
 
 *VirSorter*
 +++++++++++
+
+VirSorter: mining viral signal from microbial genomic data.
+
+*homepage*: https://github.com/simroux/VirSorter
 
 ========    ==========
 version     toolchains
@@ -14506,6 +18749,10 @@ version     toolchains
 *Voro++*
 ++++++++
 
+Voro++ is a software library for carrying out three-dimensional computations of the Voronoi tessellation. A distinguishing feature of the Voro++ library is that it carries out cell-based calculations, computing the Voronoi cell for each particle individually. It is particularly well-suited for applications that rely on cell-based statistics, where features of Voronoi cells (eg. volume, centroid, number of faces) can be used to analyze a system of particles.
+
+*homepage*: http://math.lbl.gov/voro++/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -14517,6 +18764,10 @@ version    toolchains
 
 *vsc-base*
 ++++++++++
+
+Basic Python libraries used by UGent's HPC group
+
+*homepage*: http://hpcugent.github.com/vsc-base/
 
 =======    ===============================
 version    toolchains                     
@@ -14536,6 +18787,10 @@ version    toolchains
 *vsc-install*
 +++++++++++++
 
+vsc-install provides shared setuptools functions and classes for Python libraries  developed by UGent's HPC group
+
+*homepage*: https://pypi.python.org/pypi/vsc-install
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -14549,6 +18804,10 @@ version    toolchains
 
 *vsc-mympirun*
 ++++++++++++++
+
+VSC-tools is a set of Python libraries and scripts that are commonly used within HPC-UGent.
+
+*homepage*: https://github.com/hpcugent/vsc-mympirun
 
 =======    ===============================
 version    toolchains                     
@@ -14565,6 +18824,10 @@ version    toolchains
 *vsc-mympirun-scoop*
 ++++++++++++++++++++
 
+VSC-tools is a set of Python libraries and scripts that are commonly used within HPC-UGent.
+
+*homepage*: http://hpcugent.github.com/vsc-mympirun/
+
 =======    ========================
 version    toolchains              
 =======    ========================
@@ -14578,6 +18841,10 @@ version    toolchains
 *vsc-processcontrol*
 ++++++++++++++++++++
 
+vsc-processcontrol is a module to abstract process control like scheduler settings and affinity  from actual implementations like vsc.affinity and psutil.
+
+*homepage*: http://hpcugent.github.com/vsc-processcontrol/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14589,6 +18856,10 @@ version    toolchains
 
 *VSC-tools*
 +++++++++++
+
+VSC-tools is a set of Python libraries and scripts that are commonly used within HPC-UGent.
+
+*homepage*: http://hpcugent.github.com/VSC-tools/
 
 =======    ============================================================
 version    toolchains                                                  
@@ -14602,6 +18873,10 @@ version    toolchains
 *vt*
 ++++
 
+A tool set for short variant discovery in genetic sequence data.
+
+*homepage*: http://genome.sph.umich.edu/wiki/Vt
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -14613,6 +18888,10 @@ version    toolchains
 
 *VTK*
 +++++
+
+The Visualization Toolkit (VTK) is an open-source, freely available software system for  3D computer graphics, image processing and visualization. VTK consists of a C++ class library and several  interpreted interface layers including Tcl/Tk, Java, and Python. VTK supports a wide variety of visualization  algorithms including: scalar, vector, tensor, texture, and volumetric methods; and advanced modeling techniques  such as: implicit modeling, polygon reduction, mesh smoothing, cutting, contouring, and Delaunay triangulation.
+
+*homepage*: http://www.vtk.org
 
 =======    ===========================================================
 version    toolchains                                                 
@@ -14628,6 +18907,10 @@ version    toolchains
 
 *VTune*
 +++++++
+
+Intel VTune Amplifier XE is the premier performance profiler for C, C++, C#, Fortran,  Assembly and Java.
+
+*homepage*: http://software.intel.com/en-us/intel-vtune-amplifier-xe
 
 =============    ==========
 version          toolchains
@@ -14656,6 +18939,10 @@ version          toolchains
 *Wannier90*
 +++++++++++
 
+A tool for obtaining maximally-localised Wannier functions
+
+*homepage*: http://www.wannier.org
+
 =======    ==================================
 version    toolchains                        
 =======    ==================================
@@ -14669,6 +18956,10 @@ version    toolchains
 *wcwidth*
 +++++++++
 
+wcwidth is a low-level Python library to simplify Terminal emulation.
+
+*homepage*: https://github.com/jquast/wcwidth
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -14680,6 +18971,10 @@ version    toolchains
 
 *WEKA*
 ++++++
+
+ Weka is a collection of machine learning algorithms for data mining tasks.   The algorithms can either be applied directly to a dataset or called from your own Java code.   Weka contains tools for data pre-processing, classification, regression, clustering,   association rules, and visualization. It is also well-suited for developing new machine   learning schemes.
+
+*homepage*: http://www.cs.waikato.ac.nz/ml/weka/index.html
 
 =======    ==========
 version    toolchains
@@ -14694,6 +18989,10 @@ version    toolchains
 *wget*
 ++++++
 
+GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP,  the most widely-used Internet protocols. It is a non-interactive commandline tool,  so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
+
+*homepage*: https://www.gnu.org/software/wget/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14705,6 +19004,10 @@ version    toolchains
 
 *WHAM*
 ++++++
+
+  fast, memory efficient implementation of the   Weighted Histogram Analysis Method (WHAM).
+
+*homepage*: http://membrane.urmc.rochester.edu/content/wham
 
 =======    =========================
 version    toolchains               
@@ -14718,6 +19021,10 @@ version    toolchains
 *wheel*
 +++++++
 
+A built-package format for Python.
+
+*homepage*: https://pypi.python.org/pypi/wheel
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14730,6 +19037,10 @@ version    toolchains
 *Whoosh*
 ++++++++
 
+Fast, pure-Python full text indexing,  search, and spell checking library.
+
+*homepage*: https://pypi.python.org/pypi/Whoosh/
+
 =======    ============
 version    toolchains  
 =======    ============
@@ -14741,6 +19052,10 @@ version    toolchains
 
 *WIEN2k*
 ++++++++
+
+The program package WIEN2k allows to perform electronic structure calculations of solids using density functional theory (DFT). It is based on the full-potential (linearized) augmented plane-wave ((L)APW) + local orbitals (lo) method, one among the most accurate schemes for band structure calculations. WIEN2k is an all-electron scheme including relativistic effects and has many features.
+
+*homepage*: http://www.wien2k.at/
 
 =======    ==============================================
 version    toolchains                                    
@@ -14756,6 +19071,10 @@ version    toolchains
 *wiki2beamer*
 +++++++++++++
 
+wiki2beamer converts a simple wiki-like syntax to complex LaTeX beamer code.   It's written in python and should run on all *nix platforms. Afraid to loose some LaTeX powers?  Don't worry: you can always fall back to plain LaTeX as wiki2beamer is just a preprocessor.
+
+*homepage*: http://wiki2beamer.sourceforge.net/
+
 =======    ==============================================
 version    toolchains                                    
 =======    ==============================================
@@ -14768,6 +19087,10 @@ version    toolchains
 *wkhtmltopdf*
 +++++++++++++
 
+wkhtmltopdf and wkhtmltoimage are open source (LGPLv3) command line tools to render   HTML into PDF and various image formats using the Qt WebKit rendering engine. These run entirely headless   and do not require a display or display service.
+
+*homepage*: http://wkhtmltopdf.org/
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -14779,6 +19102,10 @@ version    toolchains
 
 *worker*
 ++++++++
+
+The Worker framework has been developed to help deal with parameter exploration experiments  that would otherwise result in many jobs, forcing the user resort to scripting to retain her sanity;  see also https://vscentrum.be/neutral/documentation/cluster-doc/running-jobs/worker-framework.
+
+*homepage*: https://github.com/gjbex/worker
 
 =======    ===========
 version    toolchains 
@@ -14795,6 +19122,10 @@ version    toolchains
 *WPS*
 +++++
 
+WRF Preprocessing System (WPS) for WRF. The Weather Research and Forecasting (WRF) Model is   a next-generation mesoscale numerical weather prediction system designed to serve both operational   forecasting and atmospheric research needs.
+
+*homepage*: http://www.wrf-model.org
+
 =======    ==============================================================
 version    toolchains                                                    
 =======    ==============================================================
@@ -14810,6 +19141,10 @@ version    toolchains
 
 *WRF*
 +++++
+
+The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale  numerical weather prediction system designed to serve both operational forecasting and atmospheric  research needs.
+
+*homepage*: http://www.wrf-model.org
 
 =======    =========================================================================================
 version    toolchains                                                                               
@@ -14829,6 +19164,10 @@ version    toolchains
 *wxPropertyGrid*
 ++++++++++++++++
 
+wxPropertyGrid is a property sheet control for wxWidgets. In other words, it is  a specialized two-column grid for editing properties such as strings, numbers, flagsets, string arrays, and colours.
+
+*homepage*: http://wxpropgrid.sourceforge.net/
+
 =======    ====================
 version    toolchains          
 =======    ====================
@@ -14840,6 +19179,10 @@ version    toolchains
 
 *wxPython*
 ++++++++++
+
+wxPython is a GUI toolkit for the Python programming language.  It allows Python programmers to create programs with a robust,  highly functional graphical user interface, simply and easily.  It is implemented as a Python extension module (native code)  that wraps the popular wxWidgets cross platform GUI library,  which is written in C++.
+
+*homepage*: http://www.wxpython.org
 
 =======    ===========
 version    toolchains 
@@ -14862,6 +19205,10 @@ version    toolchains
 *X11*
 +++++
 
+The X Window System (X11) is a windowing system for bitmap displays
+
+*homepage*: https://www.x.org
+
 ========    ===========
 version     toolchains 
 ========    ===========
@@ -14873,6 +19220,10 @@ version     toolchains
 
 *x264*
 ++++++
+
+x264 is a free software library and application for encoding video streams into the H.264/MPEG-4  AVC compression format, and is released under the terms of the GNU GPL.
+
+*homepage*: http://www.videolan.org/developers/x264.html
 
 ========    =====================================
 version     toolchains                           
@@ -14889,6 +19240,10 @@ version     toolchains
 *xbitmaps*
 ++++++++++
 
+provides bitmaps for x
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ==========================================================================================
 version    toolchains                                                                                
 =======    ==========================================================================================
@@ -14900,6 +19255,10 @@ version    toolchains
 
 *xcb-proto*
 +++++++++++
+
+The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint,  latency hiding, direct access to the protocol, improved threading support, and extensibility.
+
+*homepage*: http://xcb.freedesktop.org/
 
 =======    ====================================================================================================
 version    toolchains                                                                                          
@@ -14915,6 +19274,10 @@ version    toolchains
 *xcb-util*
 ++++++++++
 
+The xcb-util package provides additional extensions to the XCB library,  many that were previously found in Xlib, but are not part of core X protocol
+
+*homepage*: http://xcb.freedesktop.org/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -14926,6 +19289,10 @@ version    toolchains
 
 *xcb-util-image*
 ++++++++++++++++
+
+The xcb-util-image package provides additional extensions to the XCB library.
+
+*homepage*: http://xcb.freedesktop.org/
 
 =======    ====================================
 version    toolchains                          
@@ -14939,6 +19306,10 @@ version    toolchains
 *xcb-util-keysyms*
 ++++++++++++++++++
 
+The xcb-util-keysyms package contains a library for  handling standard X key constants and conversion to/from keycodes.
+
+*homepage*: http://xcb.freedesktop.org/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -14950,6 +19321,10 @@ version    toolchains
 
 *xcb-util-renderutil*
 +++++++++++++++++++++
+
+The xcb-util-renderutil package provides additional extensions to the XCB library.
+
+*homepage*: http://xcb.freedesktop.org/
 
 =======    ====================================
 version    toolchains                          
@@ -14963,6 +19338,10 @@ version    toolchains
 *xcb-util-wm*
 +++++++++++++
 
+The xcb-util-wm package contains libraries which provide client and window-manager helpers for EWMH and ICCCM.
+
+*homepage*: http://xcb.freedesktop.org/
+
 =======    ====================================
 version    toolchains                          
 =======    ====================================
@@ -14975,6 +19354,10 @@ version    toolchains
 *XCrySDen*
 ++++++++++
 
+XCrySDen is a crystalline and molecular structure visualisation program aiming  at display of isosurfaces and contours, which can be superimposed on crystalline structures and  interactively rotated and manipulated.
+
+*homepage*: http://www.xcrysden.org/
+
 =======    ===========================================================
 version    toolchains                                                 
 =======    ===========================================================
@@ -14986,6 +19369,10 @@ version    toolchains
 
 *Xerces-C++*
 ++++++++++++
+
+Xerces-C++ is a validating XML parser written in a portable subset of C++. Xerces-C++ makes it easy to give your application the ability to read and write XML data. A shared library is provided for parsing, generating, manipulating, and validating XML documents using the DOM, SAX, and SAX2 APIs.
+
+*homepage*: http://xerces.apache.org/xerces-c/
 
 =======    =================================================
 version    toolchains                                       
@@ -15000,6 +19387,10 @@ version    toolchains
 *xextproto*
 +++++++++++
 
+XExtProto protocol headers.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    ======================================================================================================
 version    toolchains                                                                                            
 =======    ======================================================================================================
@@ -15013,6 +19404,10 @@ version    toolchains
 *xf86vidmodeproto*
 ++++++++++++++++++
 
+X11 XFree86 video mode extension protocol headers.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -15025,6 +19420,10 @@ version    toolchains
 *xineramaproto*
 +++++++++++++++
 
+X protocol and ancillary headers for xinerama
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
+
 =======    =============================================================
 version    toolchains                                                   
 =======    =============================================================
@@ -15036,6 +19435,10 @@ version    toolchains
 
 *XKeyboardConfig*
 +++++++++++++++++
+
+The non-arch keyboard configuration database for X Window.  The goal is to provide the consistent, well-structured,  frequently released open source of X keyboard configuration data  for X Window System implementations (free, open source and commercial).  The project is targeted to XKB-based systems.
+
+*homepage*: http://www.freedesktop.org/wiki/Software/XKeyboardConfig/
 
 =======    =======================
 version    toolchains             
@@ -15050,6 +19453,10 @@ version    toolchains
 *Xmipp*
 +++++++
 
+Xmipp is a suite of image processing programs, primarily aimed at single-particle 3D electron microscopy.
+
+*homepage*: http://xmipp.cnb.csic.es/
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -15061,6 +19468,10 @@ version    toolchains
 
 *XML*
 +++++
+
+This package provides many approaches for both reading and creating XML (and HTML) documents   (including DTDs), both local and accessible via HTTP or FTP. It also offers access to an XPath 'interpreter'.
+
+*homepage*: http://cran.r-project.org/web/packages/XML
 
 ========    ===========================================================
 version     toolchains                                                 
@@ -15074,6 +19485,10 @@ version     toolchains
 *XML-Dumper*
 ++++++++++++
 
+XML::Dumper dumps Perl data to a structured XML format. XML::Dumper can also read XML data that was previously dumped by the module and convert it back to Perl.
+
+*homepage*: http://search.cpan.org/~mikewong/XML-Dumper-0.81/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -15086,6 +19501,10 @@ version    toolchains
 *XML-LibXML*
 ++++++++++++
 
+Perl binding for libxml2
+
+*homepage*: http://search.cpan.org/src/SHLOMIF/XML-LibXML-2.0018/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -15097,6 +19516,10 @@ version    toolchains
 
 *XML-Parser*
 ++++++++++++
+
+This is a Perl extension interface to James Clark's XML parser, expat.
+
+*homepage*: http://search.cpan.org/~toddr/XML-Parser-2.41/
 
 =======    ===================================================
 version    toolchains                                         
@@ -15112,6 +19535,10 @@ version    toolchains
 *XML-Simple*
 ++++++++++++
 
+Easily read/write XML in Perl
+
+*homepage*: http://search.cpan.org/src/GRANTM/XML-Simple-2.20/
+
 =======    ==========================
 version    toolchains                
 =======    ==========================
@@ -15123,6 +19550,10 @@ version    toolchains
 
 *XML-Twig*
 ++++++++++
+
+XML::Twig is (yet another!) XML transformation module.
+
+*homepage*: http://search.cpan.org/~mirod/XML-Twig-3.48/
 
 =======    =========================
 version    toolchains               
@@ -15136,6 +19567,10 @@ version    toolchains
 *xonsh*
 +++++++
 
+Xonsh is a Python-ish, BASHwards-looking shell language and command prompt.
+
+*homepage*: http://xon.sh/
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -15147,6 +19582,10 @@ version    toolchains
 
 *xorg-macros*
 +++++++++++++
+
+X.org macros utilities.
+
+*homepage*: http://cgit.freedesktop.org/xorg/util/macros
 
 =======    ==============================================================================================================
 version    toolchains                                                                                                    
@@ -15161,6 +19600,10 @@ version    toolchains
 *xprop*
 +++++++
 
+The xprop utility is for displaying window and font properties in an X server.  One window or font is selected using the command line arguments or possibly  in the case of a window, by clicking on the desired window. A list of  properties is then given, possibly with formatting information.
+
+*homepage*: http://www.x.org/wiki/
+
 =======    =======================
 version    toolchains             
 =======    =======================
@@ -15172,6 +19615,10 @@ version    toolchains
 
 *xproto*
 ++++++++
+
+X protocol and ancillary headers
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =======================================================================================
 version    toolchains                                                                             
@@ -15189,6 +19636,10 @@ version    toolchains
 *XQilla*
 ++++++++
 
+XQilla is an XQuery and XPath 2 library and command line utility written in C++, implemented on top of the Xerces-C++ library.
+
+*homepage*: http://xqilla.sourceforge.net/HomePage
+
 =======    =====================================
 version    toolchains                           
 =======    =====================================
@@ -15201,6 +19652,10 @@ version    toolchains
 
 *xtrans*
 ++++++++
+
+xtrans includes a number of routines to make X implementations transport-independent;  at time of writing, it includes support for UNIX sockets, IPv4, IPv6, and DECnet. 
+
+*homepage*: http://www.freedesktop.org/wiki/Software/xlibs
 
 =======    =============================================================================
 version    toolchains                                                                   
@@ -15216,6 +19671,10 @@ version    toolchains
 
 *XZ*
 ++++
+
+xz: XZ utilities
+
+*homepage*: http://tukaani.org/xz/
 
 =======    =====================================================================================================
 version    toolchains                                                                                           
@@ -15240,6 +19699,10 @@ version    toolchains
 *Yade*
 ++++++
 
+ Yade is an extensible open-source framework for discrete numerical models,   focused on Discrete Element Method. The computation parts are written in c++ using flexible object model,   allowing independent implementation of new alogrithms and interfaces.   Python is used for rapid and concise scene construction, simulation control, postprocessing and debugging. 
+
+*homepage*: https://yade-dem.org/doc/
+
 ========    =======================
 version     toolchains             
 ========    =======================
@@ -15252,6 +19715,10 @@ version     toolchains
 
 *yaff*
 ++++++
+
+Yaff stands for 'Yet another force field'. It is a pythonic force-field code.
+
+*homepage*: http://molmod.github.io/yaff/
 
 ================    =======================================
 version             toolchains                             
@@ -15266,6 +19733,10 @@ version             toolchains
 *Yambo*
 +++++++
 
+Yambo is a FORTRAN/C code for Many-Body calculations in solid state and molecular physics.  Yambo relies on the Kohn-Sham wavefunctions generated by two DFT public codes: abinit, and PWscf.
+
+*homepage*: http://www.yambo-code.org
+
 ============    =====================
 version         toolchains           
 ============    =====================
@@ -15279,6 +19750,10 @@ version         toolchains
 *YamCha*
 ++++++++
 
+YamCha (Yet Another Multipurpose CHunk Annotator) s a generic, customizable,  and open source text chunker oriented toward a lot of NLP tasks, such as POS tagging,  Named Entity Recognition, base NP chunking, and Text Chunking. YamCha is using a state-of-the-art  machine learning algorithm called Support Vector Machines (SVMs).
+
+*homepage*: http://chasen.org/~taku/software/yamcha/
+
 =======    ============================================================
 version    toolchains                                                  
 =======    ============================================================
@@ -15290,6 +19765,10 @@ version    toolchains
 
 *YAML-Syck*
 +++++++++++
+
+Fast, lightweight YAML loader and dumper.  This module provides a Perl interface to the libsyck data serialization library.
+
+*homepage*: http://search.cpan.org/perldoc?YAML%3A%3ASyck
 
 =======    =======================================
 version    toolchains                             
@@ -15303,6 +19782,10 @@ version    toolchains
 *Yasm*
 ++++++
 
+Yasm: Complete rewrite of the NASM assembler with BSD license
+
+*homepage*: http://www.tortall.net/projects/yasm/
+
 =======    ===========================================================================
 version    toolchains                                                                 
 =======    ===========================================================================
@@ -15315,6 +19798,10 @@ version    toolchains
 
 *YAXT*
 ++++++
+
+Yet Another eXchange Tool
+
+*homepage*: https://www.dkrz.de/redmine/projects/yaxt
 
 =======    ===========
 version    toolchains 
@@ -15338,6 +19825,10 @@ version    toolchains
 *ZeroMQ*
 ++++++++
 
+ZeroMQ looks like an embeddable networking library but acts like a concurrency framework.  It gives you sockets that carry atomic messages across various transports like in-process,  inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout,  pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered  products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous  message-processing tasks. It has a score of language APIs and runs on most operating systems.
+
+*homepage*: http://www.zeromq.org/
+
 =======    =========================================================================
 version    toolchains                                                               
 =======    =========================================================================
@@ -15356,6 +19847,10 @@ version    toolchains
 *zlib*
 ++++++
 
+zlib is designed to be a free, general-purpose, legally unencumbered -- that is,  not covered by any patents -- lossless data-compression library for use on virtually any  computer hardware and operating system.
+
+*homepage*: http://www.zlib.net/
+
 =======    ===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 version    toolchains                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 =======    ===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -15370,6 +19865,10 @@ version    toolchains
 *zlibbioc*
 ++++++++++
 
+This package uses the source code of zlib-1.2.5 to create libraries for systems that do not have  these available via other means.
+
+*homepage*: https://bioconductor.org/packages/release/bioc/html/zlibbioc.html
+
 =======    ===========
 version    toolchains 
 =======    ===========
@@ -15383,6 +19882,10 @@ version    toolchains
 *ZPAQ*
 ++++++
 
+zpaq is a free and open source (GPL v3) incremental,  journaling command-line archiver for Windows, Linux and Mac OS/X
+
+*homepage*: http://mattmahoney.net/dc/zpaq.html
+
 =======    ==========
 version    toolchains
 =======    ==========
@@ -15394,6 +19897,10 @@ version    toolchains
 
 *zsh*
 +++++
+
+Zsh is a shell designed for interactive use, although it is also a powerful scripting language.
+
+*homepage*: http://www.zsh.org/
 
 =======    =======================================
 version    toolchains                             
@@ -15407,6 +19914,10 @@ version    toolchains
 
 *zsync*
 +++++++
+
+zsync-0.6.2: Optimising file distribution program, a 1-to-many rsync
+
+*homepage*: http://zsync.moria.org.uk/
 
 =======    ===========================================================
 version    toolchains                                                 
