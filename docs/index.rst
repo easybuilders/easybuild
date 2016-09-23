@@ -77,6 +77,8 @@ Other topics
     Useful-scripts
     Deprecated-functionality
     Removed-functionality
+    Easybuild API <api/easybuild>
+
 
 Getting help
 ============
