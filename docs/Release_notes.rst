@@ -96,7 +96,7 @@ feature release
   * fix compatibility of OpenFOAM easyblock with ``--module-only`` (`#784 <https://github.com/hpcugent/easybuild-easyblocks/pull/784>`_)
   * fix testing of ``--module-only`` compatibility for OpenFOAM and IMOD easyblocks (`#784 <https://github.com/hpcugent/easybuild-easyblocks/pull/784>`_)
   * add '``include/libxml2``' to ``$CPATH`` in libxml2 easyblock (`#981 <https://github.com/hpcugent/easybuild-easyblocks/pull/981>`_)
-  * fix compatiblity of IntelBase generic easyblock with ``--module-only`` (`#994 <https://github.com/hpcugent/easybuild-easyblocks/pull/994>`_)
+  * fix compatibility of IntelBase generic easyblock with ``--module-only`` (`#994 <https://github.com/hpcugent/easybuild-easyblocks/pull/994>`_)
   * make sure correct config script is used for Tcl/Tk deps of R (`#995 <https://github.com/hpcugent/easybuild-easyblocks/pull/995>`_)
 
 **easyconfigs**
