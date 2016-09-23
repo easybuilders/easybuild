@@ -1,4 +1,4 @@
-.. _avail_easyconfig_params:
+.. _vsd_avail_easyconfig_params:
 
 .. _easyconfig_params:
 
@@ -46,6 +46,7 @@ build parameters
 ``tests``                    List of test-scripts to run after install. A test script should return a non-zero exit status to fail                    []               
 ``buildopts``                Extra options passed to make step (default already has -j X)                                                             ""               
 ``skip``                     Skip existing software                                                                                                   False            
+``parallel``                 Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
 ``stop``                     Keyword to halt the build process after a certain step.                                                                  None             
 ``runtest``                  Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)         None             
 ``sources``                  List of source files                                                                                                     []               
@@ -65,7 +66,8 @@ build parameters
 ``skipsteps``                Skip these steps                                                                                                         []               
 ``source_urls``              List of URLs for source files                                                                                            []               
 ``easyblock``                EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
-``parallel``                 Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
+``hidden``                   Install module file as 'hidden' by prefixing its version with '.'                                                        False            
+``github_account``           GitHub account name to be used to resolve template values in source URLs                                                 None             
 ``configopts``               Extra options passed to configure (default already has --prefix)                                                         ""               
 =========================    =====================================================================================================================    =================
 

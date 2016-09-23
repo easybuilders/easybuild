@@ -1,4 +1,4 @@
-.. _list_toolchains:
+.. _vsd_list_toolchains:
 *(see also* ``eb --list-toolchains`` *)*
 
 List of known toolchains

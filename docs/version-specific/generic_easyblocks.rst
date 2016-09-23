@@ -91,12 +91,14 @@ Build environment of toolchain: only generate module file
 Extra easyconfig parameters specific to ``BuildEnv`` easyblock
 --------------------------------------------------------------
 
-====================    =======================================================================    =============
-easyconfig parameter    description                                                                default value
-====================    =======================================================================    =============
-``altroot``             Software name of dependency to use to define $EBROOT for this bundle       ``None``     
-``altversion``          Software name of dependency to use to define $EBVERSION for this bundle    ``None``     
-====================    =======================================================================    =============
+=====================    ===========================================================================    =============
+easyconfig parameter     description                                                                    default value
+=====================    ===========================================================================    =============
+``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_easyblock``    Default easyblock to use for components                                        ``None``     
+=====================    ===========================================================================    =============
 
 .. _Bundle:
 
@@ -110,18 +112,20 @@ Bundle of modules: only generate module files, nothing to build/install
 Extra easyconfig parameters specific to ``Bundle`` easyblock
 ------------------------------------------------------------
 
-====================    =======================================================================    =============
-easyconfig parameter    description                                                                default value
-====================    =======================================================================    =============
-``altroot``             Software name of dependency to use to define $EBROOT for this bundle       ``None``     
-``altversion``          Software name of dependency to use to define $EBVERSION for this bundle    ``None``     
-====================    =======================================================================    =============
+=====================    ===========================================================================    =============
+easyconfig parameter     description                                                                    default value
+=====================    ===========================================================================    =============
+``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_easyblock``    Default easyblock to use for components                                        ``None``     
+=====================    ===========================================================================    =============
 
 Customised steps in ``Bundle`` easyblock
 ----------------------------------------
 * ``build_step`` - Do nothing.
 * ``configure_step`` - Collect altroot/altversion info.
-* ``install_step`` - Do nothing.
+* ``install_step`` - Install components, if specified.
 
 Example easyconfig for ``Bundle`` easyblock
 -------------------------------------------
@@ -441,12 +445,14 @@ Compiler toolchain: generate module file only, nothing to build/install
 Extra easyconfig parameters specific to ``CrayToolchain`` easyblock
 -------------------------------------------------------------------
 
-====================    =======================================================================    =============
-easyconfig parameter    description                                                                default value
-====================    =======================================================================    =============
-``altroot``             Software name of dependency to use to define $EBROOT for this bundle       ``None``     
-``altversion``          Software name of dependency to use to define $EBVERSION for this bundle    ``None``     
-====================    =======================================================================    =============
+=====================    ===========================================================================    =============
+easyconfig parameter     description                                                                    default value
+=====================    ===========================================================================    =============
+``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_easyblock``    Default easyblock to use for components                                        ``None``     
+=====================    ===========================================================================    =============
 
 .. _FortranPythonPackage:
 
@@ -773,12 +779,14 @@ Support for generating a module file for the system compiler with specified name
 Extra easyconfig parameters specific to ``SystemCompiler`` easyblock
 --------------------------------------------------------------------
 
-====================    =======================================================================    =============
-easyconfig parameter    description                                                                default value
-====================    =======================================================================    =============
-``altroot``             Software name of dependency to use to define $EBROOT for this bundle       ``None``     
-``altversion``          Software name of dependency to use to define $EBVERSION for this bundle    ``None``     
-====================    =======================================================================    =============
+=====================    ===========================================================================    =============
+easyconfig parameter     description                                                                    default value
+=====================    ===========================================================================    =============
+``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_easyblock``    Default easyblock to use for components                                        ``None``     
+=====================    ===========================================================================    =============
 
 .. _Tarball:
 
@@ -808,12 +816,14 @@ Compiler toolchain: generate module file only, nothing to build/install
 Extra easyconfig parameters specific to ``Toolchain`` easyblock
 ---------------------------------------------------------------
 
-====================    =======================================================================    =============
-easyconfig parameter    description                                                                default value
-====================    =======================================================================    =============
-``altroot``             Software name of dependency to use to define $EBROOT for this bundle       ``None``     
-``altversion``          Software name of dependency to use to define $EBVERSION for this bundle    ``None``     
-====================    =======================================================================    =============
+=====================    ===========================================================================    =============
+easyconfig parameter     description                                                                    default value
+=====================    ===========================================================================    =============
+``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_easyblock``    Default easyblock to use for components                                        ``None``     
+=====================    ===========================================================================    =============
 
 .. _VSCPythonPackage:
 
