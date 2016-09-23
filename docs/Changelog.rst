@@ -3,6 +3,7 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+* **release 20160923.02** (`Sept 23rd 2016`): update release notes for EasyBuild v2.9.0 (see :ref:`release_notes_eb290`)
 * **release 20160923.01** (`Sept 23rd 2016`): add generated list of supported software (see :ref:`list_software`)
 * **release 20160713.01** (`July 13th 2016`): update release notes for EasyBuild v2.8.2 (see :ref:`release_notes_eb282`)
 * **release 20160613.01** (`June 13th 2016`): clarify required dependencies (setuptools, vsc-install) (see :ref:`required_python_packages`)
