@@ -1,3 +1,5 @@
+.. _easybuild_api_top:
+
 easybuild package
 =================
 
