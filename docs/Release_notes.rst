@@ -23,7 +23,7 @@ feature release
   * add support for '``hidden``' easyconfig parameter (`#1837 <https://github.com/hpcugent/easybuild-framework/pull/1837>`_)
   * add support for using ``ccache`` and ``f90cache`` compiler caching tools (`#1844 <https://github.com/hpcugent/easybuild-framework/pull/1844>`_, `#1912 <https://github.com/hpcugent/easybuild-framework/pull/1912>`_)
 
-    * see --use-ccache and ``--use-f90cache``
+    * see ``--use-ccache`` and ``--use-f90cache``
 
   * update Cray metadata for 16.06 CrayPE release (`#1851 <https://github.com/hpcugent/easybuild-framework/pull/1851>`_)
   * also include patch files in ``--new-pr`` and ``--update-pr`` (`#1852 <https://github.com/hpcugent/easybuild-framework/pull/1852>`_)
