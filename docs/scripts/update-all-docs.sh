@@ -191,7 +191,15 @@ do
     eb --avail-toolchain-opts $line --output-format rst >> $VERSION_SPECIFIC_DIR/toolchain_opts.rst
 done
 
+echo "* :ref:\`List of available toolchain options <avail_toolchain_opts>\`" >> $overview
+echo >> $overview
+
 rm $temp_tc
 
-echo "* :ref:\`List of available toolchain options <avail_toolchain_opts>\`" >> $overview
+echo ".. _list_software:" > $VERSION_SPECIFIC_DIR/Supported_software.rst
+echo >> $VERSION_SPECIFIC_DIR/Supported_software.rst
+skip_lines='temporary log file|Processed.*easyconfigs|Found.*different software packages'
+eb --list-software=detailed --output-format=rst | egrep -v $skip_lines >> $VERSION_SPECIFIC_DIR/Supported_software.rst
+
+echo "* :ref:\`List of supported software <list_software>\`" >> $overview
 echo >> $overview
