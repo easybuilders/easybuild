@@ -47,7 +47,7 @@ feature release
   * ensure ``--new-pr`` doesn't open empty pull requests (`#1846 <https://github.com/hpcugent/easybuild-framework/pull/1846>`_)
   * better error handling for outdated ``GitPython`` module in ``--check-github`` (`#1847 <https://github.com/hpcugent/easybuild-framework/pull/1847>`_)
   * fix formatting for generated easyblocks documentation (`#1860 <https://github.com/hpcugent/easybuild-framework/pull/1860>`_)
-  * make sure the robot ignores filtered dependencies (`#1862 <https://github.com/hpcugent/easybuild-framework/pull/1862>`_)
+  * make sure the robot ignores filtered dependencies when creating toolchain cache (`#1862 <https://github.com/hpcugent/easybuild-framework/pull/1862>`_)
   * honor ``--filter-deps`` under ``--minimal-toolchains`` (`#1863 <https://github.com/hpcugent/easybuild-framework/pull/1863>`_)
   * correct format for '``param``' and '``author``' tags in docstrings (`#1866 <https://github.com/hpcugent/easybuild-framework/pull/1866>`_)
   * ignore failing bootstrap test in Travis config file (`#1870 <https://github.com/hpcugent/easybuild-framework/pull/1870>`_)
@@ -65,8 +65,10 @@ feature release
   * don't pass '``--try-*``' command-line options to EB instance running within job script (`#1908 <https://github.com/hpcugent/easybuild-framework/pull/1908>`_)
   * add workaround for incorrectly passing command line arguments with ``--job`` (`#1915 <https://github.com/hpcugent/easybuild-framework/pull/1915>`_)
   * fix issues with ``--module-only`` (`#1919 <https://github.com/hpcugent/easybuild-framework/pull/1919>`_, `#1924 <https://github.com/hpcugent/easybuild-framework/pull/1924>`_, `#1925 <https://github.com/hpcugent/easybuild-framework/pull/1925>`_)
+
     * correctly deal with specified start_dir
     * do not remove installation directory when build-in-installdir is enabled
+
   * make sure '``which``' function returns path to a file (`#1921 <https://github.com/hpcugent/easybuild-framework/pull/1921>`_)
   * fix ``:param:``, ``:return:`` tags in docstrings & add test for it (`#1923 <https://github.com/hpcugent/easybuild-framework/pull/1923>`_)
 
