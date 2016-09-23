@@ -56,7 +56,7 @@ if [ ! -f $generate_api_script -a -f $generic_easyblocks_script ]; then
     exit 1
 fi
 
-overview=$VERSION_SPECIFIC_DIR/Version_Specific_Overview.rst
+overview=$VERSION_SPECIFIC_DIR/index.rst
 touch $overview
 
 ov_title="Overview of version specific (auto-generated) documentation pages"
