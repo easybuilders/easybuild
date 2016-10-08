@@ -6,7 +6,7 @@ Configuring EasyBuild
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
-A demo on configuring EasyBuild is available at :ref:`demo_configuring`.
+A demo on configuring EasyBuild is available :ref:`here <demo_configuring>`.
 
 .. contents::
     :depth: 3
