@@ -51,6 +51,8 @@ To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
 it - and yes, we use EasyBuild for doing so.
 
+A demo of bootstrapping EasyBuild is available :ref:`here <demo_bootstrapping>`.
+
 
 Bootstrapping procedure
 ~~~~~~~~~~~~~~~~~~~~~~~

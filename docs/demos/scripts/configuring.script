@@ -1,0 +1,254 @@
+CLEAR
+## EasyBuild is a build and installation framework for (scientific) software on HPC systems
+## http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/
+
+## author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be
+## date: Oct 8th 2016 (EasyBuild v2.9.0)
+
+# unset MODULEPATH
+# unset PYTHONPATH
+# for envvar in `env | grep EASYBUILD | cut -f1 -d=`; do unset $envvar; done
+# module use $HOME/EasyBuild/modules/all
+# module load EasyBuild
+# if [ -f $HOME/.config/easybuild/config.cfg ]; then echo 'ERROR: $HOME/.config/easybuild/config.cfg already exists!' >&2; exit 1; fi
+
+##
+## Configuring EasyBuild
+## *********************
+##
+### In this demo, we will show how to configure EasyBuild.
+###
+### For more information, see COPYPASTEhttp://easybuild.readthedocs.io/en/latest/Configuration.html
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### The list of available EasyBuild configuration options can be obtained via 'eb --help':
+
+eb --helpTRUNCATE
+
+
+### Since EasyBuild supports a lot of configuration options, they are organised in different option groups:
+### 'basic',  'configuration', 'informative', etc.
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### To inspect the current EasyBuild configuration, you can use either 'eb --show-config' or 'eb --show-full-config'.
+
+### Using 'eb --show-full-config', you will see the full EasyBuild configuration, including all default settings:
+
+eb --show-full-configTRUNCATE
+
+
+### Note: there are a lot of configuration options...
+eb --show-full-config | wc -l
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### Using 'eb --show-config', you will only see:
+### - the most important configuration options, and
+### - the configuration options that have a setting different than the default
+
+eb --show-config
+
+
+### This is the default EasyBuild configuration, as indicated with the 'D' for each configuration option included in the output:
+###
+### - $HOME/.local/easybuild is the default value for the 'prefix' configuration option
+###
+### - the 'buildpath', 'installpath', 'repositorypath', and 'sourcepath' configuration options are derived from 'prefix',
+###   unless they were specified explicitely
+###
+### - by default, the 'robot-paths' configuration option includes the path to the easyconfig files included in the EasyBuild installation
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### There are 3 different configuration levels supported in EasyBuild:
+### - configuration file(s)
+### - environment variables
+### - command line options
+
+PAUSE 1
+### These different configuration levels are considered in order; that is:
+### - command line options override environment variables
+### - environment variables override configuration files
+
+### Each configuration option is always supported on all 3 configuration levels, no exceptions!
+
+PAUSE 1
+### For example, to specify the 'prefix' configuration option, you can either:
+### - specify a value for 'prefix' in a configuration file
+### - define $EASYBUILD_PREFIX in the environment
+### - use the --prefix command line option
+
+
+PAUSE 1
+### EasyBuild will take into account the configuration file at $HOME/.config/easybuild/config.cfg by default:
+mkdir -p $HOME/.config/easybuild
+echo "[config]" > $HOME/.coTABnfig/eaTABsybuild/coTABnfig.cfg
+echo "prefix = /tmp/eb_prefix_via_cfgfile" >> $HOME/.coTABnfig/eaTABsybuild/coTABnfig.cfg
+
+eb --show-config
+
+
+### Note that the 'F' that indicates which configuration options were set via a configuration file.
+
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+## There are 3 different configuration levels supported in EasyBuild:
+## - configuration file(s)
+## - environment variables
+## - command line options
+
+## These different configuration levels are considered in order; that is:
+## - command line options override environment variables
+## - environment variables override configuration files
+##
+## Each configuration option is always supported on all 3 configuration levels, no exceptions!
+
+## For example, to specify the 'prefix' configuration option, you can either:
+## - specify a value for 'prefix' in a configuration file
+## - define $EASYBUILD_PREFIX in the environment
+## - use the --prefix command line option
+
+
+### To configure EasyBuild via the environment, define the corresponding $EASYBUILD_* environment variables:
+
+export EASYBUILD_PREFIX='/tmp/eb_prefix_via_envvar'
+
+eb --show-config
+
+
+### The 'E' indicates that the configuration options were defined via the environment.
+
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+## There are 3 different configuration levels supported in EasyBuild:
+## - configuration file(s)
+## - environment variables
+## - command line options
+
+## These different configuration levels are considered in order; that is:
+## - command line options override environment variables
+## - environment variables override configuration files
+##
+## Each configuration option is always supported on all 3 configuration levels, no exceptions!
+
+## For example, to specify the 'prefix' configuration option, you can either:
+## - specify a value for 'prefix' in a configuration file
+## - define $EASYBUILD_PREFIX in the environment
+## - use the --prefix command line option
+
+
+### You can also specify configuration options on the 'eb' command line:
+
+eb --prefix /tmp/eb_prefix_via_cmdline --show-config
+
+
+### The configuration options that were specified on the command line are indicated by 'C'.
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### And now, for a more involved example...
+
+### We want to configure EasyBuild such that:
+### - it always uses 'Lmod' as modules tool, and 'Lua' as modules syntax
+### - it uses '$HOME/EasyBuild' as value for the 'prefix' configuration option in the current session
+### - it uses '/dev/shm/$USER' for 'buildpath', '/tmp/$USER/' for 'installpath' (just for once)
+
+echo "[config]" > $HOME/.coTABnfig/eaTABsybuild/coTABnfig.cfg
+echo "modules-tool = Lmod" >>  $HOME/.coTABnfig/eaTABsybuild/coTABnfig.cfg
+echo "module-syntax = Lua" >>  $HOME/.coTABnfig/eaTABsybuild/coTABnfig.cfg
+
+export EASYBUILD_PREFIX=$HOME/EasyBuild
+
+eb --buildpath /dev/shm/$USER --installpath /tmp/$USER --show-config
+
+
+PAUSE 1
+### Note how for each configuration option it is indicated at which configuration level this setting was specified,
+### via 'D' (default), 'F' (configuration file), 'E' (environment), or 'C' (command line).
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### To create an EasyBuild configuration file you can either start from scratch,
+### or use the template configuration file generated by 'eb --confighelp'
+
+eb --confighelp > $HOME/.conTABfig/eaTABsybuild/coTABnfig.cfg
+
+
+### The generated template configuration file will contain commented out entries for every configuration option,
+### organised by group of options and sorted alphabetically.
+###
+### For example:
+
+grep -B 1 '^#installpath' $HOME/.conTABfig/eaTABsybuild/coTABnfig.cfg
+
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### You can provide multiple configuration files that EasyBuild will pick up.
+### They will be consider in order (settings specified in last one will win).
+
+### A couple of locations are considered by default;
+### these are controlled by the $XDG_CONFIG_HOME and $XDG_CONFIG_DIRS environment variables
+### (see COPYPASTEhttps://specifications.freedesktop.org/basedir-spec/latest/ar01s03.html).
+
+### Using 'eb --show-default-configfiles', you can check whether any configuration files are found
+### at the location considered by default:
+
+eb --show-default-configfiles
+
+
+PAUSE 3
+CLEAR
+##
+## Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html
+##
+
+### Additional configuration files can be specified via the 'configfiles' configuration option,
+### for example via --configfiles or $EASYBUILD_CONFIGFILES:
+unset EASYBUILD_PREFIX
+eb --show-config
+
+echo "[config]" > my_eb_settings.cfg
+echo "prefix = /tmp/eb_prefix_via_cfgfile" >> my_TABeb_settings.cfg
+
+eb --configfiles $PWD/my_TABeb_settings.cfg --show-config
