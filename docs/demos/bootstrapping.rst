@@ -7,4 +7,4 @@ Demo: bootstrapping EasyBuild
 
 .. raw:: html
 
-  <script type="text/javascript" src="https://asciinema.org/a/88512.js" id="asciicast-88512" async></script>
+  <script type="text/javascript" src="https://asciinema.org/a/88843.js" id="asciicast-88843" async></script>
