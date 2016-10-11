@@ -85,6 +85,7 @@ Overview of version specific (auto-generated) documentation pages
 * :ref:`Available config file constants <avail_cfgfile_constants>`
 * :ref:`Available easyconfig parameters <vsd_avail_easyconfig_params>`
 * :ref:`Constants available for easyconfig files <avail_easyconfig_constants>`
+* :ref:`demos`
 * :ref:`EasyBuild framework API <easybuild_api_top>`
 * :ref:`License constants available for easyconfig files <avail_easyconfig_licenses>`
 * :ref:`List of available easyblocks <vsd_list_easyblocks>`
