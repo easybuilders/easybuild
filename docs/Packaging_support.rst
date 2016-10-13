@@ -153,9 +153,9 @@ Packaging existing installations
 --------------------------------
 
 To create packages for existing software installations (performed using EasyBuild), combine ``--package`` with
-``--skip``::
+``--skip --force``::
 
-    $ eb --package --skip Perl-5.20.1-GCC-4.9.2-bare.eb --robot
+    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --force
     [...]
     == building and installing Perl/5.20.1-GCC-4.9.2-bare...
     == fetching files...
