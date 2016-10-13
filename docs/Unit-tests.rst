@@ -136,7 +136,9 @@ framework, which is by default the traditional Tcl/C environment modules, referr
 EasyBuild configuration terms (see ``eb --help`` and ``eb --avail-modules-tools``).
 
 To run the EasyBuild framework unit tests with a particular modules tool, simply define the
-``$TEST_EASYBUILD_MODULES_TOOL`` environment variable with the corresponding value.
+``$TEST_EASYBUILD_MODULES_TOOL`` environment variable with the corresponding value. For example::
+
+  export TEST_EASYBUILD_MODULES_TOOL=Lmod
 
 Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
 (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) is available via ``$PATH``, see :ref:`required_modules_tool`.
