@@ -204,6 +204,7 @@ To include both the (custom) location for the easyconfigs archive repository and
 paths in the active robot search path, the following configuration file entry can be used, featuring the template
 for the ``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
 
+    [basic]
     repositorypath = /home/example/easybuild/easyconfigs_archive
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
