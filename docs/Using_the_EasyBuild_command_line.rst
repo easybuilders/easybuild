@@ -497,6 +497,8 @@ Matching setup:
 * satisfy (i) using ``robot-paths`` in one of the active EasyBuild configuration files (see also
   :ref:`list_of_configuration_files`)::
 
+    [basic]
+    repositorypath = /home/example/easybuild/easyconfigs_archive
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
 * satisfy (ii) via ``--robot`` on the ``eb`` command line::
