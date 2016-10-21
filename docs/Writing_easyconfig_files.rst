@@ -237,6 +237,57 @@ Example:
 
 .. note:: For more details w.r.t. use of string templates like ``%(installdir)s``, see :ref:`easyconfig_param_templates`.
 
+
+.. _configure_build_install_command_options_iterate:
+
+List of configure/build/install options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases, the *configure-build-install* cycle must be executed multiple times during a single installation,
+using different options for one or more steps.
+
+EasyBuild supports specifying a *list* of strings, each of which specifying a particular set of options to use.
+
+For example, to perform the installation procedure with three different sets of configuration options:
+
+.. code:: python
+
+    configopts = [
+        "--common-opt --one --one-more",
+        "--common-opt --two",
+        "--common-opt --three",
+    ]
+
+This way, EasyBuild will perform the *configure-build-install* cycle **three** times:
+
+* configure using ``--common-opt --one --one-more``, build and install
+* configure using ``--common-opt --two``, build and install on top of the existing installation
+* configure using ``--common-opt --three``, build and install once more on top of what is installed already
+
+During this process, the environment is reset and the build directory is cleaned up after each cycle,
+while the installation directory is left in untouched (in order to not destroy the result of earlier cycles).
+
+If several ``(pre){config|build|install}opts`` parameters are defined as being a list of strings, the number of
+items in the lists must be the same. Any of these parameters defined as a single string value are just reused
+for each of the cycles performed. For example:
+
+.. code:: python
+
+    easyblock = 'ConfigureMake'
+    configopts = ['--one', '--two', '--three']
+    buildopts = 'lib'
+    preinstallopts = ['TYPE=one', 'TYPE=two', 'TYPE=three']
+
+would result in:
+
+* ``./configure --prefix=... --one; make lib; TYPE=one make install``
+* ``./configure --prefix=... --two; make lib; TYPE=two make install``
+* ``./configure --prefix=... --three; make lib; TYPE=three make install``
+
+
+An example use case of this is building FFTW with different precisions, see the
+`FFTW easyconfig files <https://github.com/hpcugent/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/f/FFTW>`_.
+
 Sanity check
 ~~~~~~~~~~~~
 
