@@ -77,6 +77,7 @@ Other topics
     Useful-scripts
     Deprecated-functionality
     Removed-functionality
+    Users_and_use_cases
 
 
 Overview of version specific (auto-generated) documentation pages
