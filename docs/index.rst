@@ -18,7 +18,7 @@ Introductory topics
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Introduction
     Concepts_and_Terminology
@@ -30,7 +30,7 @@ Getting started
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Installation
     Configuration
@@ -41,7 +41,7 @@ Basic usage topics
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Using_the_EasyBuild_command_line
     Writing_easyconfig_files
@@ -52,7 +52,7 @@ Advanced usage topics
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Controlling_compiler_optimization_flags
     Experimental_features
