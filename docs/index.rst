@@ -59,6 +59,7 @@ Advanced usage topics
     Extended_dry_run
     Including_additional_Python_modules
     Integration_with_GitHub
+    Making_the_EasyBuild_build_environment_accessible_to_users
     Manipulating_dependencies
     Packaging_support
     Partial_installations
