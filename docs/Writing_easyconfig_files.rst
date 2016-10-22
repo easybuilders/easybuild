@@ -265,7 +265,7 @@ This way, EasyBuild will perform the *configure-build-install* cycle **three** t
 * configure using ``--common-opt --three``, build and install once more on top of what is installed already
 
 During this process, the environment is reset and the build directory is cleaned up after each cycle,
-while the installation directory is left in untouched (in order to not destroy the result of earlier cycles).
+while the installation directory is left untouched (in order to not destroy the result of earlier cycles).
 
 If several ``(pre){config|build|install}opts`` parameters are defined as being a list of strings, the number of
 items in the lists must be the same. Any of these parameters defined as a single string value are just reused
