@@ -11,6 +11,13 @@ Jülich Supercomputing Centre (JSC) - Germany
 
 *(last update: Oct 23rd 2016)*
 
+.. _users_use_cases_jsc_history:
+
+History
+-------
+
+*(to be completed)*
+
 .. _users_use_cases_jsc_systems:
 
 Systems

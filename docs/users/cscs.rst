@@ -9,6 +9,13 @@ Swiss National Supercomputing Centre (CSCS) - Switzerland
 
 *(last update: Oct 23rd 2016)*
 
+.. _users_use_cases_cscs_history:
+
+History
+-------
+
+*(to be completed)*
+
 .. _users_use_cases_cscs_systems:
 
 Systems

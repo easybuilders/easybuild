@@ -16,6 +16,14 @@ HPC-UGent (Belgium)
 
 *(last update: Oct 23rd 2016)*
 
+.. _users_use_cases_hpc_ugent_history:
+
+History
+-------
+
+EasyBuild was created by the HPC-UGent team in 2009 (first public release in 2012), and has been used to
+install (scientific) software for users ever since.
+
 .. _users_use_cases_hpc_ugent_systems:
 
 Systems
