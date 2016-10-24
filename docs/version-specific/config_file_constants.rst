@@ -1,4 +1,5 @@
 .. _avail_cfgfile_constants:
+
 *(see also* ``eb --avail-cfgfile-constants`` *)*
 
 Constants available (only) in configuration files

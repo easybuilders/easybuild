@@ -1,4 +1,5 @@
 .. _avail_easyconfig_templates:
+
 *(see also* ``eb --avail-easyconfig-templates`` *)*
 
 Template names/values derived from easyconfig instance

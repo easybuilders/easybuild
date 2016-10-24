@@ -40,12 +40,12 @@ Option flag        Option description
 
 Configfile options
 ------------------
-=========================================    ================================================================
-Option flag                                  Option description                                              
-=========================================    ================================================================
-``--configfiles=CONFIGFILES``                Parse (additional) configfiles (type comma-separated list; def )
-``--ignoreconfigfiles=IGNORECONFIGFILES``    Ignore configfiles (type comma-separated list)                  
-=========================================    ================================================================
+=========================================    ===========================================================================================================
+Option flag                                  Option description                                                                                         
+=========================================    ===========================================================================================================
+``--configfiles=CONFIGFILES``                Parse (additional) configfiles (type comma-separated list; def /Users/kehoste/.config/easybuild/config.cfg)
+``--ignoreconfigfiles=IGNORECONFIGFILES``    Ignore configfiles (type comma-separated list)                                                             
+=========================================    ===========================================================================================================
 
 
 Basic options
