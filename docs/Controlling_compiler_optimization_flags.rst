@@ -125,8 +125,10 @@ compilers on x86-64 systems (Intel or AMD).
 For other compilers that can be used in toolchains and other system architectures,
 the necessary compiler flags will be defined in later EasyBuild versions.
 
-Currently, using ``--optarch=GENERIC`` will result in the following target architecture optimization flags being used:
+Currently, using ``--optarch=GENERIC`` will result in the following target architecture optimization flags being used,
+(on a Linux x86-64 system):
 
 * for toolchains using GCC compilers: ``-march=x86-64 -mtune=generic``
 * for toolchains using Intel compilers: ``-xSSE2``
 
+On other systems or for other compilers, you can check which compiler flags will be used via :ref:`extended_dry_run`.
