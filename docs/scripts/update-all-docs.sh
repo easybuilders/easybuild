@@ -81,6 +81,7 @@ easybuild package/g' api/easybuild.rst
 
 #  available configfile constants
 echo ".. _avail_cfgfile_constants:" > $VERSION_SPECIFIC_DIR/config_file_constants.rst
+echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo "*(see also* \`\`eb --avail-cfgfile-constants\`\` *)*" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 eb --avail-cfgfile-constants --output-format rst >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
@@ -104,6 +105,7 @@ echo "* :ref:\`Available easyconfig parameters <vsd_avail_easyconfig_params>\`" 
 
 # available easyconfig constants
 echo ".. _avail_easyconfig_constants:" > $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 echo "*(see also* \`\`eb --avail-easyconfig-constants\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 eb --avail-easyconfig-constants --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
@@ -114,6 +116,7 @@ echo "* :ref:\`Constants available for easyconfig files <avail_easyconfig_consta
 
 # available easyconfig licenses
 echo ".. _avail_easyconfig_licenses:" > $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 echo "*(see also* \`\`eb --avail-easyconfig-licenses\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
 eb --avail-easyconfig-licenses --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_license_constants.rst
@@ -175,6 +178,7 @@ echo "* :ref:\`List of available toolchain options <avail_toolchain_opts>\`" >> 
 
 #  list-toolchain doc
 echo ".. _vsd_list_toolchains:" > $VERSION_SPECIFIC_DIR/toolchains.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
 echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
 echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
 eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
@@ -218,6 +222,7 @@ echo "* :ref:\`Overview of generic easyblocks <generic_easyblocks>\`" >> $overvi
 
 # available easyconfig templates
 echo ".. _avail_easyconfig_templates:" > $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 echo "*(see also* \`\`eb --avail-easyconfig-templates\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
 eb --avail-easyconfig-templates --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_templates.rst
