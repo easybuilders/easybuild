@@ -41,6 +41,7 @@
     -l, --logtostdout   Redirect main log to stdout (def False)
     -b BLOCKS, --only-blocks=BLOCKS
                         Only build listed blocks (type comma-separated list)
+    --rebuild           Rebuild software, even if module already exists (don't skip OS dependencies checks) (def False)
     -r PATH, --robot=PATH
                         Path(s) to search for easyconfigs for missing
                         dependencies (colon-separated) (def /Users/test/.local

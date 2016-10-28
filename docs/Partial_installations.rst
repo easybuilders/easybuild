@@ -57,10 +57,10 @@ For this purpose, the ``-k``/``--skip`` command line option is available.
 
 To actually skip an existing software installation and all installed extensions, a corresponding module must be
 available already; if not, the installation procedure will be performed from scratch.
-To trigger the installation of missing extensions, ``--force`` must be used as well; without it, the installation
+To trigger the installation of missing extensions, ``--rebuild`` ( or ``--force``, see :ref:`_force_option`) must be used as well; without it, the installation
 procedure will be skipped as a whole (since the module is already available).
 
-When ``--skip`` is combined with ``--force``, EasyBuild will:
+When ``--skip`` is combined with ``--rebuild``, EasyBuild will:
 
 i) ensure that all (extension) sources are available (and try to fetch them if needed);
 ii) prepare the build environment;
@@ -79,7 +79,7 @@ Example usage::
 
 .. code::
 
- $ eb Python-2.7.9-intel-2015a.eb --skip --force
+ $ eb Python-2.7.9-intel-2015a.eb --skip --rebuild
  ...
  == building and installing Python/2.7.9-intel-2015a...
  ...
@@ -111,7 +111,7 @@ Only (re)generating (additional) module files using ``--module-only``
 Since EasyBuild v2.1, it is possible to only (re)generate the module file that matches the specifications in the
 easyconfig file, using ``--module-only``. Depending on the use case, additional options should be supplied.
 
-Usually ``--force`` is also required, either to ignore the existing module file (if the module is available under the
+Usually ``--rebuild`` is also required, either to ignore the existing module file (if the module is available under the
 same name as the one being (re)generated), or to skip the sanity check that verifies the software installation (if no
 software installation is available).
 
@@ -135,9 +135,9 @@ Only (re)generating (existing) module file
 To only generate a module file (i.e., skip actually building and installing the software), or to regenerate an
 existing module file, ``--module-only`` can be used.
 
-In the former case, enabling ``--force`` is required because the sanity check step that verifies whether the
+In the former case, enabling ``--rebuild`` is required because the sanity check step that verifies whether the
 installation produced the expected files and/or directories is not skipped unless forced.
-In the latter case, ``--force`` must be used to make EasyBuild ignore that the module is already available
+In the latter case, ``--rebuild`` must be used to make EasyBuild ignore that the module is already available
 according to the modules tool.
 
 Example usage:
@@ -148,7 +148,7 @@ Example usage:
    ---------------------------- /home/example/.local/modules/all ----------------------------
    GCC/4.8.2
    
-   $ eb GCC-5.1.0.eb --module-only --force
+   $ eb GCC-5.1.0.eb --module-only --rebuild
    ...
    == building and installing GCC/5.1.0...
    == fetching files [skipped]
@@ -179,7 +179,7 @@ Example usage:
    $ ls -l /home/example/.local/modules/all/GCC/4.8.2
    -rw-rw-r-- 1 example example 1002 Jan 11 17:19 /home/example/.local/modules/all/GCC/4.8.2
 
-   $ eb GCC-4.8.2.eb --module-only --force
+   $ eb GCC-4.8.2.eb --module-only --rebuild
    ...
    == building and installing GCC/4.8.2...
    ...
@@ -212,7 +212,7 @@ Examples:
     $ ls -l /home/example/.local/modules/all/GCC/4.8.2*
     -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
 
-    $ eb GCC-4.8.2.eb --modules-tool=Lmod --module-only --module-syntax=Lua --force
+    $ eb GCC-4.8.2.eb --modules-tool=Lmod --module-only --module-syntax=Lua --rebuild
     ...
     == building and installing GCC/4.8.2...
     ...
@@ -230,12 +230,12 @@ Examples:
       see also :ref:`module_syntax`.
 
       Only changing the syntax of the module file does not affect the module name, so Lmod will
-      report the module as being available. Hence, ``--force`` must be used here as well.
+      report the module as being available. Hence, ``--rebuild`` must be used here as well.
 
 * to generate a module file using a different naming scheme, ``--module-only`` can be combined with
   ``--module-naming-scheme``::
 
-     $ eb --installpath-modules=$HOME/test/modules --module-only --module-naming-scheme=HierarchicalMNS --force
+     $ eb --installpath-modules=$HOME/test/modules --module-only --module-naming-scheme=HierarchicalMNS --rebuild
      ...
      == building and installing Core/GCC/4.8.2...
      ...
@@ -256,7 +256,7 @@ Examples:
   .. note:: The modules files generated using the specified module naming scheme will most likely **not** be tied to
             an existing software installation in this case (unless the software installation was already there somehow),
             since the name of the subdirectory of the software installation prefix is also governed by the active
-            module naming scheme. This is also why ``--force`` must be used in the example above (to skip the sanity
+            module naming scheme. This is also why ``--rebuild`` must be used in the example above (to skip the sanity
             check that verifies the software installation).
 
             Thus, this is only useful to assess how the module tree would look like under a particular module naming
