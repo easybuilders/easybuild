@@ -250,6 +250,8 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
+.. _rebuild_option:
+
 Rebuild installation, ``--rebuild``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
