@@ -383,7 +383,7 @@ summary) will be placed in the respective pull request. This makes it a very pow
 
 Example::
 
-    $ eb --from-pr 3153 --force --upload-test-report
+    $ eb --from-pr 3153 --rebuild --upload-test-report
     == temporary log file in case of crash /tmp/eb-aqk20q/easybuild-wuyZBV.log
     == processing EasyBuild easyconfig /tmp/eb-aqk20q/files_pr3153/EasyBuild/EasyBuild-2.8.1.eb
     == building and installing EasyBuild/2.8.1...
@@ -397,7 +397,7 @@ Example::
 
 The resulting test report can be viewed at https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c .
 
-.. note:: It is common to use ``--force`` in combination with ``--upload-test-report``, to ensure that all easyconfigs
+.. note:: It is common to use ``--rebuild`` in combination with ``--upload-test-report``, to ensure that all easyconfigs
           in the pull request are rebuilt, resulting in a complete test report.
 
 .. _github_test_report_env_filter:
@@ -572,7 +572,7 @@ For example, to update pull request #3153 with a changed easyconfig file::
 
     eb --update-pr 3153 ~/WIP/newEB.eb --experimental
     == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log
-    == Determined branch name corresponding to hpcugent/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281 
+    == Determined branch name corresponding to hpcugent/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
     == fetching branch '20160530131447_new_pr_EasyBuild281' from https://github.com/boegel/easybuild-easyconfigs.git...
     Overview of changes:
