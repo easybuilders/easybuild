@@ -4,14 +4,19 @@ Installing EasyBuild
 ====================
 
 EasyBuild is Python software, so there are a couple of ways to install it.
-Because of various issues with the different installation tools that are available
-for Python packages, we recommend using the **bootstrap** install procedure described here.
+
+We recommend using the **bootstrap** install procedure described at :ref:`bootstrapping`, because of various issues
+with the different installation tools that are available for Python packages.
 
 Do take into account the required and optional dependencies (see :ref:`requirements` and :ref:`dependencies`).
 
 For advanced options, see :ref:`bootstrap_advanced_options`.
 
 Notes on other ways of installing EasyBuild are available under section :ref:`alt_inst_methods`.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 --------------
 
@@ -23,7 +28,10 @@ Requirements
 The only strict requirements are:
 
 * Linux (or OS X)
-* **Python version 2.6**, or a more recent 2.x version
+* **Python version 2.6**, or a more recent 2.x version + ``setuptools``, ``vsc-install`` & ``vsc-base``
+
+  * see also :ref:`required_python_packages`
+
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
   * the actual module command/script (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) *must* be available via ``$PATH``
@@ -43,6 +51,8 @@ To resolve this, we have created a bootstrap script that installs the
 latest EasyBuild version for you together with an environment module for
 it - and yes, we use EasyBuild for doing so.
 
+A demo of bootstrapping EasyBuild is available :ref:`here <demo_bootstrapping>`.
+
 
 Bootstrapping procedure
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +62,7 @@ i.e., installing the latest EasyBuild release (obtained from PyPI) using EasyBui
 
 To bootstrap EasyBuild:
 
-* download the bootstrap script from https://github.com/hpcugent/easybuild-framework/tree/develop/easybuild/scripts/bootstrap_eb.py
+* download the bootstrap script from https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 * execute it, and specify an installation prefix as an argument
 
 Yes, it's that easy!
@@ -73,24 +83,26 @@ subdirectory of the specified installation prefix into ``$MODULEPATH``.
 For example::
 
   # pick an installation prefix to install EasyBuild to (change this to your liking)
-  PREFIX=$HOME/.local/easybuild
+  EASYBUILD_PREFIX=$HOME/.local/easybuild
 
   # download script
   curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 
   # bootstrap EasyBuild
-  python bootstrap_eb.py $PREFIX
+  python bootstrap_eb.py $EASYBUILD_PREFIX
 
   # update $MODULEPATH, and load the EasyBuild module
-  module use $PREFIX/modules/all
+  module use $EASYBUILD_PREFIX/modules/all
   module load EasyBuild
 
 .. note::
 
   The path you specify to the bootstrap script is where EasyBuild should be installed.
   If you also want software that is built/installed using EasyBuild to be located there, you will need
-  to configure EasyBuild accordingly (see :ref:`configuring_easybuild`), for example by defining
-  ``$EASYBUILD_INSTALLPATH``.
+  to configure EasyBuild accordingly (see :ref:`configuring_easybuild`), for example by
+  putting the definition for ``$EASYBUILD_PREFIX`` in your ``.bashrc``.
+
+  See also :ref:`configuring_easybuild`.
 
 .. XXX - UPDATE BY VERSION
 
@@ -249,7 +261,7 @@ Advanced bootstrapping options
 ------------------------------
 
 To use these advanced options, make sure you are using the latest version of the bootstrap script, available
-at https://github.com/hpcugent/easybuild-framework/tree/develop/easybuild/scripts/bootstrap_eb.py .
+at https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py .
 
 Skipping the installation of ``easy_install`` (stage 0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -315,6 +327,18 @@ Example usage, with the relevant output at the start of stage 1 of the bootstrap
           on PyPI will be downloaded and installed automatically when the ``easybuild-framework`` package is installed.
           Source tarballs for all three EasyBuild components *must* be provided when ``$EASYBUILD_BOOTSTRAP_SOURCEPATH``
           is defined, however.
+
+.. _updating:
+
+Updating an existing EasyBuild installation
+-------------------------------------------
+
+To upgrade to a newer EasyBuild version (say, |version|) than the one currently installed there are several options:
+
+     (i) (re)bootstrap EasyBuild to obtain an ``EasyBuild`` module for version |version|, using the instructions above, see :ref:`bootstrapping`.
+     (ii) install EasyBuild version |version| with a previous version of EasyBuild, using the easyconfig file available `on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
+     (iii) install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (``easy_install``, ``pip``, ...), see also :ref:`alt_inst_easy_install_pip`
+     (iv) update the ``master`` branch of your Git working copies of the different EasyBuild repositories
 
 .. _dependencies:
 
@@ -423,6 +447,18 @@ Additional notes:
 
 Required Python packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+* ``setuptools``: used to define the ``easybuild`` namespace across different directories
+
+  * available at https://pypi.python.org/pypi/setuptools
+  * must be version 0.6 or more recent
+  * strictly required since EasyBuild v2.7.0
+
+* ``vsc-install``: provides setuptools functions and support for unit test suites for Python tools
+
+  * also required to install ``vsc-base`` (see below)
+  * available at https://pypi.python.org/pypi/vsc-install
+  * the required version depends primarily on the ``vsc-base`` version
 
 * ``vsc-base``: a Python library providing the ``fancylogger`` and ``generaloption`` Python modules
 

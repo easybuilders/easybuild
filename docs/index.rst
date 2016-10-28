@@ -18,7 +18,7 @@ Introductory topics
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Introduction
     Concepts_and_Terminology
@@ -30,7 +30,7 @@ Getting started
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Installation
     Configuration
@@ -41,7 +41,7 @@ Basic usage topics
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
     Using_the_EasyBuild_command_line
     Writing_easyconfig_files
@@ -52,8 +52,9 @@ Advanced usage topics
 
 .. toctree::
     :glob:
-    :maxdepth: 3
+    :maxdepth: 2
 
+    Controlling_compiler_optimization_flags
     Experimental_features
     Extended_dry_run
     Including_additional_Python_modules
@@ -76,6 +77,25 @@ Other topics
     Useful-scripts
     Deprecated-functionality
     Removed-functionality
+
+
+Overview of version specific (auto-generated) documentation pages
+=================================================================
+
+* :ref:`Available config file constants <avail_cfgfile_constants>`
+* :ref:`Available easyconfig parameters <vsd_avail_easyconfig_params>`
+* :ref:`Constants available for easyconfig files <avail_easyconfig_constants>`
+* :ref:`demos`
+* :ref:`EasyBuild framework API <easybuild_api_top>`
+* :ref:`License constants available for easyconfig files <avail_easyconfig_licenses>`
+* :ref:`List of available easyblocks <vsd_list_easyblocks>`
+* :ref:`List of available toolchain options <avail_toolchain_opts>`
+* :ref:`List of known toolchains <vsd_list_toolchains>`
+* :ref:`List of supported software <list_software>`
+* :ref:`Overview of configuration options (eb --help) <eb_help>`
+* :ref:`Overview of generic easyblocks <generic_easyblocks>`
+* :ref:`Templates available for easyconfig files <avail_easyconfig_templates>`
+
 
 Getting help
 ============

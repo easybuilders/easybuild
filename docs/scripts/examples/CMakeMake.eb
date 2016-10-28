@@ -1,0 +1,30 @@
+easyblock = 'CMakeMake'
+
+name = 'ANTs'
+version = '2.1.0rc3'
+
+homepage = 'http://stnava.github.io/ANTs/'
+description = """ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing,
+ interpreting and visualizing multidimensional data."""
+
+toolchain = {'name': 'goolf', 'version': '1.5.14'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/stnava/ANTs/archive/']
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [('CMake', '3.0.2')]
+
+skipsteps = ['install']
+buildopts = ' && mkdir -p %(installdir)s && cp -r * %(installdir)s/'
+
+parallel = 1
+
+separate_build_dir = True
+
+sanity_check_paths = {
+    'files': ['bin/ANTS'],
+    'dirs': ['lib'],
+}
+
+moduleclass = 'data'

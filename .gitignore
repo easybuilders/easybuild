@@ -2,6 +2,7 @@
 .project
 LICENSE_HEADER
 *.pyc
+*.swp
 *.nja
 build/
 dist/

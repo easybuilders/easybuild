@@ -1,7 +1,3 @@
-
-.. toctree::
-     :maxdepth: 1
-
 .. _configuring_easybuild:
 
 Configuring EasyBuild
@@ -9,6 +5,12 @@ Configuring EasyBuild
 
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
+
+A demo on configuring EasyBuild is available :ref:`here <demo_configuring>`.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 .. _configuration_types:
 
@@ -202,6 +204,7 @@ To include both the (custom) location for the easyconfigs archive repository and
 paths in the active robot search path, the following configuration file entry can be used, featuring the template
 for the ``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
 
+    [basic]
     repositorypath = /home/example/easybuild/easyconfigs_archive
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
@@ -287,6 +290,57 @@ Examples (more below):
 
     $ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
 
+.. _configuration_show_config:
+
+Overview of current configuration (``--show-config``, ``--show-full-config``)
+-----------------------------------------------------------------------------
+
+To get an overview of the current EasyBuild configuration across all configuration types,
+you can use ``eb --show-config``.
+
+The output will specify:
+
+* any configuration setting for which the current value is different from the default value 
+* a couple of selected important configuration settings (even if they are still set to the default value), i.e.:
+
+  * build path (see :ref:`buildpath`)
+  * install path (see :ref:`installpath`)
+  * path to easyconfigs repository (see :ref:`easyconfigs_repo`)
+  * the robot search path (see :ref:`robot_search_path`)
+  * source path (see :ref:`sourcepath`)
+
+* through which configuration type each setting was defined
+
+  * i.e., default value, configuration file, environment variable or command line argument
+
+Example output::
+
+    $ cat $HOME/.config/easybuild/config.cfg
+    [config]
+    buildpath = /tmp/eb-build
+    
+    $ export EASYBUILD_MODULES_TOOL=Lmod
+    $ export EASYBUILD_OPTARCH=''
+
+    $ eb --show-config --installpath=$HOME/apps --job-cores=4
+    #
+    # Current EasyBuild configuration
+    # (C: command line argument, D: default value, E: environment variable, F: configuration file)
+    #
+    buildpath      (F) = /tmp/eb-build
+    installpath    (C) = /Users/example/apps
+    job-cores      (C) = 4
+    modules-tool   (E) = Lmod
+    optarch        (E) = ''
+    repositorypath (D) = /Users/example/.local/easybuild/ebfiles_repo
+    robot-paths    (D) = /Users/example/easybuild-easyconfigs/easybuild/easyconfigs
+    sourcepath     (D) = /Users/example/.local/easybuild/sources
+
+For a full overview of the current configuration, including *all* configuration settings,
+see ``eb --show-full-config``.
+
+.. _configuration_available_settings:
+
 Available configuration settings
 --------------------------------
 
@@ -295,6 +349,8 @@ settings, see ``eb --help``. We refrain from listing all available configuration
 
 A couple of selected configuration settings are discussed below,
 in particular the mandatory settings.
+
+.. _configuration_mandatory_settings:
 
 Mandatory configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -536,9 +592,12 @@ template value here)::
 
     logfile-format = easybuild,easybuild-%%(name)s.log
 
+.. _configuration_optional_settings:
 
 Optional configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The subsections below discuss a couple of commonly used optional configuration settings.
 
 .. _prefix:
 

@@ -11,5 +11,5 @@ and should be used only for testing, not (yet) for production usage.
 
 Currently enabled experimental features include:
  * Cray support (see https://github.com/hpcugent/easybuild/wiki/EasyBuild-on-Cray)
- * :ref:`packaging_support`
  * support for easyconfig files in YAML syntax (see :ref:`easyconfig_yeb_format`)
+ * support for opening and updating pull requests (see :ref:`github_new_pr` and :ref:`github_update_pr`)
