@@ -3,6 +3,13 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+(for EasyBuild release notes, see :ref:`release_notes`)
+
+* **release 20161116.01** (`Nov 16th 2016`): update documentation and release notes for EasyBuild v3.0.0 (see :ref:`release_notes_eb300`)
+
+  * :ref:`archived_easyconfigs`
+  * :ref:`rpath_support`
+
 * **release 20161028.01** (`Oct 28th 2016`): recommend using ``--rebuild`` rather than ``--force`` (see :ref:`rebuild_option`)
 * **release 20161023.01** (`Oct 24th 2016`): add section on iterating over configure/build/install options (see :ref:`configure_build_install_command_options_iterate`)
 * **release 20161014.01** (`Oct 14th 2016`): update documentation on deprecated functionality (see :ref:`deprecated`)
