@@ -62,7 +62,7 @@ Advanced usage topics
     Manipulating_dependencies
     Packaging_support
     Partial_installations
-    RPATH_support
+    RPATH-support
     Submitting_jobs
     Using_external_modules
 
