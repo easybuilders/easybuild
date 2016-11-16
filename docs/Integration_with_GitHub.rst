@@ -506,6 +506,9 @@ The working copy of the EasyBuild repository is created in a temporary location,
 has been created. EasyBuild does *not* make changes to an existing working copy you may have in place already
 (cfr. :ref:`github_git_working_dirs_path`).
 
+.. note:: When modifying existing files via ``--new-pr``,
+          you *must* specify a (meaningful) commit message using `--pr-commit-msg`, see :ref:`github_controlling_pr_metadata`.
+
 Example
 +++++++
 
@@ -533,9 +536,6 @@ For example, to create a pull request for a new version of, let's say, EasyBuild
 
 Yes, it's that easy!
 
-.. note:: When modifying existing files via ``--new-pr``,
-          you *must* specify a (meaningful) commit message using `--pr-commit-msg`, see :ref:`github_controlling_pr_metadata`.
-
 .. _github_update_pr:
 
 Updating existing pull requests (``--update-pr``)
@@ -546,7 +546,7 @@ Similarly to creating new pull requests, existing pull requests can be easily up
 
 The usage is equally simple, for example to update pull request ``#1234`` just list the changed/new file(s)::
 
-    $ eb --update-pr 1234 ~/WIP/changed.eb
+    $ eb --update-pr 1234 example.eb
 
 Again, this take care of the whole procedure required to update an existing pull request:
 
@@ -564,6 +564,9 @@ that should be updated.
 Just like with ``--new-pr``, this is done in a temporary working copy of the repository, no changes are made to
 a possible existing working copy.
 
+.. note:: When using ``--update-pr`` you *must* specify a (meaningful) commit message
+          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+
 Example
 +++++++
 
@@ -580,9 +583,6 @@ For example, to update pull request #3153 with a changed easyconfig file::
 
     Updated hpcugent/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
 
-.. note:: When using ``--update-pr`` you *must* specify a (meaningful) commit message
-          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
-
 .. _github_new_update_pr_patches:
 
 Including patch files in easyconfigs pull requests
@@ -594,6 +594,10 @@ you can also include patch files that are required by those easyconfig files.
 EasyBuild will try and figure out where each patch file should be located
 (i.e. in the same directory as the easyconfig files that require that patch file),
 by scanning the provided easyconfigs (or, if needed, scanning *all* existing easyconfig files).
+
+For example::
+
+  eb --new-pr example.eb example.patch --pr-commit-msg "just an example"
 
 .. note:: When providing one or more patch files, you *must* specify a (meaningful) commit message
           via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
