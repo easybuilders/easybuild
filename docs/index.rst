@@ -54,6 +54,7 @@ Advanced usage topics
     :glob:
     :maxdepth: 2
 
+    Archived-easyconfigs
     Controlling_compiler_optimization_flags
     Experimental_features
     Extended_dry_run
