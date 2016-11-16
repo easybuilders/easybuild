@@ -115,6 +115,29 @@ with observed slowdowns of the build and installation procedure of 10-15%.
 Filtering RPATH entries via ``--rpath-filter``
 ----------------------------------------------
 
+To avoid that the wrapper scripts inject RPATH entries for particular locations,
+EasyBuild can be configured with an RPATH filter via ``--rpath-filter``.
+
+The specified value should be a comma-separated list of (Python) regular expressions for paths.
+Only paths that *match* either of the specified patterns will be filtered out.
+
+For example, to filter out locations in either ``/opt/lib`` or ``/apps/lib``, use::
+
+  eb --rpath-filter='/opt/lib.*,/apps/lib.*'
+
+By default, no RPATH entries will be injected for system locations
+that start with either ``/lib`` (incl. ``/lib64``) or ``/usr``
+(which is equivalent with ``--rpath-filter='/lib.*,/usr.*'``).
+
+.. note:: If you are specifying ``--rpath--filter``, the default filter is *overwritten*,
+          so if you want to retain the filtering for system locations you should also
+          include ``/lib.*`` and ``/usr.*``.
+
+          For example, to also filter out paths starting with ``/example``::
+
+            eb --rpath-filter='/lib.*,/usr.*,/example.*'
+
+
 .. _rpath_support_LD_LIBRARY_PATH:
 
 Relation to ``$LD_LIBRARY_PATH``
