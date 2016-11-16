@@ -150,7 +150,7 @@ After completion of the bootstrap procedure and loading the
     # specify modules tool to use: EnvironmentModulesC (default), EnvironmentModulesTcl, Lmod)
     # see also http://easybuild.readthedocs.org/en/latest/Configuration.html#modules-tool-modules-tool
     export TEST_EASYBUILD_MODULES_TOOL=Lmod
-    
+
     # run full unit test suite for EasyBuild framework
     python -m test.framework.suite
 
@@ -167,7 +167,7 @@ Example bootstrap run
 Example output for bootstrapping EasyBuild v1.16.1::
 
     [[INFO]] Found module command 'lmod' (Lmod), so using it.
-    [[INFO]] 
+    [[INFO]]
 
     +++ STAGE 0: installing distribute via included (patched) distribute_setup.py...
 
@@ -176,7 +176,7 @@ Example output for bootstrapping EasyBuild v1.16.1::
     Extracting in /tmp/tmpz0zyAG
     Now working in /tmp/tmpz0zyAG/distribute-0.6.34
     Installing Distribute
-    [[INFO]] 
+    [[INFO]]
 
     +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
 
@@ -194,7 +194,7 @@ Example output for bootstrapping EasyBuild v1.16.1::
     Installing version 1.16.1.0 (required versions: API >= 1, easyblocks >= 1.16)
     warning: install_lib: 'build/lib' does not exist -- no Python modules to install
 
-    [[INFO]] 
+    [[INFO]]
 
     +++ STAGE 2: installing EasyBuild in /home/example/.local/easybuild with EasyBuild from stage 1...
 
@@ -224,19 +224,19 @@ Example output for bootstrapping EasyBuild v1.16.1::
     == temporary log file /tmp/easybuild-zql_Ft/easybuild-peQ8GA.log has been removed.
     == temporary directory /tmp/easybuild-zql_Ft has been removed.
     [[INFO]] Done!
-    [[INFO]] 
+    [[INFO]]
     [[INFO]] EasyBuild v1.16.1 was installed to /home/example/.local/easybuild, so make sure your $MODULEPATH includes /home/example/.local/easybuild/modules/all
-    [[INFO]] 
+    [[INFO]]
     [[INFO]] Run 'module load EasyBuild', and run 'eb --help' to get help on using EasyBuild.
     [[INFO]] Set $EASYBUILD_MODULES_TOOL to 'Lmod' to use the same modules tool as was used now.
-    [[INFO]] 
+    [[INFO]]
     [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
     [[INFO]] To install software with EasyBuild to /home/example/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
     [[INFO]] See http://easybuild.readthedocs.org/en/latest/Configuration.html for details on configuring EasyBuild.
-  
+
 
 After the bootstrap completes, the installed ``EasyBuild`` module can be loaded::
-  
+
   $ module use $HOME/.local/easybuild/modules/all
   $ module av
   ------------------------- /home/example/.local/easybuild/modules/all --------------------------
@@ -335,10 +335,14 @@ Updating an existing EasyBuild installation
 
 To upgrade to a newer EasyBuild version (say, |version|) than the one currently installed there are several options:
 
-     (i) (re)bootstrap EasyBuild to obtain an ``EasyBuild`` module for version |version|, using the instructions above, see :ref:`bootstrapping`.
-     (ii) install EasyBuild version |version| with a previous version of EasyBuild, using the easyconfig file available `on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
-     (iii) install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (``easy_install``, ``pip``, ...), see also :ref:`alt_inst_easy_install_pip`
-     (iv) update the ``master`` branch of your Git working copies of the different EasyBuild repositories
+  * (re)bootstrap EasyBuild to obtain an ``EasyBuild`` module for version |version|, using the instructions above, see :ref:`bootstrapping`.
+  * install EasyBuild version |version| with a previous version of EasyBuild
+
+    * using ``eb --install-latest-eb-release`` (requires EasyBuild v2.9.0 or more recent), or
+    * using the easyconfig file available on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
+
+  * install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (``easy_install``, ``pip``, ...), see also :ref:`alt_inst_easy_install_pip`
+  * update the ``master`` branch of your Git working copies of the different EasyBuild repositories
 
 .. _dependencies:
 
@@ -466,7 +470,7 @@ Required Python packages
   * the required version of ``vsc-base`` depends on the EasyBuild version
 
 .. note::
-   ``vsc-base`` is installed automatically along with EasyBuild, if an installation procedure is used that 
+   ``vsc-base`` is installed automatically along with EasyBuild, if an installation procedure is used that
    consumes the ``setup.py`` script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
    bootstrap script, ``pip``, ``easy_install``, ...)
 
@@ -544,4 +548,3 @@ and provide the output in your problem report.
     module av EasyBuild
     which -a eb
     eb --version
-
