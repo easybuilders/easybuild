@@ -30,6 +30,11 @@ Toolchains become deprecated if:
 * no easyconfig files using that toolchain have been contributed recently (e.g., in the last year)
 * that toolchain is considered to be inactive, after consulting the EasyBuild community (via mailing list, bi-weekly conf calls)
 
+Deprecating a toolchain implies that all easyconfigs using that toolchain are moved to the easyconfigs archive,
+and that they are no longer included in the EasyBuild regression test.
+In addition, these easyconfigs are 'hidden' from plain sight, in the sense that you need to use ``--consider-archived-easyconfigs``
+to make EasyBuild consider them when it is looking for easyconfigs (e.g., with ```--search`` or ``--robot``).
+
 This does *not* mean that the support for using these toolchains is removed from the EasyBuild framework,
 although not testing them anymore may imply that using them may no longer work at some point in time.
 
