@@ -533,6 +533,9 @@ For example, to create a pull request for a new version of, let's say, EasyBuild
 
 Yes, it's that easy!
 
+.. note:: When modifying existing files via ``--new-pr``,
+          you *must* specify a (meaningful) commit message using `--pr-commit-msg`, see :ref:`github_controlling_pr_metadata`.
+
 .. _github_update_pr:
 
 Updating existing pull requests (``--update-pr``)
@@ -577,6 +580,39 @@ For example, to update pull request #3153 with a changed easyconfig file::
 
     Updated hpcugent/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
 
+.. note:: When using ``--update-pr`` you *must* specify a (meaningful) commit message
+          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+
+.. _github_new_update_pr_patches:
+
+Including patch files in easyconfigs pull requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Next to providing one or more easyconfig files to add/update via ``--new-pr`` or ``--update-pr``,
+you can also include patch files that are required by those easyconfig files.
+
+EasyBuild will try and figure out where each patch file should be located
+(i.e. in the same directory as the easyconfig files that require that patch file),
+by scanning the provided easyconfigs (or, if needed, scanning *all* existing easyconfig files).
+
+.. note:: When providing one or more patch files, you *must* specify a (meaningful) commit message
+          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+
+.. _github_new_update_pr_delete:
+
+Deleting easyconfig files or patches
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Next to adding easyconfigs files or patches, or modifying existing ones, you can also specify to *delete*
+particular files, by including a colon character ```:`` before the name of the file.
+
+For example::
+
+  eb --new-pr :example-1.0.eb --pr-commit-msg "delete example-1.0.eb easyconfig file"
+
+.. note:: When deleting existing files, you *must* specify a custom commit message using ``--pr-commit-msg``,
+          see also :ref:`github_controlling_pr_metadata`.
+
 .. _github_controlling_pr_metadata:
 
 Controlling pull request metadata
@@ -614,11 +650,10 @@ when opening a new pull request with ``--new-pr``.
 Default commit message
 ++++++++++++++++++++++
 
-The default commit message is very simple: it specifies for each easyconfig file whether it was a new file being added,
-or an existing file being modifed, for example "``add easyconfig GCC-5.3.0.eb, modify easyconfig GCC-4.9.3.eb``".
+EasyBuild will try to generate an appropriate default commit message when only new easyconfigs are being added via ``--new-pr``.
 
-*It is highly recommended to provide a more descriptive commit message via* ``--pr-commit-msg`` *whenever existing
-easyconfig files are being modified, both with* ``--new-pr`` *and* ``--update-pr``.
+When existing easyconfigs are being modified, patch files are being added/updated or ``--update-pr`` is used,
+a custom (meaningful) commit message *must* be provided via ``--pr-commit-msg`` (see :ref:`github_controlling_pr_metadata`).
 
 Default pull request description
 ++++++++++++++++++++++++++++++++
