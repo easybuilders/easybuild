@@ -6,13 +6,13 @@
 
     * EB_ABAQUS
     * EB_Allinea
+    * EB_Anaconda
     * EB_CPLEX
     * EB_CUDA
     * EB_EPD
     * Rpm
 
       * EB_Mono
-      * EB_QLogicMPI
 
     * EB_IMOD
     * PackedBinary
@@ -22,6 +22,7 @@
 
     * EB_Mathematica
     * EB_Molpro
+    * Conda
     * JAR
 
   * EB_ACML
@@ -225,7 +226,6 @@
 
   * EB_FSL
   * EB_GAMESS_minus_US
-  * EB_GenomeAnalysisTK
   * EB_IronPython
   * PackedBinary
 

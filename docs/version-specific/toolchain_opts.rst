@@ -5,7 +5,7 @@ Available toolchain options (by toolchain)
 
 *(see also* ``eb --avail-toolchain-opts <tcname>`` *)*
 
-ClangGCC_ - CrayCCE_ - CrayGNU_ - CrayIntel_ - CrayPGI_ - GCC_ - GCCcore_ - GNU_ - PGI_ - cgmpich_ - cgmpolf_ - cgmvapich2_ - cgmvolf_ - cgompi_ - cgoolf_ - dummy_ - foss_ - gcccuda_ - gimkl_ - gimpi_ - gmacml_ - gmpich2_ - gmpich_ - gmpolf_ - gmvapich2_ - gmvolf_ - goalf_ - gompi_ - gompic_ - goolf_ - goolfc_ - gpsmpi_ - gpsolf_ - gqacml_ - iccifort_ - ictce_ - iimpi_ - iiqmpi_ - impich_ - impmkl_ - intel-para_ - intel_ - iomkl_ - iompi_ - ipsmpi_ - iqacml_ - ismkl_ - pomkl_ - pompi_ - xlcxlf_ - xlmpich2_ - xlmpich_ - xlmvapich2_ - xlompi_
+ClangGCC_ - CrayCCE_ - CrayGNU_ - CrayIntel_ - CrayPGI_ - GCC_ - GCCcore_ - GNU_ - PGI_ - cgmpich_ - cgmpolf_ - cgmvapich2_ - cgmvolf_ - cgompi_ - cgoolf_ - dummy_ - foss_ - gcccuda_ - gimkl_ - gimpi_ - gmacml_ - gmpich2_ - gmpich_ - gmpolf_ - gmvapich2_ - gmvolf_ - goalf_ - gompi_ - gompic_ - goolf_ - goolfc_ - gpsmpi_ - gpsolf_ - gqacml_ - iccifort_ - iccifortcuda_ - ictce_ - iimpi_ - iimpic_ - iiqmpi_ - impich_ - impmkl_ - intel-para_ - intel_ - intelcuda_ - iomkl_ - iompi_ - ipsmpi_ - iqacml_ - ismkl_ - pomkl_ - pompi_ - xlcxlf_ - xlmpich2_ - xlmpich_ - xlmvapich2_ - xlompi_
 
 .. _ClangGCC:
 
@@ -23,6 +23,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -59,6 +60,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
 ``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
 ``lowopt``                   Low compiler optimizations                                                                                                                                                                                                                                         ``False``
 ``mpich-mt``                 Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.    ``False``
@@ -96,6 +98,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
 ``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
 ``lowopt``                   Low compiler optimizations                                                                                                                                                                                                                                         ``False``
 ``mpich-mt``                 Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.    ``False``
@@ -133,6 +136,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
 ``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
 ``lowopt``                   Low compiler optimizations                                                                                                                                                                                                                                         ``False``
 ``mpich-mt``                 Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.    ``False``
@@ -170,6 +174,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
 ``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
 ``lowopt``                   Low compiler optimizations                                                                                                                                                                                                                                         ``False``
 ``mpich-mt``                 Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.    ``False``
@@ -207,6 +212,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -244,6 +250,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -281,6 +288,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -317,6 +325,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -352,6 +361,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -389,6 +399,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -426,6 +437,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -463,6 +475,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -500,6 +513,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -537,6 +551,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop-vectorize``           Loop vectorization                                 ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -573,6 +588,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -608,6 +624,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -646,6 +663,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -683,6 +701,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -721,6 +740,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -759,6 +779,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -797,6 +818,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -835,6 +857,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -873,6 +896,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -911,6 +935,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -949,6 +974,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -987,6 +1013,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1025,6 +1052,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1063,6 +1091,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1101,6 +1130,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1139,6 +1169,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1177,6 +1208,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1215,6 +1247,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1253,6 +1286,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``f2c``                      Generate code compatible with f2c and f77          ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loop``                     Automatic loop parallellisation                    ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1291,6 +1325,45 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
+``intel-static``             Link Intel provided libraries statically           ``False``
+``loose``                    Loose precision                                    ``False``
+``lowopt``                   Low compiler optimizations                         ``False``
+``no-icc``                   Don't set Intel specific macros                    ``False``
+``noopt``                    Disable compiler optimizations                     ``False``
+``openmp``                   Enable OpenMP                                      ``False``
+``opt``                      High compiler optimizations                        ``False``
+``optarch``                  Enable architecture optimizations                  ``True`` 
+``packed-linker-options``    Pack the linker options as comma separated list    ``False``
+``pic``                      Use PIC                                            ``False``
+``precise``                  High precision                                     ``False``
+``r8``                       Real is 8 byte real                                ``False``
+``shared``                   Build shared library                               ``False``
+``static``                   Build static library                               ``False``
+``strict``                   Strict (highest) precision                         ``False``
+``unroll``                   Unroll loops                                       ``False``
+``verbose``                  Verbose output                                     ``False``
+``veryloose``                Very loose precision                               ``False``
+=========================    ===============================================    =========
+
+
+.. _iccifortcuda:
+
+Available options for iccifortcuda toolchain
+--------------------------------------------
+
+=========================    ===============================================    =========
+option                       description                                        default  
+=========================    ===============================================    =========
+``32bit``                    Compile 32bit target                               ``False``
+``cciscxx``                  Use CC as CXX                                      ``False``
+``cstd``                     Specify C standard                                 ``None`` 
+``debug``                    Enable debug                                       ``False``
+``defaultopt``               Default compiler optimizations                     ``False``
+``defaultprec``              Default precision                                  ``False``
+``error-unknown-option``     Error instead of warning for unknown options       ``False``
+``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1328,6 +1401,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1366,6 +1440,46 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
+``intel-static``             Link Intel provided libraries statically           ``False``
+``loose``                    Loose precision                                    ``False``
+``lowopt``                   Low compiler optimizations                         ``False``
+``no-icc``                   Don't set Intel specific macros                    ``False``
+``noopt``                    Disable compiler optimizations                     ``False``
+``openmp``                   Enable OpenMP                                      ``False``
+``opt``                      High compiler optimizations                        ``False``
+``optarch``                  Enable architecture optimizations                  ``True`` 
+``packed-linker-options``    Pack the linker options as comma separated list    ``False``
+``pic``                      Use PIC                                            ``False``
+``precise``                  High precision                                     ``False``
+``r8``                       Real is 8 byte real                                ``False``
+``shared``                   Build shared library                               ``False``
+``static``                   Build static library                               ``False``
+``strict``                   Strict (highest) precision                         ``False``
+``unroll``                   Unroll loops                                       ``False``
+``usempi``                   Use MPI compiler as default compiler               ``False``
+``verbose``                  Verbose output                                     ``False``
+``veryloose``                Very loose precision                               ``False``
+=========================    ===============================================    =========
+
+
+.. _iimpic:
+
+Available options for iimpic toolchain
+--------------------------------------
+
+=========================    ===============================================    =========
+option                       description                                        default  
+=========================    ===============================================    =========
+``32bit``                    Compile 32bit target                               ``False``
+``cciscxx``                  Use CC as CXX                                      ``False``
+``cstd``                     Specify C standard                                 ``None`` 
+``debug``                    Enable debug                                       ``False``
+``defaultopt``               Default compiler optimizations                     ``False``
+``defaultprec``              Default precision                                  ``False``
+``error-unknown-option``     Error instead of warning for unknown options       ``False``
+``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1404,6 +1518,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1442,6 +1557,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1480,6 +1596,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1518,6 +1635,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1556,6 +1674,46 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
+``intel-static``             Link Intel provided libraries statically           ``False``
+``loose``                    Loose precision                                    ``False``
+``lowopt``                   Low compiler optimizations                         ``False``
+``no-icc``                   Don't set Intel specific macros                    ``False``
+``noopt``                    Disable compiler optimizations                     ``False``
+``openmp``                   Enable OpenMP                                      ``False``
+``opt``                      High compiler optimizations                        ``False``
+``optarch``                  Enable architecture optimizations                  ``True`` 
+``packed-linker-options``    Pack the linker options as comma separated list    ``False``
+``pic``                      Use PIC                                            ``False``
+``precise``                  High precision                                     ``False``
+``r8``                       Real is 8 byte real                                ``False``
+``shared``                   Build shared library                               ``False``
+``static``                   Build static library                               ``False``
+``strict``                   Strict (highest) precision                         ``False``
+``unroll``                   Unroll loops                                       ``False``
+``usempi``                   Use MPI compiler as default compiler               ``False``
+``verbose``                  Verbose output                                     ``False``
+``veryloose``                Very loose precision                               ``False``
+=========================    ===============================================    =========
+
+
+.. _intelcuda:
+
+Available options for intelcuda toolchain
+-----------------------------------------
+
+=========================    ===============================================    =========
+option                       description                                        default  
+=========================    ===============================================    =========
+``32bit``                    Compile 32bit target                               ``False``
+``cciscxx``                  Use CC as CXX                                      ``False``
+``cstd``                     Specify C standard                                 ``None`` 
+``debug``                    Enable debug                                       ``False``
+``defaultopt``               Default compiler optimizations                     ``False``
+``defaultprec``              Default precision                                  ``False``
+``error-unknown-option``     Error instead of warning for unknown options       ``False``
+``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1594,6 +1752,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1632,6 +1791,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1670,6 +1830,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1708,6 +1869,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1746,6 +1908,7 @@ option                       description                                        
 ``defaultprec``              Default precision                                  ``False``
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``intel-static``             Link Intel provided libraries statically           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
@@ -1783,6 +1946,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -1818,6 +1982,7 @@ option                       description                                        
 ``defaultopt``               Default compiler optimizations                     ``False``
 ``defaultprec``              Default precision                                  ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -1855,6 +2020,7 @@ option                       description                                        
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
 ``ibm-static``               Link IBM XL provided libraries statically          ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -1891,6 +2057,7 @@ option                       description                                        
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
 ``ibm-static``               Link IBM XL provided libraries statically          ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -1928,6 +2095,7 @@ option                       description                                        
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
 ``ibm-static``               Link IBM XL provided libraries statically          ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -1965,6 +2133,7 @@ option                       description                                        
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
 ``ibm-static``               Link IBM XL provided libraries statically          ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``
@@ -2002,6 +2171,7 @@ option                       description                                        
 ``error-unknown-option``     Error instead of warning for unknown options       ``False``
 ``i8``                       Integers are 8 byte integers                       ``False``
 ``ibm-static``               Link IBM XL provided libraries statically          ``False``
+``ieee``                     Adhere to IEEE-754 rules                           ``False``
 ``loose``                    Loose precision                                    ``False``
 ``lowopt``                   Low compiler optimizations                         ``False``
 ``noopt``                    Disable compiler optimizations                     ``False``

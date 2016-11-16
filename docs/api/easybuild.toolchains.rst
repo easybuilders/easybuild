@@ -50,13 +50,16 @@ Submodules
    easybuild.toolchains.gpsolf
    easybuild.toolchains.gqacml
    easybuild.toolchains.iccifort
+   easybuild.toolchains.iccifortcuda
    easybuild.toolchains.ictce
    easybuild.toolchains.iimpi
+   easybuild.toolchains.iimpic
    easybuild.toolchains.iiqmpi
    easybuild.toolchains.impich
    easybuild.toolchains.impmkl
    easybuild.toolchains.intel-para
    easybuild.toolchains.intel
+   easybuild.toolchains.intelcuda
    easybuild.toolchains.iomkl
    easybuild.toolchains.iompi
    easybuild.toolchains.ipsmpi
