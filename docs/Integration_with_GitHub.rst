@@ -477,10 +477,6 @@ yet:
 * ``--new-pr`` to create new pull requests
 * ``--update-pr`` to update existing pull requests
 
-.. note:: Both ``--new-pr`` and ``--update-pr`` are still **experimental**, meaning that their behaviour may change in
-          future releases and that they require having ``--experimental`` enabled;
-          see also :ref:`experimental_features`.
-
 .. _github_new_pr:
 
 Submitting pull requests (``--new-pr``)
@@ -491,7 +487,7 @@ requirements are fullfilled (see :ref:`github_requirements`).
 
 In its simplest form, you just provide the location of the file(s) that you want to include in the pull request::
 
-    $ eb --new-pr test.eb --experimental
+    $ eb --new-pr test.eb
 
 This takes care of all the steps required to make a contribution, i.e.:
 
@@ -510,12 +506,15 @@ The working copy of the EasyBuild repository is created in a temporary location,
 has been created. EasyBuild does *not* make changes to an existing working copy you may have in place already
 (cfr. :ref:`github_git_working_dirs_path`).
 
+.. note:: When modifying existing files via ``--new-pr``,
+          you *must* specify a (meaningful) commit message using `--pr-commit-msg`, see :ref:`github_controlling_pr_metadata`.
+
 Example
 +++++++
 
 For example, to create a pull request for a new version of, let's say, EasyBuild::
 
-    $ eb --new-pr ~/WIP/newEB.eb --experimental
+    $ eb --new-pr example.eb
     == temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
     == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
@@ -547,7 +546,7 @@ Similarly to creating new pull requests, existing pull requests can be easily up
 
 The usage is equally simple, for example to update pull request ``#1234`` just list the changed/new file(s)::
 
-    $ eb --update-pr 1234 ~/WIP/changed.eb --experimental
+    $ eb --update-pr 1234 example.eb
 
 Again, this take care of the whole procedure required to update an existing pull request:
 
@@ -565,12 +564,15 @@ that should be updated.
 Just like with ``--new-pr``, this is done in a temporary working copy of the repository, no changes are made to
 a possible existing working copy.
 
+.. note:: When using ``--update-pr`` you *must* specify a (meaningful) commit message
+          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+
 Example
 +++++++
 
 For example, to update pull request #3153 with a changed easyconfig file::
 
-    eb --update-pr 3153 ~/WIP/newEB.eb --experimental
+    eb --update-pr 3153 example.eb
     == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log
     == Determined branch name corresponding to hpcugent/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
@@ -580,6 +582,40 @@ For example, to update pull request #3153 with a changed easyconfig file::
      1 file changed, 3 insertions(+)
 
     Updated hpcugent/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
+
+.. _github_new_update_pr_patches:
+
+Including patch files in easyconfigs pull requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Next to providing one or more easyconfig files to add/update via ``--new-pr`` or ``--update-pr``,
+you can also include patch files that are required by those easyconfig files.
+
+EasyBuild will try and figure out where each patch file should be located
+(i.e. in the same directory as the easyconfig files that require that patch file),
+by scanning the provided easyconfigs (or, if needed, scanning *all* existing easyconfig files).
+
+For example::
+
+  eb --new-pr example.eb example.patch --pr-commit-msg "just an example"
+
+.. note:: When providing one or more patch files, you *must* specify a (meaningful) commit message
+          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+
+.. _github_new_update_pr_delete:
+
+Deleting easyconfig files or patches
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Next to adding easyconfigs files or patches, or modifying existing ones, you can also specify to *delete*
+particular files, by including a colon character ```:`` before the name of the file.
+
+For example::
+
+  eb --new-pr :example-1.0.eb --pr-commit-msg "delete example-1.0.eb easyconfig file"
+
+.. note:: When deleting existing files, you *must* specify a custom commit message using ``--pr-commit-msg``,
+          see also :ref:`github_controlling_pr_metadata`.
 
 .. _github_controlling_pr_metadata:
 
@@ -618,11 +654,10 @@ when opening a new pull request with ``--new-pr``.
 Default commit message
 ++++++++++++++++++++++
 
-The default commit message is very simple: it specifies for each easyconfig file whether it was a new file being added,
-or an existing file being modifed, for example "``add easyconfig GCC-5.3.0.eb, modify easyconfig GCC-4.9.3.eb``".
+EasyBuild will try to generate an appropriate default commit message when only new easyconfigs are being added via ``--new-pr``.
 
-*It is highly recommended to provide a more descriptive commit message via* ``--pr-commit-msg`` *whenever existing
-easyconfig files are being modified, both with* ``--new-pr`` *and* ``--update-pr``.
+When existing easyconfigs are being modified, patch files are being added/updated or ``--update-pr`` is used,
+a custom (meaningful) commit message *must* be provided via ``--pr-commit-msg`` (see :ref:`github_controlling_pr_metadata`).
 
 Default pull request description
 ++++++++++++++++++++++++++++++++
@@ -681,7 +716,7 @@ actually doing so.
 
 For example::
 
-    $ eb --new-pr EasyBuild-2.9.0.eb --experimental -D
+    $ eb --new-pr EasyBuild-2.9.0.eb -D
     == temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
     == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
