@@ -36,7 +36,7 @@ Using RPATH can be interesting for a number of reasons:
 
 * it can help to avoid a (too) large environment, since:
 
-  * ``$LD_LIBRARY_PATH`` does not need to set anymore for all dependencies providing libraries
+  * ``$LD_LIBRARY_PATH`` does not need to be set anymore for all dependencies providing libraries
   * it leads to fewer runtime dependencies (and hence fewer modules need to be loaded)
 
 * binaries can be used without problems w.r.t. resolving required libraries in other environments
@@ -78,7 +78,7 @@ As such, ``ps`` may show something like::
   |  \_ /example/software/GCCcore/4.9.3/bin/gcc -Wl,-rpath=$ORIGIN/../lib -Wl,-rpath=$ORIGIN/../lib64 -Wl,--disable-new-dtags -Wl,-rpath=/example -O2 example.c -L/example -lexample
 
 Here, ``/tmp/eb-M3393U/tmpRVJqwr/rpath_wrappers/gcc`` is the wrapper script for ``gcc``,
-which tweakes the list of command line arguments for ``gcc``
+which tweaks the list of command line arguments for ``gcc``
 before calling out to the real ``gcc`` command (i.e., ``/example/software/GCCcore/4.9.3/bin/gcc`` in this example).
 
 .. _rpath_support_impl_logs
@@ -143,7 +143,7 @@ that start with either ``/lib`` (incl. ``/lib64``) or ``/usr``
 Relation to ``$LD_LIBRARY_PATH``
 --------------------------------
 
-As mention above (:ref:`rpath_support_why`), using RPATH avoids the need to update ``$LD_LIBRARY_PATH`` for every dependency.
+As mentioned above (:ref:`rpath_support_why`), using RPATH avoids the need to update ``$LD_LIBRARY_PATH`` for every dependency.
 
 However, there is a chicken-or-egg situation: even though a particular dependency itself can be built and installed using RPATH,
 it does not mean that software packages that require it *have* to built with RPATH...
