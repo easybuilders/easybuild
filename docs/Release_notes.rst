@@ -87,7 +87,7 @@ feature release
 * various enhancements, including:
 
   * enable use of ``GCCcore`` as toolchain for Clang, fail if no GCC prefix is found (`#1002 <https://github.com/hpcugent/easybuild-easyblocks/pull/1002>`_)
-  * also build Boos` MPI library in parallel (`#1005 <https://github.com/hpcugent/easybuild-easyblocks/pull/1005>`_, `#1038 <https://github.com/hpcugent/easybuild-easyblocks/pull/1038>`_)
+  * also build Boost MPI library in parallel (`#1005 <https://github.com/hpcugent/easybuild-easyblocks/pull/1005>`_, `#1038 <https://github.com/hpcugent/easybuild-easyblocks/pull/1038>`_)
   * enhance g2clib easyblock to allow to install 1.6.0 or higher (`#1006 <https://github.com/hpcugent/easybuild-easyblocks/pull/1006>`_)
   * update QuantumESPRESSO easyblock to support packaging changes in 6.0 (`#1007 <https://github.com/hpcugent/easybuild-easyblocks/pull/1007>`_)
   * add support to ``Scons`` generic easyblock to provide argument to specify installation prefix (`#1008 <https://github.com/hpcugent/easybuild-easyblocks/pull/1008>`_)
