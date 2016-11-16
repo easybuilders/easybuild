@@ -21,7 +21,7 @@ feature release
   * make robot always consider subtoolchains, even without ``--minimal-toolchains`` (but in reverse order) (`#1973 <https://github.com/hpcugent/easybuild-framework/pull/1973>`_)
   * clean up behaviour that was deprecated for EasyBuild v3.0 (`#1978 <https://github.com/hpcugent/easybuild-framework/pull/1978>`_)
   * change *default* config to use ``Lmod``/``Lua`` for modules tool/syntax, ``GC3Pie`` as job backend (`#1985 <https://github.com/hpcugent/easybuild-framework/pull/1985>`_)
-  * the minimal required version of Lmod was bumped to 5.8
+  * the minimal required version of Lmod was bumped to 5.8 (`#1985 <https://github.com/hpcugent/easybuild-framework/pull/1985>`_)
 
 * major new features:
 
@@ -47,7 +47,7 @@ feature release
 
   * clean up output of EasyBuild bootstrap script & add version (`#1944 <https://github.com/hpcugent/easybuild-framework/pull/1944>`_)
   * improved ARM platform/CPU detection (`#1953 <https://github.com/hpcugent/easybuild-framework/pull/1953>`_)
-  * use '``0``' as letter dir for funky software names that don't start with a letter (`#1954 <https://github.com/hpcugent/easybuild-framework/pull/1954>`_)
+  * use '``0``' as letter dir for funky software names that don't start with a letter, e.g., ``3to2`` (`#1954 <https://github.com/hpcugent/easybuild-framework/pull/1954>`_)
   * make bootstrap script aware of ``vsc-install`` for offline installation (`#1955 <https://github.com/hpcugent/easybuild-framework/pull/1955>`_)
   * add support for ``blas_family()`` and ``lapack_family()`` methods in ``Toolchain`` instances (`#1961 <https://github.com/hpcugent/easybuild-framework/pull/1961>`_)
   * make ``copy_file`` dry-run aware (`#1963 <https://github.com/hpcugent/easybuild-framework/pull/1963>`_)
@@ -98,7 +98,7 @@ feature release
   * update CBLAS easyblock to build with ``foss`` toolchain (`#1024 <https://github.com/hpcugent/easybuild-easyblocks/pull/1024>`_)
   * update Gurobi easyblock to use ``copy_file`` (`#1028 <https://github.com/hpcugent/easybuild-easyblocks/pull/1028>`_)
   * add support for giving ``/lib`` preference over ``/lib64`` & co in GCC installation (`#1030 <https://github.com/hpcugent/easybuild-easyblocks/pull/1030>`_, `#1035 <https://github.com/hpcugent/easybuild-easyblocks/pull/1035>`_)
-  * enable installation of ``libliberty`` by default for binutils (`#1030 <https://github.com/hpcugent/easybuild-easyblocks/pull/1030>`_)
+  * enable installation of ``libiberty`` by default for binutils (`#1030 <https://github.com/hpcugent/easybuild-easyblocks/pull/1030>`_)
   * avoid CMake fiddling with the RPATHs injected by EasyBuild via ``--rpath`` in CMakeMake and METIS easyblocks (`#1031 <https://github.com/hpcugent/easybuild-easyblocks/pull/1031>`_, `#1034 <https://github.com/hpcugent/easybuild-easyblocks/pull/1034>`_)
   * simplify scipy sanity check to make it more robust w.r.t. version updates (`#1037 <https://github.com/hpcugent/easybuild-easyblocks/pull/1037>`_)
 
@@ -108,7 +108,7 @@ feature release
   * fix ATLAS easyblock for non-x86 systems (`#1003 <https://github.com/hpcugent/easybuild-easyblocks/pull/1003>`_)
   * fix '``usempi``' and '``with_mpi``' usage to allow for a serial build of Amber 16 (`#1013 <https://github.com/hpcugent/easybuild-easyblocks/pull/1013>`_)
   * add both ``lib/python2.7/site-packages/{,wx-3.0-gtk2}`` to ``$PYTHONPATH`` for wxPython (`#1018 <https://github.com/hpcugent/easybuild-easyblocks/pull/1018>`_)
-  * only hard inject RPATH for ``/usr/lib*`` directories when building bintuils with ``dummy`` toolchain (`#1026 <https://github.com/hpcugent/easybuild-easyblocks/pull/1026>`_)
+  * only hard inject RPATH for ``/usr/lib*`` directories when building binutils with ``dummy`` toolchain (`#1026 <https://github.com/hpcugent/easybuild-easyblocks/pull/1026>`_)
   * make HDF5 easyblock handle ``--filter-deps`` correctly (`#1027 <https://github.com/hpcugent/easybuild-easyblocks/pull/1027>`_)
   * update Travis config w.r.t. changes framework config defaults and required Lmod version (`#1029 <https://github.com/hpcugent/easybuild-easyblocks/pull/1029>`_)
   * be more patient when running Mathematica Q&A installer (`#1036 <https://github.com/hpcugent/easybuild-easyblocks/pull/1036>`_)
@@ -1870,7 +1870,7 @@ feature + bugfix release
   * easyconfigs should specify ``easyblock = 'ConfigureMake'`` instead of relying on the fallback mechanism
   * **note: automagic fallback to** ``ConfigureMake`` **easyblock will be removed in EasyBuild v2.0**
   * see also `Automagic fallback to ConfigureMake <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_
-  
+
 * stop triggering deprecated functionality, to enable use of ``--deprecated=2.0`` (`#1107 <https://github.com/hpcugent/easybuild-framework/pull/1107>`_, `#1115 <https://github.com/hpcugent/easybuild-framework/pull/1115>`_, `#1119 <https://github.com/hpcugent/easybuild-framework/pull/1119>`_)
 
   * see `Deprecated functionality <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_ for more information
@@ -1931,7 +1931,7 @@ feature + bugfix release
 * fix use of deprecated functionality, enhance unit tests to check for it (`#523 <https://github.com/hpcugent/easybuild-easyblocks/pull/523>`_)
 
 * various other enhancements, including:
-  
+
   * update PETSc easyblock for recent versions (v3.5) (`#446 <https://github.com/hpcugent/easybuild-easyblocks/pull/446>`_)
   * only include major/minor version numbers for FLUENT subdir (`#480 <https://github.com/hpcugent/easybuild-easyblocks/pull/480>`_)
   * factor out 'move after install' code from impi easyblock to ``IntelBase``, use it for itac (`#487 <https://github.com/hpcugent/easybuild-easyblocks/pull/487>`_)
@@ -1973,7 +1973,7 @@ feature + bugfix release
 * added easyconfigs for new toolchains
 
   * ``intel/2014.10`` & ``intel/2014.11`` (`#1219 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1219>`_), ``intel-para/2014.12`` (`#1246 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1246>`_), ``gpsolf/2014.12`` (`#1245 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1245>`_), ``iompi/6.6.4`` (`#1215 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1215>`_)
-  
+
 * include ``easyblock = 'ConfigureMake'`` in relevant easyconfigs to deal with deprecation of automagic fallback to ``ConfigureMake`` (`#1248 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1248>`_)
 
   * see also `easybuild-framework#1113 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1113>`_ and `Automagic fallback to ConfigureMake <http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html#configuremake-fallback>`_
@@ -2231,7 +2231,7 @@ feature + bugfix release
 
   * added support for additional easyconfig parameters:
     * define aliases in module files (``modaliases``) (`#952 <https://github.com/hpcugent/easybuild-framework/pull/952>`_)
-    * add print message on module load (``modloadmsg``) and Tcl footer (``modtclfooter``) in module files (`#954 <https://github.com/hpcugent/easybuild-framework/pull/954>`_, `#974 <https://github.com/hpcugent/easybuild-framework/pull/974>`_) 
+    * add print message on module load (``modloadmsg``) and Tcl footer (``modtclfooter``) in module files (`#954 <https://github.com/hpcugent/easybuild-framework/pull/954>`_, `#974 <https://github.com/hpcugent/easybuild-framework/pull/974>`_)
 
 * various bug fixes, including:
 
@@ -2627,7 +2627,7 @@ feature + bugfix release
     * cfr. ``checksums`` easyconfig parameter
 
   * add support for `eb --confighelp`, which prints out an example configuration file (`#775 <https://github.com/hpcugent/easybuild-framework/pull/775>`_)
-  * add initial support for ``eb`` tab completion in bash shells (`#775 <https://github.com/hpcugent/easybuild-framework/pull/775>`_, `#797 <https://github.com/hpcugent/easybuild-framework/pull/797>`_, `#798 <https://github.com/hpcugent/easybuild-framework/pull/798>`_) 
+  * add initial support for ``eb`` tab completion in bash shells (`#775 <https://github.com/hpcugent/easybuild-framework/pull/775>`_, `#797 <https://github.com/hpcugent/easybuild-framework/pull/797>`_, `#798 <https://github.com/hpcugent/easybuild-framework/pull/798>`_)
 
     * see also https://github.com/hpcugent/easybuild/wiki/Setting-up-tab-completion-for-bash
     * note: may be quite slow for now
@@ -3809,7 +3809,7 @@ v0.8 (June 29th 2012)
 
 * added support for building/installing 17 additional software packages:
 
-  * BEAGLE, Doxygen, g2clib, g2lib, HDF, HDF5, JasPer, libpng, Maple, 
+  * BEAGLE, Doxygen, g2clib, g2lib, HDF, HDF5, JasPer, libpng, Maple,
     MrBayes, NCL, netCDF, netCDF-Fortran, Szip, WPS, WRF, zlib
 
 * the build procedure for WRF and WPS includes running the tests available for these packages
