@@ -477,10 +477,6 @@ yet:
 * ``--new-pr`` to create new pull requests
 * ``--update-pr`` to update existing pull requests
 
-.. note:: Both ``--new-pr`` and ``--update-pr`` are still **experimental**, meaning that their behaviour may change in
-          future releases and that they require having ``--experimental`` enabled;
-          see also :ref:`experimental_features`.
-
 .. _github_new_pr:
 
 Submitting pull requests (``--new-pr``)
@@ -491,7 +487,7 @@ requirements are fullfilled (see :ref:`github_requirements`).
 
 In its simplest form, you just provide the location of the file(s) that you want to include in the pull request::
 
-    $ eb --new-pr test.eb --experimental
+    $ eb --new-pr test.eb
 
 This takes care of all the steps required to make a contribution, i.e.:
 
@@ -515,7 +511,7 @@ Example
 
 For example, to create a pull request for a new version of, let's say, EasyBuild::
 
-    $ eb --new-pr ~/WIP/newEB.eb --experimental
+    $ eb --new-pr example.eb
     == temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
     == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
@@ -547,7 +543,7 @@ Similarly to creating new pull requests, existing pull requests can be easily up
 
 The usage is equally simple, for example to update pull request ``#1234`` just list the changed/new file(s)::
 
-    $ eb --update-pr 1234 ~/WIP/changed.eb --experimental
+    $ eb --update-pr 1234 ~/WIP/changed.eb
 
 Again, this take care of the whole procedure required to update an existing pull request:
 
@@ -570,7 +566,7 @@ Example
 
 For example, to update pull request #3153 with a changed easyconfig file::
 
-    eb --update-pr 3153 ~/WIP/newEB.eb --experimental
+    eb --update-pr 3153 example.eb
     == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log
     == Determined branch name corresponding to hpcugent/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
@@ -681,7 +677,7 @@ actually doing so.
 
 For example::
 
-    $ eb --new-pr EasyBuild-2.9.0.eb --experimental -D
+    $ eb --new-pr EasyBuild-2.9.0.eb -D
     == temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
     == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
