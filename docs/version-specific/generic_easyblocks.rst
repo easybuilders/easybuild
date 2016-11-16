@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependendPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependendPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -289,6 +289,33 @@ Customised steps in ``CmdCp`` easyblock
 * ``build_step`` - Build by running the command with the inputfiles
 * ``configure_step`` - Build by running the command with the inputfiles
 * ``install_step`` - Build by running the command with the inputfiles
+
+.. _Conda:
+
+``Conda``
+=========
+
+(derives from :ref:`Binary`)
+
+Support for installing software using 'conda'.
+
+Extra easyconfig parameters specific to ``Conda`` easyblock
+-----------------------------------------------------------
+
+======================    ===============================================================    =============
+easyconfig parameter      description                                                        default value
+======================    ===============================================================    =============
+``channels``              List of conda channels to pass to 'conda install'                  ``None``     
+``requirements``          Requirements specification to pass to 'conda install'              ``None``     
+``install_cmd``           Install command to be used.                                        ``None``     
+``staged_install``        Perform staged installation via subdirectory of build directory    ``False``    
+``environment_file``      Conda environment.yml file to use with 'conda env create'          ``None``     
+``remote_environment``    Remote conda environment to use with 'conda env create'            ``None``     
+======================    ===============================================================    =============
+
+Customised steps in ``Conda`` easyblock
+---------------------------------------
+* ``install_step`` - Install software using 'conda env create' or 'conda create' & 'conda install'.
 
 .. _ConfigureMake:
 
@@ -755,6 +782,15 @@ Customised steps in ``RubyGem`` easyblock
 (derives from EasyBlock)
 
 Support for building/installing with SCons.
+
+Extra easyconfig parameters specific to ``SCons`` easyblock
+-----------------------------------------------------------
+
+====================    =========================================    =============
+easyconfig parameter    description                                  default value
+====================    =========================================    =============
+``prefix_arg``          Syntax for specifying installation prefix    ``"PREFIX="``
+====================    =========================================    =============
 
 Customised steps in ``SCons`` easyblock
 ---------------------------------------

@@ -54,6 +54,7 @@ Advanced usage topics
     :glob:
     :maxdepth: 2
 
+    Archived-easyconfigs
     Controlling_compiler_optimization_flags
     Experimental_features
     Extended_dry_run
@@ -62,6 +63,7 @@ Advanced usage topics
     Manipulating_dependencies
     Packaging_support
     Partial_installations
+    RPATH-support
     Submitting_jobs
     Using_external_modules
 
