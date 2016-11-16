@@ -6,12 +6,100 @@ Removed functionality
 Some of the functionality that was available in previous EasyBuild versions is now *removed*,
 after it was deprecated first in an earlier EasyBuild version (see :ref:`deprecation_policy`).
 
+.. _overview_removed_30:
+
+Overview of removed functionality since EasyBuild v3.0
+-------------------------------------------------------
+
+In EasyBuild v3.0, some intrusive changes were made that break backward compatibility with earlier versions.
+
+For EasyBuild users & authors of easyconfig files:
+
+* :ref:`archived_easyconfigs`
+
+For developers of easyblocks:
+
+* :ref:`depr_error_reporting`
+* :ref:`depr_lapack_get_blas_lib`
+* :ref:`depr_get_netcdf_module_set_cmds`
+
+For EasyBuild framework developers:
+
+* :ref:`depr_error_reporting`
+
+.. _depr_error_reporting:
+
+``error`` and ``exception`` log methods no longer raise an exception
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v2.1.0 (April'15)
+* *removed in:* EasyBuild v3.0
+* *alternative(s)*: **use** ``raise EasyBuildError(...)`` **instead**
+
+The ``error()`` and ``exception()`` log methods defined by EasyBuild (in the ``easybuild.tools.build_log`` module)
+did not match the semantics of the `standard Python log methods
+<https://docs.python.org/2/library/logging.html#logging.Logger.error>`_, in the sense that they used to also raise an
+exception next to logging messages.
+
+This caused problems when 3rd party libraries (e.g., `gc3pie <https://pypi.python.org/pypi/gc3pie>`_) were being
+used by EasyBuild, since they may be using these log methods without expecting an exception being raised.
+
+The custom definitions for the ``error()`` and ``exception()`` log methods was removed in EasyBuild v3.0.
+
+Hence, these log methods should no longer be used to report errors since they will not raise an exception anymore once.
+Note that this applies both to the EasyBuild framework and to (custom) easyblocks.
+
+To report errors, an ``EasyBuildError`` should be raised instead. For example:
+
+.. code::
+
+    # make sure config.sh script is there
+    if not os.path.exists(os.path.join(self.builddir, 'config.sh')):
+        raise EasyBuildError("config.sh script is missing in %s", self.builddir)
+
+.. _depr_lapack_get_blas_lib:
+
+``get_blas_lib`` function provided by ``LAPACK`` easyblock has been removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v1.3.0 (April'13); see https://github.com/hpcugent/easybuild-easyblocks/pull/150
+* *removed in:* EasyBuild v3.0
+* *alternative(s)*: **leverage modules from** ``easybuild.toolchain.linalg``
+
+The ``get_blas_lib`` function provided by the ``LAPACK`` easyblock was removed,
+mainly because it included a hardcoded list of BLAS libraries.
+
+It was replaced by 'inlining' similar code into the easyblocks that rely on it
+(e.g. ScaLAPACK, cfr. https://github.com/hpcugent/easybuild-easyblocks/pull/1014),
+which only refers to the BLAS libraries that are relevant in that context.
+
+
+.. _depr_get_netcdf_module_set_cmds:
+
+``get_netcdf_module_set_cmds`` function provided by ``netCDF`` easyblock was removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v2.1.0 (April'15); see https://github.com/hpcugent/easybuild-easyblocks/pull/590
+* *removed in:* EasyBuild v3.0
+* *alternative(s)*: **rely on** ``set_netcdf_env_vars`` **and use** ``self.module_generator.set_environment``
+
+The ``get_netcdf_module_set_cmds`` function provided by the ``netCDF`` easyblock was removed, because it
+returned ``setenv`` statements to be included in module files that are only compatible with module files in Tcl syntax;
+i.e. it did not take into account the ``--module-syntax`` configuration option.
+
+The use of ``get_netcdf_module_set_cmds`` should be replaced by using ``set_netcdf_env_vars``
+to define the ``NETCDF*`` environment variables, in combination with ``self.module_generator.set_environment``
+to obtain ``setenv`` statements that are compatible with the module syntax (``Tcl`` or ``Lua``) being used.
+
+See for example the changes made to the ``WRF`` and ``WPS``
+easyblocks in https://github.com/hpcugent/easybuild-easyblocks/commit/7a05cbd823769e343b951002b4735dc7632e19c0.
+
 .. _overview_removed_20:
 
 Overview of removed functionality since EasyBuild v2.0
 -------------------------------------------------------
 
-In EasyBuild v2.0, some intrusive changes were made that break backward compatibility with EasyBuild v1.x.
+In EasyBuild v2.0, some intrusive changes were made that break backward compatibility with earlier versions.
 
 For EasyBuild users:
 
@@ -173,7 +261,7 @@ Software license
 * *alternative(s)*: use ``license_file`` or ``software_license`` instead
 
 The ``license`` easyconfig parameter, which was specific to the ``IntelBase`` generic easyblock and thus relevant
-for Intel tools, is removed. The generic ``license_file`` easyconfig parameter should be used instead, to specify 
+for Intel tools, is removed. The generic ``license_file`` easyconfig parameter should be used instead, to specify
 the location of the license file (or server).
 
 This change was made to avoid confusion with the ``software_license`` generic easyconfig parameter, which can be used
