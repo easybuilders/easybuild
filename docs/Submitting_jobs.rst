@@ -35,18 +35,16 @@ The job backend to be used can be specified using the ``--job-backend`` EasyBuil
 
 Since EasyBuild 2.2.0, two backends are supported:
 
-* ``PbsPython`` *(default)*
-
-  * ``pbs_python`` version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
-  * **note**: requires TORQUE resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
-
-* ``GC3Pie`` *(recommended)*
+* ``GC3Pie`` *(default, recommended)*
 
   * ``GC3Pie`` version 2.4.0 (or more recent) required (https://gc3pie.readthedocs.org)
   * works with different resource managers and job schedulers, including TORQUE, SLURM, etc.
   * **note**: requires that a GC3Pie configuration file is provided, see :ref:`submitting_jobs_cfg_job_backend_config`
 
-For historical reasons, ``PbsPython`` is still the default job backend in EasyBuild version 2.x.
+* ``PbsPython``
+
+  * ``pbs_python`` version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
+  * **note**: requires TORQUE resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
 
 
 
