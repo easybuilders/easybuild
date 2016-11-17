@@ -641,7 +641,7 @@ For example:
 Modules tool (``--modules-tool``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``EnvironmentModulesC``
+*default*: ``Lmod``
 
 Specifying the modules tool that should be used by EasyBuild can be
 done using the ``modules-tool`` configuration setting.
@@ -688,7 +688,7 @@ For more details, see the dedicated page: https://github.com/hpcugent/easybuild/
 Module files syntax (``--module-syntax``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*default*: ``Tcl``
+*default*: ``Lua``
 
 *supported since*: EasyBuild v2.1
 
