@@ -7,6 +7,67 @@ The latest version of EasyBuild provides support for building and installing **1
 using 25 different (compiler) toolchains. It contains 179 software-specific easyblocks and 30 generic easyblocks,
 alongside 6,176 easyconfig files.
 
+.. _release_notes_eb301:
+
+v3.0.1 (November 30th 2016)
+---------------------------
+
+bugfix release
+
+**framework**
+
+* important changes
+
+  * always use Intel-specific MPI compiler wrappers (``mpiicc``, ``mpiicpc``, ``mpiifort``) for toolchains using both Intel compilers and Intel MPI (`#2005 <https://github.com/hpcugent/easybuild-framework/pull/2005>`_)
+
+* various small enhancements, including:
+
+  * use ``setvar`` in ``modules.py`` to define environment variables (`#2011 <https://github.com/hpcugent/easybuild-framework/pull/2011>`_)
+  * include output of ``sanity_check_commands`` in the build log (`#2020 <https://github.com/hpcugent/easybuild-framework/pull/2020>`_)
+
+* various bug fixes, including:
+
+  * fix testing of bootstrap script in Travis config (`#2003 <https://github.com/hpcugent/easybuild-framework/pull/2003>`_)
+  * use correct module syntax in bootstrap script if Lmod is not used (i.e. Tcl) (`#2007 <https://github.com/hpcugent/easybuild-framework/pull/2007>`_)
+  * fix packaging issue with non-Python scripts in easybuild/scripts (`#2015 <https://github.com/hpcugent/easybuild-framework/pull/2015>`_)
+
+    * fixes issue where RPATH wrapper template script (``rpath_wrapper_template.sh.in``) was not included in the v3.0.0 release
+
+  * make tests more robust against running headless (`#2016 <https://github.com/hpcugent/easybuild-framework/pull/2016>`_)
+  * avoid rewrapping already wrapped compiler/linker command with RPATH wrapper script (`#2022 <https://github.com/hpcugent/easybuild-framework/pull/2022>`_)
+  * fix log.error traceback due to 'raise EasyBuildError' involving a '%s' in error message (`#2024 <https://github.com/hpcugent/easybuild-framework/pull/2024>`_)
+  * make sure 'modules_tool' attribute is also defined for extensions (`#2026 <https://github.com/hpcugent/easybuild-framework/pull/2026>`_)
+  * only dump easyconfig with modified deps due to ``--minimal-toolchains`` to 'reprod' subdir of install dir (`#2028 <https://github.com/hpcugent/easybuild-framework/pull/2028>`_)
+
+**easyblocks**
+
+* various enhancements, including:
+
+  * update SAMtools easyblock for recent versions (`#1048 <https://github.com/hpcugent/easybuild-easyblocks/pull/1048>`_)
+
+* various bugfixes, including:
+
+  * fix QuantumESPRESSO easyblock to handle gipaw correctly (`#1041 <https://github.com/hpcugent/easybuild-easyblocks/pull/1041>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 6 new software packages:
+
+  * Cookiecutter (`#3827 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3827>`_), ETE (`#3857 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3857>`_), findhap (`#3860 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3860>`_), LoFreq (`#3856 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3856>`_), PhyloBayes-MPI (`#3859 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3859>`_), XGBoost (`#3849  <https://github.com/hpcugent/easybuild-easyconfigs/pull/3849>`_)
+
+* added additional easyconfigs for various supported software packages
+
+* various enhancements, including:
+
+  * add ``ipywidgets`` and ``widgetsnbextension`` extensions to IPython 5.1.0 easyconfigs (`#3818 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3818>`_, `#3823 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3823>`_)
+
+* various bug fixes, including:
+
+  * fix incorrect descriptions for ifort (`#3817 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3817>`_)
+  * fix ``modulename`` for Jinja2 and Pygments (`#3823 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3823>`_)
+  * fix download URL in BLAST 2.2.26 easyconfig (`#3861 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3861>`_)
+
+
 .. _release_notes_eb300:
 
 v3.0.0 (November 16th 2016)
