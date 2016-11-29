@@ -38,6 +38,7 @@ bugfix release
   * fix log.error traceback due to 'raise EasyBuildError' involving a '%s' in error message (`#2024 <https://github.com/hpcugent/easybuild-framework/pull/2024>`_)
   * make sure 'modules_tool' attribute is also defined for extensions (`#2026 <https://github.com/hpcugent/easybuild-framework/pull/2026>`_)
   * only dump easyconfig with modified deps due to ``--minimal-toolchains`` to 'reprod' subdir of install dir (`#2028 <https://github.com/hpcugent/easybuild-framework/pull/2028>`_)
+  * avoid appending '-h' to sanity check commands specified as a string (`#2030 <https://github.com/hpcugent/easybuild-framework/pull/2030>`_)
 
 **easyblocks**
 
@@ -48,6 +49,7 @@ bugfix release
 * various bugfixes, including:
 
   * fix QuantumESPRESSO easyblock to handle gipaw correctly (`#1041 <https://github.com/hpcugent/easybuild-easyblocks/pull/1041>`_)
+  * always specify name of serial Fortran compiler to ALADIN, it already knows to use MPI wrapper commands (`#1050 <https://github.com/hpcugent/easybuild-easyblocks/pull/1050>`_)
 
 **easyconfigs**
 
@@ -60,6 +62,7 @@ bugfix release
 * various enhancements, including:
 
   * add ``ipywidgets`` and ``widgetsnbextension`` extensions to IPython 5.1.0 easyconfigs (`#3818 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3818>`_, `#3823 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3823>`_)
+  * run dadi test suite as a sanity check command (`#3858 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3858>`_)
 
 * various bug fixes, including:
 
