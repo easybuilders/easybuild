@@ -39,6 +39,7 @@ bugfix release
   * make sure '``modules_tool``' attribute is also defined for extensions (`#2026 <https://github.com/hpcugent/easybuild-framework/pull/2026>`_)
   * only dump easyconfig with modified deps due to ``--minimal-toolchains`` to 'reprod' subdir of install dir (`#2028 <https://github.com/hpcugent/easybuild-framework/pull/2028>`_)
   * avoid appending '``-h'`` to sanity check commands specified as a string (`#2030 <https://github.com/hpcugent/easybuild-framework/pull/2030>`_)
+  * avon list_software_rst: always include versionsuffix regardless of value (`#2032 <https://github.com/hpcugent/easybuild-framework/pull/2032>`_)
 
 **easyblocks**
 
