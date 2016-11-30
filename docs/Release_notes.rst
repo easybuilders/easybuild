@@ -54,9 +54,9 @@ bugfix release
 
 **easyconfigs**
 
-* added example easyconfig files for 6 new software packages:
+* added example easyconfig files for 7 new software packages:
 
-  * Cookiecutter (`#3827 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3827>`_), ETE (`#3857 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3857>`_), findhap (`#3860 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3860>`_), LoFreq (`#3856 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3856>`_), PhyloBayes-MPI (`#3859 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3859>`_), XGBoost (`#3849  <https://github.com/hpcugent/easybuild-easyconfigs/pull/3849>`_)
+  * Cookiecutter (`#3827 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3827>`_), ETE (`#3857 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3857>`_), findhap (`#3860 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3860>`_), graphviz (Python bindings, `#3826 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3826>`_), LoFreq (`#3856 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3856>`_), PhyloBayes-MPI (`#3859 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3859>`_), XGBoost (`#3849  <https://github.com/hpcugent/easybuild-easyconfigs/pull/3849>`_)
 
 * added additional easyconfigs for various supported software packages
 
