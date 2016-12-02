@@ -9,7 +9,7 @@ This page provides an overview of the current status.
 
 For more information about this, contact:
 
-* Guilherme Peretti-Pezzi (CSCS, Switserland, peretti@cscs.ch)
+* Guilherme Peretti-Pezzi (CSCS, Switzerland, peretti@cscs.ch)
 * Kenneth Hoste (HPC-UGent, Belgium; kenneth.hoste@ugent.be)
 * Petar Forai (IMBA/IMP, Austria; petar.forai@imp.ac.at).
 
@@ -60,6 +60,9 @@ Major scientific software applications
 * **GROMACS** 4.6.7
 * **Python** 2.7.9 + numpy 1.9.2 + scipy 0.15.1
 * **WRF** 3.6.1 (pending on Sisu)
+
+An up-to-date list of software applications built on Cray systems at CSCS can be found https://github.com/eth-cscs/production/,
+see https://github.com/eth-cscs/production/tree/master/jenkins-builds .
 
 Required EasyBuild configuration
 --------------------------------
