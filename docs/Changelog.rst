@@ -3,6 +3,36 @@
 Changelog for EasyBuild documentation
 -------------------------------------
 
+(for EasyBuild release notes, see :ref:`release_notes`)
+
+* **release 20161130.01** (`Nov 16th 2016`): update release notes for EasyBuild v3.0.1 (see :ref:`release_notes_eb301`)
+* **release 20161117.01** (`Nov 17th 2016`): update mentions of default configuration according to updated default in EasyBuild v3.0.0
+* **release 20161116.01** (`Nov 16th 2016`): update documentation and release notes for EasyBuild v3.0.0 (see :ref:`release_notes_eb300`)
+
+  * :ref:`archived_easyconfigs`
+  * :ref:`rpath_support`
+
+* **release 20161028.01** (`Oct 28th 2016`): recommend using ``--rebuild`` rather than ``--force`` (see :ref:`rebuild_option`)
+* **release 20161023.01** (`Oct 24th 2016`): add section on iterating over configure/build/install options (see :ref:`configure_build_install_command_options_iterate`)
+* **release 20161014.01** (`Oct 14th 2016`): update documentation on deprecated functionality (see :ref:`deprecated`)
+* **release 20161010.01** (`Oct 10th 2016`): add page for EasyBuild demos (see :ref:`demos`)
+* **release 20160923.02** (`Sept 23rd 2016`): update release notes for EasyBuild v2.9.0 (see :ref:`release_notes_eb290`)
+* **release 20160923.01** (`Sept 23rd 2016`): add generated list of supported software (see :ref:`list_software`)
+* **release 20160713.01** (`July 13th 2016`): update release notes for EasyBuild v2.8.2 (see :ref:`release_notes_eb282`)
+* **release 20160613.01** (`June 13th 2016`): clarify required dependencies (setuptools, vsc-install) (see :ref:`required_python_packages`)
+* **release 20160607.01** (`June 7th 2016`): update/complete documentation on GitHub integration (see :ref:`integration_with_github`)
+* **release 20160530.01** (`May 30th 2016`): update release notes for EasyBuild v2.8.1 (see :ref:`release_notes_eb281`)
+* **release 20160518.01** (`May 18th 2016`): update release notes for EasyBuild v2.8.0 (see :ref:`release_notes_eb280`)
+* **release 20160429.01** (`April 29th 2016`): add section on updating EasyBuild, see :ref:`updating`
+* **release 20160320.01** (`March 20th 2016`): update release notes for EasyBuild v2.7.0 (see :ref:`release_notes_eb270`)
+* **release 20160228.01** (`February 28th 2016`):
+
+  * update documentation on external modules metadata (see :ref:`using_external_modules_metadata`)
+
+* **release 20160214.01** (`February 14th 2016`):
+
+ * add section on ``--show-config`` (see :ref:`configuration_show_config`)
+
 * **release 20160126.02** (`January 26th 2016`): packaging support is stable since EasyBuild v2.5.0 (see :ref:`packaging_support`)
 * **release 20160126.01** (`January 26th 2016`): update release notes for EasyBuild v2.6.0 (see :ref:`release_notes_eb260`)
 * **release 20151217.01** (`December 17th 2015`): update release notes for EasyBuild v2.5.0 (see :ref:`release_notes_eb250`)

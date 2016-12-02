@@ -22,7 +22,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
@@ -35,15 +35,15 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'EasyBuild'
-copyright = '2012-2015, Ghent University, CC-BY-SA'
+copyright = '2012-2016, Ghent University, CC-BY-SA'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '2.6.0'  # this is meant to reference the version of EasyBuild
+version = '3.0.1'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '20160126.02'  # this is meant to reference the version of the documentation itself
+release = '20161130.01'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:

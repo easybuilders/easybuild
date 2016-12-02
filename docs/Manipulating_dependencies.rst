@@ -85,8 +85,6 @@ For example (note the preceding '``.``' in the last part of the module names for
 Using minimal toolchains for dependencies
 -----------------------------------------
 
-.. note:: This is an **experimental** feature, see :ref:`experimental_features`.
-
 By default, EasyBuild will try to resolve dependencies using the same toolchain as the one that is used for the
 software being installed, unless a specific toolchain is specified for the dependency itself
 (see :ref:`dependency_specs`).

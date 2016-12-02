@@ -1,0 +1,21 @@
+easyblock = 'Binary'
+
+name = 'Platanus'
+version = '1.2.1'
+versionsuffix = '-linux-x86_64'
+
+homepage = 'http://platanus.bio.titech.ac.jp/'
+description = """PLATform for Assembling NUcleotide Sequences"""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['http://platanus.bio.titech.ac.jp/Platanus_release/20130901010201']
+sources = ['platanus']
+checksums = ['02cf92847ec704d010a54df293b9c60a']
+
+sanity_check_paths = {
+    'files': ['platanus'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

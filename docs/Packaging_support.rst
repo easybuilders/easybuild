@@ -118,7 +118,7 @@ Packages will be located in the directory indicated by the ``--packagepath`` con
 corresponds to ``$prefix/packages``.
 
 By defauilt, the package will have the following properties::
-   
+
     $ rpm -qip --requires --provides /home/example/packages/Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.rpm
     Name        : Perl-5.20.1-GCC-4.9.2-bare
     Version     : eb2.2.0
@@ -153,9 +153,9 @@ Packaging existing installations
 --------------------------------
 
 To create packages for existing software installations (performed using EasyBuild), combine ``--package`` with
-``--skip``::
+``--skip --rebuild``::
 
-    $ eb --package --skip Perl-5.20.1-GCC-4.9.2-bare.eb --robot
+    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild
     [...]
     == building and installing Perl/5.20.1-GCC-4.9.2-bare...
     == fetching files...

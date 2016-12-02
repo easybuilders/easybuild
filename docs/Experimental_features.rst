@@ -10,6 +10,6 @@ An experimental feature indicates to users that these features may change signif
 and should be used only for testing, not (yet) for production usage.
 
 Currently enabled experimental features include:
- * Cray support (see https://github.com/hpcugent/easybuild/wiki/EasyBuild-on-Cray)
+
  * support for easyconfig files in YAML syntax (see :ref:`easyconfig_yeb_format`)
- * support for using minimal toolchains for dependencies (see :ref:`minimal_toolchains`)
+ * support for RPATH linking (see :ref:`rpath_support`)

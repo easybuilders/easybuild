@@ -4,7 +4,7 @@ Using the EasyBuild command line
 ================================
 
 Basic usage of EasyBuild is described in the following sections, covering the most important range of topics if you are new to EasyBuild.
- 
+
 ``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
 and hereby the most common command line options are being documented.
 
@@ -42,12 +42,12 @@ These locations are only considered for easyconfig files that are specified only
 
 By providing a single easyconfig file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 The most basic usage is to simply provide the name of an easyconfig file to the ``eb`` command.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
- 
+
 For example, to build and install ``HPL`` using the ``goolf`` toolchain::
- 
+
   $ eb HPL-2.0-goolf-1.4.10.eb --robot
   [...]
   == building and installing GCC/4.7.2...
@@ -81,13 +81,13 @@ Then, we can actually load the freshly installed HPL module::
   $ module load HPL/2.0-goolf-1.4.10
   $ which xhpl
   /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/bin/xhpl
- 
+
 All easyconfig file names' suffixes are ``.eb`` and follow format::
 
    ``<name>-<version>-<toolchain>-<versionsuffix>``
 
 This is a crucial design aspect, since the dependency resolution mechanism (see :ref:`use_robot`) relies upon this convention.
- 
+
 .. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
   in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
 
@@ -96,14 +96,14 @@ This is a crucial design aspect, since the dependency resolution mechanism (see 
 
 Via command line options
 ~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 An alternative approach is to only use command line options to specify which software to build.
 Refer to the ``Software search and build options`` section in the ``eb --help`` output for an overview
 of the available command line options for this purpose (cfr. :ref:`basic_usage_help`).
- 
+
 Here is how to build and install last version of HPCG (that EasyBuild is aware of)
 using the ``goolf/1.4.10`` toolchain::
- 
+
   $ eb --software-name=HPCG --toolchain=goolf,1.4.10
   [...]
   == building and installing HPCG/2.1-goolf-1.4.10...
@@ -112,18 +112,18 @@ using the ``goolf/1.4.10`` toolchain::
   [...]
 
 At this point, a module ``HPCG/2.1-goolf-1.4.10`` should have been installed.
- 
+
 
 .. _specifying_easyconfigs_set_of_easyconfigs:
 
 By providing a set of easyconfig files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
 
 For example, to build and install both HPCG and GCC with a single command, simply list the easyconfigs for both on the
 ``eb`` command line (note that HPCG is not being reinstalled, since a matching module is already available)::
- 
+
   $ eb HPCG-2.1-goolf-1.4.10.eb GCC-4.8.3.eb
   [...]
   == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping
@@ -139,7 +139,7 @@ to find easyconfig files. For example:
 
 ::
 
-  $ find set_of_easyconfigs/ -type f             
+  $ find set_of_easyconfigs/ -type f
   set_of_easyconfigs/GCC-4.8.3.eb
   set_of_easyconfigs/foo.txt
   set_of_easyconfigs/tools/HPCG-2.1-goolf-1.4.10.eb
@@ -154,19 +154,19 @@ to find easyconfig files. For example:
   == Build succeeded for 0 out of 0
   == temporary log file /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log has been removed.
   == temporary directory /tmp/easybuild-1yxCvv has been removed.
- 
+
 .. note:: EasyBuild will only pick up the files which end with ``.eb`` ; anything else will be ignored.
- 
-.. tip:: Calling EasyBuild is designed as an `idempotent` operation; 
+
+.. tip:: Calling EasyBuild is designed as an `idempotent` operation;
   if a module is available that matches with an provided easyconfig file, the installation will simply be skipped.
 
 
 Commonly used command line options
 ----------------------------------
- 
+
 Command line help, ``--help`` / ``-H``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
 
 Refer to page :ref:`basic_usage_help` for more detailed information.
@@ -176,7 +176,7 @@ Refer to page :ref:`basic_usage_help` for more detailed information.
 
 Report version, ``--version``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 You can query which EasyBuild version you are using with ``--version``::
 
   $ eb --version
@@ -189,9 +189,9 @@ You can query which EasyBuild version you are using with ``--version``::
 
 List of known toolchains, ``--list-toolchains``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 For an overview of known toolchains, use ``eb --list-toolchains``.
- 
+
 Toolchains have brief mnemonic names, for example:
 
 * ``goolf`` stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW and ScaLAPACK``
@@ -250,10 +250,25 @@ Use ``eb --debug/-d`` to enable debug logging, to include all details of how Eas
 
 .. note:: Debug log files are significantly larger than non-debug logs, so be aware.
 
+.. _rebuild_option:
+
+Rebuild installation, ``--rebuild``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use ``eb --rebuild`` to rebuild a given easyconfig/module.
+
+.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
+
+.. tip:: Combine ``--rebuild`` with ``--dry-run`` to get a good view on which installations will be rebuilt.
+   (cfr. :ref:`get_an_overview`)
+
+.. _force_option:
+
 Forced reinstallation, ``--force`` / ``-f``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use ``eb --force/-f`` to force the reinstallation of a given easyconfig/module.
+Use ``eb --force``/``-f`` to force the reinstallation of a given easyconfig/module.
+The behavior of ``--force`` is the same as ``--rebuild`` and ``--ignore-osdeps``.
 
 .. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
@@ -273,7 +288,7 @@ For example, to see which easyconfig files are available for the software packag
 
   $ eb --search mesquite
   == temporary log file in case of crash /tmp/eb-_TYdTf/easybuild-iRJ2vb.log
-  == Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  == Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
    * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-goolf-1.4.10.eb
    * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-4.1.13.eb
    * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-5.3.0.eb
@@ -284,7 +299,7 @@ The same query with ``-S`` is more readable, when there is a joint path that can
 
   $ eb -S mesquite
   == temporary log file in case of crash /tmp/eb-5diJjn/easybuild-nUXlkj.log
-  == Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  == Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
   CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite
    * $CFGS1/Mesquite-2.3.0-goolf-1.4.10.eb
    * $CFGS1/Mesquite-2.3.0-ictce-4.1.13.eb
@@ -299,7 +314,7 @@ GCC v4.6.x as a toolchain::
 
   $ eb -S ^GCC-4.6
   == temporary log file in case of crash /tmp/eb-PpwTwm/easybuild-b8yrOG.log
-  == Searching (case-insensitive) for '^GCC-4.6' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  == Searching (case-insensitive) for '^GCC-4.6' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
   CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC
    * $CFGS1/GCC-4.6.3-CLooG-PPL.eb
    * $CFGS1/GCC-4.6.3.eb
@@ -311,7 +326,7 @@ Or, to find all easyconfig files for Python versions 2.7.8 and 2.7.9 that use th
 
   $ eb -S '^Python-2.7.[89].*intel'
   == temporary log file in case of crash /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log
-  == Searching (case-insensitive) for '^Python-2.7.[89].*intel' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs 
+  == Searching (case-insensitive) for '^Python-2.7.[89].*intel' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
   CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/p/Python
    * $CFGS1/Python-2.7.8-intel-2014.06.eb
    * $CFGS1/Python-2.7.8-intel-2014b.eb
@@ -497,6 +512,8 @@ Matching setup:
 * satisfy (i) using ``robot-paths`` in one of the active EasyBuild configuration files (see also
   :ref:`list_of_configuration_files`)::
 
+    [basic]
+    repositorypath = /home/example/easybuild/easyconfigs_archive
     robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 
 * satisfy (ii) via ``--robot`` on the ``eb`` command line::
@@ -531,7 +548,8 @@ Note how the different status symbols denote distinct handling states by EasyBui
 
 * ``[ ]`` The build is not available, EasyBuild will deliver it
 * ``[x]`` The build is available, EasyBuild will skip building this module
-* ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild and will do so
+* ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild via ``--force`` and will do so
+* ``[R]`` The build is available, and the application will be rebuilt as request via ``--rebuild``
 
 
 .. note:: Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
@@ -593,4 +611,3 @@ For example, to build and install WRF and its dependencies with a different tool
 .. note:: The ``--try-*`` command line options behave as expected when combined with ``--robot``. For example: a modified toolchain specified via ``--try-toolchain`` only trickles down until the toolchain level (not deeper). This makes for a particularly powerful combo for rebuilding entire software stacks using a different toolchain.
 
 .. note:: Modifying the software version does **not** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
-

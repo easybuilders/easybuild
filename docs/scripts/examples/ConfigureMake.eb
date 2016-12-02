@@ -1,0 +1,19 @@
+easyblock = 'ConfigureMake'
+
+name = 'zsync'
+version = '0.6.2'
+
+homepage = 'http://zsync.moria.org.uk/'
+description = """zsync-0.6.2: Optimising file distribution program, a 1-to-many rsync"""
+
+toolchain = {'name': 'ictce', 'version': '5.3.0'}
+
+sources = [SOURCE_TAR_BZ2]
+source_urls = ['http://zsync.moria.org.uk/download/']
+
+sanity_check_paths = {
+    'files': ['bin/zsync'],
+    'dirs': []
+}
+
+moduleclass = 'tools'
