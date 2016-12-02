@@ -56,6 +56,7 @@ Advanced usage topics
 
     Archived-easyconfigs
     Controlling_compiler_optimization_flags
+    Cray-support
     Experimental_features
     Extended_dry_run
     Including_additional_Python_modules
