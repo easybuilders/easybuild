@@ -72,7 +72,13 @@ The gencore_variant_detection conda example would execute
 
   conda env create nyuad_cgsb/gencore_variant_detection_1.0 -p $EASYBUILD_PREFIX/software/gencore_variant_detection/1.0
 
-In this particular case we are fetching a remote environment from anaconda cloud, but it is also possible to create an environment from a environment.yml file.
+In this particular case we are fetching a remote environment from anaconda cloud. Alternately, create an environment from a environment.yml file.
+
+Loaded the module in the usual fashion.
+
+  module load gencore_variant_detection/1.0
+
+For users who have experience with anaconda/conda, running `module load gencore_variant_detection/1.0` is functionally equivalent to `source activate $EASYBUILD_PREFIX/software/gencore_variant_detection/1.0`.
 
 Resources
 =========
