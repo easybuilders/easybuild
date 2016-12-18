@@ -286,8 +286,10 @@ To do so, simply define the ``EASYBUILD_BOOTSTRAP_SKIP_STAGE0`` environment vari
 
   ...
 
-Bootstrapping using supplied source tarballs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _bootstrap_offline:
+
+Offline bootstrapping using supplied source tarballs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, the bootstrap script will download the most recent (stable) EasyBuild version from PyPI, the Python Package
 Index (https://pypi.python.org/pypi).
