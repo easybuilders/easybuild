@@ -293,17 +293,28 @@ By default, the bootstrap script will download the most recent (stable) EasyBuil
 Index (https://pypi.python.org/pypi).
 
 Recent versions of the bootstrap script also allow to supply source tarballs for the different EasyBuild components
-(framework, easyblocks, easyconfigs), and (optionally) the vsc-base library EasyBuild depends on.
+(framework, easyblocks, easyconfigs), and (optionally) the vsc-base and vsc-install libraries EasyBuild depends on.
 
 The source tarball filenames must match a pattern like ``<pkg>*.tar.gz``, where ``<pkg>`` denotes the name of the
 respective EasyBuild component:
 
- * ``vsc-base*.tar.gz``
+ * ``vsc-install*.tar.gz`` (*must* be downloaded from PyPI, see note below)
+ * ``vsc-base*.tar.gz`` (*must* be downloaded from PyPI, see note below)
  * ``easybuild-framework*.tar.gz``
  * ``easybuild-easyblocks*.tar.gz``
  * ``easybuild-easyconfigs*.tar.gz``
 
 The location of the source tarballs can be specified using the ``$EASYBUILD_BOOTSTRAP_SOURCEPATH`` environment variable.
+
+.. note:: The source tarballs for ``vsc-base`` and ``vsc-install`` *must* be downloaded from PyPI rather than GitHub,
+          since the source tarballs published via PyPi are pre-processed, as opposed to the 'raw' source tarballs
+          that are available on GitHub.
+
+          To download the source tarballs from PyPI, visit https://pypi.python.org/pypi/vsc-base or
+          https://pypi.python.org/pypi/vsc-install. Alternatively, you can download the source tarball for the
+          most recent version using pip, for example::
+
+            pip download vsc-base --no-deps
 
 Example usage, with the relevant output at the start of stage 1 of the bootstrap process::
 
@@ -323,7 +334,8 @@ Example usage, with the relevant output at the start of stage 1 of the bootstrap
   [[INFO]] Found /tmp/example/easybuild-easyconfigs.tar.gz for easybuild-easyconfigs package
   ...
 
-.. note:: Providing a source tarball for ``vsc-base`` is *optional*. If not specified, the most recent version available
+.. note:: Providing a source tarball for ``vsc-base`` and ``vsc-install` is *optional*.
+          If not specified, the most recent version available
           on PyPI will be downloaded and installed automatically when the ``easybuild-framework`` package is installed.
           Source tarballs for all three EasyBuild components *must* be provided when ``$EASYBUILD_BOOTSTRAP_SOURCEPATH``
           is defined, however.
