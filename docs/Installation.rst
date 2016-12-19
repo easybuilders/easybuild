@@ -330,8 +330,9 @@ Example usage, with the relevant output at the start of stage 1 of the bootstrap
   +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
 
   [[INFO]] Fetching sources from /tmp/example...
-  [[INFO]] Found /tmp/example/vsc-base-2.0.2.tar.gz for vsc-base package
-  [[INFO]] Found /tmp/example/easybuild-framework-v2.0.0dev.tar.gz for easybuild-framework package
+  [[INFO]] Found /tmp/example/vsc-install-0.10.21.tar.gz for vsc-install package
+  [[INFO]] Found /tmp/example/vsc-base-2.5.5.tar.gz for vsc-base package
+  [[INFO]] Found /tmp/example/easybuild-framework-3.0.2.tar.gz for easybuild-framework package
   [[INFO]] Found /tmp/example/easybuild-easyblocks.tar.gz for easybuild-easyblocks package
   [[INFO]] Found /tmp/example/easybuild-easyconfigs.tar.gz for easybuild-easyconfigs package
   ...
