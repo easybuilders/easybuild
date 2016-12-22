@@ -3,9 +3,76 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,116** different software packages,
+The latest version of EasyBuild provides support for building and installing **1,136** different software packages,
 using 25 different (compiler) toolchains. It contains 179 software-specific easyblocks and 30 generic easyblocks,
-alongside 6,176 easyconfig files.
+alongside 6,225 easyconfig files.
+
+.. _release_notes_eb302:
+
+v3.0.2 (December 22nd 2016)
+---------------------------
+
+bugfix release
+
+**framework**
+
+* various bug fixes, including:
+
+  * also skip dependencies of dependencies marked as external module in get_toolchain_hierarchy (`#2042 <https://github.com/hpcugent/easybuild-framework/pull/2042>`_)
+  * disable verbose setvar in modules.py (`#2044 <https://github.com/hpcugent/easybuild-framework/pull/2044>`_)
+  * force copying of easyconfigs in --new-pr/--update-pr, even when combined with -x (`#2045 <https://github.com/hpcugent/easybuild-framework/pull/2045>`_)
+  * fix verification of filename for easyconfigs used to resolve deps (`#2051 <https://github.com/hpcugent/easybuild-framework/pull/2051>`_)
+  * skip RPATH sanity check when toolchain did not use RPATH wrappers (`#2052 <https://github.com/hpcugent/easybuild-framework/pull/2052>`_)
+  * check whether file-like paths are readable before reading them in systemtools module (`#2065 <https://github.com/hpcugent/easybuild-framework/pull/2065>`_)
+
+* various small enhancements, including:
+
+  * add 'rpath' toolchain option to selectively disable use of RPATH wrappers (`#2047 <https://github.com/hpcugent/easybuild-framework/pull/2047>`_)
+
+**easyblocks**
+
+* various enhancements, including:
+
+  * enhance DL_POLY_Classic easyblock to support building with Plumed support (REVIEW) (`#829 <https://github.com/hpcugent/easybuild-easyblocks/pull/829>`_)
+  * make the Allinea easyblock search for the templates in the easyconfig paths (`#1025 <https://github.com/hpcugent/easybuild-easyblocks/pull/1025>`_)
+  * make FortranPythonPackage aware of (pre)buildopts (`#1065 <https://github.com/hpcugent/easybuild-easyblocks/pull/1065>`_)
+  * update sanity check for Mono to support recent versions (`#1069 <https://github.com/hpcugent/easybuild-easyblocks/pull/1069>`_)
+  * fix Eigen sanity check for latest version 3.3.1 (`#1074 <https://github.com/hpcugent/easybuild-easyblocks/pull/1074>`_)
+
+* various bug fixes, including:
+
+  * skip RPATH sanity check for binary installations (`#1056 <https://github.com/hpcugent/easybuild-easyblocks/pull/1056>`_)
+  * pass CXXFLAGS and LDFLAGS to Boost bjam (`#1064 <https://github.com/hpcugent/easybuild-easyblocks/pull/1064>`_)
+  * make pip ignore already installed versions of the package being installed (`#1066 <https://github.com/hpcugent/easybuild-easyblocks/pull/1066>`_)
+  * don't pass empty string as custom installopts for numpy in test_step (`#1067 <https://github.com/hpcugent/easybuild-easyblocks/pull/1067>`_)
+  * make the Rosetta EasyBlock work in --module-only mode (`#1073 <https://github.com/hpcugent/easybuild-easyblocks/pull/1073>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 13 new software packages:
+
+  * CryptoMiniSat (`#3952 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3952>`_), MATSim (`#3902 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3902>`_), Molcas (`#2084 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2084>`_), ne (`#3376 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3376>`_), psmc (`#3910 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3910>`_), PyCogent (`#3897 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3897>`_),
+    PyNAST (`#3897 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3897>`_), RASPA2 (`#3903 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3903>`_, `#3946 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3946>`_), SimPEG (`#3876 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3876>`_), SolexaQA++ (`#3892 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3892>`_), taco (`#3882 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3882>`_),
+    UCLUST (`#3896 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3896>`_), USPEX (`#3767 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3767>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * Mono 4.6.2.7, PGI 16.10, ROOT 6.08.02
+
+* various enhancements, including:
+
+  * trivial style fixes (`#3878 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3878>`_, `#3893 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3893>`_, `#3895 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3895>`_)
+
+* various bug fixes, including:
+
+  * add X11 develop libs to ncview easyconfig (`#3881 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3881>`_)
+  * fix source_urls in pkg-config easyconfigs (`#3907 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3907>`_)
+  * install numpy/scipy as .egg to ensure shadowing of numpy/scipy in parent Python installation (`#3921 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3921>`_)
+  * fix broken source URL + homepage for Infernal (`#3928 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3928>`_)
+  * fix test that verifies dumped easyconfig, take into account that dumped dependencies may include hardcoded dependency (`#3932 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3932>`_)
+  * include libGLU as dependency in freeglut easyconfigs with recent Mesa (`#3936 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3936>`_)
+  * add patch for FreeSurfer to fix issue with MATLAB 2013 (`#3954 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3954>`_)
+
 
 .. _release_notes_eb301:
 
