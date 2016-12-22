@@ -7,6 +7,23 @@
     * EB_ABAQUS
     * EB_Allinea
     * EB_Anaconda
+    * PackedBinary
+
+      * EB_ANSYS
+      * EB_ant
+      * EB_BiSearch
+      * EB_Chimera
+      * EB_FDTD_underscore_Solutions
+      * EB_FLUENT
+      * EB_IronPython
+      * EB_Java
+      * EB_MATLAB
+      * EB_MCR
+      * EB_PGI
+      * EB_Samcef
+      * EB_Tornado
+      * EB_TotalView
+
     * EB_CPLEX
     * EB_CUDA
     * EB_EPD
@@ -15,11 +32,7 @@
       * EB_Mono
 
     * EB_IMOD
-    * PackedBinary
-
-      * EB_Java
-      * EB_Tornado
-
+    * EB_Maple
     * EB_Mathematica
     * EB_Molpro
     * Conda
@@ -205,37 +218,40 @@
     * PerlModule
     * RubyGem
 
-  * EB_ANSYS
-  * EB_ant
-  * EB_BiSearch
+  * PackedBinary
+
+    * EB_ANSYS
+    * EB_ant
+    * EB_BiSearch
+    * EB_Chimera
+    * EB_FDTD_underscore_Solutions
+    * EB_FLUENT
+    * EB_IronPython
+    * EB_Java
+    * EB_MATLAB
+    * EB_MCR
+    * EB_PGI
+    * EB_Samcef
+    * EB_Tornado
+    * EB_TotalView
+
   * EB_Boost
   * EB_CHARMM
-  * EB_Chimera
   * EB_CP2K
-  * EB_Eigen
-  * EB_FDTD_underscore_Solutions
-  * EB_FLUENT
   * Tarball
 
+    * EB_Eigen
     * EB_FoldX
     * EB_FreeSurfer
     * EB_Gurobi
     * EB_Hadoop
     * EB_MTL4
+    * EB_picard
     * BinariesTarball
 
   * EB_FSL
   * EB_GAMESS_minus_US
-  * EB_IronPython
-  * PackedBinary
-
-    * EB_Java
-    * EB_Tornado
-
   * EB_libsmm
-  * EB_Maple
-  * EB_MATLAB
-  * EB_MCR
   * EB_Modeller
   * EB_MRtrix
   * EB_NCL
@@ -243,14 +259,10 @@
   * EB_OpenFOAM
   * EB_OpenIFS
   * EB_ParMETIS
-  * EB_PGI
-  * EB_picard
   * EB_Rosetta
-  * EB_Samcef
   * EB_SCOTCH
   * EB_SNPhylo
   * EB_TINKER
-  * EB_TotalView
   * EB_Trinity
   * EB_WIEN2k
   * EB_WPS

@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20161222.01** (`Dec 22nd 2016`): update documentation and release notes for EasyBuild v3.0.2 (see :ref:`release_notes_eb302`)
 * **release 20161218.01** (`Dec 18th 2016`): document need to download ``vsc-*`` source tarballs from PyPI (see :ref:`bootstrap_offline`)
 * **release 20161202.01** (`Dec 2nd 2016`): add documentation on Cray support (see :ref:`cray_support`)
 * **release 20161130.01** (`Nov 16th 2016`): update release notes for EasyBuild v3.0.1 (see :ref:`release_notes_eb301`)
