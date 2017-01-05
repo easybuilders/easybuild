@@ -28,52 +28,57 @@ The idea is to compose and maintain a limited set of specific compiler toolchain
 and try and convince many HPC sites to employ these toolchains.
 This helps in assuring stability of these toolchains w.r.t. which software can be built (correctly) with them,
 since they get significantly more testing. In addition, the expectation/hope is that more easyconfigs are
-contributed back to the central easyconfigs repository (), resulting in a wide range of readily
-available easyconfig files using the common toolchains.
+contributed back to the central easyconfigs repository (https://github.com/hpcugent/easybuild-easyconfigs),
+resulting in a wide range of readily available easyconfig files using the common toolchains.
 
 The intention is to revise/update the definitions of the common toolchains regularly
 (see :ref:`common_toolchains_update_cycle`), which again can be a joint effort
 that benefits many HPC sites.
 
-Currently, two different common toolchains are being maintained, see below;
-see also :ref:`common_toolchains_overview`.
+Currently, two different common toolchains are being maintained: ``foss`` and ``intel``.
+See below for more details, and also :ref:`common_toolchains_overview`.
 
 
 .. _common_toolchains_foss:
 
-``foss``
-~~~~~~~~
+``foss`` toolchain
+~~~~~~~~~~~~~~~~~~
 
-The ``foss`` compiler toolchain consists entirely of open source software (hence the name,
-derived from the common term 'FOSS', which is short for Free and Open Source Software).
+The ``foss`` common compiler toolchain consists entirely of open source software (hence the name,
+derived from the common term 'FOSS', which is short for "Free and Open Source Software").
 
 This toolchain consists of:
 
+* binutils (https://www.gnu.org/software/binutils/)
+
 * the GNU Compiler Collection (GCC, https://gcc.gnu.org/),
-  i.e. ``gcc`` (C), ``g++`` (C++) and ``gofrtran`` (Fortran),
-  on top of a ``binutils`` (https://www.gnu.org/software/binutils/) installed via EasyBuild
+  i.e. ``gcc`` (C), ``g++`` (C++) and ``gofrtran`` (Fortran)
 
 * the Open MPI library (https://www.open-mpi.org/)
 
-* the OpenBLAS (http://www.openblas.net/) + LAPACK (http://netlib.org/lapack) + ScaLAPACK (http://netlib.org/scalapack) libraries
+* the OpenBLAS (http://www.openblas.net/) + LAPACK (http://netlib.org/lapack) libraries
+
+  * the ScaLAPACK (http://netlib.org/scalapack) library is also included
 
 * the FFTW library (http://fftw.org/)
 
-The toolchain name was deliberately chosen to be generic, to allow for swapping
+.. note:: The toolchain name was deliberately chosen to be generic, to allow for swapping
 any of the toolchain components with a better (open source) alternative in the future,
 should the need or opportunity arise.
 
 
 .. _common_toolchains_intel:
 
-``intel``
-~~~~~~~~~
+``intel`` common toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``intel`` compiler toolchain consists of the Intel compilers and libraries, i.e.:
+The ``intel`` common compiler toolchain consists of the Intel compilers and libraries, i.e.:
 
 * the Intel C/C++/Fortran compilers (https://software.intel.com/en-us/intel-compilers),
   i.e. ``icc``, ``icpc`` and ``ifort``,
   on top of a GCC and binutils installed via EasyBuild
+
+  * binutils and GCC are also included, which serve as a base for the Intel compilers
 
 * the Intel MPI library (https://software.intel.com/en-us/intel-mpi-library)
 
