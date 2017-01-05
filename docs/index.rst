@@ -55,6 +55,7 @@ Advanced usage topics
     :maxdepth: 2
 
     Archived-easyconfigs
+    Common-toolchains
     Controlling_compiler_optimization_flags
     Cray-support
     Experimental_features

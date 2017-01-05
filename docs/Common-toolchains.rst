@@ -93,6 +93,11 @@ The ``intel`` common compiler toolchain consists of the Intel compilers and libr
 Versioning scheme for common toolchains
 ---------------------------------------
 
+<year>{a,b}
+
+.. note:: other versions are also possible (typically versionsed as <year>.<month>),
+but these are *not* considered to be a part of the common toolchain releases
+
 .. _common_toolchains_update_cycle:
 
 Update cycle for common toolchains
