@@ -85,6 +85,7 @@ like compilers, various MPI stacks and commonly used libraries, primarily for x8
 to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
 `CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`.
 
+.. _toolchains:
 
 Toolchains
 ----------
@@ -126,6 +127,11 @@ environment is being defined.
 When the toolchain version is also specified as ``dummy``, no (build) dependencies will be loaded when the build
 is performed. If the toolchain version is specified as an empty string, the listed dependencies will be loaded (as
 is done with other toolchains).
+
+Common toolchains
+~~~~~~~~~~~~~~~~~
+
+For more information on the concept of *common toolchains*, see :ref:`common_toolchains`.
 
 .. _easyconfig_files:
 
