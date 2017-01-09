@@ -8,8 +8,12 @@ EasyBuild consists of a collection of Python modules and packages that interact 
 dynamically picking up additional Python modules as needed for building and installing
 a (stack of) software package(s) specified via simple specification files.
 
-Or, in EasyBuild terminology: the `EasyBuild framework`_ leverages `easyblocks`_ to automatically
-build and install software using particular compiler `toolchains`_, as specified by one or multiple `easyconfig files`_.
+Or, in EasyBuild terminology: **the EasyBuild framework leverages easyblocks to automatically
+build and install software using particular compiler toolchains, as specified by one or multiple easyconfig files**.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 
 EasyBuild framework
@@ -85,6 +89,7 @@ like compilers, various MPI stacks and commonly used libraries, primarily for x8
 to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
 `CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`.
 
+.. _toolchains:
 
 Toolchains
 ----------
@@ -126,6 +131,11 @@ environment is being defined.
 When the toolchain version is also specified as ``dummy``, no (build) dependencies will be loaded when the build
 is performed. If the toolchain version is specified as an empty string, the listed dependencies will be loaded (as
 is done with other toolchains).
+
+Common toolchains
+~~~~~~~~~~~~~~~~~
+
+For more information on the concept of *common toolchains*, see :ref:`common_toolchains`.
 
 .. _easyconfig_files:
 
