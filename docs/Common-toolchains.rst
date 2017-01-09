@@ -52,7 +52,7 @@ This toolchain consists of:
 * binutils (https://www.gnu.org/software/binutils/)
 
 * the GNU Compiler Collection (GCC, https://gcc.gnu.org/),
-  i.e. ``gcc`` (C), ``g++`` (C++) and ``gofrtran`` (Fortran)
+  i.e. ``gcc`` (C), ``g++`` (C++) and ``gfortran`` (Fortran)
 
 * the Open MPI library (https://www.open-mpi.org/)
 
