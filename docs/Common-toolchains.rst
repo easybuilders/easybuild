@@ -92,12 +92,12 @@ The ``intel`` common compiler toolchain consists of the Intel compilers and libr
 Versioning scheme for common toolchains
 ---------------------------------------
 
-The common toolchain follow a specific versioning scheme, which takes the
+The common toolchains follow a specific versioning scheme, which takes the
 :ref:`6-month update cycle <common_toolchains_update_cycle>` into account.
 
 Each revision of the common toolchains is versioned as the *year* in which it
-was defined, plus an additional '`a`' or '`b`' to indicate whether the toolchain
-was defined at the start of the year ('`a`') or halfway through the year ('`b`');
+was defined, plus an additional '``a``' or '``b``' to indicate whether the toolchain
+was defined at the start of the year ('``a``') or halfway through the year ('``b``');
 in short, the common toolchains are versioned as ``<year>{a,b}``.
 
 For example, ``foss/2016b`` is a revision of the ``foss`` that was composed mid-2016.
@@ -109,14 +109,14 @@ available in :ref:`common_toolchains_overview`.
           additional versions of the ``foss`` and ``intel`` versions are available
           as well.
 
-          These are **not** considered to be part of the series of common
+          These versions are **not** considered to be part of the series of common
           toolchains (even though they consists of the same toolchain components).
           These versions may be site-specific, or compositions that were put in
           place to evaluate a potential future common toolchain.
 
           Typically, they are versioned as ``<year>.<month>``, indicating when
-          the most recent component included was releases, or when that particular
-          composition was defined.
+          the most recent component included was released, or when that particular
+          toolchain composition was defined.
 
 
 .. _common_toolchains_update_cycle:
@@ -137,14 +137,63 @@ known bugs/issues and experiences with those versions.
 
 Moreover, the proposed toolchain compositions are tested extensively,
 typically by rebuilding all available easyconfigs that are using the
-most recent revision of the common toolchains.
+most recent revision of the common toolchains at that time.
 
 .. _common_toolchains_overview:
 
 Overview of common toolchains
 -----------------------------
 
+.. _common_toolchains_overview_foss:
+
+Component versions in ``foss`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------+-------------+-----------+------------+------------+------------+--------------+------------+
+| ``foss``       | *binutils*  | *GCC*     | *Open MPI* | *OpenBLAS* | *LAPACK*   | *ScaLAPACK*  | *FFTW*     |
++================+=============+===========+============+============+============+==============+============+
+| ``2016b``      | 2.26        | 5.4.0     | 1.10.3     | 0.2.18     | 3.6.1      | 2.0.2        | 3.3.4      |
++----------------+-------------+-----------+------------+------------+------------+--------------+------------+
+| ``2016a``      | 2.25        | 4.9.3     | 1.10.2     | 0.2.15     | 3.6.0      | 2.0.2        | 3.3.4      |
++----------------+-------------+-----------+------------+------------+------------+--------------+------------+
+| ``2015b``      | 2.25        | 4.9.3     | 1.8.8      | 0.2.14     | 3.5.0      | 2.0.2        | 3.3.4      |
++----------------+-------------+-----------+------------+------------+------------+--------------+------------+
+| ``2015a``      | *(none)*    | 4.9.2     | 1.8.4      | 0.2.13     | 3.5.0      | 2.0.2        | 3.3.4      |
++----------------+-------------+-----------+------------+------------+------------+--------------+------------+
+| ``2014b``      | *(none)*    | 4.8.3     | 1.8.1      | 0.2.9      | 3.5.0      | 2.0.2        | 3.3.4      |
++----------------+-------------+-----------+------------+------------+------------+--------------+------------+
+
+.. _common_toolchains_overview_intel:
+
+Component versions in ``intel`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
++----------------+-------------+-----------+--------------------+-------------+--------------+
+| ``intel``      | *binutils*  | *GCC*     | *Intel compilers*  | *Intel MPI* | *Intel MKL*  |
++================+=============+===========+====================+=============+==============+
+| ``2016b``      | 2.26        | 5.4.0     | 2016.3.210         | 5.1.3.181   | 11.3.3.210   |
++----------------+-------------+-----------+--------------------+-------------+--------------+
+| ``2016a``      | 2.26        | 4.9.3     | 2016.1.150         | 5.1.2.150   | 11.3.1.150   |
++----------------+-------------+-----------+--------------------+-------------+--------------+
+| ``2015b``      | 2.25        | 4.9.3     | 2015.3.187         | 5.0.3.048   | 11.2.3.187   |
++----------------+-------------+-----------+--------------------+-------------+--------------+
+| ``2015a``      | *(none)*    | 4.9.2     | 2015.1.133         | 5.0.2.044   | 11.2.1.133   |
++----------------+-------------+-----------+--------------------+-------------+--------------+
+| ``2014b``      | *(none)*    | 4.8.3     | 2013.5.192         | 4.1.3.049   | 11.1.2.144   |
++----------------+-------------+-----------+--------------------+-------------+--------------+
+
+
 .. _common_toolchains_customizing:
 
 Customizing common toolchains
 -----------------------------
+
+
+Sometimes the need arises to customize one or more components of a common toolchain w.r.t. site-specific aspects.
+One common example is using additional configuration options for Open MPI.
+
+To customize a toolchain component, you should copy the corresponding easyconfig file,
+modify according to your needs, and make sure it is included in a location in the robot search path
+that precedes the location of the easyconfig files that are included with EasyBuild
+(see also :ref:`robot_search_path`), before building and installation the toolchain.
