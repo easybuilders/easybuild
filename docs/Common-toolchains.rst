@@ -124,6 +124,21 @@ available in :ref:`common_toolchains_overview`.
 Update cycle for common toolchains
 ----------------------------------
 
+The intention is to revise and update the common toolchains every 6 months:
+once in late December/early January (version ``<year>a``),
+and once in late June/early July (version ``<year>b``).
+
+This is meant be to be a community effort, in the sense that a proposal
+for an updated composition is shared and discussed before it is set in stone.
+
+Recent versions of each of the toolchain components are considered, taking
+into account stability, performance improvements, added features,
+known bugs/issues and experiences with those versions.
+
+Moreover, the proposed toolchain compositions are tested extensively,
+typically by rebuilding all available easyconfigs that are using the
+most recent revision of the common toolchains.
+
 .. _common_toolchains_overview:
 
 Overview of common toolchains
