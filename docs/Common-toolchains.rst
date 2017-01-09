@@ -16,7 +16,7 @@ for a more general definition of what (compiler) toolchains are, see :ref:`toolc
 Definition and motivation
 -------------------------
 
-Picking a compiler toolchain to use is one of the first things you (need) to do when starting to use EasyBuild.
+Picking a :ref:`compiler toolchain <toolchains>` to use is one of the first things you (need to) do when starting to use EasyBuild.
 This can be a daunting task, since a whole bunch of toolchains and different toolchain versions
 are readily available in EasyBuild. It may be difficult to determine which toolchain would be most rewarding to use,
 in terms of stability, performance of the resulting binaries and readily available easyconfig files.
@@ -35,8 +35,8 @@ The intention is to revise/update the definitions of the common toolchains regul
 (see :ref:`common_toolchains_update_cycle`), which again can be a joint effort
 that benefits many HPC sites.
 
-Currently, two different common toolchains are being maintained: ``foss`` and ``intel``.
-See below for more details, and also :ref:`common_toolchains_overview`.
+Currently, two different common toolchains are being maintained: ``foss`` and ``intel``;
+see below for more details, and also :ref:`common_toolchains_overview`.
 
 
 .. _common_toolchains_foss:
@@ -63,8 +63,8 @@ This toolchain consists of:
 * the FFTW library (http://fftw.org/)
 
 .. note:: The toolchain name was deliberately chosen to be generic, to allow for swapping
-any of the toolchain components with a better (open source) alternative in the future,
-should the need or opportunity arise.
+          any of the toolchain components with a better (open source) alternative in the future,
+          should the need or opportunity arise.
 
 
 .. _common_toolchains_intel:
@@ -76,9 +76,8 @@ The ``intel`` common compiler toolchain consists of the Intel compilers and libr
 
 * the Intel C/C++/Fortran compilers (https://software.intel.com/en-us/intel-compilers),
   i.e. ``icc``, ``icpc`` and ``ifort``,
-  on top of a GCC and binutils installed via EasyBuild
 
-  * binutils and GCC are also included, which serve as a base for the Intel compilers
+  * binutils and GCC, which serve as a base for the Intel compilers, are also included
 
 * the Intel MPI library (https://software.intel.com/en-us/intel-mpi-library)
 
@@ -93,10 +92,32 @@ The ``intel`` common compiler toolchain consists of the Intel compilers and libr
 Versioning scheme for common toolchains
 ---------------------------------------
 
-<year>{a,b}
+The common toolchain follow a specific versioning scheme, which takes the
+:ref:`6-month update cycle <common_toolchains_update_cycle>` into account.
 
-.. note:: other versions are also possible (typically versionsed as <year>.<month>),
-but these are *not* considered to be a part of the common toolchain releases
+Each revision of the common toolchains is versioned as the *year* in which it
+was defined, plus an additional '`a`' or '`b`' to indicate whether the toolchain
+was defined at the start of the year ('`a`') or halfway through the year ('`b`');
+in short, the common toolchains are versioned as ``<year>{a,b}``.
+
+For example, ``foss/2016b`` is a revision of the ``foss`` that was composed mid-2016.
+
+A full historic overview of the ``foss`` and ``intel`` common toolchains is
+available in :ref:`common_toolchains_overview`.
+
+.. note:: Next to the versions that follow the ``<year>{a,b}`` versioning scheme,
+          additional versions of the ``foss`` and ``intel`` versions are available
+          as well.
+
+          These are **not** considered to be part of the series of common
+          toolchains (even though they consists of the same toolchain components).
+          These versions may be site-specific, or compositions that were put in
+          place to evaluate a potential future common toolchain.
+
+          Typically, they are versioned as ``<year>.<month>``, indicating when
+          the most recent component included was releases, or when that particular
+          composition was defined.
+
 
 .. _common_toolchains_update_cycle:
 
