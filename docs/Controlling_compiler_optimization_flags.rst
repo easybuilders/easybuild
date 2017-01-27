@@ -132,35 +132,3 @@ Currently, using ``--optarch=GENERIC`` will result in the following target archi
 * for toolchains using Intel compilers: ``-xSSE2``
 
 On other systems or for other compilers, you can check which compiler flags will be used via :ref:`extended_dry_run`.
-
-.. _controlling_compiler_optimization_flags_optarch_per_compiler:
-
-Setting architecture flags for different compilers via ``--optarch=<compiler:flag;compiler:flag>``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Starting with version 3.1.0, EasyBuild supports to specify architecture flags for multiple compilers at once. This way
-the ``--optarch`` option can be set once, independently of the toolchain used, allowing to install multiple packages for
-mixed toolchains at once.
-
-The syntax is ``--optarch=Intel:xHost;GCC:-march=native``. As in the simple cases, EasyBuild adds one ``-`` to the flags
-specified, so the flags passed to the compilers in this case are ``-xHost`` and ``--march=native``, respectively.
-
-Additionally, ``GENERIC`` is also supported on a compiler basis, allowing to specify a generic compilation for the desired
-compilers. This is an example of this usage: ``--optarch=Intel:xHost;GCC:GENERIC``. Of course, this is supported just for
-compiler toolchains that recognize ``GENERIC``.
-
-The options for each compiler are set independently. That means that if the GCC toolchain is used, but the only compiler
-specified is Intel (for example with ``--optarch=Intel:xCORE-AVX2``), then the GCC toolchain will ignore that option and
-behave as ``--optarch`` was never specified.
-
-The compiler name is determined by the ``COMPILER_FAMILY`` constant in the compiler class. At the moment, these are the
-supported names:
-
-* ``GCC``
-* ``Intel``
-* ``PGI``
-* ``Clang``
-* ``IBMXL``
-* ``DUMMY``
-
-Due to the special treatment of ``--optarch`` in Cray environments, this feature is not supported on this platform.
