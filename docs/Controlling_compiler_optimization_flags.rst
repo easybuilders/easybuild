@@ -145,7 +145,7 @@ compiler used on the packages to be installed.
 
 The syntax is ``<compiler:flags>;<compiler:flags>``, where ``:`` separates the compiler name from the compiler flags,
 and ``;`` separates different compilers. This is an example for the Intel and GCC compilers:
-``--optarch=Intel:xHost;GCC:'march=x86-64 -mtune=generic'``. As in the simple cases, EasyBuild adds one ``-`` to the
+``--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'``. As in the simple cases, EasyBuild adds one ``-`` to the
 flags specified, so the flags passed to the Intel and GCC compilers in this case are ``-xHost`` and
 ``-march=x86-64 -mtune=generic``. Please note the quotes to escape the space in the GCC flags.
 
@@ -153,17 +153,11 @@ Additionally, ``GENERIC`` is also supported on a compiler basis, allowing to spe
 desired compilers. This is an example of this usage: ``--optarch=Intel:xHost;GCC:GENERIC``. Of course, this is
 supported just for compiler toolchains that recognize ``GENERIC``.
 
-The options for each compiler are set independently. That means that if the GCC-based toolchain is used, but the only
-compiler specified is ``Intel`` (for example with ``--optarch=Intel:xCORE-AVX2``), then the GCC toolchain will ignore
-that option and behave as ``--optarch`` was not specified.
+The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
+compiler specified is ``Intel`` (for example with ``--optarch=Intel:xCORE-AVX2``), then EasyBuild will behave as if
+``--optarch`` was not specified for this toolchain.
 
-The compiler name is determined by the ``COMPILER_FAMILY`` constant in the compiler class. At the moment, these are the
-supported names:
-
-* ``GCC``
-* ``Intel``
-* ``PGI``
-* ``Clang``
-* ``IBMXL``
+The compiler name corresponds to the value of the ``COMPILER_FAMILY`` constant of the toolchain. Two common examples
+are ``GCC`` and ``Intel``.
 
 Due to the special treatment of ``--optarch`` in Cray environments, this feature is not supported on this platform.
