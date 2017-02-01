@@ -15,6 +15,7 @@ build and install software using particular compiler toolchains, as specified by
     :depth: 3
     :backlinks: none
 
+.. _framework:
 
 EasyBuild framework
 -------------------
@@ -45,7 +46,7 @@ tweaked and steered via different parameters known to the framework, for which v
 either obtained from the provided specification files or set to reasonable default values.
 See :ref:`easyconfig_files`.
 
-.. XXX - UPDATE BY VERSION
+.. XXX - UPDATE BY VERSION FIXME
 
 In EasyBuild version |version| the framework source code consists of about 19000 lines of code,
 organized across about 125 Python modules in roughly a dozen Python package directories,
@@ -80,7 +81,7 @@ specification parameter (see :ref:`writing_easyconfigs_easyblock_spec`).
 Since EasyBuild v2.0, an easyblock *must* be specified in case no matching easyblock is found based on the
 software name (cfr. :ref:`depr_ConfigureMake_fallback_eb1`).
 
-.. XXX - UPDATE BY VERSION
+.. XXX - UPDATE BY VERSION FIXME
 
 EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
 easyblocks (see also :ref:`basic_usage_easyblocks`), providing support for automatically installing a wide range
@@ -159,7 +160,7 @@ an installation, EasyBuild copies the used easyconfig file to the install direct
 and also supports maintaining an easyconfig archive which is updated on every successful installation.
 Therefore, reproducing installations becomes trivial.
 
-.. XXX - UPDATE BY VERSION
+.. XXX - UPDATE BY VERSION FIXME
 
 EasyBuild version |version| includes support for over 511 different software packages,
 spread over 2800 easyconfig files describing distinct builds.

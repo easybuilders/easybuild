@@ -60,6 +60,7 @@ Advanced usage topics
     Cray-support
     Experimental_features
     Extended_dry_run
+    Implementing-easyblocks
     Including_additional_Python_modules
     Integration_with_GitHub
     Manipulating_dependencies
