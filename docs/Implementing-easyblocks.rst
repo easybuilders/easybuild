@@ -92,6 +92,84 @@ update.
 Naming scheme for easyblocks
 ----------------------------
 
+Easyblocks need to follow a strict naming scheme, to ensure that EasyBuild can pick them up as needed.
+This involves two aspects: i) the name and location of the Python module file,
+and ii) the name of the Python class in that module.
+
+Class name for software-specific easyblocks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The name of the Python class is determined by the *software name* for software-specific easyblocks.
+It consists of a prefix '``EB_``', followed by the (original) software name.
+
+Because of limitations in Pythonon characters allowed in names of Python classes,
+only alphanumeric characters and ``_`` are allowed. Any other characters are replaced following an encoding scheme:
+
+* spaces are replaced by underscores (``_``)
+* dashes ``-`` are replaced by ``_minus_``
+* underscores are replaced by ``_underscore_``
+* etc.
+
+The ``encode_class_name`` function provided in ``easybuild.tools.filetools`` returns the expected class name
+for a given software name; for example:
+
+.. code::
+
+  >>> from easybuild.tools.filetools import encode_class_name
+  >>> encode_class_name('netCDF-Fortran')
+  'EB_netCDF_minus_Fortran'
+
+Class name for generic easyblocks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For *generic* easyblocks, the class name does *not* include an ``EB_`` prefix, and the name is free to choose,
+taking into account the restriction to alphanumeric characters and underscores.
+
+For code style reasons, the class name should start with a capital letter.
+
+Examples include ``Bundle``, ``ConfigureMake``, ``CMakePythonPackage``.
+
+
+Module name/location
+~~~~~~~~~~~~~~~~~~~~
+
+The *name* of the Python module file is directly related to the name of Python class (i.e., the actual easyblock) that it provides.
+It should:
+
+* *not* include the ``EB_`` prefix of the class name for software-specific easyblocks
+* consists only of lower-case alphanumeric characters (``[a-z0-9]``) and underscores (``_``)
+
+  * dashes (``-``) are replaced by underscores (``_``)
+  * any other non-alphanumeric characters (incl. spaces) are simply dropped
+
+Examples include:
+
+* ``gcc.py`` (for *GCC*)
+* ``netcdf_fortran.py`` (for *netCDF-Fortran*)
+* ``gamess_us.py`` (for *GAMESS (US)*)
+
+The ``get_module_path`` function provided in ``easybuild.framework.easyconfig.easyconfig`` returns the (full)
+module location for a particular software name or easyblock class name; for example:
+
+.. code::
+
+  >>> from easybuild.framework.easyconfig.easyconfig import get_module_path
+  >>> get_module_path('netCDF-Fortran')
+  'easybuild.easyblocks.netcdf_fortran'
+  >>> get_module_path('EB_netCDF_minus_Fortran')
+  'easybuild.easyblocks.netcdf_fortran'
+
+The location of the Python module is determined by whether the easyblock is generic or software-specific.
+Generic easyblocks are located in the ``easybuid.easyblocks.generic`` namespace, while software-specific easyblocks
+live in the ``easybuild.easyblocks`` namespace directly. To keep things organised, the actual Python module file
+for software-specific easyblocks are kept in 'letter' subdirectories,
+rather than in one large '``easyblocks``' directory
+(see https://github.com/hpcugent/easybuild-easyblocks/blob/master/easybuild/easyblocks/).
+
+Note that you shouldn't concern yourself too much with getting the location of an easyblock right, as long as you
+use ``--include-easyblocks`` to make EasyBuild use additional or customised easyblocks;
+see :ref:`include_easyblocks` for more information.
+
 
 .. _implementing_easyblocks_structure:
 
