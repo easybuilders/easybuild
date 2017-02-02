@@ -134,6 +134,7 @@ Module name/location
 ~~~~~~~~~~~~~~~~~~~~
 
 The *name* of the Python module file is directly related to the name of Python class (i.e., the actual easyblock) that it provides.
+
 It should:
 
 * *not* include the ``EB_`` prefix of the class name for software-specific easyblocks
@@ -176,13 +177,64 @@ see :ref:`include_easyblocks` for more information.
 Structure of an easyblock
 -------------------------
 
+The example below shows the overal structure of an easyblock:
+
+.. code:: python
+
+    from easybuild.framework.easyblock import EasyBlock
+    from easybuild.tools.filetools import run_cmd
+
+    class EB_Example(EasyBlock):
+        """Custom easyblock for Example"""
+
+        def configure_step(self):
+            """Custom implementation of configure step for Example"""
+
+            # run configure.sh to configure the build
+            run_cmd("./configure.sh PREFIX=%s" % self.installdir)
+
+
+Each easyblock includes an implementation of a ``class`` that (directly or indirectly) derives from the abstract
+``EasyBlock`` class.
+
+Typically some useful functions provided by the EasyBuild framework are imported at the top of the Python module.
+
+In the class definition, one or more '``*_step``' methods are redefined, to implement the corresponding step
+in the build and installation procedure.
+
+Each easyblock *must* implement the ``configure``, ``build`` and ``install`` steps, since these are not implemented
+in the abstract ``EasyBlock`` class. This could be done explicitely by redefining the corresponding ``*_step`` methods,
+or implicitely by :ref:`implementing_easyblocks_deriving`.
+
 
 .. _implementing_easyblocks_deriving:
 
 Deriving from existing (generic) easyblocks
 -------------------------------------------
 
-(multiple) inheritance
+When implementing an easyblock, it is common to derive from an existing (usually generic) easyblock,
+and to leverage the functionality provided by it. This approach is typically used when only a specific part
+of the build and installation procedure needs to be customised.
+
+In the (fictious) example below, we derive from the generic ``ConfigureMake`` easyblock to redefine the ``configure``
+step. In this case, we are *extending* the ``configure`` step as implemented by ``ConfigureMake`` rather than
+redefining it entirely, since we call out to the original ``configure_step`` method at the end.
+
+.. code:: python
+
+    from easybuild.easyblocks.generic.configuremake import ConfigureMake
+    from easybuild.tools.filetools import copy_file
+
+    class EB_Example(ConfigureMake):
+        """Custom easyblock for Example"""
+
+        def configure_step(self):
+            """Custom implementation of configure step for Example"""
+
+            # use example make.cfg for x86-64
+            copy_file('make.cfg.x86', 'make.cfg')
+
+            super(EB_Example, self).configure_step()
 
 
 .. _implementing_easyblocks_specifics:
@@ -196,7 +248,30 @@ Specific aspects of easyblocks
 Custom easyconfig parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``extra_options``
+In an easyblock, additional custom easyconfig parameters can be defined to steer the behaviour of the easyblock.
+This is done via the ``extra_options`` static method. Custom parameters can be defined to be mandatory or optional.
+
+The example below shows how this can be implemented:
+
+.. code:: python
+
+    from easybuild.easyblocks.generic.configuremake import ConfigureMake
+    from easybuild.framework.easyconfig import CUSTOM, MANDATORY
+
+    class EB_Example(ConfigureMake):
+        """Custom easyblock for Example"""
+
+        @staticmethod
+        def extra_options():
+            """Custom easyconfig parameters for Example"""
+            extra_vars = {
+                'required_example_param': [None, "Help text for required example custom parameter", MANDATORY],
+                'optional_example_param': [None, "Help text for (optional) example custom parameter", CUSTOM],
+            }
+            return ConfigureMake.extra_options(extra_vars)
+
+The first element in the list of a defined custom parameter corresponds to the default value for that parameter
+(both ``None`` in the example above).
 
 
 .. _implementing_easyblocks_constructor:
