@@ -308,15 +308,44 @@ For example:
 Reading/writing/copying/patching files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``read_file``, ``write_file``, ``copy_file``, ``apply_regex_substitutions``
+File manipulation is a common use case for implementing easyblocks, hence the EasyBuild framework provides a
+number of useful functions related to this, including:
+
+* ``read_file(<path>)``: read file at a specified location and returns its contents
+
+* ``write_file(<path>, <text>)`` at a specified location with provided contents;
+  to append to an existing file, use ``append=True`` as an extra argument
+
+* ``copy_file(<src>, <dest>)`` to copy an existing file
+
+* ``apply_regex_substitutions(<path>, <list of regex substitions>)`` to patch an existing file
+
+All of these functions are provided by the ``easybuild.tools.filetools`` module.
 
 
-.. _implementing_easyblocks_running_commands:
+.. _implementing_easyblocks_commands:
 
-Running (interactive) commands
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Executing (interactive) shell commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``run_cmd``, ``run_cmd_qa``
+For executing shell commands two functions are provided by the ``easybuild.tools.run`` module:
+
+* ``run_cmd(<cmd>)`` to run a non-interactive shell command
+
+* ``run_cmd_qa(<cmd>, <dict with questions & answers>)`` to run an interactive shell command
+
+Both of these accept a number of optional arguments:
+
+* ``simple=True`` to just return ``True`` or ``False`` to indicate a successful execution,
+  rather than the default return value, i.e., a tuple that provides the command output and the exit code (in that order)
+
+* ``path=<path>`` to run the command in a specific subdirectory
+
+The ``run_cmd_qa`` function takes two additional specific arguments:
+
+* ``no_qa=<list>`` to specify a list of patterns to recognize non-questions
+
+* ``std_qa=<dict>`` to specify patterns for common questions and the matching answer
 
 
 .. _implementing_easyblocks_sanity_check:
@@ -324,7 +353,34 @@ Running (interactive) commands
 Custom (default) sanity check
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``sanity_check_step``
+For software-specific easyblocks, a custom sanity check is usually included to verify that the installation was
+successful or not.
+
+This is done by redefining the ``sanity_check_step`` method in the easyblock. For example:
+
+.. code:: python
+
+    from easybuild.framework.easyblock import EasyBlock
+
+    class EB_Example(EasyBlock):
+        """Custom easyblock for Example"""
+
+        def sanity_check_step(self):
+            """Custom sanity check for Example."""
+
+            custom_paths = {
+                'files': ['bin/example'],
+                'dirs': [],
+            }
+            custom_commands = ['example --version']
+            super(EB_Example, self).sanity_check_step(custom_paths=custom_paths, custom_commands=custom_commands)
+
+
+You can both specify file path and subdirectories to check for, which are specified relative to the installation directory,
+as well as simple commands that should execute successfully after completing the installation and loading the generated module file.
+
+Note that it is up to you have specific you make the sanity check, but it is recommended to make the check as complete
+as possible to catch any potential build or installation problems thay may occur.
 
 
 .. _implementing_easyblocks_version_specific:
@@ -332,7 +388,36 @@ Custom (default) sanity check
 Version-specific parts
 ~~~~~~~~~~~~~~~~~~~~~~
 
-``LooseVersion``
+In some case, version-specific actions or checks need to be included in an easyblock.
+For this, it is recommended to use ``LooseVersion`` rather than directly comparing version numbers using string values.
+
+For example:
+
+
+.. code:: python
+
+    from distutils.version import LooseVersion
+
+    from easybuild.framework.easyblock import EasyBlock
+
+    class EB_Example(EasyBlock):
+        """Custom easyblock for Example"""
+
+        def sanity_check_step(self):
+            """Custom sanity check for Example."""
+
+            custom_paths = {
+                'files': [],
+                'dirs': [],
+            }
+
+            # in older version, the binary used to be named 'EXAMPLE' rather than 'example'
+            if LooseVersion(self.version) < LooseVersion('1.0'):
+                custom_paths['files'].append('bin/EXAMPLE')
+            else:
+                custom_paths['files'].append('bin/example')
+
+            super(EB_Example, self).sanity_check_step(custom_paths=custom_paths)
 
 
 .. _implementing_easyblocks_module_only_compatibility:
@@ -340,15 +425,33 @@ Version-specific parts
 Compatibility with ``--extended-dry-run``/``-x`` and ``--module-only``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Some special care must be taken to ensure that an easyblock is fully compatible with ``--extended-dry-run`` / ``-x``
+(see :ref:`extended_dry_run`) and ``--module-only`` (see :ref:`module_only`).
+
+For ``--extended-dry-run``/``-x``, this is already well covered at :ref:`extended_dry_run_guidelines_easyblocks_detect_dry_run`.
+
+For ``--module-only``, the main thing is to make sure that both the ``make_module_step``, including the ``make_module_*`` submethods,
+and the ``sanity_check_step`` methods do not make any assumptions about the presence of certain environment variables
+or that class variables have been defined already.
+
+This needs to be handled with care since under ``--module-only`` the large majority of the ``*_step`` functions is
+simply skipped entirely. So, if the ``configure_step`` method is responsible for defining class variables that are
+picked up in ``sanity_check_step``, the latter may run into unexpected initial values like ``None``.
+A possible workaround is to define a separate custom method to define the class variables, and to call out to this
+method from ``configure_step`` and ``sanity_check_step`` (for the latter, conditionally, i.e., only if the class
+variables still have the initial values).
+
 
 .. _implementing_easyblocks_using:
 
 Using new/custom easyblocks
 ---------------------------
 
-``--include-easyblocks``
+The best way to make EasyBuild aware of new or customized easyblocks is via ``--include-easyblocks``,
+see :ref:`include_easyblocks` for more information.
 
-check with ``--list-easyblocks``
+To verify that your easyblocks are indeed picked up correctly, you can use ``--list-easyblocks=detailed``,
+see also :ref:`list_easyblocks`.
 
 
 .. _implementing_easyblocks_testing:
@@ -356,11 +459,28 @@ check with ``--list-easyblocks``
 Testing easyblocks
 ------------------
 
+Before testing your easyblock implementation by actually building and installation the software package(s) it
+was implemented for, it is recommended to:
 
-``--extended-dry-run``
+* study the output produced by ``--extended-dry-run``/``-x``
+* evaluate the generated module file that is obtained by using ``--module-only --force``
+
+For the output of ``--extended-dry-run``/``-x``, there should be no ignored errors (cfr. :ref:`extended_dry_run_notes_ignored_errors`),
+that is the end of the output produced should include this message:
+
+.. code::
+
+  (no ignored errors during dry run)
+
+
+With ``--module-only --force``, the easyblock complete successfully without crashing, and should generate a module
+file that includes everything that is expected (except for statements that require that the actual installation was
+performend).
 
 
 .. _implementing_easyblocks_use_case_tensorlow:
 
 Use case: an easyblock for Tensorflow
 -------------------------------------
+
+*(work in progress)*
