@@ -234,6 +234,7 @@ redefining it entirely, since we call out to the original ``configure_step`` met
             # use example make.cfg for x86-64
             copy_file('make.cfg.x86', 'make.cfg')
 
+            # call out to original configure_step implementation of ConfigureMake easyblock
             super(EB_Example, self).configure_step()
 
 
@@ -279,15 +280,35 @@ The first element in the list of a defined custom parameter corresponds to the d
 Easyblock constructor
 ~~~~~~~~~~~~~~~~~~~~~
 
-``__init__``
+In the ``class`` constructor of the easyblock, i.e. the ``__init__`` method, one or more class variables
+can be initialised. These can be used for sharing information between different ``*_step`` methods in the easyblock.
+
+For example:
+
+.. code:: python
+
+    from easybuild.framework.easyblock import EasyBlock
+
+    class EB_Example(EasyBlock):
+        """Custom easyblock for Example"""
+
+        def __init__(self, *args, **kwargs):
+            """Constructor for Example easyblock, initialises class variables."""
+
+            # call out to original constructor first, so 'self' (i.e. the class instance) is initialised
+            super(EB_Example, self).__init__(*args, **kwargs)
+
+            # initialise class variables
+            self.var1 = None
+            self.var2 = None
 
 
 .. _implementing_easyblocks_files:
 
-Reading/writing/patching files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Reading/writing/copying/patching files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``read_file``, ``write_file``, ``apply_regex_substitutions``
+``read_file``, ``write_file``, ``copy_file``, ``apply_regex_substitutions``
 
 
 .. _implementing_easyblocks_running_commands:
