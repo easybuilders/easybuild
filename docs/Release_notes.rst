@@ -4,8 +4,62 @@ EasyBuild release notes
 =======================
 
 The latest version of EasyBuild provides support for building and installing **1,136** different software packages,
-using 25 different (compiler) toolchains. It contains 179 software-specific easyblocks and 30 generic easyblocks,
+using 25 different (compiler) toolchains. It contains 180 software-specific easyblocks and 30 generic easyblocks,
 alongside 6,225 easyconfig files.
+
+.. _release_notes_eb310:
+
+v3.1.0 (February 3rd 2017)
+--------------------------
+
+feature release
+
+**framework**
+
+* various enhancements, including:
+
+  * ARM: GCC optimal/generic architecture compiler flags (`#1974 <https://github.com/hpcugent/easybuild-framework/pull/1974>`_)
+  * add support for ``--check-style`` to check style in easyconfig files (`#1618 <https://github.com/hpcugent/easybuild-framework/pull/1618>`_, `#2038 <https://github.com/hpcugent/easybuild-framework/pull/2038>`_)
+  * add ``HOME`` and ``USER`` from env to available cfg file constants (`#2063 <https://github.com/hpcugent/easybuild-framework/pull/2063>`_)
+  * ``--optarch`` can now be specified on a toolchain basis (`#2071 <https://github.com/hpcugent/easybuild-framework/pull/2071>`_)
+  * implement ``get_cpu_features`` function in systemtools (`#2074 <https://github.com/hpcugent/easybuild-framework/pull/2074>`_)
+  * also detect VSX support for POWER (`#2078 <https://github.com/hpcugent/easybuild-framework/pull/2078>`_)
+  * support use of linalg without MPI, add iimkl toolchain definition (`#2082 <https://github.com/hpcugent/easybuild-framework/pull/2082>`_)
+  * spoof HTTP request header with empty agent (`#2083 <https://github.com/hpcugent/easybuild-framework/pull/2083>`_)
+  * exclude dependencies of dependencies that extend $MODULEPATH in make_module_dep (`#2091 <https://github.com/hpcugent/easybuild-framework/pull/2091>`_)
+
+* various bug fixes, including:
+
+  * make ``fetch_github_token`` more robust against ``RuntimeError`` from ``keyring`` (`#2070 <https://github.com/hpcugent/easybuild-framework/pull/2070>`_)
+  * POWER: Fix ``--optarch=GENERIC`` for GCC (`#2073 <https://github.com/hpcugent/easybuild-framework/pull/2073>`_)
+  * fix docstring in toolchain class (`#2075 <https://github.com/hpcugent/easybuild-framework/pull/2075>`_)
+  * skip test cases involving ``.yeb`` if ``PyYAML`` is not installed, silence test in options subsuite (`#2081 <https://github.com/hpcugent/easybuild-framework/pull/2081>`_)
+  * fix traceback with '``eb --check-github``' if ``GitPython`` is not installed (`#2085 <https://github.com/hpcugent/easybuild-framework/pull/2085>`_)
+  * fix regex for determining list of patched files in GitHub diff (`#2088 <https://github.com/hpcugent/easybuild-framework/pull/2088>`_)
+  * modify robot so that it only appends dependencies of tweaked easyconfigs (`#2090 <https://github.com/hpcugent/easybuild-framework/pull/2090>`_)
+  * escape metacharacters in paths passed to ``re.compile`` in ``dry_run_set_dirs`` (`#2098 <https://github.com/hpcugent/easybuild-framework/pull/2098>`_)
+  * fix broken error message in ``get_toolchain_hierarchy`` + dedicated test case (`#2099 <https://github.com/hpcugent/easybuild-framework/pull/2099>`_)
+
+**easyblocks**
+
+* new easyblock for FFTW (`#1083 <https://github.com/hpcugent/easybuild-easyblocks/pull/1083>`_)
+* various enhancements, including:
+
+  * update sanity check for flex 2.6.3, no more ``libfl_pic.a`` library (`#1077 <https://github.com/hpcugent/easybuild-easyblocks/pull/1077>`_)
+  * cleanup build before proceeding with full Boost (`#1080 <https://github.com/hpcugent/easybuild-easyblocks/pull/1080>`_)
+  * update CP2K easyblock: copy data dir, support version 4.1, support ELPA, fix psmp build with foss toolchain (#996, `#1020 <https://github.com/hpcugent/easybuild-easyblocks/pull/1020>`_, `#1043 <https://github.com/hpcugent/easybuild-easyblocks/pull/1043>`_, `#1084 <https://github.com/hpcugent/easybuild-easyblocks/pull/1084>`_)
+  * add sanity check support for OpenSSL 1.1 (`#1087 <https://github.com/hpcugent/easybuild-easyblocks/pull/1087>`_)
+  * support the latest changes in Inspector 2017 (`#1047 <https://github.com/hpcugent/easybuild-easyblocks/pull/1047>`_)
+  * update NEURON easyblock to support the lack of ``hoc_ed`` in 7.4 (#987)
+  * add support for WPS 3.8 (`#1079 <https://github.com/hpcugent/easybuild-easyblocks/pull/1079>`_)
+  * also consider ``setuptools`` in ``EasyBuildMeta`` easyblock (`#1093 <https://github.com/hpcugent/easybuild-easyblocks/pull/1093>`_)
+
+* various bug fixes, including:
+
+  * (correctly) define ``$ROSETTA3_DB`` in Rosetta easyblock (`#1092 <https://github.com/hpcugent/easybuild-easyblocks/pull/1092>`_)
+
+**easyconfigs**
+
 
 .. _release_notes_eb302:
 
