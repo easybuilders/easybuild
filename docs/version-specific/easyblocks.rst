@@ -112,6 +112,7 @@
     * EB_ESPResSo
     * EB_Extrae
     * EB_Ferret
+    * EB_FFTW
     * EB_flex
     * EB_freetype
     * EB_g2clib

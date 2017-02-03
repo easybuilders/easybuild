@@ -52,6 +52,7 @@ Submodules
    easybuild.toolchains.iccifort
    easybuild.toolchains.iccifortcuda
    easybuild.toolchains.ictce
+   easybuild.toolchains.iimkl
    easybuild.toolchains.iimpi
    easybuild.toolchains.iimpic
    easybuild.toolchains.iiqmpi

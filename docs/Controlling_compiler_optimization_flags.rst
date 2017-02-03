@@ -132,3 +132,32 @@ Currently, using ``--optarch=GENERIC`` will result in the following target archi
 * for toolchains using Intel compilers: ``-xSSE2``
 
 On other systems or for other compilers, you can check which compiler flags will be used via :ref:`extended_dry_run`.
+
+
+.. _controlling_compiler_optimization_flags_optarch_per_compiler:
+
+Setting architecture flags for different compilers via ``--optarch=<compiler:flags>;<compiler:flags>``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Starting with version 3.1.0, EasyBuild supports specifying architecture flags on a per-compiler basis. This enables to
+"set and forget" the ``--optarch`` option for your compilers of interest, as opposed to change it depending on the
+compiler used on the packages to be installed.
+
+The syntax is ``<compiler:flags>;<compiler:flags>``, where ``:`` separates the compiler name from the compiler flags,
+and ``;`` separates different compilers. This is an example for the Intel and GCC compilers:
+``--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'``. As in the simple cases, EasyBuild adds one ``-`` to the
+flags specified, so the flags passed to the Intel and GCC compilers in this case are ``-xHost`` and
+``-march=x86-64 -mtune=generic``. Please note the quotes to escape the space in the GCC flags.
+
+Additionally, ``GENERIC`` is also supported on a compiler basis, allowing to specify a generic compilation for the
+desired compilers. This is an example of this usage: ``--optarch=Intel:xHost;GCC:GENERIC``. Of course, this is
+supported just for compiler toolchains that recognize ``GENERIC``.
+
+The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
+compiler specified is ``Intel`` (for example with ``--optarch=Intel:xCORE-AVX2``), then EasyBuild will behave as if
+``--optarch`` was not specified for this toolchain.
+
+The compiler name corresponds to the value of the ``COMPILER_FAMILY`` constant of the toolchain. Two common examples
+are ``GCC`` and ``Intel``.
+
+Due to the special treatment of ``--optarch`` in Cray environments, this feature is not supported on this platform.

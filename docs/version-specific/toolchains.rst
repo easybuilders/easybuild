@@ -17,6 +17,7 @@ name                compiler            MPI          CUDA compiler    COMPILER  
 **xlompi**          xlc, xlf            OpenMPI                       xlc, xlf                                                              
 **iompi**           icc, ifort          OpenMPI                       icc, ifort                                                            
 **gmpich2**         GCC                 MPICH2                        GCC                                                                   
+**iomkl**           icc, ifort          OpenMPI                       icc, ifort          imkl        imkl         imkl        imkl    imkl 
 **cgmvolf**         Clang, GCC          MVAPICH2                      Clang, GCC          OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **CrayIntel**       PrgEnv-intel                                      PrgEnv-intel                                                          
 **gcccuda**         GCC, CUDA                        CUDA             GCC, CUDA                                                             
@@ -39,7 +40,7 @@ name                compiler            MPI          CUDA compiler    COMPILER  
 **goalf**           GCC                 OpenMPI                       GCC                 ATLAS       ScaLAPACK    ATLAS       FFTW    BLACS
 **GCC**             GCC                                               GCC                                                                   
 **goolfc**          GCC, CUDA           OpenMPI      CUDA             GCC, CUDA           OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
-**iomkl**           icc, ifort          OpenMPI                       icc, ifort          imkl        imkl         imkl        imkl    imkl 
+**iimkl**           icc, ifort                                        icc, ifort          imkl        imkl         imkl        imkl    imkl 
 **gmpolf**          GCC                 MPICH                         GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **ipsmpi**          icc, ifort          psmpi                         icc, ifort                                                            
 **gmpich**          GCC                 MPICH                         GCC                                                                   

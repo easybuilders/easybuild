@@ -118,6 +118,7 @@ GitHub integration options
 Option flag                                            Option description                                                                                     
 ===================================================    =======================================================================================================
 ``--check-github``                                     Check status of GitHub integration, and report back (def False)                                        
+``--check-style``                                      Run a style check on the given easyconfigs (def False)                                                 
 ``--dump-test-report=DUMP-TEST-REPORT``                Dump test report to specified path (def test_report.md)                                                
 ``--from-pr=PR#``                                      Obtain easyconfigs from specified PR (type <type 'int'>)                                               
 ``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``      Path to Git working directories for EasyBuild repositories (type <type 'str'>)                         
