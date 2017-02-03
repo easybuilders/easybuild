@@ -9,10 +9,12 @@ Constants available (only) in configuration files
 only in 'DEFAULT' section:
 --------------------------
 
-==========================    ===========================================    ===================================================================
-Constant name                 Constant help                                  Constant value                                                     
-==========================    ===========================================    ===================================================================
-``DEFAULT_ROBOT_PATHS``       List of default robot paths (':'-separated)    ``/Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs``
-``DEFAULT_REPOSITORYPATH``    Default easyconfigs repository path            ``/Users/kehoste/.local/easybuild/ebfiles_repo``                   
-==========================    ===========================================    ===================================================================
+==========================    ===================================================    ===================================================================
+Constant name                 Constant help                                          Constant value                                                     
+==========================    ===================================================    ===================================================================
+``DEFAULT_ROBOT_PATHS``       List of default robot paths (':'-separated)            ``/Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs``
+``DEFAULT_REPOSITORYPATH``    Default easyconfigs repository path                    ``/Users/kehoste/.local/easybuild/ebfiles_repo``                   
+``USER``                      Current username, translated uid from password file    ``kehoste``                                                        
+``HOME``                      Current user's home directory, expanded '~'            ``/Users/kehoste``                                                 
+==========================    ===================================================    ===================================================================
 

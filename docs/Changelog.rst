@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170203.01** (`Feb 3rd 2017`): update release notes for EasyBuild v3.1.0 (see :ref:`release_notes_eb310`)
 * **release 20170129.01** (`Jan 29th 2017`): update ``--optarch`` documentation (see :ref:`controlling_compiler_optimization_flags_optarch_per_compiler`)
 * **release 20170109.01** (`Jan 9th 2017`): add documentation on :ref:`common_toolchains`
 * **release 20161222.01** (`Dec 22nd 2016`): update documentation and release notes for EasyBuild v3.0.2 (see :ref:`release_notes_eb302`)
