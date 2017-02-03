@@ -59,6 +59,7 @@ feature release
 
 **easyconfigs**
 
+* added easyconfigs for ``foss/2017a`` and ``intel/2017a`` common toolchains (`#3968 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3968>`_, `#3969 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3969>`_)
 * added example easyconfig files for 16 new software packages:
 
   * ack (`#3983 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3983>`_), cclib (`#4065 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4065>`_), ConnectomeWorkbench (`#3411 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3411>`_), GroIMP (`#3994 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3994>`_), hyperspy (`#3991 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3991>`_), I-TASSER (`#1216 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1216>`_),
