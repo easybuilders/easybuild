@@ -18,6 +18,7 @@ Submodules
    easybuild.framework.easyconfig.easyconfig
    easybuild.framework.easyconfig.licenses
    easybuild.framework.easyconfig.parser
+   easybuild.framework.easyconfig.style
    easybuild.framework.easyconfig.templates
    easybuild.framework.easyconfig.tools
    easybuild.framework.easyconfig.tweak
