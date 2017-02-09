@@ -1,0 +1,916 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>"EasyBuild: A New Hope" - Damian Alvarez (JSC)</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/eum.css">
+        <link rel="stylesheet" href="css/theme/white.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-transition="fade">
+                <img height="200" data-src="img/eb-jsc-logos.png" style="background:none; border:none; box-shadow:none;" alt="EB JSC Logos">
+                <h1>EasyBuild</h1>
+                <h3>A New Hope</h3>
+                <p>
+                <small>Damian Alvarez (JSC)</small>
+                </p>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                Disclaimer: I am not a Star Wars fan
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                Brief history of EasyBuild at JSC...
+                </section>
+                <section data-background="img/stars-bg.jpg" data-transition="zoom-out">
+                <audio data-autoplay src="audio/intro.ogg"></audio>
+                <iframe frameborder=0 width=100% height=586 marginheight=0 marginwidth=0 scrolling=no data-src="intro.html"></iframe>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide" data-transition="zoom-in">
+                <section>
+                <h1>JURECA system details & requirements</h1>
+                </section>
+                <section>
+                <h3>JURECA system characteristics</h3>
+                <ul>
+                    <li>1.8 + 0.44 PFlops, #69 in Top500 (Nov'16)</li>
+                    <li>1872 compute nodes (Haswell)</li>
+                    <li>75 compute nodes, each with 2 NVIDIA K80 GPUs</li>
+                    <li>12 visualization nodes, each with 2 NVIDIA K40 GPUs</li>
+                    <li>Mellanox EDR InfiniBand with fat tree topology</li>
+                    <br>
+                    <li>~950 users and ~180 projects</li>
+                    <br>
+                    <li>Any guess on user requirements?</li>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="none-out">
+                <h3>User requirements</h3>
+                <small>"I want it all, I want it all, I want it all, and I want it now"&#9834;&#9836;&#9835;&#9834;&#9836;&#9835;</small> 
+                <ul style="width: 60%">
+                    <li><p class="fragment">Intel compilers</p></li>
+                    <li><p class="fragment">GNU compilers</p></li>
+                    <li><p class="fragment">PGI compilers</p></li>
+                    <li><p class="fragment">ParaStationMPI</p></li>
+                    <li><p class="fragment">Intel MPI</p></li>
+                </ul>
+                <img src="img/freddie.gif" width="30%" style="float: right">
+                </section>
+                <section data-transition="slide out">
+                <h3>User requirements</h3>
+                <small>"I want it all, I want it all, I want it all, and I want it now"&#9834;&#9836;&#9835;&#9834;&#9836;&#9835;</small> 
+                <ul style="width: 60%">
+                    <li>CUDA</p></li>
+                    <li><p class="fragment" data-fragment-index="1">CUDA-aware MPI</p></li>
+                    <li><p class="fragment" data-fragment-index="2">And of course:</p></li>
+                    <ul>
+                        <li><p class="fragment" data-fragment-index="3">Tons of libraries</li>
+                        <li><p class="fragment" data-fragment-index="4">Compatibility</li>
+                    </ul>
+                </ul>
+                <div class="image-float">
+                    <p class="fragment fade-out" data-fragment-index="5">
+                    <img src="img/freddie-13.jpg" width="30%" style="position:absolute; right:0px; top:200px;">
+                    </p>
+                    <p class="fragment fade-in" data-fragment-index="5">
+                    <img src="img/freddie-darth-vader.jpg" width="30%" style="position:absolute; right:0px; top:150px;">
+                    </p>
+                </div>
+                </section>
+                </section>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                <section>
+                <h1>Designing the User View</h1>
+                </section>
+                <section data-transition="none-out">
+                <h3>Module Naming Scheme</h1>
+                Different ways to present modules to users:
+                <small>
+                <ul>
+                    <span class="fragment fade-in"><li>Flat</li>
+                    <ul>
+                        <li>More than 800 packages at once</li>
+                        <li>Not all visible software is compatible</li>
+                    </ul>
+                    </span>
+                    <br>
+                    <span class="fragment fade-in"><li>Toolchain based</li>
+                    <ul>
+                        <li>Have to choose compiler, MPI and math libraries before seeing anything else</li>
+                        <li>Have to choose weird or long names (<code>pmvmklc</code> vs <code>PGI_MVAPICH2_MKL_CUDA)</code></li>
+                        <li>Visible software is compatible</li>
+                    </ul>
+                    </span>
+                </ul>
+                </small>
+                </section>
+                <section data-transition="none-in slide-out">
+                <h3>Module Naming Scheme</h1>
+                Different ways to present modules to users:
+                <ul>
+                    <span><li style="text-decoration: underline;">Hierarchy of compilers and MPI runtimes</li>
+                    <ul>
+                        <li>Modules available are shown in a staged fashion</li>
+                        <li>Intuitive</li>
+                        <li>Visible software is compatible</li>
+                        <br>
+                        <li>This is our default Module Naming Scheme</li>
+                    </ul>
+                    </span>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in none-out">
+                <h3>Lmod as modules tool</h1>
+                <ul>
+                    <li>Lmod was designed with module hierarchies in mind</li>
+                    <ul>
+                        <li><code>module spider</code> and <code>module key</code></li>
+                        <li>Module families (<code>family("compiler")</code> or <code>family("mpi")</code>)</li>
+                    </ul>
+                </ul>
+                </section>
+
+                <section data-transition="none-in slide-out">
+                <h3>Lmod as modules tool</h1>
+                <ul>
+                    <li>Lmod also has other interesting features</li>
+                    <ul>
+                        <li>Good support for hidden modules (<code>--show-hidden</code>)</li>
+                        <li>Cache</li>
+                        <li>Properties</li>
+                        <li>Hooks</li>
+                        <li>...</li>
+                    </ul>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                </section>
+                <section data-state="slide">
+                <section>
+                <h1>EasyBuild Evolution on JURECA</h1>
+                </section>
+                <section>
+                <h3>Why EasyBuild on JURECA?</h3>
+                <ul>
+                    <li>Designed exactly for this use case</li>
+                    <li>Production ready</li>
+                    <li>Easily configurable</li>
+                    <li>Nice integration with Lmod and different MNS</li>
+                    <li>Active and dynamic project</li>
+                    <li>Support for over 1000 packages</li>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in slide-out">
+                <h3>Shortcomings</h3>
+                <ol>
+                    <li>Based on monolithic toolchains</li>
+                    <ul>
+                        <li>Unnecesary redundancy</li>
+                    </ul>
+                    <li>Auxiliary libraries have their own module</li>
+                    <ul>
+                        <li>Swamped module view</li>
+                    </ul>
+                    <li>Couldn't cope with GCC-only software</li>
+                    <li>Crytic toolchain names led to confusion and support issues</li>
+                </ol>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h3>Implemented enhancements</h3>
+                <ul>
+                    <li>Enhanced dependency resolution</li>
+                    <ul>
+                        <li>Minimal toolchains</li>
+                        <li>Enables using software lower in the toolchain hierarchy</li>
+                        <li>Toolchain hierarchy: Compiler &#8594; MPI &#8594; Math libraries </li>
+                    </ul>
+                </ul>
+                </section>
+                <section data-transition="fade">
+                <h3>Implemented enhancements</h3>
+                <ul>
+                    <li>Commom base compiler (<code>GCCcore</code>)</li>
+                    <ul>
+                        <li>Enables base layer for compilers, tools and auxiliary libraries</li>
+                        <li>Toolchain hierarchy: GCCcore &#8594; Compiler &#8594; MPI &#8594; Math libraries </li>
+                    </ul>
+                </ul>
+                </section>
+                <section data-transition="fade">
+                <h3>Implemented enhancements</h3>
+                <ul>
+                    <li>Support for hidden modules</li>
+                    <ul>
+                        <li>Eliminates clutter</li>
+                        <li>Supported in various ways (command line options, environment variables, easyconfig parameters)</li>
+                        <li>Can hide toolchains (<code>GCCcore</code>)</li>
+                    </ul>
+                </ul>
+                </section>
+                <section data-transition="fade-in slide-out">
+                <h3>Implemented enhancements</h3>
+                <ul>
+                    <li>Custom module naming schemes</li>
+                    <li>Naming scheme-independent software installation directories</li>
+                    <li>Performance improvements</li>
+                    <li>Refactoring of MPICH-based easyblocks</li>
+                    <li>Support for compiler dependent <code>--optarch</code> (since 3.1.0)</li>
+                </ul>
+                </section>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                <section>
+                <h1>Current State in JURECA</h1>
+                </section>
+
+                <section>
+                <h6>Toolchain hierarchy</h6>
+                <img src="img/toolchainstree_2016b.png" width="100%" style="background:none; border:none; box-shadow:none; float: bottom;" alt="Toolchain tree"> 
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>User View and Hidden Modules</h6>
+                <ul>
+                    <small>
+                    <span class="fragment"><li>Initial user view:</li>
+                    <ul>
+                        <li>Compilers (GCC 5.4.0, Intel [2016.4, 2017.0], PGI 16.9)</li>
+                        <li>Binary tools (VTune, Advisor, TotalView, ...)</li>
+                    </ul>
+                    </span>
+                    <br>
+                    <span class="fragment"><li>After loading a compiler:</li>
+                    <ul>
+                        <li>MPI runtimes (ParaStationMPI, MVAPICH2, IntelMPI)</li>
+                        <li>Packages built with <code>GCCcore</code></li>
+                        <li>Packages built with the chosen compiler</li>
+                    </ul>
+                    </span>
+                    <br>
+                    <span class="fragment"><li>After loading an MPI runtime:</li>
+                    <ul>
+                        <li>Packages built with the chosen compiler and MPI runtime</li>
+                    </ul>
+                    </span>
+                    <br>
+                    <span class="fragment"><li>If a compiler or MPI is loaded on top of the loaded ones</li>
+                    <ul>
+                        <li>Lmod will swap branches and activate/deactivate modules accordingly (using Lmod's <em>families</em>)</li>
+                    </ul>
+                    </span>
+                    </small>
+                </ul>
+                </section>
+                <section data-transition="fade-in slide-out">
+                <h6>User View and Hidden Modules</h6>
+                Not all packages available for a given combination are visible!
+                <br>
+                <br>
+                <ul>
+                    <li>There are more than 200 hidden packages in total!</li>
+                    <li>Close to 400 in stages with duplicated <code>GCCcore</code></li>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>Bundling Extensions</h6>
+                Python, R and Perl have "extensions"
+                <br>
+                <br>
+                <ul>
+                    <li>1 module per extension is totally excessive</li>
+                    &#8594; Bundles
+                </ul>
+                </section>
+                
+                <section data-transition="fade-in slide-out">
+                <h6>Bundling Extensions</h6>
+                <ul>
+                    <li>Python</li>
+                    <ul>
+                        <li><code>Python</code> (30 extensions)</li>
+                        <li><code>SciPy-Stack</code> (22 extensions)</li>
+                        <li><code>PyCUDA</code> (6 extensions)</li>
+                        <li><code>numba</code> (2 extensions)</li>
+                    </ul>
+                    <li><code>R</code> (365 extensions)</li>
+                    <li><code>Perl</code> (217 extensions)</li>
+                    <li><code><span style="color: red;">X.Org</span></code> (229 extensions)</li>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>Finding Software</h6>
+                <ul>
+                    <small>
+                    <span class="fragment"><li><code>module [--show-hidden] available</code></li>
+                    <ul>
+                        <li>Shows software immediately available</li>
+                    </ul>
+                    </span>
+                    <br>
+                    <span class="fragment"><li><code>module [--show-hidden] spider something[/version]</code></li>
+                    <ul>
+                        <li>Crawls the module tree looking for <code>something</code> on their <span style="color:red">name</span></li>
+                        <li>Tells what it finds and how to get to it</li>
+                    </ul>
+                    </span>
+                    <br>
+                    <span class="fragment"><li><code>module key something</code></li>
+                    <ul>
+                        <li>Crawls the module tree looking for <code>something</code> on their <span style="color:red">description</span></li>
+                        <li>Tells which modules have been found</li>
+                        <li>Might need to use <code>spider</code> afterwards to find how to get them</li>
+                        <li>Useful for looking for the contents of a bundle (ie: <code>numpy</code>)</li>
+                    </ul>
+                    </span>
+                    </small>
+                </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>Upgrading and Retiring Software</h6>
+                Stage concept:
+                <br>
+                <br>
+                <small>
+                <ul>
+                    <li>Software deployment area for a given timeframe</li>
+                    <li>Simply a directory</li>
+                    <li>Default stage upgraded every 6 months</li>
+                    <li>There is a development stage to test software</li>
+                    <li>Tested software is added to our <em>Golden</em> repository</li> (and deployed to production)
+                    <li>Close to seamless transitions between stages during maintenance</li>
+                    <li>Development and old stages are available but not visible by default</li>
+                </ul>
+                </small>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>Ensuring Consistency and Quality</h6>
+                Software team
+                <br>
+                <br>
+                <ul>
+                    <li>Allowed to install software in the development stage</li>
+                    <li>Can test different compilation options, dependencies, functionality, etc</li>
+                    <li>Anybody in the team can modify any other installation</li>
+                </ul>
+                </section>
+                
+                <section data-transition="fade-in slide-out">
+                <h6>Ensuring Consistency and Quality</h6>
+                Software manager
+                <br>
+                <br>
+                <small>
+                <ul>
+                    <li>Only account allowed to install software in the production stages</li>
+                    <li>Supervises quality standards on easyconfigs before adding them to the <em>Golden</em> repository</li>
+                    <ul>
+                        <li>Check for correct dependencies</li>
+                        <li>Proper programming in the easyconfigs (no hardcoded paths, use of EB variables, etc)</li>
+                    </ul>
+                    <li>Manages the whole infrastructure</li>
+                </ul>
+                </small>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>Divergence from Upstream EasyBuild</h6>
+                <ul>
+                    <small>
+                    <li>Divergence motivated by</li>
+                    <ul>
+                        <li>Use of latest versions available at deployment time</li>
+                        <li>Re-positioning of packages in the toolchain hierarchy</li>
+                    </ul>
+                    <br>
+                    <li>Most differences are minimal</li>
+                    <ul>
+                        <li>Different versions of software</li>
+                        <li>Different versions of dependencies</li>
+                        <li>Different toolchains</li>
+                    </ul>
+                    </small>
+                </ul>
+                </section>
+                
+                <section data-transition="fade-in fade-out">
+                <h6>Divergence from Upstream EasyBuild</h6>
+                <b>EasyConfigs used in JURECA*</b>
+                <br>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EB upstream EasyConfigs</td>
+                            <td align="center">47</td>
+                        </tr>
+                        <tr>
+                            <td>JSC EasyConfigs</td>
+                            <td align="center">777</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <small>
+                    <small>
+                        *in the 2016a Stage
+                    </small>
+                </small>
+                </section>
+                
+                <section data-transition="fade-in fade-out">
+                <h6>Divergence from Upstream EasyBuild</h6>
+                <b>Toolchains used in JURECA*</b>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>EB upstream TCs</th>
+                            <th>JSC TCs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Compilers</td>
+                            <td align="center">3</td>
+                            <td align="center">0</td>
+                        </tr>
+                        <tr>
+                            <td>Comp.+MPI</td>
+                            <td align="center">3</td>
+                            <td align="center">3</td>
+                        </tr>
+                        <tr>
+                            <td>Comp.+MPI+Math</td>
+                            <td align="center">3</td>
+                            <td align="center">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <small>
+                    <small>
+                        *in the 2016a Stage
+                    </small>
+                </small>
+                </section>
+                
+                <section data-transition="fade-in slide-out">
+                <h6>Divergence from Upstream EasyBuild</h6>
+                <b>EasyBlocks used in JURECA*</b>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>EB upstream EasyBlocks</td>
+                            <td align="center">~65</td>
+                        </tr>
+                        <tr>
+                            <td>JSC tweaked EasyBlocks</td>
+                            <td align="center">5</td>
+                        </tr>
+                        <tr>
+                            <td>JSC merged EasyBlocks</td>
+                            <td align="center">5</td>
+                        </tr>
+                        <tr>
+                            <td>JSC private EasyBlocks</td>
+                            <td align="center">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <small>
+                    <small>
+                        *in the 2016a Stage
+                    </small>
+                </small>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section>
+                <h1>Demo</h1>
+                </section>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                <section>
+                <h1>Porting to Other Clusters</h1>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section data-transition="slide-in fade-out">
+                <h6>Porting to Other Clusters</h6>
+                <ul>
+                    <li>Besides JURECA, JSC also has JUROPA3 and JUAMS</li>
+                    <small>
+                    <ul>
+                        <li>Similarities: x86_64, InfiniBand, Red Hat based OS</li>
+                        <li>Differences: Microarchitecture, different OSes, mix of Xeon Phi and GPUs</li>
+                    </ul>
+                    </small>
+                </ul>
+                <br>
+                <br>
+                <ul>
+                    <li>Minimal changes needed to reuse JURECA's setup</li>
+                    <small>
+                    <ul>
+                        <li>Fix errouneous easyconfigs</li>
+                        <li>Provide new versions in EasyBuild of obsolete OS packages</li>
+                        <li>Obviously: Set up the whole environment</li>
+                    </ul>
+                    </small>
+                </ul>
+                </section>
+                <section data-transition="fade-in slide-out">
+                <h6>Porting to Other Clusters</h6>
+                <b>Software in JUAMS and JUROPA3*</b>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Total packages in JUAMS</td>
+                            <td align="center">671</td>
+                        </tr>
+                        <tr>
+                            <td>Total packages in JUROPA3</td>
+                            <td align="center">658</td>
+                        </tr>
+                        <tr>
+                            <td>Ad-hoc packages in both</td>
+                            <td align="center">15</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <small>
+                    <small>
+                        *in the 2016a Stage
+                    </small>
+                </small>
+                </section>
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                <section>
+                <h1>Common problems</h1>
+                </section>
+                <section data-transition="slide-in fade-out">
+                <h6>Common problems</h6>
+                <ul style="width: 60%; float: left">
+                    <li>User complains about software X not being available</li>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">My answer: <em>"Your eyes can deceive you. Don't trust them"</em></li>
+                        <li class="fragment" data-fragment-index="2">Or: <em>"I find your lack of faith disturbing"</em></li>
+                        <li class="fragment" data-fragment-index="3">Lmod's answer: <em>"You underestimate my power"</em></li>
+                        <li class="fragment" data-fragment-index="4">Most of the time it is there but</li>
+                        <small>
+                        <ul>
+                            <li class="fragment" data-fragment-index="5">Hidden</li>
+                            <li class="fragment" data-fragment-index="6">Bundled</li>
+                            <li class="fragment" data-fragment-index="7">In a different toolchain</li>
+                        </ul>
+                        </small>
+                    </ul>
+                </ul>
+                <div class="image-float">
+                    <p class="fragment current-visible" data-fragment-index="1">
+                    <img src="img/obi-wan-eyes.jpg" width="30%" style="position:absolute; right:0px; top:200px;">
+                    </p>
+                    <p class="fragment current-visible" data-fragment-index="2">
+                    <img src="img/force-choke.png" width="30%" style="position:absolute; right:0px; top:200px;">
+                    </p>
+                    <p class="fragment current-visible" data-fragment-index="3">
+                    <img src="img/anakin-underestimate.jpg" width="30%" style="position:absolute; right:0px; top:200px;">
+                    </p>
+                </div>
+                </section>
+                
+                <section data-transition="fade-in fade-out">
+                <h6>Common problems</h6>
+                <ul>
+                    <li>User complains about newly missing modules</li>
+                    <ul>
+                        <li>Typically after a stage update</li>
+                        <li>User specified module version</li>
+                        <li>Old version is not available in the new stage</li>
+                        <small>
+                        <ul>
+                            <li>A new one is</li>
+                        </ul>
+                        </small>
+                    </ul>
+                </ul>
+                </section>
+
+                <section data-transition="fade-in fade-out">
+                <h6>Common problems</h6>
+                <ul>
+                    <li>User complains about missing libraries</li>
+                    <ul>
+                        <li>Typically after a stage update</li>
+                        <li>Happens when linking against particular library versions (e.g.: <code>libgsl.so.19</code>)</li>
+                        <li>Old version is not available in the new stage</li>
+                    </ul>
+                </ul>
+                </section>
+
+                <section data-transition="fade-in fade-out">
+                <h6>Common problems</h6>
+                <ul>
+                    <li>User complains about missing symbol versions <code>version `GLIBCXX_3.4.20' not found (required by ....)</code></li>
+                    <ul>
+                        <li>Typically when loading certain binary tools</li>
+                        <li>Happens when the tools ship older library versions (e.g.: <code>libstdc++.so.6</code>)</li>
+                        <li>Depends on the module load order</li>
+                        <ul>
+                            <li>append instead of prepend <code>LD_LIBRARY_PATH</code>?</li>
+                        </ul>
+                    </ul>
+                </ul>
+                </section>
+
+                <section data-transition="fade-in fade-out">
+                <h6>Common problems</h6>
+                <ul>
+                    <li>Component compatibility</li>
+                    <ul>
+                        <li>Interactions between compilers</li>
+                        <li>Intel and PGI need a particular range of underlying GCC versions</li>
+                        <li>CUDA needs a particular range of underlying GCC/Intel/PGI versions</li>
+                        <li>This forces us to duplicate compilers and/or <code>GCCcore</code></li>
+                    </ul>
+                </ul>
+                </section>
+                
+                <section data-transition="fade-in fade-out">
+                <h6>Common problems</h6>
+                <ul>
+                    <li>Stage updates</li>
+                    <ul>
+                        <li>A lot of hassle to:</li>
+                        <ul>
+                            <li>Find and update new software versions</li>
+                            <li>Update dependencies</li>
+                        </ul>
+                        <br>
+                        <li>New software: new bugs</li>
+                        <ul>
+                            <li>Particularly important for compilers and MPI runtimes</li>
+                        </ul>
+                    </ul>
+                </ul>
+                </section>
+                
+                <section data-transition="fade-in fade-out">
+                <h6>Common problems</h6>
+                <ul style="width: 60%; float: left">
+                    <li>Side effect of having a centralized software manager</li>
+                    <ul>
+                        <li>Every software/modules problem is an "EasyBuild problem"</li>
+                    </ul>
+                </ul>
+                <ul style="width: 100%; float: left">
+                    <ul>
+                        <font size="6">
+                        <ul>
+                            <li class="fragment" data-fragment-index="1"><em>"These are not the <strike>droids</strike> experts you're looking for"</em></li>
+                        </ul>
+                        </font>
+                        <br>
+                        <li class="fragment" data-fragment-index="2">Not so frequent anymore</li>
+                        <li class="fragment" data-fragment-index="2">Need to make clear with the team the different roles</li>
+                    </ul>
+                </ul>
+                <div class="image-float">
+                    <p class="fragment" data-fragment-index="1">
+                    <img src="img/wrong-droids.png" width="30%" style="position:absolute; right:0px; top:200px;">
+                    </p>
+                </div>
+                </section>
+               
+                <section data-transition="fade-in slide-out">
+                <h6>Common problems</h6>
+                <ul style="width: 60%; float: left">
+                    <li>User complains about not being able to unload a <em>sticky</em> module</li>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">My answer: <em>"Use the force"</em></li>
+                        <li class="fragment" data-fragment-index="2"><code>module --force purge</code></li>
+                        <li class="fragment" data-fragment-index="3">This has never been a problem, but I HAD TO make the pun</li>
+                    </ul>
+                </ul>
+                <div class="image-float">
+                    <p class="fragment" data-fragment-index="1">
+                    <img src="img/use_the_force.jpg" width="30%" style="position:absolute; right:0px; top:200px;">
+                    </p>
+                </div>
+                </section>
+ 
+                </section>
+               
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                <section>
+                <h1>Future Work/What to change?</h1>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section>
+                    <h6>EasyBuild changes</h6>
+                    <ul>
+                        <li>Automatic upgrades</li>
+                        <ul>
+                            <li>Of dependency versions (start during the hackathon!)</li>
+                            <li>Of software versions</li>
+                        </ul>
+                        <li>Linking with <code>-rpath</code> (experimental feature right now)</li>
+                        <li>Octave extensions</li>
+                        <br>
+                        <li>"Fat" easyconfigs</li>
+                    </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section>
+                    <h6>Possible software management changes</h6>
+                    <ul>
+                        <li>Reshuffling packages</li>
+                        <ul>
+                            <li>Move Python from compiler to <code>GCCcore</code>?</li>
+                        </ul>
+                        <li>Tracking module usage</li>
+                        <ul>
+                            <li>Lmod hooks and later on XALT?</li>
+                        </ul>
+                        <li>Do not preload Stages by default?</li>
+                        <li>Default module sets</li>
+                        <ul>
+                            <li>Preselected packages/views for users that don't care about compilers and MPI runtimes</li>
+                        </ul>
+                    </ul>
+                </section>
+                
+                <!-------------- NEW SUBSECTION -------------->
+                
+                <section>
+                    <h6>Deployment in new systems</h6>
+                    <ul>
+                        <li>JULIA</li>
+                        <ul>
+                            <li>Cray system: KNL+OmniPath+NVM+Broadwell</li>
+                        </ul>
+                        <li>JURON</li>
+                        <ul>
+                            <li>IBM system: POWER8+NVIDIA P100+InfiniBand+NVM</li>
+                        </ul>
+                        <br>
+                        <li>JURECA Booster</li>
+                        <ul>
+                            <li>~10PFLOPs KNL system</li>
+                            <li>Integrated with JURECA</li>
+                            <li>Jobs can simultaneously use Haswell+KNL partitions</li>
+                        </ul>
+                    </ul>
+                </section>
+
+                </section>
+                
+                <!-------------- NEW SECTION -------------->
+                
+                <section data-state="slide">
+                <section data-transition="slide-in fade-out">
+                <h1>Conclusions</h1>
+                <ul>
+                    <li><p class="fragment">EasyBuild enables to deploy and manage a tremendous amount of software, using a small team</p></li>
+                    <li><p class="fragment">We undertook significant effort to</p></li>
+                    <small>
+                    <ul>
+                        <li><p class="fragment">Minimize SW replication</p></li>
+                        <li><p class="fragment">Provide latests and greatest (at Stage deployment time)</p></li>
+                        <li><p class="fragment">Provide a meaningful user view</p></li>
+                    </ul>
+                    </small>
+                </ul>
+                </section>
+                <section data-transition="fade-in slide-out">
+                <h1>Conclusions</h1>
+                <ul>
+                    <li><p>EasyBuild enables easy porting to similar systems</p></li>
+                    <li><p class="fragment">Active project that grows everyday</p></li>
+                    <li><p class="fragment">Still room for improvement</p></li>
+                    <ul>
+                        <li><p class="fragment">Hackathon yay!</p></li>
+                    </ul>
+                </ul>
+                </section>
+            </ul>
+            </section>
+            
+            <!-------------- NEW SECTION -------------->
+            
+            <section data-state="slide">
+            <h3>"May the build be with you"</h3>
+            <h4>Questions?</h4>
+            <img src="img/lightsaber_2x.png" width="100%" style="background:none; border:none; box-shadow:none; float: bottom;" alt="XKCD SW">
+            <small><small> *Every <strike>nerdy</strike> technical slide deck needs an XKCD comic strip</small> </small>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            src: 'external.js', condition: function() { return !!document.querySelector( '[data-external]' ); },
+
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+    </script>
+</body>
+</html>
