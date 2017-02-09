@@ -18,11 +18,11 @@ The basics
 
 An *easyblock* is a Python module that implements a software build and installation procedure.
 
-It can be considered a Python script that plugs into the :ref:`framework`.
+This concept is essentially implemented as a Python script that plugs into the :ref:`framework`.
 
 EasyBuild will leverage easyblocks as needed, depending on which software packages it needs to install.
-Which easyblock is required is determined by the ``easyblock`` easyconfig parameter, or the software name
-(see :ref:`implementing_easyblocks_generic_vs_software_specific`).
+Which easyblock is required is determined by the ``easyblock`` easyconfig parameter, if it is present,
+or the software name (see :ref:`implementing_easyblocks_generic_vs_software_specific`).
 
 
 .. _implementing_easyblocks_generic_vs_software_specific:
@@ -30,25 +30,28 @@ Which easyblock is required is determined by the ``easyblock`` easyconfig parame
 Generic vs software-specific easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Easyblocks can either be *generic* of *software-specific*.
+Easyblocks can either be *generic* or *software-specific*.
 
 Generic easyblocks implement a 'standard' software build and installation procedure that is used by multiple different
 software packages.
 A commonly used example is the
 `ConfigureMake <https://github.com/hpcugent/easybuild-easyblocks/blob/master/easybuild/easyblocks/generic/configuremake.py>`_ 
 generic easyblock, which implements the standard ``configure`` - ``make`` - ``make install`` installation procedure used
-by most GNU software packages. See also :ref:`generic_easyblocks`.
+by most GNU software packages.
 
-Software-specific easyblocks implement the build and installation procedure for a particular software package.
-Typically this involves highly customised substeps, for example specyfing dedicated configuration options, creating
+Software-specific easyblocks implement the build and installation procedure for a particular software package
+(see also :ref:`implementing_easyblocks_naming_scheme_module`).
+Typically this involves highly customised substeps, for example specifying dedicated configuration options, creating
 or adjusting specific files, executing non-standard shell commands, etc. Usually a custom implementation of the
 sanity check is also included.
 
-Since EasyBuild v2.0, using a generic easyblock requires specifying the ``easyblock`` parameter in the easyconfig file;
-if it is not specified, EasyBuild will try and find the software-specific easyblock derived from the software name.
+Since EasyBuild v2.0, using a generic easyblock requires specifying the ``easyblock`` parameter in the easyconfig file.
+If it is not specified, EasyBuild will try and find the software-specific easyblock derived from the software name.
 
 The distinction between generic and software-specific easyblocks can be made based on the naming scheme that is used
-for an easyblock, see also :ref:`implementing_easyblocks_naming_scheme`.
+for an easyblock (see also :ref:`implementing_easyblocks_naming_scheme`).
+
+See also :ref:`generic_easyblocks`.
 
 
 .. _implementing_easyblocks_vs_easyconfigs:
@@ -62,7 +65,7 @@ Before you start implementing an easyblock, you should determine whether or not 
 easyblocks. Examples include easyconfig parameters like ``(pre){config,build,installopts}`` (available for any easyblock),
 ``install_cmd`` (only for ``Binary`` generic easyblock or derivates), etc. See :ref:`writing_easyconfig_files` for an
 overview of what is supported in easyconfig files, and :ref:`generic_easyblocks` for custom easyconfig parameters for
-the existing generic easyblocks.
+the existing generic easyblocks (see also '``eb -e <easyblock> -a``').
 
 On the other hand, somewhat complex or heavily customised software build and installation procedures may be handled better
 via a custom easyblock.
@@ -93,8 +96,10 @@ Naming scheme for easyblocks
 ----------------------------
 
 Easyblocks need to follow a strict naming scheme, to ensure that EasyBuild can pick them up as needed.
-This involves two aspects: i) the name and location of the Python module file,
-and ii) the name of the Python class in that module.
+This involves two aspects: i) the name of the Python class, and ii) the name and location of the Python module file.
+
+
+.. _implementing_easyblocks_naming_scheme_class_name_specific:
 
 Class name for software-specific easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,7 +107,7 @@ Class name for software-specific easyblocks
 The name of the Python class is determined by the *software name* for software-specific easyblocks.
 It consists of a prefix '``EB_``', followed by the (original) software name.
 
-Because of limitations in Pythonon characters allowed in names of Python classes,
+Because of limitations in Python on characters allowed in names of Python classes,
 only alphanumeric characters and ``_`` are allowed. Any other characters are replaced following an encoding scheme:
 
 * spaces are replaced by underscores (``_``)
@@ -119,16 +124,22 @@ for a given software name; for example:
   >>> encode_class_name('netCDF-Fortran')
   'EB_netCDF_minus_Fortran'
 
+
+.. _implementing_easyblocks_naming_scheme_class_name_generic:
+
 Class name for generic easyblocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For *generic* easyblocks, the class name does *not* include an ``EB_`` prefix, and the name is free to choose,
-taking into account the restriction to alphanumeric characters and underscores.
+For *generic* easyblocks, the class name does *not* include an ``EB_`` prefix (since there is no need for an escaping
+mechanism) and hence the name is fully free to choose, taking into account the restriction to alphanumeric characters
+and underscores.
 
 For code style reasons, the class name should start with a capital letter.
 
 Examples include ``Bundle``, ``ConfigureMake``, ``CMakePythonPackage``.
 
+
+.. _implementing_easyblocks_naming_scheme_module:
 
 Module name/location
 ~~~~~~~~~~~~~~~~~~~~
@@ -168,8 +179,8 @@ rather than in one large '``easyblocks``' directory
 (see https://github.com/hpcugent/easybuild-easyblocks/blob/master/easybuild/easyblocks/).
 
 Note that you shouldn't concern yourself too much with getting the location of an easyblock right, as long as you
-use ``--include-easyblocks`` to make EasyBuild use additional or customised easyblocks;
-see :ref:`include_easyblocks` for more information.
+use ``--include-easyblocks`` to make EasyBuild use additional or customised easyblocks
+(see :ref:`include_easyblocks` for more information).
 
 
 .. _implementing_easyblocks_structure:
@@ -191,7 +202,7 @@ The example below shows the overal structure of an easyblock:
             """Custom implementation of configure step for Example"""
 
             # run configure.sh to configure the build
-            run_cmd("./configure.sh PREFIX=%s" % self.installdir)
+            run_cmd("./configure.sh --install-prefix=%s" % self.installdir)
 
 
 Each easyblock includes an implementation of a ``class`` that (directly or indirectly) derives from the abstract
@@ -204,7 +215,7 @@ in the build and installation procedure.
 
 Each easyblock *must* implement the ``configure``, ``build`` and ``install`` steps, since these are not implemented
 in the abstract ``EasyBlock`` class. This could be done explicitely by redefining the corresponding ``*_step`` methods,
-or implicitely by :ref:`implementing_easyblocks_deriving`.
+or implicitely by deriving from existing (generic) easyblocks.
 
 
 .. _implementing_easyblocks_deriving:
@@ -272,7 +283,8 @@ The example below shows how this can be implemented:
             return ConfigureMake.extra_options(extra_vars)
 
 The first element in the list of a defined custom parameter corresponds to the default value for that parameter
-(both ``None`` in the example above).
+(both ``None`` in the example above). The second element provides some informative help text, and the last element
+indicates whether the parameter is mandatory (``MANDATORY``) or just a custom parameter (``CUSTOM``).
 
 
 .. _implementing_easyblocks_constructor:
@@ -348,6 +360,30 @@ The ``run_cmd_qa`` function takes two additional specific arguments:
 * ``std_qa=<dict>`` to specify patterns for common questions and the matching answer
 
 
+.. _implementing_easyblocks_environment:
+
+Manipulating the environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To (re)define environment variables, the ``setvar`` function provided by the ``easybuild.tools.environment`` module
+should be used.
+
+This makes sure that the changes being made to the specified environment variable are kept track of,
+and that they are handled correctly under ``--extended-dry-run``.
+
+
+.. _implementing_easyblocks_logging:
+
+Log statements
+~~~~~~~~~~~~~~
+
+It is good practice to include meaningful log messages in the ``*_step`` methods being customised in the easyblock,
+to enrich the build log with useful information for later debugging or diagnostics.
+
+For logging, the provided ``self.log`` logger class should be used, i.e. the ``self.log.info`` or ``self.log.debug``
+methods should be called.
+
+
 .. _implementing_easyblocks_sanity_check:
 
 Custom (default) sanity check
@@ -373,13 +409,15 @@ This is done by redefining the ``sanity_check_step`` method in the easyblock. Fo
                 'dirs': [],
             }
             custom_commands = ['example --version']
+
+            # call out to parent to do the actual sanity checking, pass through custom paths and commands
             super(EB_Example, self).sanity_check_step(custom_paths=custom_paths, custom_commands=custom_commands)
 
 
 You can both specify file path and subdirectories to check for, which are specified relative to the installation directory,
 as well as simple commands that should execute successfully after completing the installation and loading the generated module file.
 
-Note that it is up to you have specific you make the sanity check, but it is recommended to make the check as complete
+Note that it is up to you how extensive you make the sanity check, but it is recommended to make the check as complete
 as possible to catch any potential build or installation problems thay may occur.
 
 
@@ -430,7 +468,7 @@ Some special care must be taken to ensure that an easyblock is fully compatible 
 
 For ``--extended-dry-run``/``-x``, this is already well covered at :ref:`extended_dry_run_guidelines_easyblocks_detect_dry_run`.
 
-For ``--module-only``, the main thing is to make sure that both the ``make_module_step``, including the ``make_module_*`` submethods,
+For ``--module-only``, you should make sure that both the ``make_module_step``, including the ``make_module_*`` submethods,
 and the ``sanity_check_step`` methods do not make any assumptions about the presence of certain environment variables
 or that class variables have been defined already.
 
@@ -459,7 +497,7 @@ see also :ref:`list_easyblocks`.
 Testing easyblocks
 ------------------
 
-Before testing your easyblock implementation by actually building and installation the software package(s) it
+Before testing your easyblock implementation by actually building and installing the software package(s) it
 was implemented for, it is recommended to:
 
 * study the output produced by ``--extended-dry-run``/``-x``
