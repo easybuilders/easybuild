@@ -53,7 +53,7 @@ you can use one of the following simple commands:
 
    The ``--prefix $HOME/EasyBuild`` part in these commands allows you to install EasyBuild without admin rights into ``$HOME/EasyBuild``.
 
-   .. note:: For pip v8.0 and newer, ``pip install --prefix=$HOM/EasyBuild easybuild`` works too.
+   .. note:: For pip v8.0 and newer, ``pip install --prefix=$HOME/EasyBuild easybuild`` works too.
 
 Adjusting ``$PATH`` and ``$PYTHONPATH`` environment variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
