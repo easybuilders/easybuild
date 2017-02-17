@@ -88,7 +88,7 @@ needs to be done *once* for every of the EasyBuild repositories.
 Forking the repository
 ++++++++++++++++++++++
 
-First, create your own *fork* of the repository in your GitHub account, using the
+First, create your own *fork* of the repository in your GitHub account using the
 '``Fork``' button on the top right at https://github.com/hpcugent/easybuild-framework.
 
 This will basically create a 'copy' of the ``easybuild-framework`` repository
@@ -125,7 +125,7 @@ Then, add your own fork as a '*remote*' repository:
 
   git remote add myfork git@github.com:EXAMPLE/easybuild-framework.git
 
-.. note:: **Do not forget to replace** '``EXAMPLE``' **with the your GitHub account name.**
+.. note:: **Do not forget to replace** '``EXAMPLE``' **with your GitHub account name.**
 
           '``myfork``' is just a name that you give to the remote for your
           fork of the repository on GitHub; you can modify this to your liking
@@ -199,7 +199,7 @@ Committing your changes
 To 'save' your changes, you should create one or more *commits* in the branch
 you created. It is recommended to make separate commits for different 'units of work'.
 
-First, make sure you have the branch were you want to commit the changes to checked out.
+First, make sure you have checked out the branch were you want to commit the changes to.
 
 For example, to commit changes to the ``mybranch`` branch:
 
@@ -209,9 +209,9 @@ For example, to commit changes to the ``mybranch`` branch:
 
 To check which branch is currently checked out, use ``git branch``.
 
-To get an high-level overview of the changes before committing them, you can use ``git status``.
+To get a high-level overview of the changes before committing them, you can use ``git status``.
 
-To see the actual changes that were made, use ``git diff develop <branch_name>``.
+To see the actual changes that were made, use ``git diff``.
 
 To commit the changes you want to contribute back, use ``git add <files>``
 to *stage* the changes, followed by ``git commit -m "<message>"`` to create
@@ -240,7 +240,7 @@ For example:
   git commit -am "example commit message for all the changes that were made"
 
 To verify that your work was committed, use ``git log`` to see all commits
-on the current branch. Use ``git log --stat`` or ``git log --diff`` to see
+on the current branch. Use ``git log --stat`` and/or ``git log --diff`` to see
 more details about which changes are included in each of the commits.
 
 
@@ -250,8 +250,7 @@ Pushing your branch
 +++++++++++++++++++
 
 Once you have committed your changes to a branch, you should *push* your
-branch to your fork of the GitHub repository you want to contribute to,
-using ``git push``.
+branch to your fork of the GitHub repository using ``git push``.
 
 For example, to push the ``mybranch`` branch to the ``myfork`` remote GitHub repository:
 
@@ -267,18 +266,18 @@ Note that this is equivalent to making your work public.
 Opening the pull request
 ++++++++++++++++++++++++
 
-To open a pull request, you should use the GitHub interface, following
-the steps below.
+To open a pull request using the branch you pushed,
+you should use the GitHub interface, and follow the steps outlined below.
 
-.. note:: Replace ``EXAMPLE`` with your GitHub account name,
-          and ``easybuild-framework`` with the name of target EasyBuild repository.
+.. note:: Replace '``EXAMPLE``' with your GitHub account name, and
+          '``easybuild-framework``' with the name of the target EasyBuild repository.
 
 i. visit https://github.com/EXAMPLE/easybuild-framework;
 ii. switch to the branch that includes the changes you want to contribute back
     using the '``Branch: master``' button on the left;
 iii. click the '``New pull request``' button;
-iv. change the target branch to ``develop`` using the '``base: master``' button
-v. provide an appropriate title and description
+iv. change the target branch to ``develop`` using the '``base: master``' button;
+v. provide an appropriate title and description for your contribution;
 vi. open the pull request by clicking the green '``Create pull request``' button
 
 Next, your pull request will be reviewed & tested, see :ref:`contributing_back_review_process`.
@@ -288,12 +287,12 @@ Next, your pull request will be reviewed & tested, see :ref:`contributing_back_r
 Updating existing pull requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: This section describes the manual procedure to create a new pull
-          request; please consider using ``eb --update-pr`` instead, see
-          :ref:`github_update_pr`.
+.. note:: This section describes the manual procedure to create a new pull request.
+
+          Please consider using ``eb --update-pr`` instead, see :ref:`github_update_pr`.
 
 It is quite common to update a pull request after creating it, for example
-because Travis reports problems with the changed being made, or as a response
+because Travis reports problems with the changes being made, or as a response
 to someone reviewing your contribution.
 
 To update an existing pull request, it suffices to add commits to the branch
@@ -349,7 +348,7 @@ is reported in the pull request.
 **Only pull requests that have been tested and approved by Travis are
 eligible for being merged!**
 
-Note that Travis will *only run the unit test suite* for that particular repository.
+Note that Travis will only run the *unit test suite* for that particular repository.
 That is, for easyconfig contributions it does *not* include
 actually building and installing software.
 
@@ -359,10 +358,9 @@ actually building and installing software.
 Backward compatibility
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Contributions should retain *backward compatibility*, i.e. they should not make
-any changes that alter the (default) semantics of the existing code base.
-Of course, enhancements to existing code that retain backward compatibility,
-can be made.
+Contributions should retain *backward compatibility*, i.e., they should *not*
+make any changes that alter the (default) semantics of the existing code base.
+Of course, enhancements to existing code that retain backward compatibility can be made.
 
 One exception to this rule is *bug fixes*, where the whole point is usually
 to fix functionality that was implemented incorrectly.
@@ -382,15 +380,15 @@ Code style review
 ~~~~~~~~~~~~~~~~~
 
 Next to functional evaluation of contributions, care is also taken to
-maintain a consistent code style across the EasyBuild code base; see also
-:ref:`code_style`.
+maintain a consistent code style across the EasyBuild code base
+(see also :ref:`code_style`).
 
 This aspect is sometimes considered to be needless overhead, yet it is an
 important aspect of the review process. A consistent code style is invaluable
-is a large code base that is constantly being updated by a worldwide community.
+in a large code base that is constantly being updated by a worldwide community.
 
 This also applies to easyconfig files, where we try to maintain a strict style
-which mostly matches the established PEP8 coding style for Python (since
+that mostly matches the established PEP8 coding style for Python (since
 easyconfigs are written in Python syntax). However, also the grouping and
 ordering of easyconfig parameters is a part of the 'code' style we maintain.
 
