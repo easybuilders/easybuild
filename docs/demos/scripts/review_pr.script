@@ -1,0 +1,25 @@
+CLEAR
+## EasyBuild is a build and installation framework for (scientific) software on HPC systems
+## http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/
+
+## author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be
+## date: Feb 20th 2017 (EasyBuild v3.1.0)
+
+# unset MODULEPATH
+# unset PYTHONPATH
+# for envvar in `env | grep EASYBUILD | cut -f1 -d=`; do unset $envvar; done
+# module use $HOME/EasyBuild/modules/all
+# module load EasyBuild
+
+##
+## Reviewing easyconfig pull requests
+## **********************************
+##
+### In this demo, we will show the use of 'eb --review-pr'.
+###
+### For more information, see COPYPASTEhttp://easybuild.readthedocs.io/en/latest/Contributing-back.html#comparing-with-existing-easyconfigs-review-pr
+
+PAUSE 1
+### We will review easyconfigs pull request #4094, which contributes an update for PyTables & numexpr for Python 2.7.12 using the foss/2016b toolchain.
+
+eb --review-pr 4094

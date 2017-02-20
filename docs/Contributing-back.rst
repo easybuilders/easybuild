@@ -333,8 +333,11 @@ Each contribution is thoroughly reviewed and tested before it gets merged in.
 Some aspects of this are fully automated, others require human intervention.
 
 It is important to be aware of all of the aspects of the review process,
-since only contributions that fulfill all of the requirements discussed below
-are eligible for being merged in.
+since *only contributions that fulfill all of the requirements discussed below
+are eligible for being merged in*:
+
+* unit test suite must still pass
+*
 
 
 .. _contributing_back_review_process_travis:
@@ -352,13 +355,30 @@ Note that Travis will only run the *unit test suite* for that particular reposit
 That is, for easyconfig contributions it does *not* include
 actually building and installing software.
 
+.. _contributing_back_review_process_additional_tests:
+
+Adding tests
+++++++++++++
+
+An implicit requirement for contributions, in particular contributions to the EasyBuild framework,
+is that they **must be accompanied by additional tests or test cases**.
+
+For new features or enhancements, a dedicated test (case) must be added
+which verifies that the feature implementation works as expected.
+
+For bug fixes, a test (case) must be added that triggers the code path where the bug manifested,
+and which verifies that the bug was indeed fixed.
+
+Tests not only confirm that the implementation is correct, it also helps to ensure
+that any future changes will not affect semantics.
+
 
 .. _contributing_back_review_process_backward_compatibility:
 
 Backward compatibility
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Contributions should retain *backward compatibility*, i.e., they should *not*
+**Contributions should retain backward compatibility**, i.e., they should *not*
 make any changes that alter the (default) semantics of the existing code base.
 Of course, enhancements to existing code that retain backward compatibility can be made.
 
@@ -371,7 +391,7 @@ or otherwise enhancing existing easyconfigs (e.g., adding extra extensions,
 enabling additional features, etc.) are usually considered acceptable.
 
 In any case, changes that break backward compatibility have to be motivated
-well with technical arguments, and must be approved by the maintainers of EasyBuild.
+well with technical arguments, and must be approved by the EasyBuild maintainers.
 
 
 .. _contributing_back_review_process_code_style:
@@ -381,7 +401,8 @@ Code style review
 
 Next to functional evaluation of contributions, care is also taken to
 maintain a consistent code style across the EasyBuild code base
-(see also :ref:`code_style`).
+(see also :ref:`code_style`);
+**contributions must take the (mostly PEP8) code style into account.**
 
 This aspect is sometimes considered to be needless overhead, yet it is an
 important aspect of the review process. A consistent code style is invaluable
@@ -397,6 +418,54 @@ ordering of easyconfig parameters is a part of the 'code' style we maintain.
 
 Comparing with existing easyconfigs (``--review-pr``)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+We try to maintain **consistency across easyconfig files** for a particular
+software package, across multiple software versions, toolchains and variants
+(with a different ``versionsuffix``).
+
+Therefore, easyconfig contributions are also reviewed using ``eb --review-pr <PR #>``,
+which compares the touched easyconfig files to those in the current
+``develop`` branch that are most closely related.
+
+The easyconfig files to compare with are selected based on similarity,
+by combining two criteria, in order.
+
+First, the software version is taken into account, using one of the following
+criteria:
+
+* exact match on software version match
+* match on major/minor software version
+* match on major software version
+* no match on software version
+
+This is combined with one of the criteria below (in order):
+
+* matching versionsuffix and toolchain name/version
+* matching versionsuffix and toolchain name (any toolchain version)
+* matching versionsuffix (any toolchain name/version)
+* matching toolchain name/version (any versionsuffix)
+* matching toolchain name (any versionsuffix, toolchain version)
+* no extra requirements (any versionsuffix, toolchain name/version)
+
+The first combination of one of the software version criteria with one of
+the other criteria that yields one or more matching easyconfig files is used.
+If none of the combinations match, no easyconfig files for that particular software
+package are available yet, and no comparison is made.
+
+The output of ``--review-pr`` provides a 'multidiff' comparison, which highlights
+the differences between the easyconfig file in the pull request and the most similar
+selected ones from the current ``develop`` branch.
+
+For example:
+
+.. raw:: html
+
+  <script type="text/javascript" src="https://asciinema.org/a/103888.js" id="asciicast-103888" async></script>
+
+Interpreting this output is a quick and easy way to assess how different the
+contributed easyconfig files are from the existing easyconfigs, although it
+does require a bit of practice because of the density of the provided information.
+
 
 .. _contributing_back_review_process_test_reports:
 
