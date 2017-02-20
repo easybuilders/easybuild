@@ -460,7 +460,7 @@ For example:
 
 .. raw:: html
 
-  <script type="text/javascript" src="https://asciinema.org/a/103888.js" id="asciicast-103888" async></script>
+  <script type="text/javascript" src="https://asciinema.org/a/103889.js" id="asciicast-103889" async></script>
 
 Interpreting this output is a quick and easy way to assess how different the
 contributed easyconfig files are from the existing easyconfigs, although it
