@@ -15,39 +15,153 @@ and discusses the review process for contributions.
 How to contribute back
 ----------------------
 
+It is a common misconception that contributing back to an open source project
+requires being intimately familiar with its codebase.
+
+There are various ways to contribute back, even if you don't have any experience
+with the programming language(s) being used by the project you are interested in.
+
+You can contribute back to EasyBuild by:
+
+* :ref:`contributing_back_feedback`
+* :ref:`contributing_back_bugs`
+* :ref:`contributing_back_request`
+* :ref:`contributing_back_helping_others`
+* :ref:`contributing_back_easyconfigs`
+* :ref:`contributing_back_code`
+* :ref:`contributing_back_docs`
+* :ref:`contributing_back_discuss`
+
 .. _contributing_back_feedback:
 
 Giving feedback
 ~~~~~~~~~~~~~~~
 
-.. _contributing_back_issues:
+An easy way to contribute back to EasyBuild, even without having a lot of
+hands-on experience with it, is to **provide feedback** on your experiences.
 
-Opening issues
+Feedback from people new to EasyBuild is very valuable, since it provides
+a unique perspective that is easily overlooked by more experienced users.
+
+You can contact the EasyBuild community via the EasyBuild mailing
+list (``easybuild@lists.ugent.be``), the ``#easybuild`` IRC channel (see also :ref:`getting_help`).
+
+.. _contributing_back_bugs:
+
+Reporting bugs
 ~~~~~~~~~~~~~~
 
-* report problems
-* feature requests
-* change requests
+If you run into unexpected problems when using EasyBuild, please **open a bug report**
+in the issue tracker of the relevant GitHub repository:
+
+* https://github.com/hpcugent/easybuild-framework/issues: for general problems with ``eb``, the EasyBuild framework, etc.
+* https://github.com/hpcugent/easybuild-easyblocks/issues: for problems specific to a particular (generic or software-specific) easyblock, etc.
+* https://github.com/hpcugent/easybuild-easyconfigs/issues: for problems specific to a particular software package,
+  e.g., with building and installing a particular version of that software, or when using a particular toolchain, etc.
+* https://github.com/hpcugent/easybuild/issues: for problems with the EasyBuild documentation, etc.
+
+Please try and provide all relevant information, which may include:
+
+* the EasyBuild version you are using
+* the specifics of the system you are using, incl. OS + version, Python version, modules tool & version, etc.
+* the active EasyBuild configuration; usually the output of ``eb --show-config`` is sufficient
+* the full ``eb`` command line that was used
+* warning or error messages, or other relevant informative messages
+* filename or contents of easyconfig file(s) being used
+* EasyBuild log file (for example via https://gist.github.com/), preferably collected with ``eb --debug``
+
+
+.. _contributing_back_requests:
+
+Submitting feature/change requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have **suggestions for enhancements or ideas for new features** that could be useful,
+please open an issue in the relevant GitHub repository (see :ref:`contributing_back_bugs`).
+
+Describe what you have in mind, and maybe also provide a concrete example to illustrate
+how your suggestion would improve the current functionality.
+
 
 .. _contributing_back_helping_others:
 
 Helping others
 ~~~~~~~~~~~~~~
 
-.. _contributing_back_code:
+Try and **help others** based on your experience, or help them figure out an answer to their question
+or a solution to their problem using the EasyBuild documentation or by reaching out
+to someone else in the EasyBuild community that may know the answer.
 
-Code contributions
-~~~~~~~~~~~~~~~~~~
+The EasyBuild community is known to be very welcoming and helpful, and you too can be a part of that.
+
 
 .. _contributing_back_easyconfigs:
 
 Easyconfig contributions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+Please **contribute back easyconfig files** that are not included yet in
+(the ``develop`` branch of) the ``easybuild-easyconfigs`` GitHub repository at
+https://github.com/hpcugent/easybuild-easyconfigs.
+
+This includes easyconfigs for software that is not supported yet by EasyBuild,
+as well as updates to existing easyconfigs (e.g., version updates, using a
+different toolchain, etc.), even if you consider the updates to be trivial.
+Keep in mind that being able to use something that is known to work out-of-the-box
+can save quite a bit of time compared to having to tweak existing easyconfigs
+and validate the result installations.
+
+We highly recommend using the ``--new-pr`` and ``--update-pr`` command
+line options for contributing back easyconfig files; see :ref:`github_new_update_pr`.
+
+
+.. _contributing_back_code:
+
+Code contributions
+~~~~~~~~~~~~~~~~~~
+
+Of course you can also **contribute back code changes**, including bug fixes,
+enhancements or additional features in the EasyBuild framework, the easyblocks repository,
+the test suites or in related scripts.
+
+Do keep in mind that this requires some experience with Python,
+although you should be able to go a long way by using the existing code base as support.
+
+See :ref:`contributing_back_pull_requests` for more information on the practical
+aspects of contributing back code.
+
+
 .. _contributing_back_docs:
 
-Documentation
-~~~~~~~~~~~~~
+Writing documentation
+~~~~~~~~~~~~~~~~~~~~~
+
+Another way to contribute back to EasyBuild without having to implement Python
+code is by **writing documentation**, i.e. enhancing or updating existing
+documentation or documenting features that are not covered yet.
+
+To contribute to the documentation hosted at http://easybuild.readthedocs.io/,
+you should open a pull request to the ``develop`` branch of the
+main EasyBuild repository at https://github.com/hpcugent/easybuild; see the ``docs`` subdirectory.
+
+A particularly useful tool is http://rst.ninjs.org/, which can be used to
+preview how the documentation written in ``reStructuredText`` format
+will be rendered on ``readthedocs.org`` (select the ``Nature`` theme for optimal
+results).
+
+
+.. _contributing_back_discuss:
+
+Joining the discussion
+~~~~~~~~~~~~~~~~~~~~~~
+
+Last but not least, you can actively join the discussions that arise on the EasyBuild
+mailing list, the ``#easybuild`` IRC channel and during the bi-weekly EasyBuild
+conference calls (see https://github.com/hpcugent/easybuild/wiki/Conference-calls).
+
+Engage with the EasyBuild community, and help steer EasyBuild development by
+participating in the often lively (yet civil and respectful) discussions regarding
+a variety of topics related to building and installing (scientific) software.
 
 
 .. _contributing_back_pull_requests:

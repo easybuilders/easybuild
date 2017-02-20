@@ -102,6 +102,8 @@ Overview of version specific (auto-generated) documentation pages
 * :ref:`Templates available for easyconfig files <avail_easyconfig_templates>`
 
 
+.. _getting_help:
+
 Getting help
 ============
 
