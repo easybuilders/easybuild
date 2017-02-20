@@ -29,11 +29,20 @@ Opening issues
 * feature requests
 * change requests
 
+.. _contributing_back_helping_others:
+
+Helping others
+~~~~~~~~~~~~~~
+
 .. _contributing_back_code:
 
 Code contributions
 ~~~~~~~~~~~~~~~~~~
 
+.. _contributing_back_easyconfigs:
+
+Easyconfig contributions
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _contributing_back_docs:
 
@@ -333,14 +342,18 @@ Each contribution is thoroughly reviewed and tested before it gets merged in.
 Some aspects of this are fully automated, others require human intervention.
 
 It is important to be aware of all of the aspects of the review process,
-since *only contributions that fulfill all of the requirements discussed below
-are eligible for being merged in*:
+since **only contributions that fulfill all of the requirements discussed below
+are eligible for being merged in**:
 
 * unit tests must still pass (see :ref:`contributing_back_review_process_travis`)
+
   * more tests must be added when appropriate (see :ref:`contributing_back_review_process_adding_tests`)
+
 * backward compatibility should be retained (see :ref:`contributing_back_review_process_backward_compatibility`)
 * code style must be kept consistent (see :ref:`contributing_back_review_process_code_style`)
+
   * easyconfigs should be kept consistent across versions & toolchains (see :ref:`contributing_back_review_process_review_pr`)
+
 * test reports must be submitted for easyconfig contributions (see :ref:`contributing_back_review_process_test_reports`)
 
 
