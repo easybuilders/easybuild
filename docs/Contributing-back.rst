@@ -336,8 +336,12 @@ It is important to be aware of all of the aspects of the review process,
 since *only contributions that fulfill all of the requirements discussed below
 are eligible for being merged in*:
 
-* unit test suite must still pass
-*
+* unit tests must still pass (see :ref:`contributing_back_review_process_travis`)
+  * more tests must be added when appropriate (see :ref:`contributing_back_review_process_adding_tests`)
+* backward compatibility should be retained (see :ref:`contributing_back_review_process_backward_compatibility`)
+* code style must be kept consistent (see :ref:`contributing_back_review_process_code_style`)
+  * easyconfigs should be kept consistent across versions & toolchains (see :ref:`contributing_back_review_process_review_pr`)
+* test reports must be submitted for easyconfig contributions (see :ref:`contributing_back_review_process_test_reports`)
 
 
 .. _contributing_back_review_process_travis:
@@ -355,7 +359,7 @@ Note that Travis will only run the *unit test suite* for that particular reposit
 That is, for easyconfig contributions it does *not* include
 actually building and installing software.
 
-.. _contributing_back_review_process_additional_tests:
+.. _contributing_back_review_process_adding_tests:
 
 Adding tests
 ++++++++++++
@@ -471,3 +475,9 @@ does require a bit of practice because of the density of the provided informatio
 
 Test reports for easyconfig contributions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For easyconfig contributions, an accompanying **test report must be submitted** to confirm that the touched easyconfig files (still) work as expected.
+
+With EasyBuild being properly configured (see :ref:`github_configuration`), this should be as simple as running ``eb --from-pr <PR#> --upload-test-report --force --robot``.
+
+See :ref:`github_upload_test_report` for more information.
