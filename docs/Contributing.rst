@@ -225,7 +225,7 @@ to prepare your contributions before creating the actual pull requests.
 Creating a working copy
 +++++++++++++++++++++++
 
-.. note:: Do not forget to replace** '``EXAMPLE``' **with your GitHub account name in the instructions below.
+.. note:: Do not forget to replace '``EXAMPLE``' with your GitHub account name in the instructions below.
 
 In addition to forking the repository on GitHub, you also need to create
 a local *working copy* of the repository. This is basically a local checkout
