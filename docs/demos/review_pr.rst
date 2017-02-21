@@ -3,7 +3,7 @@
 Demo: reviewing easyconfig pull requests with ``eb --review-pr``
 ================================================================
 
-(see also :ref:`contributing_back_review_process_review_pr`)
+(see also :ref:`contributing_review_process_review_pr`)
 
 .. raw:: html
 
