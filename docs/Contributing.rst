@@ -225,7 +225,7 @@ to prepare your contributions before creating the actual pull requests.
 Creating a working copy
 +++++++++++++++++++++++
 
-.. note:: **Do not forget to replace** '``EXAMPLE``' **with your GitHub account name.** in the instructions below.
+.. note:: Do not forget to replace** '``EXAMPLE``' **with your GitHub account name in the instructions below.
 
 In addition to forking the repository on GitHub, you also need to create
 a local *working copy* of the repository. This is basically a local checkout
@@ -435,7 +435,8 @@ For example, to update the pull request that was created using the ``mybranch`` 
 
   git checkout mybranch
   # make changes...
-  git commit -am "example commit message for additional changes"
+  git add <paths to changed files>
+  git commit -m "example commit message for additional changes"
   git push origin mybranch
 
 Updating a pull request will trigger Travis to re-test your contribution,
@@ -449,7 +450,7 @@ Merging of pull requests
 
 Once your pull request has been given the green light by Travis and one or more
 people reviewing have approved the changes, it can be merged into
-the ``develop`` branch. This can only be done by a member of the EasyBuild *admin* team.
+the ``develop`` branch. **This can only be done by a member of the EasyBuild admin team.**
 
 Merging a pull request usually implies that the changes will be part of the next EasyBuild release.
 
@@ -465,16 +466,16 @@ Some aspects of this are automated, others require human intervention.
 **Only contributions that fulfill the requirements listed below are eligible to be merged**,
 so it is important to be aware of all of the aspects of the review process.
 
-* unit tests must still pass (see :ref:`contributing_review_process_travis`)
+* unit tests must still pass; see :ref:`contributing_review_process_travis`
 
-  * more tests must be added when appropriate (see :ref:`contributing_review_process_adding_tests`)
+  * more tests must be added when appropriate; see :ref:`contributing_review_process_adding_tests`
 
-* backward compatibility should be retained (see :ref:`contributing_review_process_backward_compatibility`)
-* code style must be kept consistent (see :ref:`contributing_review_process_code_style`)
+* backward compatibility should be retained; see :ref:`contributing_review_process_backward_compatibility`
+* code style must be kept consistent; see :ref:`contributing_review_process_code_style`
 
-  * easyconfigs should be kept consistent across versions & toolchains (see :ref:`contributing_review_process_review_pr`)
+  * easyconfigs should be kept consistent across versions & toolchains; see :ref:`contributing_review_process_review_pr`
 
-* test reports must be submitted for easyconfig contributions (see :ref:`contributing_review_process_test_reports`)
+* test reports must be submitted for easyconfig contributions; see :ref:`contributing_review_process_test_reports`
 
 
 .. _contributing_review_process_travis:
