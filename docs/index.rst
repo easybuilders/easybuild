@@ -56,6 +56,7 @@ Advanced usage topics
 
     Archived-easyconfigs
     Common-toolchains
+    Contributing
     Controlling_compiler_optimization_flags
     Cray-support
     Experimental_features
