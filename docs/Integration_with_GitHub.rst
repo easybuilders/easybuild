@@ -470,7 +470,7 @@ Submitting new and updating pull requests (``--new-pr``, ``--update-pr``)
 
 *(supported since EasyBuild v2.6.0)*
 
-EasyBuild provides two simple yet powerful features that make contributing back to the central EasyBuild repositories
+EasyBuild provides two simple yet powerful features that make contributing to the central EasyBuild repositories
 significantly easier and less error-prone, especially for people who are not very familiar with ``git`` and/or GitHub
 yet:
 
@@ -481,6 +481,9 @@ yet:
 
 Submitting pull requests (``--new-pr``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: Submitting pull requests using ``--new-pr`` only works for the ``easybuild-easyconfigs`` repository, for now.
+          For other repositories, see the manual procedure documented at :ref:`contributing_pull_requests`.
 
 To create a new pull request, the ``--new-pr`` command line option can be used, provided that the necessary
 requirements are fullfilled (see :ref:`github_requirements`).
@@ -500,7 +503,7 @@ This takes care of all the steps required to make a contribution, i.e.:
 * creating the pull request, targetting the ``develop`` branch of the central EasyBuild repository (e.g. ``hpcugent/easybuild-easyconfigs``)
 
 It should be clear that automating this whole procedure with a single simple ``eb`` command greatly lowers the bar
-for contributing back, especially since it even alleviates the need for interacting directly with ``git`` entirely!
+for contributing, especially since it even alleviates the need for interacting directly with ``git`` entirely!
 
 The working copy of the EasyBuild repository is created in a temporary location, and cleaned up once the pull request
 has been created. EasyBuild does *not* make changes to an existing working copy you may have in place already
@@ -540,6 +543,9 @@ Yes, it's that easy!
 
 Updating existing pull requests (``--update-pr``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: Updating pull requests using ``--update-pr`` only works for the ``easybuild-easyconfigs`` repository, for now.
+          For other repositories, see the manual procedure documented at :ref:`contributing_pull_requests`.
 
 Similarly to creating new pull requests, existing pull requests can be easily updated using ``eb --update-pr``
 (regardless of whether or not they were created with ``--new-pr``).

@@ -56,6 +56,7 @@ Advanced usage topics
 
     Archived-easyconfigs
     Common-toolchains
+    Contributing
     Controlling_compiler_optimization_flags
     Cray-support
     Experimental_features
@@ -101,6 +102,8 @@ Overview of version specific (auto-generated) documentation pages
 * :ref:`Overview of generic easyblocks <generic_easyblocks>`
 * :ref:`Templates available for easyconfig files <avail_easyconfig_templates>`
 
+
+.. _getting_help:
 
 Getting help
 ============
