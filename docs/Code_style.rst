@@ -21,9 +21,69 @@ The only (major) exception to PEP8 is our preference for longer line lengths: li
 
 .. _PEP8: http://www.python.org/dev/peps/pep-0008
 
+.. _code_style_easyconfigs:
 
-Notes
-~~~~~
+Style for easyconfig files
+--------------------------
+
+We maintain a strict 'code' style for easyconfig files too, which has proved
+to be invaluable in making easyconfig files easy to grasp at a glance.
+
+Major attention points include:
+
+* :ref:`code_style_easyconfigs_whitespace`
+* :ref:`code_style_easyconfigs_indentation`
+* :ref:`code_style_easyconfigs_max_line_length`
+* :ref:`code_style_easyconfigs_order_grouping`
+* :ref:`code_style_easyconfigs_hardcoding`
+* :ref:`code_style_easyconfigs_templates_constants`
+* :ref:`code_style_easyconfigs_lists`
+
+
+.. _code_style_easyconfigs_whitespace:
+
+Whitespace
+~~~~~~~~~~
+
+
+.. _code_style_easyconfigs_indentation:
+
+Indentation
+~~~~~~~~~~~
+
+
+.. _code_style_easyconfigs_max_line_length:
+
+Maximum line length
+~~~~~~~~~~~~~~~~~~~
+
+
+.. _code_style_easyconfigs_order_grouping:
+
+Order & grouping of easyconfig parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. _code_style_easyconfigs_hardcoding:
+
+Avoiding hardcoding of parameter values in multiple places
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. _code_style_easyconfigs_templates:
+
+Use of templates & constants
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. _code_style_easyconfigs_lists:
+
+Formatting of lists
+~~~~~~~~~~~~~~~~~~~
+
+
+Links
+-----
 
 Style guides that go a step beyond PEP8:
  * http://www.gramps-project.org/wiki/index.php?title=Programming_guidelines

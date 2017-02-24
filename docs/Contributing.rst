@@ -550,6 +550,8 @@ that mostly matches the established PEP8 coding style for Python (since
 easyconfigs are written in Python syntax). However, also the grouping and
 ordering of easyconfig parameters is a part of the 'code' style we maintain.
 
+See :ref:`code_style_easyconfigs` for more information.
+
 
 .. _contributing_review_process_review_pr:
 
