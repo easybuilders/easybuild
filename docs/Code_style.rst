@@ -31,13 +31,45 @@ to be invaluable in making easyconfig files easy to grasp at a glance.
 
 Major attention points include:
 
+* :ref:`code_style_easyconfigs_max_line_length`
 * :ref:`code_style_easyconfigs_whitespace`
 * :ref:`code_style_easyconfigs_indentation`
-* :ref:`code_style_easyconfigs_max_line_length`
+* :ref:`code_style_easyconfigs_lists`
 * :ref:`code_style_easyconfigs_order_grouping`
 * :ref:`code_style_easyconfigs_hardcoding`
 * :ref:`code_style_easyconfigs_templates_constants`
-* :ref:`code_style_easyconfigs_lists`
+* :ref:`code_style_easyconfigs_string_quotes`
+
+
+.. _code_style_easyconfigs_max_line_length:
+
+Maximum line length
+~~~~~~~~~~~~~~~~~~~
+
+**Each line should contain no more than 120 characters.**
+
+If a parameter value is too long line wrapping should be used
+or the value should be constructed differently.
+
+For example, for a long ``description`` value, line wrapping can be used:
+
+.. code:: python
+
+  description = """A long description with multiple lines,
+   that wraps around to the next line, and then continues on
+   to the line after that"""
+
+For a long value of ``configopts``, string concatenation using '`+=`' can be used.
+Do make sure to include a space either and the end of all but the last partial
+value, or at the beginning of each partial value except the first one:
+
+.. code:: python
+
+  configopts = "--first-option --second-option --third-option "
+  configopts += "--yet-another-option"
+
+For a parameter value that is a long list, either line wrapping can be used
+or each list element can be put on a separate line, see :ref:`code_style_easyconfigs_lists`.
 
 
 .. _code_style_easyconfigs_whitespace:
@@ -52,9 +84,9 @@ Indentation
 ~~~~~~~~~~~
 
 
-.. _code_style_easyconfigs_max_line_length:
+.. _code_style_easyconfigs_lists:
 
-Maximum line length
+Formatting of lists
 ~~~~~~~~~~~~~~~~~~~
 
 
@@ -70,16 +102,51 @@ Avoiding hardcoding of parameter values in multiple places
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. _code_style_easyconfigs_templates:
+.. code_style_easyconfigs_templates_constants:
 
 Use of templates & constants
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. _code_style_easyconfigs_lists:
+.. code_style_easyconfigs_string_quotes:
 
-Formatting of lists
-~~~~~~~~~~~~~~~~~~~
+Single vs double quotes for string values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: This is only a recommendation, it is not strictly applied in easyconfig files.
+
+For string values, the following rules of thumb should be taken into account
+with respect to the use of single vs double quotes:
+
+* use single quotes (`'...'`) for a string representing a single character or 'word' (i.e., a string with no spaces)
+* use double quotes (`"..."`) for strings that include one or more spaces
+* use triple-quoting (`"""..."""`) for multi-line strings
+
+These guidelines can be ignored if there is a technical reason for doing so,
+for example if double quotes *must* be used to ensure bash expansion of environment variables
+(see `buildopts` in the example below).
+
+For example:
+
+.. code:: python
+
+  name = 'example'
+  version = '1.0'
+
+  homepage = 'http://example.com'
+  description = """A long description with multiple lines,
+   that wraps around to the next line"""
+
+  toolchain = {'name': 'foss', 'version': '2017a'}
+
+  sources = ['example-v%(version)s.tar.gz']
+
+  configopts = "--enable-stuff --with-more-stuff"
+
+  buildopts = 'CC="$CC" CFLAGS="$CFLAGS"'
+
+  moduleclass = 'tools'
+
 
 
 Links
