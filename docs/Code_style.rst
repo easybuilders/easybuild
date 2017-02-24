@@ -23,8 +23,8 @@ The only (major) exception to PEP8 is our preference for longer line lengths: li
 
 .. _code_style_easyconfigs:
 
-Style for easyconfig files
---------------------------
+Easyconfigs style guide
+-----------------------
 
 We maintain a strict 'code' style for easyconfig files too, which has proved
 to be invaluable in making easyconfig files easy to grasp at a glance.
@@ -118,9 +118,9 @@ Single vs double quotes for string values
 For string values, the following rules of thumb should be taken into account
 with respect to the use of single vs double quotes:
 
-* use single quotes (`'...'`) for a string representing a single character or 'word' (i.e., a string with no spaces)
-* use double quotes (`"..."`) for strings that include one or more spaces
-* use triple-quoting (`"""..."""`) for multi-line strings
+* use single quotes (``'...'``) for a string representing a single character or 'word' (i.e., a string with no spaces)
+* use double quotes (```"..."``) for strings that include one or more spaces
+* use triple-quoting (``"""..."""``) for multi-line strings
 
 These guidelines can be ignored if there is a technical reason for doing so,
 for example if double quotes *must* be used to ensure bash expansion of environment variables
