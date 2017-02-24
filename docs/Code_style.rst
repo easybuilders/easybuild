@@ -119,7 +119,7 @@ For string values, the following rules of thumb should be taken into account
 with respect to the use of single vs double quotes:
 
 * use single quotes (``'...'``) for a string representing a single character or 'word' (i.e., a string with no spaces)
-* use double quotes (```"..."``) for strings that include one or more spaces
+* use double quotes (``"..."``) for strings that include one or more spaces
 * use triple-quoting (``"""..."""``) for multi-line strings
 
 These guidelines can be ignored if there is a technical reason for doing so,
