@@ -46,7 +46,7 @@ Major attention points include:
 Maximum line length
 ~~~~~~~~~~~~~~~~~~~
 
-**Each line should contain no more than 120 characters.**
+**Each line must contain no more than 120 characters.**
 
 If a parameter value is too long line wrapping should be used
 or the value should be constructed differently.
@@ -59,7 +59,7 @@ For example, for a long ``description`` value, line wrapping can be used:
    that wraps around to the next line, and then continues on
    to the line after that"""
 
-For a long value of ``configopts``, string concatenation using '`+=`' can be used.
+For a long value of ``configopts``, string concatenation using '``+=```' can be used.
 Do make sure to include a space either and the end of all but the last partial
 value, or at the beginning of each partial value except the first one:
 
@@ -76,6 +76,27 @@ or each list element can be put on a separate line, see :ref:`code_style_easycon
 
 Whitespace
 ~~~~~~~~~~
+
+Whitespace (i.e., spaces, tabs and newlines) is an integral part of Python syntax,
+and hence very important.
+
+In easyconfigs specifically, all **parameter definitions must be left-aligned**,
+i.e., no whitespace to the left of the names of the parameters being defined
+is allowed. Not honoring this rule will result in ``SyntaxError``'s.
+
+On top of that, a couple of additional whitespace style rules must be taken into account:
+
+* **tab characters can not be used for indentation**
+
+  * each tab character must be replaced with *exactly 4 spaces*
+  * see also :ref:`code_style_easyconfigs_indentation`
+
+* **blank lines must be empty** (no whitespace characters included)
+* **no multiple blank lines in a row**
+* **no trailing whitespace**, i.e., no extra spaces/tabs at the end of lines
+
+In addition, blank lines must be used to separate groups of parameter definition
+(see :ref:`code_style_easyconfigs_order_grouping`) and to aid with readability.
 
 
 .. _code_style_easyconfigs_indentation:
@@ -102,29 +123,29 @@ Avoiding hardcoding of parameter values in multiple places
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. code_style_easyconfigs_templates_constants:
+.. _code_style_easyconfigs_templates_constants:
 
 Use of templates & constants
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. code_style_easyconfigs_string_quotes:
+.. _code_style_easyconfigs_string_quotes:
 
-Single vs double quotes for string values
+Single or double quotes for string values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: This is only a recommendation, it is not strictly applied in easyconfig files.
 
 For string values, the following rules of thumb should be taken into account
-with respect to the use of single vs double quotes:
+with respect to the use of single or double quotes:
 
-* use single quotes (``'...'``) for a string representing a single character or 'word' (i.e., a string with no spaces)
+* use single quotes (``'...'``) for strings representing a single character or 'word' (i.e., a string with no spaces)
 * use double quotes (``"..."``) for strings that include one or more spaces
 * use triple-quoting (``"""..."""``) for multi-line strings
 
 These guidelines can be ignored if there is a technical reason for doing so,
 for example if double quotes *must* be used to ensure bash expansion of environment variables
-(see `buildopts` in the example below).
+(see ``buildopts`` in the example below).
 
 For example:
 
@@ -141,7 +162,7 @@ For example:
 
   sources = ['example-v%(version)s.tar.gz']
 
-  configopts = "--enable-stuff --with-more-stuff"
+  configopts = "--enable-stuff --with-more-stuff --disable-other-stuff"
 
   buildopts = 'CC="$CC" CFLAGS="$CFLAGS"'
 
