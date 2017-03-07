@@ -7,6 +7,98 @@ The latest version of EasyBuild provides support for building and installing **1
 using 25 different (compiler) toolchains. It contains 180 software-specific easyblocks and 30 generic easyblocks,
 alongside 6,488 easyconfig files.
 
+.. _release_notes_eb311:
+
+v3.1.1 (March 7th 2017)
+-----------------------
+
+bugfix release
+
+**framework**
+
+* minor enhancements, including:
+
+  * print more useful error message when no compiler-specific ``optarch`` flag is defined (`#1950 <https://github.com/hpcugent/easybuild-framework/pull/1950>`_)
+  * add ``ec`` parameter to ``expand_toolchain_load()`` (`#2103 <https://github.com/hpcugent/easybuild-framework/pull/2103>`_)
+  * clarify unstable/closed PR warning message (`#2129 <https://github.com/hpcugent/easybuild-framework/pull/2129>`_)
+
+* various bug fixes, including:
+
+  * ensure that ``$EBEXTSLIST*`` is also included in generated module under ``--module-only`` (`#2112 <https://github.com/hpcugent/easybuild-framework/pull/2112>`_)
+  * fix formatting issues in generated documentation for ``--list-software`` and ``--avail-easyconfig-licenses`` (`#2121 <https://github.com/hpcugent/easybuild-framework/pull/2121>`_)
+  * fix problem with backticks in description breaking '``fpm``' packaging command (`#2124 <https://github.com/hpcugent/easybuild-framework/pull/2124>`_)
+  * replace ``--enable-new-dtags`` with ``--disable-new-dtags`` instead of removing it in RPATH wrapper script (`#2131 <https://github.com/hpcugent/easybuild-framework/pull/2131>`_)
+  * only perform ``is_short_modname_for`` sanity check in ``det_short_module_name`` if ``modaltsoftname`` is available (`#2138 <https://github.com/hpcugent/easybuild-framework/pull/2138>`_)
+  * fix logic in ``make_module_dep`` w.r.t. excluding loads for toolchain & toolchain components (`#2140 <https://github.com/hpcugent/easybuild-framework/pull/2140>`_)
+  * skip ``test_check_style`` if ``pep8`` is not available (`#2142 <https://github.com/hpcugent/easybuild-framework/pull/2142>`_)
+
+**easyblocks**
+
+* minor enhancements, including:
+
+  * change the sanity check for MCR 2016b since the directory structure has changed (`#1096 <https://github.com/hpcugent/easybuild-easyblocks/pull/1096>`_)
+  * update NWChem easyblock for version 6.6.x and to handle different versions of OpenMPI for older versions (`#1104 <https://github.com/hpcugent/easybuild-easyblocks/pull/1104>`_)
+  * allow per-component ``source_urls`` with templating in ``Bundle`` easyblock (`#1108 <https://github.com/hpcugent/easybuild-easyblocks/pull/1108>`_)
+  * add slib to ``$LD_LIBRARY_PATH`` for itac (`#1112 <https://github.com/hpcugent/easybuild-easyblocks/pull/1112>`_)
+  * consider both ``lib`` and ``lib64`` in CGAL sanity check (`#1113 <https://github.com/hpcugent/easybuild-easyblocks/pull/1113>`_)
+  * add support for installing Intel tools that do not require license at installation time (`#1117 <https://github.com/hpcugent/easybuild-easyblocks/pull/1117>`_)
+
+    * required for Intel MPI and Intel MKL version 2017.2.174
+
+  * remove ``prefix_opt`` as custom easyconfig paramter for Qt easyblock (`#1120 <https://github.com/hpcugent/easybuild-easyblocks/pull/1120>`_)
+
+* various bug fixes, including:
+
+  * use '``-prefix <path>``' rather than '``--prefix=<path>``' for ``configure`` in Qt (`#1109 <https://github.com/hpcugent/easybuild-easyblocks/pull/1109>`_)
+  * fix indentation problem in PETSc easyblock (`#1111 <https://github.com/hpcugent/easybuild-easyblocks/pull/1111>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 16 new software packages:
+
+  * Caffe (`#3667 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3667>`_), DIAMOND (`#4107 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4107>`_), fmt (`#4131 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4131>`_), googletest (`#4132 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4132>`_), igraph (`#4172 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4172>`_), MEGA (`#4202 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4202>`_), meRanTK (`#4175 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4175>`_),
+    meshio (`#4178 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4178>`_), miRDeep2 (`#4229 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4229>`_, `#4255 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4255>`_), OOMPA (`#4211 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4211>`_), PBSuite (`#4224 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4224>`_, `#4230 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4230>`_), randfold (`#4217 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4217>`_), skewer (`#4246 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4246>`_),
+    Smoldyn (`#4110 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4110>`_), SpiecEasi (`#4215 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4215>`_), stress (`#4180 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4180>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * binutils 2.28, Cantera 2.3.0, CGAL 4.9, GMP 6.1.2, IPython 5.2.2, JasPer 2.0.10, NWChem 6.6, matplotlib 2.0.0,
+    PCRE 8.40, Qt5 5.8.0, Vim 8.0, X11 bundle v20170129, VTK 7.1.0, Yade 2017.01a
+
+* added new easyconfigs for existing toolchains:
+
+  * ``iomkl/2017a`` (`#4216 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4216>`_), ``intel/2017.02`` (`#4248 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4248>`_)
+
+* various enhancements, including:
+
+  * fix style in several easyconfigs (`#4174 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4174>`_, `#4176 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4176>`_, `#4190 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4190>`_, `#4233 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4233>`_)
+  * add sanity check command to Yade easyconfig to make sure that '``import yade``' works, include bzip2 as dep (`#4193 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4193>`_)
+  * add ``PDF::API2`` extension to Perl 5.24.0 easyconfigs + sync ``exts_list`` (`#4221 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4221>`_)
+
+* various bug fixes, including:
+
+  * add Bison and gettext as build deps for X11 (`#4111 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4111>`_)
+  * clean up dependencies in libdrm (`#4113 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4113>`_)
+  * make sure Ghostscript picks up external libraries (`#4118 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4118>`_)
+  * fix ippicv source download and library install for OpenCV v3.1.0 (`#4126 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4126>`_)
+  * fix software name for OrthoMCL + modernise OrthoMCL easyconfigs (`#4134 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4134>`_, `#4135 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4135>`_)
+  * get rid of backticks in gettext descriptions, causes problems when packaging with FPM (`#4146 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4146>`_)
+  * remove duplicate sources specification in OpenMPI (`#4150 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4150>`_)
+  * fix definition of ``buildopts``/``installopts`` in Cantera easyconfig (`#4133 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4133>`_, `#4164 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4164>`_, `#4177 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4177>`_)
+  * use ``http://`` rather than ``ftp://`` source URLs in CFITSIO easyconfigs (`#4167 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4167>`_)
+  * add patch for XZ 5.2.2 to include ``5.1.2alpha`` symbols required by '``rpm``' command on CentOS 7.x (`#4179 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4179>`_)
+  * add patch for Boost v1.61-1.63 to fix problem with ``make_array``/``array_wrapper`` in Boost serialization library (`#4192 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4192>`_)
+  * set ``CMAKE_PREFIX_PATH`` to ncurses install directory in CMake easyconfigs (`#4196 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4196>`_)
+  * switch to ``lowopt=True`` for libxc v2.2.* and v3.* (`#4199 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4199>`_)
+  * remove custom ``sanity_check_paths``, since it's identical to that used by the R easyblock (`#4200 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4200>`_)
+  * fix ``version`` (& ``homepage``) in ea-utils easyconfigs (`#4205 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4205>`_)
+  * remove ``--with-threads`` configure option in OpenMPI-2.* (`#4213 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4213>`_)
+  * fix check for Szip library in configure script for netCDF 4.1.3 (`#4226 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4226>`_)
+
+* fix ``source_urls`` in several easyconfigs, including:
+
+  * bsoft, cutadapt, EMBOSS, GnuTLS, ImageMagick, LibTIFF, Mercurial, netCDF, netCDF-Fortran, pigz, ROOT and Subversion (`#4227 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4227>`_)
+
 .. _release_notes_eb310:
 
 v3.1.0 (February 3rd 2017)
