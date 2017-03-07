@@ -435,10 +435,10 @@ Example:
   as expected (see also :ref:`tweaking_easyconfigs_using_try`).
 
 
-Contributing back
------------------
+Contributing easyconfigs
+------------------------
 
-**Contribute back your working easyconfig files!**
+**Contribute your working easyconfig files!**
 
 Share your expertise with the community, avoid duplicate work, especially if:
 
@@ -446,11 +446,4 @@ Share your expertise with the community, avoid duplicate work, especially if:
 * an existing easyconfig needs (non-trivial) changes for a different version/toolchain
 * it is a frequently used software package (compilers, MPI, etc.)
 
-Notes:
-
-* over 25% of easyconfigs are provided by contributors outside of HPC-UGent
-* contributing back does require a limited amount of knowledge on Git/GitHub
-* contributions are reviewed & thoroughly tested before inclusion
-
-  * see https://github.com/hpcugent/easybuild/wiki/Contributing-back for a step-by-step walkthrough
-
+See :ref:`contributing` for more information.
