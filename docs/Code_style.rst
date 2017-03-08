@@ -39,6 +39,9 @@ Major attention points include:
 * :ref:`code_style_easyconfigs_hardcoding`
 * :ref:`code_style_easyconfigs_templates_constants`
 * :ref:`code_style_easyconfigs_string_quotes`
+* :ref:`code_style_easyconfigs_file_names`
+
+.. note:: You can check whether easyconfigs adhere to the easyconfig style rules using ``eb --check-style``.
 
 
 .. _code_style_easyconfigs_max_line_length:
@@ -59,6 +62,9 @@ For example, for a long ``description`` value, line wrapping can be used:
    that wraps around to the next line, and then continues on
    to the line after that"""
 
+Usually, a single leading space is used on continuation lines for descriptions
+that are wrapped across multiple lines.
+
 For a long value of ``configopts``, string concatenation using '``+=```' can be used.
 Do make sure to include a space either and the end of all but the last partial
 value, or at the beginning of each partial value except the first one:
@@ -77,7 +83,7 @@ or each list element can be put on a separate line, see :ref:`code_style_easycon
 Whitespace
 ~~~~~~~~~~
 
-Whitespace (i.e., spaces, tabs and newlines) is an integral part of Python syntax,
+Whitespace (i.e., spaces, tabs) is an integral part of Python syntax,
 and hence very important.
 
 In easyconfigs specifically, all **parameter definitions must be left-aligned**,
@@ -86,16 +92,19 @@ is allowed. Not honoring this rule will result in ``SyntaxError``'s.
 
 On top of that, a couple of additional whitespace style rules must be taken into account:
 
-* **tab characters can not be used for indentation**
+* **no tab characters used for indentation**
 
-  * each tab character must be replaced with *exactly 4 spaces*
+  * each tab must be replaced with *exactly 4 spaces*
   * see also :ref:`code_style_easyconfigs_indentation`
 
-* **blank lines must be empty** (no whitespace characters included)
+* **no whitespace on blank lines**
 * **no multiple blank lines in a row**
 * **no trailing whitespace**, i.e., no extra spaces/tabs at the end of lines
+* **a single space must be included before and after an assignment operator** '``=``'
+* **a single space must be included (only) after commas** ``,`` **and colons** ``:`` (*not* before)
+* **no spaces directly after** ``(``, ``[`` **or** ``{`, **nor before** ``)``, ``]`` **or** ``}`` characters
 
-In addition, blank lines must be used to separate groups of parameter definition
+In addition, a single blank line must be used to separate groups of parameter definitions
 (see :ref:`code_style_easyconfigs_order_grouping`) and to aid with readability.
 
 
@@ -104,6 +113,50 @@ In addition, blank lines must be used to separate groups of parameter definition
 Indentation
 ~~~~~~~~~~~
 
+**Indentation must be used for list or dictionary parameter values that
+are spread across multiple lines.**
+
+Each indentation level corresponds to exactly 4 spaces; *do not use
+tab characters for indentation* (see :ref:`code_style_easyconfigs_whitespace`).
+
+For long lists, you can either put each list element on a new line and
+indent with (exactly) 4 spaces,
+or simply break the list across multiple lines while aligning the first list element on
+each line.
+
+Which formatting style you should for lists use depends on the length of the individual
+list elements and the length of the entire list:
+
+* short elements suggest simply breaking the list across multiple lines;
+* long elements suggest one list element per line;
+* long lists suggest avoiding a single element per line, to avoid consuming a lot of vertical space
+
+In addition, a single list element per line allows for including comments for particular list elements.
+
+With the above in mind it is difficult to prescribe strict rules for picking a formatting style for lists,
+so you will need to pick one yourself (taking into account :ref:`code_style_easyconfigs_max_line_length`).
+
+For dictionary values, it is custom to put each key-value pair on a separate line,
+and to indent each line using exactly 4 spaces.
+
+For example:
+
+.. code:: python
+
+  sources = [SOURCE_TAR_GZ]
+
+  # example of list value spread across multiple lines with one element per line
+  patches = [
+      'fix-compilation.patch',  # patch to fix compilation problem
+      'backport-bugfix.patch',  # patch to backport bug fix to this version
+  ]
+
+  # example of list value spread across multiple lines by breaking the list
+  sanity_check_paths = {
+      'files': ['bin/example1', 'bin/example2', 'bin/example3', 'bin/example4',
+                'lib/libexample1.a', 'lib/libexample2.a'],
+      'dirs': ['example_directory'],
+  }
 
 .. _code_style_easyconfigs_lists:
 
@@ -168,6 +221,11 @@ For example:
 
   moduleclass = 'tools'
 
+
+.. _code_style_easyconfigs_file_names:
+
+Easyconfig file names
+~~~~~~~~~~~~~~~~~~~~~
 
 
 Links
