@@ -200,7 +200,7 @@ Parameter definitions in easyconfig files must be ordered/groups according to th
 
 * ``moduleclass`` must be included as the last line
 
-Example::
+Example:
 
 .. code:: python
 
@@ -215,7 +215,7 @@ Example::
     description = "Example description"
 
     toolchain = {'name': 'dummy', 'version': ''}
-    toolchainopts = {'pic': True}  # note: optional
+    toolchainopts = {'pic': True}
 
     source_urls = ['http://example.com']
     sources = [SOURCE_TAR_GZ]
