@@ -34,7 +34,6 @@ Major attention points include:
 * :ref:`code_style_easyconfigs_max_line_length`
 * :ref:`code_style_easyconfigs_whitespace`
 * :ref:`code_style_easyconfigs_indentation`
-* :ref:`code_style_easyconfigs_lists`
 * :ref:`code_style_easyconfigs_order_grouping`
 * :ref:`code_style_easyconfigs_hardcoding`
 * :ref:`code_style_easyconfigs_templates_constants`
@@ -110,10 +109,10 @@ In addition, a single blank line must be used to separate groups of parameter de
 
 .. _code_style_easyconfigs_indentation:
 
-Indentation
-~~~~~~~~~~~
+Indentation for list and dictionary values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Indentation must be used for list or dictionary parameter values that
+**Indentation must be used for list and dictionary parameter values that
 are spread across multiple lines.**
 
 Each indentation level corresponds to exactly 4 spaces; *do not use
@@ -158,16 +157,82 @@ For example:
       'dirs': ['example_directory'],
   }
 
-.. _code_style_easyconfigs_lists:
-
-Formatting of lists
-~~~~~~~~~~~~~~~~~~~
-
 
 .. _code_style_easyconfigs_order_grouping:
 
 Order & grouping of easyconfig parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Parameter definitions must be ordered and organised in groups consistently across easyconfig files.**
+
+Even though the order of the parameter definitions in easyconfig files (mostly) doesn't matter,
+maintaining a consistent order across easyconfig files helps to make them easier to digest at a glance.
+
+Related easyconfig parameters must grouped together, with a (single) blank included between groups of parameters.
+
+.. note:: Order only matters when a particular parameter definition is (partially) defined in terms of another
+          parameter, for example when ``version`` is used to define one of the values in ``sources``.
+
+          This only applies to definitions that use the ``%`` operator rather than an equivalent template
+          like ``%(version)s``.
+
+Parameter definitions in easyconfig files must be ordered/groups according to the following rules:
+
+* if the ``easyblock`` parameter is defined it must be listed first, followed by a blank line;
+
+* ``name`` and ``version`` must be next, in that order, grouped together and followed by a blank line;
+
+* ``homepage`` and ``description`` are next, in that order, grouped together and followed by a blank line;
+
+* ``toolchain`` must be next, optionally followed by ``toolchainopts`` (if defined), followed by a blank line;
+
+* ``sources`` must be next (if defined), followed by a blank line;
+  if ``source_urls`` is defined, it must be included right before ``sources`` (in the same group);
+
+* defined parameters that influence particular steps of the build and installation procedure must be included in order, 
+  i.e., ``(pre)configopts`` must be included before ``(pre)buildopts``, which must be included before ``(pre)installopts``, etc.;
+
+* ``sanity_check_paths`` and ``sanity_check_commands`` must be included towards the end of the easyconfig file,
+  if they are defined;
+
+* parameters influencing the contents of the generated module file (e.g., ``modextrapaths``, ``modextravars``, ...)
+  must be included *after* the ``sanity_check_*`` parameters, if they are defined
+
+* ``moduleclass`` must be included as the last line
+
+Example::
+
+.. code:: python
+
+    # optional example header
+
+    easyblock = 'ConfigureMake'
+
+    name = 'example'
+    version = '1.2.3'
+
+    homepage = 'http://example.com'
+    description = "Example description"
+
+    toolchain = {'name': 'dummy', 'version': ''}
+    toolchainopts = {'pic': True}  # note: optional
+
+    source_urls = ['http://example.com']
+    sources = [SOURCE_TAR_GZ]
+
+    configopts = '--with-foo'
+
+    prebuildopts = 'export COMPILER_FLAGS="$CFLAGS" && '
+    buildopts = 'CC="$CC"'
+
+    sanity_check_paths = {
+        'files': ['example'],
+        'dirs': [],
+    }
+
+    modextrapaths = {'PATH': ''}
+
+    moduleclass = ''
 
 
 .. _code_style_easyconfigs_hardcoding:
