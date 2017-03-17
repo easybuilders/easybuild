@@ -90,10 +90,11 @@ software being installed, unless a specific toolchain is specified for the depen
 (see :ref:`dependency_specs`).
 
 Using the ``--minimal-toolchains`` configuration option, you can instruct EasyBuild to consider subtoolchains
-as well for dependencies. This can be useful to refrain from having to frequently hardcode specific toolchains in order
-to avoid having the same dependency version installed with multiple toolchains that are compatible with each other.
-Although hardcoding toolchain for dependencies will work fine, it severly limits the power of other EasyBuild features,
-like ``--try-toolchain`` for example.
+for dependencies in the reverse order (from the bottom of the toolchain hierarchy to the top). This can be useful to
+refrain from having to frequently hardcode specific toolchains in order to avoid having the same dependency version
+installed with multiple toolchains that are compatible with each other. Although hardcoding the toolchain for
+dependencies will work fine, it severely limits the power of other EasyBuild features, like ``--try-toolchain`` for
+example.
 
 When instructed to use minimal toolchains, EasyBuild will check whether an easyconfig file is available (in the robot
 search path, see :ref:`robot_search_path`) for that dependency using the different subtoolchains of the toolchain
@@ -102,7 +103,9 @@ subtoolchain (typically a compiler-only toolchain), and then climbing up towards
 the software being installed.
 
 Note that if a specific toolchain is specified for a particular dependency, EasyBuild will stick to using it, even
-when instructed to use minimal toolchains.
+when instructed to use minimal toolchains. Also note that as of v3.0, if no easyconfig exists to resolve a dependency
+using the default toolchain EasyBuild will search for the dependency using a compatible subtoolchain (the
+difference being that the search order is from the top of the toolchain hierarchy to the bottom).
 
 .. _minimal_toolchains_dummy:
 
@@ -126,8 +129,9 @@ minimal toolchain for each dependency solely based on the available easyconfig f
 configuration option is enabled, that is).
 
 With ``--use-existing-modules`` enabled, EasyBuild will first check whether modules exist for the dependencies that were
-built with any of the subtoolchains. If so, the module using the most minimal toolchain will determine the toolchain
-being used. If not, the toolchain to use will be determined based on the available easyconfig files.
+built with the toolchain or any of the subtoolchains (searching top-down). If so, the toolchain of the first encountered
+existing module will determine the toolchain being selected. If not, the toolchain to use will be determined based on the
+available easyconfig files.
 
 .. _minimal_toolchains_example:
 
@@ -151,8 +155,9 @@ when determining the toolchain to use for dependencies.
 
 So, for the zlib v1.2.8 dependency included in the example above, the following scenarios are possible:
 
-* without the use of ``--minimal-toolchains``, EasyBuild will only consider the ``foss/2015b`` toolchain for zlib, 
-  even if other zlib easyconfigs using a compatible toolchain are available
+* without the use of ``--minimal-toolchains``, the default behaviour of EasyBuild is to first consider the
+  ``foss/2015b`` toolchain for zlib v1.2.8, if no such easyconfig file is found, it will continue searching using the
+  ``gompi/2015b`` toolchain, and finally the ``GCC/4.9.3`` toolchain
 * if (only) ``--minimal-toolchains`` is enabled, EasyBuild will search for an easyconfig file for
   zlib v1.2.8 using the ``GCC/4.9.3`` toolchain; if no such easyconfig file is found, it will continue searching
   using the ``gompi/2015b`` toolchain, and finally the ``foss/2015b`` toolchain
