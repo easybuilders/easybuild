@@ -156,6 +156,7 @@
     * EB_PETSc
     * EB_pplacer
     * EB_Primer3
+    * EB_QScintilla
     * EB_Qt
     * EB_QuantumESPRESSO
     * EB_ROOT
