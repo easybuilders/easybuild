@@ -16,30 +16,29 @@ bugfix/update release
 
 **framework**
 
+* fix broken packaging support by fixing ``run_cmd`` bug with ``shell=False`` (`#2153 <https://github.com/hpcugent/easybuild-framework/pull/2153>`_)
 * minor enhancements, including:
 
-  * implement change_dir function in filetools module (`#2155 <https://github.com/hpcugent/easybuild-framework/pull/2155>`_)
-  * use checker_state in trailing whitespace style check + add dedicated test (`#2160 <https://github.com/hpcugent/easybuild-framework/pull/2160>`_)
-  * consider both pycodestyle and pep8 Python modules in style checks (`#2161 <https://github.com/hpcugent/easybuild-framework/pull/2161>`_)
-  * make bootstrap script aware various modules-related $EASYBUILD_* environment variables (`#2170 <https://github.com/hpcugent/easybuild-framework/pull/2170>`_)
+  * implement ``change_dir`` function in ``filetools`` module (`#2155 <https://github.com/hpcugent/easybuild-framework/pull/2155>`_)
+  * use ``checker_state`` in trailing whitespace style check + add dedicated test (`#2160 <https://github.com/hpcugent/easybuild-framework/pull/2160>`_, `#2169 <https://github.com/hpcugent/easybuild-framework/pull/2169>`_)
+  * consider both ``pycodestyle`` and ``pep8`` Python modules in style checks (`#2161 <https://github.com/hpcugent/easybuild-framework/pull/2161>`_)
+  * make bootstrap script aware various modules-related ``$EASYBUILD_*`` environment variables (`#2170 <https://github.com/hpcugent/easybuild-framework/pull/2170>`_)
 
 * various bug fixes, including:
 
-  * interpret statements that extend $MODULEPATH in modpath_extensions_for method (`#2104 <https://github.com/hpcugent/easybuild-framework/pull/2104>`_)
+  * interpret statements that extend ``$MODULEPATH`` in ``modpath_extensions_for`` method (`#2104 <https://github.com/hpcugent/easybuild-framework/pull/2104>`_)
 
     * also fixes inclusion of superfluous load statements in modules installed in user HMNS module tree (cfr. `#2172 <https://github.com/hpcugent/easybuild-framework/pull/2172>`_)
 
-  * take into account that $PATH or $PYTHONPATH may be empty when running tests (`#2149 <https://github.com/hpcugent/easybuild-framework/pull/2149>`_)
-  * handle duplicates in --include-* (`#2151 <https://github.com/hpcugent/easybuild-framework/pull/2151>`_)
-  * exclude dependencies of dependencies that extend $MODULEPATH (`#2152 <https://github.com/hpcugent/easybuild-framework/pull/2152>`_)
-  * fix run_cmd bug with shell=False (`#2153 <https://github.com/hpcugent/easybuild-framework/pull/2153>`_)
-  * add ld.bfd to wrappers for rpath (`#2156 <https://github.com/hpcugent/easybuild-framework/pull/2156>`_)
-  * fix test_vsc_location, vsc.__file__ may not be available when vsc is installed as a namespace package (`#2159 <https://github.com/hpcugent/easybuild-framework/pull/2159>`_)
+  * take into account that ``$PATH`` or ``$PYTHONPATH`` may be empty when running tests (`#2149 <https://github.com/hpcugent/easybuild-framework/pull/2149>`_)
+  * handle duplicates in ``--include-*`` (`#2151 <https://github.com/hpcugent/easybuild-framework/pull/2151>`_)
+  * exclude dependencies of dependencies that extend ``$MODULEPATH`` (`#2152 <https://github.com/hpcugent/easybuild-framework/pull/2152>`_)
+  * add ``ld.bfd`` to RPATH wrappers (`#2156 <https://github.com/hpcugent/easybuild-framework/pull/2156>`_)
+  * fix ``test_vsc_location``, ``vsc.__file__`` may not be available when ``vsc`` is installed as a namespace package (`#2159 <https://github.com/hpcugent/easybuild-framework/pull/2159>`_)
   * fix reported problems with scripts & docs tests (`#2164 <https://github.com/hpcugent/easybuild-framework/pull/2164>`_)
-  * fix --try-software-version using non-greedy matching + lookahead assertion, add test for tweak_one (`#2166 <https://github.com/hpcugent/easybuild-framework/pull/2166>`_)
-  * avoid creating empty modulefile directories when using modaltsoftname (`#2168 <https://github.com/hpcugent/easybuild-framework/pull/2168>`_)
-  * skip check_trailing_whitespace test if pep8/pycodestyle is not available (`#2169 <https://github.com/hpcugent/easybuild-framework/pull/2169>`_)
-  * fix fftw_libs for MKL without interface libraries (`#2171 <https://github.com/hpcugent/easybuild-framework/pull/2171>`_)
+  * fix ``--try-software-version`` using non-greedy matching + lookahead assertion, add test for ``tweak_one`` (`#2166 <https://github.com/hpcugent/easybuild-framework/pull/2166>`_)
+  * avoid creating empty modulefile directories when using ``modaltsoftname`` (`#2168 <https://github.com/hpcugent/easybuild-framework/pull/2168>`_)
+  * fix ``fftw_libs`` for MKL without interface libraries (`#2171 <https://github.com/hpcugent/easybuild-framework/pull/2171>`_)
 
 **easyblocks**
 
@@ -53,16 +52,16 @@ bugfix/update release
 
 * various bug fixes, including:
 
-  * reduce number of environment variables in icc and ifort modules (`#1126 <https://github.com/hpcugent/easybuild-easyblocks/pull/1126>`_)
+  * reduce number of environment variables in ``icc`` and ``ifort`` modules (`#1126 <https://github.com/hpcugent/easybuild-easyblocks/pull/1126>`_)
   * also run tests with Tcl module syntax, Lua is the default in EasyBuild v3.x (`#1128 <https://github.com/hpcugent/easybuild-easyblocks/pull/1128>`_)
   * rename member variable to avoid conflict with member of base class in PGI (`#1137 <https://github.com/hpcugent/easybuild-easyblocks/pull/1137>`_)
-  * don't set $FPATH environment variable in multiple easyblocks (`#1140 <https://github.com/hpcugent/easybuild-easyblocks/pull/1140>`_)
+  * don't set ``$FPATH`` environment variable in multiple easyblocks (`#1140 <https://github.com/hpcugent/easybuild-easyblocks/pull/1140>`_)
 
 **easyconfigs**
 
 * add patch to FFTW 3.3.6 easyconfigs to fix MPI F03 interface (`#4334 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4334>`_)
 
-  * note that this warrants rebuilding FFTW that is a part of foss/2017a
+  * note that this warrants rebuilding FFTW that is a part of ``foss/2017a``
 
 * added example easyconfig files for 14 new software packages:
 
@@ -77,17 +76,17 @@ bugfix/update release
 
 * various bug fixes, including:
 
-  * correctly set $PYTHONPATH in ROOT easyconfigs (`#4239 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4239>`_, `#4331 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4331>`_)
+  * correctly set ``$PYTHONPATH`` in ROOT easyconfigs (`#4239 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4239>`_, `#4331 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4331>`_)
   * correct libjpeg turbo references in GDAL (`#4276 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4276>`_)
   * make sure that HDF5 provided via EasyBuild is used in BLASR easyconfigs (`#4278 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4278>`_)
   * fix issues with miRDeep2 installation (`#4291 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4291>`_, `#4301 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4301>`_, `#4316 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4316>`_)
   * also run tests with Tcl module syntax, Lua is the default in EasyBuild v3.x (`#4315 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4315>`_)
   * fix PostgreSQL homepage + minor style fixes (`#4318 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4318>`_)
-  * detect use of '$root', which is not compatible with module files in Lua syntax (`#4330 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4330>`_)
-  * fix homepage/source_urls for ViennaRNA (`#4338 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4338>`_)
-  * pass down $FFLAGS via FLAGS_OPT in SWASH easyconfigs (`#4341 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4341>`_)
-  * remove include/GL/wglext.h from Mesa sanity check (`#4354 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4354>`_)
-  * rename S.A.G.E. to SAGE, can't have directories with trailing dot in Windows (`#4368 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4368>`_)
+  * detect use of '``$root``', which is not compatible with module files in Lua syntax (`#4330 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4330>`_)
+  * fix ``homepage``/``source_urls`` for ViennaRNA (`#4338 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4338>`_)
+  * pass down ``$FFLAGS`` via ``FLAGS_OPT`` in SWASH easyconfigs (`#4341 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4341>`_)
+  * remove ``include/GL/wglext.h`` from Mesa sanity check (`#4354 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4354>`_)
+  * rename ``S.A.G.E.`` to ``SAGE``, can't have directories with trailing dot in Windows (`#4368 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4368>`_)
 
 .. _release_notes_eb311:
 
