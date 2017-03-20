@@ -242,13 +242,13 @@ Example:
     moduleclass = ''
 
 
-.. _code_style_easyconfigs_hardcoding:
+.. _code_style_easyconfigs_templates_constants:
 
-Avoiding hardcoding of parameter values in multiple places
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use of templates rather than hardcoding parameter values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hardcoding of parameter values in multiple places must be avoided if possible,
-the available easyconfig templates must be used instead (see :ref:`avail_easyconfig_templates`).
+the available easyconfig templates ``%(...)s`` must be used instead (see :ref:`avail_easyconfig_templates`).
 
 For example, rather than hardcoding the software version in both the ``version`` and ``sources``
 parameter definitions, the ``%(version)s`` template value should be used instead:
@@ -270,11 +270,6 @@ Commonly used templates include:
 * ``%(pyver)s`` and ``%(pyshortver)s`` for the (partial) Python version
 * ``%(installdir)s`` for the software installation prefix
 * ``SHLIB_EXT`` for the extension of shared libraries
-
-.. _code_style_easyconfigs_templates_constants:
-
-Use of templates & constants
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. _code_style_easyconfigs_string_quotes:
