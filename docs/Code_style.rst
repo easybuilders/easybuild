@@ -247,7 +247,7 @@ Example:
 Use of templates rather than hardcoding parameter values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hardcoding of parameter values in multiple places must be avoided if possible,
+**Hardcoding of parameter values in multiple places must be avoided if possible**,
 the available easyconfig templates ``%(...)s`` must be used instead (see :ref:`avail_easyconfig_templates`).
 
 For example, rather than hardcoding the software version in both the ``version`` and ``sources``
@@ -317,6 +317,11 @@ For example:
 Easyconfig file names
 ~~~~~~~~~~~~~~~~~~~~~
 
+**Easyconfig filenames must follow the pattern** ``<name>-<version>[-<toolchain>][<versionsuffix>].eb``.
+
+The ``toolchain`` part is omitted when the ``dummy`` toolchain is used; the ``versionsuffix`` part is omitted when the ``versionsuffix`` is empty.
+
+This is strictly enforced because the 'robot' dependency resolution mechanism relies on easyconfig filenames, see also :ref:`robot_search_path`.
 
 Links
 -----
