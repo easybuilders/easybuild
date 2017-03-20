@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170320.01** (`Mar 20th 2017`): update release notes for EasyBuild v3.1.2 (see :ref:`release_notes_eb312`)
 * **release 20170307.01** (`Mar 7th 2017`): update release notes for EasyBuild v3.1.1 (see :ref:`release_notes_eb311`)
 * **release 20170221.01** (`Feb 21st 2017`): add documentation on :ref:`contributing`
 * **release 20170209.01** (`Feb 9th 2017`): add documentation on implementing easyblocks (see :ref:`implementing_easyblocks`)
