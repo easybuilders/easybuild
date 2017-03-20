@@ -52,7 +52,7 @@ bugfix/update release
 
 * various bug fixes, including:
 
-  * reduce number of environment variables in ``icc`` and ``ifort`` modules (`#1126 <https://github.com/hpcugent/easybuild-easyblocks/pull/1126>`_)
+  * reduce number of environment variables in ``icc`` and ``ifort`` modules (`#1126 <https://github.com/hpcugent/easybuild-easyblocks/pull/1126>`_, `#1143 <https://github.com/hpcugent/easybuild-easyblocks/pull/1143>`_)
   * also run tests with Tcl module syntax, Lua is the default in EasyBuild v3.x (`#1128 <https://github.com/hpcugent/easybuild-easyblocks/pull/1128>`_)
   * rename member variable to avoid conflict with member of base class in PGI (`#1137 <https://github.com/hpcugent/easybuild-easyblocks/pull/1137>`_)
   * don't set ``$FPATH`` environment variable in multiple easyblocks (`#1140 <https://github.com/hpcugent/easybuild-easyblocks/pull/1140>`_)
