@@ -42,6 +42,7 @@ bugfix/update release
 
 **easyblocks**
 
+* add easyblock for QScintilla (`#1127 <https://github.com/hpcugent/easybuild-easyblocks/pull/1127>`_)
 * minor enhancements, including:
 
   * auto-disable quad precision on POWER and ARM in FFTW (`#1102 <https://github.com/hpcugent/easybuild-easyblocks/pull/1102>`_, `#1138 <https://github.com/hpcugent/easybuild-easyblocks/pull/1138>`_)
