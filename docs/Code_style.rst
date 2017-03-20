@@ -187,10 +187,16 @@ Parameter definitions in easyconfig files must be ordered/groups according to th
 * ``toolchain`` must be next, optionally followed by ``toolchainopts`` (if defined), followed by a blank line;
 
 * ``sources`` must be next (if defined), followed by a blank line;
-  if ``source_urls`` is defined, it must be included right before ``sources`` (in the same group);
 
-* defined parameters that influence particular steps of the build and installation procedure must be included in order, 
-  i.e., ``(pre)configopts`` must be included before ``(pre)buildopts``, which must be included before ``(pre)installopts``, etc.;
+  * if ``source_urls`` is defined, it must be included right *before* ``sources`` (in the same group);
+  * if ``patches`` or ``checksums`` are defined, they must be included right *after* ``sources``, in that order (and in the same group);
+
+* if ``builddependencies``, ``dependencies`` or ``osdependencies`` are defined they must be included next, grouped together;
+
+* defined parameters that influence particular steps of the build and installation procedure must be included in order
+  and after the parameters mentioned above;
+
+  * i.e., ``(pre)configopts`` must be included before ``(pre)buildopts``, which must be included before ``(pre)installopts``, etc.;
 
 * ``sanity_check_paths`` and ``sanity_check_commands`` must be included towards the end of the easyconfig file,
   if they are defined;
@@ -219,6 +225,7 @@ Example:
 
     source_urls = ['http://example.com']
     sources = [SOURCE_TAR_GZ]
+    checksums = ['41150b03ec5b7f5a49390cc10eeb96d5']
 
     configopts = '--with-foo'
 
