@@ -247,6 +247,29 @@ Example:
 Avoiding hardcoding of parameter values in multiple places
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Hardcoding of parameter values in multiple places must be avoided if possible,
+the available easyconfig templates must be used instead (see :ref:`avail_easyconfig_templates`).
+
+For example, rather than hardcoding the software version in both the ``version`` and ``sources``
+parameter definitions, the ``%(version)s`` template value should be used instead:
+
+.. code:: python
+
+  name = 'example'
+  version = '1.2.3'
+  ...
+  sources = ['%(name)s-v%(version)s.tar.gz']
+
+Commonly used templates include:
+
+* ``%(namelower)s`` for the lower-case software name
+* ``%(version)s`` for the full software version
+* ``%(version_major)s``, ``%(version_minor)s``, ``%(version_major_minor)s`` for partial software versions
+* ``SOURCE_TAR_GZ``, ``SOURCE_TGZ``, etc. for the ``sources`` parameter
+* ``GNU_SOURCE``, ``PYPI_SOURCE``, ``SOURCEFORGE_SOURCE``, etc. for the ``source_urls`` parameter
+* ``%(pyver)s`` and ``%(pyshortver)s`` for the (partial) Python version
+* ``%(installdir)s`` for the software installation prefix
+* ``SHLIB_EXT`` for the extension of shared libraries
 
 .. _code_style_easyconfigs_templates_constants:
 
