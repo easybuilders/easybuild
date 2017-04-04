@@ -193,7 +193,7 @@ The example below shows the overal structure of an easyblock:
 .. code:: python
 
     from easybuild.framework.easyblock import EasyBlock
-    from easybuild.tools.filetools import run_cmd
+    from easybuild.tools.run import run_cmd
 
     class EB_Example(EasyBlock):
         """Custom easyblock for Example"""
