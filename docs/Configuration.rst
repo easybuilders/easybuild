@@ -220,7 +220,7 @@ file. This can be used as an empty template configuration file:
 .. code:: shell-session
 
     $ mkdir -p $HOME/.easybuild
-    $ eb --confighelp > $HOME/.easybuild/config.cfg
+    $ eb --confighelp > $HOME/.config/easybuild/config.cfg
 
 .. code:: shell-session
 
