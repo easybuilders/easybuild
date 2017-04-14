@@ -163,7 +163,7 @@ Example:
   ...
   toolchain = {'name': 'goolf', 'version': '1.5.14'}
   dependencies = [('PnMPI', '1.2.0')]
-  builddependencies = [('CMake', '2.8.12', '', ('GCC', '4.8.2')]
+  builddependencies = [('CMake', '2.8.12', '', ('GCC', '4.8.2'))]
 
 For each of the specified (build) dependencies, the corresponding module will be loaded in the build environment
 defined by EasyBuild. For the *runtime* dependencies, ``module load`` statements will be included in the generated
