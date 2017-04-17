@@ -139,6 +139,7 @@ As of version EasyBuild version |version|:
 * The complete table of available toolchains is visible at :ref:`toolchains_table`
 * The list of available easyblocks is visible at :ref:`basic_usage_easyblocks`
 * The list of available (generic) easyconfig parameters is visible at :ref:`easyconfigs_parameters`
+* `List of currently supported software packages <https://github.com/hpcugent/easybuild/wiki/List-of-supported-software-packages>`_
 
 Appendices
 ==========
