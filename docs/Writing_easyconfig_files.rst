@@ -112,6 +112,8 @@ Source files and patches
 * **sources**: list of source files (filenames only)
 * **source urls**: list of URLs where sources can be downloaded
 * **patches**: list of patch files to be applied (``.patch`` extension)
+* **checksums**: list of checksums (``adler32``, ``crc32``, ``md5`` (default), ``sha1``, ``size``)
+  to test sources and patches against
 
 Remarks:
 
@@ -122,6 +124,13 @@ Remarks:
 
   * unified diff format (``diff -ru``)
   * patched locations relative to unpacked sources
+
+* if multiple sources/patches are listed, the checksums are consumed in order (sources first),
+  with one of the following per source file/patch:
+
+  * ``None`` (no checksum for that source/patch)
+  * ``'THECHECKSUM'``  (for MD5 checksum)
+  * ``('checksumtype', 'THECHECKSUM')`` (for a non-MD5 checksum)
 
 Example:
 
@@ -135,6 +144,8 @@ Example:
   # fix Make dependencies, so parallel build also works
   patches = ['HPL_parallel-make.patch']
   [...]
+
+  checksums = [('sha1', '1c199640146e9d87916475aa153c45f30e42f803'), None]
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources,
   a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
