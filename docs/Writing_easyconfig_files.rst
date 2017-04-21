@@ -112,6 +112,8 @@ Source files and patches
 * **sources**: list of source files (filenames only)
 * **source urls**: list of URLs where sources can be downloaded
 * **patches**: list of patch files to be applied (``.patch`` extension)
+* **checksums**: list of checksums (``adler32``, ``crc32``, ``md5`` (default), ``sha1``, ``size``)
+  to test the sources against
 
 Remarks:
 
@@ -123,6 +125,12 @@ Remarks:
   * unified diff format (``diff -ru``)
   * patched locations relative to unpacked sources
 
+* if provided, checksums must be a list with one element per source file:
+
+  * ``None`` (no checksum for that source file)
+  * ``'THECHECKSUM'``  (for MD5 checksum)
+  * ``('checksumtype', 'THECHECKSUM')`` (for a non-MD5 checksum)
+
 Example:
 
 .. code:: python
@@ -131,6 +139,7 @@ Example:
   [...]
   source_urls = ['http://www.netlib.org/benchmark/hpl']
   sources = ['hpl-2.0.tar.gz']
+  checksums = [('sha1', '1c199640146e9d87916475aa153c45f30e42f803')]
 
   # fix Make dependencies, so parallel build also works
   patches = ['HPL_parallel-make.patch']
