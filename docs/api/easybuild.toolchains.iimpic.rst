@@ -1,5 +1,5 @@
-easybuild.toolchains.iimpic module
-==================================
+easybuild\.toolchains\.iimpic module
+====================================
 
 .. automodule:: easybuild.toolchains.iimpic
     :members:

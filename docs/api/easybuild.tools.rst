@@ -1,5 +1,5 @@
-easybuild.tools package
-=======================
+easybuild\.tools package
+========================
 
 Subpackages
 -----------

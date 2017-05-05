@@ -1,5 +1,5 @@
-easybuild.toolchains.xlmpich2 module
-====================================
+easybuild\.toolchains\.xlmpich2 module
+======================================
 
 .. automodule:: easybuild.toolchains.xlmpich2
     :members:

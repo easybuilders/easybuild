@@ -1,5 +1,5 @@
-easybuild.tools.build_log module
-================================
+easybuild\.tools\.build\_log module
+===================================
 
 .. automodule:: easybuild.tools.build_log
     :members:

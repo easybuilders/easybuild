@@ -1,5 +1,5 @@
-easybuild.tools.toolchain.toolchain module
-==========================================
+easybuild\.tools\.toolchain\.toolchain module
+=============================================
 
 .. automodule:: easybuild.tools.toolchain.toolchain
     :members:

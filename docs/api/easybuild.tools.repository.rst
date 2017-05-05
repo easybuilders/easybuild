@@ -1,5 +1,5 @@
-easybuild.tools.repository package
-==================================
+easybuild\.tools\.repository package
+====================================
 
 Submodules
 ----------

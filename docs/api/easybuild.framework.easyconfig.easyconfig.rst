@@ -1,5 +1,5 @@
-easybuild.framework.easyconfig.easyconfig module
-================================================
+easybuild\.framework\.easyconfig\.easyconfig module
+===================================================
 
 .. automodule:: easybuild.framework.easyconfig.easyconfig
     :members:

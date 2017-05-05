@@ -1,5 +1,5 @@
-easybuild.toolchains.linalg.gotoblas module
-===========================================
+easybuild\.toolchains\.linalg\.gotoblas module
+==============================================
 
 .. automodule:: easybuild.toolchains.linalg.gotoblas
     :members:

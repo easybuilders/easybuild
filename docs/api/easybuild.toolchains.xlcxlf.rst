@@ -1,5 +1,5 @@
-easybuild.toolchains.xlcxlf module
-==================================
+easybuild\.toolchains\.xlcxlf module
+====================================
 
 .. automodule:: easybuild.toolchains.xlcxlf
     :members:

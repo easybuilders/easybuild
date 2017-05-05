@@ -1,5 +1,5 @@
-easybuild.toolchains.gcc module
-===============================
+easybuild\.toolchains\.gcc module
+=================================
 
 .. automodule:: easybuild.toolchains.gcc
     :members:

@@ -1,5 +1,5 @@
-easybuild.tools.package.package_naming_scheme package
-=====================================================
+easybuild\.tools\.package\.package\_naming\_scheme package
+==========================================================
 
 Submodules
 ----------

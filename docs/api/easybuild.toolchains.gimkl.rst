@@ -1,5 +1,5 @@
-easybuild.toolchains.gimkl module
-=================================
+easybuild\.toolchains\.gimkl module
+===================================
 
 .. automodule:: easybuild.toolchains.gimkl
     :members:

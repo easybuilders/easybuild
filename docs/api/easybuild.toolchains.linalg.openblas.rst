@@ -1,5 +1,5 @@
-easybuild.toolchains.linalg.openblas module
-===========================================
+easybuild\.toolchains\.linalg\.openblas module
+==============================================
 
 .. automodule:: easybuild.toolchains.linalg.openblas
     :members:

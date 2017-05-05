@@ -1,5 +1,5 @@
-easybuild.toolchains.cgmpich module
-===================================
+easybuild\.toolchains\.cgmpich module
+=====================================
 
 .. automodule:: easybuild.toolchains.cgmpich
     :members:

@@ -1,5 +1,5 @@
-easybuild.toolchains.iqacml module
-==================================
+easybuild\.toolchains\.iqacml module
+====================================
 
 .. automodule:: easybuild.toolchains.iqacml
     :members:

@@ -1,5 +1,5 @@
-easybuild.toolchains.gmvolf module
-==================================
+easybuild\.toolchains\.gmvolf module
+====================================
 
 .. automodule:: easybuild.toolchains.gmvolf
     :members:

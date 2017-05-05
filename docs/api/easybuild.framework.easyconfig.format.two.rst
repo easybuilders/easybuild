@@ -1,5 +1,5 @@
-easybuild.framework.easyconfig.format.two module
-================================================
+easybuild\.framework\.easyconfig\.format\.two module
+====================================================
 
 .. automodule:: easybuild.framework.easyconfig.format.two
     :members:

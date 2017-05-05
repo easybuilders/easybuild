@@ -1,5 +1,5 @@
-easybuild.toolchains.pompi module
-=================================
+easybuild\.toolchains\.pompi module
+===================================
 
 .. automodule:: easybuild.toolchains.pompi
     :members:

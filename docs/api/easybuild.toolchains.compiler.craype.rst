@@ -1,5 +1,5 @@
-easybuild.toolchains.compiler.craype module
-===========================================
+easybuild\.toolchains\.compiler\.craype module
+==============================================
 
 .. automodule:: easybuild.toolchains.compiler.craype
     :members:

@@ -1,5 +1,5 @@
-easybuild.framework.easyconfig package
-======================================
+easybuild\.framework\.easyconfig package
+========================================
 
 Subpackages
 -----------

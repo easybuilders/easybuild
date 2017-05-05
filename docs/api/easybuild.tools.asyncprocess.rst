@@ -1,5 +1,5 @@
-easybuild.tools.asyncprocess module
-===================================
+easybuild\.tools\.asyncprocess module
+=====================================
 
 .. automodule:: easybuild.tools.asyncprocess
     :members:

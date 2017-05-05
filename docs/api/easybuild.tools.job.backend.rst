@@ -1,5 +1,5 @@
-easybuild.tools.job.backend module
-==================================
+easybuild\.tools\.job\.backend module
+=====================================
 
 .. automodule:: easybuild.tools.job.backend
     :members:

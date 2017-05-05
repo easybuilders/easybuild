@@ -1,5 +1,5 @@
-easybuild.tools.module_generator module
-=======================================
+easybuild\.tools\.module\_generator module
+==========================================
 
 .. automodule:: easybuild.tools.module_generator
     :members:

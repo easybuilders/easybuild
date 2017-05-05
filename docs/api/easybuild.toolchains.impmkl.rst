@@ -1,5 +1,5 @@
-easybuild.toolchains.impmkl module
-==================================
+easybuild\.toolchains\.impmkl module
+====================================
 
 .. automodule:: easybuild.toolchains.impmkl
     :members:

@@ -1,5 +1,5 @@
-easybuild.tools.environment module
-==================================
+easybuild\.tools\.environment module
+====================================
 
 .. automodule:: easybuild.tools.environment
     :members:

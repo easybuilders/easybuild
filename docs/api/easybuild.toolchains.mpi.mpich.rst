@@ -1,5 +1,5 @@
-easybuild.toolchains.mpi.mpich module
-=====================================
+easybuild\.toolchains\.mpi\.mpich module
+========================================
 
 .. automodule:: easybuild.toolchains.mpi.mpich
     :members:

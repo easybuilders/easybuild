@@ -1,5 +1,5 @@
-easybuild.toolchains.gompic module
-==================================
+easybuild\.toolchains\.gompic module
+====================================
 
 .. automodule:: easybuild.toolchains.gompic
     :members:

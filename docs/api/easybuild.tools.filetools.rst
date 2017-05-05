@@ -1,5 +1,5 @@
-easybuild.tools.filetools module
-================================
+easybuild\.tools\.filetools module
+==================================
 
 .. automodule:: easybuild.tools.filetools
     :members:

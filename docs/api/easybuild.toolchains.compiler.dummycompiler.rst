@@ -1,5 +1,5 @@
-easybuild.toolchains.compiler.dummycompiler module
-==================================================
+easybuild\.toolchains\.compiler\.dummycompiler module
+=====================================================
 
 .. automodule:: easybuild.toolchains.compiler.dummycompiler
     :members:
