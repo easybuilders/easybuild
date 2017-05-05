@@ -1,5 +1,5 @@
-easybuild.toolchains.gompi module
-=================================
+easybuild\.toolchains\.gompi module
+===================================
 
 .. automodule:: easybuild.toolchains.gompi
     :members:

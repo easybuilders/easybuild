@@ -90,6 +90,7 @@
 
       * EB_BamTools
       * EB_BLAT
+      * EB_Bowtie2
       * EB_mutil
       * EB_NAMD
       * CmdCp
@@ -98,7 +99,6 @@
     * EB_R
     * EB_BLACS
     * EB_Bowtie
-    * EB_Bowtie2
     * EB_BWA
     * EB_bzip2
     * EB_CBLAS
@@ -107,6 +107,7 @@
     * EB_Cufflinks
     * EB_DB
     * EB_DL_underscore_POLY_underscore_Classic
+    * EB_Doris
     * EB_EggLib
     * EB_ESMF
     * EB_ESPResSo
@@ -125,6 +126,7 @@
     * EB_HPCG
     * EB_HPL
     * EB_Hypre
+    * EB_tbb
     * EB_LAPACK
     * EB_Libint
     * EB_libQGLViewer
@@ -171,7 +173,9 @@
     * EB_SuiteSparse
     * EB_SWIG
     * EB_TAU
+    * EB_tbb
     * EB_Velvet
+    * EB_VMD
     * EB_XCrySDen
     * ConfigureMakePythonPackage
     * PerlModule
@@ -269,6 +273,7 @@
   * EB_WIEN2k
   * EB_WPS
   * EB_WRF
+  * EB_WRF_minus_Fire
   * EB_Xmipp
   * Bundle
 

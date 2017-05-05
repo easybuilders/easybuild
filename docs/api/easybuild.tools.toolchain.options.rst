@@ -1,5 +1,5 @@
-easybuild.tools.toolchain.options module
-========================================
+easybuild\.tools\.toolchain\.options module
+===========================================
 
 .. automodule:: easybuild.tools.toolchain.options
     :members:

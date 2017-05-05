@@ -1,5 +1,5 @@
-easybuild.tools.repository.hgrepo module
-========================================
+easybuild\.tools\.repository\.hgrepo module
+===========================================
 
 .. automodule:: easybuild.tools.repository.hgrepo
     :members:

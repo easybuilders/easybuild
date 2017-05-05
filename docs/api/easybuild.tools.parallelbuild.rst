@@ -1,5 +1,5 @@
-easybuild.tools.parallelbuild module
-====================================
+easybuild\.tools\.parallelbuild module
+======================================
 
 .. automodule:: easybuild.tools.parallelbuild
     :members:

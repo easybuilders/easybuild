@@ -1,5 +1,5 @@
-easybuild.tools.toolchain.fft module
-====================================
+easybuild\.tools\.toolchain\.fft module
+=======================================
 
 .. automodule:: easybuild.tools.toolchain.fft
     :members:

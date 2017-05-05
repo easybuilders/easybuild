@@ -1,5 +1,5 @@
-easybuild.tools.variables module
-================================
+easybuild\.tools\.variables module
+==================================
 
 .. automodule:: easybuild.tools.variables
     :members:

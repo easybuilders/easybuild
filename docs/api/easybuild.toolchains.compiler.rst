@@ -1,5 +1,5 @@
-easybuild.toolchains.compiler package
-=====================================
+easybuild\.toolchains\.compiler package
+=======================================
 
 Submodules
 ----------

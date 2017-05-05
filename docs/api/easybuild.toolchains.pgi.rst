@@ -1,5 +1,5 @@
-easybuild.toolchains.pgi module
-===============================
+easybuild\.toolchains\.pgi module
+=================================
 
 .. automodule:: easybuild.toolchains.pgi
     :members:

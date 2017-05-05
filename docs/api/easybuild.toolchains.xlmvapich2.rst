@@ -1,5 +1,5 @@
-easybuild.toolchains.xlmvapich2 module
-======================================
+easybuild\.toolchains\.xlmvapich2 module
+========================================
 
 .. automodule:: easybuild.toolchains.xlmvapich2
     :members:

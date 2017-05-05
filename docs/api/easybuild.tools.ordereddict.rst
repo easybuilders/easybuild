@@ -1,5 +1,5 @@
-easybuild.tools.ordereddict module
-==================================
+easybuild\.tools\.ordereddict module
+====================================
 
 .. automodule:: easybuild.tools.ordereddict
     :members:

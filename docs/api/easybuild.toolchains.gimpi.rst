@@ -1,5 +1,5 @@
-easybuild.toolchains.gimpi module
-=================================
+easybuild\.toolchains\.gimpi module
+===================================
 
 .. automodule:: easybuild.toolchains.gimpi
     :members:

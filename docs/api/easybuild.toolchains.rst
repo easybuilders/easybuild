@@ -1,5 +1,5 @@
-easybuild.toolchains package
-============================
+easybuild\.toolchains package
+=============================
 
 Subpackages
 -----------

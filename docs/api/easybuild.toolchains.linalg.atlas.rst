@@ -1,5 +1,5 @@
-easybuild.toolchains.linalg.atlas module
-========================================
+easybuild\.toolchains\.linalg\.atlas module
+===========================================
 
 .. automodule:: easybuild.toolchains.linalg.atlas
     :members:

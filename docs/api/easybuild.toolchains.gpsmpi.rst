@@ -1,5 +1,5 @@
-easybuild.toolchains.gpsmpi module
-==================================
+easybuild\.toolchains\.gpsmpi module
+====================================
 
 .. automodule:: easybuild.toolchains.gpsmpi
     :members:

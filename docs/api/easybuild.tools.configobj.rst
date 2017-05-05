@@ -1,5 +1,5 @@
-easybuild.tools.configobj module
-================================
+easybuild\.tools\.configobj module
+==================================
 
 .. automodule:: easybuild.tools.configobj
     :members:

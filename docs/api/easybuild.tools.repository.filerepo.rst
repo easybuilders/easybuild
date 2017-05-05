@@ -1,5 +1,5 @@
-easybuild.tools.repository.filerepo module
-==========================================
+easybuild\.tools\.repository\.filerepo module
+=============================================
 
 .. automodule:: easybuild.tools.repository.filerepo
     :members:

@@ -1,5 +1,5 @@
-easybuild.toolchains.foss module
-================================
+easybuild\.toolchains\.foss module
+==================================
 
 .. automodule:: easybuild.toolchains.foss
     :members:

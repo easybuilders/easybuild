@@ -1,5 +1,5 @@
-easybuild.toolchains.iccifortcuda module
-========================================
+easybuild\.toolchains\.iccifortcuda module
+==========================================
 
 .. automodule:: easybuild.toolchains.iccifortcuda
     :members:

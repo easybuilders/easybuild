@@ -1,5 +1,5 @@
-easybuild.toolchains.xlompi module
-==================================
+easybuild\.toolchains\.xlompi module
+====================================
 
 .. automodule:: easybuild.toolchains.xlompi
     :members:

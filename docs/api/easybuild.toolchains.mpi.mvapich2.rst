@@ -1,5 +1,5 @@
-easybuild.toolchains.mpi.mvapich2 module
-========================================
+easybuild\.toolchains\.mpi\.mvapich2 module
+===========================================
 
 .. automodule:: easybuild.toolchains.mpi.mvapich2
     :members:

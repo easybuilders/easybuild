@@ -1,5 +1,5 @@
-easybuild.framework.easyblock module
-====================================
+easybuild\.framework\.easyblock module
+======================================
 
 .. automodule:: easybuild.framework.easyblock
     :members:

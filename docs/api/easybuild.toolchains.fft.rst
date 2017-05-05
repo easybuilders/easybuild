@@ -1,5 +1,5 @@
-easybuild.toolchains.fft package
-================================
+easybuild\.toolchains\.fft package
+==================================
 
 Submodules
 ----------

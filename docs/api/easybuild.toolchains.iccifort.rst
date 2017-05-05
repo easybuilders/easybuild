@@ -1,5 +1,5 @@
-easybuild.toolchains.iccifort module
-====================================
+easybuild\.toolchains\.iccifort module
+======================================
 
 .. automodule:: easybuild.toolchains.iccifort
     :members:

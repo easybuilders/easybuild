@@ -1,5 +1,5 @@
-easybuild.tools.job package
-===========================
+easybuild\.tools\.job package
+=============================
 
 Submodules
 ----------

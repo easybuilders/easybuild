@@ -1,5 +1,5 @@
-easybuild.toolchains.ictce module
-=================================
+easybuild\.toolchains\.ictce module
+===================================
 
 .. automodule:: easybuild.toolchains.ictce
     :members:

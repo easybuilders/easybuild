@@ -1,5 +1,5 @@
-easybuild.tools.systemtools module
-==================================
+easybuild\.tools\.systemtools module
+====================================
 
 .. automodule:: easybuild.tools.systemtools
     :members:

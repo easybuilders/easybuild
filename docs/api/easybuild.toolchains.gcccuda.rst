@@ -1,5 +1,5 @@
-easybuild.toolchains.gcccuda module
-===================================
+easybuild\.toolchains\.gcccuda module
+=====================================
 
 .. automodule:: easybuild.toolchains.gcccuda
     :members:

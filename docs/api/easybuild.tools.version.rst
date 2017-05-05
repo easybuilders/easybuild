@@ -1,5 +1,5 @@
-easybuild.tools.version module
-==============================
+easybuild\.tools\.version module
+================================
 
 .. automodule:: easybuild.tools.version
     :members:
