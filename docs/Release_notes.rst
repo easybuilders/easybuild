@@ -46,7 +46,7 @@ feature release
 * added easyblocks for Doris (`#1154 <https://github.com/hpcugent/easybuild-easyblocks/pull/1154>`_, `#1161 <https://github.com/hpcugent/easybuild-easyblocks/pull/1161>`_), VMD (`#1148 <https://github.com/hpcugent/easybuild-easyblocks/pull/1148>`_) and WRF-Fire (`#1153 <https://github.com/hpcugent/easybuild-easyblocks/pull/1153>`_, `#1159 <https://github.com/hpcugent/easybuild-easyblocks/pull/1159>`_)
 * minor enhancements, including:
 
-  * update ``IntelBase``, PGI and TotalView easyblocks to allow list of license files/servers via 'license_file' easyconfig parameter (`#1129 <https://github.com/hpcugent/easybuild-easyblocks/pull/1129>`_)
+  * update ``IntelBase``, PGI and TotalView easyblocks to allow list of license files/servers via '``license_file``' easyconfig parameter (`#1129 <https://github.com/hpcugent/easybuild-easyblocks/pull/1129>`_)
   * update Bowtie2 easyblock to set correct build options, copy more files, extend sanity check (`#1146 <https://github.com/hpcugent/easybuild-easyblocks/pull/1146>`_)
   * added the option to build Boost with multi-threading support (`#1147 <https://github.com/hpcugent/easybuild-easyblocks/pull/1147>`_)
   * allow libpng as OS dependency for WPS (`#1150 <https://github.com/hpcugent/easybuild-easyblocks/pull/1150>`_)
