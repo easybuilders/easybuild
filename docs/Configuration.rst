@@ -395,6 +395,9 @@ easyconfig file is done in the following order of preference:
 Note that these locations are also used when EasyBuild looks for patch
 files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the $PYTHONPATH.
 
+You can specify multiple paths where to look for sources, but only the first one will be used for downloading,
+so one needs to make sure at least the first path is writable by the user invoking ``eb``.
+
 .. _buildpath:
 
 Build path (``--buildpath``)
