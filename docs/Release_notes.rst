@@ -18,13 +18,13 @@ bugfix/update release
 
 * various enhancements, including:
 
-  * make hardcoded max ratio for failures in adjust_permissions configurable (`#2213 <https://github.com/hpcugent/easybuild-framework/pull/2213>`_)
-  * allow https on direct download in sources (`#2214 <https://github.com/hpcugent/easybuild-framework/pull/2214>`_)
+  * make hardcoded max ratio for failures in ``adjust_permissions`` configurable (`#2213 <https://github.com/hpcugent/easybuild-framework/pull/2213>`_)
+  * allow ``https://`` on direct download in sources (`#2214 <https://github.com/hpcugent/easybuild-framework/pull/2214>`_)
 
 * various bug fixes, including:
 
   * bump version bootstrap script to sync with latest update (`#2208 <https://github.com/hpcugent/easybuild-framework/pull/2208>`_)
-  * fix crash during module generation when '%' character is used in description (`#2209 <https://github.com/hpcugent/easybuild-framework/pull/2209>`_)
+  * fix crash during module generation when '``%``' character is used in description (`#2209 <https://github.com/hpcugent/easybuild-framework/pull/2209>`_)
 
 **easyblocks**
 
@@ -52,7 +52,7 @@ bugfix/update release
 * minor enhancements, including:
 
   * update source URLs in libpciaccess easyconfigs (`#3960 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3960>`_)
-  * enable use of double precision floating point in METIS 5.1.0 foss/2016a easyconfig (`#4555 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4555>`_)
+  * enable use of double precision floating point in METIS 5.1.0 ``foss/2016a`` easyconfig (`#4555 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4555>`_)
 
 
 
