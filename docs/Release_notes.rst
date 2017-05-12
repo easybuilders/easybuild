@@ -3,9 +3,58 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,216** different software packages,
+The latest version of EasyBuild provides support for building and installing **1,228** different software packages,
 using 25 different (compiler) toolchains. It contains 184 software-specific easyblocks and 30 generic easyblocks,
-alongside 6,943 easyconfig files.
+alongside 7,036 easyconfig files.
+
+.. _release_notes_eb321:
+
+v3.2.1 (May 12th 2017)
+----------------------
+
+bugfix/update release
+
+**framework**
+
+* various enhancements, including:
+
+  * make hardcoded max ratio for failures in adjust_permissions configurable (`#2213 <https://github.com/hpcugent/easybuild-framework/pull/2213>`_)
+  * allow https on direct download in sources (`#2214 <https://github.com/hpcugent/easybuild-framework/pull/2214>`_)
+
+* various bug fixes, including:
+
+  * bump version bootstrap script to sync with latest update (`#2208 <https://github.com/hpcugent/easybuild-framework/pull/2208>`_)
+  * fix crash during module generation when '%' character is used in description (`#2209 <https://github.com/hpcugent/easybuild-framework/pull/2209>`_)
+
+**easyblocks**
+
+* added easyblock for Siesta (`#1105 <https://github.com/hpcugent/easybuild-easyblocks/pull/1105>`_)
+* minor enhancements, including:
+
+  * enhance GROMACS easyblock to build with PLUMED support (`#1121 <https://github.com/hpcugent/easybuild-easyblocks/pull/1121>`_)
+  * enhance NAMD easyblock: add OpenMP support, update for recent NAMD versions (2.12), fix compatibility with Tcl versions other than 8.5 (`#1173 <https://github.com/hpcugent/easybuild-easyblocks/pull/1173>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 12 new software packages:
+
+  * AdapterRemoval (`#4509 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4509>`_), blasr_libcpp (`#4566 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4566>`_), canu (`#4473 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4473>`_), enchant (`#4567 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4567>`_), hunspell (`#4567 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4567>`_), memkind (`#4544 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4544>`_),
+    NLTK (`#4565 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4565>`_), pbbam (`#4566 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4566>`_), pbdagcon (`#4566 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4566>`_), pyenchant (`#4567 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4567>`_), Siesta (`#4562 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4562>`_), xarray (`#4556 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4556>`_)
+
+* added new easyconfigs for existing toolchains:
+
+  * goolfc 2017.01 (`#4577 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4577>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * HDF5 1.10.1, NAMD 2.12, OpenFOAM 4.1, pandas 0.20.1, ParaView 5.2.0, R 3.4.0, R-bundle-Bioconductor 3.5, Tensorflow 1.1.0
+
+* minor enhancements, including:
+
+  * update source URLs in libpciaccess easyconfigs (`#3960 <https://github.com/hpcugent/easybuild-easyconfigs/pull/3960>`_)
+  * enable use of double precision floating point in METIS 5.1.0 foss/2016a easyconfig (`#4555 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4555>`_)
+
+
 
 .. _release_notes_eb320:
 
