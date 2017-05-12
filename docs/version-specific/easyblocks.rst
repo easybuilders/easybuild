@@ -168,6 +168,7 @@
     * EB_Scalasca1
     * EB_Score_minus_P
     * EB_SHRiMP
+    * EB_Siesta
     * EB_SLEPc
     * EB_SOAPdenovo
     * EB_SuiteSparse
