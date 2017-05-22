@@ -30,15 +30,64 @@ For EasyBuild users:
 
 For authors of easyconfig files:
 
-*(nothing yet)*
+* :ref:`depr_fftw_use_fma4`
 
 For developers of easyblocks:
 
-*(nothing yet)*
+* :ref:`depr_copytree_function`
 
 For EasyBuild framework developers:
 
-*(nothing yet)*
+* :ref:`depr_get_easyblock_class_default_fallback`
+
+
+.. _depr_fftw_use_fma4:
+
+``use_fma`` custom easyconfig parameter for FFTW
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``use_fma4`` **easyconfig parameter instead**
+
+The ``use_fma`` easyconfig parameter has been deprecated in favor of the equivalent easyconfig parameter ``use_fma4``.
+
+``use_fma`` was introduced in EasyBuild v3.1.0 allow configuring FFTW with ``--enable-avx-128-fma``.
+Since it is only supported on systems with AMD processors that have the ``FMA4`` feature, it was replaced by
+the more fittingly named ``use_fma4`` parameter in EasyBuild v3.2.0.
+
+
+.. _depr_copytree_function:
+
+``copytree`` function
+~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``copy_dir`` **instead**
+
+The ``copytree`` function, which was a copy of the ``shutil.copytree`` function (introduced when Python 2.4 was still
+supported) has been deprecated in favor of the superior ``copy_dir`` function in the ``easybuild.tools.filetools`` module.
+
+``copy_dir`` graciously handles any exceptions that occur, and is aware of the EasyBuild *dry run* mode.
+
+
+.. _depr_get_easyblock_class_default_fallback:
+
+``default_fallback`` named argument for ``get_easyblock_class``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``error_on_missing_easyblock`` **named parameter instead**
+
+The ``get_easyblock_class`` implementation was cleaned up to remove the support for falling back to the
+generic ``ConfigureMake`` easyblock in EasyBuild v3.2.0 (see https://github.com/hpcugent/easybuild-framework/pull/2178),
+following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBuild v2.0.
+
+The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,
+to retain support for ignoring a missing matching easyblock rather than raising an error.
+
 
 .. _deprecation_policy:
 

@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170522.01** (`May 22nd 2017`): document deprecated behaviour in EasyBuild v3.2.0 (see :ref:`overview_deprecated`)
 * **release 20170512.01** (`May 12th 2017`): update release notes for EasyBuild v3.2.1 (see :ref:`release_notes_eb321`)
 * **release 20170505.01** (`May 5th 2017`): update release notes for EasyBuild v3.2.0 (see :ref:`release_notes_eb320`)
 * **release 20170320.01** (`Mar 20th 2017`): update release notes for EasyBuild v3.1.2 (see :ref:`release_notes_eb312`)
