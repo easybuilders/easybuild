@@ -19,17 +19,33 @@ This check can be controlled via the ``--detect-loaded-modules`` and ``--allow-l
 Motivation
 ----------
 
-This is done because manually loading modules for software that was installed through EasyBuild before issueing
-an ``eb`` command may affect the performed software installations procedures, either positively (fixing problems with
-installations), or negatively (breaking installations). In either case, influencing EasyBuild by manually loading
-modules should be avoided, since it affects reproducability of installations.
+Running EasyBuild in an environment where one or more EasyBuild-generated modules are loaded may interfere
+with the software installations performed by EasyBuild, i.e.:
 
+* they may cause installations failures, for example due to incompatibilities with the modules being loaded
+  during the installation procedure being performed;
+* they make cause installations to work in that particular environment, for example by providing a neccessary
+  dependency
+
+Since manually loading modules may affect the reproducability of software installations, it should be discouraged.
+
+In EasyBuild versions before v3.3.0, having a loaded module for the same software packages as the one being installed
+resulted in an EasyBuild error message. With ``--detect-loaded-modules``, a more extensive detection mechanism
+is available and the action taken for loaded modules can be controlled.
 
 
 .. _detecting_loaded_modules_mechanism:
 
 Detection mechanism
 -------------------
+
+Detecting loaded EasyBuild-generated modules is done by checking the environment for defined ``$EBROOT*``
+environment variables. If any are found, the corresponding loaded module is determined for better reporting.
+
+In case defined ``$EBROOT*`` environment variables are found that do not match a loaded modules,
+a clear warning will printed. For example::
+
+    WARNING: Found 1 defined $EBROOT* environment variables without matching loaded module: $EBROOTTEST
 
 
 .. _detecting_loaded_modules_action:
@@ -55,7 +71,7 @@ Supported values include:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When EasyBuild is configured with ``--detect-loaded-modules=fail``, it will print a clear error and stop when
-any loaded modules are detected (unless they are listed as being allowed, see :ref:`detecting_loaded_modules_allow`).
+any loaded modules are detected.
 
 For example::
 
@@ -69,28 +85,42 @@ For example::
 
     See http://easybuild.readthedocs.io/en/latest/Detecting_loaded_modules.html for more information.
 
+Allowed loaded modules do not trigger a failure (see :ref:`detecting_loaded_modules_allow`).
+
 
 .. _detecting_loaded_modules_action_ignore:
 
 ``ignore``: ignore any loaded modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With ``--detect-loaded-modules=ignore`` in place, any loaded modules are ignored and EasyBuild continues.
+With ``--detect-loaded-modules=ignore`` in place, any loaded modules are simply ignored and EasyBuild continues.
 
 .. note:: This is **not** recommended!
 
 
 .. _detecting_loaded_modules_action_purge:
 
-``purge``: run ``module purge``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``purge``: run '``module purge``'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using ``--detect-loaded-modules=purge``, EasyBuild will run ``module purge`` if any loaded modules are detected
-(unless they are listed as being allowed, see :ref:`detecting_loaded_modules_allow`), in an attempt to restore
-the environment to a clean state before starting software installations.
+Using ``--detect-loaded-modules=purge``, EasyBuild will run ``module purge`` if any loaded modules are detected,
+in an attempt to restore the environment to a clean state before starting software installations.
 
-Whether or not ``module purge`` is a suitable action is site-specific, since this will unload *all* loaded modules,
-including modules that were not installed with EasyBuild and which may be always required.
+A short warning message are printed in case ``module purge`` was used to clean up the environment::
+
+    $ eb example.eb --detect-loaded-modules=purge
+    == temporary log file in case of crash /tmp/eb-QLTV9v/easybuild-6mOmIN.log
+
+    WARNING: Found non-ignored loaded (EasyBuild-generated) modules, running 'module purge': Spack/0.10.0
+
+    ...
+
+.. note::
+  Whether or not ``module purge`` is a suitable action is site-specific, since this will unload *all* loaded modules
+  (except for 'sticky' modules when Lmod is used),
+  including modules that were not installed with EasyBuild and which may be always required.
+
+Allowed loaded modules do not trigger a ``module purge`` (see :ref:`detecting_loaded_modules_allow`).
 
 
 .. _detecting_loaded_modules_action_unload:
@@ -98,11 +128,49 @@ including modules that were not installed with EasyBuild and which may be always
 ``unload``: unload loaded modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+When ``--detect-loaded-modules=unload`` is used, EasyBuild will only unload the loaded (EasyBuild-generated) modules.
+The modules are unloaded in reverse order, i.e. the last loaded module is unloaded first.
+
+This is an alternative to using ``module purge``, in case some other modules are loaded and should remain loaded.
+
+A short warning message is printed when loaded modules are unloaded::
+
+    eb example.eb --detect-loaded-modules=unload
+    == temporary log file in case of crash /tmp/eb-JyyaEF/easybuild-WyGqZs.log
+
+    WARNING: Unloading non-ignored loaded (EasyBuild-generated) modules: Spack/0.10.0
+
+    ...
+
+Allowed loaded modules are not unloaded (see :ref:`detecting_loaded_modules_allow`).
+
 
 .. _detecting_loaded_modules_action_warn:
 
 ``warn``: print warning and continue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When EasyBuild is configured with ``--detect-loaded-modules=warn``, EasyBuild will print a warning
+mentioning that one or more loaded (EasyBuild-generated) were detected, before continuing as normal.
+
+The warning is intended to make the user aware that the environment in which EasyBuild is run is not clean.
+
+For example::
+
+    $ eb example.eb --detect-loaded-modules=warn
+    == temporary log file in case of crash /tmp/eb-9HD20m/easybuild-WAYzK2.log
+
+    WARNING: Found one or more non-ignored loaded (EasyBuild-generated) modules in current environment:
+    * Spack/0.10.0
+
+    To make EasyBuild allow particular loaded modules, use the --allow-loaded-modules configuration option.
+    Use --detect-loaded-modules={fail,ignore,purge,unload,warn} to specify action to take when loaded modules are detected.
+
+    See http://easybuild.readthedocs.io/en/latest/Detecting_loaded_modules.html for more information.
+
+    ...
+
+Allowed loaded modules do not trigger a warning (see :ref:`detecting_loaded_modules_allow`).
 
 .. note:: This is the default behaviour in EasyBuild v3.x.
 
