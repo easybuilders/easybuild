@@ -180,3 +180,19 @@ Allowed loaded modules do not trigger a warning (see :ref:`detecting_loaded_modu
 Allowing particular loaded modules
 ----------------------------------
 
+EasyBuild can be configured to allow particular modules to be loaded via ``--allow-loaded-modules``,
+by specifying a comma-seperated list of software names.
+
+For example::
+
+  $ export EASYBUILD_DETECT_LOADED_MODULES=fail
+  $ export EASYBUILD_ALLOW_LOADED_MODULES=EasyBuild,GC3Pie
+
+  $ module load EasyBuild
+  $ module load GC3Pie
+  $ eb example.eb
+  ...
+
+By default, only EasyBuild itself is listed as an allowed module. If you want to allow modules for other software
+to be loaded as well, you should include ``EasyBuild`` in the specified list of software names if you are using an
+EasyBuild installation provided through a module.
