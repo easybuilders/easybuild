@@ -70,6 +70,7 @@ Advanced usage topics
     RPATH-support
     Submitting_jobs
     Using_external_modules
+    Detecting_loaded_modules
 
 Other topics
 ============
