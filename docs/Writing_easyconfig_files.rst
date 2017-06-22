@@ -106,12 +106,13 @@ This section includes an overview of some commonly used (optional) easyconfig pa
 
 .. _common_easyconfig_param_sources:
 
-Source files and patches
-~~~~~~~~~~~~~~~~~~~~~~~~
+Source files, patches and checksums
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **sources**: list of source files (filenames only)
 * **source urls**: list of URLs where sources can be downloaded
 * **patches**: list of patch files to be applied (``.patch`` extension)
+* **checksums**: list of checksums for source and patch files
 
 Remarks:
 
@@ -123,21 +124,93 @@ Remarks:
   * unified diff format (``diff -ru``)
   * patched locations relative to unpacked sources
 
+* see :ref:`common_easyconfig_param_sources_checksums` for more information on ``checksums``
+* ``sources`` is usually specified as a list of strings representing filenames for source files,
+  but other formats are supported too, see :ref:`common_easyconfig_param_sources_alt`
+
 Example:
 
 .. code:: python
 
   name = 'HPL'
+  version = '2.2'
+
   [...]
+
   source_urls = ['http://www.netlib.org/benchmark/hpl']
-  sources = ['hpl-2.0.tar.gz']
+  sources = ['hpl-%(version)s.tar.gz']
 
   # fix Make dependencies, so parallel build also works
   patches = ['HPL_parallel-make.patch']
+
+  checksums = ['ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440']
+
   [...]
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources,
   a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
+
+.. _common_easyconfig_param_sources_checksums:
+
+Checksums
+^^^^^^^^^
+
+Checksums for source files and patches can be provided via the ``checksums`` easyconfig parameter.
+
+EasyBuild does not enforce checksums to be available for all source files and patches.
+Provided checksums will be 'consumed' first for the specified sources (in order), and subsequently also for patches.
+
+Nevertheless, providing checksums for *all* source files and patches is highly recommended.
+
+If checksums are provided, the checksum of the corresponding source files and patches is verified to match.
+
+
+The ``checksums`` easyconfig parameter is usually defined as a list of strings.
+
+Until EasyBuild v3.3.0, only MD5 checksums could be provided through a list of strings.
+Since EasyBuild v3.3.0, the checksum type is determined by looking at the length of the string:
+
+* 32-character strings are considered to be MD5 checksums (``md5``)
+* 64-character strings are considered to be SHA256 checksums (``sha256``)
+* (other lengths will result in an error message)
+
+Other checksum types are also supported: ``adler32``, ``crc32``, ``sha1``, ``sha512``, ``size`` (filesize in bytes).
+To provide checksum values of a specific type, elements of the ``checksums`` list can also be 2-element tuples
+of the form ``('<checksum value>', '<checksum type>')``.
+
+The intention is to move towards making ``sha256`` the recommended and default checksum type.
+
+
+.. _common_easyconfig_param_sources_alt:
+
+Alternative formats for ``sources``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases, it can be required to provide additional information next to the name of a source file,
+e.g., a custom extraction command (because the one derived from the file extension is not correct),
+or an altername filename that should be used to download the source file.
+
+This can be specified using a Python dictionary value in the ``sources`` easyconfig parameter.
+
+Since EasyBuild v3.3.0, three keys are supported:
+
+* ``filename`` (*mandatory*): filename of source file
+* ``download_filename``: filename that should be used when downloading this source file; the downloaded file will be
+  saved using the ``filename`` value
+* ``extract_cmd``: custom extraction command for this source file
+
+For example:
+
+.. code:: python
+
+  sources = [{
+    'filename': 'example-%(version)s.gz',
+    'download_filename': 'example.gz',  # provided source tarball is not versioned...
+    'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
+  }]
+
+.. note:: Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
+          in favor of the Python dictionary format described above; see also :ref:`depr_sources_2_element_tuple`.
 
 .. _dependency_specs:
 
