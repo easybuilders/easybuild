@@ -118,7 +118,7 @@ A short warning message are printed in case ``module purge`` was used to clean u
     $ eb example.eb
     == temporary log file in case of crash /tmp/eb-QLTV9v/easybuild-6mOmIN.log
 
-    WARNING: Found non-allowed loaded (EasyBuild-generated) modules, running 'module purge': Spack/0.10.0
+    WARNING: Found non-allowed loaded (EasyBuild-generated) modules (Spack/0.10.0), running 'module purge'
 
     ...
 
