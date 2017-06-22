@@ -27,10 +27,10 @@ with the software installations performed by EasyBuild, i.e.:
 
 * they may cause installations failures, for example due to incompatibilities with the modules being loaded
   during the installation procedure being performed;
-* they make cause installations to work in that particular environment, for example by providing a neccessary
+* they may cause installations to work in that particular environment, for example by providing a neccessary
   dependency
 
-Since manually loading modules may affect the reproducability of software installations, it should be discouraged.
+Since manually loading modules may affect the reproducibility of software installations, it should be discouraged.
 
 In EasyBuild versions before v3.3.0, having a loaded module for the same software packages as the one being installed
 resulted in an EasyBuild error message.
@@ -112,7 +112,7 @@ This is equivalent to the behaviour of EasyBuild versions prior to version 3.3.0
 Using ``--detect-loaded-modules=purge``, EasyBuild will run ``module purge`` if any (non-allowed) loaded modules
 are detected, in an attempt to restore the environment to a clean state before starting software installations.
 
-A short warning message are printed in case ``module purge`` was used to clean up the environment::
+A short warning message is printed in case ``module purge`` was used to clean up the environment::
 
     $ export EASYBUILD_DETECT_LOADED_MODULES=purge
     $ eb example.eb
