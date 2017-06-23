@@ -31,6 +31,7 @@ For EasyBuild users:
 For authors of easyconfig files:
 
 * :ref:`depr_fftw_use_fma4`
+* :ref:`depr_sources_2_element_tuple`
 
 For developers of easyblocks:
 
@@ -56,6 +57,38 @@ The ``use_fma`` easyconfig parameter has been deprecated in favor of the equival
 Since it is only supported on systems with AMD processors that have the ``FMA4`` feature, it was replaced by
 the more fittingly named ``use_fma4`` parameter in EasyBuild v3.2.0.
 
+
+.. _depr_sources_2_element_tuple:
+
+Specifying source files as 2-element tuples to provide a custom extraction command
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.3.0 (June 22nd 2017)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``extract_cmd`` **key in Python dictionary format instead**
+
+Specyfing a custom extraction command for a particular source file by using a 2-element tuple in ``sources``
+has been deprecated.
+
+Instead, a Python dictionary containing the ``filename`` and ``extract_cmd`` keys should be used instead,
+see :ref:`common_easyconfig_param_sources_alt`.
+
+So, this:
+
+.. code:: python
+
+    # source file is actually a gzipped tarball (filename should be .tar.gz)
+    # DEPRECATED FORMAT, don't use this anymore!
+    sources = [('example.gz', "tar xfvz %s")]
+
+should be replaced with:
+
+.. code:: python
+
+  sources = [{
+    'filename': 'example-%(version)s.gz',
+    'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
+  }]
 
 .. _depr_copytree_function:
 
