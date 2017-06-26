@@ -104,7 +104,7 @@ feature release
 
   * fix typo in statsmodels source url (``/sources/`` -> ``/source/``) (`#4612 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4612>`_)
   * add location to ``DotLib.pm`` to ``$PERL5LIB`` for SSPACE_Basic (`#4638 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4638>`_)
-  * add missing ``/gnu/`` ins ftpmirror.gnu.org ``source_urls``, or use ``GNU_SOURCE`` where possible (`#4653 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4653>`_)
+  * add missing ``/gnu/`` in ftpmirror.gnu.org ``source_urls``, or use ``GNU_SOURCE`` where possible (`#4653 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4653>`_)
   * consistently use ``--with-harfbuzz=no`` configure option in freetype easyconfigs (`#4668 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4668>`_)
   * use ``--with-x=yes`` in R easyconfigs that include X11 as a dependency (`#4701 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4701>`_)
   * remove '``4.0``' in tbb description (`#4707 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4707>`_)
