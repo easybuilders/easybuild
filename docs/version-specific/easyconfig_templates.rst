@@ -76,7 +76,7 @@ Constant                   Template value                                       
 ``FTPGNOME_SOURCE``        http download for gnome ftp server                                                  ``http://ftp.gnome.org/pub/GNOME/sources/%(namelower)s/%(version_major_minor)s``        
 ``GITHUB_SOURCE``          GitHub source URL (requires github_account easyconfig parameter to be specified)    ``https://github.com/%(github_account)s/%(name)s/archive``                              
 ``GNU_SAVANNAH_SOURCE``    download.savannah.gnu.org source url                                                ``http://download-mirror.savannah.gnu.org/releases/%(namelower)s``                      
-``GNU_SOURCE``             gnu.org source url                                                                  ``http://ftpmirror.gnu.org/%(namelower)s``                                              
+``GNU_SOURCE``             gnu.org source url                                                                  ``http://ftpmirror.gnu.org/gnu/%(namelower)s``                                          
 ``GOOGLECODE_SOURCE``      googlecode.com source url                                                           ``http://%(namelower)s.googlecode.com/files``                                           
 ``LAUNCHPAD_SOURCE``       launchpad.net source url                                                            ``https://launchpad.net/%(namelower)s/%(version_major_minor)s.x/%(version)s/+download/``
 ``PYPI_SOURCE``            pypi source url                                                                     ``https://pypi.python.org/packages/source/%(nameletter)s/%(name)s``                     

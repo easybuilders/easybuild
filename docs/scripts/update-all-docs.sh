@@ -30,6 +30,8 @@
 
 set -eu
 
+export LC_ALL=en_US.UTF-8
+
 VERSION_SPECIFIC_DIR='version-specific'
 SCRIPTS_DIR='scripts'
 
