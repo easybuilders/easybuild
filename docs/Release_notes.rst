@@ -3,9 +3,114 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,228** different software packages,
-using 25 different (compiler) toolchains. It contains 184 software-specific easyblocks and 30 generic easyblocks,
-alongside 7,036 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **1,256** different software packages,
+using 25 different (compiler) toolchains. It contains 187 software-specific easyblocks and 30 generic easyblocks,
+alongside 7,247 easyconfig files.
+
+.. _release_notes_eb330:
+
+v3.3.0 (June 26th 2017)
+----------------------
+
+feature release
+
+**framework**
+
+* various enhancements, including:
+
+  * clean up easyconfigs that are copied for inclusion in pull request (`#2197 <https://github.com/hpcugent/easybuild-framework/pull/2197>`_, `#2227 <https://github.com/hpcugent/easybuild-framework/pull/2227>`_)
+  * use devel logging where relevant in ``easybuild.tools.toolchain`` (`#2198 <https://github.com/hpcugent/easybuild-framework/pull/2198>`_)
+  * check exit code for executed ``module`` commands (`#2200 <https://github.com/hpcugent/easybuild-framework/pull/2200>`_)
+  * also copy patches to installation directory & easyconfigs archive along with easyconfig file (`#2202 <https://github.com/hpcugent/easybuild-framework/pull/2202>`_, `#2241 <https://github.com/hpcugent/easybuild-framework/pull/2241>`_)
+  * add support for SHA256 checksums (`#2215 <https://github.com/hpcugent/easybuild-framework/pull/2215>`_)
+
+    * also auto-detect whether provided checksum is MD5 or SHA256 based on length (if not checksum type is specified)
+    * add support for ``--enforce-checksums``, to require availability of checksums for sources/patches
+    * see http://easybuild.readthedocs.io/en/latest/Writing_easyconfig_files.html#source-files-patches-and-checksums
+
+  * add support for renaming sources on download (`#2223 <https://github.com/hpcugent/easybuild-framework/pull/2223>`_)
+
+    * also involves deprecating use of 2-tuple elements in list of sources, see http://easybuild.readthedocs.io/en/latest/Deprecated-functionality.html#depr-sources-2-element-tuple
+
+  * add support for ``--detect-loaded-modules`` (`#2228 <https://github.com/hpcugent/easybuild-framework/pull/2228>`_)
+  * give extensions access to ``module_generator`` of parent (`#2229 <https://github.com/hpcugent/easybuild-framework/pull/2229>`_)
+  * pass down additional arguments to ``copy_dir`` down to ``shutil.copytree`` (`#2230 <https://github.com/hpcugent/easybuild-framework/pull/2230>`_)
+  * avoid reloading already loaded modules that extend ``$MODULEPATH`` (`#2232 <https://github.com/hpcugent/easybuild-framework/pull/2232>`_)
+
+* various bug fixes, including:
+
+  * make sure test account & accompanying token is used in tests for ``github.py`` (`#2220 <https://github.com/hpcugent/easybuild-framework/pull/2220>`_, `#2224 <https://github.com/hpcugent/easybuild-framework/pull/2224>`_)
+  * only use MPD for old versions of Intel MPI (<4.1) in ``mpi_cmd_for`` (`#2221 <https://github.com/hpcugent/easybuild-framework/pull/2221>`_)
+  * escape dots in package filename to ensure correct match in ``derive_alt_pypi_url`` (`#2225 <https://github.com/hpcugent/easybuild-framework/pull/2225>`_)
+  * fix ``GNU_SOURCE`` template by adding missing ``/gnu/`` (`#2235 <https://github.com/hpcugent/easybuild-framework/pull/2235>`_)
+  * catch exception ``shutil.Error`` in ``copy_file`` (`#2239 <https://github.com/hpcugent/easybuild-framework/pull/2239>`_)
+  * report full error and traceback on unhandled exception in test report (`#2240 <https://github.com/hpcugent/easybuild-framework/pull/2240>`_)
+  * fix ``--set-default-module`` flag (`#2243 <https://github.com/hpcugent/easybuild-framework/pull/2243>`_)
+
+**easyblocks**
+
+* added easyblocks for MXNet (`#1135 <https://github.com/hpcugent/easybuild-easyblocks/pull/1135>`_), Tkinter(`#1184 <https://github.com/hpcugent/easybuild-easyblocks/pull/1184>`_)
+* minor enhancements, including:
+
+  * enhance sanity check for NCL (`#1169 <https://github.com/hpcugent/easybuild-easyblocks/pull/1169>`_, `#1179 <https://github.com/hpcugent/easybuild-easyblocks/pull/1179>`_)
+  * enable building of shared FFTW libraries (`#1180 <https://github.com/hpcugent/easybuild-easyblocks/pull/1180>`_)
+  * include update statements for ``$CPATH`` and ``$*LIBRARY_PATH`` in generated module in numpy easyblock (`#1183 <https://github.com/hpcugent/easybuild-easyblocks/pull/1183>`_)
+  * stop using deprecated '``copytree``' function from ``easybuild.tools.filetools`` (`#1185 <https://github.com/hpcugent/easybuild-easyblocks/pull/1185>`_)
+  * update SAMtools easyblock for v0.1.17 (`#1189 <https://github.com/hpcugent/easybuild-easyblocks/pull/1189>`_)
+  * update MATLAB easyblock for 2016b & 2017a versions (adjust permissions and change dir) (`#1182 <https://github.com/hpcugent/easybuild-easyblocks/pull/1182>`_, `#1197 <https://github.com/hpcugent/easybuild-easyblocks/pull/1197>`_)
+  * consider ``$EB_*_LICENSE_SERVER(_PORT)`` in MATLAB and ANSYS easyblocks (`#1195 <https://github.com/hpcugent/easybuild-easyblocks/pull/1195>`_)
+  * add ``omp_num_threads`` custom parameter in CP2K easyblock to allow defining ``$OMP_NUM_THREADS`` during testing (`#1196 <https://github.com/hpcugent/easybuild-easyblocks/pull/1196>`_)
+
+* various bug fixes, including:
+
+  * fix Siesta easyblock to enable and verify parallel build (`#1186 <https://github.com/hpcugent/easybuild-easyblocks/pull/1186>`_)
+  * fix bug in alias definition in impi easyblock for ``mpigxx``, ``mpiicpc`` and ``mpiifort`` (`#1192 <https://github.com/hpcugent/easybuild-easyblocks/pull/1192>`_)
+
+**easyconfigs**
+
+* enable automatic style checks in easyconfig tests (`#2506 <https://github.com/hpcugent/easybuild-easyconfigs/pull/2506>`_)
+* added example easyconfig files for 28 new software packages:
+
+  * ada (`#4594 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4594>`_), Aspera-CLI (`#4635 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4635>`_), AUGUSTUS (`#4624 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4624>`_), ada (`#4594 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4594>`_), Bio-SamTools (`#4637 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4637>`_), Bpipe (`#4590 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4590>`_), BUSCO (`#4624 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4624>`_),
+    CNVnator (`#4649 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4649>`_), davix (`#4755 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4755>`_), EricScript (`#4594 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4594>`_), FUNWAVE-TVD (`#4743 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4743>`_), gmpy2 (`#4609 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4609>`_), gSOAP (`#4755 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4755>`_),
+    libsndfile (`#4628 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4628>`_), lpsolve (`#4264 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4264>`_),  LUMPY (`#4682 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4682>`_), MaSuRCA (`#4706 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4706>`_), modred (`#4729 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4729>`_), MXNet (`#4765 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4765>`_),
+    NRGLjubljana (`#4651 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4651>`_), OrfM (`#4703 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4703>`_), Perl4-CoreLibs (`#4670 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4670>`_), prodigal (`#4468 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4468>`_), pydlpoly (`#4756 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4756>`_), SeqAn (`#4603 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4603>`_),
+    sharutils (`#4745 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4745>`_), Spyder (`#4627 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4627>`_), Tkinter (`#4620 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4620>`_), VariantMetaCaller (`#4632 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4632>`_)
+
+* added new easyconfigs for existing toolchains:
+
+  * ``gimkl/2017a`` (`#4646 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4646>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * ABINIT 8.2.2, BLAST+ 2.6.0, Bowtie2 2.3.2, FFmpeg 3.3.1, NCL 6.4.0, Rust 1.18.0, SAMtools 1.5, VTK 7.1.1
+
+* minor enhancements, including:
+
+  * use '``git diff --name-only``' and ``$TRAVIS_COMMIT_RANGE`` in Travis config to get list of changed files (`#4606 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4606>`_, `#4619 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4619>`_)
+  * add tuneR, seewave, soundecology, vcfR extensions for R 3.4.0 (+ libsndfile as dep) (`#4628 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4628>`_, `#4680 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4680>`_, `#4747 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4747>`_)
+  * also copy ``README`` for GapFiller (`#4631 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4631>`_)
+  * enable inclusion of version symbol by using ``--enable-ld-version-script`` configure option for LibTIFF (`#4639 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4639>`_)
+  * add SHA256 checksums for libpciaccess to discriminate from old tarballs that required running ``autogen.sh`` (`#4688 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4688>`_)
+  * fix ``NE_GLOBAL_DIR`` path for ne by also specifying ``PREFIX`` in ``buildopts`` (`#4698 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4698>`_)
+  * more (trivial) style fixes (`#4761 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4761>`_)
+  * avoid use of ``import`` in ANSYS & MATLAB easyconfigs (`#4762 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4762>`_)
+  * set ``$OMP_NUM_THREADS`` during CP2K test step via dedicated easyconfig parameter (`#4763 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4763>`_)
+  * avoid use of '``import``' in BFAST easyconfigs, just strip of '``a``' from version (`#4764 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4764>`_)
+  * add the docopt module to all Python 2017a easyconfigs (`#4770 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4770>`_)
+  * stop using deprecated 2-element tuple format in sources, use equivalent dict format instead (`#4774 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4774>`_)
+
+* various bug fixes, including:
+
+  * fix typo in statsmodels source url (``/sources/`` -> ``/source/``) (`#4612 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4612>`_)
+  * add location to ``DotLib.pm`` to ``$PERL5LIB`` for SSPACE_Basic (`#4638 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4638>`_)
+  * add missing ``/gnu/`` ins ftpmirror.gnu.org ``source_urls``, or use ``GNU_SOURCE`` where possible (`#4653 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4653>`_)
+  * consistently use ``--with-harfbuzz=no`` configure option in freetype easyconfigs (`#4668 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4668>`_)
+  * use ``--with-x=yes`` in R easyconfigs that include X11 as a dependency (`#4701 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4701>`_)
+  * remove '``4.0``' in tbb description (`#4707 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4707>`_)
+  * add lib sanity check paths for Debian compatibility in nettle (`#4722 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4722>`_)
+  * fix source URLs for HDF5 (`#4749 <https://github.com/hpcugent/easybuild-easyconfigs/pull/4749>`_)
+
 
 .. _release_notes_eb321:
 

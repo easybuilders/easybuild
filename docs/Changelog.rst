@@ -5,6 +5,9 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170626.01** (`June 26th 2017`): update release notes for EasyBuild v3.3.0 (see :ref:`release_notes_eb330`)
+* **release 20170623.01** (`June 23rd 2017`): document use of ``checksums`` & alternative formats for ``sources`` (see :ref:`common_easyconfig_param_sources`)
+* **release 20170622.01** (`June 22nd 2017`): document support for detecting loaded modules (see :ref:`detect_loaded_modules`)
 * **release 20170522.01** (`May 22nd 2017`): document deprecated behaviour in EasyBuild v3.2.0 (see :ref:`overview_deprecated`)
 * **release 20170512.01** (`May 12th 2017`): update release notes for EasyBuild v3.2.1 (see :ref:`release_notes_eb321`)
 * **release 20170505.01** (`May 5th 2017`): update release notes for EasyBuild v3.2.0 (see :ref:`release_notes_eb320`)
