@@ -61,6 +61,9 @@
   * ConfigureMake
 
     * EB_Python
+
+      * EB_Tkinter
+
     * EB_Amber
     * EB_ARB
     * CMakeMake
@@ -92,6 +95,7 @@
       * EB_BLAT
       * EB_Bowtie2
       * EB_mutil
+      * EB_MXNet
       * EB_NAMD
       * CmdCp
 
