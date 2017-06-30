@@ -75,6 +75,7 @@ For each of the available easyconfig files, the following aspects are tested:
 * making sure that the specified sanity check paths adher to the requirements, i.e. only (and both) the ``files``/``dirs``
   keys are listed, with the value for either one being non-empty
 * checking for the use of deprecated (or no longer supported) functionality
+* verifying whether ``eb --check-style`` on the easyconfig file passes
 
 If these tests pass for each and every available easyconfig file, two additional overall tests are run, i.e.:
 
