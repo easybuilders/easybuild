@@ -26,6 +26,10 @@ Maintainers of the ``easybuild`` repository (documentation)
 
 https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 
+* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez@fz-juelich.de`` - IRC/Slack: ``dalvarez``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
@@ -44,8 +48,11 @@ https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 Maintainers of the ``easybuild-framework`` repository
 -----------------------------------------------------
 
-
 https://github.com/easybuilders/easybuild-framework
+
+* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez@fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
@@ -66,6 +73,10 @@ Maintainers of the ``easybuild-easyblocks`` repository
 ------------------------------------------------------
 
 https://github.com/easybuilders/easybuild-easyblocks
+
+* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez@fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Miguel Dias Costa** (National University of Singapore)
 
