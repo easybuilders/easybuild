@@ -106,9 +106,17 @@ https://github.com/easybuilders/easybuild-easyconfigs
 
   * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
 
+* **Pablo Escobar** (`sciCORE, University of Basel <https://scicore.unibas.ch/>`_)
+
+  * GitHub: `@pescobar <https://github.com/pescobar>`_ - e-mail: ``pablo.escobarlopez (at) unibas.ch`` - IRC/Slack: ``pescobar``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
+
+* **Adam Huffman** (`The Francis Crick Institute <https://www.crick.ac.uk/>`_)
+
+  * GitHub: `@verdurin <https://github.com/verdurin>`_ - e-mail: ``adam.huffman (at) gmail.com`` - IRC/Slack: ``verdurin``
 
 * **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
 
