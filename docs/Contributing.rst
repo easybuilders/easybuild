@@ -390,6 +390,30 @@ For example, to push the ``mybranch`` branch to your fork of the GitHub reposito
 Note: this will make your work public.
 
 
+.. _contributing_creating_pull_requests_pr_title:
+
+Pull request title & description
+++++++++++++++++++++++++++++++++
+
+Please use a descriptive (short) title for your pull requests, and clarify (if needed) in the pull request description.
+
+If any other pull requests are required, refer to them in the description using ``#<PR number>`` (only for pull requests
+to the same repository), or by copy-pasting the URL to the pull request.
+
+For pull requests to the easyconfig repository, we recommend using this format for the pull request title
+when contributing new easyconfig files::
+
+  {<moduleclass>}[<toolchain>] <software name> <software version> <extra info>``
+
+For example:
+
+* ``{tools}[dummy] EasyBuild v3.2.1``
+* ``{math}[intel/2017a] numpy 1.13.0 w/ Python 2.7.13``
+* ``{math,numlib}[foss/2017a] METIS v5.1.0, ParMETIS v4.0.3, SuiteSparse v4.5.5, ...``
+
+If you are opening a work-in-progress pull request, for example to solicit feedback, tag it using ``(WIP)``.
+in the pull request title.
+
 .. _contributing_creating_pull_requests_open_pr:
 
 Opening the pull request
@@ -450,7 +474,11 @@ Merging of pull requests
 
 Once your pull request has been given the green light by Travis and one or more
 people reviewing have approved the changes, it can be merged into
-the ``develop`` branch. **This can only be done by a member of the EasyBuild admin team.**
+the ``develop`` branch.
+
+**This can only be done by a member of the EasyBuild maintainers team.
+Only pull requests that meet the requirements are eligible for merging,
+see :ref:`contributing_review_process_pr_requirements`.**
 
 Merging a pull request usually implies that the changes will be part of the next EasyBuild release.
 
