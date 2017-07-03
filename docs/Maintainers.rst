@@ -9,10 +9,39 @@ This page provides an overview of the current maintainers of the EasyBuild repos
     :depth: 3
     :backlinks: none
 
+
+.. _maintainers_criteria:
+
+Criteria
+--------
+
+EasyBuild maintainers should meet the following criteria:
+
+* being sufficiently familiar with the contribution procedure (see :ref:`contributing`)
+* frequently contributing to the relevant repositories
+* being an active member of the EasyBuild community for a significant amount of time, i.e.:
+
+  * following the EasyBuild mailing list and participating in discussions (see :ref:`getting_help`)
+  * actively participating in the EasyBuid IRC or Slack channel (see :ref:`getting_help`);
+  * (occasionally) joining in on the EasyBuild conference calls (see https://github.com/hpcugent/easybuild/wiki/Conference-calls)
+
+* having access to a working setup for submitting test reports (see :ref:`contributing_review_process_test_reports`)
+
+
+.. _maintainers_roles:
+
+Roles
+-----
+
+Different (partially overlapping) groups of maintainers are currently assigned to each of the EasyBuild repositories:
+
 .. _maintainers_release_manager:
 
 Release manager
----------------
+~~~~~~~~~~~~~~~
+
+The release manager is responsible for releasing new stable EasyBuild versions on a regular basis,
+with the help of the other EasyBuild maintainers.
 
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
@@ -22,7 +51,7 @@ Release manager
 .. _maintainers_easybuild_repo:
 
 Maintainers of the ``easybuild`` repository (documentation)
------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 
@@ -46,7 +75,7 @@ https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 .. _maintainers_framework_repo:
 
 Maintainers of the ``easybuild-framework`` repository
------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://github.com/easybuilders/easybuild-framework
 
@@ -70,7 +99,7 @@ https://github.com/easybuilders/easybuild-framework
 .. _maintainers_easyblocks_repo:
 
 Maintainers of the ``easybuild-easyblocks`` repository
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://github.com/easybuilders/easybuild-easyblocks
 
@@ -98,7 +127,7 @@ https://github.com/easybuilders/easybuild-easyblocks
 .. _maintainers_easyconfigs_repo:
 
 Maintainers of the ``easybuild-easyconfigs`` repository
--------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://github.com/easybuilders/easybuild-easyconfigs
 
