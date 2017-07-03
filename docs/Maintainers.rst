@@ -150,3 +150,7 @@ https://github.com/easybuilders/easybuild-easyconfigs
 * **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
 
   * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
+
+* **David Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
+
+  * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
