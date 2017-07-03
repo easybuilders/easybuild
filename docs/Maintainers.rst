@@ -28,7 +28,7 @@ https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez@fz-juelich.de`` - IRC/Slack: ``dalvarez``
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
@@ -52,7 +52,7 @@ https://github.com/easybuilders/easybuild-framework
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez@fz-juelich.de`` - IRC/Slack: ``dalvarez``
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
@@ -60,7 +60,7 @@ https://github.com/easybuilders/easybuild-framework
 
 * **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais@fz-juelich.de`` - IRC/Slack: ``ocaisa``
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
 
 * **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
 
@@ -76,7 +76,7 @@ https://github.com/easybuilders/easybuild-easyblocks
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez@fz-juelich.de`` - IRC/Slack: ``dalvarez``
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Miguel Dias Costa** (National University of Singapore)
 
@@ -88,7 +88,7 @@ https://github.com/easybuilders/easybuild-easyblocks
 
 * **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais@fz-juelich.de`` - IRC/Slack: ``ocaisa``
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
 
 * **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
 

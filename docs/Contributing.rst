@@ -298,7 +298,8 @@ To open a pull request for your contribution, you must follow these steps:
 i. :ref:`contributing_creating_pull_requests_branch`
 ii. :ref:`contributing_creating_pull_requests_commit`
 iii. :ref:`contributing_creating_pull_requests_push`
-iv. :ref:`contributing_creating_pull_requests_open_pr`
+iv. :ref:`contributing_creating_pull_requests_pr_title`
+v. :ref:`contributing_creating_pull_requests_open_pr`
 
 
 .. _contributing_creating_pull_requests_branch:
@@ -403,7 +404,7 @@ to the same repository), or by copy-pasting the URL to the pull request.
 For pull requests to the easyconfig repository, we recommend using this format for the pull request title
 when contributing new easyconfig files::
 
-  {<moduleclass>}[<toolchain>] <software name> <software version> <extra info>``
+  {<moduleclass>}[<toolchain>] <software name> <software version> <extra info>
 
 For example:
 
