@@ -28,7 +28,7 @@ https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
@@ -52,7 +52,7 @@ https://github.com/easybuilders/easybuild-framework
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
@@ -76,7 +76,7 @@ https://github.com/easybuilders/easybuild-easyblocks
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-main: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Miguel Dias Costa** (National University of Singapore)
 
