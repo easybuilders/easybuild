@@ -62,7 +62,7 @@ To report errors, an ``EasyBuildError`` should be raised instead. For example:
 ``get_blas_lib`` function provided by ``LAPACK`` easyblock has been removed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* *deprecated since:* EasyBuild v1.3.0 (April'13); see https://github.com/hpcugent/easybuild-easyblocks/pull/150
+* *deprecated since:* EasyBuild v1.3.0 (April'13); see https://github.com/easybuilders/easybuild-easyblocks/pull/150
 * *removed in:* EasyBuild v3.0
 * *alternative(s)*: **leverage modules from** ``easybuild.toolchain.linalg``
 
@@ -70,7 +70,7 @@ The ``get_blas_lib`` function provided by the ``LAPACK`` easyblock was removed,
 mainly because it included a hardcoded list of BLAS libraries.
 
 It was replaced by 'inlining' similar code into the easyblocks that rely on it
-(e.g. ScaLAPACK, cfr. https://github.com/hpcugent/easybuild-easyblocks/pull/1014),
+(e.g. ScaLAPACK, cfr. https://github.com/easybuilders/easybuild-easyblocks/pull/1014),
 which only refers to the BLAS libraries that are relevant in that context.
 
 
@@ -79,7 +79,7 @@ which only refers to the BLAS libraries that are relevant in that context.
 ``get_netcdf_module_set_cmds`` function provided by ``netCDF`` easyblock was removed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* *deprecated since:* EasyBuild v2.1.0 (April'15); see https://github.com/hpcugent/easybuild-easyblocks/pull/590
+* *deprecated since:* EasyBuild v2.1.0 (April'15); see https://github.com/easybuilders/easybuild-easyblocks/pull/590
 * *removed in:* EasyBuild v3.0
 * *alternative(s)*: **rely on** ``set_netcdf_env_vars`` **and use** ``self.module_generator.set_environment``
 
@@ -92,7 +92,7 @@ to define the ``NETCDF*`` environment variables, in combination with ``self.modu
 to obtain ``setenv`` statements that are compatible with the module syntax (``Tcl`` or ``Lua``) being used.
 
 See for example the changes made to the ``WRF`` and ``WPS``
-easyblocks in https://github.com/hpcugent/easybuild-easyblocks/commit/7a05cbd823769e343b951002b4735dc7632e19c0.
+easyblocks in https://github.com/easybuilders/easybuild-easyblocks/commit/7a05cbd823769e343b951002b4735dc7632e19c0.
 
 .. _overview_removed_20:
 

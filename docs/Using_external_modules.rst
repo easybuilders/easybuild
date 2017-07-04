@@ -57,7 +57,7 @@ Up until EasyBuild v2.6.0, no metadata for external modules was available by def
 
 Since EasyBuild v2.7.0, a file providing metadata for Cray-provided modules on Cray systems is included,
 and is active by default (i.e., unless other files are specified via ``--external-modules-metadata``);
-see https://github.com/hpcugent/easybuild-framework/blob/master/etc/cray_external_modules_metadata.cfg.
+see https://github.com/easybuilders/easybuild-framework/blob/master/etc/cray_external_modules_metadata.cfg.
 
 Example
 ~~~~~~~

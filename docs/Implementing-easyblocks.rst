@@ -35,7 +35,7 @@ Easyblocks can either be *generic* or *software-specific*.
 Generic easyblocks implement a 'standard' software build and installation procedure that is used by multiple different
 software packages.
 A commonly used example is the
-`ConfigureMake <https://github.com/hpcugent/easybuild-easyblocks/blob/master/easybuild/easyblocks/generic/configuremake.py>`_ 
+`ConfigureMake <https://github.com/easybuilders/easybuild-easyblocks/blob/master/easybuild/easyblocks/generic/configuremake.py>`_ 
 generic easyblock, which implements the standard ``configure`` - ``make`` - ``make install`` installation procedure used
 by most GNU software packages.
 
@@ -176,7 +176,7 @@ Generic easyblocks are located in the ``easybuid.easyblocks.generic`` namespace,
 live in the ``easybuild.easyblocks`` namespace directly. To keep things organised, the actual Python module file
 for software-specific easyblocks are kept in 'letter' subdirectories,
 rather than in one large '``easyblocks``' directory
-(see https://github.com/hpcugent/easybuild-easyblocks/blob/master/easybuild/easyblocks/).
+(see https://github.com/easybuilders/easybuild-easyblocks/blob/master/easybuild/easyblocks/).
 
 Note that you shouldn't concern yourself too much with getting the location of an easyblock right, as long as you
 use ``--include-easyblocks`` to make EasyBuild use additional or customised easyblocks

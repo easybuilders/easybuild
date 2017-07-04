@@ -58,7 +58,7 @@ Depending on which GitHub integration features you want to use, there are a coup
 * **fork of the EasyBuild repositories on GitHub**
 
   * only required for submitting/updating pull requests (:ref:`github_new_pr` and :ref:`github_update_pr`)
-  * see ``Fork`` button (top right) at https://github.com/hpcugent/easybuild-easyconfigs (for example)
+  * see ``Fork`` button (top right) at https://github.com/easybuilders/easybuild-easyconfigs (for example)
 
 See also :ref:`github_requirements_check`.
 
@@ -192,7 +192,7 @@ Using easyconfigs from pull requests (``--from-pr``)
 
 Via the ``--from-pr`` command line option (available since EasyBuild v1.13.0), easyconfig files that are added or
 modified by a particular pull request to the `easybuild-easyconfigs GitHub repository
-<https://github.com/hpcugent/easybuild-easyconfigs>`_ can be used (regardless of whether the pull request is merged
+<https://github.com/easybuilders/easybuild-easyconfigs>`_ can be used (regardless of whether the pull request is merged
 or not).
 
 This can be useful to employ easyconfig files that are not available yet in the active EasyBuild installation,
@@ -203,7 +203,7 @@ When ``--from-pr`` is used, EasyBuild will download all modified files (easyconf
 directory before processing them.
 
 For example, to use the GCC v4.9.2 easyconfigs contributed via `easyconfigs pull request #1177
-<https://github.com/hpcugent/easybuild-easyconfigs/pull/1177>`_::
+<https://github.com/easybuilders/easybuild-easyconfigs/pull/1177>`_::
 
     $ eb --from-pr 1177 --dry-run
     == temporary log file in case of crash /tmp/eb-88quZc/easybuild-62fFdo.log
@@ -295,7 +295,7 @@ available in the robot search path are preferred over the (patched) easyconfig f
 (see also :ref:`github_from_pr_vs_develop`).
 
 For example, to build and install ``HPL`` with the ``intel/2015a`` toolchain, both of which are contributed via
-`easyconfigs pull request #1238 <https://github.com/hpcugent/easybuild-easyconfigs/pull/1238>`_::
+`easyconfigs pull request #1238 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1238>`_::
 
     $ eb --from-pr 1238 --dry-run --robot $HOME/easyconfigs
     == temporary log file in case of crash /tmp/eb-A1fRvw/easybuild-Eqc8Oi.log
@@ -324,7 +324,7 @@ Since EasyBuid v2.0.0 the particular easyconfigs to be used can be specified, ra
 touched by the pull request (which is the default if no easyconfigs are specified alongside ``--from-pr``).
 
 For example, to only use ``CMake-3.0.0-intel-2015a.eb`` from `easyconfigs pull request #1330
-<https://github.com/hpcugent/easybuild-easyconfigs/pull/1330>`_, and ignore the other easyconfigs being contributed
+<https://github.com/easybuilders/easybuild-easyconfigs/pull/1330>`_, and ignore the other easyconfigs being contributed
 in that same pull request for netCDF, WRF, ...::
 
     $ eb --from-pr 1330 CMake-3.0.0-intel-2015a.eb --dry-run --robot $HOME/easyconfigs
@@ -424,7 +424,7 @@ Reviewing easyconfig pull requests (``--review-pr``)
 ----------------------------------------------------
 
 A useful tool when reviewing pull requests for the `easybuild-easyconfigs repository
-<https://github.com/hpcugent/easybuild-easyconfigs>`_ that add new or update existing easyconfig files is
+<https://github.com/easybuilders/easybuild-easyconfigs>`_ that add new or update existing easyconfig files is
 ``--review-pr``.
 
 The 'files' tab in the GitHub interface shows the changes being made to existing files;
@@ -500,7 +500,7 @@ This takes care of all the steps required to make a contribution, i.e.:
 * moving easyconfig files to the right location in the repository (e.g. ``easybuild/easyconfigs/e/EasyBuild/``)
 * staging and committing the files in the feature branch
 * pushing the feature branch to your fork of the relevant EasyBuild repository on GitHub
-* creating the pull request, targetting the ``develop`` branch of the central EasyBuild repository (e.g. ``hpcugent/easybuild-easyconfigs``)
+* creating the pull request, targetting the ``develop`` branch of the central EasyBuild repository (e.g. ``easybuilders/easybuild-easyconfigs``)
 
 It should be clear that automating this whole procedure with a single simple ``eb`` command greatly lowers the bar
 for contributing, especially since it even alleviates the need for interacting directly with ``git`` entirely!
@@ -520,10 +520,10 @@ For example, to create a pull request for a new version of, let's say, EasyBuild
     $ eb --new-pr example.eb
     == temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
-    == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
+    == fetching branch 'develop' from https://github.com/easybuilders/easybuild-easyconfigs.git...
 
     Opening pull request
-    * target: hpcugent/easybuild-easyconfigs:develop
+    * target: easybuilders/easybuild-easyconfigs:develop
     * from: boegel/easybuild-easyconfigs:20160530131447_new_pr_EasyBuild281
     * title: "{tools}[dummy/dummy] EasyBuild v2.8.1"
     * description:
@@ -535,7 +535,7 @@ For example, to create a pull request for a new version of, let's say, EasyBuild
      .../easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb     | 35 ++++++++++++++++++++++
      1 file changed, 35 insertions(+)
 
-    Opened pull request: https://github.com/hpcugent/easybuild-easyconfigs/pull/3153
+    Opened pull request: https://github.com/easybuilders/easybuild-easyconfigs/pull/3153
 
 Yes, it's that easy!
 
@@ -580,14 +580,14 @@ For example, to update pull request #3153 with a changed easyconfig file::
 
     eb --update-pr 3153 example.eb
     == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log
-    == Determined branch name corresponding to hpcugent/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281
+    == Determined branch name corresponding to easybuilders/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
     == fetching branch '20160530131447_new_pr_EasyBuild281' from https://github.com/boegel/easybuild-easyconfigs.git...
     Overview of changes:
      easybuild/easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb | 3 +++
      1 file changed, 3 insertions(+)
 
-    Updated hpcugent/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
+    Updated easybuilders/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
 
 .. _github_new_update_pr_patches:
 
@@ -702,12 +702,12 @@ using ``--pr-title``.
 Configuring ``--new-pr`` and ``--update-pr``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, ``--new-pr`` and ``--update-pr`` affect pull requests to the central ``hpcugent/easybuild-easyconfigs``
+By default, ``--new-pr`` and ``--update-pr`` affect pull requests to the central ``easybuilders/easybuild-easyconfigs``
 repository.
 
 However, this can be changed with the following configurations options:
 
-* ``--pr-target-account`` (default: ``hpcugent``): target GitHub account for new pull requests
+* ``--pr-target-account`` (default: ``easybuilders``): target GitHub account for new pull requests
 * ``--pr-target-branch`` (default: ``develop``): target branch for new pull requests
 * ``--pr-target-repo`` (default: ``easybuild-easyconfigs``): target repository for new pull requests
 
@@ -725,10 +725,10 @@ For example::
     $ eb --new-pr EasyBuild-2.9.0.eb -D
     == temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log
     == copying /home/example/git-working-dirs/easybuild-easyconfigs...
-    == fetching branch 'develop' from https://github.com/hpcugent/easybuild-easyconfigs.git...
+    == fetching branch 'develop' from https://github.com/easybuilders/easybuild-easyconfigs.git...
 
     Opening pull request [DRY RUN]
-    * target: hpcugent/easybuild-easyconfigs:develop
+    * target: easybuilders/easybuild-easyconfigs:develop
     * from: boegel/easybuild-easyconfigs:20160603105641_new_pr_EasyBuild290
     * title: "{tools}[dummy/dummy] EasyBuild v2.9.0"
     * description:

@@ -10,7 +10,7 @@
     ],
     [
       0.000187,
-      "# EasyBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n# date: Oct 8th 2016 (EasyBuild v2.9.0)\r\n\r\n"
+      "# EasyBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://easybuilders.github.io/easybuild/ - http://easybuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n# date: Oct 8th 2016 (EasyBuild v2.9.0)\r\n\r\n"
     ],
     [
       0.129939,

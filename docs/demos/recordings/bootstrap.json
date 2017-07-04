@@ -7,7 +7,7 @@
     ],
     [
       0.000149,
-      "# EasyBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n# date: Oct 11th 2016 (EasyBuild v2.9.0)\r\n\r\n\r\n#\r\n# Bootstrapping EasyBuild\r\n"
+      "# EasyBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://easybuilders.github.io/easybuild/ - http://easybuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n# date: Oct 11th 2016 (EasyBuild v2.9.0)\r\n\r\n\r\n#\r\n# Bootstrapping EasyBuild\r\n"
     ],
     [
       7e-05,
@@ -3263,7 +3263,7 @@
     ],
     [
       0.056662,
-      "https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py"
+      "https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py"
     ],
     [
       0.207279,
@@ -4747,7 +4747,7 @@
     ],
     [
       0.109848,
-      "Downloading http://hpcugent.github.io/easybuild/files/distribute-0.6.49-patched1.tar.gz\r\n"
+      "Downloading http://easybuilders.github.io/easybuild/files/distribute-0.6.49-patched1.tar.gz\r\n"
     ],
     [
       0.329663,

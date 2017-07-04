@@ -62,7 +62,7 @@ i.e., installing the latest EasyBuild release (obtained from PyPI) using EasyBui
 
 To bootstrap EasyBuild:
 
-* download the bootstrap script from https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+* download the bootstrap script from https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 * execute it, and specify an installation prefix as an argument
 
 Yes, it's that easy!
@@ -86,7 +86,7 @@ For example::
   EASYBUILD_PREFIX=$HOME/.local/easybuild
 
   # download script
-  curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+  curl -O https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 
   # bootstrap EasyBuild
   python bootstrap_eb.py $EASYBUILD_PREFIX
@@ -158,7 +158,7 @@ Keep in mind that this is just an example, more details about the EasyBuild unit
 
 If this does not complete successfully, `please open an issue`_ to report it.
 
-.. _please open an issue: https://github.com/hpcugent/easybuild-framework/issues/new
+.. _please open an issue: https://github.com/easybuilders/easybuild-framework/issues/new
 
 
 Example bootstrap run
@@ -261,7 +261,7 @@ Advanced bootstrapping options
 ------------------------------
 
 To use these advanced options, make sure you are using the latest version of the bootstrap script, available
-at https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py .
+at https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py .
 
 Skipping the installation of ``easy_install`` (stage 0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -354,7 +354,7 @@ To upgrade to a newer EasyBuild version (say, |version|) than the one currently 
   * install EasyBuild version |version| with a previous version of EasyBuild
 
     * using ``eb --install-latest-eb-release`` (requires EasyBuild v2.9.0 or more recent), or
-    * using the easyconfig file available on the develop branch at Github <https://github.com/hpcugent/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
+    * using the easyconfig file available on the develop branch at Github <https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
 
   * install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (``easy_install``, ``pip``, ...), see also :ref:`alt_inst_easy_install_pip`
   * update the ``master`` branch of your Git working copies of the different EasyBuild repositories
@@ -534,10 +534,10 @@ distribution.
 
 The source code for these packages is also available on GitHub:
 
-* `easybuild-framework git repository <https://github.com/hpcugent/easybuild-framework>`_
-* `easybuild-easyblocks git repository <https://github.com/hpcugent/easybuild-easyblocks>`_
-* `easybuild-easyconfigs git repository <https://github.com/hpcugent/easybuild-easyconfigs>`_
-* the `main EasyBuild repository <https://github.com/hpcugent/easybuild>`_ mainly hosts *this* EasyBuild documentation
+* `easybuild-framework git repository <https://github.com/easybuilders/easybuild-framework>`_
+* `easybuild-easyblocks git repository <https://github.com/easybuilders/easybuild-easyblocks>`_
+* `easybuild-easyconfigs git repository <https://github.com/easybuilders/easybuild-easyconfigs>`_
+* the `main EasyBuild repository <https://github.com/easybuilders/easybuild>`_ mainly hosts *this* EasyBuild documentation
 
 
 In case of installation issues...

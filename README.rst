@@ -1,8 +1,8 @@
 
-.. image:: http://hpcugent.github.io/easybuild/images/easybuild_logo_small.png
+.. image:: http://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
    :align: center
 
-`EasyBuild <https://hpcugent.github.com/easybuild>`_ is a software build
+`EasyBuild <http://easybuilders.github.io/easybuild>`_ is a software build
 and installation framework that allows you to manage (scientific) software
 on High Performance Computing (HPC) systems in an efficient way.
 
@@ -11,10 +11,10 @@ Sources
 
 The EasyBuild sources are spread across different GitHub repositories:
 
-* the `main easybuild repository <https://github.com/hpcugent/easybuild>`_ hosts the documentation and the `easybuild` Python metapackage
-* the `easybuild-framework repository <https://github.com/hpcugent/easybuild-framework>`_ hosts the source code of the EasyBuild `framework`
-* the `easybuild-easyblocks repository <https://github.com/hpcugent/easybuild-easyblocks>`_ hosts `easyblocks`, i.e. implementations of install procedures
-* the `easybuild-easyconfigs repository <https://github.com/hpcugent/easybuild-easyconfigs>`_ hosts `easyconfigs`, i.e. EasyBuild specification files
+* the `main easybuild repository <https://github.com/easybuilders/easybuild>`_ hosts the documentation and the `easybuild` Python metapackage
+* the `easybuild-framework repository <https://github.com/easybuilders/easybuild-framework>`_ hosts the source code of the EasyBuild `framework`
+* the `easybuild-easyblocks repository <https://github.com/easybuilders/easybuild-easyblocks>`_ hosts `easyblocks`, i.e. implementations of install procedures
+* the `easybuild-easyconfigs repository <https://github.com/easybuilders/easybuild-easyconfigs>`_ hosts `easyconfigs`, i.e. EasyBuild specification files
 
 Corresponding Python packages are available via PyPi:
 
@@ -102,8 +102,9 @@ Limited provisions for other Unix-based operating systems (e.g., Mac OS X) are a
 License
 ~~~~~~~
 
-EasyBuild is developed by the `High-Performance Computing team at Ghent
-University <https://ugent.be/hpcugent>`_ together with the members of the EasyBuild community,
+EasyBuild was created by the `High-Performance Computing team at Ghent
+University <https://ugent.be/hpc>`_, is currently maintained by the
+`EasyBuild community <https://github.com/easybuilders>`_,
 and is made available under the GNU General Public License (GPL) version 2.
 
 Acknowledgements

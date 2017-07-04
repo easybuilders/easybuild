@@ -359,7 +359,7 @@ would result in:
 
 
 An example use case of this is building FFTW with different precisions, see the
-`FFTW easyconfig files <https://github.com/hpcugent/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/f/FFTW>`_.
+`FFTW easyconfig files <https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/f/FFTW>`_.
 
 Sanity check
 ~~~~~~~~~~~~

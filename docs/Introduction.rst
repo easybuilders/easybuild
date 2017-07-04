@@ -42,5 +42,5 @@ Some key features of EasyBuild:
 
 Take a look at our HUST'14 workshop paper
 `Modern Scientific Software Management Using EasyBuild and Lmod`
-(`download PDF here <http://hpcugent.github.io/easybuild/files/hust14_paper.pdf>`_)
+(`download PDF here <http://easybuilders.github.io/easybuild/files/hust14_paper.pdf>`_)
 and use that as a reference in case you present academic work mentioning EasyBuild.

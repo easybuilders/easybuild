@@ -8,7 +8,7 @@
 # the Hercules foundation (http://www.herculesstichting.be/in_English)
 # and the Department of Economy, Science and Innovation (EWI) (http://www.ewi-vlaanderen.be/en).
 #
-# http://github.com/hpcugent/easybuild
+# https://github.com/easybuilders/easybuild
 #
 # EasyBuild is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ and installation framework that allows you to manage (scientific) software
 on High Performance Computing (HPC) systems in an efficient way.""",
     license = "GPLv2",
     keywords = "software build building installation installing compilation HPC scientific",
-    url = "http://hpcugent.github.com/easybuild",
+    url = "http://easybuilders.github.io/easybuild",
     long_description = read("README.rst"),
     classifiers = [
         "Development Status :: 5 - Production/Stable",

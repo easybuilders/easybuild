@@ -159,7 +159,7 @@ This can be done as follows (copy-paste the GitHub token at the ``Password:`` pr
     >>> exit()
 
 More details about obtaining and installing a GitHub token in your keyring are available at
-https://github.com/hpcugent/easybuild/wiki/Review-process-for-contributions#setting-things-up.
+https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#setting-things-up.
 
 Running
 ~~~~~~~
@@ -172,7 +172,7 @@ To run a full unit test suite, simply run the respective ``suite`` Python module
 
 For the EasyBuild framework unit tests, each of the test subgroups can be run separately via a dedicated Python module
 other than ``suite``, to focus on testing a particular aspect. See
-https://github.com/hpcugent/easybuild-framework/tree/master/test/framework for an overview of the available Python
+https://github.com/easybuilders/easybuild-framework/tree/master/test/framework for an overview of the available Python
 modules corresponding to subgroups of tests (note: ``__init__.py`` and ``utilities.py`` are *not* such modules).
 
 For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool::

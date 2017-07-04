@@ -152,7 +152,7 @@ Installation of latest release from GitHub
 To install the latest (stable) release of an EasyBuild package directly
 from GitHub, use the following command::
 
-    pip install --install-option "--prefix=$HOME/EasyBuild" http://github.com/hpcugent/easybuild-framework/archive/master.tar.gz
+    pip install --install-option "--prefix=$HOME/EasyBuild" https://github.com/easybuilders/easybuild-framework/archive/master.tar.gz
 
 Again, the order in which the EasyBuild packages are installed is
 important to have full control over the installation process, see
@@ -167,7 +167,7 @@ from the previous section to install from the ``develop`` branch (or
 any of the available feature branches in any
 EasyBuild repository for that matter)::
 
-    pip install --install-option "--prefix=$HOME/EasyBuild" http://github.com/hpcugent/easybuild-framework/archive/develop.tar.gz
+    pip install --install-option "--prefix=$HOME/EasyBuild" https://github.com/easybuilders/easybuild-framework/archive/develop.tar.gz
 
 .. note::
   You should use this only if you are interested in developing for EasyBuild.
@@ -184,17 +184,17 @@ of EasyBuild using the ``install-EasyBuild-develop.sh`` script.
 
 This script will clone the different EasyBuild repositories from GitHub:
 
- * `easybuild <https://github.com/hpcugent/easybuild>`_:
+ * `easybuild <https://github.com/easybuilders/easybuild>`_:
    EasyBuild metapackage & documentation sources for http://easybuild.readthedocs.org
  * `vsc-base <https://github.com/hpcugent/vsc-base>`_:
    dependency for EasyBuild framework (logging, command line interface, ...)
- * `easybuild-framework <https://github.com/hpcugent/easybuild-framework>`_:
+ * `easybuild-framework <https://github.com/easybuilders/easybuild-framework>`_:
    EasyBuild framework
- * `easybuild-easyblocks <https://github.com/hpcugent/easybuild-easyblocks>`_:
+ * `easybuild-easyblocks <https://github.com/easybuilders/easybuild-easyblocks>`_:
    collection of easyblocks
- * `easybuild-easyconfigs <https://github.com/hpcugent/easybuild-easyconfigs>`_:
+ * `easybuild-easyconfigs <https://github.com/easybuilders/easybuild-easyconfigs>`_:
    collection of easyconfig files
- * `easybuild-wiki <https://github.com/hpcugent/easybuild-wiki>`_:
+ * `easybuild-wiki <https://github.com/easybuilders/easybuild-wiki>`_:
    EasyBuild wiki pages
 
 It can be used as follows::
@@ -202,7 +202,7 @@ It can be used as follows::
     # pick an installation prefix (adjust as you like)
     INSTALL_PREFIX=$(mktemp -d $HOME/EasyBuild-XXXXXX)
     # download script
-    curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
+    curl -O https://raw.githubusercontent.com/easybuilders/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
     # run downloaded script, specifying *your* GitHub username and the installation prefix
     bash install-EasyBuild-develop.sh GITHUB_USERNAME $INSTALL_PREFIX
     # update $MODULEPATH via 'module use', and load the module
