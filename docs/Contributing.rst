@@ -611,7 +611,7 @@ Test reports for easyconfig contributions
 
 For easyconfig contributions, an accompanying **test report must be submitted** to confirm that the touched easyconfig files (still) work as expected.
 
-We recommend that you submit a test report for your own easyconfig pull requests.
+We recommended that you submit a test report for your own easyconfig pull requests.
 Other people can also submit test reports to confirm that your contribution works as expected on their system(s).
 
 With EasyBuild being properly configured (see :ref:`github_configuration`), this should be as simple as running ``eb --from-pr <PR#> --upload-test-report --force --robot``.
