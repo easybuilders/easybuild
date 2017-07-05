@@ -72,7 +72,7 @@ For each of the available easyconfig files, the following aspects are tested:
 * creating an ``EasyBlock`` instance using the parsed easyconfig, to check whether mandatory easyconfig parameters
   are defined
 * ensuring that all required patch files are available (right next to the easyconfig file)
-* making sure that the specified sanity check paths adher to the requirements, i.e. only (and both) the ``files``/``dirs``
+* making sure that the specified sanity check paths adhere to the requirements, i.e. only (and both) the ``files``/``dirs``
   keys are listed, with the value for either one being non-empty
 * checking for the use of deprecated (or no longer supported) functionality
 * verifying whether ``eb --check-style`` on the easyconfig file passes

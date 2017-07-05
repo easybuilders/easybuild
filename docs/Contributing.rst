@@ -668,9 +668,9 @@ does require a bit of practice because of the density of the provided informatio
 Test reports for easyconfig contributions (``upload-test-report``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For easyconfig contributions, one ore more accompanying **test reports must be submitted** to confirm that the added and/or changed easyconfig files (still) work as expected.
+For easyconfig contributions, one or more accompanying **test reports must be submitted** to confirm that the added and/or changed easyconfig files (still) work as expected.
 
-We recommended that you submit a test report for your own easyconfig pull requests.
+We recommend that you submit a test report for your own easyconfig pull requests.
 Other people can also submit test reports to confirm that your contribution works as expected on their system(s).
 
 With EasyBuild being properly configured (see :ref:`github_configuration`), this should be as simple as running ``eb --from-pr <PR#> --upload-test-report --force --robot``.
