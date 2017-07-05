@@ -1,8 +1,8 @@
 
-.. image:: http://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
+.. image:: https://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
    :align: center
 
-`EasyBuild <http://easybuilders.github.io/easybuild>`_ is a software build
+`EasyBuild <https://easybuilders.github.io/easybuild>`_ is a software build
 and installation framework that allows you to manage (scientific) software
 on High Performance Computing (HPC) systems in an efficient way.
 

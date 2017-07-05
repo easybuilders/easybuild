@@ -1,6 +1,6 @@
 CLEAR
 ## EasyBuild is a build and installation framework for (scientific) software on HPC systems
-## http://easybuilders.github.io/easybuild/ - http://easybuild.readthedocs.io/
+## https://easybuilders.github.io/easybuild/ - http://easybuild.readthedocs.io/
 
 ## author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be
 ## date: Oct 8th 2016 (EasyBuild v2.9.0)
