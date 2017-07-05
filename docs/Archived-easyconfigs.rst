@@ -18,7 +18,7 @@ Once in a blue moon, we review the list of toolchains (& versions) that are incl
 
 Easyconfig files that use toolchains that become *deprecated* are then moved to the *easyconfigs archive*,
 i.e. the ``__archive__`` subdirectory in the ``easybuild-easyconfigs`` repository
-(see https://github.com/hpcugent/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/__archive__).
+(see https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/__archive__).
 
 .. _archived_easyconfigs_deprecated_toolchains_what:
 

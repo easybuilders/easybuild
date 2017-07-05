@@ -9,7 +9,7 @@ Writing easyconfig files in YAML syntax (``.yeb`` format) **[IN DEVELOPMENT]**
     see also :ref:`experimental_features` .
 
     An up-to-date overview of current progress on support for ``.yeb`` easyconfigs is available at
-    https://github.com/hpcugent/easybuild-framework/issues/1407.
+    https://github.com/easybuilders/easybuild-framework/issues/1407.
 
 Useful links:
 

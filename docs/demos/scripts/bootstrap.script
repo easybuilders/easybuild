@@ -1,6 +1,6 @@
 CLEAR
 ## EasyBuild is a build and installation framework for (scientific) software on HPC systems
-## http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/
+## https://easybuilders.github.io/easybuild/ - http://easybuild.readthedocs.io/
 
 ## author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be
 ## date: Oct 11th 2016 (EasyBuild v2.9.0)
@@ -58,7 +58,7 @@ CLEAR
 ### STEP 1: download EasyBuild bootstrap script
 ###
 
-curl -O COPYPASTEhttps://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+curl -O COPYPASTEhttps://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
 
 python bootTABstrap_eb.py --help
 

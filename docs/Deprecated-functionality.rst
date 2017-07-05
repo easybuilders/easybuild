@@ -115,7 +115,7 @@ supported) has been deprecated in favor of the superior ``copy_dir`` function in
 * *alternatives*: **use** ``error_on_missing_easyblock`` **named parameter instead**
 
 The ``get_easyblock_class`` implementation was cleaned up to remove the support for falling back to the
-generic ``ConfigureMake`` easyblock in EasyBuild v3.2.0 (see https://github.com/hpcugent/easybuild-framework/pull/2178),
+generic ``ConfigureMake`` easyblock in EasyBuild v3.2.0 (see https://github.com/easybuilders/easybuild-framework/pull/2178),
 following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBuild v2.0.
 
 The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,

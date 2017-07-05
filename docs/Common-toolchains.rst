@@ -28,7 +28,7 @@ The idea is to compose and maintain a limited set of specific compiler toolchain
 and try and convince many HPC sites to employ these toolchains.
 This helps in assuring stability of these toolchains w.r.t. which software can be built (correctly) with them,
 since they get significantly more testing. In addition, the expectation/hope is that more easyconfigs are
-contributed back to the central easyconfigs repository (https://github.com/hpcugent/easybuild-easyconfigs),
+contributed back to the central easyconfigs repository (https://github.com/easybuilders/easybuild-easyconfigs),
 resulting in a wide range of readily available easyconfig files using the common toolchains.
 
 The intention is to revise/update the definitions of the common toolchains regularly

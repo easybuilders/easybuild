@@ -54,11 +54,11 @@ Reporting bugs
 If you run into unexpected problems when using EasyBuild, please **open a bug report**
 in the issue tracker of the relevant GitHub repository:
 
-* https://github.com/hpcugent/easybuild-framework/issues: for general problems with ``eb``, the EasyBuild framework, etc.
-* https://github.com/hpcugent/easybuild-easyblocks/issues: for problems specific to a particular (generic or software-specific) easyblock, etc.
-* https://github.com/hpcugent/easybuild-easyconfigs/issues: for problems specific to a particular software package,
+* https://github.com/easybuilders/easybuild-framework/issues: for general problems with ``eb``, the EasyBuild framework, etc.
+* https://github.com/easybuilders/easybuild-easyblocks/issues: for problems specific to a particular (generic or software-specific) easyblock, etc.
+* https://github.com/easybuilders/easybuild-easyconfigs/issues: for problems specific to a particular software package,
   e.g., with building and installing a particular version of that software, or when using a particular toolchain, etc.
-* https://github.com/hpcugent/easybuild/issues: for problems with the EasyBuild documentation, etc.
+* https://github.com/easybuilders/easybuild/issues: for problems with the EasyBuild documentation, etc.
 
 Please try and provide all relevant information, which may include:
 
@@ -102,7 +102,7 @@ Contributing easyconfig files
 
 Please **contribute easyconfig files** that are not included yet in
 (the ``develop`` branch of) the ``easybuild-easyconfigs`` GitHub repository at
-https://github.com/hpcugent/easybuild-easyconfigs.
+https://github.com/easybuilders/easybuild-easyconfigs.
 
 This includes easyconfigs for software that is not supported yet by EasyBuild,
 as well as updates to existing easyconfigs (e.g., version updates, using a
@@ -142,7 +142,7 @@ documentation or documenting features that are not covered yet.
 
 To contribute to the documentation hosted at http://easybuild.readthedocs.io/,
 you should open a pull request to the ``develop`` branch of the
-main EasyBuild repository at https://github.com/hpcugent/easybuild; see the ``docs`` subdirectory.
+main EasyBuild repository at https://github.com/easybuilders/easybuild; see the ``docs`` subdirectory.
 
 A particularly useful tool is http://rst.ninjs.org/, which can be used to
 preview how the documentation written in ``reStructuredText`` format
@@ -157,7 +157,7 @@ Joining the conversation
 
 Last but not least, you can actively **join the conversation** that arise on the EasyBuild
 mailing list, the ``#easybuild`` IRC channel and during the bi-weekly EasyBuild
-conference calls (see https://github.com/hpcugent/easybuild/wiki/Conference-calls).
+conference calls (see https://github.com/easybuilders/easybuild/wiki/Conference-calls).
 
 Engage with the EasyBuild community, and help steer EasyBuild development by participating
 in the conversations regarding a variety of topics related to building and installing (scientific) software.
@@ -172,10 +172,10 @@ To contribute to the EasyBuild framework, easyblocks, easyconfig files
 or the EasyBuild documentation, you will need to open a **pull request** to the
 corresponding GitHub repository:
 
-* EasyBuild framework: https://github.com/hpcugent/easybuild-framework
-* easyblocks: https://github.com/hpcugent/easybuild-easyblocks
-* easyconfigs: https://github.com/hpcugent/easybuild-easyconfigs
-* documentation: https://github.com/hpcugent/easybuild (see ``docs`` subdirectory)
+* EasyBuild framework: https://github.com/easybuilders/easybuild-framework
+* easyblocks: https://github.com/easybuilders/easybuild-easyblocks
+* easyconfigs: https://github.com/easybuilders/easybuild-easyconfigs
+* documentation: https://github.com/easybuilders/easybuild (see ``docs`` subdirectory)
 
 Doing this the traditional way requires some knowledge about using ``git``
 (i.e. creating commits, using branches, pushing to and pulling from remote
@@ -212,10 +212,10 @@ Forking the repository
 ++++++++++++++++++++++
 
 First, create your own *fork* of the repository in your GitHub account using the
-'``Fork``' button on the top right at https://github.com/hpcugent/easybuild-framework.
+'``Fork``' button on the top right at https://github.com/easybuilders/easybuild-framework.
 
 This will create a 'copy' of the ``easybuild-framework`` repository
-owned by the ``hpcugent`` GitHub organisation to your own personal GitHub account.
+owned by the ``easybuilders`` GitHub organisation to your own personal GitHub account.
 
 You will have to use this fork as a staging area for your work,
 to prepare your contributions before creating the actual pull requests.
@@ -257,16 +257,16 @@ Keeping the ``develop`` branch in sync
 ######################################
 
 It is important to keep the ``develop`` branch in your working copy in sync
-with the upstream repository in the GitHub ``hpcugent`` organization.
+with the upstream repository in the GitHub ``easybuilders`` organization.
 
 For this, you need to add the upstream repository as a '*remote*' repository:
 
 .. code:: shell
 
-  git remote add upstream git@github.com:hpcugent/easybuild-framework.git
+  git remote add upstream git@github.com:easybuilders/easybuild-framework.git
 
 .. note:: '``upstream``' is just a name that you give to the remote the central
-          ``hpcugent`` repository on GitHub; you can modify this to your liking
+          ``easybuilders`` repository on GitHub; you can modify this to your liking
           if desired (but do take that into account for the further instructions if you do so).
 
           For your fork of the repository, a default remote named ``origin`` should

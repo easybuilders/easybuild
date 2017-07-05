@@ -53,7 +53,7 @@ it will not run on a system with an older Intel Nehalem processor.
 One possible workaround for heterogeneous HPC clusters is to build as many copies of the software stack as you have
 processor generations in your cluster, and to configure your system so each compute node uses the right software stack
 matching its processor architecture type.
-Details for one way of doing this, using automounter/autofs are available at http://hpcugent.github.io/easybuild/files/sciCORE-software-management_20150611.pdf .
+Details for one way of doing this, using automounter/autofs are available at https://easybuilders.github.io/easybuild/files/sciCORE-software-management_20150611.pdf .
 
 Another solution is to configure EasyBuild to not optimize for the processor architecture of the build host via
 ``--optarch``, see below.

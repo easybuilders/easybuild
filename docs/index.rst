@@ -6,7 +6,7 @@
 EasyBuild documentation
 =======================
 
-Welcome to the documentation of `EasyBuild <https://hpcugent.github.io/easybuild>`_, a software build and installation framework
+Welcome to the documentation of `EasyBuild <https://easybuilders.github.io/easybuild>`_, a software build and installation framework
 that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
 This documentation is intended for EasyBuild version |version|, and was last rebuilt on |today|.
@@ -118,6 +118,7 @@ Having trouble? We'd like to help!
   or in the EasyBuild Slack channel https://easybuild.slack.com/
   (subscribe via https://easybuild-slack.herokuapp.com)
 * Consider participating in an EasyBuild `conference call <https://github.com/hpcugent/easybuild/wiki/Conference-calls>`_
+* Consider participating to an EasyBuild `conference call <https://github.com/easybuilders/easybuild/wiki/Conference-calls>`_
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 * Report issues with EasyBuild easyblocks in our `easyblocks ticket tracker`_.
 * Report issues with EasyBuild easyconfigs in our `easyconfigs ticket tracker`_.
@@ -127,10 +128,10 @@ Having trouble? We'd like to help!
 .. _subscribe: https://lists.ugent.be/wws/subscribe/easybuild
 .. _#easybuild IRC channel: irc://irc.freenode.net/easybuild
 .. _IRC logs: http://www.google.com/
-.. _framework ticket tracker: https://github.com/hpcugent/easybuild-framework/issues
-.. _easyblocks ticket tracker: https://github.com/hpcugent/easybuild-easyblocks/issues
-.. _easyconfigs ticket tracker: https://github.com/hpcugent/easybuild-easyconfigs/issues
-.. _general ticket tracker: https://github.com/hpcugent/easybuild/issues
+.. _framework ticket tracker: https://github.com/easybuilders/easybuild-framework/issues
+.. _easyblocks ticket tracker: https://github.com/easybuilders/easybuild-easyblocks/issues
+.. _easyconfigs ticket tracker: https://github.com/easybuilders/easybuild-easyconfigs/issues
+.. _general ticket tracker: https://github.com/easybuilders/easybuild/issues
 
 -------
 
