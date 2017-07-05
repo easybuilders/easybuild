@@ -115,7 +115,7 @@ Having trouble? We'd like to help!
 * Search for information in the `archives`_ of the easybuild@lists.ugent.be mailing list or `subscribe`_ to post a question.
 * Did you try ``eb --help``?
 * Ask a question in the `#easybuild IRC channel`_ on the Freenode network
-* Consider participating to an EasyBuild `conference call <https://github.com/easybuilders/easybuild/wiki/Conference-calls>`_
+* Consider participating in an EasyBuild `conference call <https://github.com/easybuilders/easybuild/wiki/Conference-calls>`_
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 * Report issues with EasyBuild easyblocks in our `easyblocks ticket tracker`_.
 * Report issues with EasyBuild easyconfigs in our `easyconfigs ticket tracker`_.
