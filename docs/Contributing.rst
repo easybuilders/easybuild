@@ -181,8 +181,8 @@ Doing this the traditional way requires some knowledge about using ``git``
 (i.e. creating commits, using branches, pushing to and pulling from remote
 Git repositories, etc.), and being familiar with GitHub.
 
-However, this can be largely circumvented by using the GitHub integration
-provided by EasyBuild, see :ref:`integration_with_github`.
+**However, this can be largely circumvented by using the GitHub integration
+provided by EasyBuild, see :ref:`integration_with_github`.**
 
 
 .. _contributing_pull_request_setup:
@@ -298,7 +298,8 @@ To open a pull request for your contribution, you must follow these steps:
 i. :ref:`contributing_creating_pull_requests_branch`
 ii. :ref:`contributing_creating_pull_requests_commit`
 iii. :ref:`contributing_creating_pull_requests_push`
-iv. :ref:`contributing_creating_pull_requests_open_pr`
+iv. :ref:`contributing_creating_pull_requests_pr_title`
+v. :ref:`contributing_creating_pull_requests_open_pr`
 
 
 .. _contributing_creating_pull_requests_branch:
@@ -390,6 +391,30 @@ For example, to push the ``mybranch`` branch to your fork of the GitHub reposito
 Note: this will make your work public.
 
 
+.. _contributing_creating_pull_requests_pr_title:
+
+Pull request title & description
+++++++++++++++++++++++++++++++++
+
+Please use a descriptive (short) title for your pull requests, and clarify (if needed) in the pull request description.
+
+If any other pull requests are required, refer to them in the description using ``#<PR number>`` (only for pull requests
+to the same repository), or by copy-pasting the URL to the pull request.
+
+For pull requests to the easyconfig repository, we recommend using this format for the pull request title
+when contributing new easyconfig files::
+
+  {<moduleclass>}[<toolchain>] <software name> <software version> <extra info>
+
+For example:
+
+* ``{tools}[dummy] EasyBuild v3.2.1``
+* ``{math}[intel/2017a] numpy 1.13.0 w/ Python 2.7.13``
+* ``{math,numlib}[foss/2017a] METIS v5.1.0, ParMETIS v4.0.3, SuiteSparse v4.5.5, ...``
+
+If you are opening a work-in-progress pull request, for example to solicit feedback, tag it using ``(WIP)``.
+in the pull request title.
+
 .. _contributing_creating_pull_requests_open_pr:
 
 Opening the pull request
@@ -450,7 +475,11 @@ Merging of pull requests
 
 Once your pull request has been given the green light by Travis and one or more
 people reviewing have approved the changes, it can be merged into
-the ``develop`` branch. **This can only be done by a member of the EasyBuild admin team.**
+the ``develop`` branch.
+
+**This can only be done by a member of the EasyBuild maintainers team.
+Only pull requests that meet the requirements are eligible for merging,
+see :ref:`contributing_review_process_pr_requirements`.**
 
 Merging a pull request usually implies that the changes will be part of the next EasyBuild release.
 
@@ -463,20 +492,45 @@ Review process for contributions
 Each contribution is thoroughly reviewed and tested before it gets merged in.
 Some aspects of this are automated, others require human intervention.
 
-**Only contributions that fulfill the requirements listed below are eligible to be merged**,
-so it is important to be aware of all of the aspects of the review process.
+.. _contributing_review_process_pr_requirements:
 
-* unit tests must still pass; see :ref:`contributing_review_process_travis`
+Requirements for pull requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  * more tests must be added when appropriate; see :ref:`contributing_review_process_adding_tests`
+**Only pull requests (PRs) that fullfil these requirements are eligible to be merged:**
 
-* backward compatibility should be retained; see :ref:`contributing_review_process_backward_compatibility`
-* code style must be kept consistent; see :ref:`contributing_review_process_code_style`
+(i) *the PR must target the* ``develop`` *branch of the repository*; see :ref:`contributing_review_process_develop_branch`
 
-  * easyconfigs should be kept consistent across versions & toolchains; see :ref:`contributing_review_process_review_pr`
+(ii) *the test suite must (still) pass*, i.e. Travis *must* give a green light; see :ref:`contributing_review_process_travis`
 
-* test reports must be submitted for easyconfig contributions; see :ref:`contributing_review_process_test_reports`
+  * *tests should be added or enhanced when appropriate*; see :ref:`contributing_review_process_adding_tests`,
+    especially for PRs to the ``easybuild-framework`` repository
 
+(iii) *backward compatibility should be retained*; see :ref:`contributing_review_process_backward_compatibility`
+(iv) *code style must be kept consistent*; see :ref:`contributing_review_process_code_style`
+
+  * *easyconfigs should be kept consistent across versions & toolchains*; see :ref:`contributing_review_process_review_pr`
+
+(v) *(successful) test reports must be submitted for easyconfig PRs*; see :ref:`contributing_review_process_test_reports`
+
+(vi) *the PR is approved by one or more maintainers of the repository*; see :ref:`maintainers`
+
+(vii) *the PR should be merged by one of the maintainers, other than the author of the PR*; see :ref:`contributing_review_process_do_not_merge_your_own_prs`
+
+.. _contributing_review_process_develop_branch:
+
+``develop`` branch
+~~~~~~~~~~~~~~~~~~
+
+**Pull requests are only merged in the** '``develop``' **branch** of the EasyBuild repositories,
+which contains the changes that will be included in the next EasyBuild release.
+
+The '``master``' branch provides the latest stable release of EasyBuild at all times.
+Only the EasyBuild release manager should issue a pull request to the EasyBuild '``master``' branch,
+when preparing a new EasyBuild release.
+
+Occasionally, an additional version branch (e.g. '``3.3.x``') may be introduced temporarily,
+in case an intermittent bugfix release is being worked on.
 
 .. _contributing_review_process_travis:
 
@@ -488,9 +542,11 @@ Each pull request is tested automatically by Travis and the test result is repor
 **Only pull requests that have been tested and approved by Travis are
 eligible for being merged!**
 
-Note that Travis will only run the *unit test suite* for that particular repository.
+Note that Travis will only run the *test suite* for that particular repository.
 That is, for easyconfig contributions it does *not* include
 actually building and installing software.
+
+For more information on the test suites, see :ref:`unit_tests`.
 
 .. _contributing_review_process_adding_tests:
 
@@ -550,6 +606,9 @@ that mostly matches the established PEP8 coding style for Python (since
 easyconfigs are written in Python syntax). However, also the grouping and
 ordering of easyconfig parameters is a part of the 'code' style we maintain.
 
+An automated (partial) style check on easyconfig files can be performed via ``eb --check-style``,
+and is also a part of the test suite run by Travis for easyconfig PRs.
+
 
 .. _contributing_review_process_review_pr:
 
@@ -606,14 +665,24 @@ does require a bit of practice because of the density of the provided informatio
 
 .. _contributing_review_process_test_reports:
 
-Test reports for easyconfig contributions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Test reports for easyconfig contributions (``upload-test-report``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For easyconfig contributions, an accompanying **test report must be submitted** to confirm that the touched easyconfig files (still) work as expected.
+For easyconfig contributions, one or more accompanying **test reports must be submitted** to confirm that the added and/or changed easyconfig files (still) work as expected.
 
-We recommended that you submit a test report for your own easyconfig pull requests.
+We recommend that you submit a test report for your own easyconfig pull requests.
 Other people can also submit test reports to confirm that your contribution works as expected on their system(s).
 
 With EasyBuild being properly configured (see :ref:`github_configuration`), this should be as simple as running ``eb --from-pr <PR#> --upload-test-report --force --robot``.
 
 See :ref:`github_upload_test_report` for more information.
+
+
+.. _contributing_review_process_do_not_merge_your_own_prs:
+
+Pull requests are merged by a maintainer other than the author
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**A pull request should never be merged by its author.**
+
+This policy is maintained in order to ensure a *"two-pairs-of-eyes"* review process of all contributions.
