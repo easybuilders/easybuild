@@ -151,6 +151,6 @@ https://github.com/easybuilders/easybuild-easyconfigs
 
   * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
 
-* **David Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
+* **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
 
   * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
