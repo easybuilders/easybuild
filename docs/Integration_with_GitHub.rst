@@ -463,6 +463,74 @@ The addition restrictions are the following (also considered in order):
 * matching toolchain name (any versionsuffix, toolchain version)
 * no extra requirements (any versionsuffix, toolchain name/version)
 
+
+.. _github_merge_pr:
+
+Merging easyconfig pull requests (``--merge-pr``)
+-------------------------------------------------
+
+*(supported since EasyBuild v3.3.1)*
+
+:ref:`maintainers` need to take the :ref:`contributing_review_process_pr_requirements` into account.
+
+They can merge a pull request to the ``easybuild-easyconfigs`` repository via ``eb --merge-pr``,
+which will first verify whether the pull request meets the prescribed requirements
+(at least the ones that can be verified automatically).
+
+For example, for a pull request that is not eligible for merging yet::
+
+    $ eb --merge-pr 4725
+    == temporary log file in case of crash /tmp/eb-ba7rVp/easybuild-fBfcwN.log
+
+    easybuilders/easybuild-easyconfigs PR #4725 was submitted by vanzod, you are using GitHub account 'example'
+
+    Checking eligibility of easybuilders/easybuild-easyconfigs PR #4725 for merging...
+    * targets develop branch: OK
+    * test suite passes: FAILED => not eligible for merging!
+    * last test report is successful: (no test reports found) => not eligible for merging!
+    * approved review: MISSING => not eligible for merging!
+    * milestone is set: no milestone found => not eligible for merging!
+
+    WARNING: Review indicates this PR should not be merged (use -f/--force to do so anyway)
+
+
+When a PR is considered eligible for merging, EasyBuild will go ahead and merge it::
+
+
+    $ eb --merge-pr 4829
+    == temporary log file in case of crash /tmp/eb-F9a3oB/easybuild-3B2wdq.log
+
+    easybuilders/easybuild-easyconfigs PR #4829 was submitted by SethosII, you are using GitHub account 'example'
+
+    Checking eligibility of easybuilders/easybuild-easyconfigs PR #4829 for merging...
+    * targets develop branch: OK
+    * test suite passes: OK
+    * last test report is successful: OK
+    * approved review: OK (by boegel)
+    * milestone is set: OK (3.3.1)
+
+    Review OK, merging pull request!
+
+    Adding comment to easybuild-easyconfigs issue #4829: 'Going in, thanks @SethosII!'
+    Merged easybuilders/easybuild-easyconfigs pull request #4829
+
+
+.. note:: ``eb --merge-pr`` can also be run in dry run mode, by also using one of the following options:
+          ``--dry-run``, ``-D``, ``--extended-dry-run``, ``-x``.
+
+          This results in the same checks being performed but skips the actual merging of the pull request,
+          resulting in messages like::
+
+            $ eb --merge-pr 4829 --dry-run
+
+            ...
+
+            Review OK, merging pull request!
+
+            [DRY RUN] Adding comment to easybuild-easyconfigs issue #4829: 'Going in, thanks @SethosII!'
+            [DRY RUN] Merged easybuilders/easybuild-easyconfigs pull request #4829
+
+
 .. _github_new_update_pr:
 
 Submitting new and updating pull requests (``--new-pr``, ``--update-pr``)
