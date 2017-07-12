@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170712.01** (`July 12th 2017`): update release notes for EasyBuild v3.3.1 (see :ref:`release_notes_eb331`)
 * **release 20170708.01** (`July 8th 2017`): add documentation on :ref:`github_merge_pr`
 * **release 20170705.01** (`July 5th 2017`): clarify :ref:`contributing_review_process_pr_requirements`, add page listing :ref:`maintainers`
 * **release 20170626.01** (`June 26th 2017`): update release notes for EasyBuild v3.3.0 (see :ref:`release_notes_eb330`)
