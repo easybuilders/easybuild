@@ -212,7 +212,6 @@
       * ConfigureMakePythonPackage
       * VersionIndependentPythonPackage
 
-        * VersionIndependendPythonPackage
         * VSCPythonPackage
 
 
@@ -319,7 +318,6 @@
       * ConfigureMakePythonPackage
       * VersionIndependentPythonPackage
 
-        * VersionIndependendPythonPackage
         * VSCPythonPackage
 
 
