@@ -3,14 +3,78 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,256** different software packages,
-using 25 different (compiler) toolchains. It contains 187 software-specific easyblocks and 30 generic easyblocks,
-alongside 7,247 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **1,262** different software packages,
+using 25 different (compiler) toolchains. It contains 187 software-specific easyblocks and 29 generic easyblocks,
+alongside 7,313 easyconfig files.
+
+.. _release_notes_eb331:
+
+v3.3.1 (July 12th 2017)
+-----------------------
+
+bugfix/update release
+
+**framework**
+
+* various enhancements, including:
+
+  * add support for '``allow_prepend_abs_path``' easyconfig parameter (`#2254 <https://github.com/easybuilders/easybuild-framework/pull/2254>`_)
+  * support for ``--merge-pr`` (`#2266 <https://github.com/easybuilders/easybuild-framework/pull/2266>`_)
+
+* various bug fixes, including:
+
+  * resolve symlinks to location of '``eb``' in ``get_paths_for`` (`#2248 <https://github.com/easybuilders/easybuild-framework/pull/2248>`_)
+  * fall back to checking location relative to '``eb``' location in ``find_eb_script`` (`#2249 <https://github.com/easybuilders/easybuild-framework/pull/2249>`_)
+  * respect ``--suffix-modules-path`` value for user-specific module path extensions (`#2250 <https://github.com/easybuilders/easybuild-framework/pull/2250>`_)
+  * update EasyBuild bootstrap script to download ``distribute`` tarball from http://easybuilders.github.io/easybuild/files (`#2256 <https://github.com/easybuilders/easybuild-framework/pull/2256>`_)
+  * fix default target GitHub account/organisation for ``--new-pr`` & co + fix tests that got broken by migration to github.com/easybuilders (`#2258 <https://github.com/easybuilders/easybuild-framework/pull/2258>`_)
+  * fix checking for new easyconfigs in ``copy_easyconfigs``, pick up specified commit message as PR title if none was provided (`#2259 <https://github.com/easybuilders/easybuild-framework/pull/2259>`_)
+  * get rid of references to ``hpcugent`` after move to github.com/easybuilders (`#2261 <https://github.com/easybuilders/easybuild-framework/pull/2261>`_)
+  * automatically enable ``--ignore-osdeps`` under ``--new-pr`` and ``--update-pr`` (`#2262 <https://github.com/easybuilders/easybuild-framework/pull/2262>`_)
+
+**easyblocks**
+
+* minor enhancements, including:
+
+  * enhance HDF5 easyblock: define ``$HDF5_DIR`` & include ``-DMPICH_IGNORE_CXX_SEEK`` in ``$CXXFLAGS`` (`#1200 <https://github.com/easybuilders/easybuild-easyblocks/pull/1200>`_)
+  * consistently pass down (named) arguments in ``prepare_step``, and check for it in the tests (`#1202 <https://github.com/easybuilders/easybuild-easyblocks/pull/1202>`_)
+  * remove no longer supported ``VersionIndependentPythonPackage`` generic easyblock (`#1202 <https://github.com/easybuilders/easybuild-easyblocks/pull/1202>`_)
+  * update ABAQUS easyblock for recent versions, incl. support for installing hotfixes (`#1203 <https://github.com/easybuilders/easybuild-easyblocks/pull/1203>`_)
+  * get rid of references to '``hpcugent``' organisation after move to github.com/easybuilders (`#1206 <https://github.com/easybuilders/easybuild-easyblocks/pull/1206>`_)
+  * make Boost easyblock fully aware of ``(pre)configopts``, ``(pre)buildopts`` and ``(pre)installopts`` (`#1207 <https://github.com/easybuilders/easybuild-easyblocks/pull/1207>`_)
+  * drop check for '``ipython``' in sanity check of Anaconda easyblock, to also support Miniconda (`#1210 <https://github.com/easybuilders/easybuild-easyblocks/pull/1210>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 6 new software packages:
+
+  * FastME (`#4811 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4811>`_), geopy (`#4821 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4821>`_), Miniconda2 (`#4841 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4841>`_), ngmlr (`#4818 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4818>`_), OpenCoarrays (`#4799 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4799>`_), Seurat (`#4832 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4832>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * ABAQUS 2017, GCC(core) 6.4.0, Keras 2.0.5, NCBI-Toolkit 18.0.0, numpy 1.13.0, Tensorflow 1.2.0
+
+* minor enhancements, including:
+
+  * add ``SVG`` and ``Statistics::Basic`` to recent Perl versions (`#4796 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4796>`_)
+  * remove ``buildopts`` from HDF5 easyconfigs, taken care of by updated HDF5 easyblock now (`#4779 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4779>`_)
+  * include ``joblib`` as extension in recent Python easyconfigs (`#4805 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4805>`_)
+  * changed moduleclass in mpi4py to better reflect what it is and to not confuse HMNS (`#4807 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4807>`_)
+  * get rid of references to '``hpcugent``' organisation after move to github.com/easybuilders (`#4815 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4815>`_, `#4837 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4837>`_)
+  * add ``Rtsne`` as extension to R 3.4.0 (`#4831 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4831>`_)
+
+* various bug fixes, including:
+
+  * use ``PYPI_SOURCE`` as source URL in Tensorflow easyconfigs (`#4786 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4786>`_)
+  * fix ``homepage`` for skewer (`#4791 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4791>`_)
+  * sync/fix ``source_urls`` & ``homepage`` in HDF5 easyconfigs (`#4800 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4800>`_)
+  * fix ``ubsan`` error blocking build of GCCcore 6.1.0, 6.2.0, 6.3.0 with system GCC 7.1 (`#4813 <https://github.com/easybuilders/easybuild-easyconfigs/pull/4813>`_)
+
 
 .. _release_notes_eb330:
 
 v3.3.0 (June 26th 2017)
-----------------------
+-----------------------
 
 feature release
 
