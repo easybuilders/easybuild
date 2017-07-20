@@ -191,6 +191,18 @@ Example usage:
    $ ls -l /home/example/.local/modules/all/GCC/4.8.2
    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
 
+While regenerating existing module files, one might want to preserve the old modules to compare and assess that the
+changes matches the expectations. ``--backup-modules`` does exactly that. This option just works when combined with
+``--module-only``, and its specific behaviour depends on the module syntax used:
+
+* When using TCL modules, the backup is hidden with a leading dot, and has a ``.bck`` extension. The leading dot is
+  necessary to avoid being displayed as a normal module.
+* When using Lua modules, the backup has a ``.bck`` extension, but no leading dot, since the extension prevents Lmod
+  from showing the module.
+
+For convenience, a warning will be issued when an old module has been found. The warning will include the output of
+``diff -u old_module new_module``, if there is any difference between them.
+
 .. _module_only_additional:
 
 Generating additional module files
