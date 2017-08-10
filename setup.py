@@ -58,8 +58,8 @@ setup(
     version = str(VERSION),
     author = "EasyBuild community",
     author_email = "easybuild@lists.ugent.be",
-    description = """EasyBuild is a software build
-and installation framework that allows you to manage (scientific) software
+    description = """EasyBuild is a software build \
+and installation framework that allows you to manage (scientific) software \
 on High Performance Computing (HPC) systems in an efficient way.""",
     license = "GPLv2",
     keywords = "software build building installation installing compilation HPC scientific",
