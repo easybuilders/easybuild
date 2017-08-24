@@ -262,6 +262,9 @@ Use ``eb --rebuild`` to rebuild a given easyconfig/module.
 .. tip:: Combine ``--rebuild`` with ``--dry-run`` to get a good view on which installations will be rebuilt.
    (cfr. :ref:`get_an_overview`)
 
+.. note:: To create a backup of existing modules that are regenerated when ``--rebuild`` is used,
+          use ``--backup-modules`` (see also :ref:`backup_modules`).
+
 .. _force_option:
 
 Forced reinstallation, ``--force`` / ``-f``
@@ -274,6 +277,9 @@ The behavior of ``--force`` is the same as ``--rebuild`` and ``--ignore-osdeps``
 
 .. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
    (cfr. :ref:`get_an_overview`)
+
+.. note:: To create a backup of existing modules that are regenerated when ``--force`` is used,
+          use ``--backup-modules`` (see also :ref:`backup_modules`).
 
 .. _searching_for_easyconfigs:
 

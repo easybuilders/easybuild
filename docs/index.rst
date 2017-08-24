@@ -55,6 +55,7 @@ Advanced usage topics
     :maxdepth: 2
 
     Archived-easyconfigs
+    Backup_modules
     Common-toolchains
     Contributing
     Controlling_compiler_optimization_flags
