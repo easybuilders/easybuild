@@ -37,8 +37,10 @@ This can be disabled with ``--disable-backup-modules``.
 Example
 ~~~~~~~
 
-Suppose existing modules in both Tcl & Lua syntax are present for bzip2 1.0.6.
-Both are missing an update statement for $PATH because the ``/bin`` subdirectory was missing in the installation,
+Suppose existing modules in both Tcl & Lua syntax are present (``bzip2/1.0.6``).
+
+Both these module files are missing an update statement for $PATH
+because the ``/bin`` subdirectory was missing in the installation,
 for the purpose of this example::
 
     $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
