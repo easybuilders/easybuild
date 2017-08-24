@@ -8,12 +8,9 @@ with the installation procedure being performed by EasyBuild, updating existing 
 or after changing the EasyBuild configuration (e.g., switching to module files in Lua syntax or a different module
 naming scheme).
 
-* :ref:`partial_installation_stop`
-* :ref:`partial_installation_skip`
-* :ref:`module_only`
-
-  * :ref:`module_only_only_regenerate`
-  * :ref:`module_only_additional`
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 .. _partial_installation_stop:
 
@@ -103,6 +100,9 @@ Example usage::
   *always* be skipped when the installation of a particular software package is performed, no matter whether the
   software or corresponding module is already available or not.
 
+.. note:: When ``--skip`` is used, a backup is created for all existing module files that are regenerated.
+          To disable backing up of module files, use ``--disable-backup-modules`` (see also :ref:`backup_modules`).
+
 .. _module_only:
 
 Only (re)generating (additional) module files using ``--module-only``
@@ -126,6 +126,9 @@ Use cases:
 
 * :ref:`module_only_only_regenerate`
 * :ref:`module_only_additional`
+
+.. note:: When ``--module-only`` is used, a backup is created for all existing module files that are regenerated.
+          To disable backing up of module files, use ``--disable-backup-modules`` (see also :ref:`backup_modules`).
 
 .. _module_only_only_regenerate:
 
@@ -190,18 +193,6 @@ Example usage:
 
    $ ls -l /home/example/.local/modules/all/GCC/4.8.2
    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
-
-While regenerating existing module files, one might want to preserve the old modules to compare and assess that the
-changes matches the expectations. ``--backup-modules`` does exactly that. This option just works when combined with
-``--module-only``, and its specific behaviour depends on the module syntax used:
-
-* When using TCL modules, the backup is hidden with a leading dot, and has a ``.bck`` extension. The leading dot is
-  necessary to avoid being displayed as a normal module.
-* When using Lua modules, the backup has a ``.bck`` extension, but no leading dot, since the extension prevents Lmod
-  from showing the module.
-
-For convenience, a warning will be issued when an old module has been found. The warning will include the output of
-``diff -u old_module new_module``, if there is any difference between them.
 
 .. _module_only_additional:
 
