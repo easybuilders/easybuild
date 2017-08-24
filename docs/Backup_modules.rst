@@ -82,12 +82,12 @@ Afterwards, both the newly generated modules and the backups are in place::
 
     $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
     total 32
-    drwxr-xr-x  2 example  example   204 Aug 24 10:23 .
+    drwxr-xr-x  2 example  example   204 Aug 24 10:26 .
     drwxr-xr-x  3 example  example   102 Jul 11 10:18 ..
-    -rw-r--r--  1 example  example  1227 Aug 24 10:23 .1.0.6.bak_20170824102412
+    -rw-r--r--  1 example  example  1227 Aug 24 10:24 .1.0.6.bak_20170824102412
     -rw-r--r--  1 example  example  1256 Jul 11 01:24 1.0.6
     -rw-r--r--  1 example  example  1303 Jul 11 01:26 1.0.6.lua
-    -rw-r--r--  1 example  example  1259 Aug 24 10:23 1.0.6.lua.bak_20170824102603
+    -rw-r--r--  1 example  example  1259 Aug 24 10:26 1.0.6.lua.bak_20170824102603
 
 Cleaning up the backup module files can be done with the following command (for example)::
 
