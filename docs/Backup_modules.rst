@@ -24,8 +24,8 @@ The location of the backed up module file will be printed, as well as a "unified
 
 .. _backup_modules_disable:
 
-Disabling backup of modules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Disabling automatic backup of modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When ``--skip`` or ``--module-only`` is used, backing up of existing modules is enabled automatically.
 
