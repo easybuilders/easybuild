@@ -195,7 +195,7 @@ Using the ``--inject-checksums`` command line option, you can let EasyBuild add 
 in one or more easyconfig files (which is significantly more convenient than doing it manually).
 
 With ``--inject-checksums``, checksums are injected for all sources and patches (if any),
-as well as for all sources & patches of every extension listed in ``exst_list`` (if any).
+as well as for all sources & patches of every extension listed in ``exts_list`` (if any).
 
 If the sources (& patches) are not available yet, EasyBuild will try to download them first; i.e.,
 the ``fetch`` step is run prior to computing & injecting the checksums.
@@ -298,7 +298,7 @@ For example::
 
     In addition, it also doesn't matter whether or not checksums are available for all sources & patches:
     with ``--inject-checksums``, checksums will be added for *all* sources and patches,
-    including for extensions listed in ``exst_list`` (if any).
+    including for extensions listed in ``exts_list`` (if any).
 
 .. _inject_checksums_robot_synergy:
 
