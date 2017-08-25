@@ -268,7 +268,7 @@ Replacing existing checksums
 
 When one or more checksums are already specified, EasyBuild requires the use of ``--force`` together
 with ``--inject-checksums`` to replace those checksums. A clear warning will be printed to notify
-that exsiting checksums will be replaced.
+that existing checksums will be replaced.
 
 For example::
 
@@ -293,7 +293,7 @@ For example::
 
 .. note::
     Any existing checksums are *blindly* replaced when ``--inject-checksums --force`` is used:
-    the existing checksumsthey are *not verified* to be correct as during normal use of EasyBuild
+    the existing checksums are *not verified* to be correct as during normal use of EasyBuild
     (since that would kind of defeat the purpose of ``--inject-checksums``).
 
     In addition, it also doesn't matter whether or not checksums are available for all sources & patches:
