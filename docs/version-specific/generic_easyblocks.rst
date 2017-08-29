@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependendPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -873,32 +873,6 @@ Support for install VSC Python packages.
 
 Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 ----------------------------------------------------------------------
-
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
-
-.. _VersionIndependendPythonPackage:
-
-``VersionIndependendPythonPackage``
-===================================
-
-(derives from :ref:`VersionIndependentPythonPackage`)
-
-No longer supported class for building/installing python packages without requiring a specific python package.
-
-Extra easyconfig parameters specific to ``VersionIndependendPythonPackage`` easyblock
--------------------------------------------------------------------------------------
 
 ========================    ============================================================================================    =============
 easyconfig parameter        description                                                                                     default value

@@ -138,11 +138,12 @@ modules parameters
 ``modextravars``                  Extra environment variables to be added to module file                                                     {}               
 ``usage``                         Usage instructions for the software                                                                        None             
 ``upstream_contacts``             String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)    None             
-``moduleloadnoconflict``          Don't check for conflicts, unload other versions instead                                                   False            
 ``recursive_module_unload``       Recursive unload of all dependencies when unloading module                                                 False            
+``moduleforceunload``             Force unload of all modules when loading the extension                                                     False            
+``moduleloadnoconflict``          Don't check for conflicts, unload other versions instead                                                   False            
 ``moduleclass``                   Module class to be used for this software                                                                  "base"           
 ``modaltsoftname``                Module name to use (rather than using software name                                                        None             
-``moduleforceunload``             Force unload of all modules when loading the extension                                                     False            
+``allow_prepend_abs_path``        Allow specifying absolute paths to prepend in modextrapaths                                                False            
 ``include_modpath_extensions``    Include $MODULEPATH extensions specified by module naming scheme.                                          True             
 ``examples``                      Free-form text with examples on using the software                                                         None             
 ``modaliases``                    Aliases to be defined in module file                                                                       {}               
