@@ -84,6 +84,7 @@ Other topics
     Useful-scripts
     Deprecated-functionality
     Removed-functionality
+    Maintainers
 
 
 Overview of version specific (auto-generated) documentation pages
@@ -117,7 +118,6 @@ Having trouble? We'd like to help!
 * Ask a question in the `#easybuild IRC channel`_ on the Freenode network,
   or in the EasyBuild Slack channel https://easybuild.slack.com/
   (subscribe via https://easybuild-slack.herokuapp.com)
-* Consider participating in an EasyBuild `conference call <https://github.com/hpcugent/easybuild/wiki/Conference-calls>`_
 * Consider participating to an EasyBuild `conference call <https://github.com/easybuilders/easybuild/wiki/Conference-calls>`_
 * Report issues with EasyBuild framework in our `framework ticket tracker`_.
 * Report issues with EasyBuild easyblocks in our `easyblocks ticket tracker`_.
