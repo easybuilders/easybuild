@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170906.01** (`Sept 6th 2017`): document ``--trace`` (see :ref:`trace`)
 * **release 20170824.02** (`Aug 24th 2017`): document ``--inject-checksums`` (see :ref:`inject_checksums`)
 * **release 20170824.01** (`Aug 24th 2017`): document ``--backup-modules`` (see :ref:`backup_modules`)
 * **release 20170712.01** (`July 12th 2017`): update release notes for EasyBuild v3.3.1 (see :ref:`release_notes_eb331`)

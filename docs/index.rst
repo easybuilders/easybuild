@@ -70,6 +70,7 @@ Advanced usage topics
     Partial_installations
     RPATH-support
     Submitting_jobs
+    Tracing_progress
     Using_external_modules
     Detecting_loaded_modules
 
