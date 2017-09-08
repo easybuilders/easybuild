@@ -105,15 +105,15 @@ dependencies parameters
 license parameters
 ------------------
 
-=======================    =================================================================    =================
-**Parameter name**         **Description**                                                      **Default value**
-=======================    =================================================================    =================
-``license_file``           License file for software                                            None             
-``license_server``         License server for software                                          None             
-``group``                  Name of the user group for which the software should be available    None             
-``license_server_port``    Port for license server                                              None             
-``key``                    Key for installing software                                          None             
-=======================    =================================================================    =================
+=======================    ===================================================================================================================================================    =================
+**Parameter name**         **Description**                                                                                                                                        **Default value**
+=======================    ===================================================================================================================================================    =================
+``license_file``           License file for software                                                                                                                              None             
+``license_server``         License server for software                                                                                                                            None             
+``group``                  Name of the user group for which the software should be available; format: string or 2-tuple with group name + custom error for users outside group    None             
+``license_server_port``    Port for license server                                                                                                                                None             
+``key``                    Key for installing software                                                                                                                            None             
+=======================    ===================================================================================================================================================    =================
 
 
 extensions parameters
