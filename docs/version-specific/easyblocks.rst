@@ -85,6 +85,7 @@
       * EB_netCDF
       * EB_OpenBabel
       * EB_PSI
+      * EB_ROOT
       * EB_SuperLU
       * EB_Trilinos
 
@@ -165,7 +166,6 @@
     * EB_QScintilla
     * EB_Qt
     * EB_QuantumESPRESSO
-    * EB_ROOT
     * EB_Ruby
     * EB_SAMtools
     * EB_ScaLAPACK
