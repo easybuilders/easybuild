@@ -5,6 +5,10 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20170910.01** (`Sept 10th 2017`): update release notes for EasyBuild v3.4.0 (see :ref:`release_notes_eb340`)
+* **release 20170906.01** (`Sept 6th 2017`): document ``--trace`` (see :ref:`trace`)
+* **release 20170824.02** (`Aug 24th 2017`): document ``--inject-checksums`` (see :ref:`inject_checksums`)
+* **release 20170824.01** (`Aug 24th 2017`): document ``--backup-modules`` (see :ref:`backup_modules`)
 * **release 20170712.01** (`July 12th 2017`): update release notes for EasyBuild v3.3.1 (see :ref:`release_notes_eb331`)
 * **release 20170708.01** (`July 8th 2017`): add documentation on :ref:`github_merge_pr`
 * **release 20170705.01** (`July 5th 2017`): clarify :ref:`contributing_review_process_pr_requirements`, add page listing :ref:`maintainers`

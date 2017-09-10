@@ -10,9 +10,15 @@ build and install the software and the corresponding module file.
 
 Luckily, the majority of software delivery mechanisms are being designed around
 either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
+In that case, a *generic easyblock* can be leveraged; see :ref:`generic_easyblocks`.
+
 Yet, in case the software build calls for more elaborate steps
 (scientific software never fails to surprise us in this regard),
-an :ref:`easyblock <easyblocks>` may be needed, which is the subject of other part of this documentation.
+a software-specific easyblock may be required; see :ref:`implementing_easyblocks`.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 .. _what_is_an_easyconfig:
 
@@ -180,7 +186,162 @@ of the form ``('<checksum value>', '<checksum type>')``.
 
 The intention is to move towards making ``sha256`` the recommended and default checksum type.
 
+.. _inject_checksums:
 
+Adding or replacing checksums using ``--inject-checksums``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Using the ``--inject-checksums`` command line option, you can let EasyBuild add or update checksums
+in one or more easyconfig files (which is significantly more convenient than doing it manually).
+
+With ``--inject-checksums``, checksums are injected for all sources and patches (if any),
+as well as for all sources & patches of every extension listed in ``exts_list`` (if any).
+
+If the sources (& patches) are not available yet, EasyBuild will try to download them first; i.e.,
+the ``fetch`` step is run prior to computing & injecting the checksums.
+
+A backup is created of every easyconfig file that is touched by ``--inject-checksums``,
+to avoid accidental loss of information. Backups are given an additional extension of the
+form ``.bak_<year><month><day><hour><min><sec>``.
+
+.. note::
+
+    To clean up backup easyconfig files, you can use this one-liner::
+
+        find . -name '*.eb.bak_*' | xargs rm -v
+
+    The ``-v`` option makes ``rm`` print the path of files that are being removed.
+
+    **Do use this with care; just run** ``find . -name '*.eb.bak_*'`` **first in case of doubt!**
+
+Multilple easyconfigs can be specified when using ``--inject-checksums``, they will be processed in sequence.
+In addition, you can also combine ``--inject-checksums`` with ``--robot``, see :ref:`inject_checksums_robot_synergy`.
+
+.. _inject_checksums_adding:
+
+Adding checksums when none are specified yet
+********************************************
+
+If the easyconfig file does not specify any checksums yet, they are simply injected after the
+``sources`` (or ``patches``, if present) specification when ``--inject-checksums`` is used.
+
+For example::
+
+    $ eb bzip2-1.0.6.eb --inject-checksums
+    == temporary log file in case of crash /tmp/eb-Vm6w3e/easybuild-cAVQl6.log
+    == injecting sha256 checksums in /example/bzip2-1.0.6.eb
+    == fetching sources & patches for bzip2-1.0.6.eb...
+    == backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824200906...
+    == injecting sha256 checksums for sources & patches in bzip2-1.0.6.eb...
+    == * bzip2-1.0.6.tar.gz: a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd
+    == Temporary log file(s) /tmp/eb-Vm6w3e/easybuild-cAVQl6.log* have been removed.
+    == Temporary directory /tmp/eb-Vm6w3e has been removed.
+
+The backup easyconfig file can be used to double-check the difference between the original easyconfig file
+and the one produced by ``--inject-checksums``::
+
+    $ diff -u /example/bzip2-1.0.6.eb.bak_20170824200906 /example/bzip2-1.0.6.eb
+    diff --git a//example/bzip2-1.0.6.eb.bak_20170824200906 b/example/bzip2-1.0.6.eb
+    index 46b2debed..2eb73f15a 100644
+    --- a/example/bzip2-1.0.6.eb.bak_20170824200906
+    +++ b/example/bzip2-1.0.6.eb
+    @@ -9,8 +9,9 @@ compressors), whilst being around twice as fast at compression and six times fas
+     toolchain = {'name': 'dummy', 'version': 'dummy'}
+     toolchainopts = {'pic': True}
+
+    -sources = [SOURCE_TAR_GZ]
+     source_urls = ['http://www.bzip.org/%(version)s/']
+    +sources = [SOURCE_TAR_GZ]
+    +checksums = ['a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd']
+
+     buildopts = "CC=gcc CFLAGS='-Wall -Winline -O3 -fPIC -g $(BIGFILES)'"
+
+.. note:: Along with injecting checksums, EasyBuild will also reorder the ``source_urls``, ``sources``
+          and ``patches`` specifications, in that order and if they are present, and include the ``checksums``
+          specification afterwards. This is done to facilitate working towards a uniform style in easyconfig files,
+          which also applies to the order of specified easyconfig parameters.
+
+.. _inject_checksums_replacing:
+
+Replacing existing checksums
+****************************
+
+When one or more checksums are already specified, EasyBuild requires the use of ``--force`` together
+with ``--inject-checksums`` to replace those checksums. A clear warning will be printed to notify
+that existing checksums will be replaced.
+
+For example::
+
+    $ eb bzip2-1.0.6.eb --inject-checksums
+    == temporary log file in case of crash /tmp/eb-WhSwVH/easybuild-HCODnl.log
+    == injecting sha256 checksums in /example/bzip2-1.0.6.eb
+    == fetching sources & patches for bzip2-1.0.6.eb...
+    ERROR: Found existing checksums, use --force to overwrite them
+
+.. code:: bash
+
+    $ eb bzip2-1.0.6.eb --inject-checksums --force
+    == temporary log file in case of crash /tmp/eb-dS2QLa/easybuild-JGxOzC.log
+    == injecting sha256 checksums in /example/bzip2-1.0.6.eb
+    == fetching sources & patches for bzip2-1.0.6.eb...
+
+    WARNING: Found existing checksums in bzip2-1.0.6.eb, overwriting them (due to use of --force)...
+
+    == backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824203850...
+    == injecting sha256 checksums for sources & patches in bzip2-1.0.6.eb...
+    ...
+
+.. note::
+    Any existing checksums are *blindly* replaced when ``--inject-checksums --force`` is used:
+    the existing checksums are *not verified* to be correct as during normal use of EasyBuild
+    (since that would kind of defeat the purpose of ``--inject-checksums``).
+
+    In addition, it also doesn't matter whether or not checksums are available for all sources & patches:
+    with ``--inject-checksums``, checksums will be added for *all* sources and patches,
+    including for extensions listed in ``exts_list`` (if any).
+
+.. _inject_checksums_robot_synergy:
+
+Synergy between ``--inject-checksums`` and ``--robot``
+******************************************************
+
+When ``--inject-checksums`` is combined with ``--robot``, checksums are injected for *each* easyconfig file
+in the dependency graph for which no module is available yet.
+
+For example, to inject checksums in *every* easyconfig file required to build HPL 2.2 with the ``foss/2017a`` toolchain::
+
+    $ MODULEPATH= eb HPL-2.2-foss-2017a.eb --installpath /tmp/$USER/sandbox --inject-checksums --robot
+    == temporary log file in case of crash /tmp/eb-8HpJc3/easybuild-H35khM.log
+    == resolving dependencies ...
+    ...
+    == injecting sha256 checksums in /example/GCCcore-6.3.0.eb
+    ...
+    == injecting sha256 checksums in /example/OpenMPI-2.0.2-GCC-6.3.0-2.27.eb
+    ...
+    == injecting sha256 checksums in /example/FFTW-3.3.6-gompi-2017a.eb
+    ...
+    == injecting sha256 checksums in /example/HPL-2.2-foss-2017a.eb
+    ...
+
+.. note:: We are clearing ``$MODULEPATH`` and specifying a custom (empty) location to ``--installpath`` to
+          avoid that EasyBuild skips any easyconfigs because a corresponding module is already available.
+
+.. _inject_checksums_type:
+
+Type of checksum to inject
+**************************
+
+By default, ``--inject-checksums`` will compute & inject ``SHA256`` checksums, but a different checksum type
+can be specified as an argument (e.g., ``--inject-checksums md5``).
+
+.. note:: Because of the optional argument that can be passed to ``--inject-checksums``,
+          you should not specify an easyconfig file name directly after the ``--inject-checksums``,
+          since it will be assumed to specify a checksum type, which will result in an error message like::
+
+            $ eb --inject-checksums bzip2-1.0.6.eb
+            Usage: eb [options] easyconfig [...]
+
+            eb: error: option --inject-checksums: invalid choice: 'bzip2-1.0.6.eb' (choose from 'adler32', 'crc32', 'md5', 'sha1', 'sha256', 'sha512', 'size')
 .. _common_easyconfig_param_sources_alt:
 
 Alternative formats for ``sources``

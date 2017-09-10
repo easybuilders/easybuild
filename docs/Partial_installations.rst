@@ -8,12 +8,9 @@ with the installation procedure being performed by EasyBuild, updating existing 
 or after changing the EasyBuild configuration (e.g., switching to module files in Lua syntax or a different module
 naming scheme).
 
-* :ref:`partial_installation_stop`
-* :ref:`partial_installation_skip`
-* :ref:`module_only`
-
-  * :ref:`module_only_only_regenerate`
-  * :ref:`module_only_additional`
+.. contents::
+    :depth: 3
+    :backlinks: none
 
 .. _partial_installation_stop:
 
@@ -103,6 +100,9 @@ Example usage::
   *always* be skipped when the installation of a particular software package is performed, no matter whether the
   software or corresponding module is already available or not.
 
+.. note:: When ``--skip`` is used, a backup is created for all existing module files that are regenerated.
+          To disable backing up of module files, use ``--disable-backup-modules`` (see also :ref:`backup_modules`).
+
 .. _module_only:
 
 Only (re)generating (additional) module files using ``--module-only``
@@ -126,6 +126,9 @@ Use cases:
 
 * :ref:`module_only_only_regenerate`
 * :ref:`module_only_additional`
+
+.. note:: When ``--module-only`` is used, a backup is created for all existing module files that are regenerated.
+          To disable backing up of module files, use ``--disable-backup-modules`` (see also :ref:`backup_modules`).
 
 .. _module_only_only_regenerate:
 

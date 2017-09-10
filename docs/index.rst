@@ -55,6 +55,7 @@ Advanced usage topics
     :maxdepth: 2
 
     Archived-easyconfigs
+    Backup_modules
     Common-toolchains
     Contributing
     Controlling_compiler_optimization_flags
@@ -69,6 +70,7 @@ Advanced usage topics
     Partial_installations
     RPATH-support
     Submitting_jobs
+    Tracing_progress
     Using_external_modules
     Detecting_loaded_modules
 
