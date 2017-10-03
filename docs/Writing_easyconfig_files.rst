@@ -365,9 +365,9 @@ For example:
 .. code:: python
 
   sources = [{
-    'filename': 'example-%(version)s.gz',
-    'download_filename': 'example.gz',  # provided source tarball is not versioned...
-    'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
+      'filename': 'example-%(version)s.gz',
+      'download_filename': 'example.gz',  # provided source tarball is not versioned...
+      'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
   }]
 
 .. note:: Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
