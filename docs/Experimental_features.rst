@@ -13,4 +13,3 @@ Currently enabled experimental features include:
 
  * support for easyconfig files in YAML syntax (see :ref:`easyconfig_yeb_format`)
  * support for RPATH linking (see :ref:`rpath_support`)
- * support for tracing EasyBuild progress (see :ref:`trace`)
