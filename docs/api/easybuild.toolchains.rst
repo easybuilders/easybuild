@@ -34,6 +34,7 @@ Submodules
    easybuild.toolchains.gcccuda
    easybuild.toolchains.gimkl
    easybuild.toolchains.gimpi
+   easybuild.toolchains.giolf
    easybuild.toolchains.gmacml
    easybuild.toolchains.gmpich
    easybuild.toolchains.gmpich2

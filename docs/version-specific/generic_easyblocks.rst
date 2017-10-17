@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -804,7 +804,7 @@ Customised steps in ``SCons`` easyblock
 ``SystemCompiler``
 ==================
 
-(derives from :ref:`Bundle`)
+(derives from :ref:`Bundle`, EB_GCC, EB_ifort)
 
 Support for generating a module file for the system compiler with specified name.
 
@@ -816,14 +816,70 @@ Support for generating a module file for the system compiler with specified name
 Extra easyconfig parameters specific to ``SystemCompiler`` easyblock
 --------------------------------------------------------------------
 
-=====================    ===========================================================================    =============
-easyconfig parameter     description                                                                    default value
-=====================    ===========================================================================    =============
-``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
-``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
-``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
-``default_easyblock``    Default easyblock to use for components                                        ``None``     
-=====================    ===========================================================================    =============
+==============================    ================================================================================================    ====================
+easyconfig parameter              description                                                                                         default value       
+==============================    ================================================================================================    ====================
+``configure_cmd_prefix``          Prefix to be glued before ./configure                                                               ``""``              
+``tar_config_opts``               Override tar settings as determined by configure.                                                   ``False``           
+``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                ``False``           
+``multilib``                      Build multilib gcc (both i386 and x86_64)                                                           ``False``           
+``clooguseisl``                   Use ISL with CLooG or not                                                                           ``False``           
+``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                               ``None``            
+``altroot``                       Software name of dependency to use to define $EBROOT for this bundle                                ``None``            
+``withisl``                       Build GCC with ISL support                                                                          ``False``           
+``altversion``                    Software name of dependency to use to define $EBVERSION for this bundle                             ``None``            
+``usetmppath``                    Use temporary path for installation                                                                 ``False``           
+``withlto``                       Enable LTO support                                                                                  ``True``            
+``withppl``                       Build GCC with PPL support                                                                          ``False``           
+``withlibiberty``                 Enable installing of libiberty                                                                      ``False``           
+``license_activation``            License activation type                                                                             ``"license_server"``
+``generate_standalone_module``    Add known path/library extensions and environment variables for the compiler to the final module    ``False``           
+``withcloog``                     Build GCC with CLooG support                                                                        ``False``           
+``m32``                           Enable 32-bit toolchain                                                                             ``False``           
+``languages``                     List of languages to build GCC for (--enable-languages)                                             ``[]``              
+``default_easyblock``             Default easyblock to use for components                                                             ``None``            
+``components``                    List of components to install: tuples w/ name, version and easyblock to use                         ``()``              
+``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                     ``True``            
+``pplwatchdog``                   Enable PPL watchdog                                                                                 ``False``           
+==============================    ================================================================================================    ====================
+
+.. _SystemMPI:
+
+``SystemMPI``
+=============
+
+(derives from :ref:`Bundle`, :ref:`ConfigureMake`, EB_impi)
+
+Support for generating a module file for the system mpi with specified name.
+
+    The mpi compiler is expected to be available in $PATH, required libraries are assumed to be readily available.
+
+    Specifying 'system' as a version leads to using the derived mpi version in the generated module;
+    if an actual version is specified, it is checked against the derived version of the system mpi that was found.
+
+Extra easyconfig parameters specific to ``SystemMPI`` easyblock
+---------------------------------------------------------------
+
+=================================    ================================================================================================    ====================
+easyconfig parameter                 description                                                                                         default value       
+=================================    ================================================================================================    ====================
+``configure_cmd_prefix``             Prefix to be glued before ./configure                                                               ``""``              
+``tar_config_opts``                  Override tar settings as determined by configure.                                                   ``False``           
+``license_activation``               License activation type                                                                             ``"license_server"``
+``set_mpi_wrapper_aliases_gcc``      Set compiler for mpigcc/mpigxx via aliases                                                          ``False``           
+``set_mpi_wrappers_compiler``        Override default compiler used by MPI wrapper commands                                              ``False``           
+``generate_standalone_module``       Add known path extensions and environment variables for the MPI installation to the final module    ``False``           
+``m32``                              Enable 32-bit toolchain                                                                             ``False``           
+``set_mpi_wrapper_aliases_intel``    Set compiler for mpiicc/mpiicpc/mpiifort via aliases                                                ``False``           
+``default_easyblock``                Default easyblock to use for components                                                             ``None``            
+``components``                       List of components to install: tuples w/ name, version and easyblock to use                         ``()``              
+``prefix_opt``                       Prefix command line option for configure script ('--prefix=' if None)                               ``None``            
+``requires_runtime_license``         Boolean indicating whether or not a runtime license is required                                     ``True``            
+``altroot``                          Software name of dependency to use to define $EBROOT for this bundle                                ``None``            
+``set_mpi_wrappers_all``             Set (default) compiler for all MPI wrapper commands                                                 ``False``           
+``altversion``                       Software name of dependency to use to define $EBVERSION for this bundle                             ``None``            
+``usetmppath``                       Use temporary path for installation                                                                 ``False``           
+=================================    ================================================================================================    ====================
 
 .. _Tarball:
 
