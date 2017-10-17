@@ -34,6 +34,7 @@ name                compiler            MPI          CUDA compiler    COMPILER  
 **ismkl**           icc, ifort          MPICH2                        icc, ifort          imkl        imkl         imkl        imkl    imkl 
 **xlmvapich2**      xlc, xlf            MVAPICH2                      xlc, xlf                                                              
 **pomkl**           PGI                 OpenMPI                       PGI                 imkl        imkl         imkl        imkl    imkl 
+**impich**          icc, ifort          MPICH                         icc, ifort                                                            
 **iccifort**        icc, ifort                                        icc, ifort                                                            
 **CrayPGI**         PrgEnv-pgi                                        PrgEnv-pgi                                                            
 **GCCcore**         GCCcore                                           GCCcore                                                               
@@ -60,7 +61,7 @@ name                compiler            MPI          CUDA compiler    COMPILER  
 **cgompi**          Clang, GCC          OpenMPI                       Clang, GCC                                                            
 **cgmvapich2**      Clang, GCC          MVAPICH2                      Clang, GCC                                                            
 **intel-para**      icc, ifort          psmpi                         icc, ifort          imkl        imkl         imkl        imkl    imkl 
-**impich**          icc, ifort          MPICH                         icc, ifort                                                            
+**giolf**           GCC                 impi                          GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **gqacml**          GCC                 QLogicMPI                     GCC                 ACML        ScaLAPACK    ACML        FFTW    BLACS
 **ClangGCC**        Clang, GCC                                        Clang, GCC                                                            
 **xlcxlf**          xlc, xlf                                          xlc, xlf                                                              

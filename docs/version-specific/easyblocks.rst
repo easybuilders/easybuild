@@ -48,9 +48,18 @@
 
       * EB_ifort
 
+        * SystemCompiler
+
+
     * EB_ifort
+
+      * SystemCompiler
+
     * EB_imkl
     * EB_impi
+
+      * SystemMPI
+
     * EB_Inspector
     * EB_ipp
     * EB_itac
@@ -124,6 +133,9 @@
     * EB_g2clib
     * EB_g2lib
     * EB_GCC
+
+      * SystemCompiler
+
     * EB_GHC
     * EB_Go
     * EB_HDF5
@@ -184,6 +196,7 @@
     * EB_XCrySDen
     * ConfigureMakePythonPackage
     * PerlModule
+    * SystemMPI
 
   * ExtensionEasyBlock
 
@@ -270,6 +283,7 @@
   * EB_OpenIFS
   * EB_ParMETIS
   * EB_Rosetta
+  * EB_SAS
   * EB_SCOTCH
   * EB_SNPhylo
   * EB_TINKER
@@ -284,6 +298,7 @@
     * BuildEnv
     * CrayToolchain
     * SystemCompiler
+    * SystemMPI
     * Toolchain
 
   * SCons
