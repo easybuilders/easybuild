@@ -182,7 +182,7 @@ Doing this the traditional way requires some knowledge about using ``git``
 Git repositories, etc.), and being familiar with GitHub.
 
 **However, this can be largely circumvented by using the GitHub integration
-provided by EasyBuild, see :ref:`integration_with_github`.**
+provided by EasyBuild, see** :ref:`integration_with_github` **.**
 
 
 .. _contributing_pull_request_setup:
