@@ -811,3 +811,23 @@ For example::
 The only difference between using ``--dry-run`` and ``--extended-dry-run`` is that the latter will show the full diff
 of the changes (equivalent to ``git diff``), while the former will only show a summary of the changes
 (equivalent to ``git diff --stat``, see example above).
+
+.. _github_preview_pr:
+
+Previewing easyconfig pull requests (``--preview-pr``)
+------------------------------------------------------
+
+*(supported since EasyBuild v3.5.0)*
+
+As mentioned in :ref:`github_review_pr`, it is very useful to quickly see how easyconfig files in pull requests differ
+from existing easyconfig files, and to maintain consistency across easyconfig files where desired. 
+
+Maintainers will use ``--review-pr`` as part of the review process once the PR is submitted, but it is now possible to
+preview that output before submitting a PR, eventually fixing any inconsistencies in advance.
+
+To preview a PR before submitting, simply use ``--preview-pr`` with the list of files to submit::
+
+    $ eb --preview-pr example.eb example.patch 
+
+Besides accepting local files instead of a PR number, ``--preview-pr`` works the same as ``--review-pr``, as described in
+ :ref:`contributing_review_process_review_pr`.
