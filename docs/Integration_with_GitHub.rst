@@ -545,6 +545,26 @@ yet:
 * ``--new-pr`` to create new pull requests
 * ``--update-pr`` to update existing pull requests
 
+.. _github_preview_pr:
+
+Previewing easyconfig pull requests (``--preview-pr``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*(supported since EasyBuild v3.5.0)*
+
+It is very useful to quickly see how easyconfig files in pull requests differ from existing easyconfig files, and to 
+maintain consistency across easyconfig files where desired. 
+
+Maintainers will use ``--review-pr`` as part of the review process once the PR is submitted (see :ref:`github_review_pr`),
+but it is now possible to preview that output before submitting a PR, eventually fixing any inconsistencies in advance.
+
+To preview a PR before submitting, simply use ``--preview-pr`` with the list of files to submit::
+
+    $ eb --preview-pr example.eb example.patch 
+
+Besides accepting local files instead of a PR number, ``--preview-pr`` works the same as ``--review-pr``,
+as described in :ref:`contributing_review_process_review_pr`.
+
 .. _github_new_pr:
 
 Submitting pull requests (``--new-pr``)
