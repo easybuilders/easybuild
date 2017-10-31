@@ -815,7 +815,7 @@ of the changes (equivalent to ``git diff``), while the former will only show a s
 .. _github_preview_pr:
 
 Previewing easyconfig pull requests (``--preview-pr``)
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *(supported since EasyBuild v3.5.0)*
 
@@ -829,5 +829,5 @@ To preview a PR before submitting, simply use ``--preview-pr`` with the list of 
 
     $ eb --preview-pr example.eb example.patch 
 
-Besides accepting local files instead of a PR number, ``--preview-pr`` works the same as ``--review-pr``, as described in
- :ref:`contributing_review_process_review_pr`.
+Besides accepting local files instead of a PR number, ``--preview-pr`` works the same as ``--review-pr``,
+as described in :ref:`contributing_review_process_review_pr`.
