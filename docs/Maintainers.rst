@@ -131,6 +131,10 @@ Maintainers of the ``easybuild-easyconfigs`` repository
 
 https://github.com/easybuilders/easybuild-easyconfigs
 
+* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
+
 * **Miguel Dias Costa** (`National University of Singapore <https://nusit.nus.edu.sg/services/hpc/>`_)
 
   * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
