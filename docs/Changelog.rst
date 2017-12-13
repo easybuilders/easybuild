@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20171208.01** (`Dec 8th 2017`): document support for user-defined hooks (see :ref:`hooks`)
 * **release 20171017.01** (`Oct 17th 2017`): update release notes for EasyBuild v3.4.1 (see :ref:`release_notes_eb341`)
 * **release 20170910.01** (`Sept 10th 2017`): update release notes for EasyBuild v3.4.0 (see :ref:`release_notes_eb340`)
 * **release 20170906.01** (`Sept 6th 2017`): document ``--trace`` (see :ref:`trace`)
