@@ -3,7 +3,7 @@
 Hooks
 =====
 
-Since EasyBuild v3.5.0, support is available for implementing *hooks* that can be used
+Since v3.5.0, EasyBuild supports *hooks* that can be used
 to customise the behaviour of EasyBuild according to site policies if needed,
 without having to change the EasyBuild framework or the existing easyblocks.
 
@@ -17,9 +17,8 @@ What are hooks?
 ---------------
 
 *Hooks* are user-defined functions that are called by the EasyBuild framework at specific times during
-the installation procedure that is performed for each software package being installed.
+the installation procedure. They can be leveraged to alter or augment the installation procedure.
 
-They can be leveraged to alter or augment the installation procedure in a particular way.
 This is usually done to conform with site-specific policies that are difficult to enforce otherwise,
 but it can also be (ab)used to fix specific problems or inject self-implemented enhancements
 (before you flesh them out in a proper contribution, for example).
