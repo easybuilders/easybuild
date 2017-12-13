@@ -5,7 +5,7 @@ Hooks
 
 Since EasyBuild v3.5.0, support is available for implementing *hooks* that can be used
 to customise the behaviour of EasyBuild according to site policies if needed,
-without having having to change the EasyBuild framework or the existing easyblocks.
+without having to change the EasyBuild framework or the existing easyblocks.
 
 .. contents::
     :depth: 3
@@ -25,7 +25,7 @@ but it can also be (ab)used to fix specific problems or inject self-implemented 
 (before you flesh them out in a proper contribution, for example).
 
 Both the ``EasyBlock`` instance and the parsed easyconfig file that are being used
-are fully accessible (and modifiable) from within hook implementations, Hence, this mechanism
+are fully accessible (and modifiable) from within hook implementations. Hence, this mechanism
 provides a lot of flexibility to change the EasyBuild functionality should you require it,
 without having to modify the codebase of EasyBuild itself.
 
@@ -59,14 +59,15 @@ Available hooks
 
 Currently, two types of hooks are supported:
 
-* ``start_hook`` and ``end_hook``, which are triggered before starting a new software installation, and right after,
-  respectfully;
-* hooks that a triggered before and after every step of the installation procedure, aptly named
-  '``pre``'- and '``post``'-hooks
+* ``start_hook`` and ``end_hook``, which are triggered *once* before starting software installations,
+  and *once* right after completing all installations, respectfully;
+* hooks that are triggered before and after every step of each installation procedure that is performed,
+  aptly named '``pre``'- and '``post``'-hooks
 
-The list of currently available hooks, which can also be consulted using ``eb --avail-hooks``, is:
+The list of currently available hooks in order of exeuction,
+which can also be consulted using ``eb --avail-hooks``, is:
 
-    * ``start_hook``
+    * ``start_hook`` *(only called once in an EasyBuild session)*
     * ``pre_fetch_hook``, ``post_fetch_hook``
     * ``pre_ready_hook``, ``post_ready_hook``
     * ``pre_source_hook``, ``post_source_hook``
@@ -84,7 +85,7 @@ The list of currently available hooks, which can also be consulted using ``eb --
     * ``pre_permissions_hook``, ``post_permissions_hook``
     * ``pre_package_hook``, ``post_package_hook``
     * ``pre_testcases_hook``, ``post_testcases_hook``
-    * ``end_hook``
+    * ``end_hook`` *(only called once in an EasyBuild session)*
 
 All functions implemented in the provided Python module for which the name ends with ``_hook`` are considered.
 
@@ -93,7 +94,7 @@ EasyBuild will try to provide suggestions for available hooks that closely match
 
 For example::
 
-    $ eb --hooks example_hooks.py example.eb
+    $ eb --hooks wrong_hooks.py example.eb
     == temporary log file in case of crash /tmp/eb-nMawy1/easybuild-Gu2ZP6.log
     ERROR: Found one or more unknown hooks:
     * stat_hook (did you mean 'start_hook'?)
@@ -139,5 +140,13 @@ Examples of hook implementations
 
 .. _hooks_examples_openmpi_configopts:
 
-Example hook to add ``--with-slurm`` to OpenMPI configure options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Example hook to replace ``--with-verbs`` with ``--without-verbs`` in OpenMPI configure options
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: python
+
+    def pre_configure_hook(self, *args, **kwargs):
+        "Example pre-configure hook to replace --with-verbs with --without -verbs."""
+        if self.name == 'OpenMPI' and '--with-verbs' in self.cfg['configopts']:
+            self.log.info("[pre-configure hook] Replacing --with-verbs with --without-verbs")
+            self.cfg['configopts'] = self.cfg['configopts'].replace('--with-verbs', '--without-verbs')
