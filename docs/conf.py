@@ -41,7 +41,7 @@ copyright = '2012-2017, Ghent University, CC-BY-SA'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '3.5.0dev'  # this is meant to reference the version of EasyBuild
+version = '3.5.0'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
 release = '20171208.01'  # this is meant to reference the version of the documentation itself
 
