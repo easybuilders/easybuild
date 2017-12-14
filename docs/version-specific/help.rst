@@ -81,6 +81,7 @@ Option flag                                                          Option desc
 ``--avail-repositories``                                             Show all repository types (incl. non-usable) (def False)                                                                                                                                                                                                      
 ``--buildpath=BUILDPATH``                                            Temporary build path (def /Users/kehoste/.local/easybuild/build)                                                                                                                                                                                              
 ``--external-modules-metadata=EXTERNAL-MODULES-METADATA``            List of files specifying metadata for external modules (INI format) (type comma-separated list)                                                                                                                                                               
+``--hooks=HOOKS``                                                    Location of Python module with hook implementations (type str)                                                                                                                                                                                                
 ``--ignore-dirs=IGNORE-DIRS``                                        Directory names to ignore when searching for files/dirs (type comma-separated list; def .git,.svn)                                                                                                                                                            
 ``--include-easyblocks=INCLUDE-EASYBLOCKS``                          Location(s) of extra or customized easyblocks (type comma-separated list; def )                                                                                                                                                                               
 ``--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES``    Location(s) of extra or customized module naming schemes (type comma-separated list; def )                                                                                                                                                                    
@@ -145,6 +146,7 @@ Option flag                                            Option description
 ``--pr-target-branch=PR-TARGET-BRANCH``                Target branch for new PRs (type <type 'str'>; def develop)                                             
 ``--pr-target-repo=PR-TARGET-REPO``                    Target repository for new/updating PRs (type <type 'str'>; def easybuild-easyconfigs)                  
 ``--pr-title=PR-TITLE``                                Title for new pull request created with --new-pr (type <type 'str'>)                                   
+``--preview-pr``                                       Preview a new pull request (def False)                                                                 
 ``--review-pr=PR#``                                    Review specified pull request (type <type 'int'>)                                                      
 ``--test-report-env-filter=TEST-REPORT-ENV-FILTER``    Regex used to filter out variables in environment dump of test report                                  
 ``--update-pr=PR#``                                    Update an existing pull request (type <type 'int'>)                                                    
@@ -162,6 +164,7 @@ Option flag                                              Option description
 ``--avail-easyconfig-licenses``                          Show all license constants that can be used in easyconfigs (def False)                     
 ``-a, --avail-easyconfig-params``                        Show all easyconfig parameters (include easyblock-specific ones by using -e) (def False)   
 ``--avail-easyconfig-templates``                         Show all template names and template constants that can be used in easyconfigs. (def False)
+``--avail-hooks``                                        Show list of known hooks (def False)                                                       
 ``--avail-toolchain-opts=AVAIL-TOOLCHAIN-OPTS``          Show options for toolchain (type str)                                                      
 ``--check-conflicts``                                    Check for version conflicts in dependency graphs (def False)                               
 ``--dep-graph=depgraph.<ext>``                           Create dependency graph                                                                    

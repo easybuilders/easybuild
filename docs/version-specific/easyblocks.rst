@@ -168,6 +168,7 @@
     * EB_NEURON
     * EB_NWChem
     * EB_OCaml
+    * EB_Octave
     * EB_OpenSSL
     * EB_Paraver
     * EB_Pasha
@@ -238,6 +239,7 @@
       * EB_XML
 
     * OCamlPackage
+    * OctavePackage
     * PerlModule
     * RubyGem
 
@@ -258,6 +260,7 @@
     * EB_Tornado
     * EB_TotalView
 
+  * EB_Bazel
   * EB_Boost
   * EB_CHARMM
   * EB_CP2K
@@ -346,6 +349,7 @@
       * EB_XML
 
     * OCamlPackage
+    * OctavePackage
     * PerlModule
     * RubyGem
 
