@@ -14,6 +14,7 @@ Submodules
    easybuild.toolchains.mpi.openmpi
    easybuild.toolchains.mpi.psmpi
    easybuild.toolchains.mpi.qlogicmpi
+   easybuild.toolchains.mpi.spectrummpi
 
 Module contents
 ---------------

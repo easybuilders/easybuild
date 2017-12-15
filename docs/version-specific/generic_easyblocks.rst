@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -239,6 +239,7 @@ Extra easyconfig parameters specific to ``CMakePythonPackage`` easyblock
 easyconfig parameter        description                                                                                     default value
 ========================    ============================================================================================    =============
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                           ``""``       
+``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
 ``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
 ``tar_config_opts``         Override tar settings as determined by configure.                                               ``False``    
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
@@ -405,6 +406,7 @@ Extra easyconfig parameters specific to ``ConfigureMakePythonPackage`` easyblock
 easyconfig parameter        description                                                                                     default value
 ========================    ============================================================================================    =============
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                           ``""``       
+``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
 ``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
 ``tar_config_opts``         Override tar settings as determined by configure.                                               ``False``    
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
@@ -496,6 +498,7 @@ Extra easyconfig parameters specific to ``FortranPythonPackage`` easyblock
 ========================    ============================================================================================    =============
 easyconfig parameter        description                                                                                     default value
 ========================    ============================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
 ``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
@@ -616,6 +619,29 @@ Customised steps in ``OCamlPackage`` easyblock
 * ``configure_step`` - Raise error when configure step is run: installing OCaml packages stand-alone is not supported (yet)
 * ``install_step`` - Raise error when configure step is run: installing OCaml packages stand-alone is not supported (yet)
 
+.. _OctavePackage:
+
+``OctavePackage``
+=================
+
+(derives from ExtensionEasyBlock)
+
+Builds and installs Octave extension toolboxes.
+
+Extra easyconfig parameters specific to ``OctavePackage`` easyblock
+-------------------------------------------------------------------
+
+====================    ==================================    =============
+easyconfig parameter    description                           default value
+====================    ==================================    =============
+``options``             Dictionary with extension options.    ``{}``       
+====================    ==================================    =============
+
+Customised steps in ``OctavePackage`` easyblock
+-----------------------------------------------
+* ``configure_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
+* ``install_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
+
 .. _PackedBinary:
 
 ``PackedBinary``
@@ -680,6 +706,7 @@ Extra easyconfig parameters specific to ``PythonPackage`` easyblock
 ========================    ============================================================================================    =============
 easyconfig parameter        description                                                                                     default value
 ========================    ============================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
 ``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
@@ -933,6 +960,7 @@ Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 ========================    ============================================================================================    =============
 easyconfig parameter        description                                                                                     default value
 ========================    ============================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
 ``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
@@ -959,6 +987,7 @@ Extra easyconfig parameters specific to ``VersionIndependentPythonPackage`` easy
 ========================    ============================================================================================    =============
 easyconfig parameter        description                                                                                     default value
 ========================    ============================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
 ``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        

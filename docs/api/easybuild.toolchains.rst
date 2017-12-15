@@ -50,6 +50,8 @@ Submodules
    easybuild.toolchains.gpsmpi
    easybuild.toolchains.gpsolf
    easybuild.toolchains.gqacml
+   easybuild.toolchains.gsmpi
+   easybuild.toolchains.gsolf
    easybuild.toolchains.iccifort
    easybuild.toolchains.iccifortcuda
    easybuild.toolchains.ictce

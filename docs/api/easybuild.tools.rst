@@ -28,6 +28,7 @@ Submodules
    easybuild.tools.environment
    easybuild.tools.filetools
    easybuild.tools.github
+   easybuild.tools.hooks
    easybuild.tools.include
    easybuild.tools.jenkins
    easybuild.tools.module_generator

@@ -119,14 +119,15 @@ license parameters
 extensions parameters
 ---------------------
 
-=====================    ==================================================================================================    =================
-**Parameter name**       **Description**                                                                                       **Default value**
-=====================    ==================================================================================================    =================
-``exts_classmap``        Map of extension name to class for handling build and installation.                                   {}               
-``exts_list``            List with extensions added to the base installation                                                   []               
-``exts_defaultclass``    List of module for and name of the default extension class                                            None             
-``exts_filter``          Extension filter details: template for cmd and input to cmd (templates for name, version and src).    None             
-=====================    ==================================================================================================    =================
+========================    ==================================================================================================    =================
+**Parameter name**          **Description**                                                                                       **Default value**
+========================    ==================================================================================================    =================
+``exts_classmap``           Map of extension name to class for handling build and installation.                                   {}               
+``exts_default_options``    List of default options for extensions                                                                {}               
+``exts_list``               List with extensions added to the base installation                                                   []               
+``exts_defaultclass``       List of module for and name of the default extension class                                            None             
+``exts_filter``             Extension filter details: template for cmd and input to cmd (templates for name, version and src).    None             
+========================    ==================================================================================================    =================
 
 
 modules parameters
