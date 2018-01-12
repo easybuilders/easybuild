@@ -59,17 +59,25 @@ https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
 
   * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
+* **Miguel Dias Costa** (National University of Singapore)
+
+  * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
+
+* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
 
 * **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
 
   * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
 
-* **Miguel Dias Costa** (National University of Singapore)
+* **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
 
-  * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
+  * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
 
 
 .. _maintainers_framework_repo:
