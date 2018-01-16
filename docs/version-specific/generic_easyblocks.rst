@@ -235,25 +235,26 @@ Build a Python package and module with cmake.
 Extra easyconfig parameters specific to ``CMakePythonPackage`` easyblock
 ------------------------------------------------------------------------
 
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                           ``""``       
-``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``tar_config_opts``         Override tar settings as determined by configure.                                               ``False``    
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                           ``None``     
-``separate_build_dir``      Perform build in a separate directory                                                           ``False``    
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``srcdir``                  Source directory location to provide to cmake command                                           ``None``     
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
+========================    =========================================================================================================    =============
+easyconfig parameter        description                                                                                                  default value
+========================    =========================================================================================================    =============
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
+``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                            ``False``    
+``install_target``          Option to pass to setup.py                                                                                   ``"install"``
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                 Run unit tests.                                                                                              ``True``     
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
+``separate_build_dir``      Perform build in a separate directory                                                                        ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``srcdir``                  Source directory location to provide to cmake command                                                        ``None``     
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+========================    =========================================================================================================    =============
 
 Customised steps in ``CMakePythonPackage`` easyblock
 ----------------------------------------------------
@@ -402,23 +403,24 @@ Build a Python package and module with 'python configure/make/make install'.
 Extra easyconfig parameters specific to ``ConfigureMakePythonPackage`` easyblock
 --------------------------------------------------------------------------------
 
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                           ``""``       
-``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``tar_config_opts``         Override tar settings as determined by configure.                                               ``False``    
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                           ``None``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
+========================    =========================================================================================================    =============
+easyconfig parameter        description                                                                                                  default value
+========================    =========================================================================================================    =============
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
+``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                            ``False``    
+``install_target``          Option to pass to setup.py                                                                                   ``"install"``
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                 Run unit tests.                                                                                              ``True``     
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+========================    =========================================================================================================    =============
 
 Customised steps in ``ConfigureMakePythonPackage`` easyblock
 ------------------------------------------------------------
@@ -495,20 +497,21 @@ Extends PythonPackage to add a Fortran compiler to the make call
 Extra easyconfig parameters specific to ``FortranPythonPackage`` easyblock
 --------------------------------------------------------------------------
 
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
+========================    =========================================================================================================    =============
+easyconfig parameter        description                                                                                                  default value
+========================    =========================================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``install_target``          Option to pass to setup.py                                                                                   ``"install"``
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                 Run unit tests.                                                                                              ``True``     
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+========================    =========================================================================================================    =============
 
 Customised steps in ``FortranPythonPackage`` easyblock
 ------------------------------------------------------
@@ -703,20 +706,21 @@ Builds and installs a Python package, and provides a dedicated module file.
 Extra easyconfig parameters specific to ``PythonPackage`` easyblock
 -------------------------------------------------------------------
 
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
+========================    =========================================================================================================    =============
+easyconfig parameter        description                                                                                                  default value
+========================    =========================================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``install_target``          Option to pass to setup.py                                                                                   ``"install"``
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                 Run unit tests.                                                                                              ``True``     
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+========================    =========================================================================================================    =============
 
 Customised steps in ``PythonPackage`` easyblock
 -----------------------------------------------
@@ -957,20 +961,21 @@ Support for install VSC Python packages.
 Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 ----------------------------------------------------------------------
 
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
+========================    =========================================================================================================    =============
+easyconfig parameter        description                                                                                                  default value
+========================    =========================================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``install_target``          Option to pass to setup.py                                                                                   ``"install"``
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                 Run unit tests.                                                                                              ``True``     
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+========================    =========================================================================================================    =============
 
 .. _VersionIndependentPythonPackage:
 
@@ -984,20 +989,21 @@ Support for building/installing python packages without requiring a specific pyt
 Extra easyconfig parameters specific to ``VersionIndependentPythonPackage`` easyblock
 -------------------------------------------------------------------------------------
 
-========================    ============================================================================================    =============
-easyconfig parameter        description                                                                                     default value
-========================    ============================================================================================    =============
-``buildcmd``                Command to pass to setup.py to build the extension                                              ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                           ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s'    ``False``    
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                          ``6``        
-``runtest``                 Run unit tests.                                                                                 ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s'                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                          ``2``        
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                            ``False``    
-``options``                 Dictionary with extension options.                                                              ``{}``       
-========================    ============================================================================================    =============
+========================    =========================================================================================================    =============
+easyconfig parameter        description                                                                                                  default value
+========================    =========================================================================================================    =============
+``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``install_target``          Option to pass to setup.py                                                                                   ``"install"``
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                 Run unit tests.                                                                                              ``True``     
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+========================    =========================================================================================================    =============
 
 Customised steps in ``VersionIndependentPythonPackage`` easyblock
 -----------------------------------------------------------------
