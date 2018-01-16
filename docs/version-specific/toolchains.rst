@@ -15,12 +15,13 @@ name                compiler            MPI            CUDA compiler    COMPILER
 **xlmpich2**        xlc, xlf            MPICH2                          xlc, xlf                                                              
 **gpsolf**          GCC                 psmpi                           GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **xlompi**          xlc, xlf            OpenMPI                         xlc, xlf                                                              
-**iompi**           icc, ifort          OpenMPI                         icc, ifort                                                            
+**gimpic**          GCC, CUDA           impi           CUDA             GCC, CUDA                                                             
 **gmpich2**         GCC                 MPICH2                          GCC                                                                   
 **iomkl**           icc, ifort          OpenMPI                         icc, ifort          imkl        imkl         imkl        imkl    imkl 
 **cgmvolf**         Clang, GCC          MVAPICH2                        Clang, GCC          OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **CrayIntel**       PrgEnv-intel                                        PrgEnv-intel                                                          
 **gcccuda**         GCC, CUDA                          CUDA             GCC, CUDA                                                             
+**iompi**           icc, ifort          OpenMPI                         icc, ifort                                                            
 **foss**            GCC                 OpenMPI                         GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **CrayGNU**         PrgEnv-gnu                                          PrgEnv-gnu                                                            
 **gpsmpi**          GCC                 psmpi                           GCC                                                                   
@@ -64,6 +65,7 @@ name                compiler            MPI            CUDA compiler    COMPILER
 **cgmvapich2**      Clang, GCC          MVAPICH2                        Clang, GCC                                                            
 **intel-para**      icc, ifort          psmpi                           icc, ifort          imkl        imkl         imkl        imkl    imkl 
 **giolf**           GCC                 impi                            GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
+**giolfc**          GCC, CUDA           impi           CUDA             GCC, CUDA           OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **gqacml**          GCC                 QLogicMPI                       GCC                 ACML        ScaLAPACK    ACML        FFTW    BLACS
 **ClangGCC**        Clang, GCC                                          Clang, GCC                                                            
 **xlcxlf**          xlc, xlf                                            xlc, xlf                                                              
