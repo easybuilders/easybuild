@@ -90,6 +90,7 @@ bugfix/update release
   * fix for dependencies was set twice in OpenMPI 3.0.0 easyconfig (`#5619 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5619>`_)
   * fix download URL in comment of Kent tools easyconfigs (`#5633 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5633>`_)
   * add SHA256 checksums to various easyconfigs (`#5635 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5635>`_, `#5636 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5636>`_, `#5639 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5639>`_)
+  * add rdma-core-devel to OS dependencies for OpenMPI 3.0.0 (`#5648 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5648>`_)
 
 
 .. _release_notes_eb350:
