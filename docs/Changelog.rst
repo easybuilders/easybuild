@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20180116.01** (`Jan 16th 2018`): update release notes for EasyBuild v3.5.1 (see :ref:`release_notes_eb351`)
 * **release 20180112.01** (`Jan 12th 2018`): add definitions for ``2018a`` common toolchains (see :ref:`common_toolchains`)
 * **release 20171215.01** (`Dec 15th 2017`): update release notes for EasyBuild v3.5.0 (see :ref:`release_notes_eb350`)
 * **release 20171208.01** (`Dec 8th 2017`): document support for user-defined hooks (see :ref:`hooks`)
