@@ -9,7 +9,7 @@ alongside 8,278 easyconfig files.
 
 .. _release_notes_eb351:
 
-v3.5.0 (January 16th 2018)
+v3.5.1 (January 16th 2018)
 --------------------------
 
 bugfix/update release
