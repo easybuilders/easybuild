@@ -87,6 +87,34 @@ The ``intel`` common compiler toolchain consists of the Intel compilers and libr
           valid licenses must be available to install and use it.
 
 
+.. _common_toolchains_gcccore:
+
+``GCCcore`` and ``GCC`` common toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are two lower-level toolchains including the ``GCC`` compiler.
+
+The ``GCC`` toolchain consists of ``GCCcore`` + binutils.
+
+``GCCcore`` was introduced mainly for sites that use a hierarchical module
+naming scheme, where modules are organised in a tree-like fashion, with
+different "levels". On the lowest level you mainly find compilers which are
+installed with the ``dummy`` toolchain (i.e. which were built with the system
+compiler). One level up, you have tools that are built with a compiler-only
+toolchain (and higher levels are built with a compiler+MPI toolchain, or a
+full toolchain, i.e. compiler+MPI+BLAS/LAPACK/FFTW).
+
+For more information on a setup like this, see http://easybuilders.github.io/easybuild/files/hust14_paper.pdf .
+
+Easyconfigs that use the ``GCCcore`` toolchain result in modules on the
+compiler-only level of a hierarchy, which means those modules can be used to
+resolve dependencies for easyconfigs that use several toolchains, i.e. both the
+common ``foss`` and ``intel`` toolchains (which both have ``GCCcore`` as a
+'base'), among others.  Modules that were installed with the ``GCC`` toolchain
+are not compatible with the ``intel`` toolchain because ``GCC`` is not a
+subtoolchain of ``intel`` (while ``GCCcore`` is).
+
+
 .. _common_toolchains_versioning_scheme:
 
 Versioning scheme for common toolchains
