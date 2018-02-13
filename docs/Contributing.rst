@@ -479,7 +479,7 @@ the ``develop`` branch.
 
 **This can only be done by a member of the EasyBuild maintainers team.
 Only pull requests that meet the requirements are eligible for merging,
-see :ref:`contributing_review_process_pr_requirements`.**
+see** :ref:`contributing_review_process_pr_requirements` **.**
 
 Merging a pull request usually implies that the changes will be part of the next EasyBuild release.
 
