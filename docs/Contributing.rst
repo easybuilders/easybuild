@@ -686,3 +686,19 @@ Pull requests are merged by a maintainer other than the author
 **A pull request should never be merged by its author.**
 
 This policy is maintained in order to ensure a *"two-pairs-of-eyes"* review process of all contributions.
+
+.. _contributing_review_process_why_pr_closed_by_maintainer:
+
+Why a pull request may be closed by a maintainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Although it is generally avoided, there are a few reasons why maintainers might close a pull request:
+
+* uses an archived toolchain
+* no activity for > 6 months
+* obsolete because more recent PRs for newer versions of the software have been merged already
+
+This is done routinely as a way of focusing everyone's efforts on relevant contributions, and should not be seen as a rejection. 
+In fact, contributors are encouraged to reopen the pull request if they feel it is still relevant.
+
+
