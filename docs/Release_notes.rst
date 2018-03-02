@@ -36,9 +36,10 @@ bugfix/update release
 
 * new software-specific easyblocks for COMSOL (`#1317 <https://github.com/easybuilders/easybuild-easyblocks/pull/1317>`_), Stata (`#1241 <https://github.com/easybuilders/easybuild-easyblocks/pull/1241>`_) and TensorFlow (`#1287 <https://github.com/easybuilders/easybuild-easyblocks/pull/1287>`_, `#1361 <https://github.com/easybuilders/easybuild-easyblocks/pull/1361>`_)
 * enhance GCC easyblock to support building generically (via '``generic``' easyconfig parameter or ``--optarch=GENERIC``) (`#1336 <https://github.com/easybuilders/easybuild-easyblocks/pull/1336>`_)
+
 * minor enhancements, including:
 
-* make GROMACS easyblock aware of building for KNL via ``--optarch=MIC-AVX512`` (`#1360 <https://github.com/easybuilders/easybuild-easyblocks/pull/1360>`_)
+  * make GROMACS easyblock aware of building for KNL via ``--optarch=MIC-AVX512`` (`#1360 <https://github.com/easybuilders/easybuild-easyblocks/pull/1360>`_)
   * unset ``$PERL_MM_OPT`` and ``$PERL_MB_OPT`` when installing Perl modules to avoid problems (`#1362 <https://github.com/easybuilders/easybuild-easyblocks/pull/1362>`_)
   * add custom '``use_pip_for_deps``' easyconfig parameter to ``PythonPackage`` easyblock (`#1366 <https://github.com/easybuilders/easybuild-easyblocks/pull/1366>`_)
   * add support for '``default_component_specs``' easyconfig parameter in ``Bundle`` easyblock (`#1369 <https://github.com/easybuilders/easybuild-easyblocks/pull/1369>`_)
