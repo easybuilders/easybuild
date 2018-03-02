@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20180302.01** (`Mar 2nd 2018`): update release notes for EasyBuild v3.5.2 (see :ref:`release_notes_eb352`)
 * **release 20180116.01** (`Jan 16th 2018`): update release notes for EasyBuild v3.5.1 (see :ref:`release_notes_eb351`)
 * **release 20180112.01** (`Jan 12th 2018`): add definitions for ``2018a`` common toolchains (see :ref:`common_toolchains`)
 * **release 20171215.01** (`Dec 15th 2017`): update release notes for EasyBuild v3.5.0 (see :ref:`release_notes_eb350`)
