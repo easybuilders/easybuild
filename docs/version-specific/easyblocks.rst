@@ -4,15 +4,25 @@
 
   * Binary
 
+    * Conda
     * EB_ABAQUS
     * EB_Allinea
     * EB_Anaconda
+    * EB_CPLEX
+    * EB_CUDA
+    * EB_EPD
+    * EB_IMOD
+    * EB_Maple
+    * EB_Mathematica
+    * EB_Molpro
+    * JAR
     * PackedBinary
 
       * EB_ANSYS
       * EB_ant
       * EB_BiSearch
       * EB_Chimera
+      * EB_COMSOL
       * EB_FDTD_underscore_Solutions
       * EB_FLUENT
       * EB_IronPython
@@ -21,72 +31,37 @@
       * EB_MCR
       * EB_PGI
       * EB_Samcef
+      * EB_Stata
       * EB_Tornado
       * EB_TotalView
 
-    * EB_CPLEX
-    * EB_CUDA
-    * EB_EPD
     * Rpm
 
       * EB_Mono
 
-    * EB_IMOD
-    * EB_Maple
-    * EB_Mathematica
-    * EB_Molpro
-    * Conda
-    * JAR
 
-  * EB_ACML
-  * EB_ADF
-  * IntelBase
+  * Bundle
 
-    * EB_Advisor
-    * EB_tbb
-    * EB_icc
+    * BuildEnv
+    * CrayToolchain
+    * SystemCompiler
+    * SystemMPI
+    * Toolchain
 
-      * EB_ifort
-
-        * SystemCompiler
-
-
-    * EB_ifort
-
-      * SystemCompiler
-
-    * EB_imkl
-    * EB_impi
-
-      * SystemMPI
-
-    * EB_Inspector
-    * EB_ipp
-    * EB_itac
-    * EB_tbb
-    * EB_VTune
-
-  * EB_ALADIN
   * ConfigureMake
 
-    * EB_Python
-
-      * EB_Tkinter
-
-    * EB_Amber
-    * EB_ARB
     * CMakeMake
+
+      * CMakePythonPackage
+
+        * EB_DOLFIN
+        * EB_UFC
 
       * EB_Armadillo
       * EB_BamTools
       * EB_CGAL
       * EB_Clang
       * EB_DIRAC
-      * CMakePythonPackage
-
-        * EB_DOLFIN
-        * EB_UFC
-
       * EB_Doxygen
       * EB_GATE
       * EB_Geant4
@@ -98,19 +73,11 @@
       * EB_SuperLU
       * EB_Trilinos
 
+    * ConfigureMakePythonPackage
+    * EB_Amber
+    * EB_ARB
     * EB_ATLAS
-    * MakeCp
-
-      * EB_BamTools
-      * EB_BLAT
-      * EB_Bowtie2
-      * EB_mutil
-      * EB_MXNet
-      * EB_NAMD
-      * CmdCp
-
     * EB_binutils
-    * EB_R
     * EB_BLACS
     * EB_Bowtie
     * EB_BWA
@@ -143,7 +110,6 @@
     * EB_HPCG
     * EB_HPL
     * EB_Hypre
-    * EB_tbb
     * EB_LAPACK
     * EB_Libint
     * EB_libQGLViewer
@@ -159,7 +125,6 @@
       * EB_psmpi
 
     * EB_MrBayes
-    * EB_Perl
     * EB_MUMmer
     * EB_MUMPS
     * EB_MyMediaLite
@@ -173,12 +138,18 @@
     * EB_Paraver
     * EB_Pasha
     * EB_PDT
+    * EB_Perl
     * EB_PETSc
     * EB_pplacer
     * EB_Primer3
+    * EB_Python
+
+      * EB_Tkinter
+
     * EB_QScintilla
     * EB_Qt
     * EB_QuantumESPRESSO
+    * EB_R
     * EB_Ruby
     * EB_SAMtools
     * EB_ScaLAPACK
@@ -192,89 +163,30 @@
     * EB_SWIG
     * EB_TAU
     * EB_tbb
+    * EB_tbb
     * EB_Velvet
     * EB_VMD
     * EB_XCrySDen
-    * ConfigureMakePythonPackage
+    * MakeCp
+
+      * CmdCp
+      * EB_BamTools
+      * EB_BLAT
+      * EB_Bowtie2
+      * EB_mutil
+      * EB_MXNet
+      * EB_NAMD
+
     * PerlModule
     * SystemMPI
 
-  * ExtensionEasyBlock
-
-    * PythonPackage
-
-      * CMakePythonPackage
-
-        * EB_DOLFIN
-        * EB_UFC
-
-      * EB_EasyBuildMeta
-      * EB_EggLib
-      * EB_libxml2
-      * EB_netcdf4_minus_python
-      * EB_nose
-      * FortranPythonPackage
-
-        * EB_numpy
-        * EB_scipy
-
-      * EB_PyQuante
-      * EB_python_minus_meep
-      * EB_PyZMQ
-      * EB_VSC_minus_tools
-      * EB_wxPython
-      * ConfigureMakePythonPackage
-      * VersionIndependentPythonPackage
-
-        * VSCPythonPackage
-
-
-    * RPackage
-
-      * EB_Bioconductor
-      * EB_pbdMPI
-      * EB_pbdSLAP
-      * EB_Rmpi
-      * EB_Rserve
-      * EB_XML
-
-    * OCamlPackage
-    * OctavePackage
-    * PerlModule
-    * RubyGem
-
-  * PackedBinary
-
-    * EB_ANSYS
-    * EB_ant
-    * EB_BiSearch
-    * EB_Chimera
-    * EB_FDTD_underscore_Solutions
-    * EB_FLUENT
-    * EB_IronPython
-    * EB_Java
-    * EB_MATLAB
-    * EB_MCR
-    * EB_PGI
-    * EB_Samcef
-    * EB_Tornado
-    * EB_TotalView
-
+  * EB_ACML
+  * EB_ADF
+  * EB_ALADIN
   * EB_Bazel
   * EB_Boost
   * EB_CHARMM
   * EB_CP2K
-  * Tarball
-
-    * EB_Eigen
-    * EB_FoldX
-    * EB_FreeSurfer
-    * EB_Gurobi
-    * EB_Hadoop
-    * EB_MTL4
-    * EB_picard
-    * BinariesTarball
-
   * EB_FSL
   * EB_GAMESS_minus_US
   * EB_libsmm
@@ -296,21 +208,11 @@
   * EB_WRF
   * EB_WRF_minus_Fire
   * EB_Xmipp
-  * Bundle
-
-    * BuildEnv
-    * CrayToolchain
-    * SystemCompiler
-    * SystemMPI
-    * Toolchain
-
-  * SCons
-  * Waf
-
-* **Extension**
-
   * ExtensionEasyBlock
 
+    * OCamlPackage
+    * OctavePackage
+    * PerlModule
     * PythonPackage
 
       * CMakePythonPackage
@@ -318,22 +220,23 @@
         * EB_DOLFIN
         * EB_UFC
 
+      * ConfigureMakePythonPackage
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
       * EB_netcdf4_minus_python
       * EB_nose
+      * EB_PyQuante
+      * EB_python_minus_meep
+      * EB_PyZMQ
+      * EB_TensorFlow
+      * EB_VSC_minus_tools
+      * EB_wxPython
       * FortranPythonPackage
 
         * EB_numpy
         * EB_scipy
 
-      * EB_PyQuante
-      * EB_python_minus_meep
-      * EB_PyZMQ
-      * EB_VSC_minus_tools
-      * EB_wxPython
-      * ConfigureMakePythonPackage
       * VersionIndependentPythonPackage
 
         * VSCPythonPackage
@@ -348,9 +251,112 @@
       * EB_Rserve
       * EB_XML
 
+    * RubyGem
+
+  * IntelBase
+
+    * EB_Advisor
+    * EB_icc
+
+      * EB_ifort
+
+        * SystemCompiler
+
+
+    * EB_ifort
+
+      * SystemCompiler
+
+    * EB_imkl
+    * EB_impi
+
+      * SystemMPI
+
+    * EB_Inspector
+    * EB_ipp
+    * EB_itac
+    * EB_tbb
+    * EB_tbb
+    * EB_VTune
+
+  * PackedBinary
+
+    * EB_ANSYS
+    * EB_ant
+    * EB_BiSearch
+    * EB_Chimera
+    * EB_COMSOL
+    * EB_FDTD_underscore_Solutions
+    * EB_FLUENT
+    * EB_IronPython
+    * EB_Java
+    * EB_MATLAB
+    * EB_MCR
+    * EB_PGI
+    * EB_Samcef
+    * EB_Stata
+    * EB_Tornado
+    * EB_TotalView
+
+  * SCons
+  * Tarball
+
+    * BinariesTarball
+    * EB_Eigen
+    * EB_FoldX
+    * EB_FreeSurfer
+    * EB_Gurobi
+    * EB_Hadoop
+    * EB_MTL4
+    * EB_picard
+
+  * Waf
+
+* **Extension**
+
+  * ExtensionEasyBlock
+
     * OCamlPackage
     * OctavePackage
     * PerlModule
+    * PythonPackage
+
+      * CMakePythonPackage
+
+        * EB_DOLFIN
+        * EB_UFC
+
+      * ConfigureMakePythonPackage
+      * EB_EasyBuildMeta
+      * EB_EggLib
+      * EB_libxml2
+      * EB_netcdf4_minus_python
+      * EB_nose
+      * EB_PyQuante
+      * EB_python_minus_meep
+      * EB_PyZMQ
+      * EB_TensorFlow
+      * EB_VSC_minus_tools
+      * EB_wxPython
+      * FortranPythonPackage
+
+        * EB_numpy
+        * EB_scipy
+
+      * VersionIndependentPythonPackage
+
+        * VSCPythonPackage
+
+
+    * RPackage
+
+      * EB_Bioconductor
+      * EB_pbdMPI
+      * EB_pbdSLAP
+      * EB_Rmpi
+      * EB_Rserve
+      * EB_XML
+
     * RubyGem
 
 

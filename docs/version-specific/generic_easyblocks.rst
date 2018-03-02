@@ -41,8 +41,8 @@ Extra easyconfig parameters specific to ``Binary`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
+``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
 
 Customised steps in ``Binary`` easyblock
@@ -91,14 +91,15 @@ Build environment of toolchain: only generate module file
 Extra easyconfig parameters specific to ``BuildEnv`` easyblock
 --------------------------------------------------------------
 
-=====================    ===========================================================================    =============
-easyconfig parameter     description                                                                    default value
-=====================    ===========================================================================    =============
-``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
-``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
-``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
-``default_easyblock``    Default easyblock to use for components                                        ``None``     
-=====================    ===========================================================================    =============
+===========================    ===========================================================================    =============
+easyconfig parameter           description                                                                    default value
+===========================    ===========================================================================    =============
+``altroot``                    Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``                 List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_component_specs``    Default specs to use for every component                                       ``{}``       
+``default_easyblock``          Default easyblock to use for components                                        ``None``     
+===========================    ===========================================================================    =============
 
 .. _Bundle:
 
@@ -112,14 +113,15 @@ Bundle of modules: only generate module files, nothing to build/install
 Extra easyconfig parameters specific to ``Bundle`` easyblock
 ------------------------------------------------------------
 
-=====================    ===========================================================================    =============
-easyconfig parameter     description                                                                    default value
-=====================    ===========================================================================    =============
-``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
-``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
-``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
-``default_easyblock``    Default easyblock to use for components                                        ``None``     
-=====================    ===========================================================================    =============
+===========================    ===========================================================================    =============
+easyconfig parameter           description                                                                    default value
+===========================    ===========================================================================    =============
+``altroot``                    Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``                 List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_component_specs``    Default specs to use for every component                                       ``{}``       
+``default_easyblock``          Default easyblock to use for components                                        ``None``     
+===========================    ===========================================================================    =============
 
 Customised steps in ``Bundle`` easyblock
 ----------------------------------------
@@ -168,9 +170,9 @@ easyconfig parameter        description                                         
 ========================    =====================================================================    =============
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                    ``""``       
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)    ``None``     
-``tar_config_opts``         Override tar settings as determined by configure.                        ``False``    
 ``separate_build_dir``      Perform build in a separate directory                                    ``False``    
 ``srcdir``                  Source directory location to provide to cmake command                    ``None``     
+``tar_config_opts``         Override tar settings as determined by configure.                        ``False``    
 ========================    =====================================================================    =============
 
 Customised steps in ``CMakeMake`` easyblock
@@ -238,22 +240,23 @@ Extra easyconfig parameters specific to ``CMakePythonPackage`` easyblock
 ========================    =========================================================================================================    =============
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                            ``False``    
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
 ``separate_build_dir``      Perform build in a separate directory                                                                        ``False``    
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
 ``srcdir``                  Source directory location to provide to cmake command                                                        ``None``     
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``tar_config_opts``         Override tar settings as determined by configure.                                                            ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
-``options``                 Dictionary with extension options.                                                                           ``{}``       
 ========================    =========================================================================================================    =============
 
 Customised steps in ``CMakePythonPackage`` easyblock
@@ -278,12 +281,12 @@ Extra easyconfig parameters specific to ``CmdCp`` easyblock
 ========================    =====================================================================    ====================================================
 easyconfig parameter        description                                                              default value                                       
 ========================    =====================================================================    ====================================================
+``cmds_map``                List of regex/template command (with 'source'/'target' fields) tuples    ``[('.*', '$CC $CFLAGS %(source)s -o %(target)s')]``
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                    ``""``                                              
+``files_to_copy``           List of files or dirs to copy                                            ``[]``                                              
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)    ``None``                                            
 ``tar_config_opts``         Override tar settings as determined by configure.                        ``False``                                           
 ``with_configure``          Run configure script before building                                     ``False``                                           
-``files_to_copy``           List of files or dirs to copy                                            ``[]``                                              
-``cmds_map``                List of regex/template command (with 'source'/'target' fields) tuples    ``[('.*', '$CC $CFLAGS %(source)s -o %(target)s')]``
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)    ``None``                                            
 ========================    =====================================================================    ====================================================
 
 Customised steps in ``CmdCp`` easyblock
@@ -308,11 +311,11 @@ Extra easyconfig parameters specific to ``Conda`` easyblock
 easyconfig parameter      description                                                        default value
 ======================    ===============================================================    =============
 ``channels``              List of conda channels to pass to 'conda install'                  ``None``     
-``requirements``          Requirements specification to pass to 'conda install'              ``None``     
-``install_cmd``           Install command to be used.                                        ``None``     
-``staged_install``        Perform staged installation via subdirectory of build directory    ``False``    
 ``environment_file``      Conda environment.yml file to use with 'conda env create'          ``None``     
+``install_cmd``           Install command to be used.                                        ``None``     
 ``remote_environment``    Remote conda environment to use with 'conda env create'            ``None``     
+``requirements``          Requirements specification to pass to 'conda install'              ``None``     
+``staged_install``        Perform staged installation via subdirectory of build directory    ``False``    
 ======================    ===============================================================    =============
 
 Customised steps in ``Conda`` easyblock
@@ -406,20 +409,21 @@ Extra easyconfig parameters specific to ``ConfigureMakePythonPackage`` easyblock
 ========================    =========================================================================================================    =============
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                            ``False``    
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``tar_config_opts``         Override tar settings as determined by configure.                                                            ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
-``options``                 Dictionary with extension options.                                                                           ``{}``       
 ========================    =========================================================================================================    =============
 
 Customised steps in ``ConfigureMakePythonPackage`` easyblock
@@ -476,14 +480,15 @@ Compiler toolchain: generate module file only, nothing to build/install
 Extra easyconfig parameters specific to ``CrayToolchain`` easyblock
 -------------------------------------------------------------------
 
-=====================    ===========================================================================    =============
-easyconfig parameter     description                                                                    default value
-=====================    ===========================================================================    =============
-``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
-``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
-``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
-``default_easyblock``    Default easyblock to use for components                                        ``None``     
-=====================    ===========================================================================    =============
+===========================    ===========================================================================    =============
+easyconfig parameter           description                                                                    default value
+===========================    ===========================================================================    =============
+``altroot``                    Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``                 List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_component_specs``    Default specs to use for every component                                       ``{}``       
+``default_easyblock``          Default easyblock to use for components                                        ``None``     
+===========================    ===========================================================================    =============
 
 .. _FortranPythonPackage:
 
@@ -501,16 +506,17 @@ Extra easyconfig parameters specific to ``FortranPythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
-``options``                 Dictionary with extension options.                                                                           ``{}``       
 ========================    =========================================================================================================    =============
 
 Customised steps in ``FortranPythonPackage`` easyblock
@@ -536,11 +542,11 @@ Extra easyconfig parameters specific to ``IntelBase`` easyblock
 ============================    ===============================================================    ====================
 easyconfig parameter            description                                                        default value       
 ============================    ===============================================================    ====================
-``requires_runtime_license``    Boolean indicating whether or not a runtime license is required    ``True``            
-``usetmppath``                  Use temporary path for installation                                ``False``           
-``m32``                         Enable 32-bit toolchain                                            ``False``           
 ``components``                  List of components to install                                      ``None``            
 ``license_activation``          License activation type                                            ``"license_server"``
+``m32``                         Enable 32-bit toolchain                                            ``False``           
+``requires_runtime_license``    Boolean indicating whether or not a runtime license is required    ``True``            
+``usetmppath``                  Use temporary path for installation                                ``False``           
 ============================    ===============================================================    ====================
 
 Customised steps in ``IntelBase`` easyblock
@@ -568,8 +574,8 @@ Extra easyconfig parameters specific to ``JAR`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
+``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
 
 .. _MakeCp:
@@ -587,8 +593,8 @@ Extra easyconfig parameters specific to ``MakeCp`` easyblock
 ========================    =====================================================================    =============
 easyconfig parameter        description                                                              default value
 ========================    =====================================================================    =============
-``files_to_copy``           List of files or dirs to copy                                            ``[]``       
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                    ``""``       
+``files_to_copy``           List of files or dirs to copy                                            ``[]``       
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)    ``None``     
 ``tar_config_opts``         Override tar settings as determined by configure.                        ``False``    
 ``with_configure``          Run configure script before building                                     ``False``    
@@ -661,8 +667,8 @@ Extra easyconfig parameters specific to ``PackedBinary`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
+``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
 
 Customised steps in ``PackedBinary`` easyblock
@@ -684,8 +690,8 @@ Extra easyconfig parameters specific to ``PerlModule`` easyblock
 ====================    ==================================    =============
 easyconfig parameter    description                           default value
 ====================    ==================================    =============
-``runtest``             Run unit tests.                       ``"test"``   
 ``options``             Dictionary with extension options.    ``{}``       
+``runtest``             Run unit tests.                       ``"test"``   
 ====================    ==================================    =============
 
 Customised steps in ``PerlModule`` easyblock
@@ -710,16 +716,17 @@ Extra easyconfig parameters specific to ``PythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
-``options``                 Dictionary with extension options.                                                                           ``{}``       
 ========================    =========================================================================================================    =============
 
 Customised steps in ``PythonPackage`` easyblock
@@ -769,12 +776,12 @@ Extra easyconfig parameters specific to ``Rpm`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
-``postinstall``         Enable post install                                                ``False``    
 ``force``               Use force                                                          ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ``makesymlinks``        Create symlinks for listed paths                                   ``[]``       
+``postinstall``         Enable post install                                                ``False``    
 ``preinstall``          Enable pre install                                                 ``False``    
+``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
 
 Customised steps in ``Rpm`` easyblock
@@ -847,32 +854,34 @@ Support for generating a module file for the system compiler with specified name
 Extra easyconfig parameters specific to ``SystemCompiler`` easyblock
 --------------------------------------------------------------------
 
-==============================    ================================================================================================    ====================
-easyconfig parameter              description                                                                                         default value       
-==============================    ================================================================================================    ====================
-``configure_cmd_prefix``          Prefix to be glued before ./configure                                                               ``""``              
-``tar_config_opts``               Override tar settings as determined by configure.                                                   ``False``           
-``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                ``False``           
-``multilib``                      Build multilib gcc (both i386 and x86_64)                                                           ``False``           
-``clooguseisl``                   Use ISL with CLooG or not                                                                           ``False``           
-``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                               ``None``            
-``altroot``                       Software name of dependency to use to define $EBROOT for this bundle                                ``None``            
-``withisl``                       Build GCC with ISL support                                                                          ``False``           
-``altversion``                    Software name of dependency to use to define $EBVERSION for this bundle                             ``None``            
-``usetmppath``                    Use temporary path for installation                                                                 ``False``           
-``withlto``                       Enable LTO support                                                                                  ``True``            
-``withppl``                       Build GCC with PPL support                                                                          ``False``           
-``withlibiberty``                 Enable installing of libiberty                                                                      ``False``           
-``license_activation``            License activation type                                                                             ``"license_server"``
-``generate_standalone_module``    Add known path/library extensions and environment variables for the compiler to the final module    ``False``           
-``withcloog``                     Build GCC with CLooG support                                                                        ``False``           
-``m32``                           Enable 32-bit toolchain                                                                             ``False``           
-``languages``                     List of languages to build GCC for (--enable-languages)                                             ``[]``              
-``default_easyblock``             Default easyblock to use for components                                                             ``None``            
-``components``                    List of components to install: tuples w/ name, version and easyblock to use                         ``()``              
-``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                     ``True``            
-``pplwatchdog``                   Enable PPL watchdog                                                                                 ``False``           
-==============================    ================================================================================================    ====================
+==============================    =============================================================================================================================================================    ====================
+easyconfig parameter              description                                                                                                                                                      default value       
+==============================    =============================================================================================================================================================    ====================
+``altroot``                       Software name of dependency to use to define $EBROOT for this bundle                                                                                             ``None``            
+``altversion``                    Software name of dependency to use to define $EBVERSION for this bundle                                                                                          ``None``            
+``clooguseisl``                   Use ISL with CLooG or not                                                                                                                                        ``False``           
+``components``                    List of components to install: tuples w/ name, version and easyblock to use                                                                                      ``()``              
+``configure_cmd_prefix``          Prefix to be glued before ./configure                                                                                                                            ``""``              
+``default_component_specs``       Default specs to use for every component                                                                                                                         ``{}``              
+``default_easyblock``             Default easyblock to use for components                                                                                                                          ``None``            
+``generate_standalone_module``    Add known path/library extensions and environment variables for the compiler to the final module                                                                 ``False``           
+``generic``                       Build GCC and support libraries such that it runs on all processors of the target architecture (use False to enforce non-generic regardless of configuration)    ``None``            
+``languages``                     List of languages to build GCC for (--enable-languages)                                                                                                          ``[]``              
+``license_activation``            License activation type                                                                                                                                          ``"license_server"``
+``m32``                           Enable 32-bit toolchain                                                                                                                                          ``False``           
+``multilib``                      Build multilib gcc (both i386 and x86_64)                                                                                                                        ``False``           
+``pplwatchdog``                   Enable PPL watchdog                                                                                                                                              ``False``           
+``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                                                                             ``False``           
+``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                                                                                            ``None``            
+``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                                                                                  ``True``            
+``tar_config_opts``               Override tar settings as determined by configure.                                                                                                                ``False``           
+``usetmppath``                    Use temporary path for installation                                                                                                                              ``False``           
+``withcloog``                     Build GCC with CLooG support                                                                                                                                     ``False``           
+``withisl``                       Build GCC with ISL support                                                                                                                                       ``False``           
+``withlibiberty``                 Enable installing of libiberty                                                                                                                                   ``False``           
+``withlto``                       Enable LTO support                                                                                                                                               ``True``            
+``withppl``                       Build GCC with PPL support                                                                                                                                       ``False``           
+==============================    =============================================================================================================================================================    ====================
 
 .. _SystemMPI:
 
@@ -894,21 +903,22 @@ Extra easyconfig parameters specific to ``SystemMPI`` easyblock
 =================================    ================================================================================================    ====================
 easyconfig parameter                 description                                                                                         default value       
 =================================    ================================================================================================    ====================
-``configure_cmd_prefix``             Prefix to be glued before ./configure                                                               ``""``              
-``tar_config_opts``                  Override tar settings as determined by configure.                                                   ``False``           
-``license_activation``               License activation type                                                                             ``"license_server"``
-``set_mpi_wrapper_aliases_gcc``      Set compiler for mpigcc/mpigxx via aliases                                                          ``False``           
-``set_mpi_wrappers_compiler``        Override default compiler used by MPI wrapper commands                                              ``False``           
-``generate_standalone_module``       Add known path extensions and environment variables for the MPI installation to the final module    ``False``           
-``m32``                              Enable 32-bit toolchain                                                                             ``False``           
-``set_mpi_wrapper_aliases_intel``    Set compiler for mpiicc/mpiicpc/mpiifort via aliases                                                ``False``           
-``default_easyblock``                Default easyblock to use for components                                                             ``None``            
+``altroot``                          Software name of dependency to use to define $EBROOT for this bundle                                ``None``            
+``altversion``                       Software name of dependency to use to define $EBVERSION for this bundle                             ``None``            
 ``components``                       List of components to install: tuples w/ name, version and easyblock to use                         ``()``              
+``configure_cmd_prefix``             Prefix to be glued before ./configure                                                               ``""``              
+``default_component_specs``          Default specs to use for every component                                                            ``{}``              
+``default_easyblock``                Default easyblock to use for components                                                             ``None``            
+``generate_standalone_module``       Add known path extensions and environment variables for the MPI installation to the final module    ``False``           
+``license_activation``               License activation type                                                                             ``"license_server"``
+``m32``                              Enable 32-bit toolchain                                                                             ``False``           
 ``prefix_opt``                       Prefix command line option for configure script ('--prefix=' if None)                               ``None``            
 ``requires_runtime_license``         Boolean indicating whether or not a runtime license is required                                     ``True``            
-``altroot``                          Software name of dependency to use to define $EBROOT for this bundle                                ``None``            
+``set_mpi_wrapper_aliases_gcc``      Set compiler for mpigcc/mpigxx via aliases                                                          ``False``           
+``set_mpi_wrapper_aliases_intel``    Set compiler for mpiicc/mpiicpc/mpiifort via aliases                                                ``False``           
 ``set_mpi_wrappers_all``             Set (default) compiler for all MPI wrapper commands                                                 ``False``           
-``altversion``                       Software name of dependency to use to define $EBVERSION for this bundle                             ``None``            
+``set_mpi_wrappers_compiler``        Override default compiler used by MPI wrapper commands                                              ``False``           
+``tar_config_opts``                  Override tar settings as determined by configure.                                                   ``False``           
 ``usetmppath``                       Use temporary path for installation                                                                 ``False``           
 =================================    ================================================================================================    ====================
 
@@ -940,14 +950,15 @@ Compiler toolchain: generate module file only, nothing to build/install
 Extra easyconfig parameters specific to ``Toolchain`` easyblock
 ---------------------------------------------------------------
 
-=====================    ===========================================================================    =============
-easyconfig parameter     description                                                                    default value
-=====================    ===========================================================================    =============
-``altroot``              Software name of dependency to use to define $EBROOT for this bundle           ``None``     
-``altversion``           Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
-``components``           List of components to install: tuples w/ name, version and easyblock to use    ``()``       
-``default_easyblock``    Default easyblock to use for components                                        ``None``     
-=====================    ===========================================================================    =============
+===========================    ===========================================================================    =============
+easyconfig parameter           description                                                                    default value
+===========================    ===========================================================================    =============
+``altroot``                    Software name of dependency to use to define $EBROOT for this bundle           ``None``     
+``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
+``components``                 List of components to install: tuples w/ name, version and easyblock to use    ``()``       
+``default_component_specs``    Default specs to use for every component                                       ``{}``       
+``default_easyblock``          Default easyblock to use for components                                        ``None``     
+===========================    ===========================================================================    =============
 
 .. _VSCPythonPackage:
 
@@ -965,16 +976,17 @@ Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
-``options``                 Dictionary with extension options.                                                                           ``{}``       
 ========================    =========================================================================================================    =============
 
 .. _VersionIndependentPythonPackage:
@@ -993,16 +1005,17 @@ Extra easyconfig parameters specific to ``VersionIndependentPythonPackage`` easy
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
-``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``options``                 Dictionary with extension options.                                                                           ``{}``       
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
-``options``                 Dictionary with extension options.                                                                           ``{}``       
 ========================    =========================================================================================================    =============
 
 Customised steps in ``VersionIndependentPythonPackage`` easyblock
