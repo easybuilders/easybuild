@@ -24,13 +24,13 @@ bugfix/update release
 * various bug fixes, including:
 
   * fix order in result of gen_list_easyblocks and gen_easyblocks_overview_rst (`#2421 <https://github.com/easybuilders/easybuild-framework/pull/2421>`_)
-  * fix target account for branch pushed when using --new-pr (`#2426 <https://github.com/easybuilders/easybuild-framework/pull/2426>`_)
+  * fix target account for branch pushed when using ``--new-pr`` (`#2426 <https://github.com/easybuilders/easybuild-framework/pull/2426>`_)
 
 **easyblocks**
 
 * minor enhancements, including:
 
-  * make GROMACS easyblock select build type based on value for 'debug' in 'toolchainopts' (`#1374 <https://github.com/easybuilders/easybuild-easyblocks/pull/1374>`_)
+  * make GROMACS easyblock select build type based on value for '``debug``' in '``toolchainopts``' (`#1374 <https://github.com/easybuilders/easybuild-easyblocks/pull/1374>`_)
   * re-enable testing against environment modules, bump Lmod to 7.7.16 (`#1376 <https://github.com/easybuilders/easybuild-easyblocks/pull/1376>`_)
   * enhance Gurobi easyblock to support installing Python bindings (`#1378 <https://github.com/easybuilders/easybuild-easyblocks/pull/1378>`_)
 
@@ -48,11 +48,11 @@ bugfix/update release
 
   * re-enable testing against environment modules, bump Lmod to 7.7.16 (`#5944 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5944>`_)
   * add cghFLasso extension to R 3.4.3 easyconfigs (`#5953 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5953>`_)
-  * add 'Math::CDF' extension to recent Perl modules (`#5957 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5957>`_)
+  * add '``Math::CDF``' extension to recent Perl modules (`#5957 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5957>`_)
 
 * various bug fixes, including:
   
-  * add missing --enable-ld-version-script configure option for LibTIFF 4.0.9 built with GCCcore/6.4.0 (`#5945 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5945>`_)
+  * add missing ``--enable-ld-version-script`` configure option for LibTIFF 4.0.9 built with ``GCCcore/6.4.0`` (`#5945 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5945>`_)
   * hard disable UCX support in recent OpenMPI versions, to dance around bug in OpenMPI configure script (`#5949 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5949>`_)
 
 .. _release_notes_eb352:
