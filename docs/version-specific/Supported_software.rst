@@ -3,7 +3,7 @@
 List of supported software
 ==========================
 
-EasyBuild |version| supports 1435 different software packages (incl. toolchains, bundles):
+EasyBuild |version| supports 1437 different software packages (incl. toolchains, bundles):
 
 :ref:`list_software_letter_a` - :ref:`list_software_letter_b` - :ref:`list_software_letter_c` - :ref:`list_software_letter_d` - :ref:`list_software_letter_e` - :ref:`list_software_letter_f` - :ref:`list_software_letter_g` - :ref:`list_software_letter_h` - :ref:`list_software_letter_i` - :ref:`list_software_letter_j` - :ref:`list_software_letter_k` - :ref:`list_software_letter_l` - :ref:`list_software_letter_m` - :ref:`list_software_letter_n` - :ref:`list_software_letter_o` - :ref:`list_software_letter_p` - :ref:`list_software_letter_q` - :ref:`list_software_letter_r` - :ref:`list_software_letter_s` - :ref:`list_software_letter_t` - :ref:`list_software_letter_u` - :ref:`list_software_letter_v` - :ref:`list_software_letter_w` - :ref:`list_software_letter_x` - :ref:`list_software_letter_y` - :ref:`list_software_letter_z`
 
@@ -1460,6 +1460,7 @@ version       toolchain
 ``0.4.4``     ``dummy``          
 ``0.7.0``     ``GCCcore/6.4.0``  
 ``0.10.0``    ``GCCcore/6.4.0``  
+``0.11.0``    ``GCCcore/6.4.0``  
 ==========    ===================
 
 
@@ -1927,6 +1928,7 @@ version     versionsuffix         toolchain
 ``1.65``    ``-Python-2.7.11``    ``foss/2016a``                   
 ``1.68``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``  
 ``1.68``    ``-Python-3.5.2``     ``foss/2016b``, ``intel/2016b``  
+``1.70``    ``-Python-2.7.14``    ``intel/2017b``                  
 ``1.70``    ``-Python-3.6.1``     ``intel/2017a``                  
 ========    ==================    =================================
 
@@ -2587,7 +2589,7 @@ version      toolchain
 ---
 
 
-:ref:`list_software_cadaver_726` - :ref:`list_software_Caffe_469` - :ref:`list_software_cairo_526` - :ref:`list_software_cairomm_744` - :ref:`list_software_Calendrical_1106` - :ref:`list_software_Cantera_702` - :ref:`list_software_canu_423` - :ref:`list_software_CAP3_263` - :ref:`list_software_Cargo_492` - :ref:`list_software_CastXML_636` - :ref:`list_software_CatMAP_502` - :ref:`list_software_CBLAS_357` - :ref:`list_software_ccache_599` - :ref:`list_software_CCfits_572` - :ref:`list_software_cclib_509` - :ref:`list_software_CD-HIT_409` - :ref:`list_software_CDO_214` - :ref:`list_software_CEM_213` - :ref:`list_software_CFITSIO_529` - :ref:`list_software_cflow_539` - :ref:`list_software_CGAL_279` - :ref:`list_software_cgdb_400` - :ref:`list_software_CGNS_299` - :ref:`list_software_Chapel_589` - :ref:`list_software_CHARMM_440` - :ref:`list_software_CHASE_356` - :ref:`list_software_Check_478` - :ref:`list_software_CheMPS2_562` - :ref:`list_software_Chimera_697` - :ref:`list_software_ChimPipe_783` - :ref:`list_software_ChIP-Seq_666` - :ref:`list_software_CIRCexplorer_1170` - :ref:`list_software_CIRCexplorer2_1220` - :ref:`list_software_Circos_611` - :ref:`list_software_Circuitscape_1247` - :ref:`list_software_CIRI_295` - :ref:`list_software_Clang_485` - :ref:`list_software_CLAPACK_495` - :ref:`list_software_CLHEP_364` - :ref:`list_software_CLISP_379` - :ref:`list_software_CLooG_436` - :ref:`list_software_Clustal-Omega_1262` - :ref:`list_software_ClustalW2_865` - :ref:`list_software_Cluster-Buster_1412` - :ref:`list_software_ClusterShell_1242` - :ref:`list_software_CMake_449` - :ref:`list_software_CNVnator_779` - :ref:`list_software_Commet_613` - :ref:`list_software_configparser_1283` - :ref:`list_software_configurable-http-proxy_2381` - :ref:`list_software_ConnectomeWorkbench_1966` - :ref:`list_software_CONTRAfold_876` - :ref:`list_software_CONTRAlign_881` - :ref:`list_software_Cookiecutter_1265` - :ref:`list_software_Coot_405` - :ref:`list_software_Coreutils_954` - :ref:`list_software_Corkscrew_947` - :ref:`list_software_CosmoloPy_933` - :ref:`list_software_CP2K_272` - :ref:`list_software_CPLEX_380` - :ref:`list_software_cppcheck_833` - :ref:`list_software_CppUnit_707` - :ref:`list_software_cramtools_980` - :ref:`list_software_CrayCCE_602` - :ref:`list_software_CrayGNU_633` - :ref:`list_software_CrayIntel_907` - :ref:`list_software_CrayPGI_623` - :ref:`list_software_crb-blast_890` - :ref:`list_software_CRF++_305` - :ref:`list_software_CrossTalkZ_1008` - :ref:`list_software_CRPropa_663` - :ref:`list_software_CryptoMiniSat_1334` - :ref:`list_software_csvkit_660` - :ref:`list_software_ctffind_734` - :ref:`list_software_Cube_383` - :ref:`list_software_Cuby_403` - :ref:`list_software_CUDA_285` - :ref:`list_software_cuDNN_440` - :ref:`list_software_Cufflinks_933` - :ref:`list_software_cURL_342` - :ref:`list_software_custodian_970` - :ref:`list_software_cutadapt_854` - :ref:`list_software_CVS_236` - :ref:`list_software_CVXOPT_484` - :ref:`list_software_Cython_629`
+:ref:`list_software_cadaver_726` - :ref:`list_software_Caffe_469` - :ref:`list_software_cairo_526` - :ref:`list_software_cairomm_744` - :ref:`list_software_Calendrical_1106` - :ref:`list_software_Cantera_702` - :ref:`list_software_canu_423` - :ref:`list_software_CAP3_263` - :ref:`list_software_Cargo_492` - :ref:`list_software_CastXML_636` - :ref:`list_software_CatMAP_502` - :ref:`list_software_CBLAS_357` - :ref:`list_software_ccache_599` - :ref:`list_software_CCfits_572` - :ref:`list_software_cclib_509` - :ref:`list_software_CD-HIT_409` - :ref:`list_software_CDO_214` - :ref:`list_software_CEM_213` - :ref:`list_software_CFITSIO_529` - :ref:`list_software_cflow_539` - :ref:`list_software_CGAL_279` - :ref:`list_software_cgdb_400` - :ref:`list_software_CGNS_299` - :ref:`list_software_Chapel_589` - :ref:`list_software_CHARMM_440` - :ref:`list_software_CHASE_356` - :ref:`list_software_Check_478` - :ref:`list_software_CheMPS2_562` - :ref:`list_software_Chimera_697` - :ref:`list_software_ChimPipe_783` - :ref:`list_software_ChIP-Seq_666` - :ref:`list_software_CIRCexplorer_1170` - :ref:`list_software_CIRCexplorer2_1220` - :ref:`list_software_Circos_611` - :ref:`list_software_Circuitscape_1247` - :ref:`list_software_CIRI_295` - :ref:`list_software_Clang_485` - :ref:`list_software_CLAPACK_495` - :ref:`list_software_CLHEP_364` - :ref:`list_software_CLISP_379` - :ref:`list_software_CLooG_436` - :ref:`list_software_Clustal-Omega_1262` - :ref:`list_software_ClustalW2_865` - :ref:`list_software_Cluster-Buster_1412` - :ref:`list_software_ClusterShell_1242` - :ref:`list_software_CMake_449` - :ref:`list_software_CNVkit_559` - :ref:`list_software_CNVnator_779` - :ref:`list_software_Commet_613` - :ref:`list_software_configparser_1283` - :ref:`list_software_configurable-http-proxy_2381` - :ref:`list_software_ConnectomeWorkbench_1966` - :ref:`list_software_CONTRAfold_876` - :ref:`list_software_CONTRAlign_881` - :ref:`list_software_Cookiecutter_1265` - :ref:`list_software_Coot_405` - :ref:`list_software_Coreutils_954` - :ref:`list_software_Corkscrew_947` - :ref:`list_software_CosmoloPy_933` - :ref:`list_software_CP2K_272` - :ref:`list_software_CPLEX_380` - :ref:`list_software_cppcheck_833` - :ref:`list_software_CppUnit_707` - :ref:`list_software_cramtools_980` - :ref:`list_software_CrayCCE_602` - :ref:`list_software_CrayGNU_633` - :ref:`list_software_CrayIntel_907` - :ref:`list_software_CrayPGI_623` - :ref:`list_software_crb-blast_890` - :ref:`list_software_CRF++_305` - :ref:`list_software_CrossTalkZ_1008` - :ref:`list_software_CRPropa_663` - :ref:`list_software_CryptoMiniSat_1334` - :ref:`list_software_csvkit_660` - :ref:`list_software_ctffind_734` - :ref:`list_software_Cube_383` - :ref:`list_software_Cuby_403` - :ref:`list_software_CUDA_285` - :ref:`list_software_cuDNN_440` - :ref:`list_software_Cufflinks_933` - :ref:`list_software_cURL_342` - :ref:`list_software_custodian_970` - :ref:`list_software_cutadapt_854` - :ref:`list_software_CVS_236` - :ref:`list_software_CVXOPT_484` - :ref:`list_software_Cython_629`
 
 
 .. _list_software_cadaver_726:
@@ -3432,6 +3434,22 @@ version         toolchain
 ``3.10.1``      ``GCCcore/6.4.0``                                                                                                                                                                                 
 ``3.10.2``      ``GCCcore/6.4.0``                                                                                                                                                                                 
 ============    ==================================================================================================================================================================================================
+
+
+.. _list_software_CNVkit_559:
+
+*CNVkit*
+++++++++
+
+A command-line toolkit and Python library for detecting copy number variants and alterations  genome-wide from high-throughput sequencing.
+
+*homepage*: http://github.com/etal/cnvkit
+
+=========    ==================    ===============
+version      versionsuffix         toolchain      
+=========    ==================    ===============
+``0.9.2``    ``-Python-2.7.14``    ``intel/2017b``
+=========    ==================    ===============
 
 
 .. _list_software_CNVnator_779:
@@ -4951,6 +4969,7 @@ version       toolchain
 ``3.4.1``     ``dummy``
 ``3.5.0``     ``dummy``
 ``3.5.1``     ``dummy``
+``3.5.2``     ``dummy``
 ==========    =========
 
 
@@ -5911,7 +5930,7 @@ version      versionsuffix         toolchain
 ``3.3.4``    ``-PFFT-20150905``    ``intel/2015b``                                                                                                                                                                                                                                                                                                                                                                                             
 ``3.3.5``                          ``gompi/2016.07``, ``gompi/2016.09``, ``gompi/2016b``, ``gompic/2016.10``, ``intel/2016b``                                                                                                                                                                                                                                                                                                                  
 ``3.3.6``                          ``gimpi/2017b``, ``gompi/2017a``, ``gompi/2017b``, ``gompic/2017.01``, ``gompic/2017.02``, ``gompic/2017b``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``                                                                                                                                                                                                                                              
-``3.3.7``                          ``gimpi/2018a``, ``gompi/2018a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``                                                                                                                                                                                                                                                                                                                     
+``3.3.7``                          ``gimpi/2018a``, ``gompi/2018a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``, ``intel/2018a``                                                                                                                                                                                                                                                                                                    
 =========    ==================    ============================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -8868,14 +8887,15 @@ The Gurobi Optimizer is a state-of-the-art solver for mathematical programming. 
 
 *homepage*: http://www.gurobi.com
 
-=========    =========
-version      toolchain
-=========    =========
-``6.5.1``    ``dummy``
-``6.5.2``    ``dummy``
-``7.0.1``    ``dummy``
-``7.5.2``    ``dummy``
-=========    =========
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``6.5.1``                         ``dummy``      
+``6.5.2``                         ``dummy``      
+``7.0.1``                         ``dummy``      
+``7.5.2``                         ``dummy``      
+``7.5.2``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
 
 
 .. _list_software_gzip_442:
@@ -8902,7 +8922,7 @@ version    toolchain
 ---
 
 
-:ref:`list_software_h4toh5_540` - :ref:`list_software_H5hut_462` - :ref:`list_software_h5py_390` - :ref:`list_software_h5utils_718` - :ref:`list_software_Hadoop_603` - :ref:`list_software_hanythingondemand_1808` - :ref:`list_software_HAPGEN2_485` - :ref:`list_software_HarfBuzz_812` - :ref:`list_software_Harminv_725` - :ref:`list_software_HBase_451` - :ref:`list_software_HDF_210` - :ref:`list_software_HDF5_263` - :ref:`list_software_HDFView_621` - :ref:`list_software_HEALPix_587` - :ref:`list_software_help2man_791` - :ref:`list_software_HH-suite_743` - :ref:`list_software_HIPS_308` - :ref:`list_software_hisat_537` - :ref:`list_software_HISAT2_427` - :ref:`list_software_HMMER_377` - :ref:`list_software_Hoard_494` - :ref:`list_software_Horovod_737` - :ref:`list_software_horton_666` - :ref:`list_software_HPCBIOS_Bioinfo_1325` - :ref:`list_software_HPCBIOS_Debuggers_1535` - :ref:`list_software_HPCBIOS_LifeSciences_1812` - :ref:`list_software_HPCBIOS_Math_1009` - :ref:`list_software_HPCBIOS_Profilers_1565` - :ref:`list_software_HPCG_290` - :ref:`list_software_HPDBSCAN_579` - :ref:`list_software_HPL_228` - :ref:`list_software_htop_443` - :ref:`list_software_HTSeq_453` - :ref:`list_software_HTSlib_550` - :ref:`list_software_hub_319` - :ref:`list_software_hunspell_875` - :ref:`list_software_hwloc_541` - :ref:`list_software_Hyperopt_859` - :ref:`list_software_hyperspy_900` - :ref:`list_software_Hypre_520`
+:ref:`list_software_h4toh5_540` - :ref:`list_software_H5hut_462` - :ref:`list_software_h5py_390` - :ref:`list_software_h5utils_718` - :ref:`list_software_Hadoop_603` - :ref:`list_software_hanythingondemand_1808` - :ref:`list_software_HAPGEN2_485` - :ref:`list_software_HarfBuzz_812` - :ref:`list_software_Harminv_725` - :ref:`list_software_HBase_451` - :ref:`list_software_HDF_210` - :ref:`list_software_HDF5_263` - :ref:`list_software_HDFView_621` - :ref:`list_software_HEALPix_587` - :ref:`list_software_help2man_791` - :ref:`list_software_HH-suite_743` - :ref:`list_software_HIPS_308` - :ref:`list_software_hisat_537` - :ref:`list_software_HISAT2_427` - :ref:`list_software_HMMER_377` - :ref:`list_software_hmmlearn_852` - :ref:`list_software_Hoard_494` - :ref:`list_software_Horovod_737` - :ref:`list_software_horton_666` - :ref:`list_software_HPCBIOS_Bioinfo_1325` - :ref:`list_software_HPCBIOS_Debuggers_1535` - :ref:`list_software_HPCBIOS_LifeSciences_1812` - :ref:`list_software_HPCBIOS_Math_1009` - :ref:`list_software_HPCBIOS_Profilers_1565` - :ref:`list_software_HPCG_290` - :ref:`list_software_HPDBSCAN_579` - :ref:`list_software_HPL_228` - :ref:`list_software_htop_443` - :ref:`list_software_HTSeq_453` - :ref:`list_software_HTSlib_550` - :ref:`list_software_hub_319` - :ref:`list_software_hunspell_875` - :ref:`list_software_hwloc_541` - :ref:`list_software_Hyperopt_859` - :ref:`list_software_hyperspy_900` - :ref:`list_software_Hypre_520`
 
 
 .. _list_software_h4toh5_540:
@@ -9333,6 +9353,22 @@ version      toolchain
 ``3.1b1``    ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/6.2.5``
 ``3.1b2``    ``foss/2016a``, ``intel/2015a``, ``intel/2017a``  
 =========    ==================================================
+
+
+.. _list_software_hmmlearn_852:
+
+*hmmlearn*
+++++++++++
+
+hmmlearn is a set of algorithms for unsupervised learning and inference of Hidden Markov Models
+
+*homepage*: https://github.com/hmmlearn/hmmlearn
+
+=========    ==================    ===============
+version      versionsuffix         toolchain      
+=========    ==================    ===============
+``0.2.0``    ``-Python-2.7.14``    ``intel/2017b``
+=========    ==================    ===============
 
 
 .. _list_software_Hoard_494:
@@ -10522,6 +10558,7 @@ version          toolchain
 ``5.16-55.0``    ``intel/2015b``
 ``5.21-60.0``    ``intel/2015b``
 ``5.26-65.0``    ``intel/2017b``
+``5.27-66.0``    ``intel/2017b``
 =============    ===============
 
 
@@ -13874,6 +13911,8 @@ version      versionsuffix                        toolchain
 ``2.1.0``    ``-Python-3.6.3``                    ``foss/2017b``, ``intel/2017b``                                                        
 ``2.1.1``    ``-Python-2.7.14``                   ``intel/2017b``                                                                        
 ``2.1.1``    ``-Python-3.6.3``                    ``foss/2017b``, ``intel/2017b``                                                        
+``2.1.2``    ``-Python-2.7.14``                   ``foss/2018a``                                                                         
+``2.1.2``    ``-Python-3.6.4``                    ``foss/2018a``                                                                         
 =========    =================================    =======================================================================================
 
 
@@ -18245,6 +18284,7 @@ version      versionsuffix              toolchain
 ``17.1``     ``-GCC-6.3.0-2.27``        ``dummy``
 ``17.3``     ``-GCC-6.3.0-2.28``        ``dummy``
 ``17.4``     ``-GCC-6.4.0-2.28``        ``dummy``
+``17.10``    ``-GCC-6.4.0-2.28``        ``dummy``
 =========    =======================    =========
 
 
@@ -18492,6 +18532,7 @@ version      versionsuffix                        toolchain
 ``4.3.0``    ``-Python-2.7.13``                   ``intel/2017a``                
 ``4.3.0``    ``-Python-2.7.14``                   ``intel/2017b``                
 ``4.3.0``    ``-Python-3.6.3``                    ``foss/2017b``                 
+``5.0.0``    ``-Python-2.7.14``                   ``intel/2017b``                
 ``5.0.0``    ``-Python-3.6.3``                    ``intel/2017b``                
 =========    =================================    ===============================
 
@@ -20011,6 +20052,7 @@ version         versionsuffix         toolchain
 ``0.12.0.1``    ``-Python-3.6.3``     ``intel/2017b``                
 ``0.13``        ``-Python-2.7.14``    ``intel/2017b``                
 ``0.13.0``      ``-Python-3.6.3``     ``intel/2017b``                
+``0.14``        ``-Python-2.7.14``    ``intel/2017b``                
 ============    ==================    ===============================
 
 
@@ -22612,7 +22654,7 @@ version          toolchain
 
 Singularity is a portable application stack packaging and runtime utility.
 
-*homepage*: http://gmkurtzer.github.io/singularity
+*homepage*: http://singularity.lbl.gov
 
 =========    ==================
 version      toolchain         
@@ -22954,11 +22996,11 @@ SOAPdenovo is a novel short-read assembly method that can build a   de novo draf
 
 *homepage*: http://soap.genomics.org.cn/index.html
 
-========    ====================================================================================
-version     toolchain                                                                           
-========    ====================================================================================
-``r240``    ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``
-========    ====================================================================================
+========    ========================================================================================================
+version     toolchain                                                                                               
+========    ========================================================================================================
+``r240``    ``GCC/5.4.0-2.26``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``
+========    ========================================================================================================
 
 
 .. _list_software_SOAPec_507:
@@ -24122,6 +24164,7 @@ version       versionsuffix            toolchain
 ``1.4.0``     ``-Python-3.6.3``        ``foss/2017b``, ``intel/2017b``                  
 ``1.4.1``     ``-Python-3.6.3``        ``foss/2017b``                                   
 ``1.5.0``     ``-Python-3.6.3``        ``foss/2017b``, ``goolfc/2017b``, ``intel/2017b``
+``1.6.0``     ``-Python-3.6.4``        ``foss/2018a``                                   
 ==========    =====================    =================================================
 
 
@@ -24359,6 +24402,7 @@ version       versionsuffix        toolchain
 ``8.6.5``                          ``GCC/5.4.0-2.26``, ``GCCcore/6.3.0``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``iccifort/2016.3.210-GCC-5.4.0-2.26``, ``intel/2016b``                                                                                                                                     
 ``8.6.6``                          ``foss/2017a``, ``intel/2017a``                                                                                                                                                                                                                                                      
 ``8.6.7``                          ``foss/2017b``, ``intel/2017b``                                                                                                                                                                                                                                                      
+``8.6.8``                          ``foss/2018a``                                                                                                                                                                                                                                                                       
 ==========    =================    =====================================================================================================================================================================================================================================================================================
 
 
@@ -24371,15 +24415,16 @@ Tkinter module, built with the Python buildsystem
 
 *homepage*: http://python.org/
 
-==========    ==================    ===============================
-version       versionsuffix         toolchain                      
-==========    ==================    ===============================
-``2.7.13``    ``-Python-2.7.13``    ``foss/2017a``, ``intel/2017a``
-``2.7.14``    ``-Python-2.7.14``    ``foss/2017b``, ``intel/2017b``
-``3.6.1``     ``-Python-3.6.1``     ``foss/2017a``, ``intel/2017a``
-``3.6.2``     ``-Python-3.6.2``     ``foss/2017b``                 
-``3.6.3``     ``-Python-3.6.3``     ``foss/2017b``, ``intel/2017b``
-==========    ==================    ===============================
+==========    ==================    ===============================================
+version       versionsuffix         toolchain                                      
+==========    ==================    ===============================================
+``2.7.13``    ``-Python-2.7.13``    ``foss/2017a``, ``intel/2017a``                
+``2.7.14``    ``-Python-2.7.14``    ``foss/2017b``, ``foss/2018a``, ``intel/2017b``
+``3.6.1``     ``-Python-3.6.1``     ``foss/2017a``, ``intel/2017a``                
+``3.6.2``     ``-Python-3.6.2``     ``foss/2017b``                                 
+``3.6.3``     ``-Python-3.6.3``     ``foss/2017b``, ``intel/2017b``                
+``3.6.4``     ``-Python-3.6.4``     ``foss/2018a``                                 
+==========    ==================    ===============================================
 
 
 .. _list_software_tmux_462:
@@ -25511,6 +25556,7 @@ version       versionsuffix         toolchain
 ``0.29.0``    ``-Python-3.5.1``     ``foss/2016a``                                   
 ``0.30.0``    ``-Python-2.7.14``    ``intel/2017b``                                  
 ``0.30.0``    ``-Python-3.6.3``     ``foss/2017b``, ``goolfc/2017b``, ``intel/2017b``
+``0.30.0``    ``-Python-3.6.4``     ``foss/2018a``                                   
 ==========    ==================    =================================================
 
 
@@ -25599,6 +25645,7 @@ version      versionsuffix       toolchain
 ``1.6.7``    ``-intel-2016b``    ``dummy``      
 ``1.6.7``    ``-intel-2017a``    ``dummy``      
 ``1.6.7``    ``-intel-2017b``    ``dummy``      
+``1.6.8``    ``-intel-2018a``    ``dummy``      
 =========    ================    ===============
 
 
