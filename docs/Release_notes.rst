@@ -3,9 +3,57 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,396** different software packages,
+The latest version of EasyBuild provides support for building and installing **1,398** different software packages,
 using 26 different (compiler) toolchains. It contains 193 software-specific easyblocks and 31 generic easyblocks,
-alongside 8,485 easyconfig files.
+alongside 8,505 easyconfig files.
+
+.. _release_notes_eb353:
+
+v3.5.3 (March 7th 2018)
+-----------------------
+
+bugfix/update release
+
+**framework**
+
+* various enhancements, including:
+
+  * re-enable testing against environment modules, bump Lmod to 7.7.16 (`#2425 <https://github.com/easybuilders/easybuild-framework/pull/2425>`_)
+  * print which hook is being executed in the command line output (`#2427 <https://github.com/easybuilders/easybuild-framework/pull/2427>`_)
+
+* various bug fixes, including:
+
+  * fix order in result of gen_list_easyblocks and gen_easyblocks_overview_rst (`#2421 <https://github.com/easybuilders/easybuild-framework/pull/2421>`_)
+  * fix target account for branch pushed when using ``--new-pr`` (`#2426 <https://github.com/easybuilders/easybuild-framework/pull/2426>`_)
+
+**easyblocks**
+
+* minor enhancements, including:
+
+  * make GROMACS easyblock select build type based on value for '``debug``' in '``toolchainopts``' (`#1374 <https://github.com/easybuilders/easybuild-easyblocks/pull/1374>`_)
+  * re-enable testing against environment modules, bump Lmod to 7.7.16 (`#1376 <https://github.com/easybuilders/easybuild-easyblocks/pull/1376>`_)
+  * enhance Gurobi easyblock to support installing Python bindings (`#1378 <https://github.com/easybuilders/easybuild-easyblocks/pull/1378>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 2 new software packages:
+
+  * CNVkit and hmmlearn (`#5954 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5954>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * matplotlib 2.1.2, TensorFlow 1.6.0
+
+* minor enhancements, including:
+
+  * re-enable testing against environment modules, bump Lmod to 7.7.16 (`#5944 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5944>`_)
+  * add cghFLasso extension to R 3.4.3 easyconfigs (`#5953 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5953>`_)
+  * add '``Math::CDF``' extension to recent Perl modules (`#5957 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5957>`_)
+
+* various bug fixes, including:
+  
+  * add missing ``--enable-ld-version-script`` configure option for LibTIFF 4.0.9 built with ``GCCcore/6.4.0`` (`#5945 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5945>`_)
+  * hard disable UCX support in recent OpenMPI versions, to dance around bug in OpenMPI configure script (`#5949 <https://github.com/easybuilders/easybuild-easyconfigs/pull/5949>`_)
 
 .. _release_notes_eb352:
 
