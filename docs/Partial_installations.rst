@@ -43,6 +43,32 @@ Example usage::
  == temporary directory /tmp/eb-X2Z0b7 has been removed.
 
 
+.. _partial_installation_fetch:
+
+Fetching sources with ``--fetch``
+---------------------------------
+
+It may be usefull to be able to batch-download sources on a machine where no easybuild dependency are installed. The
+``--fetch`` option adress this requirement. This options implies ``--stop fetch``, ``--ignore-osdeps`` and does not
+require a modules tool to be installed. Ie. ``pip install easybuild`` only allows to use ``eb easyconfig.eb --fetch``
+without configuring further easybuild.
+
+Example usage::
+
+ $ eb GCCcore-6.2.0.eb --fetch
+ == temporary log file in case of crash /tmp/eb-1ZZX2b/easybuild-NSmm5P.log
+ == processing EasyBuild easyconfig /home/example/GCCcore-6.2.0.eb
+ == building and installing GCCcore/6.2.0...
+ == fetching files...
+ == COMPLETED: Installation STOPPED successfully
+ == Results of the build can be found in the log file(s) /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCCcore-6.2.0-20180330.170523.log
+ == Build succeeded for 1 out of 1
+ == Temporary log file(s) /tmp/eb-1ZZX2b/easybuild-NSmm5P.log* have been removed.
+ == Temporary directory /tmp/eb-1ZZX2b has been removed.
+
+..note::
+  It can be used in conjunction with the ``--robot`` and ``--robot-path`` options to download sources of the whole dependency tree of an easyconfig.
+
 .. _partial_installation_skip:
 
 Installing additional extensions using ``-k``/``-skip``
