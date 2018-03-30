@@ -66,8 +66,13 @@ Example usage::
  == Temporary log file(s) /tmp/eb-1ZZX2b/easybuild-NSmm5P.log* have been removed.
  == Temporary directory /tmp/eb-1ZZX2b has been removed.
 
-..note::
-  It can be used in conjunction with the ``--robot`` and ``--robot-path`` options to download sources of the whole dependency tree of an easyconfig.
+.. note::
+  It can be used in conjunction with the ``--robot`` and ``--robot-path`` options to download sources of the whole
+  dependency tree of an easyconfig (see :ref:`use_robot`).
+
+.. note::
+  Sources will be downloaded in the default location (see :ref:`sourcepath`). Use ``--sourcepath`` option to amend
+  it.
 
 .. _partial_installation_skip:
 
