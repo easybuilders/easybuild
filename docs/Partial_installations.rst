@@ -48,11 +48,10 @@ Example usage::
 Fetching sources with ``--fetch``
 ---------------------------------
 
-It may be usefull to be able to batch-download sources on a machine where no easybuild dependency are installed. The
-``--fetch`` option adress this requirement. This options implies ``--stop fetch``, ``--ignore-osdeps`` and does not
+It may be useful to be able to batch-download sources on a machine where no easybuild dependency are installed. The
+``--fetch`` option addresses this requirement. This option implies ``--stop fetch``, ``--ignore-osdeps`` and does not
 require a modules tool to be installed. Ie. ``pip install easybuild`` only allows to use ``eb easyconfig.eb --fetch``
 without configuring further easybuild.
-
 Example usage::
 
  $ eb GCCcore-6.2.0.eb --fetch
