@@ -182,7 +182,7 @@ Since EasyBuild v3.3.0, the checksum type is determined by looking at the length
 
 Other checksum types are also supported: ``adler32``, ``crc32``, ``sha1``, ``sha512``, ``size`` (filesize in bytes).
 To provide checksum values of a specific type, elements of the ``checksums`` list can also be 2-element tuples
-of the form ``('<checksum value>', '<checksum type>')``.
+of the form ``('<checksum type>', '<checksum value>')``.
 
 The intention is to move towards making ``sha256`` the recommended and default checksum type.
 
