@@ -1,166 +1,201 @@
 .. _singularity_support:
 
-EasyBuild Singularity 0.1
-===========================
+EasyBuild Singularity (Experimental)
+====================================
 
 Singularity Options
 -------------------
 
-``eb`` comes with a few options to control singularity configuration for creating
+``eb`` comes with a several options to control singularity configuration for creating
 singularity recipe and containers.
 
-See below for the Singularity options.
+Shown below is a list of container options.
 
 .. code::
 
-   Singularity options:
-    Options passed to EasyBuild for generating Singularity definition files. (configfile section singularity)
 
-    --buildimage        Build container will require sudo privileges!  (def False)
-    --imageformat=IMAGEFORMAT
-                        Image format for singularity container. (type choice; def squashfs) (choices: squashfs, ext3,
-                        sandbox)
-    --imagename=IMAGENAME
-                        Custom name of image (defaults to name of easyconfig)
-    --singularity       Enabling Singularity Integration (def False)
-    --singularity-bootstrap=SINGULARITY-BOOTSTRAP
-                         Singularity bootstrap agent.   Format: --singularity-bootstrap localimage:/path/to/image.img
-                        --singularity-bootstrap shub:<image>:<tag> --singularity-bootstrap docker:<image>:<tag>  (type <type
-                        'str'>; def '')
+   -C, --containerize  Generate container recipe/image (def False)
 
-There is another option ``--singularitypath``  that is part of a configuration options in Easybuild.
+    --containerpath=CONTAINERPATH
+                        Location where container recipe & image will be stored (def /home/siddis14/.local/easybuild/containers)
 
-.. code::
+  Container options:
+    Options related to generating container recipes & images (configfile section container)
 
-    --singularitypath=SINGULARITYPATH
-                            Path where definition and container will be written.  (def /home/siddis14/.local/easybuild/singularity)
-
+    --container-base=BASE
+                        Base for container image. Examples (for Singularity): --container-base localimage:/path/to/image.img, --container-base shub:<image>:<tag>, --container-base docker:<image>:<tag>
+                        (type <type 'str'>)
+    --container-build-image
+                        Build container image (requires sudo privileges!) (def False)
+    --container-image-format=IMAGE-FORMAT
+                        Container image format (type choice) (choices: ext3, sandbox, squashfs)
+    --container-image-name=IMAGE-NAME
+                        Custom name for container image (defaults to name of easyconfig)
+    --container-type=TYPE
+                        Type of container recipe/image to create (type choice; def singularity) (choices: docker, singularity)
 
 
-You must specify ``--singularity`` and ``--singularity-bootstrap`` with ``eb`` to tell Easybuild to enable Singularity and specify
-a bootstrap agent. Easybuild will generate recipe files and build container if ``--buildimage`` is specified. 
+EasyBuild Base Containers
+-------------------------
 
-Easybuild will write recipe and container in directory specified by ``--singularitypath``. By default this will be ``$HOME/.local/easybuild/singularity`` but this can be changed to any directory in filesystem
-
-
-You can alter the singularity path by setting the configuration in command line, environment variable, or configuration file.
-
-To specify the path on command line use the following
-
-.. code::
-
-        eb --singularitypath=/path/to/easybuild_containers
-        
-       
-To specify the path using environment variable use the environment **EASYBUILD_SINGULARITYPATH**
- 
-.. code::
- 
-        export EASYBUILD_SINGULARITYPATH=$HOME
-        eb --show-full-config | grep singularitypath
-        singularitypath                           (E) = /home/siddis14
-
-To set singularitypath in configuration file you can do
-
-.. code::
-
-        [config]
-        singularitypath = /path/to/easybuild_containers
-        
-
-If you are building containers please choose a path in filesystem with decent storage so you don't run into space issue. Singularity
-will pull metadata during the builds and each image can range from several hundred MBs to few GBs depending on application. 
-
-Singularity Recipes
--------------------
-
-easybuild will generate singularity recipe files that are used for building Singularity containers. Users can build containers on-prem or cloud. You may build your containers through ``singularity`` command or use ``eb --buildimage`` which will invoke ``singularity build``. You must be root to do this operation. Also note you must have singularity 2.4 to use this feature since eb will invoke ``singularity build`` prior version of singularity used ``singularity bootstrap`` which is deprecated 
-
-If you dont have root, you may upload your recipe to github and use Singularity Hub to build your containers.
-
-To get started there is a bootstrap easybuild singularity container for centos 7.3.1611 and centos 7.4.1708 in Singularity HUB. You may pull these containers from SHUB to see how they are build.
+To get started there are two easybuild bootstrap containers for centos 7.3.1611 and centos 7.4.1708 in Singularity HUB. You may pull these containers from SHUB to see how they are built.
 
 .. code::
 
         singularity pull shub://shahzebsiddiqui/eb-singularity:centos-7.3.1611
         singularity pull shub://shahzebsiddiqui/eb-singularity:centos-7.4.1708
 
-You will be using these images with ``--singularity-bootstrap`` to initialize the base environment to build your easybuild containers.
+You will be using these images with ``--container-base`` with ``shub`` option to initialize the base container (i.e Bootstrap)
 
-Shown below is an examples for building Anaconda3 with centos 7.3
+In the future, easybuild will provide a few base containers that could be available in SHUB and DockerHUB.
+
+
+Modifying Container Path
+------------------------
+
+You may want to modify path where to write container and recipe file. This can be done at the command line ``--containerpath``, environment variable ``EASYBUILD_CONTAINERPATH`` or configuration file
+``$HOME/.local/easybuild/config.cfg``
+
+
+The default path will be ``$HOME/.local/easybuild/containers`` but this can be changed to any directory in filesystem
+
+
+Command Line
+~~~~~~~~~~~~
+
+.. code::
+
+        eb --containerpathpath=/path/to/easybuild_containers
+
+
+Environment Variable
+~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-        
-        $  eb Anaconda3-5.0.1.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611
-        == temporary log file in case of crash /tmp/eb-Mv7p_5/easybuild-JSlXlo.log
-        Singularity tool found at /usr/local/bin/singularity
-        Singularity version is 2.4 or higher ... OK
-        Singularity Version is 2.4
-        Writing Singularity Definition File: /home/siddis14/.local/easybuild/singularity/Singularity.Anaconda3-5.0.1      
-        
-By default easybuild singularity supports EasyBuildMNS module naming scheme but option was added to support HiearchicalMNS. Adding this option further complicates environment inside container and depending on community feedback this option could be deprecated for Singularity. The easybuild bootstrap installs Lmod and assumes eb will generate Lua modules. In HierarchicalMNS you will have a different moduletree path as pose to EasyBuildMNS. To demonstrate this example see the difference in %environment section with EasyBuildMNS and HierarchicalMNS
+        export EASYBUILD_CONTAINERPATH=$HOME
+        eb --show-full-config | grep containerpath
+        containerpath                           (E) = /home/siddis14
+
+Configuration File
+~~~~~~~~~~~~~~~~~~
 
 .. code::
-        
-        eb Anaconda3-5.0.1.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611
-        
-        BootStrap: shub
-        From: shahzebsiddiqui/eb-singularity:centos-7.3.1611
 
-        %post
-        su - easybuild
-        eb Anaconda3-5.0.1.eb --robot --installpath=/app/ --prefix=/scratch --tmpdir=/scratch/tmp  --module-naming-scheme=EasyBuildMNS
-        exit
-        rm -rf /scratch/tmp/*
-        rm -rf /scratch/build
-        rm -rf /scratch/sources
-        rm -rf /scratch/ebfiles_repo
+        [config]
+        containerpath = /path/to/easybuild_containers
 
-        %runscript
-        eval "$@"
 
-        %environment
-        source /etc/profile
-        module use /app/modules/all/
-        module load Anaconda3/5.0.1
+.. Note::
 
-        %labels
+    If you are building containers please choose a path in filesystem with sufficient storage so you don't run out of space. Singularity
+    will pull metadata during the builds and each image can range from several hundred MBs to few GBs depending on application.
 
-In HierarchicalMNS the module file name and ``module use `` will be different 
+Singularity Recipes
+-------------------
+
+easybuild will generate singularity recipe files that are used for building Singularity containers. Users can build containers on-prem or cloud. You may build your containers through ``singularity`` command or use ``eb --container-build`` which will invoke ``sudo singularity build``. You must be root to do this operation or have sudo rights. Also note you must have singularity 2.4 to use this feature since eb will invoke ``singularity build`` prior version of singularity used ``singularity bootstrap`` which is deprecated
+
+If you dont have root, you may upload your recipe to github and use Singularity Hub to build your containers.
+
+Getting Started
+---------------
+
+In order to use easybuild with singularity you must use the option ``--experimental`` for the time being.
+
+If you want to build the singularity recipe for ``M4-1.4.17.eb`` with the base container ``shahzebsiddiqui/eb-singularity:centos-7.3.1611`` then you can do the following
 
 .. code::
-        
-        eb Anaconda3-5.0.1.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --module-naming-scheme=HierarchicalMNS
-        
-        BootStrap: shub
-        From: shahzebsiddiqui/eb-singularity:centos-7.3.1611
 
-        %post
-        su - easybuild
-        eb Anaconda3-5.0.1.eb --robot --installpath=/app/ --prefix=/scratch --tmpdir=/scratch/tmp  --module-naming-scheme=HierarchicalMNS
-        exit
-        rm -rf /scratch/tmp/*
-        rm -rf /scratch/build
-        rm -rf /scratch/sources
-        rm -rf /scratch/ebfiles_repo
+   $ eb M4-1.4.17.eb -C --experimental --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611
+   == temporary log file in case of crash /tmp/eb-nuDM_3/easybuild-Y0PyDr.log
+   == Singularity definition file created at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17
+   == Temporary log file(s) /tmp/eb-nuDM_3/easybuild-Y0PyDr.log* have been removed.
+   == Temporary directory /tmp/eb-nuDM_3 has been removed.
 
-        %runscript
-        eval "$@"
+The recipe file will be in the format ``Singularity.<easyconfig>`` by default which is the intended if you plan to build these containers in SHUB. For more information on Singularity Recipes for Singularity Hub see https://github.com/singularityhub/singularityhub.github.io/wiki/Build-A-Container 
 
-        %environment
-        source /etc/profile
-        module use /app/modules/all/Core
-        module load Anaconda3/5.0.1
+If you try rerunning the command you will get the following error
 
-        %labels
+.. code::
 
-Bootstraping containers with different module naming scheme can be problematic and this has not been tested.
+  $ eb M4-1.4.17.eb -C --experimental --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611
+   == temporary log file in case of crash /tmp/eb-t75EMP/easybuild-3c0F9i.log
+   ERROR: Container recipe at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17 already exists, not overwriting it without --force
 
-  
-You may change singularity bootstrap agent to docker or localimage. localimage bootstrap can be useful if you plan to build 
+
+This was intended to avoid overwriting singularity recipe files so in this case use the ``--force`` option to overwrite the recipe file.
+
+.. code::
+
+  $ eb M4-1.4.17.eb -C --experimental --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --force
+   == temporary log file in case of crash /tmp/eb-6wPdUe/easybuild-b9EzD_.log
+   == WARNING: overwriting existing container recipe at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17 due to --force
+   == Singularity definition file created at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17
+   == Temporary log file(s) /tmp/eb-6wPdUe/easybuild-b9EzD_.log* have been removed.
+   == Temporary directory /tmp/eb-6wPdUe has been removed.
+
+
+If you want to build a container and have sudo rights you may run the ``--container-build`` option. If you don't have sudo rights either copy the recipe to a system where you have sudo rights or build it in Singularity Hub. 
+
+.. code::
+
+   $ eb M4-1.4.17.eb -C --experimental --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --force --container-build
+   == temporary log file in case of crash /tmp/eb-WTrmaL/easybuild-zrAnfe.log
+   == Singularity tool found at /usr/local/bin/singularity
+   == Singularity version '2.4' is 2.4 or higher ... OK
+   == WARNING: overwriting existing container recipe at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17 due to --force
+   == Singularity definition file created at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17
+   == Running 'sudo singularity build  /home/siddis14/.local/easybuild/containers/M4-1.4.17.simg /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17', you may need to enter your 'sudo' password...
+   [sudo] password for siddis14:
+   == Singularity image created at /home/siddis14/.local/easybuild/containers/M4-1.4.17.simg
+   == Temporary log file(s) /tmp/eb-WTrmaL/easybuild-zrAnfe.log* have been removed.
+   == Temporary directory /tmp/eb-WTrmaL has been removed.
+
+easybuild will build containers using squashfs format (.simg) which is the default image format for singularity containers. Now that you have a container you may shell inside the environment and see the modules. Note you must be in interactive shell (``singularity shell -s /bin/bash``) inside the container if you want ``module`` command to work properly inside the container. This is only an issue with bash and Lmod for more details see https://lmod.readthedocs.io/en/latest/030_installing.html#issues-with-bash 
+
+.. code::
+
+   $ singularity shell -s /bin/bash /home/siddis14/.local/easybuild/containers/M4-1.4.17.simg
+   Singularity: Invoking an interactive shell within container...
+
+   Singularity> ml av
+
+   ---------------------------------------------------------------------------------------------- /app/modules/all -----------------------------------------------------------------------------------------------
+      M4/1.4.17 (L)
+
+   ------------------------------------------------------------------------------------ /usr/share/lmod/lmod/modulefiles/Core ------------------------------------------------------------------------------------
+      lmod/6.5.1    settarg/6.5.1
+
+
+Note that module will be loaded automatically , if you want to test m4 you may do the following. Note that you don't need to load any module since this is done automatically
+
+.. code::
+
+   $ singularity exec  /home/siddis14/.local/easybuild/containers/M4-1.4.17.simg m4 --version
+
+   m4 (GNU M4) 1.4.17
+   Copyright (C) 2013 Free Software Foundation, Inc.
+   License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+   This is free software: you are free to change and redistribute it.
+   There is NO WARRANTY, to the extent permitted by law.
+   
+
+easybuild will install apps in ``/app/`` so you can run ``which`` command to determine if your binary is from easybuild or a system binary
+
+.. code::
+
+   $ singularity exec  /home/siddis14/.local/easybuild/containers/M4-1.4.17.simg which m4
+   /app/software/M4/1.4.17/bin/m4
+
+
+Other Bootstrap options
+-----------------------
+
+
+You may change singularity bootstrap agent to docker or localimage. localimage bootstrap can be useful if you plan to build
 containers on-prem. Let's suppose you do the following
-        
+
 .. code::
 
         cd $HOME
@@ -170,97 +205,136 @@ Now you can specify localimage as bootstrap as follows
 
 .. code::
 
-        eb Anaconda3-5.0.1.eb --singularity --singularity-bootstrap localimage:$HOME/shahzebsiddiqui-eb-singularity-eb_images.simg
+   [siddis14@amrndhl1157 easybuild-framework]$ eb Anaconda3-4.2.0.eb -C --container-base localimage:$HOME/shahzebsiddiqui-eb-singularity-eb_images.simg --experimental
+   == temporary log file in case of crash /tmp/eb-Wml38a/easybuild-0084Nv.log
+   == Singularity definition file created at /home/siddis14/.local/easybuild/containers/Singularity.Anaconda3-4.2.0
+   == Temporary log file(s) /tmp/eb-Wml38a/easybuild-0084Nv.log* have been removed.
+   == Temporary directory /tmp/eb-Wml38a has been removed.
 
-Build images
+If we peek into the recipe file we notice the ``Bootstrap:`` section is will use ``localimage`` and ``From:`` will use the container we pulled.
+
+.. code::
+
+   [siddis14@amrndhl1157 easybuild-framework]$ head  /home/siddis14/.local/easybuild/containers/Singularity.Anaconda3-4.2.0
+
+   Bootstrap: localimage
+   From: /home/siddis14/shahzebsiddiqui-eb-singularity-eb_images.simg
+
+easybuild will do some checks to ensure you specify a valid container for bootstrapping the container. For instance if user specifies an invalid path you will get the following
+
+.. code::
+
+   [siddis14@amrndhl1157 easybuild-framework]$ eb Anaconda3-4.2.0.eb -C --container-base localimage:$HOME/shahzebsiddiqui-eb-singularity-eb_images.simg1 --experimental
+   == temporary log file in case of crash /tmp/eb-uBjx2_/easybuild-MrhODZ.log
+   ERROR: Singularity base image at specified path does not exist: /home/siddis14/shahzebsiddiqui-eb-singularity-eb_images.simg1
+
+Easybuild will only bootstrap from squashfs(.simg) and ext3(.img) image formats. easybuild will look for file extension so in the case of localimage bootstrap you may get the following error 
+
+.. code::
+
+   [siddis14@amrndhl1157 easybuild-framework]$  eb Anaconda3-4.2.0.eb -C --container-base localimage:$HOME/.local/easybuild/containers/git-lfs-1.1.1/ --experimental
+   == temporary log file in case of crash /tmp/eb-EoN_Dw/easybuild-7_P_YM.log
+   ERROR: Invalid image extension '' must be .img or .simg
+
+Currently there is no easybuild base container in docker which be coming soon. You may still try to bootstrap with docker container but it will not work for building images. easybuild can generate the recipe files with docker bootstrap.        
+
+.. code::
+
+   $ eb M4-1.4.17.eb -C --experimental --container-base docker:centos:7.3.1611 --force
+   == temporary log file in case of crash /tmp/eb-Ya8D6t/easybuild-HIlT6S.log
+   == WARNING: overwriting existing container recipe at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17 due to --force
+   == Singularity definition file created at /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17
+   == Temporary log file(s) /tmp/eb-Ya8D6t/easybuild-HIlT6S.log* have been removed.
+   == Temporary directory /tmp/eb-Ya8D6t has been removed.
+
+   $ head /home/siddis14/.local/easybuild/containers/Singularity.M4-1.4.17
+
+   Bootstrap: docker
+   From: centos:7.3.1611
+
+Image Formats
 -------------
 
-To build singuality image use ``--buildimage``. You should be root on your system or have sudo rights. If you have sudo rights you will be requested to type your password as shown below
+Image Formats
+--------------
+
+Singularity support three image formats ``squashfs`` ``sandbox`` ``ext3``. The default image format is squashfs with extension ``.simg``. ext3 has image format ``.img`` which can be used to edit container as root but not allowed in squashfs. Sandbox
+will create a directory structure for container image that can be useful for testing an application container. For more details on image format see http://singularity.lbl.gov/docs-build-container
+
+easybuild will use squashfs image format by default but if you want to change the image format use ``--container-image-format`` option 
+
+Example with squashfs format
 
 .. code::
 
-        $ eb M4-1.4.18.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --buildimage
-        == temporary log file in case of crash /tmp/eb-mgtgIn/easybuild-Qsznaj.log
-        Singularity tool found at /usr/local/bin/singularity
-        Singularity version is 2.4 or higher ... OK
-        Singularity Version is 2.4
-        Writing Singularity Definition File: /home/siddis14/.local/easybuild/singularity/Singularity.M4-1.4.18
-        [sudo] password for siddis14:
+   [siddis14@amrndhl1157 easybuild-framework]$ eb M4-1.4.18.eb -C --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --container-build  --experimental --force --containerpath /lustre/workspace/home/siddis14/ebimages/
+   == temporary log file in case of crash /tmp/eb-xwYGdq/easybuild-YVzbmF.log
+   == Singularity tool found at /usr/local/bin/singularity
+   == Singularity version '2.4' is 2.4 or higher ... OK
+   == WARNING: overwriting existing container recipe at /lustre/workspace/home/siddis14/ebimages/Singularity.M4-1.4.18 due to --force
+   == Singularity definition file created at /lustre/workspace/home/siddis14/ebimages/Singularity.M4-1.4.18
+   == Running 'sudo singularity build  /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg /lustre/workspace/home/siddis14/ebimages/Singularity.M4-1.4.18', you may need to enter your 'sudo' password...
+   == Singularity image created at /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg
+   == Temporary log file(s) /tmp/eb-xwYGdq/easybuild-YVzbmF.log* have been removed.
+   == Temporary directory /tmp/eb-xwYGdq has been removed.
 
-
-A typical build inside container will look like this. Note that ``eb --robot`` is set in all recipe files to ensure all
-dependencies are build.
+Example using ext3 image format
 
 .. code::
 
-        [sudo] password for siddis14:
-        Using container recipe deffile: Singularity.M4-1.4.18
-        Sanitizing environment
-        Adding base Singularity environment to container
-        Progress |===================================| 100.0%
-        Exporting contents of shub://shahzebsiddiqui/eb-singularity:centos-7.3.1611 to /tmp/.singularity-build.8rSz3L
-        User defined %runscript found! Taking priority.
-        Adding environment to container
-        Lmod has detected the following error: The following module(s) are unknown:
-        "M4/1.4.18"
-
-        Please check the spelling or version number. Also try "module spider ..."
+        eb M4-1.4.18.eb -C --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --container-build --container-image-format=ext3 --experimental --force
 
 
+Example using sandbox image format
+
+.. code::
+
+   [siddis14@amrndhl1157 easybuild-framework]$ eb M4-1.4.18.eb -C --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --container-build --container-image-format=sandbox --experimental --force --containerpath /lustre/workspace/home/siddis14/ebimages/
+   == temporary log file in case of crash /tmp/eb-9MhfcA/easybuild-0aNMA4.log
+   == Singularity tool found at /usr/local/bin/singularity
+   == Singularity version '2.4' is 2.4 or higher ... OK
+   == Singularity definition file created at /lustre/workspace/home/siddis14/ebimages/Singularity.M4-1.4.18
+   == Running 'sudo singularity build --sandbox /lustre/workspace/home/siddis14/ebimages/M4-1.4.18 /lustre/workspace/home/siddis14/ebimages/Singularity.M4-1.4.18', you may need to enter your 'sudo' password...
+   == Singularity image created at /lustre/workspace/home/siddis14/ebimages/M4-1.4.18
+   == Temporary log file(s) /tmp/eb-9MhfcA/easybuild-0aNMA4.log* have been removed.
+   == Temporary directory /tmp/eb-9MhfcA has been removed.
 
 
-        Running post scriptlet
-        + pip install -U easybuild
-        Requirement already up-to-date: easybuild in /usr/lib/python2.7/site-packages
-        Requirement already up-to-date: easybuild-easyconfigs==3.5.1 in /usr/lib/python2.7/site-packages (from easybuild)
-        Requirement already up-to-date: easybuild-easyblocks==3.5.1 in /usr/lib/python2.7/site-packages (from easybuild)
-        Requirement already up-to-date: easybuild-framework==3.5.1 in /usr/lib/python2.7/site-packages (from easybuild)
-        Collecting setuptools>=0.6 (from easybuild-easyblocks==3.5.1->easybuild)
-          Downloading setuptools-38.5.1-py2.py3-none-any.whl (489kB)
-            100% |################################| 491kB 1.6MB/s
-        Requirement already up-to-date: vsc-install>=0.9.19 in /usr/lib/python2.7/site-packages (from easybuild-framework==3.5.1->easybuild)
-        Requirement already up-to-date: vsc-base>=2.5.8 in /usr/lib/python2.7/site-packages (from easybuild-framework==3.5.1->easybuild)
-        Installing collected packages: setuptools
-          Found existing installation: setuptools 0.9.8
-            Uninstalling setuptools-0.9.8:
-              Successfully uninstalled setuptools-0.9.8
-        Successfully installed setuptools-38.5.1
 
-        + su - easybuild
-        == temporary log file in case of crash /scratch/tmp/eb-mDNplx/easybuild-fDXtjQ.log
-        == resolving dependencies ...
-        == processing EasyBuild easyconfig /usr/easybuild/easyconfigs/m/M4/M4-1.4.18.eb
-        == building and installing M4/1.4.18...
-        == fetching files...
-        == creating build dir, resetting environment...
-        == unpacking...
-        == patching...
-        == preparing...
-        == configuring...
-        == building...
-        == testing...
-        == installing...
-        == taking care of extensions...
-        == postprocessing...
-        == sanity checking...
-        == cleaning up...
-        == creating module...
-        == permissions...
-        == packaging...
-        == COMPLETED: Installation ended successfully
-        == Results of the build can be found in the log file(s) /app/software/M4/1.4.18/easybuild/easybuild-M4-1.4.18-20180219.194157.log
-        == Build succeeded for 1 out of 1
-        == Temporary log file(s) /scratch/tmp/eb-mDNplx/easybuild-fDXtjQ.log* have been removed.
-        == Temporary directory /scratch/tmp/eb-mDNplx has been removed.
-        + rm -rf '/scratch/tmp/*'
-        + rm -rf /scratch/build
-        + rm -rf /scratch/sources
-        + rm -rf /scratch/ebfiles_repo
-        Adding deffile section labels to container
-        Adding runscript
-        Found an existing definition file
-        Adding a bootstrap_history directory
-        Finalizing Singularity container
+
+See how the three image formats
+
+.. code::
+
+    [siddis14@amrndhl1157 easybuild-framework]$ ls -l /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg
+-rwxr-xr-x 1 root root 231800863 Apr 17 19:08 /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg
+   
+   [siddis14@amrndhl1157 easybuild-framework]$ ls -l /lustre/workspace/home/siddis14/ebimages/M4-1.4.18
+   total 92
+   -rw-r--r--  1 root root     15712 Dec 14  2016 anaconda-post.log
+   drwxrwxr-x  4 1000 gcgadmin  4096 Feb 14 12:27 app
+   lrwxrwxrwx  1 root root         7 Dec 14  2016 bin -> usr/bin
+   drwxr-xr-x  2 root root      4096 Dec 14  2016 dev
+   lrwxrwxrwx  1 root root        36 Nov 26 01:54 environment -> .singularity.d/env/90-environment.sh
+   drwxr-xr-x 52 root root     12288 Feb 14 12:27 etc
+   drwxr-xr-x  3 root root      4096 Feb 14 12:27 home
+   lrwxrwxrwx  1 root root         7 Dec 14  2016 lib -> usr/lib
+   lrwxrwxrwx  1 root root         9 Dec 14  2016 lib64 -> usr/lib64
+   drwx------  2 root root      4096 Dec 14  2016 lost+found
+   drwxr-xr-x  2 root root      4096 Nov  5  2016 media
+   drwxr-xr-x  2 root root      4096 Nov  5  2016 mnt
+   drwxr-xr-x  2 root root      4096 Nov  5  2016 opt
+   drwxr-xr-x  2 root root      4096 Dec 14  2016 proc
+   dr-xr-x---  4 root root      4096 Feb 14 12:27 root
+   drwxr-xr-x 12 root root      4096 Feb 14 12:27 run
+   lrwxrwxrwx  1 root root         8 Dec 14  2016 sbin -> usr/sbin
+   drwxrwxr-x  3 1000 gcgadmin  4096 Apr 17 19:03 scratch
+   lrwxrwxrwx  1 root root        24 Nov 26 01:54 singularity -> .singularity.d/runscript
+   drwxr-xr-x  2 root root      4096 Nov  5  2016 srv
+   drwxr-xr-x  2 root root      4096 Dec 14  2016 sys
+   drwxrwxrwt  7 root root      4096 Dec 14  2016 tmp
+   drwxr-xr-x 14 root root      4096 Apr 17 19:01 usr
+   drwxr-xr-x 18 root root      4096 Dec 14  2016 var
 
 
 Casecade builds for easybuild toolchain
@@ -268,152 +342,48 @@ Casecade builds for easybuild toolchain
 
 Since easybuild invokes ``eb --robot`` in the recipe file, this can be problematic when building larger toolchains like ``GCCcore``, ``GCC``, ``gompi``, ``foss`` which will build the entire dependency list inside container that can increase container size and build time. To avoid this situation, try building the toolchains from bottom up and using them to bootstrap other toolchains.
 
-Lets assume you are building ``GCCcore-5.4.0``, ``GCC-5.4.0-2.26``, ``gompi-2016.06`` and ``foss-2016.06``. 
+Lets assume you are building ``GCCcore-5.4.0``, ``GCC-5.4.0-2.26``, ``gompi-2016.06`` and ``foss-2016.06``.
 
 First build GCCcore-5.4.0
 
 .. code::
 
-        eb GCCcore-5.4.0.eb --singularity --singularity-bootstrap --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --buildimage
+        eb GCCcore-5.4.0.eb -C --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --container-build --experimental
 
 Once the image is built, assuming it is in default path do the following for GCC-5.4.0-2.26
 
 .. code::
 
-        eb GCC-5.4.0-2.26.eb --singularity --singularity-bootstrap localimage:$HOME/.local/easybuild/singularity/GCCcore-5.4.0.simg --buildimage
+        eb GCC-5.4.0-2.26.eb -C --container-base localimage:$HOME/.local/easybuild/containers/GCCcore-5.4.0.simg --container-build --experimental
 
-Afterwards build gomp-2016.06 using GCC-5.4.0-2.26 container image
+Afterwards build gompi-2016.06 using GCC-5.4.0-2.26 container image
 
 .. code::
 
-        eb gompi-2016.06.eb --singularity --singularity-bootstrap localimage:$HOME/.local/easybuild/singularity/GCC-5.4.0-2.26.simg --buildimage
+        eb gompi-2016.06.eb -C --container-base localimage:$HOME/.local/easybuild/containers/GCC-5.4.0-2.26.simg --container-build --experimental
 
 Next build foss-2016.06 using gompi-2016.06 image
 
 .. code::
 
-        eb foss-2016.06.eb --singularity --singularity-bootstrap localimage:$HOME/.local/easybuild/singularity/gompi-2016.06.simg --buildimage
+        eb foss-2016.06.eb -C --container-base localimage:$HOME/.local/easybuild/containers/gompi-2016.06.simg --container-build --experimental
 
-Image Formats
---------------
 
-Singularity support three image formats ``squashfs`` ``sandbox`` ``ext3``. The default image format is squashfs with extension ``.simg``. ext3 has image format ``.img`` which can be used to edit container as root but not allowed in squashfs. Sandbox
-will create a directory structure for container image that can be useful for testing an application container. For more details on image format see http://singularity.lbl.gov/docs-build-container 
+Custom Image Name
+-----------------
 
-Example using ext3 image format
+If you want to modify the name of the generated recipe file and image you can use ``--container-image-name``. Please note that ``.img`` or ``.simg`` is added to file name if you are building as squashfs or ext3
 
 .. code::
 
-        eb M4-1.4.18.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --buildimage --imageformat=ext3
-        
+   [siddis14@amrndhl1157 easybuild-framework]$ eb M4-1.4.17.eb -C --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --container-build --container-image-name=M4 --containerpath /lustre/workspace/home/siddis14/ebimages --experimental
+   == temporary log file in case of crash /tmp/eb-LWUS8G/easybuild-2AWdl7.log
+   == Singularity tool found at /usr/local/bin/singularity
+   == Singularity version '2.4' is 2.4 or higher ... OK
+   == Singularity definition file created at /lustre/workspace/home/siddis14/ebimages/Singularity.M4
+   == Running 'sudo singularity build  /lustre/workspace/home/siddis14/ebimages/M4.simg /lustre/workspace/home/siddis14/ebimages/Singularity.M4', you may need to enter your 'sudo' password...
+   [sudo] password for siddis14:
+   == Singularity image created at /lustre/workspace/home/siddis14/ebimages/M4.simg
+   == Temporary log file(s) /tmp/eb-LWUS8G/easybuild-2AWdl7.log* have been removed.
+   == Temporary directory /tmp/eb-LWUS8G has been removed.
 
-Example using sandbox image format
-
-.. code::
-
-        eb M4-1.4.18.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --buildimage --imageformat=sandbox
-
-
-See how the three image formats
-
-.. code::
-
-        $ ls -l ~/.local/easybuild/singularity/M4-1.4.18*
-        -rw-r--r--  1 siddis14 root 908066816 Feb 19 15:28 /home/siddis14/.local/easybuild/singularity/M4-1.4.18.img
-        -rwxr-xr-x  1 siddis14 root 225968159 Feb 19 14:42 /home/siddis14/.local/easybuild/singularity/M4-1.4.18.simg
-
-        /home/siddis14/.local/easybuild/singularity/M4-1.4.18:
-        total 18
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 dev
-        lrwxr-xr-x 1 siddis14 root   36 Oct 24 08:25 environment -> .singularity.d/env/90-environment.sh
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 etc
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 home
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 proc
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 root
-        lrwxr-xr-x 1 siddis14 root   24 Oct 24 08:25 singularity -> .singularity.d/runscript
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 sys
-        drwxr-xr-x 2 siddis14 root 2048 Oct 24 08:25 tmp
-        drwxr-xr-x 3 siddis14 root 2048 Oct 24 08:25 var
-
-
-If you want to modify the name of the generated image you can use ``--imagename``. Please note that ``.img`` or ``.simg`` is added to file name if you are building as squashfs or ext3
-
-.. code::
-
-        $ eb M4-1.4.17.eb --singularity --singularity-bootstrap shub:shahzebsiddiqui/eb-singularity:centos-7.3.1611 --buildimage --imagename=M4
-        == temporary log file in case of crash /tmp/eb-w8loVP/easybuild-8NZ6vg.log
-        Singularity tool found at /usr/local/bin/singularity
-        Singularity version is 2.4 or higher ... OK
-        Singularity Version is 2.4
-        Writing Singularity Definition File: /home/siddis14/.local/easybuild/singularity/Singularity.M4-1.4.17
-        M4
-        Using container recipe deffile: Singularity.M4-1.4.17
-        Sanitizing environment
-        Adding base Singularity environment to container
-        Exporting contents of shub://shahzebsiddiqui/eb-singularity:centos-7.3.1611 to /tmp/.singularity-build.n3pfOS
-        User defined %runscript found! Taking priority.
-        Adding environment to container
-        Lmod has detected the following error: The following module(s) are unknown:
-        "M4/1.4.17"
-
-        Please check the spelling or version number. Also try "module spider ..."
-
-
-
-
-        Running post scriptlet
-        + pip install -U easybuild
-        Requirement already up-to-date: easybuild in /usr/lib/python2.7/site-packages
-        Requirement already up-to-date: easybuild-easyconfigs==3.5.1 in /usr/lib/python2.7/site-packages (from easybuild)
-        Requirement already up-to-date: easybuild-easyblocks==3.5.1 in /usr/lib/python2.7/site-packages (from easybuild)
-        Requirement already up-to-date: easybuild-framework==3.5.1 in /usr/lib/python2.7/site-packages (from easybuild)
-        Collecting setuptools>=0.6 (from easybuild-easyblocks==3.5.1->easybuild)
-          Downloading setuptools-38.5.1-py2.py3-none-any.whl (489kB)
-            100% |################################| 491kB 1.6MB/s
-        Requirement already up-to-date: vsc-install>=0.9.19 in /usr/lib/python2.7/site-packages (from easybuild-framework==3.5.1->easybuild)
-        Requirement already up-to-date: vsc-base>=2.5.8 in /usr/lib/python2.7/site-packages (from easybuild-framework==3.5.1->easybuild)
-        Installing collected packages: setuptools
-          Found existing installation: setuptools 0.9.8
-            Uninstalling setuptools-0.9.8:
-              Successfully uninstalled setuptools-0.9.8
-        Successfully installed setuptools-38.5.1
-        + su - easybuild
-        == temporary log file in case of crash /scratch/tmp/eb-RiEUIa/easybuild-KpvEy2.log
-        == resolving dependencies ...
-        == processing EasyBuild easyconfig /usr/easybuild/easyconfigs/m/M4/M4-1.4.17.eb
-        == building and installing M4/1.4.17...
-        == fetching files...
-        == creating build dir, resetting environment...
-        == unpacking...
-        == patching...
-        == preparing...
-        == configuring...
-        == building...
-        == testing...
-        == installing...
-        == taking care of extensions...
-        == postprocessing...
-        == sanity checking...
-        == cleaning up...
-        == creating module...
-        == permissions...
-        == packaging...
-        == COMPLETED: Installation ended successfully
-        == Results of the build can be found in the log file(s) /app/software/M4/1.4.17/easybuild/easybuild-M4-1.4.17-20180219.202811.log
-        == Build succeeded for 1 out of 1
-        == Temporary log file(s) /scratch/tmp/eb-RiEUIa/easybuild-KpvEy2.log* have been removed.
-        == Temporary directory /scratch/tmp/eb-RiEUIa has been removed.
-        + rm -rf '/scratch/tmp/*'
-        + rm -rf /scratch/build
-        + rm -rf /scratch/sources
-        + rm -rf /scratch/ebfiles_repo
-        Adding deffile section labels to container
-        Adding runscript
-        Found an existing definition file
-        Adding a bootstrap_history directory
-        Finalizing Singularity container
-
-
-        
-        $ ls -l ~/.local/easybuild/singularity/M4.simg
-        -rwxr-xr-x 1 siddis14 root 225988639 Feb 19 15:28 /home/siddis14/.local/easybuild/singularity/M4.simg
