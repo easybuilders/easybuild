@@ -307,8 +307,8 @@ See how the three image formats
 .. code::
 
     [siddis14@amrndhl1157 easybuild-framework]$ ls -l /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg
--rwxr-xr-x 1 root root 231800863 Apr 17 19:08 /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg
-   
+   -rwxr-xr-x 1 root root 231800863 Apr 17 19:08 /lustre/workspace/home/siddis14/ebimages/M4-1.4.18.simg
+
    [siddis14@amrndhl1157 easybuild-framework]$ ls -l /lustre/workspace/home/siddis14/ebimages/M4-1.4.18
    total 92
    -rw-r--r--  1 root root     15712 Dec 14  2016 anaconda-post.log
