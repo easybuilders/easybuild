@@ -49,7 +49,7 @@ Fetching sources with ``--fetch``
 ---------------------------------
 
 It may be useful to be able to batch-download sources on a machine where no modules tool is installed. The
-``--fetch`` option, which is equivalent with ``--stop fetch``, ``--ignore-osdeps`` addresses this requirement.
+``--fetch`` option, which is equivalent with ``--stop fetch --ignore-osdeps``, addresses this requirement.
 
 Example usage::
 
