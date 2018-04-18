@@ -48,10 +48,9 @@ Example usage::
 Fetching sources with ``--fetch``
 ---------------------------------
 
-It may be useful to be able to batch-download sources on a machine where no easybuild dependency are installed. The
-``--fetch`` option addresses this requirement. This option implies ``--stop fetch``, ``--ignore-osdeps`` and does not
-require a modules tool to be installed. Ie. ``pip install easybuild`` only allows to use ``eb easyconfig.eb --fetch``
-without configuring further easybuild.
+It may be useful to be able to batch-download sources on a machine where no modules tool is installed. The
+``--fetch`` option, which is equivalent with ``--stop fetch``, ``--ignore-osdeps`` addresses this requirement.
+
 Example usage::
 
  $ eb GCCcore-6.2.0.eb --fetch
@@ -66,12 +65,13 @@ Example usage::
  == Temporary directory /tmp/eb-1ZZX2b has been removed.
 
 .. note::
-  It can be used in conjunction with the ``--robot`` and ``--robot-path`` options to download sources of the whole
-  dependency tree of an easyconfig (see :ref:`use_robot`).
+  ``--fetch`` can be used in conjunction with the ``--robot`` and ``--robot-path`` options to download sources of
+  the whole dependency tree of an easyconfig (see :ref:`use_robot`).
 
 .. note::
-  Sources will be downloaded in the default location (see :ref:`sourcepath`). Use ``--sourcepath`` option to amend
-  it.
+  Sources will be downloaded in the default location (see :ref:`sourcepath`),
+  unless EasyBuild is configured via the ``--sourcepath`` option.
+
 
 .. _partial_installation_skip:
 
