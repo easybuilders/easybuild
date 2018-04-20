@@ -180,11 +180,15 @@ Since EasyBuild v3.3.0, the checksum type is determined by looking at the length
 * 64-character strings are considered to be SHA256 checksums (``sha256``)
 * (other lengths will result in an error message)
 
+The intention is to move towards making ``sha256`` the recommended and default checksum type.
+
 Other checksum types are also supported: ``adler32``, ``crc32``, ``sha1``, ``sha512``, ``size`` (filesize in bytes).
 To provide checksum values of a specific type, elements of the ``checksums`` list can also be 2-element tuples
-of the form ``('<checksum value>', '<checksum type>')``.
+of the form ``('<checksum type>', '<checksum value>')``. For example:
 
-The intention is to move towards making ``sha256`` the recommended and default checksum type.
+.. code:: python
+
+  checksums = [('sha512', 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266')]
 
 .. _inject_checksums:
 
