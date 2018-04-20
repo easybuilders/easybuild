@@ -3,10 +3,10 @@
 Support for RPATH
 =================
 
-Since EasyBuild v3.0.0, (experimental) support is available for using RPATH.
+Since EasyBuild v3.5.2, (stable) support is available for using RPATH.
 
-.. note:: RPATH support is an experimental feature, and thus requires having ``--experimental`` enabled;
-          see also :ref:`experimental_features`.
+.. note:: RPATH support has been available since EasyBuild v3.0.0, but was considered experimental
+          until EasyBuild v3.5.2 (cfr. :ref:`experimental_features` for more information on experimental features).
 
 .. contents::
     :depth: 3
