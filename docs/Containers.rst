@@ -150,7 +150,7 @@ To let EasyBuild generate a container recipe for GCC 6.4.0 + binutils 2.28::
 
 With other configuration options left to default (see output of ``eb --show-config``),
 this will result in a Singularity container recipe using ``example.simg`` as base image,
-which will be stored in ``$HOME/.local/containers``::
+which will be stored in ``$HOME/.local/easybuild/containers``::
 
     $ eb GCC-6.4.0-2.28.eb --containerize --container-base localimage:/tmp/example.simg --experimental
     == temporary log file in case of crash /tmp/eb-dLZTNF/easybuild-LPLeG0.log
@@ -396,14 +396,41 @@ and then using it to build a container images for a particular (set of) software
 
 For example, to build a container image for Python 3.6.4 built with the ``foss/2018a`` toolchain::
 
+    $ cd /tmp
+
     # use current directory as location for generated container recipes & images
     $ export EASYBUILD_CONTAINERPATH=$PWD
 
     # build base container image for OpenMPI + GCC parts of foss/2018a toolchain, on top of CentOS 7.4 base image from Singularity Hub
     $ eb -C --container-build-image OpenMPI-2.1.2-GCC-6.4.0-2.28.eb --container-base shub:shahzebsiddiqui/eb-singularity:centos-7.4.1708 --experimental
+    ...
+    == Singularity image created at /tmp/OpenMPI-2.1.2-GCC-6.4.0-2.28.simg
+    ...
+
+    $ ls -lh OpenMPI-2.1.2-GCC-6.4.0-2.28.simg
+    -rwxr-xr-x 1 root root 590M Apr 24 11:43 OpenMPI-2.1.2-GCC-6.4.0-2.28.simg
 
     # build another container image for the for the full foss/2018a toolchain, using the OpenMPI + GCC container as a base
-    $ eb -C --container-build-image foss-2018a.eb --container-base localimage:OpenMPI-2.1.2-GCC-6.4.0-2.28.simg --experimental
+    $ eb -C --container-build-image foss-2018a.eb --container-base localimage:$PWD/OpenMPI-2.1.2-GCC-6.4.0-2.28.simg --experimental
+    ...
+    == Singularity image created at /tmp/foss-2018a.simg
+    ...
+
+    $ ls -lh foss-2018a.simg
+    -rwxr-xr-x 1 root root 614M Apr 24 13:11 foss-2018a.simg
 
     # build container image for Python 3.6.4 with foss/2018a toolchain by leveraging base container image foss-2018a.simg
     $ eb -C --container-build-image Python-3.6.4-foss-2018a.eb --container-base localimage:$PWD/foss-2018a.simg --experimental
+    ...
+    == Singularity image created at /tmp/Python-3.6.4-foss-2018a.simg
+    ...
+
+    $ ls -lh Python-3.6.4-foss-2018a.simg
+    -rwxr-xr-x 1 root root 759M Apr 24 14:01 Python-3.6.4-foss-2018a.simg
+
+    $ singularity exec Python-3.6.4-foss-2018a.simg which python
+    /app/software/Python/3.6.4-foss-2018a/bin/python
+
+    $ singularity exec Python-3.6.4-foss-2018a.simg python -V
+    vsc40023 belongs to gsingularity
+    Python 3.6.4
