@@ -617,6 +617,8 @@ This affects the default value of several configuration options:
 * build path (see :ref:`buildpath`)
 * software and modules install path (see :ref:`installpath`)
 * easyconfigs repository path (see :ref:`easyconfigs_repo`)
+* package path (see :ref:`packaging_config`)
+* container path (see :ref:`containers_cfg_path`)
 
 .. _installpath_subdirs:
 

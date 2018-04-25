@@ -70,6 +70,7 @@ Advanced usage topics
     Packaging_support
     Partial_installations
     RPATH-support
+    Containers
     Submitting_jobs
     Tracing_progress
     Using_external_modules
