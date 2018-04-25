@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20180425.01** (`Apr 25th 2018`): add documentation on support for generating container recipes & images (see :ref:`containers`)
 * **release 20180307.01** (`Mar 7th 2018`): update release notes for EasyBuild v3.5.3 (see :ref:`release_notes_eb353`)
 * **release 20180302.01** (`Mar 2nd 2018`): update release notes for EasyBuild v3.5.2 (see :ref:`release_notes_eb352`)
 * **release 20180116.01** (`Jan 16th 2018`): update release notes for EasyBuild v3.5.1 (see :ref:`release_notes_eb351`)
