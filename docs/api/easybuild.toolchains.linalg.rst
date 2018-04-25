@@ -1,5 +1,5 @@
-easybuild\.toolchains\.linalg package
-=====================================
+easybuild.toolchains.linalg package
+===================================
 
 Submodules
 ----------

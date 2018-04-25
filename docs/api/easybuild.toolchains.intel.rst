@@ -1,5 +1,5 @@
-easybuild\.toolchains\.intel module
-===================================
+easybuild.toolchains.intel module
+=================================
 
 .. automodule:: easybuild.toolchains.intel
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.impich module
-====================================
+easybuild.toolchains.impich module
+==================================
 
 .. automodule:: easybuild.toolchains.impich
     :members:

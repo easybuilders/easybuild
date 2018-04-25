@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gpsolf module
-====================================
+easybuild.toolchains.gpsolf module
+==================================
 
 .. automodule:: easybuild.toolchains.gpsolf
     :members:

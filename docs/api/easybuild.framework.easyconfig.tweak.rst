@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.tweak module
-==============================================
+easybuild.framework.easyconfig.tweak module
+===========================================
 
 .. automodule:: easybuild.framework.easyconfig.tweak
     :members:

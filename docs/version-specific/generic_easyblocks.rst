@@ -41,6 +41,7 @@ Extra easyconfig parameters specific to ``Binary`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
+``extract_sources``     Whether or not to extract sources                                  ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
 ``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
@@ -254,6 +255,7 @@ easyconfig parameter        description                                         
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
@@ -312,6 +314,7 @@ easyconfig parameter      description                                           
 ======================    ===============================================================    =============
 ``channels``              List of conda channels to pass to 'conda install'                  ``None``     
 ``environment_file``      Conda environment.yml file to use with 'conda env create'          ``None``     
+``extract_sources``       Whether or not to extract sources                                  ``False``    
 ``install_cmd``           Install command to be used.                                        ``None``     
 ``remote_environment``    Remote conda environment to use with 'conda env create'            ``None``     
 ``requirements``          Requirements specification to pass to 'conda install'              ``None``     
@@ -421,6 +424,7 @@ easyconfig parameter        description                                         
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
@@ -514,6 +518,7 @@ easyconfig parameter        description                                         
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
@@ -574,6 +579,7 @@ Extra easyconfig parameters specific to ``JAR`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
+``extract_sources``     Whether or not to extract sources                                  ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
 ``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
@@ -667,6 +673,7 @@ Extra easyconfig parameters specific to ``PackedBinary`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
+``extract_sources``     Whether or not to extract sources                                  ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
 ``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
 ====================    ===============================================================    =============
@@ -724,6 +731,7 @@ easyconfig parameter        description                                         
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
@@ -751,6 +759,7 @@ Extra easyconfig parameters specific to ``RPackage`` easyblock
 easyconfig parameter    description                           default value
 ====================    ==================================    =============
 ``options``             Dictionary with extension options.    ``{}``       
+``unpack_sources``      Unpack sources before installation    ``False``    
 ====================    ==================================    =============
 
 Customised steps in ``RPackage`` easyblock
@@ -776,6 +785,7 @@ Extra easyconfig parameters specific to ``Rpm`` easyblock
 ====================    ===============================================================    =============
 easyconfig parameter    description                                                        default value
 ====================    ===============================================================    =============
+``extract_sources``     Whether or not to extract sources                                  ``False``    
 ``force``               Use force                                                          ``False``    
 ``install_cmd``         Install command to be used.                                        ``None``     
 ``makesymlinks``        Create symlinks for listed paths                                   ``[]``       
@@ -984,6 +994,7 @@ easyconfig parameter        description                                         
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
@@ -1013,6 +1024,7 @@ easyconfig parameter        description                                         
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    

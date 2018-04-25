@@ -1,5 +1,5 @@
-easybuild\.tools\.toolchain\.constants module
-=============================================
+easybuild.tools.toolchain.constants module
+==========================================
 
 .. automodule:: easybuild.tools.toolchain.constants
     :members:

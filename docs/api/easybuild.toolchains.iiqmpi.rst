@@ -1,5 +1,5 @@
-easybuild\.toolchains\.iiqmpi module
-====================================
+easybuild.toolchains.iiqmpi module
+==================================
 
 .. automodule:: easybuild.toolchains.iiqmpi
     :members:

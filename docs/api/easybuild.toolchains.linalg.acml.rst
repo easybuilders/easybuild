@@ -1,5 +1,5 @@
-easybuild\.toolchains\.linalg\.acml module
-==========================================
+easybuild.toolchains.linalg.acml module
+=======================================
 
 .. automodule:: easybuild.toolchains.linalg.acml
     :members:

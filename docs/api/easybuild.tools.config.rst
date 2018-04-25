@@ -1,5 +1,5 @@
-easybuild\.tools\.config module
-===============================
+easybuild.tools.config module
+=============================
 
 .. automodule:: easybuild.tools.config
     :members:

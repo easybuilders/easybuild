@@ -1,5 +1,5 @@
-easybuild\.toolchains\.dummy module
-===================================
+easybuild.toolchains.dummy module
+=================================
 
 .. automodule:: easybuild.toolchains.dummy
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gsolf module
-===================================
+easybuild.toolchains.gsolf module
+=================================
 
 .. automodule:: easybuild.toolchains.gsolf
     :members:

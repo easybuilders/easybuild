@@ -1,5 +1,5 @@
-easybuild\.tools\.jenkins module
-================================
+easybuild.tools.jenkins module
+==============================
 
 .. automodule:: easybuild.tools.jenkins
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.fft\.intelfftw module
-============================================
+easybuild.toolchains.fft.intelfftw module
+=========================================
 
 .. automodule:: easybuild.toolchains.fft.intelfftw
     :members:
