@@ -185,6 +185,8 @@ For example::
 Allowing particular loaded modules
 ----------------------------------
 
+By default, only EasyBuild itself is considered as an allowed module.
+
 EasyBuild can be configured to allow particular modules to be loaded via ``--allow-loaded-modules``,
 by specifying a comma-seperated list of software names.
 
@@ -198,9 +200,8 @@ For example::
   $ eb example.eb
   ...
 
-By default, only EasyBuild itself is listed as an allowed module. If you want to allow modules for other software
-to be loaded as well, you should include ``EasyBuild`` in the specified list of software names if you are using an
-EasyBuild installation provided through a module.
+When ``--allow-loaded-modules`` is used, the EasyBuild module is no more allowed by default and must
+be explicitly listed if you want to allow an EasyBuild installation provided through a module.
 
 .. _detecting_loaded_modules_EBROOT_env_vars:
 
