@@ -23,6 +23,7 @@ feature release
 * include ``-ftree-vectorize`` and ``-fno-math-errno`` in default compiler optimisation flags for GCC (`#2388 <https://github.com/easybuilders/easybuild-framework/pull/2388>`_)
 
   * this significantly improves performance of generated binaries when building with a GCC-based toolchain
+  * can be disabled if needed via the ``vectorize`` toolchain option
 
 * several enhancements/fixes to GitHub integration support:
 
