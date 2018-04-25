@@ -372,8 +372,8 @@ where the value for ``<extension>`` depends on the image format (see :ref:`conta
 
 .. _containers_tmpdir:
 
-Temporary directory for creating container images (`--container-tmpdir`)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Temporary directory for creating container images (``--container-tmpdir``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The container software that EasyBuild leverages to build container images may be using
 a temporary directory in a location that doesn't have sufficient free space.
