@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.types module
-==============================================
+easybuild.framework.easyconfig.types module
+===========================================
 
 .. automodule:: easybuild.framework.easyconfig.types
     :members:

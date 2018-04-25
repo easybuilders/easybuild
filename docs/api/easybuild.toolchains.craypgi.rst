@@ -1,5 +1,5 @@
-easybuild\.toolchains\.craypgi module
-=====================================
+easybuild.toolchains.craypgi module
+===================================
 
 .. automodule:: easybuild.toolchains.craypgi
     :members:

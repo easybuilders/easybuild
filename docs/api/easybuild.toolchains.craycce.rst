@@ -1,5 +1,5 @@
-easybuild\.toolchains\.craycce module
-=====================================
+easybuild.toolchains.craycce module
+===================================
 
 .. automodule:: easybuild.toolchains.craycce
     :members:

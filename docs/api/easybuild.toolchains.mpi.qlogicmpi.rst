@@ -1,5 +1,5 @@
-easybuild\.toolchains\.mpi\.qlogicmpi module
-============================================
+easybuild.toolchains.mpi.qlogicmpi module
+=========================================
 
 .. automodule:: easybuild.toolchains.mpi.qlogicmpi
     :members:

@@ -1,5 +1,5 @@
-easybuild\.framework\.extension module
-======================================
+easybuild.framework.extension module
+====================================
 
 .. automodule:: easybuild.framework.extension
     :members:

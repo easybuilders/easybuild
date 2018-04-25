@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.style module
-==============================================
+easybuild.framework.easyconfig.style module
+===========================================
 
 .. automodule:: easybuild.framework.easyconfig.style
     :members:

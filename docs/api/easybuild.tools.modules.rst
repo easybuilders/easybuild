@@ -1,5 +1,5 @@
-easybuild\.tools\.modules module
-================================
+easybuild.tools.modules module
+==============================
 
 .. automodule:: easybuild.tools.modules
     :members:

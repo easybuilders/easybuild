@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.format package
-================================================
+easybuild.framework.easyconfig.format package
+=============================================
 
 Submodules
 ----------

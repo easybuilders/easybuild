@@ -1,5 +1,5 @@
-easybuild\.tools\.convert module
-================================
+easybuild.tools.convert module
+==============================
 
 .. automodule:: easybuild.tools.convert
     :members:

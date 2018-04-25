@@ -1,5 +1,5 @@
-easybuild\.tools\.toolchain\.compiler module
-============================================
+easybuild.tools.toolchain.compiler module
+=========================================
 
 .. automodule:: easybuild.tools.toolchain.compiler
     :members:

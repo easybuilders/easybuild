@@ -1,5 +1,5 @@
-easybuild\.toolchains\.cgmvapich2 module
-========================================
+easybuild.toolchains.cgmvapich2 module
+======================================
 
 .. automodule:: easybuild.toolchains.cgmvapich2
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.compiler\.inteliccifort module
-=====================================================
+easybuild.toolchains.compiler.inteliccifort module
+==================================================
 
 .. automodule:: easybuild.toolchains.compiler.inteliccifort
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.linalg\.libsci module
-============================================
+easybuild.toolchains.linalg.libsci module
+=========================================
 
 .. automodule:: easybuild.toolchains.linalg.libsci
     :members:

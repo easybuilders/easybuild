@@ -1,5 +1,5 @@
-easybuild\.toolchains\.iimpi module
-===================================
+easybuild.toolchains.iimpi module
+=================================
 
 .. automodule:: easybuild.toolchains.iimpi
     :members:

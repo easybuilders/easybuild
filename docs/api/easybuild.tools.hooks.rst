@@ -1,5 +1,5 @@
-easybuild\.tools\.hooks module
-==============================
+easybuild.tools.hooks module
+============================
 
 .. automodule:: easybuild.tools.hooks
     :members:

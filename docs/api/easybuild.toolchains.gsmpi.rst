@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gsmpi module
-===================================
+easybuild.toolchains.gsmpi module
+=================================
 
 .. automodule:: easybuild.toolchains.gsmpi
     :members:

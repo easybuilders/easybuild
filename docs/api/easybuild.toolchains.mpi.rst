@@ -1,5 +1,5 @@
-easybuild\.toolchains\.mpi package
-==================================
+easybuild.toolchains.mpi package
+================================
 
 Submodules
 ----------
