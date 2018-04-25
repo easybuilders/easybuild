@@ -370,6 +370,21 @@ where the value for ``<extension>`` depends on the image format (see :ref:`conta
 * *empty* for ``sandbox`` container images (in which case the container image is actually a directory rather than a file)
 
 
+.. _containers_tmpdir:
+
+Temporary directory for creating container images (`--container-tmpdir`)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The container software that EasyBuild leverages to build container images may be using
+a temporary directory in a location that doesn't have sufficient free space.
+
+You can instruct EasyBuild to pass an alternate location via the ``--container-tmpdir`` configuration setting.
+
+For Singularity, the default is to use ``/tmp``, see http://singularity.lbl.gov/build-environment#temporary-folders.
+If ``--container-tmpdir`` is specified, the ``$SINGULARITY_TMPDIR`` environment variable will be defined accordingly
+to let Singularity use that location instead.
+
+
 .. _containers_cfg_type:
 
 Type of container recipe/image to generate (``--container-type``)
