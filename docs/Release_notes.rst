@@ -9,7 +9,7 @@ alongside 8,831 easyconfig files.
 
 .. _release_notes_eb360:
 
-v3.6.0 (April 27th 2018)
+v3.6.0 (April 26th 2018)
 ------------------------
 
 feature release
@@ -137,6 +137,7 @@ feature release
   * drop use of ``--disable-dlopen`` in (recent) OpenMPI easyconfigs due to negative performance impact (`#6060 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6060>`_)
   * add missing XZ dep in Python 3.6.4 easyconfigs built with ``*/2018a`` toolchain (`#6065 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6065>`_)
   * add 10 packages that were previously downloaded in Python 3.6.4 easyconfigs (`#6081 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6081>`_)
+  * add patch for Tensorflow 1.6 & 1.7 to include missing -lrt link flag (needed in CentOS6) (`#6089 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6089>`_)
   * fix checksums for R extensions that were updated in place in easyconfigs for R versions 3.4.3 & 3.4.4 (`#6118 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6118>`_)
   * include pkg-config as build dep in recent R easyconfigs (required for atleast nloptr) (`#6122 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6122>`_)
   * remove Intel-specific workaround for '``undefined symbol: __stack_chk_guard``' issue from Python 3.6.4 foss/2018a easyconfig (`#6130 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6130>`_)
