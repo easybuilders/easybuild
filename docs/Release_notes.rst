@@ -87,6 +87,7 @@ feature release
   * also take ``lib64`` into account for binutils libraries (`#1399 <https://github.com/easybuilders/easybuild-easyblocks/pull/1399>`_)
   * make sanity check in MPICH easyblock aware of libraries in ``lib64`` subdir (`#1403 <https://github.com/easybuilders/easybuild-easyblocks/pull/1403>`_)
   * take into account that ``self.debuggerpath`` may not be set in icc easyblock (`#1408 <https://github.com/easybuilders/easybuild-easyblocks/pull/1408>`_)
+  * extend noqa in configure step of Qt easyblock (`#1409 <https://github.com/easybuilders/easybuild-easyblocks/pull/1409>`_)
 
 **easyconfig**
 
