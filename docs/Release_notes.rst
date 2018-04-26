@@ -27,8 +27,7 @@ feature release
 
 * several enhancements/fixes to GitHub integration support:
 
-* loosen commit message requirements for ``--new-pr`` w.r.t. to patches as long as all easyconfigs are new (`#2438 <https://github.com/easybuilders/easybuild-framework/pull/2438>`_)
-
+  * loosen commit message requirements for ``--new-pr`` w.r.t. to patches as long as all easyconfigs are new (`#2438 <https://github.com/easybuilders/easybuild-framework/pull/2438>`_)
   * automatically add '``new``' and/or '``update``' labels in ``--new-pr`` (`#2384 <https://github.com/easybuilders/easybuild-framework/pull/2384>`_)
   * add ``force_in_dry_run=True`` to ``copy_file`` in ``copy_patch_files`` (`#2442 <https://github.com/easybuilders/easybuild-framework/pull/2442>`_)
   * test for custom commit message when deleting a file instead of when adding a patch (`#2443 <https://github.com/easybuilders/easybuild-framework/pull/2443>`_)
