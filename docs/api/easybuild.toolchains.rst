@@ -1,5 +1,5 @@
-easybuild\.toolchains package
-=============================
+easybuild.toolchains package
+============================
 
 Subpackages
 -----------
@@ -38,6 +38,8 @@ Submodules
    easybuild.toolchains.giolf
    easybuild.toolchains.giolfc
    easybuild.toolchains.gmacml
+   easybuild.toolchains.gmkl
+   easybuild.toolchains.gmklc
    easybuild.toolchains.gmpich
    easybuild.toolchains.gmpich2
    easybuild.toolchains.gmpolf
@@ -45,6 +47,9 @@ Submodules
    easybuild.toolchains.gmvolf
    easybuild.toolchains.gnu
    easybuild.toolchains.goalf
+   easybuild.toolchains.golf
+   easybuild.toolchains.gomkl
+   easybuild.toolchains.gomklc
    easybuild.toolchains.gompi
    easybuild.toolchains.gompic
    easybuild.toolchains.goolf
@@ -58,6 +63,7 @@ Submodules
    easybuild.toolchains.iccifortcuda
    easybuild.toolchains.ictce
    easybuild.toolchains.iimkl
+   easybuild.toolchains.iimklc
    easybuild.toolchains.iimpi
    easybuild.toolchains.iimpic
    easybuild.toolchains.iiqmpi
@@ -67,11 +73,14 @@ Submodules
    easybuild.toolchains.intel
    easybuild.toolchains.intelcuda
    easybuild.toolchains.iomkl
+   easybuild.toolchains.iomklc
    easybuild.toolchains.iompi
+   easybuild.toolchains.iompic
    easybuild.toolchains.ipsmpi
    easybuild.toolchains.iqacml
    easybuild.toolchains.ismkl
    easybuild.toolchains.pgi
+   easybuild.toolchains.pmkl
    easybuild.toolchains.pomkl
    easybuild.toolchains.pompi
    easybuild.toolchains.xlcxlf

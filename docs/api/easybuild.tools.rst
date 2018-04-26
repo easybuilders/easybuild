@@ -1,5 +1,5 @@
-easybuild\.tools package
-========================
+easybuild.tools package
+=======================
 
 Subpackages
 -----------
@@ -23,6 +23,7 @@ Submodules
    easybuild.tools.build_log
    easybuild.tools.config
    easybuild.tools.configobj
+   easybuild.tools.containers
    easybuild.tools.convert
    easybuild.tools.docs
    easybuild.tools.environment

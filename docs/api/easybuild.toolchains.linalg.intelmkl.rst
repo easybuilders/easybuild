@@ -1,5 +1,5 @@
-easybuild\.toolchains\.linalg\.intelmkl module
-==============================================
+easybuild.toolchains.linalg.intelmkl module
+===========================================
 
 .. automodule:: easybuild.toolchains.linalg.intelmkl
     :members:

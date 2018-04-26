@@ -1,5 +1,5 @@
-easybuild\.tools\.package\.utilities module
-===========================================
+easybuild.tools.package.utilities module
+========================================
 
 .. automodule:: easybuild.tools.package.utilities
     :members:

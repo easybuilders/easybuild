@@ -1,5 +1,5 @@
-easybuild\.toolchains\.giolf module
-===================================
+easybuild.toolchains.giolf module
+=================================
 
 .. automodule:: easybuild.toolchains.giolf
     :members:

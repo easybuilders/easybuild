@@ -1,5 +1,5 @@
-easybuild\.toolchains\.iompi module
-===================================
+easybuild.toolchains.iompi module
+=================================
 
 .. automodule:: easybuild.toolchains.iompi
     :members:

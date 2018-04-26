@@ -1,5 +1,5 @@
-easybuild\.tools\.deprecated package
-====================================
+easybuild.tools.deprecated package
+==================================
 
 Module contents
 ---------------

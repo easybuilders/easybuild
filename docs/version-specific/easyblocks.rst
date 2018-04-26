@@ -194,6 +194,7 @@
   * EB_MRtrix
   * EB_NCL
   * EB_NEMO
+  * EB_Nim
   * EB_OpenFOAM
   * EB_OpenIFS
   * EB_ParMETIS

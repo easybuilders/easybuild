@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.format\.yeb module
-====================================================
+easybuild.framework.easyconfig.format.yeb module
+================================================
 
 .. automodule:: easybuild.framework.easyconfig.format.yeb
     :members:

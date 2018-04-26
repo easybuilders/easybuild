@@ -1,5 +1,5 @@
-easybuild\.toolchains\.mpi\.psmpi module
-========================================
+easybuild.toolchains.mpi.psmpi module
+=====================================
 
 .. automodule:: easybuild.toolchains.mpi.psmpi
     :members:

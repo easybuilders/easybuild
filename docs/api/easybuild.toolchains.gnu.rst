@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gnu module
-=================================
+easybuild.toolchains.gnu module
+===============================
 
 .. automodule:: easybuild.toolchains.gnu
     :members:

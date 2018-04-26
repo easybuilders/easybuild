@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gmpich module
-====================================
+easybuild.toolchains.gmpich module
+==================================
 
 .. automodule:: easybuild.toolchains.gmpich
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.intelcuda module
-=======================================
+easybuild.toolchains.intelcuda module
+=====================================
 
 .. automodule:: easybuild.toolchains.intelcuda
     :members:

@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.licenses module
-=================================================
+easybuild.framework.easyconfig.licenses module
+==============================================
 
 .. automodule:: easybuild.framework.easyconfig.licenses
     :members:

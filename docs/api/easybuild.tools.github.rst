@@ -1,5 +1,5 @@
-easybuild\.tools\.github module
-===============================
+easybuild.tools.github module
+=============================
 
 .. automodule:: easybuild.tools.github
     :members:

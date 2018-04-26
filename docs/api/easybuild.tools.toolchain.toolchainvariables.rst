@@ -1,5 +1,5 @@
-easybuild\.tools\.toolchain\.toolchainvariables module
-======================================================
+easybuild.tools.toolchain.toolchainvariables module
+===================================================
 
 .. automodule:: easybuild.tools.toolchain.toolchainvariables
     :members:

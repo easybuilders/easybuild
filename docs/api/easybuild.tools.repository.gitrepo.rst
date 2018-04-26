@@ -1,5 +1,5 @@
-easybuild\.tools\.repository\.gitrepo module
-============================================
+easybuild.tools.repository.gitrepo module
+=========================================
 
 .. automodule:: easybuild.tools.repository.gitrepo
     :members:

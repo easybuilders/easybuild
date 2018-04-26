@@ -1,5 +1,5 @@
-easybuild\.toolchains\.goolfc module
-====================================
+easybuild.toolchains.goolfc module
+==================================
 
 .. automodule:: easybuild.toolchains.goolfc
     :members:

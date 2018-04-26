@@ -1,5 +1,5 @@
-easybuild\.toolchains\.mpi\.spectrummpi module
-==============================================
+easybuild.toolchains.mpi.spectrummpi module
+===========================================
 
 .. automodule:: easybuild.toolchains.mpi.spectrummpi
     :members:

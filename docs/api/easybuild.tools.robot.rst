@@ -1,5 +1,5 @@
-easybuild\.tools\.robot module
-==============================
+easybuild.tools.robot module
+============================
 
 .. automodule:: easybuild.tools.robot
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.ipsmpi module
-====================================
+easybuild.toolchains.ipsmpi module
+==================================
 
 .. automodule:: easybuild.toolchains.ipsmpi
     :members:

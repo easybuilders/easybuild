@@ -1,5 +1,5 @@
-easybuild\.tools\.docs module
-=============================
+easybuild.tools.docs module
+===========================
 
 .. automodule:: easybuild.tools.docs
     :members:

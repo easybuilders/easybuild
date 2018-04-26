@@ -1,5 +1,5 @@
-easybuild\.toolchains\.pomkl module
-===================================
+easybuild.toolchains.pomkl module
+=================================
 
 .. automodule:: easybuild.toolchains.pomkl
     :members:

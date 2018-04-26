@@ -1,5 +1,5 @@
-easybuild\.toolchains\.iimkl module
-===================================
+easybuild.toolchains.iimkl module
+=================================
 
 .. automodule:: easybuild.toolchains.iimkl
     :members:

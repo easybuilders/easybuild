@@ -1,5 +1,5 @@
-easybuild\.tools\.multidiff module
-==================================
+easybuild.tools.multidiff module
+================================
 
 .. automodule:: easybuild.tools.multidiff
     :members:

@@ -1,5 +1,5 @@
-easybuild\.tools\.run module
-============================
+easybuild.tools.run module
+==========================
 
 .. automodule:: easybuild.tools.run
     :members:

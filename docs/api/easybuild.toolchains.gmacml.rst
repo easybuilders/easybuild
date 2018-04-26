@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gmacml module
-====================================
+easybuild.toolchains.gmacml module
+==================================
 
 .. automodule:: easybuild.toolchains.gmacml
     :members:

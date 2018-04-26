@@ -1,5 +1,5 @@
-easybuild\.toolchains\.mpi\.craympich module
-============================================
+easybuild.toolchains.mpi.craympich module
+=========================================
 
 .. automodule:: easybuild.toolchains.mpi.craympich
     :members:

@@ -1,5 +1,5 @@
-easybuild\.toolchains\.gmpolf module
-====================================
+easybuild.toolchains.gmpolf module
+==================================
 
 .. automodule:: easybuild.toolchains.gmpolf
     :members:

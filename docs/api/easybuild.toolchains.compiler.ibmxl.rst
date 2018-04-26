@@ -1,5 +1,5 @@
-easybuild\.toolchains\.compiler\.ibmxl module
-=============================================
+easybuild.toolchains.compiler.ibmxl module
+==========================================
 
 .. automodule:: easybuild.toolchains.compiler.ibmxl
     :members:

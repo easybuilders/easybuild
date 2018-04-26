@@ -1,5 +1,5 @@
-easybuild\.toolchains\.cgmpolf module
-=====================================
+easybuild.toolchains.cgmpolf module
+===================================
 
 .. automodule:: easybuild.toolchains.cgmpolf
     :members:

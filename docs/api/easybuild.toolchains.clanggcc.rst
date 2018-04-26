@@ -1,5 +1,5 @@
-easybuild\.toolchains\.clanggcc module
-======================================
+easybuild.toolchains.clanggcc module
+====================================
 
 .. automodule:: easybuild.toolchains.clanggcc
     :members:

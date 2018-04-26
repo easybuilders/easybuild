@@ -133,29 +133,30 @@ extensions parameters
 modules parameters
 ------------------
 
-==============================    =======================================================================================================    =================
-**Parameter name**                **Description**                                                                                            **Default value**
-==============================    =======================================================================================================    =================
-``modextravars``                  Extra environment variables to be added to module file                                                     {}               
-``usage``                         Usage instructions for the software                                                                        None             
-``upstream_contacts``             String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)    None             
-``recursive_module_unload``       Recursive unload of all dependencies when unloading module                                                 False            
-``moduleforceunload``             Force unload of all modules when loading the extension                                                     False            
-``moduleloadnoconflict``          Don't check for conflicts, unload other versions instead                                                   False            
-``moduleclass``                   Module class to be used for this software                                                                  "base"           
-``modaltsoftname``                Module name to use (rather than using software name                                                        None             
-``allow_prepend_abs_path``        Allow specifying absolute paths to prepend in modextrapaths                                                False            
-``include_modpath_extensions``    Include $MODULEPATH extensions specified by module naming scheme.                                          True             
-``examples``                      Free-form text with examples on using the software                                                         None             
-``modaliases``                    Aliases to be defined in module file                                                                       {}               
-``modtclfooter``                  Footer to include in generated module file (Tcl syntax)                                                    ""               
-``modloadmsg``                    Message that should be printed when generated module is loaded                                             {}               
-``whatis``                        List of brief (one line) description entries for the software                                              None             
-``modluafooter``                  Footer to include in generated module file (Lua syntax)                                                    ""               
-``site_contacts``                 String/list of strings with site contacts for the software                                                 None             
-``docpaths``                      List of paths for documentation relative to installation directory                                         None             
-``modextrapaths``                 Extra paths to be prepended in module file                                                                 {}               
-==============================    =======================================================================================================    =================
+==============================    ===========================================================================================================    =================
+**Parameter name**                **Description**                                                                                                **Default value**
+==============================    ===========================================================================================================    =================
+``modextravars``                  Extra environment variables to be added to module file                                                         {}               
+``usage``                         Usage instructions for the software                                                                            None             
+``upstream_contacts``             String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)        None             
+``recursive_module_unload``       Recursive unload of all dependencies when unloading module                                                     False            
+``moduleforceunload``             Force unload of all modules when loading the extension                                                         False            
+``moduleloadnoconflict``          Don't check for conflicts, unload other versions instead                                                       False            
+``moduleclass``                   Module class to be used for this software                                                                      "base"           
+``modaltsoftname``                Module name to use (rather than using software name                                                            None             
+``allow_prepend_abs_path``        Allow specifying absolute paths to prepend in modextrapaths                                                    False            
+``include_modpath_extensions``    Include $MODULEPATH extensions specified by module naming scheme.                                              True             
+``examples``                      Free-form text with examples on using the software                                                             None             
+``modaliases``                    Aliases to be defined in module file                                                                           {}               
+``module_depends_on``             Use depends_on (Lmod 7.6.1+) for dependencies in generated module (implies recursive unloading of modules).    False            
+``modtclfooter``                  Footer to include in generated module file (Tcl syntax)                                                        ""               
+``modloadmsg``                    Message that should be printed when generated module is loaded                                                 {}               
+``whatis``                        List of brief (one line) description entries for the software                                                  None             
+``modluafooter``                  Footer to include in generated module file (Lua syntax)                                                        ""               
+``site_contacts``                 String/list of strings with site contacts for the software                                                     None             
+``docpaths``                      List of paths for documentation relative to installation directory                                             None             
+``modextrapaths``                 Extra paths to be prepended in module file                                                                     {}               
+==============================    ===========================================================================================================    =================
 
 
 other parameters

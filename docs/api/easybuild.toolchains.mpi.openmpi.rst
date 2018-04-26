@@ -1,5 +1,5 @@
-easybuild\.toolchains\.mpi\.openmpi module
-==========================================
+easybuild.toolchains.mpi.openmpi module
+=======================================
 
 .. automodule:: easybuild.toolchains.mpi.openmpi
     :members:

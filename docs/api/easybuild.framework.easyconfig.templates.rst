@@ -1,5 +1,5 @@
-easybuild\.framework\.easyconfig\.templates module
-==================================================
+easybuild.framework.easyconfig.templates module
+===============================================
 
 .. automodule:: easybuild.framework.easyconfig.templates
     :members:
