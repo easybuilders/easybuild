@@ -107,8 +107,8 @@ feature release
 
 * added additional easyconfigs for various supported software packages, including:
 
-  * ABINIT 8.6.3, Anaconda2 5.1.0, Anaconda3 5.1.0, binutils 2.30, dask 0.17.2, FFmpeg 4.0, GCC(core) 7.3.0
-    GROMACS 2016.5, olf 2018a.eb, HTSlib 1.8, LLVM 6.0.0, Mesa 17.3.6, netCDF 4.6.0, Octave 4.2.2, OpenCV 3.4.1,
+  * ABINIT 8.6.3, Anaconda2 5.1.0, Anaconda3 5.1.0, binutils 2.30, dask 0.17.2, FFmpeg 4.0, GCC(core) 7.3.0,
+    GROMACS 2016.5, HTSlib 1.8, LLVM 6.0.0, Mesa 17.3.6, netCDF 4.6.0, Octave 4.2.2, OpenCV 3.4.1,
     PLUMED 2.4.1, PROJ 5.0.0, PostgreSQL 10.3, Qt5 5.10.1, R 3.4.4, SAMtools 1.8, Spack 0.11.2, TensorFlow 1.7.0,
     VTK 8.1.0
 
