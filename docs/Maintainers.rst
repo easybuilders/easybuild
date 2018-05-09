@@ -76,7 +76,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
 
-* **Adam Huffman** (`The Francis Crick Institute <https://www.crick.ac.uk/>`_)
+* **Adam Huffman** (`Big Data Institute, University of Oxford <https://www.bdi.ox.ac.uk/>`_)
 
   * GitHub: `@verdurin <https://github.com/verdurin>`_ - e-mail: ``adam.huffman (at) gmail.com`` - IRC/Slack: ``verdurin``
 
