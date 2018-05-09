@@ -130,7 +130,8 @@ EasyBuild will validate the provided token, to check that authenticated access t
 Specify location of working directories (``--git-working-dirs-path``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can specify the location of your Git working directories using ``--git-working-dirs-path``.
+You can specify the location of your Git working directories using ``--git-working-dirs-path`` or
+you can set it with the ``git-working-dirs-path`` option in your EasyBuild configuraton file.
 
 The provided path should be the *parent* directory of the location of the working directories (i.e. clones)
 of the EasyBuild repositories (``easybuild-easyconfigs``, etc.); the assumption is that you keep them all in a single
