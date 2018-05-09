@@ -18,7 +18,7 @@ Criteria
 EasyBuild maintainers should meet the following criteria:
 
 * being sufficiently familiar with the contribution procedure (see :ref:`contributing`)
-* frequently contributing to the relevant repositories
+* frequently contributing to the EasyBuild GitHub repositories
 * being an active member of the EasyBuild community for a significant amount of time, i.e.:
 
   * following the EasyBuild mailing list and participating in discussions (see :ref:`getting_help`)
@@ -32,8 +32,6 @@ EasyBuild maintainers should meet the following criteria:
 
 Roles
 -----
-
-Different (partially overlapping) groups of maintainers are currently assigned to each of the EasyBuild repositories:
 
 .. _maintainers_release_manager:
 
@@ -50,100 +48,23 @@ with the help of the other EasyBuild maintainers.
 
 .. _maintainers_easybuild_repo:
 
-Maintainers of the ``easybuild`` repository (documentation)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Maintainers
+~~~~~~~~~~~
 
-https://github.com/easybuilders/easybuild, http://easybuild.readthedocs.io
+The EasyBuild maintainers all have admin access to the different EasyBuild GitHub repositories:
 
-* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+* https://github.com/easybuilders/easybuild (documentation (http://easybuild.readthedocs.io), EasyBuild website, `easybuild` metapackage)
+* https://github.com/easybuilders/easybuild-framework (EasyBuild framework)
+* https://github.com/easybuilders/easybuild-easyblocks (central repository for easyblocks)
+* https://github.com/easybuilders/easybuild-easyconfigs (central repository for easyconfigs)
 
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
-
-* **Miguel Dias Costa** (National University of Singapore)
-
-  * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
-
-* **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
-
-  * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
-
-* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
-
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
-
-* **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
-
-  * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
-
-* **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
-
-  * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
-
-
-.. _maintainers_framework_repo:
-
-Maintainers of the ``easybuild-framework`` repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-https://github.com/easybuilders/easybuild-framework
-
-* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
-
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
-
-* **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
-
-  * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
-
-* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
-
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
-
-* **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
-
-  * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
-
-
-.. _maintainers_easyblocks_repo:
-
-Maintainers of the ``easybuild-easyblocks`` repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-https://github.com/easybuilders/easybuild-easyblocks
+(maintainers are listed in alphabetical order, by last name)
 
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
   * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
 
 * **Miguel Dias Costa** (National University of Singapore)
-
-  * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
-
-* **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
-
-  * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
-
-* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
-
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
-
-* **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
-
-  * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
-
-
-.. _maintainers_easyconfigs_repo:
-
-Maintainers of the ``easybuild-easyconfigs`` repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-https://github.com/easybuilders/easybuild-easyconfigs
-
-* **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
-
-  * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
-
-* **Miguel Dias Costa** (`National University of Singapore <https://nusit.nus.edu.sg/services/hpc/>`_)
 
   * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
 
@@ -158,6 +79,10 @@ https://github.com/easybuilders/easybuild-easyconfigs
 * **Adam Huffman** (`The Francis Crick Institute <https://www.crick.ac.uk/>`_)
 
   * GitHub: `@verdurin <https://github.com/verdurin>`_ - e-mail: ``adam.huffman (at) gmail.com`` - IRC/Slack: ``verdurin``
+
+* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
 
 * **Ward Poelmans** (`Free University of Brussels <https://cc.ulb.ac.be/hpc/>`_)
 
