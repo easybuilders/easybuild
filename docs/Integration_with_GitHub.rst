@@ -78,7 +78,7 @@ To specify your GitHub username, do one of the following:
 
 * use the ``--github-user`` configuration option on the ``eb`` command line
 * define the ``$EASYBUILD_GITHUB_USER`` environment variable
-* specify ``github-user`` in your EasyBuild configuraton file
+* specify ``github-user`` in your EasyBuild configuration file
 
 (see also :ref:`configuring_easybuild`)
 
@@ -90,7 +90,7 @@ Installing a GitHub token (``--install-github-token``)
 
 .. note:: *requires*: GitHub username + ``keyring`` Python package
 
-A GitHub token is a string of 40 hexidecimal (lowercase) characters that is tied to your GitHub account,
+A GitHub token is a string of 40 hexadecimal (lowercase) characters that is tied to your GitHub account,
 allowing you to access the GitHub API authenticated.
 
 Using a GitHub token is beneficial with respect to rate limitations, and enables write permissions on GitHub
@@ -130,8 +130,11 @@ EasyBuild will validate the provided token, to check that authenticated access t
 Specify location of working directories (``--git-working-dirs-path``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can specify the location of your Git working directories using ``--git-working-dirs-path`` or
-you can set it with the ``git-working-dirs-path`` option in your EasyBuild configuraton file.
+You can specify the location of your Git working directories with one of the following:
+
+* use the ``--git-working-dirs-path`` configuration option on the ``eb`` command line
+* define the ``$EASYBUILD_GIT_WORKING_DIRS_PATH`` environment variable
+* specify the ``git-working-dirs-path`` option in your EasyBuild configuration file
 
 The provided path should be the *parent* directory of the location of the working directories (i.e. clones)
 of the EasyBuild repositories (``easybuild-easyconfigs``, etc.); the assumption is that you keep them all in a single
@@ -249,7 +252,7 @@ temporary directory. Afterwards, the patch corresponding to the specified pull r
 like if the pull request would be merged, which is particularly important for testing of contributions (see also
 :ref:`github_upload_test_report`).
 
-Easyconfig files touched by the pull request that are explicitely specified are then picked up from this location;
+Easyconfig files touched by the pull request that are explicitly specified are then picked up from this location;
 see also :ref:`github_from_pr_specifying_easyconfigs`.
 
 .. _github_from_pr_vs_develop_merged_prs:
@@ -575,7 +578,7 @@ Submitting pull requests (``--new-pr``)
           For other repositories, see the manual procedure documented at :ref:`contributing_pull_requests`.
 
 To create a new pull request, the ``--new-pr`` command line option can be used, provided that the necessary
-requirements are fullfilled (see :ref:`github_requirements`).
+requirements are fulfilled (see :ref:`github_requirements`).
 
 In its simplest form, you just provide the location of the file(s) that you want to include in the pull request::
 
@@ -781,7 +784,7 @@ For example, when opening a pull request for an easyconfig for Python 2.7.11 wit
 the default pull request title will be something like: ``{lang}[intel/2016a] Python v2.7.11`` .
 
 If multiple easyconfig files are provided, the respective software names/versions will be included separated by a ``,``,
-up until the first 3 easyconfig files (to avoid excessively lenghty pull request titles).
+up until the first 3 easyconfig files (to avoid excessively lengthy pull request titles).
 
 In case (only) existing easyconfig files are being changed, it's advisable to provide a more descriptive title
 using ``--pr-title``.
