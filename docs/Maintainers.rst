@@ -88,6 +88,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
 
+* **Åke Sangren** (`Umeå University, Sweden <http://www.umu.se/english/>`_)
+
+  * GitHub: `@akesandgren <https://github.com/akesandgren>`_ - e-mail: `ake.sandgren (at) hpc2n.umu.se` - IRC/Slack: ``akesandgren``
+
 * **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
 
   * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
