@@ -31,9 +31,9 @@ name                compiler            MPI            CUDA compiler    COMPILER
 **gmvapich2**       GCC                 MVAPICH2                        GCC                                                                   
 **gompi**           GCC                 OpenMPI                         GCC                                                                   
 **pompi**           PGI                 OpenMPI                         PGI                                                                   
-**iccifortcuda**    icc, ifort, CUDA                   CUDA             icc, ifort, CUDA                                                      
-**PGI**             PGI                                                 PGI                                                                   
 **gsolf**           GCC                 SpectrumMPI                     GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
+**PGI**             PGI                                                 PGI                                                                   
+**fosscuda**        GCC, CUDA           OpenMPI        CUDA             GCC, CUDA           OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **ismkl**           icc, ifort          MPICH2                          icc, ifort          imkl        imkl         imkl        imkl    imkl 
 **xlmvapich2**      xlc, xlf            MVAPICH2                        xlc, xlf                                                              
 **xlmpich2**        xlc, xlf            MPICH2                          xlc, xlf                                                              
@@ -73,6 +73,7 @@ name                compiler            MPI            CUDA compiler    COMPILER
 **cgompi**          Clang, GCC          OpenMPI                         Clang, GCC                                                            
 **cgmvapich2**      Clang, GCC          MVAPICH2                        Clang, GCC                                                            
 **intel-para**      icc, ifort          psmpi                           icc, ifort          imkl        imkl         imkl        imkl    imkl 
+**iccifortcuda**    icc, ifort, CUDA                   CUDA             icc, ifort, CUDA                                                      
 **giolf**           GCC                 impi                            GCC                 OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **giolfc**          GCC, CUDA           impi           CUDA             GCC, CUDA           OpenBLAS    ScaLAPACK    OpenBLAS    FFTW    BLACS
 **gmklc**           GCC, CUDA                          CUDA             GCC, CUDA           imkl        imkl         imkl        imkl    imkl 

@@ -38,13 +38,14 @@ Support for installing software that comes in binary form.
 Extra easyconfig parameters specific to ``Binary`` easyblock
 ------------------------------------------------------------
 
-====================    ===============================================================    =============
-easyconfig parameter    description                                                        default value
-====================    ===============================================================    =============
-``extract_sources``     Whether or not to extract sources                                  ``False``    
-``install_cmd``         Install command to be used.                                        ``None``     
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
-====================    ===============================================================    =============
+====================    ===============================================================================================================================================    =============
+easyconfig parameter    description                                                                                                                                        default value
+====================    ===============================================================================================================================================    =============
+``extract_sources``     Whether or not to extract sources                                                                                                                  ``False``    
+``install_cmd``         Install command to be used.                                                                                                                        ``None``     
+``prepend_to_path``     Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.    ``['']``     
+``staged_install``      Perform staged installation via subdirectory of build directory                                                                                    ``False``    
+====================    ===============================================================================================================================================    =============
 
 Customised steps in ``Binary`` easyblock
 ----------------------------------------
@@ -243,6 +244,7 @@ easyconfig parameter        description                                         
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
@@ -309,17 +311,18 @@ Support for installing software using 'conda'.
 Extra easyconfig parameters specific to ``Conda`` easyblock
 -----------------------------------------------------------
 
-======================    ===============================================================    =============
-easyconfig parameter      description                                                        default value
-======================    ===============================================================    =============
-``channels``              List of conda channels to pass to 'conda install'                  ``None``     
-``environment_file``      Conda environment.yml file to use with 'conda env create'          ``None``     
-``extract_sources``       Whether or not to extract sources                                  ``False``    
-``install_cmd``           Install command to be used.                                        ``None``     
-``remote_environment``    Remote conda environment to use with 'conda env create'            ``None``     
-``requirements``          Requirements specification to pass to 'conda install'              ``None``     
-``staged_install``        Perform staged installation via subdirectory of build directory    ``False``    
-======================    ===============================================================    =============
+======================    ===============================================================================================================================================    =============
+easyconfig parameter      description                                                                                                                                        default value
+======================    ===============================================================================================================================================    =============
+``channels``              List of conda channels to pass to 'conda install'                                                                                                  ``None``     
+``environment_file``      Conda environment.yml file to use with 'conda env create'                                                                                          ``None``     
+``extract_sources``       Whether or not to extract sources                                                                                                                  ``False``    
+``install_cmd``           Install command to be used.                                                                                                                        ``None``     
+``prepend_to_path``       Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.    ``['']``     
+``remote_environment``    Remote conda environment to use with 'conda env create'                                                                                            ``None``     
+``requirements``          Requirements specification to pass to 'conda install'                                                                                              ``None``     
+``staged_install``        Perform staged installation via subdirectory of build directory                                                                                    ``False``    
+======================    ===============================================================================================================================================    =============
 
 Customised steps in ``Conda`` easyblock
 ---------------------------------------
@@ -414,6 +417,7 @@ easyconfig parameter        description                                         
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                        ``""``       
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                        ``None``     
@@ -510,6 +514,7 @@ Extra easyconfig parameters specific to ``FortranPythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
@@ -576,13 +581,14 @@ Support for installing JAR files.
 Extra easyconfig parameters specific to ``JAR`` easyblock
 ---------------------------------------------------------
 
-====================    ===============================================================    =============
-easyconfig parameter    description                                                        default value
-====================    ===============================================================    =============
-``extract_sources``     Whether or not to extract sources                                  ``False``    
-``install_cmd``         Install command to be used.                                        ``None``     
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
-====================    ===============================================================    =============
+====================    ===============================================================================================================================================    =============
+easyconfig parameter    description                                                                                                                                        default value
+====================    ===============================================================================================================================================    =============
+``extract_sources``     Whether or not to extract sources                                                                                                                  ``False``    
+``install_cmd``         Install command to be used.                                                                                                                        ``None``     
+``prepend_to_path``     Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.    ``['']``     
+``staged_install``      Perform staged installation via subdirectory of build directory                                                                                    ``False``    
+====================    ===============================================================================================================================================    =============
 
 .. _MakeCp:
 
@@ -670,13 +676,14 @@ Support for installing packed binary software.
 Extra easyconfig parameters specific to ``PackedBinary`` easyblock
 ------------------------------------------------------------------
 
-====================    ===============================================================    =============
-easyconfig parameter    description                                                        default value
-====================    ===============================================================    =============
-``extract_sources``     Whether or not to extract sources                                  ``False``    
-``install_cmd``         Install command to be used.                                        ``None``     
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
-====================    ===============================================================    =============
+====================    ===============================================================================================================================================    =============
+easyconfig parameter    description                                                                                                                                        default value
+====================    ===============================================================================================================================================    =============
+``extract_sources``     Whether or not to extract sources                                                                                                                  ``False``    
+``install_cmd``         Install command to be used.                                                                                                                        ``None``     
+``prepend_to_path``     Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.    ``['']``     
+``staged_install``      Perform staged installation via subdirectory of build directory                                                                                    ``False``    
+====================    ===============================================================================================================================================    =============
 
 Customised steps in ``PackedBinary`` easyblock
 ----------------------------------------------
@@ -723,6 +730,7 @@ Extra easyconfig parameters specific to ``PythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
@@ -782,17 +790,18 @@ Support for installing RPM files.
 Extra easyconfig parameters specific to ``Rpm`` easyblock
 ---------------------------------------------------------
 
-====================    ===============================================================    =============
-easyconfig parameter    description                                                        default value
-====================    ===============================================================    =============
-``extract_sources``     Whether or not to extract sources                                  ``False``    
-``force``               Use force                                                          ``False``    
-``install_cmd``         Install command to be used.                                        ``None``     
-``makesymlinks``        Create symlinks for listed paths                                   ``[]``       
-``postinstall``         Enable post install                                                ``False``    
-``preinstall``          Enable pre install                                                 ``False``    
-``staged_install``      Perform staged installation via subdirectory of build directory    ``False``    
-====================    ===============================================================    =============
+====================    ===============================================================================================================================================    =============
+easyconfig parameter    description                                                                                                                                        default value
+====================    ===============================================================================================================================================    =============
+``extract_sources``     Whether or not to extract sources                                                                                                                  ``False``    
+``force``               Use force                                                                                                                                          ``False``    
+``install_cmd``         Install command to be used.                                                                                                                        ``None``     
+``makesymlinks``        Create symlinks for listed paths                                                                                                                   ``[]``       
+``postinstall``         Enable post install                                                                                                                                ``False``    
+``preinstall``          Enable pre install                                                                                                                                 ``False``    
+``prepend_to_path``     Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.    ``['']``     
+``staged_install``      Perform staged installation via subdirectory of build directory                                                                                    ``False``    
+====================    ===============================================================================================================================================    =============
 
 Customised steps in ``Rpm`` easyblock
 -------------------------------------
@@ -986,6 +995,7 @@ Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
@@ -1016,6 +1026,7 @@ Extra easyconfig parameters specific to ``VersionIndependentPythonPackage`` easy
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
