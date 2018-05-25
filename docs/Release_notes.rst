@@ -9,7 +9,7 @@ alongside 8,983 easyconfig files.
 
 .. _release_notes_eb361:
 
-v3.6.0 (May 26th 2018)
+v3.6.1 (May 26th 2018)
 ----------------------
 
 bugfix/update release
@@ -40,9 +40,9 @@ bugfix/update release
 
 * minor enhancements, including:
 
-* add support for detecting auto-downloaded dependencies in ``PythonPackage`` easyblock (`#1377 <https://github.com/easybuilders/easybuild-easyblocks/pull/1377>`_)
+  * add support for detecting auto-downloaded dependencies in ``PythonPackage`` easyblock (`#1377 <https://github.com/easybuilders/easybuild-easyblocks/pull/1377>`_)
 
-    * disable by default, can be enabled using "``download_dep_fail = True``" in easyconfig file
+    * disabled by default, can be enabled using "``download_dep_fail = True``" in easyconfig file
 
   * add support to enable integration of pscom in psmpi easyblock (`#1397 <https://github.com/easybuilders/easybuild-easyblocks/pull/1397>`_)
   * set ``$CMAKE_*_PATH`` when ``CMake`` is loaded in ``PythonPackage`` easyblock (`#1398 <https://github.com/easybuilders/easybuild-easyblocks/pull/1398>`_)
