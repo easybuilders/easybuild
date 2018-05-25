@@ -29,6 +29,7 @@ Submodules
    easybuild.toolchains.craypgi
    easybuild.toolchains.dummy
    easybuild.toolchains.foss
+   easybuild.toolchains.fosscuda
    easybuild.toolchains.gcc
    easybuild.toolchains.gcccore
    easybuild.toolchains.gcccuda
