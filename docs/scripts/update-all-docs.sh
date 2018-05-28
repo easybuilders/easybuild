@@ -86,7 +86,7 @@ echo ".. _avail_cfgfile_constants:" > $VERSION_SPECIFIC_DIR/config_file_constant
 echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo "*(see also* \`\`eb --avail-cfgfile-constants\`\` *)*" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
-eb --avail-cfgfile-constants --output-format rst >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
+eb --avail-cfgfile-constants --output-format rst | sed "s@$HOME@\$HOME@g" | sed "s@$USER@\$USER@g" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 
 echo "* :ref:\`Available config file constants <avail_cfgfile_constants>\`" >> $overview
 
