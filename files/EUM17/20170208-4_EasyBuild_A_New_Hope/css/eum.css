@@ -1,0 +1,13 @@
+html.title body {
+    background:url("../img/eb-jsc-logos.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+html.slide body {
+    background:url("../img/eb-jsc-logos.png");
+    background-position: right top;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}

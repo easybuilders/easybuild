@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>EasyBuild: building software with ease</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><img alt="EasyBuild" src="images/easybuild_logo_small.png"></h1>
+        <h4>EasyBuild:  building software with ease.</h4>
+        <p class="view"><a href="https://github.com/easybuilders/easybuild">View the Project on GitHub <small>easybuilders/easybuild</small></a></p>
+        <ul>
+         <li><a href="https://pypi.python.org/pypi/easybuild"><strong>EasyBuild @PyPi</strong></a></li>
+         <li><a href="http://easybuild.readthedocs.io"><strong>EasyBuild docs</strong></a></li>
+         <li><a href="https://github.com/easybuilders/easybuild"><strong>EasyBuild @GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>
+        <a href="https://github.com/easybuilders/easybuild">EasyBuild</a> is a software build and installation framework that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.<br>
+        A full list of supported software packages is available <a href="http://easybuild.readthedocs.io/en/latest/version-specific/Supported_software.html">here</a>.
+        </p>
+
+<hr>
+
+<h2><a>Latest news</a></h2>
+
+<div class=news>
+<ul>
+<li><em>20180528</em> - <a href="http://pypi.python.org/pypi/easybuild/3.6.1"><strong>EasyBuild v3.6.1</strong> is available</a></li>
+<li><em>20180426</em> - <a href="http://easybuild.readthedocs.io/en/latest/Containers.html">EasyBuild now has (experimental) support for generating Singularity container recipes &amp; images!</a></li>
+<li><em>20171113</em> - <strong>Happy 5th birthday (stable) EasyBuild!</strong><br><div align="center"><img src="images/easybuild5.png" width=300px></div></li>
+<li><em>20170705</em> - EasyBuild repositories have been migrated to <a href="https://github.com/easybuilders">https://github.com/easybuilders</a></li>
+<li><em>20170425</em> - <a href="http://users.ugent.be/~kehoste/EasyBuild_20170425_PRACE_Spring_School.pdf">slides from EasyBuild tutorial at PRACE-VI-SEEM Spring School</a></li>
+<li><em>20161128</em> - <strong><a href="http://www.fz-juelich.de/ias/jsc/eum17">2nd EasyBuild User Meeting</a>: Feb 8-10 2017, Jülich</strong></li>
+<li><em>20161110</em> - <a href="http://easybuilders.github.io/easybuild/files/eb-jsc-hust16.pdf">pre-print of <strong>HUST-16 paper</strong> available</a></li>
+<li><em>20160511</em> - <strong>CUG2016 paper</strong>: <a href="https://cug.org/proceedings/cug2016_proceedings/includes/files/pap145.pdf"><i>Making Scientific Software Installation Reproducible On Cray Systems Using EasyBuild</i></a></li>
+<li><em>20160330</em> - <a href="http://insidehpc.com/2016/03/easybuild/">EasyBuild tutorial</a> from <a href="http://www.hpcadvisorycouncil.com/events/2016/swiss-workshop/agenda.php">HPC Advisory Council Swiss conference</a></li>
+<li><em>20160214</em> - <a href="http://www.rce-cast.com/Podcast/rce-103-easybuild.html"><strong>RCE podcast</strong> on EasyBuild</a></li>
+<li><em>20151117</em> - <a href="https://github.com/easybuilders/easybuild/wiki/SC15-BoF-session">Presentation materials of SC'15 BoF session available</a></li>
+<li><em>20150914</em> - <a href="https://github.com/easybuilders/easybuild/wiki/1st-EasyBuild-User-Meeting"><strong>1st EasyBuild User Meeting - Jan 27-29 2016 (Ghent)</strong></a></li>
+<li><em>20141104</em> - <strong>Revamped documentation @ <a href="http://easybuild.readthedocs.io/">easybuild.readthedocs.io</a></strong></li>
+<li><em>20141020</em> - <a href="http://easybuilders.github.io/easybuild/files/hust14_paper.pdf">pre-print of <strong>HUST-14 workshop paper</strong> available</a></li>
+</ul>
+</div>
+
+<hr>
+
+<h2><a>Documentation</a></h2>
+
+<p>Read the fine manual (RTFM!) at <a href="http://easybuild.readthedocs.io/">http://easybuild.readthedocs.io/</a>.</p>
+
+<h2><a>Getting started</a></h2>
+
+<p>The recommended way of installing EasyBuild is via the
+<a href="http://easybuild.readthedocs.io/en/latest/Installation.html#bootstrapping-procedure">documented bootstrap
+procedure</a>. You should <a href="http://easybuild.readthedocs.io/en/latest/Configuration.html">configure</a>
+EasyBuild to behave as you prefer, subsequently.</p>
+
+<p>That is all that is needed to get started with installing (scientific) software with ease.
+Take a look at the <a href="http://easybuild.readthedocs.io/en/latest/Typical_workflow_example_with_WRF.html">
+typical workflow</a>
+example in the EasyBuild documentation that shows how to make EasyBuild build and install WRF <i>with a single
+command</i>.</p>
+
+<h2><a>Quick demo for the impatient</a></h2>
+
+<p>After <a href="http://easybuild.readthedocs.io/en/latest/Installation.html">installing EasyBuild</a>,
+you can build and install <strong>HPL</strong> on top of a compiler toolchain that consists of open source
+components (GCC, OpenMPI, etc.) by running the following commands:</p>
+
+<pre><code>$ module load EasyBuild
+$ export EASYBUILD_PREFIX=/tmp/$USER  # example installation prefix
+$ eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot</code></pre>
+
+<p>This should install a module file for HPL which you can load to start using it.</p>
+<pre><code>$ export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
+$ module load HPL</code></pre>
+
+<p>For more information on using EasyBuild, see the
+<a href="http://easybuild.readthedocs.io/">EasyBuild documentation</a>.</p>
+
+
+<a name="contact"/>
+<h2><a>Contact info</a></h2>
+<p>You can get in contact with the EasyBuild community in different ways:</p>
+
+<h4>Mailing list</h4>
+<p>An EasyBuild mailinglist <a href="mailto:easybuild&#64;lists.ugent.be">easybuild&#64;lists.ugent.be</a> is available to
+subscribe to.</p>
+<p>This list is used by both users and developers of EasyBuild, so if you
+have any questions or suggestions, you can post them there.</p>
+<p>Only members can post to this mailinglist. To request membership, see
+<a href="https://lists.ugent.be/wws/info/easybuild">https://lists.ugent.be/wws/info/easybuild</a>.</p>
+
+<h4>IRC</h4>
+<p>An IRC channel <code>#easybuild</code> has been set up on the FreeNode network.</p>
+<p>Just connect your IRC client to the <code>chat.freenode.net</code> server, and join
+the <code>#easybuild</code> channel.</p>
+<p>There is an IRC bot present (<code>easybuilder</code>). Just type !help to get
+pointers to the available commands.</p>
+
+<h4>Twitter</h4>
+<p>The EasyBuild team also has a Twitter feed:
+<a href="http://twitter.com/easy_build">&#64;easy_build</a>.</p>
+
+<h2><a>Disclaimer</a></h2>
+<p>EasyBuild has mostly been used and tested on x86_64-based Linux systems (RedHat-based, Debian, SuSE, ...),
+but can be easily extended for other platforms.
+Limited provisions for other Unix-based operating systems (e.g., Mac OS X) are also available.</p>
+
+<h2><a>License</a></h2>
+
+<p>EasyBuild is developed by the <a href="http://www.ugent.be/hpc/en">High-Performance Computing team at Ghent
+University</a> together with the members of the EasyBuild community, and is made available under the
+GNU General Public License (GPL) version 2.</p>
+
+<h2><a>Acknowledgements</a></h2>
+
+<p>EasyBuild was created with support of <a href="http://www.ugent.be/en">Ghent University</a>, <a href="https://www.vscentrum.be">the Flemish Supercomputer Centre (VSC)</a>, <a href="http://www.fwo.be/en">the Flemish Research Foundation (FWO)</a> and <a href="http://www.ewi-vlaanderen.be/en">the Department of Economy, Science and Innovation (EWI)</a>.
+
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/easybuilders">the EasyBuild community</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31408541-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+</body>
+</html>
