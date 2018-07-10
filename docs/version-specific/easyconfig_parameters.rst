@@ -45,6 +45,7 @@ build parameters
 ``versionprefix``            Additional prefix for software version (placed before version and toolchain name)                                        ""               
 ``tests``                    List of test-scripts to run after install. A test script should return a non-zero exit status to fail                    []               
 ``buildopts``                Extra options passed to make step (default already has -j X)                                                             ""               
+``bitbucket_account``        Bitbucket account name to be used to resolve template values in source URLs                                              "%(namelower)s"  
 ``skip``                     Skip existing software                                                                                                   False            
 ``parallel``                 Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
 ``stop``                     Keyword to halt the build process after a certain step.                                                                  None             

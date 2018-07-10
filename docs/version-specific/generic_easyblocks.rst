@@ -556,6 +556,7 @@ easyconfig parameter            description                                     
 ``license_activation``          License activation type                                            ``"license_server"``
 ``m32``                         Enable 32-bit toolchain                                            ``False``           
 ``requires_runtime_license``    Boolean indicating whether or not a runtime license is required    ``True``            
+``serial_number``               Serial number for the product                                      ``None``            
 ``usetmppath``                  Use temporary path for installation                                ``False``           
 ============================    ===============================================================    ====================
 
@@ -893,6 +894,7 @@ easyconfig parameter              description                                   
 ``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                                                                             ``False``           
 ``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                                                                                            ``None``            
 ``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                                                                                  ``True``            
+``serial_number``                 Serial number for the product                                                                                                                                    ``None``            
 ``tar_config_opts``               Override tar settings as determined by configure.                                                                                                                ``False``           
 ``usetmppath``                    Use temporary path for installation                                                                                                                              ``False``           
 ``withcloog``                     Build GCC with CLooG support                                                                                                                                     ``False``           
@@ -933,6 +935,7 @@ easyconfig parameter                 description                                
 ``m32``                              Enable 32-bit toolchain                                                                             ``False``           
 ``prefix_opt``                       Prefix command line option for configure script ('--prefix=' if None)                               ``None``            
 ``requires_runtime_license``         Boolean indicating whether or not a runtime license is required                                     ``True``            
+``serial_number``                    Serial number for the product                                                                       ``None``            
 ``set_mpi_wrapper_aliases_gcc``      Set compiler for mpigcc/mpigxx via aliases                                                          ``False``           
 ``set_mpi_wrapper_aliases_intel``    Set compiler for mpiicc/mpiicpc/mpiifort via aliases                                                ``False``           
 ``set_mpi_wrappers_all``             Set (default) compiler for all MPI wrapper commands                                                 ``False``           

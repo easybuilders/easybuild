@@ -68,6 +68,7 @@
       * EB_GROMACS
       * EB_netCDF
       * EB_OpenBabel
+      * EB_OpenCV
       * EB_PSI
       * EB_ROOT
       * EB_SuperLU
