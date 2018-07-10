@@ -5,6 +5,8 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20180711.01** (`Jul 11th 2018`): update release notes for EasyBuild v3.6.2 (see :ref:`release_notes_eb362`)
+* **release 20180710.01** (`Jul 10th 2018`): add definitions for ``2018b`` common toolchains (see :ref:`common_toolchains`)
 * **release 20180528.01** (`May 28th 2018`): update release notes for EasyBuild v3.6.1 (see :ref:`release_notes_eb361`)
 * **release 20180427.01** (`Apr 27th 2018`): update release notes for EasyBuild v3.6.0 (see :ref:`release_notes_eb360`)
 * **release 20180425.01** (`Apr 25th 2018`): add documentation on support for generating container recipes & images (see :ref:`containers`)
