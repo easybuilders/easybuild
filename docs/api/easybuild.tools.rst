@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+    easybuild.tools.containers
     easybuild.tools.deprecated
     easybuild.tools.job
     easybuild.tools.module_naming_scheme
@@ -23,7 +24,6 @@ Submodules
    easybuild.tools.build_log
    easybuild.tools.config
    easybuild.tools.configobj
-   easybuild.tools.containers
    easybuild.tools.convert
    easybuild.tools.docs
    easybuild.tools.environment
