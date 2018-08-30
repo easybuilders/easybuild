@@ -34,14 +34,14 @@ for software built with Intel toolchains), and that it will not be fully optimiz
 higher instruction sets than those of the build host. The first problem can be solved by building with
 ``--optarch=GENERIC``, but it will make the second problem even worse.
 
-(With an Intel toolchain, the problem can be reduced by generating multiple code paths with the ``-ax`` compiler option
-in ``--optarch`` and by leveraging on MKL's automatic dispatch according to the execution node's instruction set, but
-no such option is available (yet) in the GNU toolchains)
+(With an Intel toolchain, the problem can be reduced by generating multiple code paths with the ``-ax`` compiler
+option in ``--optarch`` and by leveraging on MKL's automatic dispatch according to the execution node's instruction
+set, but no such option is available (yet) in the GNU toolchains)
 
-The solution is	then to	build multiple copies of each software,	at least for those where performance is	crucial, which
-is easily achieved simply by running EasyBuild from each type of node, the caveat being where exactly to install copies
-for different architectures in a way that they can be loaded, with their dependencies, and used effectively across the
-cluster by all users.
+The solution is then to	build multiple copies of each software,	at least for those where performance is	crucial,
+which is easily achieved simply by running EasyBuild from each type of node, the caveat being where exactly to
+install copies for different architectures in a way that they can be loaded, with their dependencies, and used
+effectively across the cluster by all users.
 
 .. _heterogeneous_clusters_visibility:
 
