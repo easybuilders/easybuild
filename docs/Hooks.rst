@@ -147,7 +147,7 @@ before further parsing of some easyconfig parameters (like ``*dependencies``) in
 custom data structures is done.
 
 This is important since it allows to dynamically modify easyconfig files
-while they is still "raw", i.e., when the easyconfig parameter values are
+while they are still "raw", i.e., when the easyconfig parameter values are
 still basic Python data structures like lists, dictionaries, etc.
 that are easy to manipulate (see also :ref:`hooks_caveats_manipulating`).
 
@@ -241,6 +241,27 @@ A better approach for manipulating easyconfig parameters is to use the ``parse_h
 was introduced in EasyBuild v3.7.0 (see :ref:`hooks_parse_hook`),
 where these kind of surprises will not occur (because templating is automatically disabled
 before ``parse_hook`` is called, and restored immediately afterwards).
+See also :ref:`hooks_examples_inject_patch`.
+
+.. _hooks_caveats_archived_easyconfig:
+
+Archived easyconfig file vs hooks
++++++++++++++++++++++++++++++++++
+
+EasyBuild archives the easyconfig file that was used for a particular installation:
+a copy is stored both in the ``easybuild`` subdirectory of the software installation
+directory and in the easyconfigs repository (see :ref:`easyconfigs_repo`).
+
+If any changes were made to the easyconfig file via hooks, these changes will *not* be
+reflected in these copies. The assumption here is that the hooks will also be in place
+for future (re-)installations.
+
+EasyBuild does however store an additional copy of the easyconfig file which includes
+any modifications that were done dynamically, for example by hooks. This copy also
+hardwires the subtoolchains that were used for each dependency.
+
+This "*reproducible easyconfig*" is stored in the ``easybuild/reprod`` subdirectory
+of the software installation directory.
 
 
 .. _hooks_examples:
@@ -255,8 +276,22 @@ Example hook to replace ``--with-verbs`` with ``--without-verbs`` in OpenMPI con
 
 .. code:: python
 
+    def pre_configure_hook(self, *args, **kwargs):
+        """Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI."""
+        if self.name == 'OpenMPI' and '--with-verbs' in self.cfg['configopts']:
+            self.log.info("[pre-configure hook] Replacing --with-verbs with --without-verbs")
+            self.cfg['configopts'] = self.cfg['configopts'].replace('--with-verbs', '--without-verbs')
+
+.. _hooks_examples_inject_patch:
+
+Example hook to inject a custom patch file
+++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: python
+
     def parse_hook(ec, *args, **kwargs):
-        "Example parse hook to replace --with-verbs with --without -verbs."""
-        if ec.name == 'OpenMPI' and '--with-verbs' in ec['configopts']:
-            ec.log.info("[pre-configure hook] Replacing --with-verbs with --without-verbs")
-            ec['configopts'] = ec['configopts'].replace('--with-verbs', '--without-verbs')
+        """Example parse hook to inject a patch file for a fictive software package named 'Example'."""
+        if ec.name == 'Example':
+            patch_file = 'example.patch'
+            ec.log.info("[parse hook] Injecting additional patch file '%s'", patch_file)
+            ec['patches'].append(patch_file)
