@@ -152,7 +152,7 @@ still basic Python data structures like lists, dictionaries, etc.
 that are easy to manipulate (see also :ref:`hooks_caveats_manipulating`).
 
 In ``parse_hook`` easyconfig parameters can be accessed and/or modified in a straightforward way,
-see :ref:`hooks_examples_openmpi_configopts`.
+see :ref:`hooks_examples_inject_patch`.
 
 
 .. _hooks_caveats:
