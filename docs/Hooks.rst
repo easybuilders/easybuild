@@ -257,8 +257,8 @@ reflected in these copies. The assumption here is that the hooks will also be in
 for future (re-)installations.
 
 EasyBuild does however store an additional copy of the easyconfig file which includes
-any modifications that were done dynamically, for example by hooks. This copy also
-hardwires the subtoolchains that were used for each dependency.
+any modifications that were done dynamically, for example by hooks.
+If subtoolchains were used to resolve dependencies, they will also be hardwired in this copy.
 
 This "*reproducible easyconfig*" is stored in the ``easybuild/reprod`` subdirectory
 of the software installation directory.
