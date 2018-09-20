@@ -346,6 +346,8 @@ can be specified as an argument (e.g., ``--inject-checksums md5``).
             Usage: eb [options] easyconfig [...]
 
             eb: error: option --inject-checksums: invalid choice: 'bzip2-1.0.6.eb' (choose from 'adler32', 'crc32', 'md5', 'sha1', 'sha256', 'sha512', 'size')
+
+
 .. _common_easyconfig_param_sources_alt:
 
 Alternative formats for ``sources``
@@ -363,12 +365,15 @@ Since EasyBuild v3.3.0, three keys are supported:
 * ``download_filename``: filename that should be used when downloading this source file; the downloaded file will be
   saved using the ``filename`` value
 * ``extract_cmd``: custom extraction command for this source file
+* ``source_urls``: source URLs to consider for downloading this source file
+* ``git_config``: see :ref:`common_easyconfig_param_sources_git_config`
 
 For example:
 
 .. code:: python
 
   sources = [{
+      'source_urls': ['https://example.com'],
       'filename': 'example-%(version)s.gz',
       'download_filename': 'example.gz',  # provided source tarball is not versioned...
       'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
@@ -376,6 +381,70 @@ For example:
 
 .. note:: Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
           in favor of the Python dictionary format described above; see also :ref:`depr_sources_2_element_tuple`.
+
+.. _common_easyconfig_param_sources_git_config:
+
+Downloading from a Git repository
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since EasyBuild v3.7.0, support for downloading directly from a Git repository is available.
+
+When ``git_config`` is provided for a particular source file (see :ref:`common_easyconfig_param_sources_alt`),
+EasyBuild will create a source tarball after downloading the specified Git repository.
+
+The value for ``git_config`` is a Python dictionary, where the following keys are *mandatory*:
+
+* ``url``: the URL where the Git repository is located
+* ``repo_name``: the name of the Git repository
+
+The value for ``filename`` in the source specification *must* end in ``.tar.gz`` (because a gzipped tarball
+will be created from the cloned repository).
+
+In addition, either of the following keys *must* also be defined:
+
+* ``tag``: the specific tag to download (could be a branch name or an actual tag)
+* ``commit``: the specific commit ID to download
+
+If a recursive checkout should be made of the repository, the ``recursive`` key can be set to ``True``.
+
+Examples:
+
+  * creating a source tarball named ``example-master.tar.gz`` of the ``master`` branch of a (fictional)
+    ``test`` repository from ``https://github.com/example``:
+
+    .. code::
+
+      sources = [{
+          'filename': 'example-master.tar.gz',
+          'git_config': {
+              'url': 'https://github.com/example',
+              'repo_name': 'test',
+              'tag': 'master',
+          },
+      }]
+
+  * creating a source tarball named ``example-20180920.tar.gz`` of the recursive checkout of commit ``abcdef12``
+    of the ``test`` repository from ``https://github.com/example``:
+
+    .. code::
+
+      sources = [{
+          'filename': 'example-20180920.tar.gz',
+          'git_config': {
+              'url': 'https://github.com/example',
+              'repo_name': 'test',
+              'commit': 'abcdef12',
+              'recursive': True,
+          },
+      }]
+
+
+.. note:: Because the source tarball is created locally (by running ``tar cfvz`` on the directory containing
+          the cloned repository), the (SHA256) checksum is not guaranteed to be the same across different systems.
+
+          Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub),
+          we strongly recommend you to do so.
+
 
 .. _dependency_specs:
 
