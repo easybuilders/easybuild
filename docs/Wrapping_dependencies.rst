@@ -9,14 +9,14 @@ which can be used to generate a (software-specific) ``.modulerc`` file
 
 .. note:: For compatibility with the different modules tools supported by EasyBuild (see :ref:`modules_tool`),
           the ``.modulerc`` file is always generated in Tcl syntax (for now), regardless of the module syntax
-          that is used for module files. Only Lmod 7.8 or more recent supports ``.modulerc.lua`` files
+          that is used for module files. Only Lmod 7.8 (or later) supports ``.modulerc.lua`` files
           in Lua syntax.
 
 The ``ModuleRC`` easyblock supports including ``module-version`` in the generated ``.modulerc`` file,
 which defines a so-called *"symbolic version"*.
 
 This can be used to install a *"wrapper"* for a particular module, which can be useful in the context
-of dependencies. For example, it can be used to avoid dependending on a specific version of
+of dependencies. For example, it can be used to avoid depending on a specific version of
 a particular software package by specifying the dependency only on the ``<major>.<minor>`` version instead
 (i.e., without including the "subminor" version, which usually corresponds to a bugfix release).
 
@@ -39,4 +39,5 @@ This has a couple of advantages:
   actual installation and generating a module file); in addition, it doesn't require updating/re-generating existing
   module files that depend on the ``Java`` wrapper (since the version of the wrapper does not change)
 
-Since ``ModuleRC`` is a generic easyblock , it can also be employed to install module "wrappers" for dependencies.
+Since ``ModuleRC`` is a generic easyblock , it can also be employed to install module "wrappers" for dependencies
+other than ``Java``.
