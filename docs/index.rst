@@ -57,9 +57,11 @@ Advanced usage topics
     Archived-easyconfigs
     Backup_modules
     Common-toolchains
+    Containers
     Contributing
     Controlling_compiler_optimization_flags
     Cray-support
+    Detecting_loaded_modules
     Experimental_features
     Extended_dry_run
     Hooks
@@ -70,11 +72,10 @@ Advanced usage topics
     Packaging_support
     Partial_installations
     RPATH-support
-    Containers
     Submitting_jobs
     Tracing_progress
     Using_external_modules
-    Detecting_loaded_modules
+    Wrapping_dependencies
 
 Other topics
 ============
