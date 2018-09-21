@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20180921.01** (`Sep 21st 2018`): document support for wrapping dependencies (see :ref:`wrapping_dependencies`)
 * **release 20180920.01** (`Sep 20th 2018`): document support for downloading sources directly from a Git repository (see :ref:`common_easyconfig_param_sources_git_config`)
 * **release 20180711.01** (`Jul 11th 2018`): update release notes for EasyBuild v3.6.2 (see :ref:`release_notes_eb362`)
 * **release 20180710.01** (`Jul 10th 2018`): add definitions for ``2018b`` common toolchains (see :ref:`common_toolchains`)
