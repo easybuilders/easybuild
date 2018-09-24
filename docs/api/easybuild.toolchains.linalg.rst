@@ -9,6 +9,7 @@ Submodules
    easybuild.toolchains.linalg.acml
    easybuild.toolchains.linalg.atlas
    easybuild.toolchains.linalg.blacs
+   easybuild.toolchains.linalg.blis
    easybuild.toolchains.linalg.flame
    easybuild.toolchains.linalg.gotoblas
    easybuild.toolchains.linalg.intelmkl
