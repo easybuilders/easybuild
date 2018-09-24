@@ -63,7 +63,7 @@ Option flag                                Option description
 ``-b BLOCKS, --only-blocks=BLOCKS``        Only build listed blocks (type comma-separated list)                                                                                                                                                                                    
 ``--rebuild``                              Rebuild software, even if module already exists (don't skip OS dependencies checks) (def False)                                                                                                                                         
 ``-r PATH[:PATH], --robot=PATH[:PATH]``    Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list; def )                                                                                                                                  
-``--robot-paths=PATH[:PATH]``              Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; def *(location of easyconfig files included with EasyBuild installation)*)
+``--robot-paths=PATH[:PATH]``              Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; def /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs)                                                   
 ``--search-paths=PATH[:PATH]``             Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list; def )                                                                                                              
 ``-k, --skip``                             Skip existing software (useful for installing additional packages) (def False)                                                                                                                                                          
 ``-s STOP, --stop=STOP``                   Stop the installation after certain step (type choice; def source) (choices: fetch, ready, source, patch, prepare, configure, build, test, install, extensions, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
@@ -144,6 +144,7 @@ GitHub integration options
 ===================================================    =======================================================================================================
 Option flag                                            Option description                                                                                     
 ===================================================    =======================================================================================================
+``--check-contrib``                                    Runs checks to see whether the given easyconfigs are ready to be contributed back (def False)          
 ``--check-github``                                     Check status of GitHub integration, and report back (def False)                                        
 ``--check-style``                                      Run a style check on the given easyconfigs (def False)                                                 
 ``--cleanup-easyconfigs``                              Clean up easyconfig files for pull request (def True)                                                  
@@ -203,17 +204,17 @@ Option flag                                              Option description
 
 Options for job backend
 -----------------------
-===========================================    ===============================================================================================
-Option flag                                    Option description                                                                             
-===========================================    ===============================================================================================
-``--job-backend-config=BACKEND-CONFIG``        Configuration file for job backend                                                             
-``--job-cores=CORES``                          Number of cores to request per job (type int)                                                  
-``--job-max-jobs=MAX-JOBS``                    Maximum number of concurrent jobs (queued and running, 0 = unlimited) (type int; def 0)        
-``--job-max-walltime=MAX-WALLTIME``            Maximum walltime for jobs (in hours) (type int; def 24)                                        
-``--job-output-dir=OUTPUT-DIR``                Output directory for jobs (default: current directory) (def /Users/kehoste/work/easybuild/docs)
-``--job-polling-interval=POLLING-INTERVAL``    Interval between polls for status of jobs (in seconds) (type <type 'float'>; def 30.0)         
-``--job-target-resource=TARGET-RESOURCE``      Target resource for jobs                                                                       
-===========================================    ===============================================================================================
+===========================================    =========================================================================================
+Option flag                                    Option description                                                                       
+===========================================    =========================================================================================
+``--job-backend-config=BACKEND-CONFIG``        Configuration file for job backend                                                       
+``--job-cores=CORES``                          Number of cores to request per job (type int)                                            
+``--job-max-jobs=MAX-JOBS``                    Maximum number of concurrent jobs (queued and running, 0 = unlimited) (type int; def 0)  
+``--job-max-walltime=MAX-WALLTIME``            Maximum walltime for jobs (in hours) (type int; def 24)                                  
+``--job-output-dir=OUTPUT-DIR``                Output directory for jobs (default: current directory) (def /Volumes/work/easybuild/docs)
+``--job-polling-interval=POLLING-INTERVAL``    Interval between polls for status of jobs (in seconds) (type <type 'float'>; def 30.0)   
+``--job-target-resource=TARGET-RESOURCE``      Target resource for jobs                                                                 
+===========================================    =========================================================================================
 
 
 Override options

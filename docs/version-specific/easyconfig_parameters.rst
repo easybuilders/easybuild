@@ -68,7 +68,7 @@ build parameters
 ``source_urls``              List of URLs for source files                                                                                            []               
 ``easyblock``                EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
 ``hidden``                   Install module file as 'hidden' by prefixing its version with '.'                                                        False            
-``github_account``           GitHub account name to be used to resolve template values in source URLs                                                 None             
+``github_account``           GitHub account name to be used to resolve template values in source URLs                                                 "%(namelower)s"  
 ``configopts``               Extra options passed to configure (default already has --prefix)                                                         ""               
 =========================    =====================================================================================================================    =================
 

@@ -48,7 +48,9 @@ Submodules
    easybuild.toolchains.gmvolf
    easybuild.toolchains.gnu
    easybuild.toolchains.goalf
+   easybuild.toolchains.goblf
    easybuild.toolchains.golf
+   easybuild.toolchains.golfc
    easybuild.toolchains.gomkl
    easybuild.toolchains.gomklc
    easybuild.toolchains.gompi
