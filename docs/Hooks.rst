@@ -56,17 +56,19 @@ or::
 Available hooks
 ---------------
 
-Currently, two types of hooks are supported:
+Currently (since EasyBuild v3.7.0), three types of hooks are supported:
 
 * ``start_hook`` and ``end_hook``, which are triggered *once* before starting software installations,
   and *once* right after completing all installations, respectfully;
-* hooks that are triggered before and after every step of each installation procedure that is performed,
-  aptly named '``pre``'- and '``post``'-hooks
+* ``parse_hook``, which is triggered when an easyconfig file is being parsed;
+* "*step*" hooks that are triggered before and after every step of each installation procedure that is performed,
+  also aptly named '``pre``'- and '``post``'-hooks
 
 The list of currently available hooks in order of exeuction,
 which can also be consulted using ``eb --avail-hooks``, is:
 
     * ``start_hook`` *(only called once in an EasyBuild session)*
+    * ``parse_hook`` *(available since EasyBuild v3.7.0)*
     * ``pre_fetch_hook``, ``post_fetch_hook``
     * ``pre_ready_hook``, ``post_ready_hook``
     * ``pre_source_hook``, ``post_source_hook``
@@ -114,7 +116,10 @@ Do take into account the following:
 
 * for ``start_hook`` and ``end_hook``, no arguments are provided
 
-* for the ``pre``- and ``post``-step hooks, one argument is provided:
+* for ``parse_hook``, one argument is provided: the ``EasyConfig`` instance
+  that corresponds to the easyconfig file being parsed (usually referred to as ``ec``)
+
+* for the step hooks, one argument is provided:
   the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
 
 * the parsed easyconfig file can be accessed in the step hooks via the ``EasyBlock`` instance,
@@ -132,6 +137,133 @@ In hooks, you have access to the full functionality provided by the EasyBuild fr
 so do ``import`` from ``easybuild.tools.*`` (or other ``easybuild.*`` namespaces) to leverage
 those functions.
 
+.. _hooks_parse_hook:
+
+Parse hook specifics
+++++++++++++++++++++
+
+``parse_hook`` is triggered right *after* reading the easyconfig file,
+before further parsing of some easyconfig parameters (like ``*dependencies``) into
+custom data structures is done.
+
+This is important since it allows to dynamically modify easyconfig files
+while they are still "raw", i.e., when the easyconfig parameter values are
+still basic Python data structures like lists, dictionaries, etc.
+that are easy to manipulate (see also :ref:`hooks_caveats_manipulating`).
+
+In ``parse_hook`` easyconfig parameters can be accessed and/or modified in a straightforward way,
+see :ref:`hooks_examples_inject_patch`.
+
+
+.. _hooks_caveats:
+
+Caveats
+-------
+
+Due to internal details of the EasyBuild framework, you may run into some surprises when
+implementing hooks. Here are some things to take into account:
+
+.. _hooks_caveats_template_values:
+
+Resolving of template values
+++++++++++++++++++++++++++++
+
+In all *step* hooks, template values in easyconfig parameters will be resolved whenever they are accessed.
+
+That is, if the ``%(version)`` template is used in for example the ``sources`` easyconfig parameter,
+it will be replaced with the actual value of the ``version`` easyconfig parameter whenever the
+``sources`` value is used.
+This can be avoided by temporarily disabling templating via ``self.cfg.enable_templating``, should the need arise.
+
+There is one notable exception to this: templates in easyconfig parameters are *not* resolved in ``parse_hook``,
+because templating has been disabled explicitely before ``parse_hook`` is called;
+this helps significantly to simplify manipulating of easyconfig parameter values
+(see also :ref:`hooks_caveats_manipulating`).
+
+
+.. _hooks_caveats_manipulating:
+
+Manipulating easyconfig parameters
+++++++++++++++++++++++++++++++++++
+
+You may run into surprises when trying to manipulate easyconfig parameters, for various reasons.
+
+First of all, the original easyconfig parameters may already be processed in another data structure
+which does not resemble the original format in which the parameter was defined in the easyconfig file.
+
+Moreover, this processing could be done either "in place", i.e. by replacing the original easyconfig parameter value,
+or in a separate variable, which effectively means that any changes to the original easyconfig parameter value
+are simply ignored.
+
+In addition, because of how the templating mechanism for easyconfig parameter works,
+changes to easyconfig parameters with non-string values (i.e. lists, dictionaries, etc.) will go up
+in smoke if not done correctly.
+
+More specifically, the following approach will *not* work in any of the (step) hooks, except for ``parse_hook``:
+
+.. code:: python
+
+    def pre_fetch_hook(self):
+        "Example of pre-fetch hook to manipulate list of patches."
+        # this does NOT have the intented affect in any pre- or post-step hook
+        self.cfg['patches'].append('example.patch')
+
+The problem here is that the value obtained via ``self.cfg['patches']`` is not a reference
+to the actual easyconfig parameter value, but a reference to a temporary copy thereof;
+hence, any updates on the copy are effectively lost immediately.
+
+To achieve the intended effect, you can either:
+
+* temporarily disable the templating mechanism:
+
+  .. code:: python
+
+    def pre_fetch_hook(self):
+        "Example of pre-fetch hook to manipulate list of patches."
+        # temporarily disable templating, so changes to 'patches' easyconfig parameter are picked up
+        orig_enable_templating = self.cfg.enable_templating
+        self.cfg.enable_templating = False
+        # add patch
+        self.cfg['patches'].append('example.patch')
+        # restore templating state
+        self.cfg.enable_templating = orig_enable_templating
+
+* or replace the original value entirely:
+
+  .. code:: python
+
+    def pre_fetch_hook(self):
+        "Example of pre-fetch hook to manipulate list of patches."
+        self.cfg['patches'] = self.cfg['patches'] + ['example.patch']
+
+
+A better approach for manipulating easyconfig parameters is to use the ``parse_hook`` that
+was introduced in EasyBuild v3.7.0 (see :ref:`hooks_parse_hook`),
+where these kind of surprises will not occur (because templating is automatically disabled
+before ``parse_hook`` is called, and restored immediately afterwards).
+See also :ref:`hooks_examples_inject_patch`.
+
+.. _hooks_caveats_archived_easyconfig:
+
+Archived easyconfig file vs hooks
++++++++++++++++++++++++++++++++++
+
+EasyBuild archives the easyconfig file that was used for a particular installation:
+a copy is stored both in the ``easybuild`` subdirectory of the software installation
+directory and in the easyconfigs repository (see :ref:`easyconfigs_repo`).
+
+If any changes were made to the easyconfig file via hooks, these changes will *not* be
+reflected in these copies. The assumption here is that the hooks will also be in place
+for future (re-)installations.
+
+EasyBuild does however store an additional copy of the easyconfig file which includes
+any modifications that were done dynamically, for example by hooks.
+If subtoolchains were used to resolve dependencies, they will also be hardwired in this copy.
+
+This "*reproducible easyconfig*" is stored in the ``easybuild/reprod`` subdirectory
+of the software installation directory.
+
+
 .. _hooks_examples:
 
 Examples of hook implementations
@@ -145,7 +277,21 @@ Example hook to replace ``--with-verbs`` with ``--without-verbs`` in OpenMPI con
 .. code:: python
 
     def pre_configure_hook(self, *args, **kwargs):
-        "Example pre-configure hook to replace --with-verbs with --without -verbs."""
+        """Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI."""
         if self.name == 'OpenMPI' and '--with-verbs' in self.cfg['configopts']:
             self.log.info("[pre-configure hook] Replacing --with-verbs with --without-verbs")
             self.cfg['configopts'] = self.cfg['configopts'].replace('--with-verbs', '--without-verbs')
+
+.. _hooks_examples_inject_patch:
+
+Example hook to inject a custom patch file
+++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: python
+
+    def parse_hook(ec, *args, **kwargs):
+        """Example parse hook to inject a patch file for a fictive software package named 'Example'."""
+        if ec.name == 'Example':
+            patch_file = 'example.patch'
+            ec.log.info("[parse hook] Injecting additional patch file '%s'", patch_file)
+            ec['patches'].append(patch_file)

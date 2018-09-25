@@ -63,6 +63,7 @@
       * EB_Clang
       * EB_DIRAC
       * EB_Doxygen
+      * EB_Eigen
       * EB_GATE
       * EB_Geant4
       * EB_GROMACS
@@ -174,6 +175,7 @@
       * EB_BamTools
       * EB_BLAT
       * EB_Bowtie2
+      * EB_BWISE
       * EB_mutil
       * EB_MXNet
       * EB_NAMD
@@ -205,6 +207,7 @@
   * EB_SNPhylo
   * EB_TINKER
   * EB_Trinity
+  * EB_VEP
   * EB_WIEN2k
   * EB_WPS
   * EB_WRF
@@ -281,6 +284,7 @@
     * EB_tbb
     * EB_VTune
 
+  * ModuleRC
   * PackedBinary
 
     * EB_ANSYS
@@ -304,7 +308,6 @@
   * Tarball
 
     * BinariesTarball
-    * EB_Eigen
     * EB_FoldX
     * EB_FreeSurfer
     * EB_Gurobi
