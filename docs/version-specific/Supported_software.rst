@@ -210,7 +210,7 @@ version      versionsuffix    toolchain
 
 AdapterRemoval searches for and removes remnant adapter sequences  from High-Throughput Sequencing (HTS) data and (optionally) trims low quality bases  from the 3' end of reads following adapter removal.
 
-*homepage*: https://github.com/MikkelSchubert/%(namelower)s
+*homepage*: https://github.com/MikkelSchubert/adapterremoval
 
 =========    ==============
 version      toolchain     
@@ -571,7 +571,7 @@ version      toolchain
 
 animation: A Gallery of Animations in Statistics and Utilities to Create Animations
 
-*homepage*: http://cran.r-project.org/web/packages/%(name)s
+*homepage*: http://cran.r-project.org/web/packages/animation
 
 =======    =============    ===============
 version    versionsuffix    toolchain      
@@ -1832,7 +1832,7 @@ version      versionsuffix        toolchain
 
 BEDOPS is an open-source command-line toolkit that performs highly efficient and  scalable Boolean and other set operations, statistical calculations, archiving, conversion and  other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for  distributing whole-genome analyses across a computational cluster.
 
-*homepage*: http://%(namelower)s.readthedocs.io/en/latest/index.html
+*homepage*: http://bedops.readthedocs.io/en/latest/index.html
 
 ==========    ===============================
 version       toolchain                      
@@ -1961,7 +1961,7 @@ version    toolchain
 
 BH: Boost C++ Header Files for R
 
-*homepage*: http://cran.r-project.org/web/packages/%(name)s
+*homepage*: http://cran.r-project.org/web/packages/BH
 
 ============    =============    ==============
 version         versionsuffix    toolchain     
@@ -3566,7 +3566,7 @@ version     versionsuffix        toolchain
 
 ChimPipe is a computational method for the detection of novel transcription-induced  chimeric transcripts and fusion genes from Illumina Paired-End RNA-seq data. It combines junction  spanning and paired-end read information to accurately detect chimeric splice junctions at base-pair  resolution.
 
-*homepage*: https://%(namelower)s.readthedocs.org/
+*homepage*: https://chimpipe.readthedocs.org/
 
 =========    ==================    ==============
 version      versionsuffix         toolchain     
@@ -6332,7 +6332,7 @@ version      toolchain
 
 This package provides a number of small and efficient programs to perform  common tasks with high throughput sequencing data in the FASTQ format. All of the programs  work with typical FASTQ files as well as gzipped FASTQ files.
 
-*homepage*: https://homes.cs.washington.edu/~dcjones/%(name)s/
+*homepage*: https://homes.cs.washington.edu/~dcjones/fastq-tools/
 
 =======    ==============
 version    toolchain     
@@ -6348,7 +6348,7 @@ version    toolchain
 
 FastQ Screen allows you to screen a library of sequences in FastQ  format against a set of sequence databases so you can see if the composition of the  library matches with what you expect.
 
-*homepage*: http://www.bioinformatics.babraham.ac.uk/projects/%(namelower)s/
+*homepage*: http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/
 
 ==========    ================    ===============
 version       versionsuffix       toolchain      
@@ -8332,7 +8332,7 @@ version         versionsuffix         toolchain
 
 GffCompare provides classification and reference annotation mapping and  matching statistics for RNA-Seq assemblies (transfrags) or other generic GFF/GTF files.
 
-*homepage*: https://github.com/gpertea/%(namelower)s
+*homepage*: https://github.com/gpertea/gffcompare
 
 ==========    ==============
 version       toolchain     
@@ -8348,7 +8348,7 @@ version       toolchain
 
 GFF/GTF parsing utility providing format conversions, region filtering, FASTA sequence extraction and  more.
 
-*homepage*: https://github.com/gpertea/%(name)s
+*homepage*: https://github.com/gpertea/gffread
 
 ==========    ==============
 version       toolchain     
@@ -8752,7 +8752,7 @@ version      toolchain
 
 GlimmerHMM is a new gene finder based on a Generalized Hidden Markov Model.  Although the gene finder conforms to the overall mathematical framework of a GHMM, additionally  it incorporates splice site models adapted from the GeneSplicer program and a decision tree adapted  from GlimmerM. It also utilizes Interpolated Markov Models for the coding and noncoding models.
 
-*homepage*: https://ccb.jhu.edu/software/%(namelower)s
+*homepage*: https://ccb.jhu.edu/software/glimmerhmm
 
 =========    ==============
 version      toolchain     
@@ -14731,7 +14731,7 @@ version      toolchain
 
 LocARNA is a collection of alignment tools for the structural analysis of RNA.  Given a set of RNA sequences, LocARNA simultaneously aligns and predicts common structures for  your RNAs. In this way, LocARNA performs Sankoff-like alignment and is in particular suited for  analyzing sets of related RNAs without known common structure.
 
-*homepage*: http://www.bioinf.uni-freiburg.de/Software/%(name)s/
+*homepage*: http://www.bioinf.uni-freiburg.de/Software/LocARNA/
 
 =========    ==============
 version      toolchain     
@@ -15248,7 +15248,7 @@ version       toolchain
 
 MapSplice is a software for mapping RNA-seq data to reference genome for splice  junction discovery that depends only on reference genome, and not on any further annotations.
 
-*homepage*: http://www.netlab.uky.edu/p/bioinfo/%(name)s2
+*homepage*: http://www.netlab.uky.edu/p/bioinfo/MapSplice2
 
 =========    ==================    ==============
 version      versionsuffix         toolchain     
@@ -15990,7 +15990,7 @@ version           toolchain
 
 MetaPhlAn is a computational tool for profiling the composition of microbial  communities (Bacteria, Archaea, Eukaryotes and Viruses) from metagenomic shotgun sequencing  data (i.e. not 16S) with species-level. With the newly added StrainPhlAn module, it is now  possible to perform accurate strain-level microbial profiling.
 
-*homepage*: http://huttenhower.sph.harvard.edu/%(namelower)s/
+*homepage*: http://huttenhower.sph.harvard.edu/metaphlan2/
 
 =========    ==================    ==============
 version      versionsuffix         toolchain     
@@ -18001,7 +18001,7 @@ version      toolchain
 
 NextGenMap is a flexible highly sensitive short read mapping tool that  handles much higher mismatch rates than comparable algorithms while still outperforming  them in terms of runtime.
 
-*homepage*: http://cibiv.github.io/%(name)s/
+*homepage*: http://cibiv.github.io/NextGenMap/
 
 =========    ==============
 version      toolchain     
@@ -21128,7 +21128,7 @@ version      toolchain
 
 Software for predicting library complexity and genome coverage in high-throughput sequencing.
 
-*homepage*: http://smithlabresearch.org/software/%(name)s
+*homepage*: http://smithlabresearch.org/software/preseq
 
 =========    ===============
 version      toolchain      
@@ -21672,7 +21672,7 @@ version       versionsuffix         toolchain
 
 PyCogent is a software library for genomic biology. It is a fully  integrated and thoroughly tested framework for: controlling third-party applications;  devising workflows; querying databases; conducting novel probabilistic analyses of  biological sequence evolution; and generating publication quality graphics.
 
-*homepage*: http://%(namelower)s.org
+*homepage*: http://pycogent.org
 
 =========    ==================    ===============================
 version      versionsuffix         toolchain                      
@@ -21996,7 +21996,7 @@ version      versionsuffix        toolchain
 
 PyNAST is a reimplementation of the NAST sequence aligner, which has  become a popular tool for adding new 16s rRNA sequences to existing 16s rRNA alignments.  This reimplementation is more flexible, faster, and easier to install and maintain than  the original NAST implementation.
 
-*homepage*: https://biocore.github.io/%(namelower)s
+*homepage*: https://biocore.github.io/pynast
 
 =========    ==================    ===============================
 version      versionsuffix         toolchain                      
@@ -22804,7 +22804,7 @@ version      versionsuffix    toolchain
 
 QUAST evaluates genome assemblies by computing various metrics.  It works both with and without reference genomes. The tool accepts multiple  assemblies, thus is suitable for comparison.
 
-*homepage*: https://github.com/ablab/%(namelower)s
+*homepage*: https://github.com/ablab/quast
 
 =========    =================    ==============
 version      versionsuffix        toolchain     
@@ -23061,7 +23061,7 @@ version      versionsuffix    toolchain
 
 Ragout (Reference-Assisted Genome Ordering UTility) is a tool for chromosome assembly using multiple  references. Given a set of assembly fragments (contigs/scaffolds) and one or multiple related references (complete or  draft), it produces a chromosome-scale assembly (as a set of scaffolds).
 
-*homepage*: http://fenderglass.github.io/%(name)s/
+*homepage*: http://fenderglass.github.io/Ragout/
 
 =======    ==================    ==============
 version    versionsuffix         toolchain     
@@ -23222,7 +23222,7 @@ version      toolchain
 
 'Armadillo' is a templated C++ linear algebra library that aims towards a good balance  between speed and ease of use
 
-*homepage*: http://cran.r-project.org/web/packages/%(name)s
+*homepage*: http://cran.r-project.org/web/packages/RcppArmadillo
 
 ===============    =============    ===============
 version            versionsuffix    toolchain      
@@ -23511,7 +23511,7 @@ version       versionsuffix         toolchain
 
 RNA-SeQC is a java program which computes a series of quality control metrics for  RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab  delimited files of metrics data. This program can be valuable for comparing sequencing quality  across different samples or experiments to evaluate different experimental parameters. It can  also be run on individual samples as a means of quality control before continuing with downstream  analysis.
 
-*homepage*: http://archive.broadinstitute.org/cancer/cga/%(namelower)s
+*homepage*: http://archive.broadinstitute.org/cancer/cga/rna-seqc
 
 =========    ===================    ==============
 version      versionsuffix          toolchain     
@@ -23527,7 +23527,7 @@ version      versionsuffix          toolchain
 
 RNAclust is a perl script summarizing all the single steps required for clustering  of structured RNA motifs, i.e. identifying groups of RNA sequences sharing a secondary structure  motif. It requires as input a multiple FASTA file.
 
-*homepage*: http://www.bioinf.uni-leipzig.de/~kristin/Software/%(name)s/
+*homepage*: http://www.bioinf.uni-leipzig.de/~kristin/Software/RNAclust/
 
 =======    ================    ==============
 version    versionsuffix       toolchain     
@@ -23962,7 +23962,7 @@ version      versionsuffix         toolchain
 
 Salmon is a wicked-fast program to produce a highly-accurate,  transcript-level quantification estimates from RNA-seq data.
 
-*homepage*: https://github.com/COMBINE-lab/%(namelower)s
+*homepage*: https://github.com/COMBINE-lab/salmon
 
 =========    ==================    ===============
 version      versionsuffix         toolchain      
@@ -24895,7 +24895,7 @@ version      toolchain
 
 Sibelia: A comparative genomics tool: It assists biologists in analysing   the genomic variations that correlate with pathogens, or the genomic changes that help   microorganisms adapt in different environments. Sibelia will also be helpful for the   evolutionary and genome rearrangement studies for multiple strains of microorganisms.
 
-*homepage*: http://bioinf.spbau.ru/en/%(namelower)s
+*homepage*: http://bioinf.spbau.ru/en/sibelia
 
 =========    ================
 version      toolchain       
@@ -25470,7 +25470,7 @@ version     toolchain
 
 SOAPfuse is an open source tool developed for genome-wide detection of fusion  transcripts from paired-end RNA-Seq data.
 
-*homepage*: https://sourceforge.net/p/%(namelower)s/wiki/Home/
+*homepage*: https://sourceforge.net/p/soapfuse/wiki/Home/
 
 ========    ================    ==============
 version     versionsuffix       toolchain     
@@ -26444,7 +26444,7 @@ version        versionsuffix         toolchain
 
 synchronicity: Boost mutex functionality in R
 
-*homepage*: http://cran.r-project.org/web/packages/%(name)s
+*homepage*: http://cran.r-project.org/web/packages/synchronicity
 
 ===========    =============    ==============
 version        versionsuffix    toolchain     
