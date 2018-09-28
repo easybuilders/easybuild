@@ -606,8 +606,13 @@ that mostly matches the established PEP8 coding style for Python (since
 easyconfigs are written in Python syntax). However, also the grouping and
 ordering of easyconfig parameters is a part of the 'code' style we maintain.
 
-An automated (partial) style check on easyconfig files can be performed via ``eb --check-style``,
-and is also a part of the test suite run by Travis for easyconfig PRs.
+An automated (partial) check to see whether easyconfig files are ready to
+contribute can be performed via ``eb --check-contrib``. This will check:
+
+* style aspects for the specified easyconfig files
+* whether SHA256 checksums are included for all source files & patches
+
+This check is also a part of the test suite run by Travis for easyconfig PRs.
 
 
 .. _contributing_review_process_review_pr:

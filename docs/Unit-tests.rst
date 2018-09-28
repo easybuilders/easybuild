@@ -13,6 +13,8 @@ http://en.wikipedia.org/wiki/Software_testing#Testing_levels.
 Following the test-driven development paradigm, additional unit tests are implemented when new features are added or
 when bugs are uncovered (and fixed).
 
+.. _unit_tests_what:
+
 What the unit tests are *not*
 -----------------------------
 
@@ -27,11 +29,15 @@ EasyBuild themselves.
 Each stable EasyBuild release is subjected to a (time- and resource-consuming) *regression test*, however,
 which is out of scope here.
 
+.. _unit_tests_suites:
+
 Available unit test suites
 --------------------------
 
 Three different unit test suites are available for EasyBuild, each of which tied to one of the EasyBuild code
 repositories on GitHub: *EasyBuild framework*, *easyblocks*, *easyconfigs*.
+
+.. _unit_tests_framework:
 
 EasyBuild framework unit tests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,6 +54,8 @@ At the time of writing (EasyBuild v2.0), more than 250 tests were implemented, o
 Running the full EasyBuild framework unit test suite takes about 15-40 minutes, depending on your system resources and
 testing configuration (see for example https://jenkins1.ugent.be/view/EasyBuild/).
 
+.. _unit_tests_easyblocks:
+
 easyblocks unit tests
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -57,6 +65,8 @@ The easyblocks unit test suite consists of a coupe of light-weight tests that ar
 * checking for the use of deprecated (or no longer supported) functionality
 
 Running the full easyblocks unit test suite takes less than one minute.
+
+.. _unit_tests_easyconfigs:
 
 easyconfigs unit tests
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -76,6 +86,7 @@ For each of the available easyconfig files, the following aspects are tested:
   keys are listed, with the value for either one being non-empty
 * checking for the use of deprecated (or no longer supported) functionality
 * verifying whether ``eb --check-style`` on the easyconfig file passes
+* ensuring SHA256 checksums are included in new or changed easyconfig files
 
 If these tests pass for each and every available easyconfig file, two additional overall tests are run, i.e.:
 
@@ -84,6 +95,8 @@ If these tests pass for each and every available easyconfig file, two additional
 
 Running the full easyconfigs unit test suite should only take a couple of minutes.
 
+
+.. _unit_tests_applications:
 
 Applications
 ------------
@@ -103,10 +116,14 @@ We strictly adher to the policy of only merging pull requests for which the corr
 test suite passes successfully.
 
 
+.. _unit_tests_usage:
+
 Usage
 -----
 
 Using the unit tests is deliberately kept very simple.
+
+.. _unit_tests_config:
 
 Configuration
 ~~~~~~~~~~~~~
@@ -144,6 +161,8 @@ To run the EasyBuild framework unit tests with a particular modules tool, simply
 Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
 (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) is available via ``$PATH``, see :ref:`required_modules_tool`.
 
+.. _unit_tests_github_token:
+
 Installing a GitHub token for the unit tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -161,6 +180,8 @@ This can be done as follows (copy-paste the GitHub token at the ``Password:`` pr
 
 More details about obtaining and installing a GitHub token in your keyring are available at
 https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#setting-things-up.
+
+.. _unit_tests_running:
 
 Running
 ~~~~~~~
@@ -206,6 +227,8 @@ containing the words ``load`` or ``bash``: ::
 
 
 
+.. _unit_tests_results:
+
 Results
 ~~~~~~~
 
@@ -219,6 +242,8 @@ for example::
 .. note::
     Some tests will be skipped deliberately, because of missing optional dependencies or other provisions, for example
     a GitHub token. The output of the unit tests will clearly indicate which tests were skipped.
+
+.. _unit_tests_examples:
 
 Examples
 ^^^^^^^^
