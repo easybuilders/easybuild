@@ -706,7 +706,7 @@ Deleting easyconfig files or patches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Next to adding easyconfigs files or patches, or modifying existing ones, you can also specify to *delete*
-particular files, by including a colon character ```:`` before the name of the file.
+particular files, by including a colon character ``:`` before the name of the file.
 
 For example::
 
