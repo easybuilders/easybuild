@@ -35,10 +35,11 @@ higher instruction sets than those of the build host. The first problem can be s
 ``--optarch=GENERIC``, but it will make the second problem even worse.
 
 (With an Intel toolchain, the problem can be reduced by generating multiple code paths with the ``-ax`` compiler
-option in ``--optarch`` and by leveraging on MKL's automatic dispatch according to the execution node's instruction
-set, but no such option is available (yet) in the GNU toolchains)
+option in ``--optarch``, but no such option is available (yet) in the GNU toolchains.  Intel Math Kernel Library will 
+automatically dispatch optimized versions of routines according to the execution node's instruction set, and OpenBLAS 
+can also be built for multiple instruction sets, but that is not the default behaviour.)
 
-The solution is then to	build multiple copies of each software,	at least for those where performance is	crucial,
+The solution is then to build multiple copies of each software,	at least for those where performance is	crucial,
 which is easily achieved simply by running EasyBuild from each type of node, the caveat being where exactly to
 install copies for different architectures in a way that they can be loaded, with their dependencies, and used
 effectively across the cluster by all users.
@@ -94,8 +95,8 @@ above would be cumbersome at best. One solution is to add an architecture depend
 
 .. _heterogenous_clusters_examples:
 
-Examples of EasyBuild configurations in sites with in heterogeneous clusters
-----------------------------------------------------------------------------
+Examples of EasyBuild configurations in sites with heterogeneous clusters
+-------------------------------------------------------------------------
 
 While the alternatives mentioned above should be simple to implement and solve the main issues in heterogeneous
 clusters, many sites using EasyBuild have more sophisticated configurations with either better solutions to these
