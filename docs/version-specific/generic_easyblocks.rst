@@ -167,16 +167,17 @@ Support for configuring build with CMake instead of traditional configure script
 Extra easyconfig parameters specific to ``CMakeMake`` easyblock
 ---------------------------------------------------------------
 
-========================    =====================================================================================================================================    =============
-easyconfig parameter        description                                                                                                                              default value
-========================    =====================================================================================================================================    =============
-``build_type``              Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``     
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                    ``""``       
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``     
-``separate_build_dir``      Perform build in a separate directory                                                                                                    ``False``    
-``srcdir``                  Source directory location to provide to cmake command                                                                                    ``None``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                                                        ``False``    
-========================    =====================================================================================================================================    =============
+========================    ===================================================================================================================================================================================================    =============
+easyconfig parameter        description                                                                                                                                                                                            default value
+========================    ===================================================================================================================================================================================================    =============
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``     
+``separate_build_dir``      Perform build in a separate directory                                                                                                                                                                  ``False``    
+``srcdir``                  Source directory location to provide to cmake command                                                                                                                                                  ``None``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``    
+========================    ===================================================================================================================================================================================================    =============
 
 Customised steps in ``CMakeMake`` easyblock
 -------------------------------------------
@@ -240,30 +241,31 @@ Build a Python package and module with cmake.
 Extra easyconfig parameters specific to ``CMakePythonPackage`` easyblock
 ------------------------------------------------------------------------
 
-========================    =====================================================================================================================================    =============
-easyconfig parameter        description                                                                                                                              default value
-========================    =====================================================================================================================================    =============
-``build_type``              Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``     
-``buildcmd``                Command to pass to setup.py to build the extension                                                                                       ``"build"``  
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                    ``""``       
-``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                             ``None``     
-``install_target``          Option to pass to setup.py                                                                                                               ``"install"``
-``options``                 Dictionary with extension options.                                                                                                       ``{}``       
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``     
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                                                   ``2``        
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                                                                   ``6``        
-``runtest``                 Run unit tests.                                                                                                                          ``True``     
-``separate_build_dir``      Perform build in a separate directory                                                                                                    ``False``    
-``srcdir``                  Source directory location to provide to cmake command                                                                                    ``None``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                                                        ``False``    
-``unpack_sources``          Unpack sources prior to build/install                                                                                                    ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                  ``False``    
-``use_pip_editable``        Install using 'pip install --editable'                                                                                                   ``False``    
-``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                     ``False``    
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                             ``False``    
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                                                     ``False``    
-========================    =====================================================================================================================================    =============
+========================    ===================================================================================================================================================================================================    =============
+easyconfig parameter        description                                                                                                                                                                                            default value
+========================    ===================================================================================================================================================================================================    =============
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
+``buildcmd``                Command to pass to setup.py to build the extension                                                                                                                                                     ``"build"``  
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                                                                                           ``None``     
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
+``install_target``          Option to pass to setup.py                                                                                                                                                                             ``"install"``
+``options``                 Dictionary with extension options.                                                                                                                                                                     ``{}``       
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``     
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                                                                                                                 ``2``        
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                                                                                                                 ``6``        
+``runtest``                 Run unit tests.                                                                                                                                                                                        ``True``     
+``separate_build_dir``      Perform build in a separate directory                                                                                                                                                                  ``False``    
+``srcdir``                  Source directory location to provide to cmake command                                                                                                                                                  ``None``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                                                                                                                  ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                                                                              ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                                                                                                                 ``False``    
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                   ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                                                                                           ``False``    
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                                                                                                                   ``False``    
+========================    ===================================================================================================================================================================================================    =============
 
 Customised steps in ``CMakePythonPackage`` easyblock
 ----------------------------------------------------
@@ -284,17 +286,18 @@ Software with no configure, no make, and no make install step.
 Extra easyconfig parameters specific to ``CmdCp`` easyblock
 -----------------------------------------------------------
 
-========================    =====================================================================================================================================    ====================================================
-easyconfig parameter        description                                                                                                                              default value                                       
-========================    =====================================================================================================================================    ====================================================
-``build_type``              Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``                                            
-``cmds_map``                List of regex/template command (with 'source'/'target' fields) tuples                                                                    ``[('.*', '$CC $CFLAGS %(source)s -o %(target)s')]``
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                    ``""``                                              
-``files_to_copy``           List of files or dirs to copy                                                                                                            ``[]``                                              
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``                                            
-``tar_config_opts``         Override tar settings as determined by configure.                                                                                        ``False``                                           
-``with_configure``          Run configure script before building                                                                                                     ``False``                                           
-========================    =====================================================================================================================================    ====================================================
+========================    ===================================================================================================================================================================================================    ====================================================
+easyconfig parameter        description                                                                                                                                                                                            default value                                       
+========================    ===================================================================================================================================================================================================    ====================================================
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``                                            
+``cmds_map``                List of regex/template command (with 'source'/'target' fields) tuples                                                                                                                                  ``[('.*', '$CC $CFLAGS %(source)s -o %(target)s')]``
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``                                              
+``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``[]``                                              
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``                                            
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``                                            
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``                                           
+``with_configure``          Run configure script before building                                                                                                                                                                   ``False``                                           
+========================    ===================================================================================================================================================================================================    ====================================================
 
 Customised steps in ``CmdCp`` easyblock
 ---------------------------------------
@@ -343,14 +346,15 @@ Support for building and installing applications with configure/make/make instal
 Extra easyconfig parameters specific to ``ConfigureMake`` easyblock
 -------------------------------------------------------------------
 
-========================    =====================================================================================================================================    =============
-easyconfig parameter        description                                                                                                                              default value
-========================    =====================================================================================================================================    =============
-``build_type``              Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``     
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                    ``""``       
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                                                        ``False``    
-========================    =====================================================================================================================================    =============
+========================    ===================================================================================================================================================================================================    =============
+easyconfig parameter        description                                                                                                                                                                                            default value
+========================    ===================================================================================================================================================================================================    =============
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``    
+========================    ===================================================================================================================================================================================================    =============
 
 Commonly used easyconfig parameters with ``ConfigureMake`` easyblock
 --------------------------------------------------------------------
@@ -416,28 +420,29 @@ Build a Python package and module with 'python configure/make/make install'.
 Extra easyconfig parameters specific to ``ConfigureMakePythonPackage`` easyblock
 --------------------------------------------------------------------------------
 
-========================    =====================================================================================================================================    =============
-easyconfig parameter        description                                                                                                                              default value
-========================    =====================================================================================================================================    =============
-``build_type``              Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``     
-``buildcmd``                Command to pass to setup.py to build the extension                                                                                       ``"build"``  
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                    ``""``       
-``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                             ``None``     
-``install_target``          Option to pass to setup.py                                                                                                               ``"install"``
-``options``                 Dictionary with extension options.                                                                                                       ``{}``       
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``     
-``req_py_majver``           Required major Python version (only relevant when using system Python)                                                                   ``2``        
-``req_py_minver``           Required minor Python version (only relevant when using system Python)                                                                   ``6``        
-``runtest``                 Run unit tests.                                                                                                                          ``True``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                                                        ``False``    
-``unpack_sources``          Unpack sources prior to build/install                                                                                                    ``True``     
-``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                  ``False``    
-``use_pip_editable``        Install using 'pip install --editable'                                                                                                   ``False``    
-``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                     ``False``    
-``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                             ``False``    
-``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                                                     ``False``    
-========================    =====================================================================================================================================    =============
+========================    ===================================================================================================================================================================================================    =============
+easyconfig parameter        description                                                                                                                                                                                            default value
+========================    ===================================================================================================================================================================================================    =============
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
+``buildcmd``                Command to pass to setup.py to build the extension                                                                                                                                                     ``"build"``  
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
+``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                                                                                           ``None``     
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
+``install_target``          Option to pass to setup.py                                                                                                                                                                             ``"install"``
+``options``                 Dictionary with extension options.                                                                                                                                                                     ``{}``       
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``     
+``req_py_majver``           Required major Python version (only relevant when using system Python)                                                                                                                                 ``2``        
+``req_py_minver``           Required minor Python version (only relevant when using system Python)                                                                                                                                 ``6``        
+``runtest``                 Run unit tests.                                                                                                                                                                                        ``True``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``    
+``unpack_sources``          Unpack sources prior to build/install                                                                                                                                                                  ``True``     
+``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                                                                              ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                ``False``    
+``use_pip_editable``        Install using 'pip install --editable'                                                                                                                                                                 ``False``    
+``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                   ``False``    
+``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                                                                                           ``False``    
+``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                                                                                                                   ``False``    
+========================    ===================================================================================================================================================================================================    =============
 
 Customised steps in ``ConfigureMakePythonPackage`` easyblock
 ------------------------------------------------------------
@@ -608,16 +613,17 @@ Software with no configure and no make install step.
 Extra easyconfig parameters specific to ``MakeCp`` easyblock
 ------------------------------------------------------------
 
-========================    =====================================================================================================================================    =============
-easyconfig parameter        description                                                                                                                              default value
-========================    =====================================================================================================================================    =============
-``build_type``              Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``     
-``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                    ``""``       
-``files_to_copy``           List of files or dirs to copy                                                                                                            ``[]``       
-``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``     
-``tar_config_opts``         Override tar settings as determined by configure.                                                                                        ``False``    
-``with_configure``          Run configure script before building                                                                                                     ``False``    
-========================    =====================================================================================================================================    =============
+========================    ===================================================================================================================================================================================================    =============
+easyconfig parameter        description                                                                                                                                                                                            default value
+========================    ===================================================================================================================================================================================================    =============
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
+``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``[]``       
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``     
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``    
+``with_configure``          Run configure script before building                                                                                                                                                                   ``False``    
+========================    ===================================================================================================================================================================================================    =============
 
 Customised steps in ``MakeCp`` easyblock
 ----------------------------------------
@@ -896,36 +902,37 @@ Support for generating a module file for the system compiler with specified name
 Extra easyconfig parameters specific to ``SystemCompiler`` easyblock
 --------------------------------------------------------------------
 
-==============================    =============================================================================================================================================================    ====================
-easyconfig parameter              description                                                                                                                                                      default value       
-==============================    =============================================================================================================================================================    ====================
-``altroot``                       Software name of dependency to use to define $EBROOT for this bundle                                                                                             ``None``            
-``altversion``                    Software name of dependency to use to define $EBVERSION for this bundle                                                                                          ``None``            
-``build_type``                    Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)                            ``None``            
-``clooguseisl``                   Use ISL with CLooG or not                                                                                                                                        ``False``           
-``components``                    List of components to install: tuples w/ name, version and easyblock to use                                                                                      ``()``              
-``configure_cmd_prefix``          Prefix to be glued before ./configure                                                                                                                            ``""``              
-``default_component_specs``       Default specs to use for every component                                                                                                                         ``{}``              
-``default_easyblock``             Default easyblock to use for components                                                                                                                          ``None``            
-``generate_standalone_module``    Add known path/library extensions and environment variables for the compiler to the final module                                                                 ``False``           
-``generic``                       Build GCC and support libraries such that it runs on all processors of the target architecture (use False to enforce non-generic regardless of configuration)    ``None``            
-``languages``                     List of languages to build GCC for (--enable-languages)                                                                                                          ``[]``              
-``license_activation``            License activation type                                                                                                                                          ``"license_server"``
-``m32``                           Enable 32-bit toolchain                                                                                                                                          ``False``           
-``multilib``                      Build multilib gcc (both i386 and x86_64)                                                                                                                        ``False``           
-``pplwatchdog``                   Enable PPL watchdog                                                                                                                                              ``False``           
-``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                                                                             ``False``           
-``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                                                                                            ``None``            
-``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                                                                                  ``True``            
-``serial_number``                 Serial number for the product                                                                                                                                    ``None``            
-``tar_config_opts``               Override tar settings as determined by configure.                                                                                                                ``False``           
-``usetmppath``                    Use temporary path for installation                                                                                                                              ``False``           
-``withcloog``                     Build GCC with CLooG support                                                                                                                                     ``False``           
-``withisl``                       Build GCC with ISL support                                                                                                                                       ``False``           
-``withlibiberty``                 Enable installing of libiberty                                                                                                                                   ``False``           
-``withlto``                       Enable LTO support                                                                                                                                               ``True``            
-``withppl``                       Build GCC with PPL support                                                                                                                                       ``False``           
-==============================    =============================================================================================================================================================    ====================
+==============================    ===================================================================================================================================================================================================    ====================
+easyconfig parameter              description                                                                                                                                                                                            default value       
+==============================    ===================================================================================================================================================================================================    ====================
+``altroot``                       Software name of dependency to use to define $EBROOT for this bundle                                                                                                                                   ``None``            
+``altversion``                    Software name of dependency to use to define $EBVERSION for this bundle                                                                                                                                ``None``            
+``build_type``                    Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``            
+``clooguseisl``                   Use ISL with CLooG or not                                                                                                                                                                              ``False``           
+``components``                    List of components to install: tuples w/ name, version and easyblock to use                                                                                                                            ``()``              
+``configure_cmd_prefix``          Prefix to be glued before ./configure                                                                                                                                                                  ``""``              
+``default_component_specs``       Default specs to use for every component                                                                                                                                                               ``{}``              
+``default_easyblock``             Default easyblock to use for components                                                                                                                                                                ``None``            
+``generate_standalone_module``    Add known path/library extensions and environment variables for the compiler to the final module                                                                                                       ``False``           
+``generic``                       Build GCC and support libraries such that it runs on all processors of the target architecture (use False to enforce non-generic regardless of configuration)                                          ``None``            
+``host_type``                     Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``            
+``languages``                     List of languages to build GCC for (--enable-languages)                                                                                                                                                ``[]``              
+``license_activation``            License activation type                                                                                                                                                                                ``"license_server"``
+``m32``                           Enable 32-bit toolchain                                                                                                                                                                                ``False``           
+``multilib``                      Build multilib gcc (both i386 and x86_64)                                                                                                                                                              ``False``           
+``pplwatchdog``                   Enable PPL watchdog                                                                                                                                                                                    ``False``           
+``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                                                                                                                   ``False``           
+``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``            
+``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                                                                                                                        ``True``            
+``serial_number``                 Serial number for the product                                                                                                                                                                          ``None``            
+``tar_config_opts``               Override tar settings as determined by configure.                                                                                                                                                      ``False``           
+``usetmppath``                    Use temporary path for installation                                                                                                                                                                    ``False``           
+``withcloog``                     Build GCC with CLooG support                                                                                                                                                                           ``False``           
+``withisl``                       Build GCC with ISL support                                                                                                                                                                             ``False``           
+``withlibiberty``                 Enable installing of libiberty                                                                                                                                                                         ``False``           
+``withlto``                       Enable LTO support                                                                                                                                                                                     ``True``            
+``withppl``                       Build GCC with PPL support                                                                                                                                                                             ``False``           
+==============================    ===================================================================================================================================================================================================    ====================
 
 .. _SystemMPI:
 
@@ -944,29 +951,30 @@ Support for generating a module file for the system mpi with specified name.
 Extra easyconfig parameters specific to ``SystemMPI`` easyblock
 ---------------------------------------------------------------
 
-=================================    =====================================================================================================================================    ====================
-easyconfig parameter                 description                                                                                                                              default value       
-=================================    =====================================================================================================================================    ====================
-``altroot``                          Software name of dependency to use to define $EBROOT for this bundle                                                                     ``None``            
-``altversion``                       Software name of dependency to use to define $EBVERSION for this bundle                                                                  ``None``            
-``build_type``                       Type of system package is being configured for, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None)    ``None``            
-``components``                       List of components to install: tuples w/ name, version and easyblock to use                                                              ``()``              
-``configure_cmd_prefix``             Prefix to be glued before ./configure                                                                                                    ``""``              
-``default_component_specs``          Default specs to use for every component                                                                                                 ``{}``              
-``default_easyblock``                Default easyblock to use for components                                                                                                  ``None``            
-``generate_standalone_module``       Add known path extensions and environment variables for the MPI installation to the final module                                         ``False``           
-``license_activation``               License activation type                                                                                                                  ``"license_server"``
-``m32``                              Enable 32-bit toolchain                                                                                                                  ``False``           
-``prefix_opt``                       Prefix command line option for configure script ('--prefix=' if None)                                                                    ``None``            
-``requires_runtime_license``         Boolean indicating whether or not a runtime license is required                                                                          ``True``            
-``serial_number``                    Serial number for the product                                                                                                            ``None``            
-``set_mpi_wrapper_aliases_gcc``      Set compiler for mpigcc/mpigxx via aliases                                                                                               ``False``           
-``set_mpi_wrapper_aliases_intel``    Set compiler for mpiicc/mpiicpc/mpiifort via aliases                                                                                     ``False``           
-``set_mpi_wrappers_all``             Set (default) compiler for all MPI wrapper commands                                                                                      ``False``           
-``set_mpi_wrappers_compiler``        Override default compiler used by MPI wrapper commands                                                                                   ``False``           
-``tar_config_opts``                  Override tar settings as determined by configure.                                                                                        ``False``           
-``usetmppath``                       Use temporary path for installation                                                                                                      ``False``           
-=================================    =====================================================================================================================================    ====================
+=================================    ===================================================================================================================================================================================================    ====================
+easyconfig parameter                 description                                                                                                                                                                                            default value       
+=================================    ===================================================================================================================================================================================================    ====================
+``altroot``                          Software name of dependency to use to define $EBROOT for this bundle                                                                                                                                   ``None``            
+``altversion``                       Software name of dependency to use to define $EBVERSION for this bundle                                                                                                                                ``None``            
+``build_type``                       Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``            
+``components``                       List of components to install: tuples w/ name, version and easyblock to use                                                                                                                            ``()``              
+``configure_cmd_prefix``             Prefix to be glued before ./configure                                                                                                                                                                  ``""``              
+``default_component_specs``          Default specs to use for every component                                                                                                                                                               ``{}``              
+``default_easyblock``                Default easyblock to use for components                                                                                                                                                                ``None``            
+``generate_standalone_module``       Add known path extensions and environment variables for the MPI installation to the final module                                                                                                       ``False``           
+``host_type``                        Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``            
+``license_activation``               License activation type                                                                                                                                                                                ``"license_server"``
+``m32``                              Enable 32-bit toolchain                                                                                                                                                                                ``False``           
+``prefix_opt``                       Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``            
+``requires_runtime_license``         Boolean indicating whether or not a runtime license is required                                                                                                                                        ``True``            
+``serial_number``                    Serial number for the product                                                                                                                                                                          ``None``            
+``set_mpi_wrapper_aliases_gcc``      Set compiler for mpigcc/mpigxx via aliases                                                                                                                                                             ``False``           
+``set_mpi_wrapper_aliases_intel``    Set compiler for mpiicc/mpiicpc/mpiifort via aliases                                                                                                                                                   ``False``           
+``set_mpi_wrappers_all``             Set (default) compiler for all MPI wrapper commands                                                                                                                                                    ``False``           
+``set_mpi_wrappers_compiler``        Override default compiler used by MPI wrapper commands                                                                                                                                                 ``False``           
+``tar_config_opts``                  Override tar settings as determined by configure.                                                                                                                                                      ``False``           
+``usetmppath``                       Use temporary path for installation                                                                                                                                                                    ``False``           
+=================================    ===================================================================================================================================================================================================    ====================
 
 .. _Tarball:
 

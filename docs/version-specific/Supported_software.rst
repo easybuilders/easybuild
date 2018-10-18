@@ -3,7 +3,7 @@
 List of supported software
 ==========================
 
-EasyBuild |version| supports 1582 different software packages (incl. toolchains, bundles):
+EasyBuild |version| supports 1608 different software packages (incl. toolchains, bundles):
 
 :ref:`list_software_letter_a` - :ref:`list_software_letter_b` - :ref:`list_software_letter_c` - :ref:`list_software_letter_d` - :ref:`list_software_letter_e` - :ref:`list_software_letter_f` - :ref:`list_software_letter_g` - :ref:`list_software_letter_h` - :ref:`list_software_letter_i` - :ref:`list_software_letter_j` - :ref:`list_software_letter_k` - :ref:`list_software_letter_l` - :ref:`list_software_letter_m` - :ref:`list_software_letter_n` - :ref:`list_software_letter_o` - :ref:`list_software_letter_p` - :ref:`list_software_letter_q` - :ref:`list_software_letter_r` - :ref:`list_software_letter_s` - :ref:`list_software_letter_t` - :ref:`list_software_letter_u` - :ref:`list_software_letter_v` - :ref:`list_software_letter_w` - :ref:`list_software_letter_x` - :ref:`list_software_letter_y` - :ref:`list_software_letter_z`
 
@@ -40,7 +40,7 @@ version      versionsuffix         toolchain
 ---
 
 
-:ref:`list_software_a2ps_374` - :ref:`list_software_ABAQUS_445` - :ref:`list_software_ABINIT_439` - :ref:`list_software_ABySS_418` - :ref:`list_software_ack_303` - :ref:`list_software_ACML_285` - :ref:`list_software_ACTC_283` - :ref:`list_software_ada_294` - :ref:`list_software_AdapterRemoval_1431` - :ref:`list_software_ADF_203` - :ref:`list_software_ADMIXTURE_691` - :ref:`list_software_Advisor_728` - :ref:`list_software_AFNI_286` - :ref:`list_software_ALADIN_425` - :ref:`list_software_Albacore_793` - :ref:`list_software_alleleCount_1144` - :ref:`list_software_Allinea_694` - :ref:`list_software_ALLPATHS-LG_793` - :ref:`list_software_ALPS_304` - :ref:`list_software_amask_525` - :ref:`list_software_Amber_487` - :ref:`list_software_AmberMini_884` - :ref:`list_software_AmberTools_1016` - :ref:`list_software_AMOS_304` - :ref:`list_software_AMPL-MP_500` - :ref:`list_software_Anaconda2_839` - :ref:`list_software_Anaconda3_840` - :ref:`list_software_AnalyzeFMRI_1026` - :ref:`list_software_angsd_525` - :ref:`list_software_animation_960` - :ref:`list_software_annovar_757` - :ref:`list_software_ANSYS_398` - :ref:`list_software_ANSYS_CFD_698` - :ref:`list_software_ant_323` - :ref:`list_software_ANTLR_385` - :ref:`list_software_ANTs_342` - :ref:`list_software_APBS_294` - :ref:`list_software_APR_227` - :ref:`list_software_APR-util_718` - :ref:`list_software_ARAGORN_522` - :ref:`list_software_ARB_213` - :ref:`list_software_argtable_834` - :ref:`list_software_aria2_463` - :ref:`list_software_Armadillo_917` - :ref:`list_software_arpack-ng_884` - :ref:`list_software_arrow_555` - :ref:`list_software_ART_231` - :ref:`list_software_ASAP3_344` - :ref:`list_software_ASE_217` - :ref:`list_software_ASHS_303` - :ref:`list_software_Aspera-CLI_865` - :ref:`list_software_Aspera-Connect_1363` - :ref:`list_software_astropy_786` - :ref:`list_software_ATK_224` - :ref:`list_software_Atkmm_506` - :ref:`list_software_ATLAS_373` - :ref:`list_software_atomate_747` - :ref:`list_software_atools_658` - :ref:`list_software_ATSAS_380` - :ref:`list_software_attr_443` - :ref:`list_software_AUGUSTUS_641` - :ref:`list_software_Autoconf_831` - :ref:`list_software_AutoDock_794` - :ref:`list_software_AutoDock_Vina_1287` - :ref:`list_software_AutoGrid_799` - :ref:`list_software_Automake_823` - :ref:`list_software_Autotools_970` - :ref:`list_software_awscli_643`
+:ref:`list_software_a2ps_374` - :ref:`list_software_ABAQUS_445` - :ref:`list_software_ABINIT_439` - :ref:`list_software_ABySS_418` - :ref:`list_software_ack_303` - :ref:`list_software_ACML_285` - :ref:`list_software_ACTC_283` - :ref:`list_software_ada_294` - :ref:`list_software_AdapterRemoval_1431` - :ref:`list_software_ADF_203` - :ref:`list_software_ADMIXTURE_691` - :ref:`list_software_Advisor_728` - :ref:`list_software_AFNI_286` - :ref:`list_software_ALADIN_425` - :ref:`list_software_Albacore_793` - :ref:`list_software_alleleCount_1144` - :ref:`list_software_Allinea_694` - :ref:`list_software_ALLPATHS-LG_793` - :ref:`list_software_ALPS_304` - :ref:`list_software_amask_525` - :ref:`list_software_Amber_487` - :ref:`list_software_AmberMini_884` - :ref:`list_software_AmberTools_1016` - :ref:`list_software_AMOS_304` - :ref:`list_software_AMPL-MP_500` - :ref:`list_software_Anaconda2_839` - :ref:`list_software_Anaconda3_840` - :ref:`list_software_AnalyzeFMRI_1026` - :ref:`list_software_angsd_525` - :ref:`list_software_animation_960` - :ref:`list_software_annovar_757` - :ref:`list_software_ANSYS_398` - :ref:`list_software_ANSYS_CFD_698` - :ref:`list_software_ant_323` - :ref:`list_software_ANTLR_385` - :ref:`list_software_ANTs_342` - :ref:`list_software_APBS_294` - :ref:`list_software_APR_227` - :ref:`list_software_APR-util_718` - :ref:`list_software_ARAGORN_522` - :ref:`list_software_ARB_213` - :ref:`list_software_ARCH_286` - :ref:`list_software_argtable_834` - :ref:`list_software_aria2_463` - :ref:`list_software_Armadillo_917` - :ref:`list_software_arpack-ng_884` - :ref:`list_software_arrow_555` - :ref:`list_software_ART_231` - :ref:`list_software_ASAP3_344` - :ref:`list_software_ASE_217` - :ref:`list_software_ASHS_303` - :ref:`list_software_Aspera-CLI_865` - :ref:`list_software_Aspera-Connect_1363` - :ref:`list_software_astropy_786` - :ref:`list_software_ATK_224` - :ref:`list_software_Atkmm_506` - :ref:`list_software_ATLAS_373` - :ref:`list_software_atomate_747` - :ref:`list_software_atools_658` - :ref:`list_software_ATSAS_380` - :ref:`list_software_attr_443` - :ref:`list_software_AUGUSTUS_641` - :ref:`list_software_Autoconf_831` - :ref:`list_software_AutoDock_794` - :ref:`list_software_AutoDock_Vina_1287` - :ref:`list_software_AutoGrid_799` - :ref:`list_software_Automake_823` - :ref:`list_software_Autotools_970` - :ref:`list_software_awscli_643`
 
 
 .. _list_software_a2ps_374:
@@ -216,6 +216,7 @@ AdapterRemoval searches for and removes remnant adapter sequences  from High-Thr
 version      toolchain     
 =========    ==============
 ``2.2.0``    ``foss/2016b``
+``2.2.2``    ``foss/2018b``
 =========    ==============
 
 
@@ -424,6 +425,7 @@ version    versionsuffix                                toolchain
 ``16``     ``-AmberTools-16-patchlevel-5-14``           ``iomkl/2016.07``               
 ``16``     ``-AmberTools-16-patchlevel-5-14-CUDA``      ``iomkl/2016.09-GCC-4.9.3-2.25``
 ``16``     ``-AmberTools-16-patchlevel-5-14-serial``    ``iomkl/2016.07``               
+``16``     ``-AmberTools-17-patchlevel-8-12``           ``intel/2017b``                 
 =======    =========================================    ================================
 
 
@@ -659,6 +661,7 @@ version       versionsuffix          toolchain
 ``1.10.1``    ``-Java-1.8.0_144``    ``dummy``
 ``1.10.1``    ``-Java-1.8.0_152``    ``dummy``
 ``1.10.1``    ``-Java-1.8.0_162``    ``dummy``
+``1.10.5``    ``-Java-1.8``          ``dummy``
 ==========    ===================    =========
 
 
@@ -730,6 +733,7 @@ version      toolchain
 =========    ================
 ``1.5.0``    ``goolf/1.4.10``
 ``1.5.2``    ``foss/2015a``  
+``1.6.3``    ``iomkl/2018a`` 
 =========    ================
 
 
@@ -747,6 +751,7 @@ version      toolchain
 =========    ================
 ``1.5.3``    ``goolf/1.4.10``
 ``1.5.4``    ``foss/2015a``  
+``1.6.1``    ``iomkl/2018a`` 
 =========    ================
 
 
@@ -780,6 +785,22 @@ version    toolchain
 =======    ================
 ``5.5``    ``goolf/1.4.10``
 =======    ================
+
+
+.. _list_software_ARCH_286:
+
+*ARCH*
+++++++
+
+Autoregressive Conditional Heteroskedasticity (ARCH) and other tools for financial econometrics,  written in Python (with Cython and/or Numba used to improve performance).
+
+*homepage*: https://pypi.org/project/arch
+
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``4.5.0``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
 
 
 .. _list_software_argtable_834:
@@ -903,15 +924,16 @@ ASAP is a calculator for doing large-scale classical molecular dynamics within t
 
 *homepage*: https://wiki.fysik.dtu.dk/asap/
 
-==========    =================    ==============
-version       versionsuffix        toolchain     
-==========    =================    ==============
-``3.10.7``    ``-Python-3.5.2``    ``foss/2016b``
-``3.10.7``    ``-Python-3.6.2``    ``foss/2017b``
-``3.10.8``    ``-Python-3.5.2``    ``foss/2016b``
-``3.10.8``    ``-Python-3.6.2``    ``foss/2017b``
-``3.10.8``    ``-Python-3.6.3``    ``foss/2017b``
-==========    =================    ==============
+===========    =================    ================================================
+version        versionsuffix        toolchain                                       
+===========    =================    ================================================
+``3.10.7``     ``-Python-3.5.2``    ``foss/2016b``                                  
+``3.10.7``     ``-Python-3.6.2``    ``foss/2017b``                                  
+``3.10.8``     ``-Python-3.5.2``    ``foss/2016b``                                  
+``3.10.8``     ``-Python-3.6.2``    ``foss/2017b``                                  
+``3.10.8``     ``-Python-3.6.3``    ``foss/2017b``                                  
+``3.10.10``    ``-Python-3.6.6``    ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``
+===========    =================    ================================================
 
 
 .. _list_software_ASE_217:
@@ -923,23 +945,24 @@ ASE is a python package providing an open source Atomic Simulation Environment  
 
 *homepage*: https://wiki.fysik.dtu.dk/ase/
 
-==============    ==================    ==================================
-version           versionsuffix         toolchain                         
-==============    ==================    ==================================
-``3.6.0.2515``    ``-Python-2.7.3``     ``goolf/1.4.10``, ``ictce/5.3.0`` 
-``3.9.1.4567``    ``-Python-2.7.10``    ``intel/2015b``                   
-``3.9.1.4567``    ``-Python-2.7.11``    ``intel/2016a``                   
-``3.10.0``        ``-Python-2.7.11``    ``intel/2016.02-GCC-4.9``         
-``3.11.0``        ``-Python-2.7.12``    ``intel/2016b``                   
-``3.13.0``        ``-Python-2.7.12``    ``foss/2016b``                    
-``3.13.0``        ``-Python-2.7.13``    ``intel/2017a``                   
-``3.15.0``        ``-Python-2.7.12``    ``foss/2016b``                    
-``3.15.0``        ``-Python-2.7.14``    ``intel/2017b``                   
-``3.15.0``        ``-Python-3.5.2``     ``foss/2016b``                    
-``3.15.0``        ``-Python-3.6.2``     ``foss/2017b``                    
-``3.15.0``        ``-Python-3.6.3``     ``foss/2017b``                    
-``3.16.2``        ``-Python-3.6.4``     ``iomkl/2018.02``, ``iomkl/2018a``
-==============    ==================    ==================================
+==============    ==================    ================================================
+version           versionsuffix         toolchain                                       
+==============    ==================    ================================================
+``3.6.0.2515``    ``-Python-2.7.3``     ``goolf/1.4.10``, ``ictce/5.3.0``               
+``3.9.1.4567``    ``-Python-2.7.10``    ``intel/2015b``                                 
+``3.9.1.4567``    ``-Python-2.7.11``    ``intel/2016a``                                 
+``3.10.0``        ``-Python-2.7.11``    ``intel/2016.02-GCC-4.9``                       
+``3.11.0``        ``-Python-2.7.12``    ``intel/2016b``                                 
+``3.13.0``        ``-Python-2.7.12``    ``foss/2016b``                                  
+``3.13.0``        ``-Python-2.7.13``    ``intel/2017a``                                 
+``3.15.0``        ``-Python-2.7.12``    ``foss/2016b``                                  
+``3.15.0``        ``-Python-2.7.14``    ``intel/2017b``                                 
+``3.15.0``        ``-Python-3.5.2``     ``foss/2016b``                                  
+``3.15.0``        ``-Python-3.6.2``     ``foss/2017b``                                  
+``3.15.0``        ``-Python-3.6.3``     ``foss/2017b``                                  
+``3.16.2``        ``-Python-3.6.4``     ``iomkl/2018.02``, ``iomkl/2018a``              
+``3.16.2``        ``-Python-3.6.6``     ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``
+==============    ==================    ================================================
 
 
 .. _list_software_ASHS_303:
@@ -1152,12 +1175,12 @@ Autoconf is an extensible package of M4 macros that produce shell scripts  to au
 
 *homepage*: http://www.gnu.org/software/autoconf/
 
-========    =================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-version     toolchain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-========    =================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-``2.68``    ``foss/2016b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-``2.69``    ``GCC/4.7.2``, ``GCC/4.8.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
-========    =================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+========    ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+version     toolchain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+========    ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+``2.68``    ``foss/2016b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+``2.69``    ``GCC/4.7.2``, ``GCC/4.8.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
+========    ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
 .. _list_software_AutoDock_794:
@@ -1226,7 +1249,7 @@ version       toolchain
 ``1.14.1``    ``GCC/4.8.2``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ``1.15``      ``GCC/4.7.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
 ``1.15.1``    ``GCCcore/6.4.0``, ``GCCcore/7.2.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-``1.16.1``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+``1.16.1``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 ==========    =======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -1245,7 +1268,7 @@ version         toolchain
 ``20150119``    ``GCC/4.9.2``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 ``20150215``    ``GCC/4.7.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``gimkl/2017a``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
 ``20170619``    ``GCCcore/6.4.0``, ``GCCcore/7.2.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-``20180311``    ``GCCcore/7.3.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+``20180311``    ``GCCcore/7.3.0``, ``GCCcore/8.2.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 ============    ========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -1387,7 +1410,7 @@ version      toolchain
 ``2.4.0``    ``foss/2015b``, ``foss/2016b``, ``goolf/1.7.20``
 ``2.4.1``    ``intel/2017a``                                 
 ``2.5.0``    ``foss/2016b``, ``intel/2017b``                 
-``2.5.1``    ``foss/2018a``, ``intel/2017b``                 
+``2.5.1``    ``foss/2018a``, ``foss/2018b``, ``intel/2017b`` 
 =========    ================================================
 
 
@@ -1567,18 +1590,18 @@ Bazel is a build tool that builds code quickly and reliably.  It is used to buil
 
 *homepage*: http://bazel.io/
 
-==========    ===================
-version       toolchain          
-==========    ===================
-``0.3.0``     ``CrayGNU/2016.03``
-``0.4.4``     ``dummy``          
-``0.7.0``     ``GCCcore/6.4.0``  
-``0.10.0``    ``GCCcore/6.4.0``  
-``0.11.0``    ``GCCcore/6.4.0``  
-``0.11.1``    ``GCCcore/6.4.0``  
-``0.12.0``    ``GCCcore/6.4.0``  
-``0.16.0``    ``GCCcore/7.3.0``  
-==========    ===================
+==========    ====================================
+version       toolchain                           
+==========    ====================================
+``0.3.0``     ``CrayGNU/2016.03``                 
+``0.4.4``     ``dummy``                           
+``0.7.0``     ``GCCcore/6.4.0``                   
+``0.10.0``    ``GCCcore/6.4.0``                   
+``0.11.0``    ``GCCcore/6.4.0``                   
+``0.11.1``    ``GCCcore/6.4.0``                   
+``0.12.0``    ``GCCcore/6.4.0``                   
+``0.16.0``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+==========    ====================================
 
 
 .. _list_software_bbcp_407:
@@ -1646,6 +1669,7 @@ version      versionsuffix          toolchain
 ``35.82``    ``-Java-1.8.0_74``     ``foss/2015b``                 
 ``36.62``    ``-Java-1.8.0_112``    ``intel/2016b``                
 ``37.93``                           ``foss/2018a``, ``intel/2018a``
+``38.26``                           ``foss/2018b``                 
 =========    ===================    ===============================
 
 
@@ -1686,7 +1710,7 @@ version      toolchain
 *BCFtools*
 ++++++++++
 
-SAMtools is a suite of programs for interacting with high-throughput sequencing data.  BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence  variants
+Samtools is a suite of programs for interacting with high-throughput sequencing data.  BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence  variants
 
 *homepage*: http://www.htslib.org/
 
@@ -1698,7 +1722,7 @@ version      toolchain
 ``1.3``      ``foss/2016a``, ``intel/2016a``
 ``1.3.1``    ``goolf/1.7.20``               
 ``1.6``      ``foss/2016b``, ``intel/2017b``
-``1.9``      ``foss/2018a``                 
+``1.9``      ``foss/2018a``, ``foss/2018b`` 
 =========    ===============================
 
 
@@ -1783,6 +1807,7 @@ version         toolchain
 ============    ================================================
 ``2.1.2``       ``foss/2016a``, ``foss/2017a``, ``goolf/1.7.20``
 ``3.0.1``       ``foss/2018a``                                  
+``3.0.2``       ``foss/2018b``                                  
 ``20120124``    ``goolf/1.4.10``, ``ictce/5.3.0``               
 ``20141202``    ``intel/2015a``                                 
 ============    ================================================
@@ -1805,6 +1830,7 @@ version      toolchain
 ``2.4.0``    ``foss/2016a``
 ``2.4.7``    ``foss/2017a``
 ``2.5.0``    ``foss/2018a``
+``2.5.1``    ``foss/2018b``
 =========    ==============
 
 
@@ -1843,6 +1869,7 @@ version       toolchain
 ``2.4.26``    ``dummy``                      
 ``2.4.30``    ``foss/2016b``                 
 ``2.4.32``    ``foss/2018a``, ``intel/2018a``
+``2.4.35``    ``foss/2018b``                 
 ==========    ===============================
 
 
@@ -1865,7 +1892,7 @@ version       toolchain
 ``2.23.0``    ``goolf/1.4.10``, ``intel/2015a``                                                                                                     
 ``2.25.0``    ``foss/2015a``, ``foss/2015b``, ``foss/2016a``, ``goolf/1.7.20``                                                                      
 ``2.26.0``    ``GCCcore/6.4.0``, ``foss/2015a``, ``foss/2015b``, ``foss/2016a``, ``goolf/1.7.20``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
-``2.27.1``    ``GCCcore/6.4.0``, ``foss/2016b``, ``intel/2017a``, ``intel/2018a``                                                                   
+``2.27.1``    ``GCCcore/6.4.0``, ``foss/2016b``, ``foss/2018b``, ``intel/2017a``, ``intel/2018a``                                                   
 ==========    ======================================================================================================================================
 
 
@@ -1918,7 +1945,7 @@ version          toolchain
 ``1.0.6``        ``intel/2016.02-GCC-4.9``       
 ``1.1-beta2``    ``intel/2016.02-GCC-4.9``       
 ``1.2.0``        ``intel/2017a``, ``intel/2018a``
-``2.0.0``        ``intel/2018a``                 
+``2.0.0``        ``foss/2018b``, ``intel/2018a`` 
 =============    ================================
 
 
@@ -2025,6 +2052,7 @@ version       toolchain
 ``2.28``      ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``dummy``                                                                                                                     
 ``2.29``      ``GCCcore/7.2.0``, ``GCCcore/system``, ``dummy``                                                                                                                                       
 ``2.30``      ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``dummy``                                                                                                                                        
+``2.31.1``    ``GCCcore/8.2.0``, ``dummy``                                                                                                                                                           
 ==========    =======================================================================================================================================================================================
 
 
@@ -2190,6 +2218,7 @@ version     versionsuffix         toolchain
 ``1.70``    ``-Python-3.6.1``     ``intel/2017a``                  
 ``1.71``    ``-Python-2.7.14``    ``intel/2018a``                  
 ``1.71``    ``-Python-3.6.4``     ``foss/2018a``                   
+``1.72``    ``-Python-2.7.15``    ``foss/2018b``                   
 ========    ==================    =================================
 
 
@@ -2231,7 +2260,7 @@ version       toolchain
 *Bison*
 +++++++
 
-Bison is a general-purpose parser generator that converts an annotated context-free grammar  into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
+Bison is a general-purpose parser generator that converts an annotated  context-free grammar into a deterministic LR or generalized LR (GLR) parser  employing LALR(1) parser tables. 
 
 *homepage*: http://www.gnu.org/software/bison
 
@@ -2240,13 +2269,13 @@ version      toolchain
 =========    ===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 ``2.5``      ``GCC/4.6.3``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``intel/2014b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 ``2.6.5``    ``ictce/5.3.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-``2.7``      ``GCC/4.7.2``, ``GCC/4.7.3``, ``GCC/4.8.1``, ``GCC/4.8.4``, ``GCCcore/6.3.0``, ``dummy``, ``goolf/1.4.10``, ``goolf/1.5.14``, ``ictce/5.3.0``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``ictce/6.1.5``, ``intel/2014b``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+``2.7``      ``GCC/4.7.2``, ``GCC/4.7.3``, ``GCC/4.8.1``, ``GCC/4.8.4``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``dummy``, ``goolf/1.4.10``, ``goolf/1.5.14``, ``ictce/5.3.0``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``ictce/6.1.5``, ``intel/2014b``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 ``2.7.1``    ``ictce/5.4.0``, ``ictce/5.5.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 ``3.0.1``    ``ictce/5.5.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 ``3.0.2``    ``CrayGNU/2015.06``, ``CrayGNU/2015.11``, ``GCC/4.8.2``, ``foss/2014b``, ``foss/2015a``, ``ictce/7.1.2``, ``intel/2014b``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 ``3.0.3``    ``GCC/4.9.2``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 ``3.0.4``    ``GCC/4.9.2``, ``GCC/4.9.2-binutils-2.25``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/4.9.3-binutils-2.25``, ``GCC/5.1.0-binutils-2.25``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/4.9.4``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/system``, ``GNU/4.9.3-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``gimkl/2017a``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
-``3.0.5``    ``GCCcore/7.3.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+``3.0.5``    ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``dummy``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 =========    ===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -2456,6 +2485,7 @@ version       toolchain
 ``1.11.1``    ``intel/2016b``                                                   
 ``1.12.1``    ``GCCcore/6.4.0``, ``foss/2016b``, ``foss/2017a``, ``intel/2017a``
 ``1.14.2``    ``GCCcore/6.4.0``, ``foss/2016a``                                 
+``1.14.4``    ``GCCcore/7.3.0``                                                 
 ==========    ==================================================================
 
 
@@ -2647,7 +2677,7 @@ version        toolchain
 ``1.1.1``      ``goolf/1.4.10``                                                                                                                                         
 ``1.1.2``      ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``foss/2015b``, ``foss/2016a``, ``intel/2015a``, ``intel/2015b``, ``intel/2016b``, ``intel/2017a``, ``intel/2018a``
 ``1.2.1.1``    ``foss/2016b``, ``intel/2017b``                                                                                                                          
-``1.2.2``      ``intel/2017b``, ``intel/2018a``                                                                                                                         
+``1.2.2``      ``foss/2018b``, ``intel/2017b``, ``intel/2018a``                                                                                                         
 ===========    =========================================================================================================================================================
 
 
@@ -2815,7 +2845,7 @@ version        toolchain
 ``0.7.13``     ``foss/2015b``, ``foss/2016a``, ``goolf/1.4.10``, ``intel/2016a``                                     
 ``0.7.15``     ``GCCcore/5.4.0``, ``GCCcore/6.4.0``, ``foss/2016a``, ``foss/2016b``, ``intel/2016b``, ``intel/2017a``
 ``0.7.16a``    ``foss/2016b``, ``intel/2017a``                                                                       
-``0.7.17``     ``foss/2017b``, ``foss/2018a``, ``intel/2017b``, ``intel/2018a``                                      
+``0.7.17``     ``foss/2017b``, ``foss/2018a``, ``foss/2018b``, ``intel/2017b``, ``intel/2018a``                      
 ===========    ======================================================================================================
 
 
@@ -3039,6 +3069,7 @@ version      versionsuffix         toolchain
 ``2.3.0``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``                 
 ``2.3.0``    ``-Python-2.7.13``    ``intel/2017a``                                 
 ``2.3.0``    ``-Python-2.7.14``    ``foss/2017b``, ``intel/2017b``, ``intel/2018a``
+``2.4.0``    ``-Python-2.7.14``    ``intel/2018a``                                 
 =========    ==================    ================================================
 
 
@@ -4661,6 +4692,8 @@ version      versionsuffix         toolchain
 ``1.15``     ``-Python-3.5.2``     ``foss/2016b``                 
 ``1.16``     ``-Python-2.7.14``    ``intel/2018a``                
 ``1.16``     ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``
+``1.18``     ``-Python-2.7.15``    ``foss/2018b``                 
+``1.18``     ``-Python-3.6.6``     ``foss/2018b``                 
 =========    ==================    ===============================
 
 
@@ -4694,6 +4727,7 @@ version      versionsuffix         toolchain
 =========    ==================    =================================
 ``1.1.5``    ``-Python-2.7.3``     ``goolf/1.4.10``, ``ictce/5.3.0``
 ``1.1.9``    ``-Python-2.7.13``    ``intel/2017a``                  
+``1.2.1``    ``-Python-3.6.4``     ``intel/2018a``                  
 =========    ==================    =================================
 
 
@@ -4814,6 +4848,7 @@ version       versionsuffix         toolchain
 ``0.16.0``    ``-Python-3.6.3``     ``intel/2017b``
 ``0.17.0``    ``-Python-2.7.13``    ``foss/2017a`` 
 ``0.17.2``    ``-Python-3.6.4``     ``intel/2018a``
+``0.19.4``    ``-Python-3.6.6``     ``foss/2018b`` 
 ==========    ==================    ===============
 
 
@@ -4950,18 +4985,19 @@ version         toolchain
 *DBus*
 ++++++
 
-D-Bus is a message bus system, a simple way for applications to talk  to one another.  In addition to interprocess communication, D-Bus helps  coordinate process lifecycle; it makes it simple and reliable to code  a "single instance" application or daemon, and to launch applications  and daemons on demand when their services are needed.
+D-Bus is a message bus system, a simple way for applications to talk  to one another.  In addition to interprocess communication, D-Bus helps  coordinate process lifecycle; it makes it simple and reliable to code  a "single instance" application or daemon, and to launch applications  and daemons on demand when their services are needed. 
 
-*homepage*: http://dbus.freedesktop.org/doc/dbus-glib
+*homepage*: http://dbus.freedesktop.org/
 
-===========    ===============================
-version        toolchain                      
-===========    ===============================
-``1.10.8``     ``foss/2016a``, ``intel/2016a``
-``1.10.12``    ``intel/2016b``                
-``1.10.20``    ``GCCcore/6.4.0``              
-``1.11.20``    ``intel/2017a``                
-===========    ===============================
+===========    ====================================
+version        toolchain                           
+===========    ====================================
+``1.10.8``     ``foss/2016a``, ``intel/2016a``     
+``1.10.12``    ``intel/2016b``                     
+``1.10.20``    ``GCCcore/6.4.0``                   
+``1.11.20``    ``intel/2017a``                     
+``1.13.6``     ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+===========    ====================================
 
 
 .. _list_software_dbus-glib_889:
@@ -5318,17 +5354,18 @@ version    versionsuffix         toolchain
 *DMTCP*
 +++++++
 
-DMTCP (Distributed MultiThreaded Checkpointing) transparently checkpoints a single-host or  distributed computation in user-space -- with no modifications to user code or to the O/S. It works on most Linux  applications, including Python, Matlab, R, GUI desktops, MPI, etc.
+DMTCP is a tool to transparently checkpoint the state of multiple simultaneous applications, including multi-threaded and distributed applications. It operates directly on the user binary executable, without any Linux kernel modules or other kernel modifications.
 
-*homepage*: http://dmtcp.sourceforge.net/
+*homepage*: https://github.com/dmtcp/dmtcp
 
-=========    ==============
-version      toolchain     
-=========    ==============
-``2.4.5``    ``dummy``     
-``2.5.0``    ``foss/2016a``
-``2.5.1``    ``dummy``     
-=========    ==============
+=========    ==============================
+version      toolchain                     
+=========    ==============================
+``2.4.5``    ``dummy``                     
+``2.5.0``    ``foss/2016a``                
+``2.5.1``    ``dummy``                     
+``2.5.2``    ``foss/2016b``, ``foss/2018b``
+=========    ==============================
 
 
 .. _list_software_Docutils_839:
@@ -5586,6 +5623,7 @@ version       toolchain
 ``3.6.0``     ``dummy``
 ``3.6.1``     ``dummy``
 ``3.6.2``     ``dummy``
+``3.7.0``     ``dummy``
 ==========    =========
 
 
@@ -6178,7 +6216,7 @@ version      toolchain
 ---
 
 
-:ref:`list_software_f90cache_707` - :ref:`list_software_faceswap_842` - :ref:`list_software_FALCON_435` - :ref:`list_software_FANN_291` - :ref:`list_software_FASTA_367` - :ref:`list_software_fastahack_934` - :ref:`list_software_FastaIndex_999` - :ref:`list_software_FastME_544` - :ref:`list_software_fastPHASE_799` - :ref:`list_software_fastq-tools_1149` - :ref:`list_software_FastQ_Screen_1182` - :ref:`list_software_FastQC_546` - :ref:`list_software_fastQValidator_1445` - :ref:`list_software_fastqz_665` - :ref:`list_software_fastStructure_1407` - :ref:`list_software_FastTree_798` - :ref:`list_software_FASTX-Toolkit_1177` - :ref:`list_software_FCM_214` - :ref:`list_software_FDS_221` - :ref:`list_software_fdstools_878` - :ref:`list_software_FDTD_Solutions_1361` - :ref:`list_software_feh_307` - :ref:`list_software_Ferret_616` - :ref:`list_software_FFC_207` - :ref:`list_software_FFindex_676` - :ref:`list_software_FFLAS-FFPACK_836` - :ref:`list_software_FFmpeg_565` - :ref:`list_software_ffnet_531` - :ref:`list_software_FFTW_311` - :ref:`list_software_FGSL_300` - :ref:`list_software_FIAT_292` - :ref:`list_software_file_416` - :ref:`list_software_Filtlong_831` - :ref:`list_software_find_circ_929` - :ref:`list_software_findhap_730` - :ref:`list_software_findutils_978` - :ref:`list_software_fineRADstructure_1642` - :ref:`list_software_fineSTRUCTURE_1139` - :ref:`list_software_Firefox_723` - :ref:`list_software_FireWorks_924` - :ref:`list_software_fixesproto_1107` - :ref:`list_software_FLAC_278` - :ref:`list_software_FLANN_367` - :ref:`list_software_FLASH_366` - :ref:`list_software_FLEUR_382` - :ref:`list_software_flex_431` - :ref:`list_software_FLTK_305` - :ref:`list_software_FLUENT_462` - :ref:`list_software_fmri_430` - :ref:`list_software_fmt_327` - :ref:`list_software_FoldX_477` - :ref:`list_software_fontconfig_1069` - :ref:`list_software_fontsproto_1118` - :ref:`list_software_foss_443` - :ref:`list_software_fosscuda_856` - :ref:`list_software_FoX_269` - :ref:`list_software_FPM_227` - :ref:`list_software_fqtrim_659` - :ref:`list_software_fqzcomp_768` - :ref:`list_software_FragGeneScan_1156` - :ref:`list_software_FRANz_417` - :ref:`list_software_FRC_align_837` - :ref:`list_software_frealign_840` - :ref:`list_software_FreeFem++_752` - :ref:`list_software_freeglut_862` - :ref:`list_software_FreeSurfer_1017` - :ref:`list_software_freetype_868` - :ref:`list_software_FreeXL_550` - :ref:`list_software_FriBidi_665` - :ref:`list_software_FSA_218` - :ref:`list_software_FSL_229` - :ref:`list_software_FSLeyes_667` - :ref:`list_software_FTGL_301` - :ref:`list_software_fullrmc_757` - :ref:`list_software_FUNWAVE-TVD_823` - :ref:`list_software_future_667`
+:ref:`list_software_f90cache_707` - :ref:`list_software_faceswap_842` - :ref:`list_software_FALCON_435` - :ref:`list_software_FANN_291` - :ref:`list_software_FASTA_367` - :ref:`list_software_fastahack_934` - :ref:`list_software_FastaIndex_999` - :ref:`list_software_FastME_544` - :ref:`list_software_fastPHASE_799` - :ref:`list_software_fastq-tools_1149` - :ref:`list_software_FastQ_Screen_1182` - :ref:`list_software_FastQC_546` - :ref:`list_software_fastQValidator_1445` - :ref:`list_software_fastqz_665` - :ref:`list_software_fastStructure_1407` - :ref:`list_software_FastTree_798` - :ref:`list_software_FASTX-Toolkit_1177` - :ref:`list_software_fbm_309` - :ref:`list_software_FCM_214` - :ref:`list_software_FDS_221` - :ref:`list_software_fdstools_878` - :ref:`list_software_FDTD_Solutions_1361` - :ref:`list_software_feh_307` - :ref:`list_software_Ferret_616` - :ref:`list_software_FFC_207` - :ref:`list_software_FFindex_676` - :ref:`list_software_FFLAS-FFPACK_836` - :ref:`list_software_FFmpeg_565` - :ref:`list_software_ffnet_531` - :ref:`list_software_FFTW_311` - :ref:`list_software_FGSL_300` - :ref:`list_software_FIAT_292` - :ref:`list_software_file_416` - :ref:`list_software_Filtlong_831` - :ref:`list_software_find_circ_929` - :ref:`list_software_findhap_730` - :ref:`list_software_findutils_978` - :ref:`list_software_fineRADstructure_1642` - :ref:`list_software_fineSTRUCTURE_1139` - :ref:`list_software_Firefox_723` - :ref:`list_software_FireWorks_924` - :ref:`list_software_fixesproto_1107` - :ref:`list_software_FLAC_278` - :ref:`list_software_FLANN_367` - :ref:`list_software_FLASH_366` - :ref:`list_software_FLEUR_382` - :ref:`list_software_flex_431` - :ref:`list_software_FLTK_305` - :ref:`list_software_FLUENT_462` - :ref:`list_software_fmri_430` - :ref:`list_software_fmt_327` - :ref:`list_software_FoldX_477` - :ref:`list_software_fontconfig_1069` - :ref:`list_software_fontsproto_1118` - :ref:`list_software_foss_443` - :ref:`list_software_fosscuda_856` - :ref:`list_software_FoX_269` - :ref:`list_software_FPM_227` - :ref:`list_software_fqtrim_659` - :ref:`list_software_fqzcomp_768` - :ref:`list_software_FragGeneScan_1156` - :ref:`list_software_FRANz_417` - :ref:`list_software_FRC_align_837` - :ref:`list_software_frealign_840` - :ref:`list_software_FreeFem++_752` - :ref:`list_software_freeglut_862` - :ref:`list_software_FreeSurfer_1017` - :ref:`list_software_freetype_868` - :ref:`list_software_FreeXL_550` - :ref:`list_software_FriBidi_665` - :ref:`list_software_FSA_218` - :ref:`list_software_FSL_229` - :ref:`list_software_FSLeyes_667` - :ref:`list_software_FTGL_301` - :ref:`list_software_fullrmc_757` - :ref:`list_software_FUNWAVE-TVD_823` - :ref:`list_software_future_667`
 
 
 .. _list_software_f90cache_707:
@@ -6302,11 +6340,12 @@ FastME: a comprehensive, accurate and fast distance-based phylogeny inference pr
 
 *homepage*: http://www.atgc-montpellier.fr/fastme/
 
-=========    ==============
-version      toolchain     
-=========    ==============
-``2.1.5``    ``foss/2016a``
-=========    ==============
+===========    ===============
+version        toolchain      
+===========    ===============
+``2.1.5``      ``foss/2016a`` 
+``2.1.6.1``    ``intel/2018a``
+===========    ===============
 
 
 .. _list_software_fastPHASE_799:
@@ -6457,12 +6496,28 @@ The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/
 
 *homepage*: http://hannonlab.cshl.edu/fastx_toolkit/
 
-============    =================================================================================
-version         toolchain                                                                        
-============    =================================================================================
-``0.0.13.2``    ``goolf/1.4.10``, ``ictce/5.3.0``                                                
-``0.0.14``      ``foss/2015b``, ``foss/2016a``, ``foss/2016b``, ``goolf/1.4.10``, ``intel/2015a``
-============    =================================================================================
+============    ==================================================================================================
+version         toolchain                                                                                         
+============    ==================================================================================================
+``0.0.13.2``    ``goolf/1.4.10``, ``ictce/5.3.0``                                                                 
+``0.0.14``      ``foss/2015b``, ``foss/2016a``, ``foss/2016b``, ``goolf/1.4.10``, ``intel/2015a``, ``intel/2018a``
+============    ==================================================================================================
+
+
+.. _list_software_fbm_309:
+
+*fbm*
++++++
+
+Exact methods for simulating fractional Brownian motion and fractional Gaussian noise in Python
+
+*homepage*: https://pypi.org/project/fbm
+
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``0.2.0``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
 
 
 .. _list_software_FCM_214:
@@ -6690,7 +6745,7 @@ version      versionsuffix         toolchain
 ``3.3.6``                          ``gimpi/2017b``, ``gimpic/2017b``, ``gompi/2017a``, ``gompi/2017b``, ``gompic/2017.01``, ``gompic/2017.02``, ``gompic/2017b``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``                                                                                                                                                                                                                            
 ``3.3.7``                          ``gimkl/2017a``, ``gimpi/2018a``, ``gmpich/2017.08``, ``gompi/2018a``, ``gompic/2018a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``, ``intel/2018a``, ``iomkl/2018a``                                                                                                                                                                                                                            
 ``3.3.7``    ``-serial``           ``GCC/6.4.0-2.28``                                                                                                                                                                                                                                                                                                                                                                                          
-``3.3.8``                          ``gompi/2018b``, ``gompic/2018b``, ``intel/2018b``, ``iomkl/2018b``                                                                                                                                                                                                                                                                                                                                         
+``3.3.8``                          ``gompi/2018.08``, ``gompi/2018b``, ``gompic/2018b``, ``intel/2018b``, ``iomkl/2018b``                                                                                                                                                                                                                                                                                                                      
 =========    ==================    ============================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -6980,7 +7035,7 @@ version       toolchain
 ``2.6.0``     ``GCC/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/4.9.4``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``dummy``, ``foss/2015a``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2015b``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``                                                                                                                                                                                         
 ``2.6.2``     ``intel/2016b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 ``2.6.3``     ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/7.1.0``, ``dummy``, ``gimkl/2017a``                                                                                                                                                                                                                                                                                                                                                                                                                          
-``2.6.4``     ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/system``, ``dummy``                                                                                                                                                                                                                                                                                                                                                              
+``2.6.4``     ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/system``, ``dummy``                                                                                                                                                                                                                                                                                                                                           
 ==========    =============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -7142,6 +7197,7 @@ version        toolchain
 ``2016b``      ``dummy``
 ``2017a``      ``dummy``
 ``2017b``      ``dummy``
+``2018.08``    ``dummy``
 ``2018a``      ``dummy``
 ``2018b``      ``dummy``
 ===========    =========
@@ -7335,15 +7391,17 @@ version      versionsuffix       toolchain
 *FreeSurfer*
 ++++++++++++
 
-FreeSurfer is a software package for the analysis and visualization of structural and functional   neuroimaging data from cross-sectional or longitudinal studies. It is developed by the Laboratory for Computational   Neuroimaging at the Athinoula A. Martinos Center for Biomedical Imaging.
+FreeSurfer is a set of tools for analysis and visualization of structural and functional brain imaging data. FreeSurfer contains a fully automatic structural imaging stream for processing cross sectional and longitudinal data.
 
-*homepage*: http://freesurfer.net/
+*homepage*: https://surfer.nmr.mgh.harvard.edu/
 
 =========    ===================    =========
 version      versionsuffix          toolchain
 =========    ===================    =========
 ``5.3.0``    ``-centos4_x86_64``    ``dummy``
 ``5.3.0``    ``-centos6_x86_64``    ``dummy``
+``6.0.0``    ``-centos6_x86_64``    ``dummy``
+``6.0.1``    ``-centos6_x86_64``    ``dummy``
 =========    ===================    =========
 
 
@@ -7414,6 +7472,7 @@ version      toolchain
 =========    ===============================
 ``1.0.1``    ``foss/2018a``, ``intel/2018a``
 ``1.0.2``    ``GCCcore/6.4.0``              
+``1.0.5``    ``GCCcore/7.3.0``              
 =========    ===============================
 
 
@@ -7534,6 +7593,7 @@ python-future is the missing compatibility layer between Python 2 and Python 3.
 version       versionsuffix         toolchain      
 ==========    ==================    ===============
 ``0.16.0``    ``-Python-2.7.14``    ``intel/2017b``
+``0.16.0``    ``-Python-2.7.15``    ``foss/2018b`` 
 ``0.16.0``    ``-Python-3.6.3``     ``intel/2017b``
 ==========    ==================    ===============
 
@@ -7544,7 +7604,7 @@ version       versionsuffix         toolchain
 ---
 
 
-:ref:`list_software_g2clib_563` - :ref:`list_software_g2lib_464` - :ref:`list_software_g2log_475` - :ref:`list_software_GAMESS-US_661` - :ref:`list_software_GapCloser_896` - :ref:`list_software_GapFiller_886` - :ref:`list_software_GATE_289` - :ref:`list_software_GATK_295` - :ref:`list_software_gawk_426` - :ref:`list_software_Gblocks_709` - :ref:`list_software_gbs2ploidy_1023` - :ref:`list_software_gc_202` - :ref:`list_software_GC3Pie_475` - :ref:`list_software_GCC_205` - :ref:`list_software_GCCcore_630` - :ref:`list_software_gcccuda_714` - :ref:`list_software_GConf_461` - :ref:`list_software_GD_139` - :ref:`list_software_GDAL_280` - :ref:`list_software_GDB_205` - :ref:`list_software_gdc-client_986` - :ref:`list_software_GDGraph_637` - :ref:`list_software_gdist_539` - :ref:`list_software_Gdk-Pixbuf_945` - :ref:`list_software_Geant4_547` - :ref:`list_software_GEM-library_1019` - :ref:`list_software_GEMSTAT_533` - :ref:`list_software_gencore_variant_detection_2645` - :ref:`list_software_GenotypeHarmonizer_1898` - :ref:`list_software_gensim_643` - :ref:`list_software_GeoIP_436` - :ref:`list_software_GeoIP-C_548` - :ref:`list_software_geopy_548` - :ref:`list_software_GEOS_302` - :ref:`list_software_getdp_532` - :ref:`list_software_GETORB_451` - :ref:`list_software_gettext_773` - :ref:`list_software_GffCompare_986` - :ref:`list_software_gffread_719` - :ref:`list_software_gflags_628` - :ref:`list_software_GFOLD_364` - :ref:`list_software_GHC_210` - :ref:`list_software_Ghostscript_1178` - :ref:`list_software_GIMIC_361` - :ref:`list_software_gimkl_532` - :ref:`list_software_gimpi_534` - :ref:`list_software_gimpic_633` - :ref:`list_software_GIMPS_384` - :ref:`list_software_giolf_529` - :ref:`list_software_giolfc_628` - :ref:`list_software_git_324` - :ref:`list_software_git-lfs_694` - :ref:`list_software_GitPython_934` - :ref:`list_software_Givaro_616` - :ref:`list_software_GL2PS_360` - :ref:`list_software_Glade_477` - :ref:`list_software_GLib_350` - :ref:`list_software_glibc_513` - :ref:`list_software_GLibmm_568` - :ref:`list_software_GLIMMER_525` - :ref:`list_software_GlimmerHMM_943` - :ref:`list_software_GLM_224` - :ref:`list_software_GlobalArrays_1219` - :ref:`list_software_glog_425` - :ref:`list_software_GLPK_302` - :ref:`list_software_glproto_775` - :ref:`list_software_GMAP-GSNAP_715` - :ref:`list_software_GMP_228` - :ref:`list_software_gmpich_632` - :ref:`list_software_gmpolf_645` - :ref:`list_software_gmpy2_495` - :ref:`list_software_gmsh_431` - :ref:`list_software_GMT_232` - :ref:`list_software_gmvapich2_897` - :ref:`list_software_gmvolf_651` - :ref:`list_software_GNU_234` - :ref:`list_software_gnuplot_777` - :ref:`list_software_GnuTLS_541` - :ref:`list_software_Go_182` - :ref:`list_software_GObject-Introspection_2108` - :ref:`list_software_golf_424` - :ref:`list_software_gompi_540` - :ref:`list_software_gompic_639` - :ref:`list_software_googletest_1085` - :ref:`list_software_goolf_535` - :ref:`list_software_goolfc_634` - :ref:`list_software_GP2C_268` - :ref:`list_software_GPAW_303` - :ref:`list_software_gperf_532` - :ref:`list_software_gperftools_1093` - :ref:`list_software_gputools_893` - :ref:`list_software_grabix_637` - :ref:`list_software_Grace_482` - :ref:`list_software_grace_514` - :ref:`list_software_Gradle_591` - :ref:`list_software_graph-tool_1021` - :ref:`list_software_Graphene_810` - :ref:`list_software_GraphicsMagick_1405` - :ref:`list_software_Graphviz_843` - :ref:`list_software_graphviz_875` - :ref:`list_software_GraphViz_811` - :ref:`list_software_GraphViz2_861` - :ref:`list_software_Greenlet_822` - :ref:`list_software_grep_430` - :ref:`list_software_Grep_398` - :ref:`list_software_grib_api_829` - :ref:`list_software_GRIT_310` - :ref:`list_software_GRNBoost_750` - :ref:`list_software_GroIMP_526` - :ref:`list_software_GROMACS_524` - :ref:`list_software_GROMOS++_557` - :ref:`list_software_gromosXX_839` - :ref:`list_software_GroopM_596` - :ref:`list_software_gsl_326` - :ref:`list_software_GSL_230` - :ref:`list_software_gSOAP_410` - :ref:`list_software_GSSAPI_455` - :ref:`list_software_GST-plugins-base_1509` - :ref:`list_software_GStreamer_906` - :ref:`list_software_gtest_551` - :ref:`list_software_GTI_228` - :ref:`list_software_GTK+_273` - :ref:`list_software_gtkglext_874` - :ref:`list_software_Gtkmm_512` - :ref:`list_software_GTOOL_389` - :ref:`list_software_GTS_238` - :ref:`list_software_Guile_502` - :ref:`list_software_Gurobi_616` - :ref:`list_software_gzip_442`
+:ref:`list_software_g2clib_563` - :ref:`list_software_g2lib_464` - :ref:`list_software_g2log_475` - :ref:`list_software_GAMESS-US_661` - :ref:`list_software_GapCloser_896` - :ref:`list_software_GapFiller_886` - :ref:`list_software_GATE_289` - :ref:`list_software_GATK_295` - :ref:`list_software_gawk_426` - :ref:`list_software_Gblocks_709` - :ref:`list_software_gbs2ploidy_1023` - :ref:`list_software_gc_202` - :ref:`list_software_GC3Pie_475` - :ref:`list_software_GCC_205` - :ref:`list_software_GCCcore_630` - :ref:`list_software_gcccuda_714` - :ref:`list_software_GConf_461` - :ref:`list_software_GD_139` - :ref:`list_software_GDAL_280` - :ref:`list_software_GDB_205` - :ref:`list_software_gdc-client_986` - :ref:`list_software_GDGraph_637` - :ref:`list_software_gdist_539` - :ref:`list_software_Gdk-Pixbuf_945` - :ref:`list_software_Geant4_547` - :ref:`list_software_GEM-library_1019` - :ref:`list_software_GEMSTAT_533` - :ref:`list_software_gencore_variant_detection_2645` - :ref:`list_software_GenomeTester4_1286` - :ref:`list_software_GenotypeHarmonizer_1898` - :ref:`list_software_gensim_643` - :ref:`list_software_GeoIP_436` - :ref:`list_software_GeoIP-C_548` - :ref:`list_software_geopy_548` - :ref:`list_software_GEOS_302` - :ref:`list_software_getdp_532` - :ref:`list_software_GETORB_451` - :ref:`list_software_gettext_773` - :ref:`list_software_GffCompare_986` - :ref:`list_software_gffread_719` - :ref:`list_software_gflags_628` - :ref:`list_software_GFOLD_364` - :ref:`list_software_GHC_210` - :ref:`list_software_Ghostscript_1178` - :ref:`list_software_GIMIC_361` - :ref:`list_software_gimkl_532` - :ref:`list_software_gimpi_534` - :ref:`list_software_gimpic_633` - :ref:`list_software_GIMPS_384` - :ref:`list_software_giolf_529` - :ref:`list_software_giolfc_628` - :ref:`list_software_git_324` - :ref:`list_software_git-lfs_694` - :ref:`list_software_GitPython_934` - :ref:`list_software_Givaro_616` - :ref:`list_software_GL2PS_360` - :ref:`list_software_Glade_477` - :ref:`list_software_GLib_350` - :ref:`list_software_glibc_513` - :ref:`list_software_GLibmm_568` - :ref:`list_software_GLIMMER_525` - :ref:`list_software_GlimmerHMM_943` - :ref:`list_software_GLM_224` - :ref:`list_software_GlobalArrays_1219` - :ref:`list_software_GlobusConnectPersonal_2170` - :ref:`list_software_glog_425` - :ref:`list_software_GLPK_302` - :ref:`list_software_glproto_775` - :ref:`list_software_GMAP-GSNAP_715` - :ref:`list_software_GMP_228` - :ref:`list_software_gmpich_632` - :ref:`list_software_gmpolf_645` - :ref:`list_software_gmpy2_495` - :ref:`list_software_gmsh_431` - :ref:`list_software_GMT_232` - :ref:`list_software_gmvapich2_897` - :ref:`list_software_gmvolf_651` - :ref:`list_software_GNU_234` - :ref:`list_software_gnuplot_777` - :ref:`list_software_GnuTLS_541` - :ref:`list_software_Go_182` - :ref:`list_software_GObject-Introspection_2108` - :ref:`list_software_golf_424` - :ref:`list_software_gompi_540` - :ref:`list_software_gompic_639` - :ref:`list_software_googletest_1085` - :ref:`list_software_goolf_535` - :ref:`list_software_goolfc_634` - :ref:`list_software_GP2C_268` - :ref:`list_software_GPAW_303` - :ref:`list_software_gperf_532` - :ref:`list_software_gperftools_1093` - :ref:`list_software_gputools_893` - :ref:`list_software_grabix_637` - :ref:`list_software_Grace_482` - :ref:`list_software_grace_514` - :ref:`list_software_Gradle_591` - :ref:`list_software_graph-tool_1021` - :ref:`list_software_Graphene_810` - :ref:`list_software_GraphicsMagick_1405` - :ref:`list_software_Graphviz_843` - :ref:`list_software_graphviz_875` - :ref:`list_software_GraphViz_811` - :ref:`list_software_GraphViz2_861` - :ref:`list_software_Greenlet_822` - :ref:`list_software_grep_430` - :ref:`list_software_Grep_398` - :ref:`list_software_grib_api_829` - :ref:`list_software_GRIT_310` - :ref:`list_software_GRNBoost_750` - :ref:`list_software_GroIMP_526` - :ref:`list_software_GROMACS_524` - :ref:`list_software_GROMOS++_557` - :ref:`list_software_gromosXX_839` - :ref:`list_software_GroopM_596` - :ref:`list_software_gsl_326` - :ref:`list_software_GSL_230` - :ref:`list_software_gSOAP_410` - :ref:`list_software_GSSAPI_455` - :ref:`list_software_GST-plugins-base_1509` - :ref:`list_software_GStreamer_906` - :ref:`list_software_gtest_551` - :ref:`list_software_GTI_228` - :ref:`list_software_GTK+_273` - :ref:`list_software_gtkglext_874` - :ref:`list_software_Gtkmm_512` - :ref:`list_software_GTOOL_389` - :ref:`list_software_GTS_238` - :ref:`list_software_Guile_502` - :ref:`list_software_Gurobi_616` - :ref:`list_software_gzip_442`
 
 
 .. _list_software_g2clib_563:
@@ -7705,6 +7765,7 @@ version         versionsuffix          toolchain
 ``4.0.7.0``     ``-Python-3.6.4``      ``intel/2018a``
 ``4.0.8.1``     ``-Python-2.7.15``     ``foss/2018b`` 
 ``4.0.8.1``     ``-Python-3.6.6``      ``foss/2018b`` 
+``4.0.10.0``    ``-Python-3.6.6``      ``foss/2018b`` 
 ============    ===================    ===============
 
 
@@ -7869,6 +7930,7 @@ version       versionsuffix          toolchain
 ``7.2.0``     ``-2.29``              ``dummy``
 ``7.3.0``     ``-2.30``              ``dummy``
 ``8.1.0``     ``-2.30``              ``dummy``
+``8.2.0``     ``-2.31.1``            ``dummy``
 ``system``                           ``dummy``
 ``system``    ``-2.29``              ``dummy``
 ==========    ===================    =========
@@ -7900,6 +7962,7 @@ version       toolchain
 ``7.2.0``     ``dummy``
 ``7.3.0``     ``dummy``
 ``8.1.0``     ``dummy``
+``8.2.0``     ``dummy``
 ``system``    ``dummy``
 ==========    =========
 
@@ -7990,6 +8053,7 @@ version       versionsuffix                     toolchain
 ``2.2.2``     ``-Python-2.7.14``                ``intel/2017b``                                                 
 ``2.2.2``     ``-Python-2.7.14-HDF5-1.8.19``    ``intel/2017b``                                                 
 ``2.2.3``     ``-Python-2.7.14``                ``foss/2017b``, ``foss/2018a``, ``intel/2017b``, ``intel/2018a``
+``2.2.3``     ``-Python-2.7.15``                ``foss/2018b``                                                  
 ``2.2.3``     ``-Python-3.6.3``                 ``foss/2017b``                                                  
 ``2.2.3``     ``-Python-3.6.4``                 ``foss/2018a``, ``intel/2018a``, ``iomkl/2018a``                
 ``2.2.3``     ``-Python-3.6.6``                 ``foss/2018b``                                                  
@@ -8162,6 +8226,22 @@ version    toolchain
 =======    =========
 
 
+.. _list_software_GenomeTester4_1286:
+
+*GenomeTester4*
++++++++++++++++
+
+A toolkit for performing set operations - union, intersection and complement - on k-mer lists.
+
+*homepage*: https://github.com/bioinfo-ut/GenomeTester4
+
+=======    ===============
+version    toolchain      
+=======    ===============
+``4.0``    ``intel/2018a``
+=======    ===============
+
+
 .. _list_software_GenotypeHarmonizer_1898:
 
 *GenotypeHarmonizer*
@@ -8263,6 +8343,7 @@ version      versionsuffix         toolchain
 ``3.6.1``    ``-Python-2.7.13``    ``intel/2017a``                                                 
 ``3.6.1``    ``-Python-3.6.1``     ``intel/2017a``                                                 
 ``3.6.2``    ``-Python-2.7.14``    ``foss/2017b``, ``foss/2018a``, ``intel/2017b``, ``intel/2018a``
+``3.6.2``    ``-Python-2.7.15``    ``foss/2018b``                                                  
 ``3.6.2``    ``-Python-3.6.2``     ``foss/2017b``                                                  
 ``3.6.2``    ``-Python-3.6.3``     ``foss/2017b``, ``intel/2017b``, ``intel/2018.01``              
 ``3.6.2``    ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``, ``iomkl/2018a``                
@@ -8576,6 +8657,7 @@ version        toolchain
 ``2.14.1``     ``GCCcore/6.4.0``                
 ``2.16.1``     ``foss/2018a``                   
 ``2.18.0``     ``GCCcore/7.3.0``                
+``2.19.1``     ``GCCcore/7.3.0``                
 ===========    =================================
 
 
@@ -8797,6 +8879,22 @@ version     versionsuffix    toolchain
 ========    =============    ===============
 
 
+.. _list_software_GlobusConnectPersonal_2170:
+
+*GlobusConnectPersonal*
++++++++++++++++++++++++
+
+Globus Connect Personal turns your laptop or other personal computer into a  Globus endpoint with a just a few clicks. With Globus Connect Personal you can  share and transfer files to/from a local machine—campus server, desktop computer or laptop—even if it's behind a firewall and you don't have administrator  privileges. 
+
+*homepage*: https://www.globus.org/globus-connect-personal
+
+=========    =========
+version      toolchain
+=========    =========
+``2.3.6``    ``dummy``
+=========    =========
+
+
 .. _list_software_glog_425:
 
 *glog*
@@ -8823,17 +8921,17 @@ The GLPK (GNU Linear Programming Kit) package is intended for  solving large-sca
 
 *homepage*: https://www.gnu.org/software/glpk/
 
-========    ==================================
-version     toolchain                         
-========    ==================================
-``4.48``    ``ictce/5.2.0``, ``ictce/5.3.0``  
-``4.53``    ``goolf/1.4.10``, ``ictce/6.2.5`` 
-``4.55``    ``foss/2015a``, ``intel/2015a``   
-``4.58``    ``foss/2016a``, ``intel/2016a``   
-``4.60``    ``GCCcore/5.4.0``, ``intel/2016b``
-``4.61``    ``intel/2017a``                   
-``4.65``    ``GCCcore/6.4.0``                 
-========    ==================================
+========    ====================================
+version     toolchain                           
+========    ====================================
+``4.48``    ``ictce/5.2.0``, ``ictce/5.3.0``    
+``4.53``    ``goolf/1.4.10``, ``ictce/6.2.5``   
+``4.55``    ``foss/2015a``, ``intel/2015a``     
+``4.58``    ``foss/2016a``, ``intel/2016a``     
+``4.60``    ``GCCcore/5.4.0``, ``intel/2016b``  
+``4.61``    ``intel/2017a``                     
+``4.65``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+========    ====================================
 
 
 .. _list_software_glproto_775:
@@ -8872,6 +8970,7 @@ version              toolchain
 ``2016-05-01``       ``foss/2016a``                                    
 ``2016-11-07``       ``foss/2016b``                                    
 ``2018-05-11``       ``intel/2018a``                                   
+``2018-07-04``       ``intel/2018a``                                   
 =================    ==================================================
 
 
@@ -9169,6 +9268,7 @@ version        versionsuffix    toolchain
 ``2016b``                       ``dummy``
 ``2017a``                       ``dummy``
 ``2017b``                       ``dummy``
+``2018.08``                     ``dummy``
 ``2018a``                       ``dummy``
 ``2018b``                       ``dummy``
 ``system``     ``-2.29``        ``dummy``
@@ -9767,7 +9867,7 @@ version       versionsuffix    toolchain
 *GSL*
 +++++
 
-The GNU Scientific Library (GSL) is a numerical library for C and C++  programmers.  The library provides a wide range of mathematical routines  such as random number generators, special functions and least-squares fitting. 
+The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers.  The library provides a wide range of mathematical routines such as random number generators, special functions  and least-squares fitting.
 
 *homepage*: http://www.gnu.org/software/gsl/
 
@@ -9780,7 +9880,7 @@ version      toolchain
 ``2.2.1``    ``intel/2016a``, ``intel/2016b``                                                                                                                                                                                                            
 ``2.3``      ``foss/2016b``, ``foss/2017a``, ``intel/2016b``, ``intel/2017a``                                                                                                                                                                            
 ``2.4``      ``GCCcore/6.4.0``                                                                                                                                                                                                                           
-``2.5``      ``GCCcore/7.3.0``                                                                                                                                                                                                                           
+``2.5``      ``GCC/7.3.0-2.30``, ``iccifort/2018.3.222-GCC-7.3.0-2.30``                                                                                                                                                                                  
 =========    ============================================================================================================================================================================================================================================
 
 
@@ -9825,13 +9925,13 @@ GStreamer is a library for constructing graphs of media-handling  components. Th
 
 *homepage*: http://gstreamer.freedesktop.org/
 
-===========    =================================================================
-version        toolchain                                                        
-===========    =================================================================
-``0.10.36``    ``foss/2016a``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
-``1.6.4``      ``foss/2016a``                                                   
-``1.8.3``      ``foss/2016a``                                                   
-===========    =================================================================
+===========    ==================================================================================================
+version        toolchain                                                                                         
+===========    ==================================================================================================
+``0.10.36``    ``foss/2016a``, ``foss/2017b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
+``1.6.4``      ``foss/2016a``                                                                                    
+``1.8.3``      ``foss/2016a``                                                                                    
+===========    ==================================================================================================
 
 
 .. _list_software_GStreamer_906:
@@ -9843,13 +9943,13 @@ GStreamer is a library for constructing graphs of media-handling  components. Th
 
 *homepage*: http://gstreamer.freedesktop.org/
 
-===========    =================================================================
-version        toolchain                                                        
-===========    =================================================================
-``0.10.36``    ``foss/2016a``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
-``1.6.4``      ``foss/2016a``                                                   
-``1.8.3``      ``foss/2016a``                                                   
-===========    =================================================================
+===========    ==================================================================================================
+version        toolchain                                                                                         
+===========    ==================================================================================================
+``0.10.36``    ``foss/2016a``, ``foss/2017b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
+``1.6.4``      ``foss/2016a``                                                                                    
+``1.8.3``      ``foss/2016a``                                                                                    
+===========    ==================================================================================================
 
 
 .. _list_software_gtest_551:
@@ -10402,6 +10502,7 @@ version       toolchain
 ``1.47.4``    ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/system``, ``dummy``, ``gimkl/2017a``, ``intel/2016b``
 ``1.47.5``    ``GCCcore/5.5.0``                                                                                                                                                                
 ``1.47.6``    ``GCCcore/8.1.0``                                                                                                                                                                
+``1.47.7``    ``GCCcore/8.2.0``                                                                                                                                                                
 ==========    =================================================================================================================================================================================
 
 
@@ -10734,7 +10835,7 @@ version    toolchain
 =======    ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 ``2.0``    ``foss/2014b``, ``goolf/1.4.10``, ``goolf/1.5.16``, ``ictce/5.3.0``, ``ictce/6.1.5``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 ``2.1``    ``CrayCCE/2015.06``, ``CrayCCE/2015.11``, ``CrayGNU/2015.06``, ``CrayGNU/2015.11``, ``CrayGNU/2016.03``, ``CrayGNU/2016.04``, ``CrayGNU/2016.06``, ``CrayIntel/2015.06``, ``CrayIntel/2015.11``, ``CrayIntel/2016.06``, ``foss/2015.05``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016.06``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``gmpolf/2016a``, ``gmvolf/1.7.20``, ``gmvolf/2016a``, ``goolf/1.7.20``, ``ictce/7.1.2``, ``ictce/7.3.5``, ``intel/2014.06``, ``intel/2014.10``, ``intel/2014.11``, ``intel/2014b``, ``intel/2015.02``, ``intel/2015.08``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.00``, ``intel/2016.01``, ``intel/2016.02-GCC-4.9``, ``intel/2016.02-GCC-5.3``, ``intel/2016.03-GCC-4.9``, ``intel/2016.03-GCC-5.3``, ``intel/2016.03-GCC-5.4``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2015.01``, ``iomkl/2015.02``, ``iomkl/2015.03``, ``iomkl/2016.07``, ``pomkl/2016.03``, ``pomkl/2016.04``, ``pomkl/2016.09``
-``2.2``    ``foss/2016.07``, ``foss/2016.09``, ``foss/2017a``, ``foss/2017b``, ``foss/2018a``, ``foss/2018b``, ``fosscuda/2017b``, ``fosscuda/2018a``, ``fosscuda/2018b``, ``giolf/2017b``, ``giolf/2018a``, ``giolfc/2017b``, ``gmpolf/2017.10``, ``goolfc/2016.08``, ``goolfc/2016.10``, ``intel/2017.00``, ``intel/2017.01``, ``intel/2017.02``, ``intel/2017.09``, ``intel/2017a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``, ``intel/2018.02``, ``intel/2018a``, ``intel/2018b``, ``intelcuda/2016.10``, ``intelcuda/2017b``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``iomkl/2016.09-GCC-5.4.0-2.26``, ``iomkl/2017.01``, ``iomkl/2017a``, ``iomkl/2017b``, ``iomkl/2018.02``, ``iomkl/2018a``, ``iomkl/2018b``, ``pomkl/2016.09``                                                                                                                                                                                                                                           
+``2.2``    ``foss/2016.07``, ``foss/2016.09``, ``foss/2017a``, ``foss/2017b``, ``foss/2018.08``, ``foss/2018a``, ``foss/2018b``, ``fosscuda/2017b``, ``fosscuda/2018a``, ``fosscuda/2018b``, ``giolf/2017b``, ``giolf/2018a``, ``giolfc/2017b``, ``gmpolf/2017.10``, ``goolfc/2016.08``, ``goolfc/2016.10``, ``intel/2017.00``, ``intel/2017.01``, ``intel/2017.02``, ``intel/2017.09``, ``intel/2017a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``, ``intel/2018.02``, ``intel/2018a``, ``intel/2018b``, ``intelcuda/2016.10``, ``intelcuda/2017b``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``iomkl/2016.09-GCC-5.4.0-2.26``, ``iomkl/2017.01``, ``iomkl/2017a``, ``iomkl/2017b``, ``iomkl/2018.02``, ``iomkl/2018a``, ``iomkl/2018b``, ``pomkl/2016.09``                                                                                                                                                                                                                         
 =======    ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -10803,7 +10904,7 @@ version         versionsuffix    toolchain
 ``1.6``                          ``foss/2016b``, ``intel/2017b``                                                   
 ``1.7``                          ``intel/2018a``                                                                   
 ``1.8``                          ``foss/2018a``, ``intel/2018a``                                                   
-``1.9``                          ``GCC/6.4.0-2.28``                                                                
+``1.9``                          ``GCC/6.4.0-2.28``, ``foss/2018b``                                                
 ``20160107``    ``-PacBio``      ``intel/2017a``                                                                   
 ============    =============    ==================================================================================
 
@@ -10870,6 +10971,7 @@ version        toolchain
 ``1.11.7``     ``GCCcore/5.4.0``, ``GCCcore/6.4.0``                                                                                                                                                                                                                                      
 ``1.11.8``     ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``intel/2017a``                                                                                                                                                                                                                     
 ``1.11.10``    ``GCCcore/7.3.0``                                                                                                                                                                                                                                                         
+``1.11.11``    ``GCCcore/8.2.0``                                                                                                                                                                                                                                                         
 ===========    ==========================================================================================================================================================================================================================================================================
 
 
@@ -12357,7 +12459,7 @@ version       toolchain
 ``2.2.3``     ``intel/2015b``                                  
 ``2.2.4``     ``foss/2015b``, ``intel/2015b``                  
 ``2.2.6``     ``foss/2016b``, ``goolf/1.7.20``, ``intel/2017a``
-``2.2.10``    ``intel/2018a``                                  
+``2.2.10``    ``foss/2018b``, ``intel/2018a``                  
 ==========    =================================================
 
 
@@ -13199,7 +13301,7 @@ version       toolchain
 ==========    ========================================================================
 ``2.0.21``    ``intel/2014b``                                                         
 ``2.0.22``    ``GCC/4.9.2``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.3``, ``GNU/4.9.3-2.25``
-``2.1.8``     ``GCCcore/6.4.0``, ``dummy``                                            
+``2.1.8``     ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``dummy``                         
 ==========    ========================================================================
 
 
@@ -13387,7 +13489,7 @@ ligtextutils is a dependency of fastx-toolkit and is provided via the same upstr
 version      toolchain                                                           
 =========    ====================================================================
 ``0.6.1``    ``goolf/1.4.10``, ``goolf/1.7.20``, ``ictce/5.3.0``, ``intel/2015a``
-``0.7``      ``foss/2015b``, ``foss/2016a``, ``foss/2016b``                      
+``0.7``      ``foss/2015b``, ``foss/2016a``, ``foss/2016b``, ``intel/2018a``     
 =========    ====================================================================
 
 
@@ -13620,7 +13722,7 @@ version       toolchain
 ``0.13.1``    ``GCC/4.7.2``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``                                 
 ``0.13.3``    ``intel/2015a``                                                                                                    
 ``0.13.4``    ``foss/2015a``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2015b``, ``intel/2016a``, ``intel/2016b``
-``0.14``      ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``                                                            
+``0.14``      ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``                                         
 ==========    ===================================================================================================================
 
 
@@ -13952,13 +14054,13 @@ GNU libtool is a generic library support script. Libtool hides the complexity of
 
 *homepage*: http://www.gnu.org/software/libtool
 
-=========    ================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-version      toolchain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-=========    ================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-``2.4.2``    ``GCC/4.8.2``, ``GCC/4.9.2``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2014b``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-``2.4.5``    ``GCC/4.8.4``, ``GCC/4.9.2``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-``2.4.6``    ``GCC/4.7.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
-=========    ================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+=========    ===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+version      toolchain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+=========    ===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+``2.4.2``    ``GCC/4.8.2``, ``GCC/4.9.2``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2014b``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+``2.4.5``    ``GCC/4.8.4``, ``GCC/4.9.2``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+``2.4.6``    ``GCC/4.7.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
+=========    ===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
 .. _list_software_libungif_848:
@@ -14345,7 +14447,7 @@ version      versionsuffix         toolchain
 ``2.9.5``                          ``GCCcore/6.3.0``                                                                                                                                                                                                                              
 ``2.9.6``                          ``GCCcore/6.4.0``                                                                                                                                                                                                                              
 ``2.9.7``                          ``GCCcore/6.4.0``                                                                                                                                                                                                                              
-``2.9.8``                          ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``                                                                                                                                                                                        
+``2.9.8``                          ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``                                                                                                                                                                     
 =========    ==================    ===============================================================================================================================================================================================================================================
 
 
@@ -14585,7 +14687,7 @@ version      toolchain
 
 Likwid stands for Like I knew what I am doing. This project contributes easy  to use command line tools for Linux to support programmers in developing high  performance multi threaded programs. 
 
-*homepage*: http://code.google.com/p/likwid/
+*homepage*: https://github.com/RRZE-HPC/likwid
 
 =========    =============    =====================================================================
 version      versionsuffix    toolchain                                                            
@@ -14596,7 +14698,7 @@ version      versionsuffix    toolchain
 ``4.0.1``                     ``GNU/4.9.3-2.25``                                                   
 ``4.1.0``                     ``GCCcore/4.9.3``                                                    
 ``4.2.0``                     ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``foss/2017a``, ``intel/2017a``
-``4.3.2``                     ``GCCcore/6.4.0``                                                    
+``4.3.2``                     ``GCCcore/6.4.0``, ``GCCcore/7.3.0``                                 
 =========    =============    =====================================================================
 
 
@@ -14987,13 +15089,13 @@ Portable lossless data compression library
 
 *homepage*: http://www.oberhumer.com/opensource/lzo/
 
-========    ==================================================================================================
-version     toolchain                                                                                         
-========    ==================================================================================================
-``2.06``    ``goolf/1.4.10``, ``ictce/5.3.0``                                                                 
-``2.09``    ``intel/2016b``, ``intel/2017b``                                                                  
-``2.10``    ``GCCcore/6.4.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``foss/2018a``, ``intel/2017a``
-========    ==================================================================================================
+========    ==================================================================================================================
+version     toolchain                                                                                                         
+========    ==================================================================================================================
+``2.06``    ``goolf/1.4.10``, ``ictce/5.3.0``                                                                                 
+``2.09``    ``intel/2016b``, ``intel/2017b``                                                                                  
+``2.10``    ``GCCcore/6.4.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``foss/2018a``, ``foss/2018b``, ``intel/2017a``
+========    ==================================================================================================================
 
 
 .. _list_software_letter_m:
@@ -15002,7 +15104,7 @@ version     toolchain
 ---
 
 
-:ref:`list_software_M4_129` - :ref:`list_software_MaCH_313` - :ref:`list_software_MACH_281` - :ref:`list_software_MACS_292` - :ref:`list_software_MACS2_342` - :ref:`list_software_MAFFT_366` - :ref:`list_software_magma_515` - :ref:`list_software_mahotas_749` - :ref:`list_software_MAJIQ_370` - :ref:`list_software_make_414` - :ref:`list_software_makedepend_1038` - :ref:`list_software_makedepf90_934` - :ref:`list_software_Mako_392` - :ref:`list_software_Maple_495` - :ref:`list_software_MapSplice_894` - :ref:`list_software_Maq_287` - :ref:`list_software_MariaDB_624` - :ref:`list_software_MariaDB-connector-c_1784` - :ref:`list_software_Mash_393` - :ref:`list_software_MAST_309` - :ref:`list_software_MaSuRCA_588` - :ref:`list_software_Mathematica_1118` - :ref:`list_software_MathGL_541` - :ref:`list_software_MATIO_378` - :ref:`list_software_MATLAB_433` - :ref:`list_software_matplotlib_1080` - :ref:`list_software_MATSim_523` - :ref:`list_software_Maven_503` - :ref:`list_software_mawk_432` - :ref:`list_software_Mawk_400` - :ref:`list_software_mayavi_647` - :ref:`list_software_mc_208` - :ref:`list_software_MCL_220` - :ref:`list_software_mcpp_432` - :ref:`list_software_MCR_226` - :ref:`list_software_MDP_225` - :ref:`list_software_MDSplus_680` - :ref:`list_software_mdtest_657` - :ref:`list_software_MDTraj_546` - :ref:`list_software_Meep_391` - :ref:`list_software_MEGA_282` - :ref:`list_software_MEGACC_416` - :ref:`list_software_MEGAHIT_511` - :ref:`list_software_MEME_292` - :ref:`list_software_memkind_741` - :ref:`list_software_meRanTK_658` - :ref:`list_software_MERCKX_458` - :ref:`list_software_Mercurial_932` - :ref:`list_software_Mesa_390` - :ref:`list_software_meshio_645` - :ref:`list_software_Meson_514` - :ref:`list_software_Mesquite_845` - :ref:`list_software_MetaGeneAnnotator_1724` - :ref:`list_software_Metal_499` - :ref:`list_software_MetaPhlAn2_908` - :ref:`list_software_MetaVelvet_1021` - :ref:`list_software_MethPipe_796` - :ref:`list_software_methylpy_892` - :ref:`list_software_METIS_386` - :ref:`list_software_MiGEC_389` - :ref:`list_software_MIGRATE-N_644` - :ref:`list_software_Minia_494` - :ref:`list_software_Miniconda2_964` - :ref:`list_software_Miniconda3_965` - :ref:`list_software_minieigen_949` - :ref:`list_software_Minimac_702` - :ref:`list_software_Minimac2_752` - :ref:`list_software_Minimac3_753` - :ref:`list_software_Minimac4_754` - :ref:`list_software_minimap2_797` - :ref:`list_software_MIRA_297` - :ref:`list_software_miRDeep2_728` - :ref:`list_software_MiXCR_419` - :ref:`list_software_mkl-dnn_689` - :ref:`list_software_MLC_220` - :ref:`list_software_MM-align_722` - :ref:`list_software_Mmg_289` - :ref:`list_software_MMSEQ_387` - :ref:`list_software_Modeller_820` - :ref:`list_software_modred_635` - :ref:`list_software_Molcas_607` - :ref:`list_software_Molden_607` - :ref:`list_software_Molekel_713` - :ref:`list_software_molmod_648` - :ref:`list_software_Molpro_633` - :ref:`list_software_Mono_409` - :ref:`list_software_monty_567` - :ref:`list_software_mordecai_836` - :ref:`list_software_MOSAIK_452` - :ref:`list_software_mosdepth_868` - :ref:`list_software_MotEvo_602` - :ref:`list_software_Mothur_639` - :ref:`list_software_motif_543` - :ref:`list_software_MPC_224` - :ref:`list_software_MPFR_309` - :ref:`list_software_mpi4py_611` - :ref:`list_software_mpiBLAST_700` - :ref:`list_software_MPICH_369` - :ref:`list_software_MPICH2_419` - :ref:`list_software_MPJ-Express_1022` - :ref:`list_software_mpmath_647` - :ref:`list_software_MrBayes_691` - :ref:`list_software_mrFAST_525` - :ref:`list_software_MRIcron_666` - :ref:`list_software_mrsFAST_640` - :ref:`list_software_MRtrix_614` - :ref:`list_software_MTL4_289` - :ref:`list_software_MultiNest_933` - :ref:`list_software_MultiQC_671` - :ref:`list_software_multitail_981` - :ref:`list_software_Multiwfn_854` - :ref:`list_software_MUMmer_563` - :ref:`list_software_MUMPS_402` - :ref:`list_software_muParser_847` - :ref:`list_software_MUSCLE_457` - :ref:`list_software_MUST_329` - :ref:`list_software_MUSTANG_543` - :ref:`list_software_MuTect_594` - :ref:`list_software_mutil_555` - :ref:`list_software_MVAPICH2_570` - :ref:`list_software_MView_488` - :ref:`list_software_MXNet_460` - :ref:`list_software_MyMediaLite_1076` - :ref:`list_software_mympingpong_1205` - :ref:`list_software_mypy_463` - :ref:`list_software_MySQL_438` - :ref:`list_software_MySQL-python_1157` - :ref:`list_software_mysqlclient_1205` - :ref:`list_software_MySQLdb_636`
+:ref:`list_software_M4_129` - :ref:`list_software_MaCH_313` - :ref:`list_software_MACH_281` - :ref:`list_software_MACS_292` - :ref:`list_software_MACS2_342` - :ref:`list_software_MAFFT_366` - :ref:`list_software_magma_515` - :ref:`list_software_mahotas_749` - :ref:`list_software_MAJIQ_370` - :ref:`list_software_make_414` - :ref:`list_software_makedepend_1038` - :ref:`list_software_makedepf90_934` - :ref:`list_software_Mako_392` - :ref:`list_software_Maple_495` - :ref:`list_software_MapSplice_894` - :ref:`list_software_Maq_287` - :ref:`list_software_MariaDB_624` - :ref:`list_software_MariaDB-connector-c_1784` - :ref:`list_software_Mash_393` - :ref:`list_software_MAST_309` - :ref:`list_software_MaSuRCA_588` - :ref:`list_software_Mathematica_1118` - :ref:`list_software_MathGL_541` - :ref:`list_software_MATIO_378` - :ref:`list_software_MATLAB_433` - :ref:`list_software_matplotlib_1080` - :ref:`list_software_MATSim_523` - :ref:`list_software_Maven_503` - :ref:`list_software_mawk_432` - :ref:`list_software_Mawk_400` - :ref:`list_software_mayavi_647` - :ref:`list_software_mc_208` - :ref:`list_software_MCL_220` - :ref:`list_software_mcpp_432` - :ref:`list_software_MCR_226` - :ref:`list_software_MDP_225` - :ref:`list_software_MDSplus_680` - :ref:`list_software_mdtest_657` - :ref:`list_software_MDTraj_546` - :ref:`list_software_Meep_391` - :ref:`list_software_MEGA_282` - :ref:`list_software_MEGACC_416` - :ref:`list_software_MEGAHIT_511` - :ref:`list_software_MEME_292` - :ref:`list_software_memkind_741` - :ref:`list_software_meRanTK_658` - :ref:`list_software_MERCKX_458` - :ref:`list_software_Mercurial_932` - :ref:`list_software_Mesa_390` - :ref:`list_software_meshio_645` - :ref:`list_software_Meson_514` - :ref:`list_software_Mesquite_845` - :ref:`list_software_MetaGeneAnnotator_1724` - :ref:`list_software_Metal_499` - :ref:`list_software_MetaPhlAn2_908` - :ref:`list_software_MetaVelvet_1021` - :ref:`list_software_MethPipe_796` - :ref:`list_software_methylpy_892` - :ref:`list_software_METIS_386` - :ref:`list_software_MiGEC_389` - :ref:`list_software_MIGRATE-N_644` - :ref:`list_software_Minia_494` - :ref:`list_software_Miniconda2_964` - :ref:`list_software_Miniconda3_965` - :ref:`list_software_minieigen_949` - :ref:`list_software_Minimac_702` - :ref:`list_software_Minimac2_752` - :ref:`list_software_Minimac3_753` - :ref:`list_software_Minimac4_754` - :ref:`list_software_minimap2_797` - :ref:`list_software_MIRA_297` - :ref:`list_software_miRDeep2_728` - :ref:`list_software_MiXCR_419` - :ref:`list_software_mkl-dnn_689` - :ref:`list_software_MLC_220` - :ref:`list_software_MM-align_722` - :ref:`list_software_Mmg_289` - :ref:`list_software_MMSEQ_387` - :ref:`list_software_MMseqs2_648` - :ref:`list_software_Modeller_820` - :ref:`list_software_modred_635` - :ref:`list_software_Molcas_607` - :ref:`list_software_Molden_607` - :ref:`list_software_Molekel_713` - :ref:`list_software_molmod_648` - :ref:`list_software_Molpro_633` - :ref:`list_software_Mono_409` - :ref:`list_software_monty_567` - :ref:`list_software_mordecai_836` - :ref:`list_software_MOSAIK_452` - :ref:`list_software_mosdepth_868` - :ref:`list_software_MotEvo_602` - :ref:`list_software_Mothur_639` - :ref:`list_software_motif_543` - :ref:`list_software_MPC_224` - :ref:`list_software_MPFR_309` - :ref:`list_software_mpi4py_611` - :ref:`list_software_mpiBLAST_700` - :ref:`list_software_MPICH_369` - :ref:`list_software_MPICH2_419` - :ref:`list_software_MPJ-Express_1022` - :ref:`list_software_mpmath_647` - :ref:`list_software_MrBayes_691` - :ref:`list_software_mrFAST_525` - :ref:`list_software_MRIcron_666` - :ref:`list_software_mrsFAST_640` - :ref:`list_software_MRtrix_614` - :ref:`list_software_MTL4_289` - :ref:`list_software_MultiNest_933` - :ref:`list_software_MultiQC_671` - :ref:`list_software_multitail_981` - :ref:`list_software_Multiwfn_854` - :ref:`list_software_MUMmer_563` - :ref:`list_software_MUMPS_402` - :ref:`list_software_muParser_847` - :ref:`list_software_MUSCLE_457` - :ref:`list_software_MUST_329` - :ref:`list_software_MUSTANG_543` - :ref:`list_software_MuTect_594` - :ref:`list_software_mutil_555` - :ref:`list_software_MVAPICH2_570` - :ref:`list_software_MView_488` - :ref:`list_software_MXNet_460` - :ref:`list_software_MyMediaLite_1076` - :ref:`list_software_mympingpong_1205` - :ref:`list_software_mypy_463` - :ref:`list_software_MySQL_438` - :ref:`list_software_MySQL-python_1157` - :ref:`list_software_mysqlclient_1205` - :ref:`list_software_MySQLdb_636`
 
 
 .. _list_software_M4_129:
@@ -15019,7 +15121,7 @@ version       toolchain
 ==========    ===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 ``1.4.16``    ``GCC/4.6.3``, ``GCC/4.7.2``, ``GCC/4.7.3``, ``GCC/4.8.1``, ``GCC/4.8.2``, ``dummy``, ``goolf/1.4.10``, ``goolf/1.5.14``, ``ictce/5.3.0``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``ictce/6.1.5``, ``intel/2014b``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 ``1.4.17``    ``CrayGNU/2015.06``, ``CrayGNU/2015.11``, ``GCC/4.7.2``, ``GCC/4.8.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.2-binutils-2.25``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/4.9.3-binutils-2.25``, ``GCC/5.1.0-binutils-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/4.9.4``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``dummy``, ``foss/2014b``, ``foss/2015.05``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``ictce/7.1.2``, ``intel/2014b``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
-``1.4.18``    ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/system``, ``dummy``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+``1.4.18``    ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/system``, ``dummy``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 ==========    ===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -15221,6 +15323,7 @@ version      versionsuffix         toolchain
 ``1.0.6``    ``-Python-2.7.13``    ``foss/2017a``, ``intel/2017a``                                                                                         
 ``1.0.7``    ``-Python-2.7.14``    ``foss/2017b``, ``foss/2018a``, ``fosscuda/2018a``, ``intel/2017b``, ``intel/2018.01``, ``intel/2018a``, ``iomkl/2018a``
 ``1.0.7``    ``-Python-2.7.15``    ``foss/2018b``, ``intel/2018b``                                                                                         
+``1.0.7``    ``-Python-3.6.4``     ``intel/2018a``                                                                                                         
 =========    ==================    ========================================================================================================================
 
 
@@ -15309,6 +15412,7 @@ version      toolchain
 =========    ================================
 ``2.3.4``    ``intel/2017b``                 
 ``2.3.5``    ``intel/2018a``, ``iomkl/2018a``
+``2.3.7``    ``foss/2018b``                  
 =========    ================================
 
 
@@ -15492,7 +15596,7 @@ version      versionsuffix                        toolchain
 ``2.1.2``    ``-Python-2.7.14``                   ``foss/2018a``, ``intel/2018a``                                                        
 ``2.1.2``    ``-Python-3.6.4``                    ``foss/2018a``, ``intel/2018a``, ``iomkl/2018.02``, ``iomkl/2018a``                    
 ``2.2.3``    ``-Python-2.7.15``                   ``foss/2018b``, ``intel/2018b``                                                        
-``3.0.0``    ``-Python-3.6.6``                    ``intel/2018b``                                                                        
+``3.0.0``    ``-Python-3.6.6``                    ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``                                       
 =========    =================================    =======================================================================================
 
 
@@ -16317,6 +16421,7 @@ version     toolchain
 ========    ===============
 ``0.11``    ``intel/2017b``
 ``0.13``    ``intel/2018a``
+``0.16``    ``foss/2018b`` 
 ========    ===============
 
 
@@ -16382,6 +16487,22 @@ version      versionsuffix          toolchain
 =========    ===================    =========
 ``1.0.8``    ``-linux64-static``    ``dummy``
 =========    ===================    =========
+
+
+.. _list_software_MMseqs2_648:
+
+*MMseqs2*
++++++++++
+
+MMseqs2: ultra fast and sensitive search and clustering suite
+
+*homepage*: https://mmseqs.com
+
+===========    ===============
+version        toolchain      
+===========    ===============
+``5-9375b``    ``intel/2018a``
+===========    ===============
 
 
 .. _list_software_Modeller_820:
@@ -16640,16 +16761,16 @@ Motif refers to both a graphical user interface (GUI) specification and the widg
 
 *homepage*: http://motif.ics.com/
 
-=========    =================    ================================================
-version      versionsuffix        toolchain                                       
-=========    =================    ================================================
-``2.2.4``                         ``goolf/1.4.10``                                
-``2.3.4``                         ``goolf/1.4.10``, ``intel/2014b``               
-``2.3.4``    ``-libX11-1.6.3``    ``intel/2015a``                                 
-``2.3.5``                         ``foss/2016a``, ``intel/2016a``                 
-``2.3.7``                         ``intel/2017a``                                 
-``2.3.8``                         ``foss/2018a``, ``intel/2017b``, ``intel/2018a``
-=========    =================    ================================================
+=========    =================    ================================================================
+version      versionsuffix        toolchain                                                       
+=========    =================    ================================================================
+``2.2.4``                         ``goolf/1.4.10``                                                
+``2.3.4``                         ``goolf/1.4.10``, ``intel/2014b``                               
+``2.3.4``    ``-libX11-1.6.3``    ``intel/2015a``                                                 
+``2.3.5``                         ``foss/2016a``, ``intel/2016a``                                 
+``2.3.7``                         ``intel/2017a``                                                 
+``2.3.8``                         ``foss/2018a``, ``foss/2018b``, ``intel/2017b``, ``intel/2018a``
+=========    =================    ================================================================
 
 
 .. _list_software_MPC_224:
@@ -16794,15 +16915,16 @@ version     versionsuffix         toolchain
 *mpmath*
 ++++++++
 
-mpmath can be used as an arbitrary-precision substitute for Python's float/complex   types and math/cmath modules, but also does much more advanced mathematics. Almost any calculation  can be performed just as well at 10-digit or 1000-digit precision, with either real or complex   numbers, and in many cases mpmath implements efficient algorithms that scale well for extremely   high precision work.
+mpmath can be used as an arbitrary-precision substitute for Python's float/complex  types and math/cmath modules, but also does much more advanced mathematics. Almost any calculation  can be performed just as well at 10-digit or 1000-digit precision, with either real or complex  numbers, and in many cases mpmath implements efficient algorithms that scale well for extremely  high precision work.
 
 *homepage*: http://mpmath.org/
 
-========    ==================    ===============================
-version     versionsuffix         toolchain                      
-========    ==================    ===============================
-``0.19``    ``-Python-2.7.11``    ``foss/2016a``, ``intel/2016a``
-========    ==================    ===============================
+=========    ==================    ===============================
+version      versionsuffix         toolchain                      
+=========    ==================    ===============================
+``0.19``     ``-Python-2.7.11``    ``foss/2016a``, ``intel/2016a``
+``1.0.0``    ``-Python-2.7.14``    ``intel/2018a``                
+=========    ==================    ===============================
 
 
 .. _list_software_MrBayes_691:
@@ -16984,13 +17106,14 @@ MUMmer is a system for rapidly aligning entire genomes,  whether in complete or 
 
 *homepage*: http://mummer.sourceforge.net/
 
-=============    ================    =================================================
-version          versionsuffix       toolchain                                        
-=============    ================    =================================================
-``3.23``                             ``foss/2016b``, ``goolf/1.4.10``, ``ictce/5.3.0``
-``3.23``         ``-Perl-5.16.3``    ``goolf/1.4.10``, ``ictce/5.3.0``                
-``4.0.0beta``                        ``goolf/1.7.20``                                 
-=============    ================    =================================================
+==============    ================    =================================================
+version           versionsuffix       toolchain                                        
+==============    ================    =================================================
+``3.23``                              ``foss/2016b``, ``goolf/1.4.10``, ``ictce/5.3.0``
+``3.23``          ``-Perl-5.16.3``    ``goolf/1.4.10``, ``ictce/5.3.0``                
+``4.0.0beta``                         ``goolf/1.7.20``                                 
+``4.0.0beta2``                        ``foss/2018b``                                   
+==============    ================    =================================================
 
 
 .. _list_software_MUMPS_402:
@@ -17295,7 +17418,40 @@ version      versionsuffix        toolchain
 ---
 
 
-:ref:`list_software_NAMD_288` - :ref:`list_software_nano_428` - :ref:`list_software_nanonet_755` - :ref:`list_software_nanopolish_1083` - :ref:`list_software_NASM_303` - :ref:`list_software_NBO_223` - :ref:`list_software_NCBI-Toolkit_1071` - :ref:`list_software_ncbi-vdb_773` - :ref:`list_software_NCCL_288` - :ref:`list_software_ncdf_411` - :ref:`list_software_ncdf4_463` - :ref:`list_software_NCL_221` - :ref:`list_software_nco_320` - :ref:`list_software_NCO_224` - :ref:`list_software_ncompress_986` - :ref:`list_software_ncurses_771` - :ref:`list_software_ncview_652` - :ref:`list_software_nd2reader_887` - :ref:`list_software_ne_211` - :ref:`list_software_NEdit_468` - :ref:`list_software_NEMO_303` - :ref:`list_software_neon_432` - :ref:`list_software_NEST_314` - :ref:`list_software_Net-LibIDN_838` - :ref:`list_software_netaddr_738` - :ref:`list_software_netCDF_532` - :ref:`list_software_netCDF-C++_730` - :ref:`list_software_netCDF-C++4_782` - :ref:`list_software_netCDF-Fortran_1309` - :ref:`list_software_netcdf4-python_1399` - :ref:`list_software_netifaces_946` - :ref:`list_software_netloc_645` - :ref:`list_software_NetLogo_696` - :ref:`list_software_NetPIPE_597` - :ref:`list_software_nettle_652` - :ref:`list_software_networkx_898` - :ref:`list_software_NEURON_471` - :ref:`list_software_NextClip_807` - :ref:`list_software_NextGenMap_983` - :ref:`list_software_NFFT_302` - :ref:`list_software_ngmlr_544` - :ref:`list_software_NGS_232` - :ref:`list_software_NGS-Python_919` - :ref:`list_software_ngspice_745` - :ref:`list_software_NiBabel_653` - :ref:`list_software_Nilearn_713` - :ref:`list_software_Nim_292` - :ref:`list_software_Ninja_496` - :ref:`list_software_NIPY_320` - :ref:`list_software_Nipype_629` - :ref:`list_software_NLopt_493` - :ref:`list_software_NLTK_313` - :ref:`list_software_Node-RED_654` - :ref:`list_software_nodejs_643` - :ref:`list_software_nose-parameterized_1871` - :ref:`list_software_npstat_666` - :ref:`list_software_NRGLjubljana_1146` - :ref:`list_software_ns_225` - :ref:`list_software_NTL_238` - :ref:`list_software_numactl_756` - :ref:`list_software_numba_531` - :ref:`list_software_numexpr_783` - :ref:`list_software_numpy_569` - :ref:`list_software_NWChem_546` - :ref:`list_software_NxTrim_610`
+:ref:`list_software_NAG_214` - :ref:`list_software_NAGfor_541` - :ref:`list_software_NAMD_288` - :ref:`list_software_nano_428` - :ref:`list_software_nanonet_755` - :ref:`list_software_nanopolish_1083` - :ref:`list_software_NASM_303` - :ref:`list_software_NBO_223` - :ref:`list_software_NCBI-Toolkit_1071` - :ref:`list_software_ncbi-vdb_773` - :ref:`list_software_NCCL_288` - :ref:`list_software_ncdf_411` - :ref:`list_software_ncdf4_463` - :ref:`list_software_NCL_221` - :ref:`list_software_nco_320` - :ref:`list_software_NCO_224` - :ref:`list_software_ncompress_986` - :ref:`list_software_ncurses_771` - :ref:`list_software_ncview_652` - :ref:`list_software_nd2reader_887` - :ref:`list_software_ne_211` - :ref:`list_software_NEdit_468` - :ref:`list_software_NEMO_303` - :ref:`list_software_neon_432` - :ref:`list_software_NEST_314` - :ref:`list_software_Net-LibIDN_838` - :ref:`list_software_netaddr_738` - :ref:`list_software_netCDF_532` - :ref:`list_software_netCDF-C++_730` - :ref:`list_software_netCDF-C++4_782` - :ref:`list_software_netCDF-Fortran_1309` - :ref:`list_software_netcdf4-python_1399` - :ref:`list_software_netifaces_946` - :ref:`list_software_netloc_645` - :ref:`list_software_NetLogo_696` - :ref:`list_software_NetPIPE_597` - :ref:`list_software_nettle_652` - :ref:`list_software_networkx_898` - :ref:`list_software_NeuroKit_817` - :ref:`list_software_NEURON_471` - :ref:`list_software_NextClip_807` - :ref:`list_software_NextGenMap_983` - :ref:`list_software_NFFT_302` - :ref:`list_software_ngmlr_544` - :ref:`list_software_NGS_232` - :ref:`list_software_NGS-Python_919` - :ref:`list_software_ngspice_745` - :ref:`list_software_NiBabel_653` - :ref:`list_software_Nilearn_713` - :ref:`list_software_Nim_292` - :ref:`list_software_Ninja_496` - :ref:`list_software_NIPY_320` - :ref:`list_software_Nipype_629` - :ref:`list_software_NLopt_493` - :ref:`list_software_NLTK_313` - :ref:`list_software_Node-RED_654` - :ref:`list_software_nodejs_643` - :ref:`list_software_nose-parameterized_1871` - :ref:`list_software_novoalign_973` - :ref:`list_software_npstat_666` - :ref:`list_software_NRGLjubljana_1146` - :ref:`list_software_ns_225` - :ref:`list_software_NSPR_323` - :ref:`list_software_NSS_244` - :ref:`list_software_NTL_238` - :ref:`list_software_numactl_756` - :ref:`list_software_numba_531` - :ref:`list_software_numexpr_783` - :ref:`list_software_numpy_569` - :ref:`list_software_NWChem_546` - :ref:`list_software_NxTrim_610`
+
+
+.. _list_software_NAG_214:
+
+*NAG*
++++++
+
+The worlds largest collection of robust, documented, tested and maintained numerical algorithms.
+
+*homepage*: http://www.nag.co.uk
+
+=======    ==================================
+version    toolchain                         
+=======    ==================================
+``24``     ``PGI/17.4-GCC-6.4.0-2.28``       
+``26``     ``GCCcore/6.4.0``, ``intel/2018a``
+=======    ==================================
+
+
+.. _list_software_NAGfor_541:
+
+*NAGfor*
+++++++++
+
+The checking compiler for improved code portability and detailed error reporting.
+
+*homepage*: http://www.nag.co.uk
+
+==========    =========
+version       toolchain
+==========    =========
+``6.2.14``    ``dummy``
+==========    =========
 
 
 .. _list_software_NAMD_288:
@@ -17961,6 +18117,22 @@ version      versionsuffix         toolchain
 =========    ==================    ================================
 
 
+.. _list_software_NeuroKit_817:
+
+*NeuroKit*
+++++++++++
+
+NeuroKit is a Python module that provides high-level integrative functions with good and  flexible defaults, allowing users to focus on what’s important.
+
+*homepage*: https://neurokit.readthedocs.io
+
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``0.2.7``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
+
+
 .. _list_software_NEURON_471:
 
 *NEURON*
@@ -18281,6 +18453,22 @@ version      versionsuffix         toolchain
 =========    ==================    ===============
 
 
+.. _list_software_novoalign_973:
+
+*novoalign*
++++++++++++
+
+Map short reads onto a reference genome from Illumina,  Ion Torrent, and 454 next generation sequencing platforms
+
+*homepage*: http://www.novocraft.com/products/novoalign/
+
+===========    =========
+version        toolchain
+===========    =========
+``3.09.00``    ``dummy``
+===========    =========
+
+
 .. _list_software_npstat_666:
 
 *npstat*
@@ -18329,6 +18517,38 @@ version     toolchain
 ========    =================================
 
 
+.. _list_software_NSPR_323:
+
+*NSPR*
+++++++
+
+Netscape Portable Runtime (NSPR) provides a platform-neutral API for system level  and libc-like functions.
+
+*homepage*: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
+
+========    ====================================
+version     toolchain                           
+========    ====================================
+``4.20``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+========    ====================================
+
+
+.. _list_software_NSS_244:
+
+*NSS*
++++++
+
+Network Security Services (NSS) is a set of libraries designed to support cross-platform development  of security-enabled client and server applications.
+
+*homepage*: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
+
+========    ====================================
+version     toolchain                           
+========    ====================================
+``3.39``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+========    ====================================
+
+
 .. _list_software_NTL_238:
 
 *NTL*
@@ -18361,6 +18581,7 @@ version       toolchain
 ``2.0.9``     ``GCC/4.8.3``                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 ``2.0.10``    ``GCC/4.8.4``, ``GCC/4.9.2``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``iccifort/2015.3.187-GNU-4.9.3-2.25``                                                                                                                                                                                                                                                                                                                                                       
 ``2.0.11``    ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.3.0-2.26``, ``GCC/5.4.0-2.26``, ``GCC/6.1.0-2.27``, ``GCC/6.2.0-2.27``, ``GCC/6.3.0-2.27``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``foss/2016a``, ``gcccuda/2016.10``, ``iccifort/2016.3.210-GCC-4.9.3-2.25``, ``iccifort/2016.3.210-GCC-5.4.0-2.26``, ``intel/2016a``, ``intel/2016b``
+``2.0.12``    ``GCCcore/8.2.0``                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ==========    ===================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -18382,6 +18603,7 @@ version       versionsuffix         toolchain
 ``0.26.0``    ``-Python-2.7.11``    ``intel/2016a``
 ``0.32.0``    ``-Python-2.7.13``    ``intel/2017a``
 ``0.37.0``    ``-Python-2.7.14``    ``intel/2017b``
+``0.37.0``    ``-Python-3.6.4``     ``intel/2018a``
 ==========    ==================    ===============
 
 
@@ -18408,6 +18630,7 @@ version      versionsuffix         toolchain
 ``2.6.4``    ``-Python-3.6.1``     ``intel/2017a``                
 ``2.6.4``    ``-Python-3.6.3``     ``intel/2017b``                
 ``2.6.4``    ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``
+``2.6.5``    ``-Python-2.7.15``    ``foss/2018b``                 
 =========    ==================    ===============================
 
 
@@ -18486,7 +18709,7 @@ version      toolchain
 ---
 
 
-:ref:`list_software_o2scl_483` - :ref:`list_software_Oases_507` - :ref:`list_software_OBITools_747` - :ref:`list_software_OCaml_460` - :ref:`list_software_Octave_610` - :ref:`list_software_Octopus_749` - :ref:`list_software_Oger_397` - :ref:`list_software_OMA_221` - :ref:`list_software_OOMPA_380` - :ref:`list_software_OPARI2_429` - :ref:`list_software_OpenBabel_872` - :ref:`list_software_OpenBLAS_692` - :ref:`list_software_OpenCoarrays_1238` - :ref:`list_software_OpenCV_555` - :ref:`list_software_opencv_contrib_1499` - :ref:`list_software_OpenEXR_641` - :ref:`list_software_OpenFOAM_693` - :ref:`list_software_OpenFOAM-Extend_1354` - :ref:`list_software_OpenIFS_628` - :ref:`list_software_OpenImageIO_1037` - :ref:`list_software_OpenKIM-API_890` - :ref:`list_software_OpenMD_547` - :ref:`list_software_OpenMM_556` - :ref:`list_software_OpenMPI_632` - :ref:`list_software_OpenNLP_636` - :ref:`list_software_OpenPGM_630` - :ref:`list_software_OpenRefine_1003` - :ref:`list_software_OpenSSL_644` - :ref:`list_software_OptiX_500` - :ref:`list_software_ORCA_293` - :ref:`list_software_ordereddict_1161` - :ref:`list_software_OrfM_372` - :ref:`list_software_OrthoMCL_744` - :ref:`list_software_OSU-Micro-Benchmarks_1865` - :ref:`list_software_otcl_434` - :ref:`list_software_OTF_233` - :ref:`list_software_OTF2_283` - :ref:`list_software_oxford_asl_1073`
+:ref:`list_software_o2scl_483` - :ref:`list_software_Oases_507` - :ref:`list_software_OBITools_747` - :ref:`list_software_OCaml_460` - :ref:`list_software_Octave_610` - :ref:`list_software_Octopus_749` - :ref:`list_software_Oger_397` - :ref:`list_software_OMA_221` - :ref:`list_software_OOMPA_380` - :ref:`list_software_OPARI2_429` - :ref:`list_software_OpenBabel_872` - :ref:`list_software_OpenBLAS_692` - :ref:`list_software_OpenCoarrays_1238` - :ref:`list_software_OpenCV_555` - :ref:`list_software_opencv_contrib_1499` - :ref:`list_software_OpenEXR_641` - :ref:`list_software_OpenFOAM_693` - :ref:`list_software_OpenFOAM-Extend_1354` - :ref:`list_software_OpenIFS_628` - :ref:`list_software_OpenImageIO_1037` - :ref:`list_software_OpenKIM-API_890` - :ref:`list_software_OpenMD_547` - :ref:`list_software_OpenMM_556` - :ref:`list_software_OpenMPI_632` - :ref:`list_software_OpenNLP_636` - :ref:`list_software_OpenPGM_630` - :ref:`list_software_OpenRefine_1003` - :ref:`list_software_OpenSSL_644` - :ref:`list_software_OptiType_830` - :ref:`list_software_OptiX_500` - :ref:`list_software_ORCA_293` - :ref:`list_software_ordereddict_1161` - :ref:`list_software_OrfM_372` - :ref:`list_software_OrthoFinder_1124` - :ref:`list_software_OrthoMCL_744` - :ref:`list_software_OSU-Micro-Benchmarks_1865` - :ref:`list_software_otcl_434` - :ref:`list_software_OTF_233` - :ref:`list_software_OTF2_283` - :ref:`list_software_oxford_asl_1073`
 
 
 .. _list_software_o2scl_483:
@@ -18704,6 +18927,7 @@ version       versionsuffix        toolchain
 ``0.2.20``                         ``GCC/5.4.0-2.26``, ``GCC/6.4.0-2.28``, ``GCC/7.2.0-2.29``
 ``0.3.0``                          ``GCC/6.4.0-2.28``, ``GCC/7.3.0-2.30``                    
 ``0.3.1``                          ``GCC/7.3.0-2.30``                                        
+``0.3.3``                          ``GCC/8.2.0-2.31.1``                                      
 ==========    =================    ==========================================================
 
 
@@ -18876,11 +19100,12 @@ Open Knowledgebase of Interatomic Models.  OpenKIM is an API and a collection of
 
 *homepage*: https://openkim.org/
 
-=========    ==============================
-version      toolchain                     
-=========    ==============================
-``1.9.2``    ``foss/2016b``, ``foss/2017b``
-=========    ==============================
+=========    ================================================
+version      toolchain                                       
+=========    ================================================
+``1.9.2``    ``foss/2016b``, ``foss/2017b``                  
+``1.9.7``    ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``
+=========    ================================================
 
 
 .. _list_software_OpenMD_547:
@@ -18957,6 +19182,7 @@ version       versionsuffix    toolchain
 ``3.0.0``                      ``GCC/7.2.0-2.29``                                                                                                  
 ``3.1.0``                      ``GCC/7.3.0-2.30``                                                                                                  
 ``3.1.1``                      ``GCC/7.3.0-2.30``, ``gcccuda/2018b``, ``iccifort/2018.3.222-GCC-7.3.0-2.30``                                       
+``3.1.2``                      ``GCC/8.2.0-2.31.1``                                                                                                
 ``system``                     ``GCC/system-2.29``                                                                                                 
 ==========    =============    ====================================================================================================================
 
@@ -19038,6 +19264,22 @@ version       toolchain
 ==========    ==================================================================================
 
 
+.. _list_software_OptiType_830:
+
+*OptiType*
+++++++++++
+
+OptiType is a novel HLA genotyping algorithm based on integer linear programming,  capable of producing accurate 4-digit HLA genotyping predictions from NGS data  by simultaneously selecting all major and minor HLA Class I alleles. 
+
+*homepage*: https://github.com/FRED-2/OptiType
+
+=========    ==================    ==============
+version      versionsuffix         toolchain     
+=========    ==================    ==============
+``1.3.2``    ``-Python-2.7.15``    ``foss/2018b``
+=========    ==================    ==============
+
+
 .. _list_software_OptiX_500:
 
 *OptiX*
@@ -19107,6 +19349,22 @@ version      toolchain
 =========    ==============
 ``0.6.1``    ``foss/2016b``
 =========    ==============
+
+
+.. _list_software_OrthoFinder_1124:
+
+*OrthoFinder*
++++++++++++++
+
+
+
+*homepage*: 
+
+=========    ==================    ===============
+version      versionsuffix         toolchain      
+=========    ==================    ===============
+``2.2.7``    ``-Python-2.7.14``    ``intel/2018a``
+=========    ==================    ===============
 
 
 .. _list_software_OrthoMCL_744:
@@ -19217,7 +19475,7 @@ version      versionsuffix                 toolchain
 ---
 
 
-:ref:`list_software_p11-kit_583` - :ref:`list_software_p4vasp_606` - :ref:`list_software_p7zip_506` - :ref:`list_software_packmol_743` - :ref:`list_software_PAML_298` - :ref:`list_software_pandas_631` - :ref:`list_software_PANDAseq_685` - :ref:`list_software_Pandoc_597` - :ref:`list_software_Pango_501` - :ref:`list_software_Pangomm_719` - :ref:`list_software_pangox-compat_1342` - :ref:`list_software_PAPI_298` - :ref:`list_software_parallel_845` - :ref:`list_software_Parallel-ForkManager_1959` - :ref:`list_software_ParallelIO_965` - :ref:`list_software_parasail_845` - :ref:`list_software_Paraver_721` - :ref:`list_software_ParaView_799` - :ref:`list_software_ParFlow_699` - :ref:`list_software_PARI-GP_496` - :ref:`list_software_ParmEd_569` - :ref:`list_software_ParMETIS_677` - :ref:`list_software_ParMGridGen_1040` - :ref:`list_software_Pasha_493` - :ref:`list_software_PaStiX_569` - :ref:`list_software_patch_528` - :ref:`list_software_patchelf_839` - :ref:`list_software_path.py_708` - :ref:`list_software_paycheck_840` - :ref:`list_software_pbbam_514` - :ref:`list_software_pbdagcon_830` - :ref:`list_software_pbs_python_1094` - :ref:`list_software_PBSuite_668` - :ref:`list_software_pBWA_330` - :ref:`list_software_PBZIP2_439` - :ref:`list_software_PCC_214` - :ref:`list_software_PCL_223` - :ref:`list_software_PCMSolver_859` - :ref:`list_software_PCRaster_772` - :ref:`list_software_PCRE_298` - :ref:`list_software_PCRE2_348` - :ref:`list_software_PDT_232` - :ref:`list_software_PeakSeq_682` - :ref:`list_software_PEAR_296` - :ref:`list_software_Perl_403` - :ref:`list_software_perl-app-cpanminus_1820` - :ref:`list_software_Perl4-CoreLibs_1287` - :ref:`list_software_PETSc_415` - :ref:`list_software_petsc4py_828` - :ref:`list_software_PFFT_304` - :ref:`list_software_pftoolsV3_912` - :ref:`list_software_PGDSpider_834` - :ref:`list_software_PGI_224` - :ref:`list_software_PHASE_369` - :ref:`list_software_PHAST_384` - :ref:`list_software_PheWAS_520` - :ref:`list_software_phono3py_832` - :ref:`list_software_phonopy_781` - :ref:`list_software_PHYLIP_470` - :ref:`list_software_PhyloBayes-MPI_1299` - :ref:`list_software_PhyloCSF_744` - :ref:`list_software_PhyML_458` - :ref:`list_software_picard_627` - :ref:`list_software_pigz_442` - :ref:`list_software_PIL_229` - :ref:`list_software_PileOMeth_871` - :ref:`list_software_Pillow_631` - :ref:`list_software_Pillow-SIMD_977` - :ref:`list_software_Pilon_514` - :ref:`list_software_PIMS_313` - :ref:`list_software_Pindel_604` - :ref:`list_software_pip_329` - :ref:`list_software_Pisces_615` - :ref:`list_software_piSvM_495` - :ref:`list_software_piSvM-JSC_764` - :ref:`list_software_pixman_653` - :ref:`list_software_pkg-config_997` - :ref:`list_software_pkgconfig_952` - :ref:`list_software_PLAST_388` - :ref:`list_software_Platanus_840` - :ref:`list_software_Platypus_866` - :ref:`list_software_PLINK_382` - :ref:`list_software_PLINKSEQ_615` - :ref:`list_software_plotly_676` - :ref:`list_software_PLplot_603` - :ref:`list_software_PLUMED_455` - :ref:`list_software_PLY_245` - :ref:`list_software_Pmw_308` - :ref:`list_software_PnetCDF_612` - :ref:`list_software_PnMPI_420` - :ref:`list_software_pomkl_547` - :ref:`list_software_pompi_549` - :ref:`list_software_popt_451` - :ref:`list_software_Porechop_832` - :ref:`list_software_poretools_999` - :ref:`list_software_Postgres-XL_1064` - :ref:`list_software_PostgreSQL_980` - :ref:`list_software_POV-Ray_590` - :ref:`list_software_PP_160` - :ref:`list_software_PPfold_581` - :ref:`list_software_pplacer_743` - :ref:`list_software_PRACE_363` - :ref:`list_software_PRANK_380` - :ref:`list_software_PRC_229` - :ref:`list_software_preseq_656` - :ref:`list_software_Primer3_674` - :ref:`list_software_PRINSEQ_546` - :ref:`list_software_printproto_1121` - :ref:`list_software_ProbABEL_679` - :ref:`list_software_problog_757` - :ref:`list_software_prodigal_850` - :ref:`list_software_PROJ_315` - :ref:`list_software_prokka_648` - :ref:`list_software_prompt-toolkit_1493` - :ref:`list_software_proovread_978` - :ref:`list_software_propy_570` - :ref:`list_software_Proteinortho_1293` - :ref:`list_software_protobuf_881` - :ref:`list_software_protobuf-python_1600` - :ref:`list_software_pscom_546` - :ref:`list_software_PSI_236` - :ref:`list_software_PSI4_288` - :ref:`list_software_psmc_435` - :ref:`list_software_psmpi_553` - :ref:`list_software_psmpi2_603` - :ref:`list_software_PSORTb_506` - :ref:`list_software_pstoedit_876` - :ref:`list_software_psutil_673` - :ref:`list_software_psycopg2_823` - :ref:`list_software_PTESFinder_916` - :ref:`list_software_py_233` - :ref:`list_software_PyAMG_414` - :ref:`list_software_pybedtools_1093` - :ref:`list_software_pybind11_744` - :ref:`list_software_PyCairo_695` - :ref:`list_software_PyCogent_809` - :ref:`list_software_pycosat_771` - :ref:`list_software_PyCUDA_486` - :ref:`list_software_pydicom_757` - :ref:`list_software_pydlpoly_893` - :ref:`list_software_pyenchant_970` - :ref:`list_software_PyFFmpeg_766` - :ref:`list_software_pygccxml_871` - :ref:`list_software_pyGIMLi_635` - :ref:`list_software_Pygments_855` - :ref:`list_software_PyGObject_871` - :ref:`list_software_pygraphviz_1108` - :ref:`list_software_PyGTK_431` - :ref:`list_software_PyGTS_439` - :ref:`list_software_pyhull_670` - :ref:`list_software_Pyke_409` - :ref:`list_software_pymatgen_869` - :ref:`list_software_pymatgen-db_1112` - :ref:`list_software_pymbar_651` - :ref:`list_software_PyNAST_511` - :ref:`list_software_PyOpenGL_750` - :ref:`list_software_pyplusplus_1137` - :ref:`list_software_PyQt_398` - :ref:`list_software_PyQt5_451` - :ref:`list_software_PyQuante_823` - :ref:`list_software_pyringe_766` - :ref:`list_software_Pyro4_478` - :ref:`list_software_Pysam_522` - :ref:`list_software_pyScaf_614` - :ref:`list_software_pyshp_564` - :ref:`list_software_Pysolar_746` - :ref:`list_software_pysqlite_891` - :ref:`list_software_pystran_785` - :ref:`list_software_PyTables_804` - :ref:`list_software_pytest_681` - :ref:`list_software_PYTHIA_463` - :ref:`list_software_Python_642` - :ref:`list_software_python-dateutil_1579` - :ref:`list_software_python-igraph_1354` - :ref:`list_software_python-meep_1142` - :ref:`list_software_python-parasail_1564` - :ref:`list_software_PyTorch_713` - :ref:`list_software_PyYAML_508` - :ref:`list_software_PyZMQ_449`
+:ref:`list_software_p11-kit_583` - :ref:`list_software_p4vasp_606` - :ref:`list_software_p7zip_506` - :ref:`list_software_packmol_743` - :ref:`list_software_PAML_298` - :ref:`list_software_pandas_631` - :ref:`list_software_pandas-datareader_1713` - :ref:`list_software_PANDAseq_685` - :ref:`list_software_Pandoc_597` - :ref:`list_software_Pango_501` - :ref:`list_software_Pangomm_719` - :ref:`list_software_pangox-compat_1342` - :ref:`list_software_PAPI_298` - :ref:`list_software_parallel_845` - :ref:`list_software_Parallel-ForkManager_1959` - :ref:`list_software_ParallelIO_965` - :ref:`list_software_parasail_845` - :ref:`list_software_Paraver_721` - :ref:`list_software_ParaView_799` - :ref:`list_software_ParFlow_699` - :ref:`list_software_PARI-GP_496` - :ref:`list_software_ParmEd_569` - :ref:`list_software_ParMETIS_677` - :ref:`list_software_ParMGridGen_1040` - :ref:`list_software_Pasha_493` - :ref:`list_software_PaStiX_569` - :ref:`list_software_patch_528` - :ref:`list_software_patchelf_839` - :ref:`list_software_path.py_708` - :ref:`list_software_paycheck_840` - :ref:`list_software_pbbam_514` - :ref:`list_software_pbdagcon_830` - :ref:`list_software_pbs_python_1094` - :ref:`list_software_PBSuite_668` - :ref:`list_software_pBWA_330` - :ref:`list_software_PBZIP2_439` - :ref:`list_software_PCC_214` - :ref:`list_software_PCL_223` - :ref:`list_software_PCMSolver_859` - :ref:`list_software_PCRaster_772` - :ref:`list_software_PCRE_298` - :ref:`list_software_PCRE2_348` - :ref:`list_software_PDT_232` - :ref:`list_software_PeakSeq_682` - :ref:`list_software_PEAR_296` - :ref:`list_software_Perl_403` - :ref:`list_software_perl-app-cpanminus_1820` - :ref:`list_software_Perl4-CoreLibs_1287` - :ref:`list_software_PETSc_415` - :ref:`list_software_petsc4py_828` - :ref:`list_software_PFFT_304` - :ref:`list_software_pftoolsV3_912` - :ref:`list_software_pFUnit_598` - :ref:`list_software_PGDSpider_834` - :ref:`list_software_PGI_224` - :ref:`list_software_PHASE_369` - :ref:`list_software_PHAST_384` - :ref:`list_software_PheWAS_520` - :ref:`list_software_phono3py_832` - :ref:`list_software_phonopy_781` - :ref:`list_software_PHYLIP_470` - :ref:`list_software_PhyloBayes-MPI_1299` - :ref:`list_software_PhyloCSF_744` - :ref:`list_software_PhyML_458` - :ref:`list_software_picard_627` - :ref:`list_software_pigz_442` - :ref:`list_software_PIL_229` - :ref:`list_software_PileOMeth_871` - :ref:`list_software_Pillow_631` - :ref:`list_software_Pillow-SIMD_977` - :ref:`list_software_Pilon_514` - :ref:`list_software_PIMS_313` - :ref:`list_software_Pindel_604` - :ref:`list_software_pip_329` - :ref:`list_software_Pisces_615` - :ref:`list_software_piSvM_495` - :ref:`list_software_piSvM-JSC_764` - :ref:`list_software_pixman_653` - :ref:`list_software_pkg-config_997` - :ref:`list_software_pkgconfig_952` - :ref:`list_software_PLAST_388` - :ref:`list_software_Platanus_840` - :ref:`list_software_Platypus_866` - :ref:`list_software_PLINK_382` - :ref:`list_software_PLINKSEQ_615` - :ref:`list_software_plotly_676` - :ref:`list_software_PLplot_603` - :ref:`list_software_PLUMED_455` - :ref:`list_software_PLY_245` - :ref:`list_software_PMIx_350` - :ref:`list_software_Pmw_308` - :ref:`list_software_PnetCDF_612` - :ref:`list_software_PnMPI_420` - :ref:`list_software_pomkl_547` - :ref:`list_software_pompi_549` - :ref:`list_software_popt_451` - :ref:`list_software_Porechop_832` - :ref:`list_software_poretools_999` - :ref:`list_software_Postgres-XL_1064` - :ref:`list_software_PostgreSQL_980` - :ref:`list_software_POV-Ray_590` - :ref:`list_software_PP_160` - :ref:`list_software_PPfold_581` - :ref:`list_software_pplacer_743` - :ref:`list_software_PRACE_363` - :ref:`list_software_PRANK_380` - :ref:`list_software_PRC_229` - :ref:`list_software_preseq_656` - :ref:`list_software_Primer3_674` - :ref:`list_software_PRINSEQ_546` - :ref:`list_software_printproto_1121` - :ref:`list_software_ProbABEL_679` - :ref:`list_software_problog_757` - :ref:`list_software_prodigal_850` - :ref:`list_software_PROJ_315` - :ref:`list_software_prokka_648` - :ref:`list_software_prompt-toolkit_1493` - :ref:`list_software_proovread_978` - :ref:`list_software_propy_570` - :ref:`list_software_Proteinortho_1293` - :ref:`list_software_protobuf_881` - :ref:`list_software_protobuf-python_1600` - :ref:`list_software_pscom_546` - :ref:`list_software_PSI_236` - :ref:`list_software_PSI4_288` - :ref:`list_software_psmc_435` - :ref:`list_software_psmpi_553` - :ref:`list_software_psmpi2_603` - :ref:`list_software_PSolver_715` - :ref:`list_software_PSORTb_506` - :ref:`list_software_pstoedit_876` - :ref:`list_software_psutil_673` - :ref:`list_software_psycopg2_823` - :ref:`list_software_PTESFinder_916` - :ref:`list_software_py_233` - :ref:`list_software_PyAMG_414` - :ref:`list_software_pybedtools_1093` - :ref:`list_software_pybind11_744` - :ref:`list_software_PyCairo_695` - :ref:`list_software_PyCogent_809` - :ref:`list_software_pycosat_771` - :ref:`list_software_PyCUDA_486` - :ref:`list_software_PyDatastream_1231` - :ref:`list_software_pydicom_757` - :ref:`list_software_pydlpoly_893` - :ref:`list_software_pyenchant_970` - :ref:`list_software_PyFFmpeg_766` - :ref:`list_software_PyFR_353` - :ref:`list_software_pygccxml_871` - :ref:`list_software_pyGIMLi_635` - :ref:`list_software_Pygments_855` - :ref:`list_software_PyGObject_871` - :ref:`list_software_pygraphviz_1108` - :ref:`list_software_PyGTK_431` - :ref:`list_software_PyGTS_439` - :ref:`list_software_pyhull_670` - :ref:`list_software_Pyke_409` - :ref:`list_software_pymatgen_869` - :ref:`list_software_pymatgen-db_1112` - :ref:`list_software_pymbar_651` - :ref:`list_software_PyNAST_511` - :ref:`list_software_Pyomo_532` - :ref:`list_software_PyOpenGL_750` - :ref:`list_software_pyplusplus_1137` - :ref:`list_software_PyQt_398` - :ref:`list_software_PyQt5_451` - :ref:`list_software_PyQuante_823` - :ref:`list_software_pyringe_766` - :ref:`list_software_Pyro4_478` - :ref:`list_software_Pysam_522` - :ref:`list_software_pyScaf_614` - :ref:`list_software_pyshp_564` - :ref:`list_software_Pysolar_746` - :ref:`list_software_pysqlite_891` - :ref:`list_software_pystran_785` - :ref:`list_software_PyTables_804` - :ref:`list_software_pytest_681` - :ref:`list_software_PYTHIA_463` - :ref:`list_software_Python_642` - :ref:`list_software_python-dateutil_1579` - :ref:`list_software_python-igraph_1354` - :ref:`list_software_python-meep_1142` - :ref:`list_software_python-parasail_1564` - :ref:`list_software_PyTorch_713` - :ref:`list_software_PyYAML_508` - :ref:`list_software_PyZMQ_449`
 
 
 .. _list_software_p11-kit_583:
@@ -19333,6 +19591,22 @@ version       versionsuffix         toolchain
 ``0.21.0``    ``-Python-2.7.13``    ``intel/2017a``                                 
 ``0.21.0``    ``-Python-3.6.3``     ``intel/2017b``                                 
 ==========    ==================    ================================================
+
+
+.. _list_software_pandas-datareader_1713:
+
+*pandas-datareader*
++++++++++++++++++++
+
+Up to date remote data access for pandas, works for multiple versions of pandas.
+
+*homepage*: https://pypi.org/project/pandas-datareader
+
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``0.7.0``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
 
 
 .. _list_software_PANDAseq_685:
@@ -20000,13 +20274,14 @@ PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger.
 
 *homepage*: http://sco.h-its.org/exelixis/web/software/pear/
 
-==========    ===============================
-version       toolchain                      
-==========    ===============================
-``0.9.6``     ``goolf/1.4.10``               
-``0.9.8``     ``foss/2016b``, ``intel/2016b``
-``0.9.11``    ``foss/2018a``                 
-==========    ===============================
+==========    ==========================================================
+version       toolchain                                                 
+==========    ==========================================================
+``0.9.6``     ``goolf/1.4.10``                                          
+``0.9.8``     ``foss/2016b``, ``intel/2016b``                           
+``0.9.10``    ``GCC/6.4.0-2.28``, ``iccifort/2017.4.196-GCC-6.4.0-2.28``
+``0.9.11``    ``foss/2018a``                                            
+==========    ==========================================================
 
 
 .. _list_software_Perl_403:
@@ -20150,6 +20425,22 @@ version         toolchain
 ============    ==============
 ``20160324``    ``foss/2016a``
 ============    ==============
+
+
+.. _list_software_pFUnit_598:
+
+*pFUnit*
+++++++++
+
+pFUnit is a unit testing framework enabling JUnit-like testing of serial  and MPI-parallel software written in Fortran.
+
+*homepage*: http://pfunit.sourceforge.net
+
+=========    ===============
+version      toolchain      
+=========    ===============
+``3.2.9``    ``gompi/2018b``
+=========    ===============
 
 
 .. _list_software_PGDSpider_834:
@@ -20466,6 +20757,7 @@ version      versionsuffix                        toolchain
 ``5.0.0``    ``-Python-2.7.14``                   ``intel/2017b``, ``intel/2018a``
 ``5.0.0``    ``-Python-3.6.3``                    ``intel/2017b``                 
 ``5.0.0``    ``-Python-3.6.4``                    ``foss/2018a``, ``intel/2018a`` 
+``5.3.0``    ``-Python-3.6.6``                    ``foss/2018b``                  
 =========    =================================    ================================
 
 
@@ -20832,6 +21124,24 @@ version     versionsuffix         toolchain
 ``3.8``     ``-Python-2.7.11``    ``intel/2015b``
 ``3.11``    ``-Python-3.6.4``     ``foss/2018a`` 
 ========    ==================    ===============
+
+
+.. _list_software_PMIx_350:
+
+*PMIx*
+++++++
+
+Process Management for Exascale Environments PMI Exascale (PMIx) represents an attempt to resolve these questions by providing an extended version of the PMI standard specifically designed to support clusters up to and including exascale sizes. The overall objective of the project is not to branch the existing pseudo-standard definitions - in fact, PMIx fully supports both of the existing PMI-1 and PMI-2 APIs - but rather to (a) augment and extend those APIs to eliminate some current restrictions that impact scalability, and (b) provide a reference implementation of the PMI-server that demonstrates the desired level of scalability. 
+
+*homepage*: https://pmix.org/
+
+=========    ====================================
+version      toolchain                           
+=========    ====================================
+``1.2.5``    ``GCCcore/6.4.0``                   
+``2.1.3``    ``GCCcore/7.3.0``                   
+``3.0.1``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+=========    ====================================
 
 
 .. _list_software_Pmw_308:
@@ -21360,6 +21670,7 @@ version       toolchain
 ``3.2.0``     ``foss/2016b``, ``intel/2016b``              
 ``3.3.0``     ``foss/2016b``, ``intel/2017a``              
 ``3.4.0``     ``intel/2017a``, ``intel/2017b``             
+``3.6.0``     ``GCCcore/7.3.0``                            
 ==========    =============================================
 
 
@@ -21386,6 +21697,8 @@ version      versionsuffix         toolchain
 ``3.4.0``    ``-Python-2.7.14``    ``intel/2017b``                
 ``3.4.0``    ``-Python-3.6.1``     ``intel/2017a``                
 ``3.4.0``    ``-Python-3.6.3``     ``intel/2017b``                
+``3.6.0``    ``-Python-2.7.15``    ``fosscuda/2018b``             
+``3.6.0``    ``-Python-3.6.6``     ``foss/2018b``                 
 =========    ==================    ===============================
 
 
@@ -21496,6 +21809,22 @@ version       versionsuffix    toolchain
 ``5.0.29``                     ``GCC/4.8.2``
 ``5.0.29``    ``-mt``          ``GCC/4.8.2``
 ==========    =============    =============
+
+
+.. _list_software_PSolver_715:
+
+*PSolver*
++++++++++
+
+Poisson Solver from the BigDFT code compiled as a standalone library.
+
+*homepage*: http://bigdft.org/Wiki/index.php?title=BigDFT_website
+
+=========    ==============================================
+version      toolchain                                     
+=========    ==============================================
+``1.7.6``    ``foss/2017b``, ``foss/2018a``, ``foss/2018b``
+=========    ==============================================
 
 
 .. _list_software_PSORTb_506:
@@ -21708,11 +22037,28 @@ PyCUDA lets you access Nvidia’s CUDA parallel computation API from Python.
 
 *homepage*: http://mathema.tician.de/software/pycuda
 
-============    ==================    ===============
-version         versionsuffix         toolchain      
-============    ==================    ===============
-``2016.1.2``    ``-Python-2.7.12``    ``intel/2016b``
-============    ==================    ===============
+============    =============================    ===============
+version         versionsuffix                    toolchain      
+============    =============================    ===============
+``2016.1.2``    ``-Python-2.7.12``               ``intel/2016b``
+``2018.1``      ``-Python-3.6.4-CUDA-9.1.85``    ``intel/2018a``
+============    =============================    ===============
+
+
+.. _list_software_PyDatastream_1231:
+
+*PyDatastream*
+++++++++++++++
+
+Lightweight SOAP client
+
+*homepage*: https://pypi.python.org/pypi/suds-py3
+
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``0.5.1``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
 
 
 .. _list_software_pydicom_757:
@@ -21780,6 +22126,22 @@ version        versionsuffix         toolchain
 ``2.1beta``    ``-Python-2.7.10``    ``gimkl/2.11.5``
 ``2.1beta``    ``-Python-2.7.11``    ``intel/2016a`` 
 ===========    ==================    ================
+
+
+.. _list_software_PyFR_353:
+
+*PyFR*
+++++++
+
+PyFR is an open-source Python based framework for solving advection-diffusion type problems on streaming architectures using the Flux Reconstruction approach of Huynh. The framework is designed to solve a range of governing systems on mixed unstructured grids containing various element types. It is also designed to target a range of hardware platforms via use of an in-built domain specific language derived from the Mako templating engine.
+
+*homepage*: http://http://www.pyfr.org
+
+=========    =============================    ===============
+version      versionsuffix                    toolchain      
+=========    =============================    ===============
+``1.7.6``    ``-Python-3.6.4-CUDA-9.1.85``    ``intel/2018a``
+=========    =============================    ===============
 
 
 .. _list_software_pygccxml_871:
@@ -21898,6 +22260,7 @@ version      versionsuffix         toolchain
 =========    ==================    ===============================
 ``0.3.1``    ``-Python-2.7.11``    ``foss/2016a``, ``intel/2016a``
 ``0.3.1``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``
+``0.3.1``    ``-Python-2.7.14``    ``intel/2018a``                
 =========    ==================    ===============================
 
 
@@ -22003,6 +22366,22 @@ version      versionsuffix         toolchain
 =========    ==================    ===============================
 ``1.2.2``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``
 =========    ==================    ===============================
+
+
+.. _list_software_Pyomo_532:
+
+*Pyomo*
++++++++
+
+Pyomo is a Python-based open-source software package that supports a diverse set of optimization  capabilities for formulating and analyzing optimization models. 
+
+*homepage*: http://www.pyomo.org/
+
+=========    ==================    ==============
+version      versionsuffix         toolchain     
+=========    ==================    ==============
+``5.5.0``    ``-Python-2.7.15``    ``foss/2018b``
+=========    ==================    ==============
 
 
 .. _list_software_PyOpenGL_750:
@@ -22263,6 +22642,7 @@ version        versionsuffix         toolchain
 ``3.4.2``      ``-Python-3.6.1``     ``intel/2017a``                
 ``3.4.2``      ``-Python-3.6.3``     ``intel/2017b``                
 ``3.4.2``      ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``
+``3.4.4``      ``-Python-2.7.15``    ``foss/2018b``                 
 ``3.4.4``      ``-Python-3.5.1``     ``foss/2016a``                 
 ===========    ==================    ===============================
 
@@ -22345,7 +22725,7 @@ version       versionsuffix        toolchain
 ``3.6.2``                          ``foss/2017b``, ``intel/2017b``, ``intel/2018.00``                                                                                                                                                                            
 ``3.6.3``                          ``foss/2017b``, ``goolfc/2017b``, ``intel/2017b``, ``intel/2018.01``                                                                                                                                                          
 ``3.6.4``                          ``foss/2017a``, ``foss/2018a``, ``fosscuda/2018a``, ``golf/2018a``, ``intel/2018a``, ``iomkl/2018.02``, ``iomkl/2018a``                                                                                                       
-``3.6.6``                          ``foss/2018b``, ``intel/2018b``                                                                                                                                                                                               
+``3.6.6``                          ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``                                                                                                                                                                              
 ``3.7.0``                          ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``                                                                                                                                                                              
 ==========    =================    ==============================================================================================================================================================================================================================
 
@@ -22505,7 +22885,7 @@ version        versionsuffix              toolchain
 ---
 
 
-:ref:`list_software_QCA_213` - :ref:`list_software_QEMU_312` - :ref:`list_software_QGIS_308` - :ref:`list_software_Qhull_518` - :ref:`list_software_QIIME_373` - :ref:`list_software_QIIME2_423` - :ref:`list_software_QJson_491` - :ref:`list_software_QML_234` - :ref:`list_software_qrupdate_870` - :ref:`list_software_QScintilla_1012` - :ref:`list_software_Qt_197` - :ref:`list_software_Qt5_250` - :ref:`list_software_QTLtools_802` - :ref:`list_software_qtop_452` - :ref:`list_software_QuadProg++_889` - :ref:`list_software_QuantumESPRESSO_1375` - :ref:`list_software_QUAST_398` - :ref:`list_software_QuickFF_649` - :ref:`list_software_Quip_415` - :ref:`list_software_Quorum_649` - :ref:`list_software_QuTiP_467` - :ref:`list_software_Qwt_316` - :ref:`list_software_QwtPolar_826`
+:ref:`list_software_QCA_213` - :ref:`list_software_QEMU_312` - :ref:`list_software_QGIS_308` - :ref:`list_software_Qhull_518` - :ref:`list_software_QIIME_373` - :ref:`list_software_QIIME2_423` - :ref:`list_software_QJson_491` - :ref:`list_software_QML_234` - :ref:`list_software_qrupdate_870` - :ref:`list_software_QScintilla_1012` - :ref:`list_software_Qt_197` - :ref:`list_software_Qt5_250` - :ref:`list_software_QTLtools_802` - :ref:`list_software_qtop_452` - :ref:`list_software_QuadProg++_889` - :ref:`list_software_Quandl_613` - :ref:`list_software_QuantumESPRESSO_1375` - :ref:`list_software_QUAST_398` - :ref:`list_software_QuickFF_649` - :ref:`list_software_Quip_415` - :ref:`list_software_Quorum_649` - :ref:`list_software_QuTiP_467` - :ref:`list_software_Qwt_316` - :ref:`list_software_QwtPolar_826`
 
 
 .. _list_software_QCA_213:
@@ -22567,12 +22947,12 @@ Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspa
 
 *homepage*: http://www.qhull.org
 
-==========    ==========================================================================================================================================================
-version       toolchain                                                                                                                                                 
-==========    ==========================================================================================================================================================
-``2012.1``    ``ictce/7.1.2``, ``intel/2014b``, ``intel/2015a``, ``intel/2015b``                                                                                        
-``2015.2``    ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
-==========    ==========================================================================================================================================================
+==========    =============================================================================================================================================================================
+version       toolchain                                                                                                                                                                    
+==========    =============================================================================================================================================================================
+``2012.1``    ``ictce/7.1.2``, ``intel/2014b``, ``intel/2015a``, ``intel/2015b``                                                                                                           
+``2015.2``    ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
+==========    =============================================================================================================================================================================
 
 
 .. _list_software_QIIME_373:
@@ -22770,6 +23150,22 @@ version      toolchain
 =========    =================================
 
 
+.. _list_software_Quandl_613:
+
+*Quandl*
+++++++++
+
+A Python library for Quandl’s RESTful API.
+
+*homepage*: https://pypi.python.org/pypi/Quandl
+
+=========    =================    ===============
+version      versionsuffix        toolchain      
+=========    =================    ===============
+``3.4.2``    ``-Python-3.6.4``    ``intel/2018a``
+=========    =================    ===============
+
+
 .. _list_software_QuantumESPRESSO_1375:
 
 *QuantumESPRESSO*
@@ -22919,7 +23315,7 @@ version      toolchain
 ---
 
 
-:ref:`list_software_R_82` - :ref:`list_software_R-bundle-Bioconductor_2065` - :ref:`list_software_R-bundle-devtools_1686` - :ref:`list_software_R-bundle-extra_1354` - :ref:`list_software_R-bundle-pbd_1116` - :ref:`list_software_R-keras_661` - :ref:`list_software_Ragout_626` - :ref:`list_software_rainbow_754` - :ref:`list_software_randfold_842` - :ref:`list_software_randrproto_1099` - :ref:`list_software_Rascaf_592` - :ref:`list_software_RASPA2_425` - :ref:`list_software_RAxML_420` - :ref:`list_software_Ray_300` - :ref:`list_software_Rcorrector_1061` - :ref:`list_software_RcppArmadillo_1322` - :ref:`list_software_RCS_232` - :ref:`list_software_rCUDA_399` - :ref:`list_software_RDMC_294` - :ref:`list_software_RDP-Classifier_1304` - :ref:`list_software_Reads2snp_882` - :ref:`list_software_Redundans_932` - :ref:`list_software_RELION_457` - :ref:`list_software_REMORA_454` - :ref:`list_software_renderproto_1204` - :ref:`list_software_RepastHPC_842` - :ref:`list_software_requests_892` - :ref:`list_software_rgeos_544` - :ref:`list_software_rhdf5_473` - :ref:`list_software_rjags_535` - :ref:`list_software_Rmath_508` - :ref:`list_software_RMBlast_661` - :ref:`list_software_RNA-SeQC_602` - :ref:`list_software_RNAclust_780` - :ref:`list_software_RNAcode_636` - :ref:`list_software_RNAz_347` - :ref:`list_software_Roary_525` - :ref:`list_software_ROI_PAC_541` - :ref:`list_software_ROOT_324` - :ref:`list_software_rootpy_685` - :ref:`list_software_Rosetta_738` - :ref:`list_software_rpmrebuild_1078` - :ref:`list_software_rpy2_397` - :ref:`list_software_RSEM_311` - :ref:`list_software_rSeq_411` - :ref:`list_software_RSeQC_414` - :ref:`list_software_RSEQtools_876` - :ref:`list_software_Rtree_514` - :ref:`list_software_Ruby_418` - :ref:`list_software_runjags_762` - :ref:`list_software_Rust_430`
+:ref:`list_software_R_82` - :ref:`list_software_R-bundle-Bioconductor_2065` - :ref:`list_software_R-bundle-devtools_1686` - :ref:`list_software_R-bundle-extra_1354` - :ref:`list_software_R-bundle-pbd_1116` - :ref:`list_software_R-keras_661` - :ref:`list_software_Ragout_626` - :ref:`list_software_rainbow_754` - :ref:`list_software_randfold_842` - :ref:`list_software_randrproto_1099` - :ref:`list_software_Rascaf_592` - :ref:`list_software_RASPA2_425` - :ref:`list_software_RAxML_420` - :ref:`list_software_Ray_300` - :ref:`list_software_Rcorrector_1061` - :ref:`list_software_RcppArmadillo_1322` - :ref:`list_software_RCS_232` - :ref:`list_software_rCUDA_399` - :ref:`list_software_RDMC_294` - :ref:`list_software_RDP-Classifier_1304` - :ref:`list_software_Reads2snp_882` - :ref:`list_software_Redundans_932` - :ref:`list_software_RELION_457` - :ref:`list_software_REMORA_454` - :ref:`list_software_renderproto_1204` - :ref:`list_software_RepastHPC_842` - :ref:`list_software_requests_892` - :ref:`list_software_rgeos_544` - :ref:`list_software_rhdf5_473` - :ref:`list_software_rjags_535` - :ref:`list_software_Rmath_508` - :ref:`list_software_RMBlast_661` - :ref:`list_software_RNA-SeQC_602` - :ref:`list_software_RNAclust_780` - :ref:`list_software_RNAcode_636` - :ref:`list_software_RNAz_347` - :ref:`list_software_Roary_525` - :ref:`list_software_ROI_PAC_541` - :ref:`list_software_ROOT_324` - :ref:`list_software_rootpy_685` - :ref:`list_software_Rosetta_738` - :ref:`list_software_rpmrebuild_1078` - :ref:`list_software_rpy2_397` - :ref:`list_software_RSEM_311` - :ref:`list_software_rSeq_411` - :ref:`list_software_RSeQC_414` - :ref:`list_software_RSEQtools_876` - :ref:`list_software_RTG-Tools_811` - :ref:`list_software_Rtree_514` - :ref:`list_software_Ruby_418` - :ref:`list_software_runjags_762` - :ref:`list_software_Rust_430`
 
 
 .. _list_software_R_82:
@@ -22931,40 +23327,41 @@ R is a free software environment for statistical computing and graphics.
 
 *homepage*: http://www.r-project.org/
 
-==========    =================    ==================================================================
-version       versionsuffix        toolchain                                                         
-==========    =================    ==================================================================
-``2.15.2``                         ``goolf/1.4.10``, ``ictce/5.3.0``                                 
-``2.15.2``    ``-bare``            ``goolf/1.4.10``, ``ictce/5.3.0``                                 
-``2.15.3``                         ``goolf/1.4.10``, ``ictce/5.3.0``                                 
-``3.0.1``     ``-bare``            ``goolf/1.4.10``, ``ictce/5.3.0``                                 
-``3.0.2``                          ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``                
-``3.0.2``     ``-bare``            ``ictce/5.3.0``                                                   
-``3.1.0``                          ``ictce/5.5.0``                                                   
-``3.1.0``     ``-bare``            ``ictce/5.5.0``                                                   
-``3.1.1``                          ``intel/2014b``                                                   
-``3.1.1``     ``-bare-mt``         ``ictce/6.2.5``                                                   
-``3.1.1``     ``-default-mt``      ``ictce/6.2.5``                                                   
-``3.1.2``                          ``foss/2015a``, ``goolf/1.5.14``, ``intel/2015a``                 
-``3.1.2``     ``-bare``            ``intel/2015a``                                                   
-``3.1.3``                          ``foss/2015a``, ``intel/2015a``                                   
-``3.2.0``                          ``goolf/1.7.20``                                                  
-``3.2.0``     ``-bare``            ``foss/2015a``, ``goolf/1.7.20``, ``ictce/7.3.5``, ``intel/2015a``
-``3.2.1``                          ``foss/2015b``, ``intel/2015a``, ``intel/2015b``                  
-``3.2.1``     ``-bare``            ``foss/2015b``, ``intel/2015b``                                   
-``3.2.3``                          ``foss/2015b``, ``foss/2016a``, ``foss/2016b``, ``intel/2016a``   
-``3.2.3``     ``-bare``            ``foss/2016a``, ``intel/2016a``                                   
-``3.2.3``     ``-libX11-1.6.3``    ``intel/2016a``                                                   
-``3.3.1``                          ``foss/2016a``, ``foss/2016b``, ``intel/2016b``                   
-``3.3.3``     ``-X11-20160819``    ``foss/2016b``, ``intel/2016b``                                   
-``3.3.3``     ``-X11-20170314``    ``intel/2017a``                                                   
-``3.4.0``     ``-X11-20170314``    ``intel/2017a``                                                   
-``3.4.1``     ``-X11-20160819``    ``foss/2016b``                                                    
-``3.4.3``     ``-X11-20171023``    ``foss/2017b``, ``intel/2017b``                                   
-``3.4.4``     ``-X11-20180131``    ``foss/2018a``, ``intel/2018a``, ``iomkl/2018a``                  
-``3.5.0``     ``-X11-20180131``    ``iomkl/2018a``                                                   
-``3.5.1``                          ``foss/2018b``                                                    
-==========    =================    ==================================================================
+==========    ==================    ==================================================================
+version       versionsuffix         toolchain                                                         
+==========    ==================    ==================================================================
+``2.15.2``                          ``goolf/1.4.10``, ``ictce/5.3.0``                                 
+``2.15.2``    ``-bare``             ``goolf/1.4.10``, ``ictce/5.3.0``                                 
+``2.15.3``                          ``goolf/1.4.10``, ``ictce/5.3.0``                                 
+``3.0.1``     ``-bare``             ``goolf/1.4.10``, ``ictce/5.3.0``                                 
+``3.0.2``                           ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``                
+``3.0.2``     ``-bare``             ``ictce/5.3.0``                                                   
+``3.1.0``                           ``ictce/5.5.0``                                                   
+``3.1.0``     ``-bare``             ``ictce/5.5.0``                                                   
+``3.1.1``                           ``intel/2014b``                                                   
+``3.1.1``     ``-bare-mt``          ``ictce/6.2.5``                                                   
+``3.1.1``     ``-default-mt``       ``ictce/6.2.5``                                                   
+``3.1.2``                           ``foss/2015a``, ``goolf/1.5.14``, ``intel/2015a``                 
+``3.1.2``     ``-bare``             ``intel/2015a``                                                   
+``3.1.3``                           ``foss/2015a``, ``intel/2015a``                                   
+``3.2.0``                           ``goolf/1.7.20``                                                  
+``3.2.0``     ``-bare``             ``foss/2015a``, ``goolf/1.7.20``, ``ictce/7.3.5``, ``intel/2015a``
+``3.2.1``                           ``foss/2015b``, ``intel/2015a``, ``intel/2015b``                  
+``3.2.1``     ``-bare``             ``foss/2015b``, ``intel/2015b``                                   
+``3.2.3``                           ``foss/2015b``, ``foss/2016a``, ``foss/2016b``, ``intel/2016a``   
+``3.2.3``     ``-bare``             ``foss/2016a``, ``intel/2016a``                                   
+``3.2.3``     ``-libX11-1.6.3``     ``intel/2016a``                                                   
+``3.3.1``                           ``foss/2016a``, ``foss/2016b``, ``intel/2016b``                   
+``3.3.3``     ``-X11-20160819``     ``foss/2016b``, ``intel/2016b``                                   
+``3.3.3``     ``-X11-20170314``     ``intel/2017a``                                                   
+``3.4.0``     ``-X11-20170314``     ``intel/2017a``                                                   
+``3.4.1``     ``-X11-20160819``     ``foss/2016b``                                                    
+``3.4.3``     ``-X11-20171023``     ``foss/2017b``, ``intel/2017b``                                   
+``3.4.4``     ``-X11-20180131``     ``foss/2018a``, ``intel/2018a``, ``iomkl/2018a``                  
+``3.5.0``     ``-X11-20180131``     ``iomkl/2018a``                                                   
+``3.5.1``                           ``foss/2018b``                                                    
+``3.5.1``     ``-Python-2.7.15``    ``foss/2018b``                                                    
+==========    ==================    ==================================================================
 
 
 .. _list_software_R-bundle-Bioconductor_2065:
@@ -22987,6 +23384,7 @@ version    versionsuffix    toolchain
 ``3.6``    ``-R-3.4.3``     ``intel/2017b``                 
 ``3.6``    ``-R-3.4.4``     ``intel/2018a``                 
 ``3.7``    ``-R-3.5.0``     ``iomkl/2018a``                 
+``3.7``    ``-R-3.5.1``     ``foss/2018b``                  
 =======    =============    ================================
 
 
@@ -23769,6 +24167,22 @@ version    toolchain
 =======    ================
 
 
+.. _list_software_RTG-Tools_811:
+
+*RTG-Tools*
++++++++++++
+
+RTG Tools contains utilities to easily manipulate and accurately compare multiple VCF files,  as well as utilities for processing other common NGS data formats. 
+
+*homepage*: https://www.realtimegenomics.com/products/rtg-tools
+
+=========    =============    =========
+version      versionsuffix    toolchain
+=========    =============    =========
+``3.9.1``    ``-Java-1.8``    ``dummy``
+=========    =============    =========
+
+
 .. _list_software_Rtree_514:
 
 *Rtree*
@@ -23852,7 +24266,7 @@ version       toolchain
 ---
 
 
-:ref:`list_software_S-Lang_514` - :ref:`list_software_Sablotron_948` - :ref:`list_software_SAGE_288` - :ref:`list_software_SaguaroGW_880` - :ref:`list_software_Sailfish_819` - :ref:`list_software_SALib_427` - :ref:`list_software_Salmon_618` - :ref:`list_software_Sambamba_788` - :ref:`list_software_samblaster_1070` - :ref:`list_software_Samcef_591` - :ref:`list_software_SAMtools_786` - :ref:`list_software_SAS_231` - :ref:`list_software_Saxon-HE_707` - :ref:`list_software_sbt_329` - :ref:`list_software_ScaLAPACK_707` - :ref:`list_software_Scalasca_795` - :ref:`list_software_SCALCE_427` - :ref:`list_software_SCANMS_453` - :ref:`list_software_SCDE_287` - :ref:`list_software_ScientificPython_1667` - :ref:`list_software_scikit-allel_1214` - :ref:`list_software_scikit-image_1207` - :ref:`list_software_scikit-learn_1222` - :ref:`list_software_scikit-umfpack_1435` - :ref:`list_software_scipy_552` - :ref:`list_software_SCnorm_594` - :ref:`list_software_Scoary_625` - :ref:`list_software_SCons_486` - :ref:`list_software_SCOOP_388` - :ref:`list_software_Score-P_633` - :ref:`list_software_SCOTCH_452` - :ref:`list_software_scp_326` - :ref:`list_software_Scrappie_823` - :ref:`list_software_SDCC_285` - :ref:`list_software_SDL2_277` - :ref:`list_software_SDPA_296` - :ref:`list_software_Seaborn_714` - :ref:`list_software_SearchGUI_827` - :ref:`list_software_sed_316` - :ref:`list_software_segemehl_842` - :ref:`list_software_SelEstim_806` - :ref:`list_software_Seq-Gen_624` - :ref:`list_software_SeqAn_472` - :ref:`list_software_Seqmagick_917` - :ref:`list_software_SeqPrep_704` - :ref:`list_software_seqtk_552` - :ref:`list_software_Serf_400` - :ref:`list_software_setuptools_1122` - :ref:`list_software_Seurat_628` - :ref:`list_software_Shannon_725` - :ref:`list_software_SHAPEIT_526` - :ref:`list_software_Shapely_726` - :ref:`list_software_sharutils_991` - :ref:`list_software_shift_542` - :ref:`list_software_SHORE_385` - :ref:`list_software_shovill_769` - :ref:`list_software_SHRiMP_499` - :ref:`list_software_Sibelia_697` - :ref:`list_software_sickle_635` - :ref:`list_software_Siesta_617` - :ref:`list_software_Silo_407` - :ref:`list_software_SimPEG_517` - :ref:`list_software_SIMPLE_458` - :ref:`list_software_SimpleElastix_1348` - :ref:`list_software_SimpleITK_850` - :ref:`list_software_SimVascular_1130` - :ref:`list_software_Singularity_1179` - :ref:`list_software_SIONlib_624` - :ref:`list_software_SIP_236` - :ref:`list_software_SKESA_375` - :ref:`list_software_sketchmap_960` - :ref:`list_software_skewer_657` - :ref:`list_software_slalib-c_775` - :ref:`list_software_SLEPc_407` - :ref:`list_software_slepc4py_820` - :ref:`list_software_sleuth_661` - :ref:`list_software_SMALT_385` - :ref:`list_software_Smoldyn_742` - :ref:`list_software_SMRT-Link_769` - :ref:`list_software_snakemake_944` - :ref:`list_software_SNAP_306` - :ref:`list_software_SNAPE-pooled_1063` - :ref:`list_software_snaphu_655` - :ref:`list_software_snappy_667` - :ref:`list_software_snpEff_610` - :ref:`list_software_SNPhylo_685` - :ref:`list_software_SOAPaligner_1045` - :ref:`list_software_SOAPdenovo_958` - :ref:`list_software_SOAPdenovo-Trans_1523` - :ref:`list_software_SOAPdenovo2_1008` - :ref:`list_software_SOAPec_507` - :ref:`list_software_SOAPfuse_742` - :ref:`list_software_SOBAcl_500` - :ref:`list_software_SolexaQA++_852` - :ref:`list_software_SortMeRNA_827` - :ref:`list_software_SoX_282` - :ref:`list_software_Spack_498` - :ref:`list_software_SPAdes_544` - :ref:`list_software_Spark_513` - :ref:`list_software_sparsehash_1074` - :ref:`list_software_spectral.methods_1664` - :ref:`list_software_spglib_641` - :ref:`list_software_spglib-python_1360` - :ref:`list_software_Sphinx_634` - :ref:`list_software_SpiceyPy_822` - :ref:`list_software_SPIDER_455` - :ref:`list_software_SpiecEasi_886` - :ref:`list_software_splitRef_841` - :ref:`list_software_SPRNG_394` - :ref:`list_software_Spyder_631` - :ref:`list_software_SQLite_562` - :ref:`list_software_SRA-Toolkit_1017` - :ref:`list_software_SSAHA2_418` - :ref:`list_software_SSPACE_Basic_1024` - :ref:`list_software_Stacks_617` - :ref:`list_software_STAMP_389` - :ref:`list_software_StaMPS_536` - :ref:`list_software_Stampy_638` - :ref:`list_software_STAR_314` - :ref:`list_software_STAR-Fusion_987` - :ref:`list_software_Stata_509` - :ref:`list_software_statsmodels_1203` - :ref:`list_software_stemming_868` - :ref:`list_software_STIR_322` - :ref:`list_software_Stow_429` - :ref:`list_software_STREAM_460` - :ref:`list_software_strelka_758` - :ref:`list_software_stress_676` - :ref:`list_software_Stride_619` - :ref:`list_software_StringTie_921` - :ref:`list_software_Subread_710` - :ref:`list_software_Subversion_1072` - :ref:`list_software_SuiteSparse_1144` - :ref:`list_software_SUMACLUST_705` - :ref:`list_software_SUMATRA_541` - :ref:`list_software_SUNDIALS_611` - :ref:`list_software_SuperLU_688` - :ref:`list_software_supermagic_1072` - :ref:`list_software_supernova_995` - :ref:`list_software_SURF_320` - :ref:`list_software_SWASH_390` - :ref:`list_software_SWIG_314` - :ref:`list_software_SWIPE_392` - :ref:`list_software_sympy_578` - :ref:`list_software_synchronicity_1430` - :ref:`list_software_Szip_422`
+:ref:`list_software_S-Lang_514` - :ref:`list_software_Sablotron_948` - :ref:`list_software_SAGE_288` - :ref:`list_software_SaguaroGW_880` - :ref:`list_software_Sailfish_819` - :ref:`list_software_SALib_427` - :ref:`list_software_Salmon_618` - :ref:`list_software_Sambamba_788` - :ref:`list_software_samblaster_1070` - :ref:`list_software_Samcef_591` - :ref:`list_software_SAMtools_786` - :ref:`list_software_SAS_231` - :ref:`list_software_Saxon-HE_707` - :ref:`list_software_sbt_329` - :ref:`list_software_ScaLAPACK_707` - :ref:`list_software_Scalasca_795` - :ref:`list_software_SCALCE_427` - :ref:`list_software_SCANMS_453` - :ref:`list_software_SCDE_287` - :ref:`list_software_ScientificPython_1667` - :ref:`list_software_scikit-allel_1214` - :ref:`list_software_scikit-image_1207` - :ref:`list_software_scikit-learn_1222` - :ref:`list_software_scikit-umfpack_1435` - :ref:`list_software_scipy_552` - :ref:`list_software_SCnorm_594` - :ref:`list_software_Scoary_625` - :ref:`list_software_SCons_486` - :ref:`list_software_SCOOP_388` - :ref:`list_software_Score-P_633` - :ref:`list_software_SCOTCH_452` - :ref:`list_software_scp_326` - :ref:`list_software_Scrappie_823` - :ref:`list_software_SDCC_285` - :ref:`list_software_SDL2_277` - :ref:`list_software_SDPA_296` - :ref:`list_software_Seaborn_714` - :ref:`list_software_SearchGUI_827` - :ref:`list_software_sed_316` - :ref:`list_software_segemehl_842` - :ref:`list_software_SelEstim_806` - :ref:`list_software_Seq-Gen_624` - :ref:`list_software_seq2HLA_592` - :ref:`list_software_SeqAn_472` - :ref:`list_software_Seqmagick_917` - :ref:`list_software_SeqPrep_704` - :ref:`list_software_seqtk_552` - :ref:`list_software_Serf_400` - :ref:`list_software_setuptools_1122` - :ref:`list_software_Seurat_628` - :ref:`list_software_Shannon_725` - :ref:`list_software_SHAPEIT_526` - :ref:`list_software_Shapely_726` - :ref:`list_software_sharutils_991` - :ref:`list_software_shift_542` - :ref:`list_software_SHORE_385` - :ref:`list_software_shovill_769` - :ref:`list_software_SHRiMP_499` - :ref:`list_software_Sibelia_697` - :ref:`list_software_sickle_635` - :ref:`list_software_Siesta_617` - :ref:`list_software_Silo_407` - :ref:`list_software_SimPEG_517` - :ref:`list_software_SIMPLE_458` - :ref:`list_software_SimpleElastix_1348` - :ref:`list_software_SimpleITK_850` - :ref:`list_software_SimVascular_1130` - :ref:`list_software_Singularity_1179` - :ref:`list_software_SIONlib_624` - :ref:`list_software_SIP_236` - :ref:`list_software_SKESA_375` - :ref:`list_software_sketchmap_960` - :ref:`list_software_skewer_657` - :ref:`list_software_slalib-c_775` - :ref:`list_software_SLEPc_407` - :ref:`list_software_slepc4py_820` - :ref:`list_software_sleuth_661` - :ref:`list_software_SMALT_385` - :ref:`list_software_Smoldyn_742` - :ref:`list_software_SMRT-Link_769` - :ref:`list_software_snakemake_944` - :ref:`list_software_SNAP_306` - :ref:`list_software_SNAPE-pooled_1063` - :ref:`list_software_snaphu_655` - :ref:`list_software_snappy_667` - :ref:`list_software_snpEff_610` - :ref:`list_software_SNPhylo_685` - :ref:`list_software_SOAPaligner_1045` - :ref:`list_software_SOAPdenovo_958` - :ref:`list_software_SOAPdenovo-Trans_1523` - :ref:`list_software_SOAPdenovo2_1008` - :ref:`list_software_SOAPec_507` - :ref:`list_software_SOAPfuse_742` - :ref:`list_software_SOBAcl_500` - :ref:`list_software_SolexaQA++_852` - :ref:`list_software_SortMeRNA_827` - :ref:`list_software_SoX_282` - :ref:`list_software_Spack_498` - :ref:`list_software_SPAdes_544` - :ref:`list_software_Spark_513` - :ref:`list_software_sparsehash_1074` - :ref:`list_software_spectral.methods_1664` - :ref:`list_software_spglib_641` - :ref:`list_software_spglib-python_1360` - :ref:`list_software_Sphinx_634` - :ref:`list_software_SpiceyPy_822` - :ref:`list_software_SPIDER_455` - :ref:`list_software_SpiecEasi_886` - :ref:`list_software_splitRef_841` - :ref:`list_software_SPRNG_394` - :ref:`list_software_Spyder_631` - :ref:`list_software_SQLite_562` - :ref:`list_software_SRA-Toolkit_1017` - :ref:`list_software_SSAHA2_418` - :ref:`list_software_SSPACE_Basic_1024` - :ref:`list_software_Stacks_617` - :ref:`list_software_STAMP_389` - :ref:`list_software_StaMPS_536` - :ref:`list_software_Stampy_638` - :ref:`list_software_STAR_314` - :ref:`list_software_STAR-Fusion_987` - :ref:`list_software_Stata_509` - :ref:`list_software_statsmodels_1203` - :ref:`list_software_stemming_868` - :ref:`list_software_STIR_322` - :ref:`list_software_Stow_429` - :ref:`list_software_STREAM_460` - :ref:`list_software_strelka_758` - :ref:`list_software_stress_676` - :ref:`list_software_Stride_619` - :ref:`list_software_StringTie_921` - :ref:`list_software_Subread_710` - :ref:`list_software_Subversion_1072` - :ref:`list_software_suds_447` - :ref:`list_software_SuiteSparse_1144` - :ref:`list_software_SUMACLUST_705` - :ref:`list_software_SUMATRA_541` - :ref:`list_software_SUNDIALS_611` - :ref:`list_software_SuperLU_688` - :ref:`list_software_supermagic_1072` - :ref:`list_software_supernova_995` - :ref:`list_software_SURF_320` - :ref:`list_software_SWASH_390` - :ref:`list_software_SWIG_314` - :ref:`list_software_SWIPE_392` - :ref:`list_software_sympy_578` - :ref:`list_software_synchronicity_1430` - :ref:`list_software_Szip_422`
 
 
 .. _list_software_S-Lang_514:
@@ -24049,7 +24463,7 @@ version       versionsuffix        toolchain
 ``1.6``                            ``GCC/6.4.0-2.28``, ``foss/2017a``, ``iccifort/2017.4.196-GCC-6.4.0-2.28``, ``intel/2017b``                         
 ``1.7``                            ``foss/2018a``, ``intel/2018a``                                                                                     
 ``1.8``                            ``intel/2018a``                                                                                                     
-``1.9``                            ``GCC/6.4.0-2.28``                                                                                                  
+``1.9``                            ``GCC/6.4.0-2.28``, ``GCC/7.3.0-2.30``, ``foss/2018b``                                                              
 ==========    =================    ====================================================================================================================
 
 
@@ -24127,6 +24541,7 @@ version      versionsuffix                        toolchain
 ``2.0.2``    ``-OpenBLAS-0.2.8-LAPACK-3.5.0``     ``gompi/1.5.14``                                                                                                                                                
 ``2.0.2``    ``-OpenBLAS-0.2.9-LAPACK-3.5.0``     ``gompi/2014b``                                                                                                                                                 
 ``2.0.2``    ``-OpenBLAS-0.3.1``                  ``gompi/2018b``, ``gompic/2018b``                                                                                                                               
+``2.0.2``    ``-OpenBLAS-0.3.3``                  ``gompi/2018.08``                                                                                                                                               
 =========    =================================    ================================================================================================================================================================
 
 
@@ -24253,6 +24668,7 @@ version       versionsuffix         toolchain
 ``0.13.1``    ``-Python-2.7.14``    ``intel/2017b``                
 ``0.13.1``    ``-Python-3.6.3``     ``foss/2017b``                 
 ``0.13.1``    ``-Python-3.6.4``     ``foss/2018a``                 
+``0.14.1``    ``-Python-3.6.6``     ``foss/2018b``                 
 ==========    ==================    ===============================
 
 
@@ -24293,6 +24709,7 @@ version       versionsuffix                        toolchain
 ``0.19.1``    ``-Python-2.7.14``                   ``intel/2017b``                
 ``0.19.1``    ``-Python-3.6.3``                    ``foss/2017b``, ``intel/2017b``
 ``0.19.1``    ``-Python-3.6.4``                    ``foss/2018a``, ``intel/2018a``
+``0.20.0``    ``-Python-3.6.6``                    ``foss/2018b``                 
 ==========    =================================    ===============================
 
 
@@ -24377,23 +24794,23 @@ SCons is a software construction tool.
 
 *homepage*: http://www.scons.org/
 
-=========    ==================    ================================================================
-version      versionsuffix         toolchain                                                       
-=========    ==================    ================================================================
-``2.3.0``    ``-Python-2.7.3``     ``ictce/5.3.0``                                                 
-``2.3.0``    ``-Python-2.7.5``     ``ictce/5.3.0``                                                 
-``2.3.6``    ``-Python-2.7.10``    ``foss/2015a``, ``intel/2015a``                                 
-``2.3.6``    ``-Python-2.7.9``     ``foss/2015a``, ``intel/2015a``                                 
-``2.4.1``    ``-Python-2.7.11``    ``foss/2016a``                                                  
-``2.5.0``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``                                 
-``2.5.1``                          ``intel/2017a``                                                 
-``2.5.1``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``                                 
-``2.5.1``    ``-Python-2.7.13``    ``intel/2017a``                                                 
-``3.0.1``    ``-Python-2.7.14``    ``foss/2017b``, ``foss/2018a``, ``intel/2017b``, ``intel/2018a``
-``3.0.1``    ``-Python-2.7.15``    ``fosscuda/2018b``                                              
-``3.0.1``    ``-Python-3.6.3``     ``foss/2017b``, ``intel/2017b``                                 
-``3.0.1``    ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``                                 
-=========    ==================    ================================================================
+=========    ==================    =================================================================================
+version      versionsuffix         toolchain                                                                        
+=========    ==================    =================================================================================
+``2.3.0``    ``-Python-2.7.3``     ``ictce/5.3.0``                                                                  
+``2.3.0``    ``-Python-2.7.5``     ``ictce/5.3.0``                                                                  
+``2.3.6``    ``-Python-2.7.10``    ``foss/2015a``, ``intel/2015a``                                                  
+``2.3.6``    ``-Python-2.7.9``     ``foss/2015a``, ``intel/2015a``                                                  
+``2.4.1``    ``-Python-2.7.11``    ``foss/2016a``                                                                   
+``2.5.0``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``                                                  
+``2.5.1``                          ``intel/2017a``                                                                  
+``2.5.1``    ``-Python-2.7.12``    ``foss/2016b``, ``intel/2016b``                                                  
+``2.5.1``    ``-Python-2.7.13``    ``intel/2017a``                                                                  
+``3.0.1``    ``-Python-2.7.14``    ``foss/2017b``, ``foss/2018a``, ``intel/2017b``, ``intel/2018a``, ``iomkl/2018a``
+``3.0.1``    ``-Python-2.7.15``    ``fosscuda/2018b``                                                               
+``3.0.1``    ``-Python-3.6.3``     ``foss/2017b``, ``intel/2017b``                                                  
+``3.0.1``    ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``                                                  
+=========    ==================    =================================================================================
 
 
 .. _list_software_SCOOP_388:
@@ -24558,6 +24975,7 @@ version      versionsuffix         toolchain
 ``0.7.1``    ``-Python-2.7.12``    ``intel/2016b`` 
 ``0.8.1``    ``-Python-2.7.13``    ``foss/2017a``  
 ``0.8.1``    ``-Python-2.7.14``    ``intel/2018a`` 
+``0.9.0``    ``-Python-3.6.6``     ``foss/2018b``  
 =========    ==================    ================
 
 
@@ -24642,6 +25060,23 @@ version      toolchain
 =========    ===============
 
 
+.. _list_software_seq2HLA_592:
+
+*seq2HLA*
++++++++++
+
+In-silico method written in Python and R to determine HLA genotypes of a sample.
+
+*homepage*: https://github.com/TRON-Bioinformatics/seq2HLA
+
+=======    ==================    ===============
+version    versionsuffix         toolchain      
+=======    ==================    ===============
+``2.3``    ``-Python-2.7.14``    ``intel/2018a``
+``2.3``    ``-Python-2.7.15``    ``foss/2018b`` 
+=======    ==================    ===============
+
+
 .. _list_software_SeqAn_472:
 
 *SeqAn*
@@ -24684,11 +25119,12 @@ Tool for stripping adaptors and/or merging paired reads with overlap into single
 
 *homepage*: https://github.com/jstjohn/SeqPrep
 
-=======    ================
-version    toolchain       
-=======    ================
-``1.2``    ``goolf/1.7.20``
-=======    ================
+=========    =================
+version      toolchain        
+=========    =================
+``1.2``      ``goolf/1.7.20`` 
+``1.3.2``    ``GCCcore/7.3.0``
+=========    =================
 
 
 .. _list_software_seqtk_552:
@@ -24718,11 +25154,12 @@ The serf library is a high performance C-based HTTP client library  built upon t
 
 *homepage*: http://serf.apache.org/
 
-=========    ==============
-version      toolchain     
-=========    ==============
-``1.3.8``    ``foss/2015a``
-=========    ==============
+=========    ===============
+version      toolchain      
+=========    ===============
+``1.3.8``    ``foss/2015a`` 
+``1.3.9``    ``iomkl/2018a``
+=========    ===============
 
 
 .. _list_software_setuptools_1122:
@@ -25569,17 +26006,17 @@ Genome assembler for single-cell and isolates data sets
 
 *homepage*: http://bioinf.spbau.ru/en/spades
 
-==========    ==================================
-version       toolchain                         
-==========    ==================================
-``3.0.0``     ``goolf/1.4.10``                  
-``3.1.0``     ``goolf/1.4.10``                  
-``3.6.2``     ``goolf/1.4.10``, ``goolf/1.7.20``
-``3.9.0``     ``foss/2016a``, ``foss/2016b``    
-``3.10.1``    ``foss/2016b``, ``foss/2017a``    
-``3.11.1``    ``foss/2017b``, ``foss/2018a``    
-``3.12.0``    ``foss/2016b``, ``foss/2018a``    
-==========    ==================================
+==========    ==============================================
+version       toolchain                                     
+==========    ==============================================
+``3.0.0``     ``goolf/1.4.10``                              
+``3.1.0``     ``goolf/1.4.10``                              
+``3.6.2``     ``goolf/1.4.10``, ``goolf/1.7.20``            
+``3.9.0``     ``foss/2016a``, ``foss/2016b``                
+``3.10.1``    ``foss/2016b``, ``foss/2017a``                
+``3.11.1``    ``foss/2017b``, ``foss/2018a``                
+``3.12.0``    ``foss/2016b``, ``foss/2018a``, ``foss/2018b``
+==========    ==============================================
 
 
 .. _list_software_Spark_513:
@@ -25964,6 +26401,7 @@ version       versionsuffix         toolchain
 ==========    ==================    ===============
 ``1.0.28``    ``-Python-2.7.10``    ``intel/2015b``
 ``1.0.31``    ``-Python-2.7.12``    ``intel/2016b``
+``1.0.32``    ``-Python-2.7.14``    ``intel/2018a``
 ==========    ==================    ===============
 
 
@@ -26203,7 +26641,24 @@ version       toolchain
 ==========    ================
 ``1.6.23``    ``goolf/1.4.10``
 ``1.8.14``    ``foss/2015a``  
+``1.9.7``     ``iomkl/2018a`` 
 ==========    ================
+
+
+.. _list_software_suds_447:
+
+*suds*
+++++++
+
+Lightweight SOAP client
+
+*homepage*: https://pypi.python.org/pypi/suds-py3
+
+===========    =================    ===============
+version        versionsuffix        toolchain      
+===========    =================    ===============
+``1.3.3.0``    ``-Python-3.6.4``    ``intel/2018a``
+===========    =================    ===============
 
 
 .. _list_software_SuiteSparse_1144:
@@ -26392,6 +26847,7 @@ version       versionsuffix                   toolchain
 ``3.0.11``    ``-Python-2.7.12``              ``foss/2016b``, ``intel/2016b``                                 
 ``3.0.12``    ``-Python-2.7.13``              ``intel/2017a``                                                 
 ``3.0.12``    ``-Python-2.7.14``              ``foss/2017b``, ``foss/2018a``, ``intel/2017b``, ``intel/2018a``
+``3.0.12``    ``-Python-2.7.15``              ``foss/2018b``                                                  
 ``3.0.12``    ``-Python-3.6.1``               ``intel/2017a``                                                 
 ``3.0.12``    ``-Python-3.6.2``               ``foss/2017b``, ``intel/2018.00``                               
 ``3.0.12``    ``-Python-3.6.3``               ``foss/2017b``, ``intel/2017b``, ``intel/2018.01``              
@@ -26434,6 +26890,7 @@ version        versionsuffix         toolchain
 ``0.7.6.1``    ``-Python-2.7.10``    ``intel/2015b``                  
 ``0.7.6.1``    ``-Python-2.7.11``    ``intel/2015b``                  
 ``1.0``        ``-Python-2.7.11``    ``foss/2016a``, ``intel/2016a``  
+``1.3``        ``-Python-2.7.14``    ``intel/2018a``                  
 ===========    ==================    =================================
 
 
@@ -27014,7 +27471,7 @@ version       versionsuffix         toolchain
 ``3.6.2``     ``-Python-3.6.2``     ``foss/2017b``                                                     
 ``3.6.3``     ``-Python-3.6.3``     ``foss/2017b``, ``intel/2017b``                                    
 ``3.6.4``     ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``, ``iomkl/2018.02``, ``iomkl/2018a``
-``3.6.6``     ``-Python-3.6.6``     ``intel/2018b``                                                    
+``3.6.6``     ``-Python-3.6.6``     ``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``                   
 ==========    ==================    ===================================================================
 
 
@@ -27292,6 +27749,7 @@ version     versionsuffix          toolchain
 ========    ===================    =========
 ``0.32``    ``-Java-1.7.0_80``     ``dummy``
 ``0.36``    ``-Java-1.8.0_92``     ``dummy``
+``0.38``    ``-Java-1.8``          ``dummy``
 ``0.38``    ``-Java-1.8.0_162``    ``dummy``
 ========    ===================    =========
 
@@ -27426,7 +27884,7 @@ version         versionsuffix         toolchain
 ---
 
 
-:ref:`list_software_UCLUST_480` - :ref:`list_software_udocker_749` - :ref:`list_software_UDUNITS_556` - :ref:`list_software_UFC_222` - :ref:`list_software_UFL_231` - :ref:`list_software_UNAFold_617` - :ref:`list_software_USEARCH_523` - :ref:`list_software_USPEX_405` - :ref:`list_software_util-linux_1051`
+:ref:`list_software_UCLUST_480` - :ref:`list_software_UCX_240` - :ref:`list_software_udocker_749` - :ref:`list_software_UDUNITS_556` - :ref:`list_software_UFC_222` - :ref:`list_software_UFL_231` - :ref:`list_software_UNAFold_617` - :ref:`list_software_USEARCH_523` - :ref:`list_software_USPEX_405` - :ref:`list_software_util-linux_1051`
 
 
 .. _list_software_UCLUST_480:
@@ -27443,6 +27901,22 @@ version        versionsuffix      toolchain
 ===========    ===============    =========
 ``1.2.22q``    ``-i86linux64``    ``dummy``
 ===========    ===============    =========
+
+
+.. _list_software_UCX_240:
+
+*UCX*
++++++
+
+Unified Communication X An open-source production grade communication framework for data centric and high-performance applications 
+
+*homepage*: http://www.openucx.org/
+
+=========    ====================================
+version      toolchain                           
+=========    ====================================
+``1.3.1``    ``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+=========    ====================================
 
 
 .. _list_software_udocker_749:
@@ -27861,15 +28335,16 @@ The Vienna RNA Package consists of a C code library and several stand-alone prog
 
 *homepage*: http://www.tbi.univie.ac.at/RNA/
 
-=========    =================================
-version      toolchain                        
-=========    =================================
-``2.0.7``    ``goolf/1.4.10``, ``ictce/5.3.0``
-``2.1.6``    ``ictce/5.5.0``                  
-``2.2.3``    ``intel/2016b``                  
-``2.3.4``    ``foss/2016b``                   
-``2.3.5``    ``intel/2017a``                  
-=========    =================================
+==========    ==================    =================================
+version       versionsuffix         toolchain                        
+==========    ==================    =================================
+``2.0.7``                           ``goolf/1.4.10``, ``ictce/5.3.0``
+``2.1.6``                           ``ictce/5.5.0``                  
+``2.2.3``                           ``intel/2016b``                  
+``2.3.4``                           ``foss/2016b``                   
+``2.3.5``                           ``intel/2017a``                  
+``2.4.10``    ``-Python-2.7.15``    ``foss/2018b``                   
+==========    ==================    =================================
 
 
 .. _list_software_Vim_300:
@@ -27995,6 +28470,7 @@ version       versionsuffix         toolchain
 ``2.5.8``                           ``dummy``                       
 ``2.8.0``                           ``dummy``                       
 ``2.8.1``                           ``dummy``                       
+``2.8.3``                           ``dummy``                       
 ==========    ==================    ================================
 
 
@@ -28048,6 +28524,7 @@ version        versionsuffix                         toolchain
 ``4.0.2``                                            ``dummy``                       
 ``4.1.4``                                            ``dummy``                       
 ``4.1.5``                                            ``dummy``                       
+``4.1.6``                                            ``dummy``                       
 ===========    ==================================    ================================
 
 
@@ -28303,7 +28780,7 @@ version       versionsuffix         toolchain
 ``0.30.0``    ``-Python-2.7.14``    ``intel/2017b``                                  
 ``0.30.0``    ``-Python-3.6.3``     ``foss/2017b``, ``goolfc/2017b``, ``intel/2017b``
 ``0.30.0``    ``-Python-3.6.4``     ``foss/2018a``, ``intel/2018a``                  
-``0.31.0``    ``-Python-2.7.14``    ``intel/2018a``                                  
+``0.31.0``    ``-Python-2.7.14``    ``fosscuda/2018a``, ``intel/2018a``              
 ``0.31.0``    ``-Python-3.6.4``     ``foss/2018a``, ``fosscuda/2018a``               
 ``0.31.1``    ``-Python-2.7.15``    ``fosscuda/2018b``                               
 ``0.31.1``    ``-Python-3.6.6``     ``foss/2018b``                                   
@@ -28532,7 +29009,7 @@ version      toolchain
 ---
 
 
-:ref:`list_software_X11_186` - :ref:`list_software_x264_276` - :ref:`list_software_x265_277` - :ref:`list_software_xarray_663` - :ref:`list_software_xbitmaps_872` - :ref:`list_software_xcb-proto_926` - :ref:`list_software_xcb-util_808` - :ref:`list_software_xcb-util-image_1368` - :ref:`list_software_xcb-util-keysyms_1642` - :ref:`list_software_xcb-util-renderutil_1939` - :ref:`list_software_xcb-util-wm_1081` - :ref:`list_software_XCfun_484` - :ref:`list_software_XCrySDen_752` - :ref:`list_software_Xerces-C++_816` - :ref:`list_software_xextproto_1021` - :ref:`list_software_xf86vidmodeproto_1640` - :ref:`list_software_XGBoost_678` - :ref:`list_software_xineramaproto_1417` - :ref:`list_software_XKeyboardConfig_1503` - :ref:`list_software_Xmipp_526` - :ref:`list_software_XML_241` - :ref:`list_software_XML-Dumper_907` - :ref:`list_software_XML-LibXML_806` - :ref:`list_software_XML-Parser_907` - :ref:`list_software_XML-Simple_904` - :ref:`list_software_XML-Twig_697` - :ref:`list_software_XMLStarlet_976` - :ref:`list_software_xonsh_560` - :ref:`list_software_xorg-macros_1138` - :ref:`list_software_xprop_569` - :ref:`list_software_xproto_684` - :ref:`list_software_XQilla_587` - :ref:`list_software_xtrans_672` - :ref:`list_software_XZ_178`
+:ref:`list_software_X11_186` - :ref:`list_software_x264_276` - :ref:`list_software_x265_277` - :ref:`list_software_xarray_663` - :ref:`list_software_xbitmaps_872` - :ref:`list_software_xcb-proto_926` - :ref:`list_software_xcb-util_808` - :ref:`list_software_xcb-util-image_1368` - :ref:`list_software_xcb-util-keysyms_1642` - :ref:`list_software_xcb-util-renderutil_1939` - :ref:`list_software_xcb-util-wm_1081` - :ref:`list_software_XCfun_484` - :ref:`list_software_XCrySDen_752` - :ref:`list_software_Xerces-C++_816` - :ref:`list_software_xextproto_1021` - :ref:`list_software_xf86vidmodeproto_1640` - :ref:`list_software_XGBoost_678` - :ref:`list_software_xineramaproto_1417` - :ref:`list_software_XKeyboardConfig_1503` - :ref:`list_software_Xmipp_526` - :ref:`list_software_XML_241` - :ref:`list_software_XML-Dumper_907` - :ref:`list_software_XML-LibXML_806` - :ref:`list_software_XML-Parser_907` - :ref:`list_software_XML-Simple_904` - :ref:`list_software_XML-Twig_697` - :ref:`list_software_XMLSec_524` - :ref:`list_software_XMLStarlet_976` - :ref:`list_software_xonsh_560` - :ref:`list_software_xorg-macros_1138` - :ref:`list_software_xprop_569` - :ref:`list_software_xproto_684` - :ref:`list_software_XQilla_587` - :ref:`list_software_xtrans_672` - :ref:`list_software_XZ_178`
 
 
 .. _list_software_X11_186:
@@ -28638,6 +29115,7 @@ provides bitmaps for x
 version      toolchain                                                                                                      
 =========    ===============================================================================================================
 ``1.1.1``    ``dummy``, ``foss/2016a``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``intel/2014b``, ``intel/2015a``, ``intel/2016a``
+``1.1.2``    ``dummy``                                                                                                      
 =========    ===============================================================================================================
 
 
@@ -28952,6 +29430,7 @@ version       versionsuffix       toolchain
 ``2.0132``    ``-Perl-5.24.1``    ``intel/2017a``                
 ``2.0132``    ``-Perl-5.26.0``    ``intel/2017b``                
 ``2.0132``    ``-Perl-5.26.1``    ``GCCcore/6.4.0``              
+``2.0132``    ``-Perl-5.28.0``    ``GCCcore/7.3.0``              
 ==========    ================    ===============================
 
 
@@ -29013,6 +29492,22 @@ version     versionsuffix       toolchain
 ========    ================    ================
 
 
+.. _list_software_XMLSec_524:
+
+*XMLSec*
+++++++++
+
+XML Security Library is a C library based on LibXML2,  supporting major XML security standards.
+
+*homepage*: https://www.aleksey.com/xmlsec/index.html
+
+==========    =================
+version       toolchain        
+==========    =================
+``1.2.26``    ``GCCcore/6.4.0``
+==========    =================
+
+
 .. _list_software_XMLStarlet_976:
 
 *XMLStarlet*
@@ -29060,7 +29555,7 @@ version       toolchain
 ``1.17``      ``GCC/4.7.2``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``ictce/5.5.0``, ``intel/2015a``                                  
 ``1.19.0``    ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2015a``, ``intel/2015b``, ``intel/2016a``, ``intel/2016b``
 ``1.19.1``    ``GCCcore/6.3.0``, ``GCCcore/6.4.0``                                                                                
-``1.19.2``    ``GCCcore/7.2.0``, ``GCCcore/7.3.0``                                                                                
+``1.19.2``    ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``                                                             
 ==========    ====================================================================================================================
 
 
@@ -29155,7 +29650,7 @@ version      versionsuffix          toolchain
 ``5.2.2``                           ``GCC/4.9.2``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.3``, ``GCCcore/5.4.0``, ``foss/2015a``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``goolf/1.4.10``, ``ictce/5.3.0``, ``intel/2016a``, ``intel/2016b``
 ``5.2.2``    ``-gettext-0.19.7``    ``foss/2016a``, ``intel/2016a``                                                                                                                                                                               
 ``5.2.3``                           ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``gimkl/2017a``                                                                                                                                                         
-``5.2.4``                           ``GCCcore/7.2.0``, ``GCCcore/7.3.0``                                                                                                                                                                          
+``5.2.4``                           ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``                                                                                                                                                       
 =========    ===================    ==============================================================================================================================================================================================================
 
 
@@ -29359,7 +29854,7 @@ version       toolchain
 ``1.2.7``     ``GCC/4.8.1``, ``GCC/4.8.2``, ``foss/2014b``, ``goolf/1.4.10``, ``goolf/1.5.14``, ``ictce/5.2.0``, ``ictce/5.3.0``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``ictce/6.1.5``, ``intel/2014b``, ``intel/2015a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 ``1.2.8``     ``CrayGNU/2015.06``, ``CrayGNU/2015.11``, ``CrayGNU/2016.03``, ``GCC/4.7.3``, ``GCC/4.8.2``, ``GCC/4.8.3``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.2-binutils-2.25``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/4.9.3-binutils-2.25``, ``GCC/5.1.0-binutils-2.25``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/4.9.4``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GNU/4.9.3-2.25``, ``dummy``, ``foss/2014b``, ``foss/2015.05``, ``foss/2015a``, ``foss/2015b``, ``foss/2016.04``, ``foss/2016a``, ``gimkl/2.11.5``, ``gompi/1.5.16``, ``goolf/1.4.10``, ``goolf/1.5.14``, ``goolf/1.5.16``, ``goolf/1.7.20``, ``ictce/5.3.0``, ``ictce/5.4.0``, ``ictce/5.5.0``, ``ictce/6.2.5``, ``ictce/7.1.2``, ``ictce/7.3.5``, ``intel/2014.06``, ``intel/2014b``, ``intel/2015a``, ``intel/2015b``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``intel/2017.01``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
 ``1.2.10``    ``dummy``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-``1.2.11``    ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/system``, ``dummy``, ``gimkl/2017a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+``1.2.11``    ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/system``, ``dummy``, ``gimkl/2017a``                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 ==========    ==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 

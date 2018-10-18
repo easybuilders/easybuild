@@ -172,6 +172,9 @@
     * MakeCp
 
       * CmdCp
+
+        * EB_fastStructure
+
       * EB_BamTools
       * EB_BLAT
       * EB_Bowtie2
