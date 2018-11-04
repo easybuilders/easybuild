@@ -36,6 +36,7 @@ For authors of easyconfig files:
 For developers of easyblocks:
 
 * :ref:`depr_copytree_function`
+* "ref:`depr_adjust_permissions_skip_symlinks`
 
 For EasyBuild framework developers:
 
@@ -103,6 +104,19 @@ The ``copytree`` function, which was a copy of the ``shutil.copytree`` function 
 supported) has been deprecated in favor of the superior ``copy_dir`` function in the ``easybuild.tools.filetools`` module.
 
 ``copy_dir`` graciously handles any exceptions that occur, and is aware of the EasyBuild *dry run* mode.
+
+.. _depr_adjust_permissions_skip_symlinks:
+
+``skip_symlinks`` named argument for ``adjust_permissions``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0 (Nov 2018)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: *(none required)*
+
+The ``skip_symlinks`` argument for the ``adjust_permissions`` function has been deprecated since ``adjust_permissions``
+has been changed to *always* skip symbolic links (this was already the default behaviour); see also
+https://github.com/easybuilders/easybuild-framework/pull/2644 .
 
 
 .. _depr_get_easyblock_class_default_fallback:
