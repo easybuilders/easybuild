@@ -37,7 +37,7 @@ For authors of easyconfig files:
 For developers of easyblocks:
 
 * :ref:`depr_copytree_function`
-* "ref:`depr_adjust_permissions_skip_symlinks`
+* :ref:`depr_adjust_permissions_skip_symlinks`
 
 For EasyBuild framework developers:
 
