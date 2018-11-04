@@ -44,7 +44,7 @@ Since EasyBuild 3.8.0, three backends are supported:
 * ``PbsPython``
 
   * ``pbs_python`` version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
-  * **note**: requires Tresource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
+  * **note**: requires Torque resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
 
 * ``Slurm`` (supported since EasyBuild 3.8.0)
 
