@@ -32,6 +32,7 @@ For authors of easyconfig files:
 
 * :ref:`depr_fftw_use_fma4`
 * :ref:`depr_sources_2_element_tuple`
+* :ref:`depr_pythonpackage_use_easy_install_setup_py_develop`
 
 For developers of easyblocks:
 
@@ -90,6 +91,25 @@ should be replaced with:
     'filename': 'example-%(version)s.gz',
     'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
   }]
+
+
+.. _depr_pythonpackage_use_easy_install_setup_py_develop:
+
+``use_easy_install`` and ``use_setup_py_develop`` custom easyconfig parameters for ``PythonPackage`` easyblock
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.5.1 (Jan 17th 2018)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``install_target`` **easyconfig parameter instead**
+
+The custom easyconfig parameters ``use_easy_install`` and ``use_setup_py_develop`` for the ``PythonPackage``
+easyblock have been deprecated, since they are obsolete since the ``install_target`` custom easyconfig parameter was
+added in https://github.com/easybuilders/easybuild-easyblocks/pull/1341.
+
+Rather than using ``use_easy_install = True``, you should now use ``install_target = 'easy_install'`` instead.
+
+Rather than using ``use_setup_py_develop = True``, you should now use ``install_target = 'develop'`` instead.
+
 
 .. _depr_copytree_function:
 
