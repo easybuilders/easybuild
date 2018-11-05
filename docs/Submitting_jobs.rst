@@ -37,14 +37,14 @@ Since EasyBuild 3.8.0, three backends are supported:
 
 * ``GC3Pie`` *(default)* (supported since EasyBuild 2.2.0)
 
-  * ``GC3Pie`` version 2.4.0 (or more recent) required (https://gc3pie.readthedocs.org)
+  * ``GC3Pie`` version 2.5.0 (or more recent) required (https://gc3pie.readthedocs.org)
   * works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
   * **note**: requires that a GC3Pie configuration file is provided, see :ref:`submitting_jobs_cfg_job_backend_config`
 
 * ``PbsPython``
 
   * ``pbs_python`` version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
-  * **note**: requires Torque resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
+  * **note**: requires TORQUE resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
 
 * ``Slurm`` (supported since EasyBuild 3.8.0)
 
