@@ -15,14 +15,18 @@ Since EasyBuild v3.8.0, individual easyconfig files or particular (versions of) 
 Symptoms
 --------
 
-Using an easyconfig file or toolchain that was marked as deprecated results in a warning message like::
+Using an easyconfig file or toolchain that was marked as deprecated results in a warning message like:
+
+.. code:: text
 
   WARNING: Deprecated functionality, will no longer work in v4.0: easyconfig file '/home/example/test.eb' is marked as deprecated:
   This is an example message explaining why the easyconfig file was deprecated.
   (see also http://easybuild.readthedocs.org/en/latest/Deprecated-easyconfigs.html)
 
 Or, in case you are trying to use an easyconfig file or toolchain that was marked deprecated in a previous major version
-of EasyBuild::
+of EasyBuild:
+
+.. code:: text
 
   ERROR: Failed to process easyconfig /home/example/test.eb: DEPRECATED (since v4.0) functionality used: easyconfig file '/home/example/test.eb' is marked as deprecated:
   This is an example message explaining why the easyconfig file was deprecated.
