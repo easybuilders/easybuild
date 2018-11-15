@@ -75,6 +75,9 @@ today_fmt = '%a, %d %b %Y %H:%M:%S'  # e.g., Mon, 03 Nov 2014 22:14:42
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
+# don't use (Python) highlighting by default
+highlight_language = 'none'
+
 # Options for HTML output
 # -----------------------
 
