@@ -219,7 +219,7 @@ file. This can be used as an empty template configuration file:
 
 .. code:: shell-session
 
-    $ mkdir -p $HOME/.easybuild
+    $ mkdir -p $HOME/.config/easybuild
     $ eb --confighelp > $HOME/.config/easybuild/config.cfg
 
 .. code:: shell-session
