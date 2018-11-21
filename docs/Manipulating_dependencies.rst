@@ -42,6 +42,45 @@ For example:
      * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
 
 
+.. _filter_deps_by_version
+
+Filtering dependencies based on version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since EasyBuild v3.8.0, filtering dependencies based on their version is also supported.
+
+For each entry in ``--filter-deps``, the expected format is either:
+
+* ``<name>``: a software name without any version specification, to indicate that this dependency
+  should *always* be filtered out (regardless of its version)
+
+  * examples: ``X11``, ``zlib``
+
+* ``<name>=<version>``: a software name and version, to indicate that a *particular version* of this dependency
+  should be filtered out
+
+  * examples: ``zlib=1.2.8``, ``ncurses=5.9``
+
+* ``<name>=<lower_limit>:<upper_limit>``: a software name and a version range, to indicate that any version
+  of this dependency that falls *within the specified range* should be filtered out
+
+When a version range is specified, a lower limit and/or upper limit *can* be specified (separated by ``:``).
+In other words, the version range can be open ended. The ``:`` separator is strictly required.
+
+For both limits, you *must* indicate whether it is either:
+
+* *inclusive*, by using ``[`` for the lower limit, and ``]`` for the upper limit
+* *exclusive*, by using ``]`` for the lower limit, and ``[`` for the upper limit
+
+Examples:
+
+* to filter out ``zlib`` version ``1.2`` up until ``1.2.99`` (incl.), use: ``zlib=[1.2:1.2.99]``
+
+* to filter out ``ncurses`` version 5.0 or newer, use: ``ncurses=[5.0:``
+
+* to filter out any version of ``CMake`` that is older than ``4.0``, use: ``CMake=:4.0[``
+
+
 .. _hide_deps:
 
 Installing dependencies as hidden modules using ``--hide-deps``
