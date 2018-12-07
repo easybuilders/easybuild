@@ -42,6 +42,7 @@ For developers of easyblocks:
 For EasyBuild framework developers:
 
 * :ref:`depr_get_easyblock_class_default_fallback`
+* :ref:`depr_toolchain_add_dependencies`
 
 
 .. _depr_fftw_use_fma4:
@@ -154,6 +155,21 @@ following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBui
 
 The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,
 to retain support for ignoring a missing matching easyblock rather than raising an error.
+
+
+.. _depr_toolchain_add_dependencies:
+
+``add_dependencies`` method in ``Toolchain`` class
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **pass list of dependencies to** ``deps`` **named argument of** ``prepare`` **method instead**
+
+The ``add_dependencies`` method in the ``Toolchain`` class was deprecated, to provide more flexibility in the
+EasyBuild framework w.r.t. handling of dependencies (see https://github.com/easybuilders/easybuild-framework/pull/2674).
+
+Instead, the list of dependencies should be passed to the ``Toolchain.prepare`` method, via the ``deps`` named argument.
 
 
 .. _deprecation_policy:
