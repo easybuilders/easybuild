@@ -79,8 +79,8 @@ Overview of deprecated toolchains:
 The ``goolf`` and ``goolfc`` toolchains have been deprecated,
 since they are superseded by the :ref:`common_toolchains_foss` and ``fosscuda`` toolchains, respectively.
 
-The ``foss*`` toolchains are equivalent with the ``goolf*`` toolchains,
-except that ``binutils`` is also includes as a companion to ``GCC(core)`` in the ``foss*`` toolchains.
+The ``foss*`` toolchains are equivalent to the ``goolf*`` toolchains,
+except that ``binutils`` is also included as a companion to ``GCC(core)`` in the ``foss*`` toolchains.
 
 Versions of the ``gompi`` toolchain that were used as a subtoolchain for a deprecated toolchain
 have also been deprecated; this includes ``gompi`` toolchain versions that match ``1.*``.
@@ -96,7 +96,7 @@ have also been deprecated; this includes ``gompi`` toolchain versions that match
 
 The ``ictce`` toolchain has been deprecated, since it is superseded by the :ref:`common_toolchains_intel`.
 
-The ``ictce`` toolchain is equivalent with ``intel`` w.r.t. toolchain components,
+The ``ictce`` toolchain is equivalent to ``intel`` w.r.t. toolchain components,
 except that ``binutils`` is also included as a companion to ``GCC(core)`` (which serves as a base
 for the Intel compilers) in the ``intel`` toolchain.
 
