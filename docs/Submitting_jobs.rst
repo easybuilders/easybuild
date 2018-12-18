@@ -33,12 +33,12 @@ Selecting the job backend (``--job-backend``)
 
 The job backend to be used can be specified using the ``--job-backend`` EasyBuild configuration option.
 
-Since EasyBuild 2.2.0, two backends are supported:
+Since EasyBuild 3.8.0, three backends are supported:
 
-* ``GC3Pie`` *(default, recommended)*
+* ``GC3Pie`` *(default)* (supported since EasyBuild 2.2.0)
 
-  * ``GC3Pie`` version 2.4.0 (or more recent) required (https://gc3pie.readthedocs.org)
-  * works with different resource managers and job schedulers, including TORQUE, SLURM, etc.
+  * ``GC3Pie`` version 2.5.0 (or more recent) required (https://gc3pie.readthedocs.org)
+  * works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
   * **note**: requires that a GC3Pie configuration file is provided, see :ref:`submitting_jobs_cfg_job_backend_config`
 
 * ``PbsPython``
@@ -46,6 +46,9 @@ Since EasyBuild 2.2.0, two backends are supported:
   * ``pbs_python`` version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
   * **note**: requires TORQUE resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
 
+* ``Slurm`` (supported since EasyBuild 3.8.0)
+
+  * requires Slurm version 17.0 (or more recent), see https://slurm.schedmd.com/
 
 
 .. _submitting_jobs_cfg_job_backend_config:
@@ -59,6 +62,8 @@ To configure the job backend, the path to a configuration file must be specified
 * for ``GC3Pie`` backend: see https://gc3pie.readthedocs.org/en/latest/users/configuration.html
 
   * example configuration files are available at :ref:`submitting_jobs_examples_gc3pie_cfg`
+
+* for ``Slurm`` backend: *(irrelevant, no configuration file required)*
 
 
 
@@ -76,9 +81,35 @@ which job backend is being used:
 * if the ``PbsPython`` job backend is used, the (most common) number of available cores per workernode in the
   target resource is determined; this usually results in jobs requesting full workernodes (at least in terms of cores)
   by default
-* if the ``GC3Pie`` job backend is used, the requested number of cores is left unspecified, which results in falling
-  back to the default mechanism used by GC3Pie to pick a number of cores; most likely, this results in single-core
-  jobs to be submitted by default
+* if the ``GC3Pie`` or ``Slurm`` job backend is used, the requested number of cores is left unspecified,
+  which results in falling back to the default mechanism used by GC3Pie/Slurm to pick a number of cores;
+  most likely, this results in single-core jobs to be submitted by default
+
+
+.. _submitting_jobs_job_dependency_type:
+
+Job dependency type (``-job-deps-type``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The type of dependency that is set by EasyBuild when submitting a job that depends on one or more other jobs
+can be specified via the ``--job-deps-type`` configuration setting:
+
+* with ``--job-deps-type=abort_on_error``, job dependencies will be set such that a job that depends on other jobs
+  will be *aborted* if one of those jobs completes with an error
+
+  * for both ``PbsPython`` and ``Slurm``, this is equivalent with setting job dependencies using ``afterok``
+
+* with ``--job-deps-type=always_run``, job dependencies will be set such that a job that depends on other jobs are
+  *always run*, regardless of whether or not those jobs completed successfully
+
+  * for both ``PbsPython`` and ``Slurm``, this is equivalent with setting job dependencies using ``afterany``
+
+The default value for ``-job-deps-type`` depends on the job backend being used
+(see :ref:`submitting_jobs_cfg_job_backend_config`):
+
+* for the ``GC3Pie`` and ``Slurm`` backends, ``--job-deps-type=abort_on_error`` is the default;
+* for the ``PbsPython`` backend, ``--job-deps-type=always_run`` is the default (because of historical reasons,
+  and for the sake of backward compatibility)
 
 
 .. _submitting_jobs_cfg_job_max_walltime:
@@ -126,6 +157,7 @@ The target resource that should be used by the job backend can be specified usin
 * for ``PbsPython`` backend: hostname of TORQUE PBS server to submit jobs to (default: ``$PBS_DEFAULT``)
 * for ``GC3Pie`` backend: name of resource to submit jobs to (default: none, which implies weighted round-robin
   submission across all available resources)
+* for ``Slurm`` backend: *(not used)*
 
 
 .. _submitting_jobs_usage:
@@ -142,22 +174,20 @@ This following assumes that the required configuration settings w.r.t. the job b
 
 .. _submitting_jobs_usage_pbs_python:
 
-Submitting jobs to a ``PbsPython`` backend
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Submitting jobs to a ``PbsPython`` or ``Slurm`` backend
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When using the ``PbsPython`` backend, EasyBuild will submit separate jobs for each installation to be performed to
-TORQUE, and then exit reporting a list of submitted jobs.
+When using the ``PbsPython`` or ``Slurm`` backend, EasyBuild will submit separate jobs for each installation
+to be performed, and then exit reporting a list of submitted jobs.
 
 To ensure that the installations are performed in the order dictated by the software dependency graph, dependencies
-between installations are specified via *job dependencies*, more specifically using the ``afterany``
-dependency relation (see http://docs.adaptivecomputing.com/mwm/Content/topics/jobAdministration/jobdependencies.html
-for more information).
+between installations are specified via *job dependencies* (see also :ref:`submitting_jobs_job_dependency_type`).
 
 See also :ref:`submitting_jobs_examples_pbs_python_backend`.
 
 .. note:: Submitted jobs will be put on hold until all jobs have been submitted. This is required to ensure that the
           dependencies between jobs can be specified correctly; if a job would run to completion before other jobs that
-          depend on it were submitted, the submission process would fail.
+          depend on it were submitted, the submission process may fail.
 
 
 .. _submitting_jobs_usage_gc3pie:
@@ -218,7 +248,7 @@ Example GC3Pie configuraton for local system
   resourcedir = /tmp/gc3pie
 
 
-Example GC3Pie configuration for PBS/TORQUE
+Example GC3Pie configuration for TORQUE/PBS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: ini
@@ -239,7 +269,7 @@ Example GC3Pie configuration for PBS/TORQUE
   max_memory_per_core = 2 GiB
   architecture = x86_64
 
-  # to add non-std options or use PBS/TORQUE tools located outside of
+  # to add non-std options or use TORQUE/PBS tools located outside of
   # the default PATH, use the following:
   #qsub = /usr/local/bin/qsub -q my-special-queue
 
@@ -325,7 +355,7 @@ dependencies have been processed are actually submitted as jobs::
 Example: submitting installations to TORQUE via pbs_python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the ``PbsPython`` job backend, ``eb`` submits jobs directly to Torque for processing, and exits as soon as all
+Using the ``PbsPython`` job backend, ``eb`` submits jobs directly to TORQUE for processing, and exits as soon as all
 jobs have been submitted::
 
   $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job

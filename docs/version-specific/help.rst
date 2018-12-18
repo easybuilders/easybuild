@@ -90,7 +90,7 @@ Option flag                                                          Option desc
 ``--installpath=INSTALLPATH``                                        Install path for software and modules (def /Users/kehoste/.local/easybuild)                                                                                                                                                                                   
 ``--installpath-modules=INSTALLPATH-MODULES``                        Install path for modules (if None, combine --installpath and --subdir-modules)                                                                                                                                                                                
 ``--installpath-software=INSTALLPATH-SOFTWARE``                      Install path for software (if None, combine --installpath and --subdir-software)                                                                                                                                                                              
-``--job-backend=JOB-BACKEND``                                        Backend to use for submitting jobs (type choice; def GC3Pie) (choices: GC3Pie, PbsPython)                                                                                                                                                                     
+``--job-backend=JOB-BACKEND``                                        Backend to use for submitting jobs (type choice; def GC3Pie) (choices: GC3Pie, PbsPython, Slurm)                                                                                                                                                              
 ``--logfile-format=DIR,FORMAT``                                      Directory name and format of the log file (type comma-separated tuple; def easybuild,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log)                                                                                                                    
 ``--module-depends-on``                                              Use depends_on (Lmod 7.6.1+) for dependencies in all generated modules (implies recursive unloading of modules). (def False)                                                                                                                                  
 ``--module-naming-scheme=MODULE-NAMING-SCHEME``                      Module naming scheme to use (def EasyBuildMNS)                                                                                                                                                                                                                
@@ -103,7 +103,7 @@ Option flag                                                          Option desc
 ``--packagepath=PACKAGEPATH``                                        The destination path for the packages built by package-tool (def /Users/kehoste/.local/easybuild/packages)                                                                                                                                                    
 ``--prefix=PREFIX``                                                  Change prefix for buildpath, installpath, sourcepath and repositorypath (used prefix for defaults /Users/kehoste/.local/easybuild)                                                                                                                            
 ``--recursive-module-unload``                                        Enable generating of modules that unload recursively. (def False)                                                                                                                                                                                             
-``--repository=REPOSITORY``                                          Repository type, using repositorypath (type choice; def FileRepository) (choices: FileRepository, GitRepository)                                                                                                                                              
+``--repository=REPOSITORY``                                          Repository type, using repositorypath (type choice; def FileRepository) (choices: FileRepository, GitRepository, HgRepository)                                                                                                                                
 ``--repositorypath=REPOSITORYPATH``                                  Repository path, used by repository (is passed as list of arguments to create the repository instance). For more info, use --avail-repositories. (type comma-separated list; def /Users/kehoste/.local/easybuild/ebfiles_repo)                                
 ``--sourcepath=SOURCEPATH``                                          Path(s) to where sources should be downloaded (string, colon-separated) (def /Users/kehoste/.local/easybuild/sources)                                                                                                                                         
 ``--subdir-modules=SUBDIR-MODULES``                                  Installpath subdir for modules (def modules)                                                                                                                                                                                                                  
@@ -141,34 +141,38 @@ Option flag                                Option description
 
 GitHub integration options
 --------------------------
-===================================================    =======================================================================================================
-Option flag                                            Option description                                                                                     
-===================================================    =======================================================================================================
-``--check-contrib``                                    Runs checks to see whether the given easyconfigs are ready to be contributed back (def False)          
-``--check-github``                                     Check status of GitHub integration, and report back (def False)                                        
-``--check-style``                                      Run a style check on the given easyconfigs (def False)                                                 
-``--cleanup-easyconfigs``                              Clean up easyconfig files for pull request (def True)                                                  
-``--dump-test-report=DUMP-TEST-REPORT``                Dump test report to specified path (def test_report.md)                                                
-``--from-pr=PR#``                                      Obtain easyconfigs from specified PR (type <type 'int'>)                                               
-``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``      Path to Git working directories for EasyBuild repositories (type <type 'str'>)                         
-``--github-org=GITHUB-ORG``                            GitHub organization (type <type 'str'>)                                                                
-``--github-user=GITHUB-USER``                          GitHub username (type <type 'str'>)                                                                    
-``--install-github-token``                             Install GitHub token (requires --github-user) (def False)                                              
-``--merge-pr=PR#``                                     Merge pull request (type <type 'int'>)                                                                 
-``--new-pr``                                           Open a new pull request (def False)                                                                    
-``--pr-branch-name=PR-BRANCH-NAME``                    Branch name to use for new PRs; '<timestamp>_new_pr_<name><version>' if unspecified (type <type 'str'>)
-``--pr-commit-msg=PR-COMMIT-MSG``                      Commit message for new/updated pull request created with --new-pr (type <type 'str'>)                  
-``--pr-descr=PR-DESCR``                                Description for new pull request created with --new-pr (type <type 'str'>)                             
-``--pr-target-account=PR-TARGET-ACCOUNT``              Target account for new PRs (type <type 'str'>; def easybuilders)                                       
-``--pr-target-branch=PR-TARGET-BRANCH``                Target branch for new PRs (type <type 'str'>; def develop)                                             
-``--pr-target-repo=PR-TARGET-REPO``                    Target repository for new/updating PRs (type <type 'str'>; def easybuild-easyconfigs)                  
-``--pr-title=PR-TITLE``                                Title for new pull request created with --new-pr (type <type 'str'>)                                   
-``--preview-pr``                                       Preview a new pull request (def False)                                                                 
-``--review-pr=PR#``                                    Review specified pull request (type <type 'int'>)                                                      
-``--test-report-env-filter=TEST-REPORT-ENV-FILTER``    Regex used to filter out variables in environment dump of test report                                  
-``--update-pr=PR#``                                    Update an existing pull request (type <type 'int'>)                                                    
-``-u, --upload-test-report``                           Upload full test report as a gist on GitHub (def False)                                                
-===================================================    =======================================================================================================
+===================================================    ========================================================================================================================
+Option flag                                            Option description                                                                                                      
+===================================================    ========================================================================================================================
+``--check-contrib``                                    Runs checks to see whether the given easyconfigs are ready to be contributed back (def False)                           
+``--check-github``                                     Check status of GitHub integration, and report back (def False)                                                         
+``--check-style``                                      Run a style check on the given easyconfigs (def False)                                                                  
+``--cleanup-easyconfigs``                              Clean up easyconfig files for pull request (def True)                                                                   
+``--close-pr=PR#``                                     Close pull request (type <type 'int'>)                                                                                  
+``--close-pr-msg=CLOSE-PR-MSG``                        Custom close message for pull request closed with --close-pr;  (type <type 'str'>)                                      
+``--close-pr-reasons=CLOSE-PR-REASONS``                Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete (type <type 'str'>)
+``--dump-test-report=DUMP-TEST-REPORT``                Dump test report to specified path (def test_report.md)                                                                 
+``--from-pr=PR#``                                      Obtain easyconfigs from specified PR (type <type 'int'>)                                                                
+``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``      Path to Git working directories for EasyBuild repositories (type <type 'str'>)                                          
+``--github-org=GITHUB-ORG``                            GitHub organization (type <type 'str'>)                                                                                 
+``--github-user=GITHUB-USER``                          GitHub username (type <type 'str'>)                                                                                     
+``--install-github-token``                             Install GitHub token (requires --github-user) (def False)                                                               
+``--list-prs=STATE,ORDER,DIRECTION``                   List pull requests (type <type 'str'>; def open,created,desc)                                                           
+``--merge-pr=PR#``                                     Merge pull request (type <type 'int'>)                                                                                  
+``--new-pr``                                           Open a new pull request (def False)                                                                                     
+``--pr-branch-name=PR-BRANCH-NAME``                    Branch name to use for new PRs; '<timestamp>_new_pr_<name><version>' if unspecified (type <type 'str'>)                 
+``--pr-commit-msg=PR-COMMIT-MSG``                      Commit message for new/updated pull request created with --new-pr (type <type 'str'>)                                   
+``--pr-descr=PR-DESCR``                                Description for new pull request created with --new-pr (type <type 'str'>)                                              
+``--pr-target-account=PR-TARGET-ACCOUNT``              Target account for new PRs (type <type 'str'>; def easybuilders)                                                        
+``--pr-target-branch=PR-TARGET-BRANCH``                Target branch for new PRs (type <type 'str'>; def develop)                                                              
+``--pr-target-repo=PR-TARGET-REPO``                    Target repository for new/updating PRs (type <type 'str'>; def easybuild-easyconfigs)                                   
+``--pr-title=PR-TITLE``                                Title for new pull request created with --new-pr (type <type 'str'>)                                                    
+``--preview-pr``                                       Preview a new pull request (def False)                                                                                  
+``--review-pr=PR#``                                    Review specified pull request (type <type 'int'>)                                                                       
+``--test-report-env-filter=TEST-REPORT-ENV-FILTER``    Regex used to filter out variables in environment dump of test report                                                   
+``--update-pr=PR#``                                    Update an existing pull request (type <type 'int'>)                                                                     
+``-u, --upload-test-report``                           Upload full test report as a gist on GitHub (def False)                                                                 
+===================================================    ========================================================================================================================
 
 
 Informative options
@@ -204,17 +208,18 @@ Option flag                                              Option description
 
 Options for job backend
 -----------------------
-===========================================    =========================================================================================
-Option flag                                    Option description                                                                       
-===========================================    =========================================================================================
-``--job-backend-config=BACKEND-CONFIG``        Configuration file for job backend                                                       
-``--job-cores=CORES``                          Number of cores to request per job (type int)                                            
-``--job-max-jobs=MAX-JOBS``                    Maximum number of concurrent jobs (queued and running, 0 = unlimited) (type int; def 0)  
-``--job-max-walltime=MAX-WALLTIME``            Maximum walltime for jobs (in hours) (type int; def 24)                                  
-``--job-output-dir=OUTPUT-DIR``                Output directory for jobs (default: current directory) (def /Volumes/work/easybuild/docs)
-``--job-polling-interval=POLLING-INTERVAL``    Interval between polls for status of jobs (in seconds) (type <type 'float'>; def 30.0)   
-``--job-target-resource=TARGET-RESOURCE``      Target resource for jobs                                                                 
-===========================================    =========================================================================================
+===========================================    ===========================================================================================================================
+Option flag                                    Option description                                                                                                         
+===========================================    ===========================================================================================================================
+``--job-backend-config=BACKEND-CONFIG``        Configuration file for job backend                                                                                         
+``--job-cores=CORES``                          Number of cores to request per job (type int)                                                                              
+``--job-deps-type=DEPS-TYPE``                  Type of dependency to set between jobs (default depends on job backend) (type choice) (choices: abort_on_error, always_run)
+``--job-max-jobs=MAX-JOBS``                    Maximum number of concurrent jobs (queued and running, 0 = unlimited) (type int; def 0)                                    
+``--job-max-walltime=MAX-WALLTIME``            Maximum walltime for jobs (in hours) (type int; def 24)                                                                    
+``--job-output-dir=OUTPUT-DIR``                Output directory for jobs (default: current directory) (def /Volumes/work/easybuild/docs)                                  
+``--job-polling-interval=POLLING-INTERVAL``    Interval between polls for status of jobs (in seconds) (type <type 'float'>; def 30.0)                                     
+``--job-target-resource=TARGET-RESOURCE``      Target resource for jobs                                                                                                   
+===========================================    ===========================================================================================================================
 
 
 Override options
@@ -267,6 +272,7 @@ Option flag                                                                  Opt
 ``--optarch=OPTARCH``                                                        Set architecture optimization, overriding native architecture optimizations                                                                                                       
 ``--output-format=OUTPUT-FORMAT``                                            Set output format (type choice; def txt) (choices: txt, rst)                                                                                                                      
 ``--parallel=PARALLEL``                                                      Specify (maximum) level of parallellism used during build procedure (type int)                                                                                                    
+``--pre-create-installdir``                                                  Create installation directory before submitting build jobs (def True)                                                                                                             
 ``-p, --pretend``                                                            Does the build/installation in a test directory located in $HOME/easybuildinstall (def False)                                                                                     
 ``--read-only-installdir``                                                   Set read-only permissions on installation directory after installation (def False)                                                                                                
 ``--rpath``                                                                  Enable use of RPATH for linking with libraries (def False)                                                                                                                        
@@ -317,6 +323,7 @@ Software search and build options
 Option flag                            Option description                                                                                                                                                 
 ===================================    ===================================================================================================================================================================
 ``--amend=VAR=VALUE[,VALUE]``          Specify additional search and build parameters (can be used multiple times); for example: versionprefix=foo or patches=one.patch,two.patch)                        
+``--map-toolchains``                   Enable mapping of (sub)toolchains when --try-toolchain(-version) is used (def True)                                                                                
 ``--software=NAME,VERSION``            Search and build software with given name and version (type comma-separated list)                                                                                  
 ``--software-name=NAME``               Search and build software with given name                                                                                                                          
 ``--software-version=VERSION``         Search and build software with given version                                                                                                                       

@@ -87,6 +87,7 @@ Other topics
     Code_style
     Unit-tests
     Useful-scripts
+    Deprecated-easyconfigs
     Deprecated-functionality
     Removed-functionality
     Maintainers

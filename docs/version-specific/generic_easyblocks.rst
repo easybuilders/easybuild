@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -630,6 +630,30 @@ Customised steps in ``MakeCp`` easyblock
 * ``configure_step`` - Configure build if required
 * ``install_step`` - Install by copying specified files and directories.
 
+.. _MesonNinja:
+
+``MesonNinja``
+==============
+
+(derives from EasyBlock)
+
+Support for building and installing software with 'meson' and 'ninja'.
+
+Extra easyconfig parameters specific to ``MesonNinja`` easyblock
+----------------------------------------------------------------
+
+======================    =====================================    =============
+easyconfig parameter      description                              default value
+======================    =====================================    =============
+``separate_build_dir``    Perform build in a separate directory    ``True``     
+======================    =====================================    =============
+
+Customised steps in ``MesonNinja`` easyblock
+--------------------------------------------
+* ``build_step`` - Build with Ninja.
+* ``configure_step`` - Configure with Meson.
+* ``install_step`` - Install with 'ninja install'.
+
 .. _ModuleRC:
 
 ``ModuleRC``
@@ -741,6 +765,42 @@ Customised steps in ``PerlModule`` easyblock
 * ``build_step`` - No separate build procedure for Perl modules.
 * ``configure_step`` - No separate configuration for Perl modules.
 * ``install_step`` - Run install procedure for Perl modules.
+
+.. _PythonBundle:
+
+``PythonBundle``
+================
+
+(derives from :ref:`Bundle`)
+
+Bundle of modules: only generate module files, nothing to build/install
+
+Extra easyconfig parameters specific to ``PythonBundle`` easyblock
+------------------------------------------------------------------
+
+===========================    =========================================================================================================    =============
+easyconfig parameter           description                                                                                                  default value
+===========================    =========================================================================================================    =============
+``altroot``                    Software name of dependency to use to define $EBROOT for this bundle                                         ``None``     
+``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle                                      ``None``     
+``buildcmd``                   Command to pass to setup.py to build the extension                                                           ``"build"``  
+``components``                 List of components to install: tuples w/ name, version and easyblock to use                                  ``()``       
+``default_component_specs``    Default specs to use for every component                                                                     ``{}``       
+``default_easyblock``          Default easyblock to use for components                                                                      ``None``     
+``download_dep_fail``          Fail if downloaded dependencies are detected                                                                 ``None``     
+``install_target``             Option to pass to setup.py                                                                                   ``"install"``
+``options``                    Dictionary with extension options.                                                                           ``{}``       
+``req_py_majver``              Required major Python version (only relevant when using system Python)                                       ``2``        
+``req_py_minver``              Required minor Python version (only relevant when using system Python)                                       ``6``        
+``runtest``                    Run unit tests.                                                                                              ``True``     
+``unpack_sources``             Unpack sources prior to build/install                                                                        ``True``     
+``use_easy_install``           Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
+``use_pip``                    Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip_editable``           Install using 'pip install --editable'                                                                       ``False``    
+``use_pip_for_deps``           Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_setup_py_develop``       Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
+``zipped_egg``                 Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
+===========================    =========================================================================================================    =============
 
 .. _PythonPackage:
 
@@ -921,11 +981,12 @@ easyconfig parameter              description                                   
 ``m32``                           Enable 32-bit toolchain                                                                                                                                                                                ``False``           
 ``multilib``                      Build multilib gcc (both i386 and x86_64)                                                                                                                                                              ``False``           
 ``pplwatchdog``                   Enable PPL watchdog                                                                                                                                                                                    ``False``           
-``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' & co when linking                                                                                                                                   ``False``           
+``prefer_lib_subdir``             Configure GCC to prefer 'lib' subdirs over 'lib64' when linking                                                                                                                                        ``False``           
 ``prefix_opt``                    Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``            
 ``requires_runtime_license``      Boolean indicating whether or not a runtime license is required                                                                                                                                        ``True``            
 ``serial_number``                 Serial number for the product                                                                                                                                                                          ``None``            
 ``tar_config_opts``               Override tar settings as determined by configure.                                                                                                                                                      ``False``           
+``use_gold_linker``               Configure GCC to use GOLD as default linker                                                                                                                                                            ``True``            
 ``usetmppath``                    Use temporary path for installation                                                                                                                                                                    ``False``           
 ``withcloog``                     Build GCC with CLooG support                                                                                                                                                                           ``False``           
 ``withisl``                       Build GCC with ISL support                                                                                                                                                                             ``False``           

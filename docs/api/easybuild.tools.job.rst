@@ -9,6 +9,7 @@ Submodules
    easybuild.tools.job.backend
    easybuild.tools.job.gc3pie
    easybuild.tools.job.pbs_python
+   easybuild.tools.job.slurm
 
 Module contents
 ---------------
