@@ -32,14 +32,17 @@ For authors of easyconfig files:
 
 * :ref:`depr_fftw_use_fma4`
 * :ref:`depr_sources_2_element_tuple`
+* :ref:`depr_pythonpackage_use_easy_install_setup_py_develop`
 
 For developers of easyblocks:
 
 * :ref:`depr_copytree_function`
+* :ref:`depr_adjust_permissions_skip_symlinks`
 
 For EasyBuild framework developers:
 
 * :ref:`depr_get_easyblock_class_default_fallback`
+* :ref:`depr_toolchain_add_dependencies`
 
 
 .. _depr_fftw_use_fma4:
@@ -90,6 +93,25 @@ should be replaced with:
     'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
   }]
 
+
+.. _depr_pythonpackage_use_easy_install_setup_py_develop:
+
+``use_easy_install`` and ``use_setup_py_develop`` custom easyconfig parameters for ``PythonPackage`` easyblock
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.5.1 (Jan 17th 2018)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``install_target`` **easyconfig parameter instead**
+
+The custom easyconfig parameters ``use_easy_install`` and ``use_setup_py_develop`` for the ``PythonPackage``
+easyblock have been deprecated, since they are obsolete since the ``install_target`` custom easyconfig parameter was
+added in https://github.com/easybuilders/easybuild-easyblocks/pull/1341.
+
+Rather than using ``use_easy_install = True``, you should now use ``install_target = 'easy_install'`` instead.
+
+Rather than using ``use_setup_py_develop = True``, you should now use ``install_target = 'develop'`` instead.
+
+
 .. _depr_copytree_function:
 
 ``copytree`` function
@@ -103,6 +125,19 @@ The ``copytree`` function, which was a copy of the ``shutil.copytree`` function 
 supported) has been deprecated in favor of the superior ``copy_dir`` function in the ``easybuild.tools.filetools`` module.
 
 ``copy_dir`` graciously handles any exceptions that occur, and is aware of the EasyBuild *dry run* mode.
+
+.. _depr_adjust_permissions_skip_symlinks:
+
+``skip_symlinks`` named argument for ``adjust_permissions``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0 (Nov 2018)
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: *(none required)*
+
+The ``skip_symlinks`` argument for the ``adjust_permissions`` function has been deprecated since ``adjust_permissions``
+has been changed to *always* skip symbolic links (this was already the default behaviour); see also
+https://github.com/easybuilders/easybuild-framework/pull/2644 .
 
 
 .. _depr_get_easyblock_class_default_fallback:
@@ -120,6 +155,21 @@ following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBui
 
 The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,
 to retain support for ignoring a missing matching easyblock rather than raising an error.
+
+
+.. _depr_toolchain_add_dependencies:
+
+``add_dependencies`` method in ``Toolchain`` class
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0
+* *will be removed in:* EasyBuild v4.0
+* *alternatives*: **pass list of dependencies to** ``deps`` **named argument of** ``prepare`` **method instead**
+
+The ``add_dependencies`` method in the ``Toolchain`` class was deprecated, to provide more flexibility in the
+EasyBuild framework w.r.t. handling of dependencies (see https://github.com/easybuilders/easybuild-framework/pull/2674).
+
+Instead, the list of dependencies should be passed to the ``Toolchain.prepare`` method, via the ``deps`` named argument.
 
 
 .. _deprecation_policy:

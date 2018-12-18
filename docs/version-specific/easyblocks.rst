@@ -44,6 +44,7 @@
 
     * BuildEnv
     * CrayToolchain
+    * PythonBundle
     * SystemCompiler
     * SystemMPI
     * Toolchain
@@ -287,6 +288,7 @@
     * EB_tbb
     * EB_VTune
 
+  * MesonNinja
   * ModuleRC
   * PackedBinary
 
