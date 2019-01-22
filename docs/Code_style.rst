@@ -32,3 +32,5 @@ Style guides that go a step beyond PEP8:
 Automatic rewriting of Python code: http://pypi.python.org/pypi/PythonTidy/1.22
 
 ``pep8`` might be a useful tool to check PEP8 compliance: https://github.com/jcrocholl/pep8
+
+Code style in easy-configs can be **automatically checked** using ``--check-style``, for example: ``eb --check-style ./sympy-1.3-intel-2018a-Python-2.7.14.eb``
