@@ -25,6 +25,8 @@ The only (major) exception to PEP8 is our preference for longer line lengths: li
 Notes
 ~~~~~
 
+Code style in easyconfig files can be **automatically checked** using ``--check-contrib``, for example: ``eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb`` (see :ref:`contributing_review_process_code_style` for more details)
+
 Style guides that go a step beyond PEP8:
  * http://www.gramps-project.org/wiki/index.php?title=Programming_guidelines
  * http://code.google.com/p/volatility/wiki/StyleGuide
@@ -32,5 +34,3 @@ Style guides that go a step beyond PEP8:
 Automatic rewriting of Python code: http://pypi.python.org/pypi/PythonTidy/1.22
 
 ``pep8`` might be a useful tool to check PEP8 compliance: https://github.com/jcrocholl/pep8
-
-Code style in easy-configs can be **automatically checked** using ``--check-style``, for example: ``eb --check-style ./sympy-1.3-intel-2018a-Python-2.7.14.eb``
