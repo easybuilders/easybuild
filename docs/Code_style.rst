@@ -25,7 +25,9 @@ The only (major) exception to PEP8 is our preference for longer line lengths: li
 Notes
 ~~~~~
 
-Code style in easyconfig files can be **automatically checked** using ``--check-contrib``, for example: ``eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb`` (see :ref:`contributing_review_process_code_style` for more details)
+Code style in easyconfig files can be **automatically checked** using ``--check-contrib``, 
+for example: ``eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb`` 
+(see :ref:`contributing_review_process_code_style` for more details).
 
 Style guides that go a step beyond PEP8:
  * http://www.gramps-project.org/wiki/index.php?title=Programming_guidelines
