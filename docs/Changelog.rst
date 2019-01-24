@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20190124.01** (`Jan 24th 2019`): add definitions for ``2019a`` common toolchains (see :ref:`common_toolchains`)
 * **release 20181218.01** (`Dec 18th 2018`): update release notes for EasyBuild v3.8.0 (see :ref:`release_notes_eb380`)
 * **release 20181114.01** (`Nov 14th 2018`): add documentation on deprecated easyconfigs & toolchains (:ref:`deprecated_easyconfigs`)
 * **release 20181104.01** (`Nov 4th 2018`): update ``--job`` documentation to also cover ``Slurm`` job backend (see :ref:`submitting_jobs`)
