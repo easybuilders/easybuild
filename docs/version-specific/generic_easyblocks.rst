@@ -246,6 +246,7 @@ easyconfig parameter        description                                         
 ========================    ===================================================================================================================================================================================================    =============
 ``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
 ``buildcmd``                Command to pass to setup.py to build the extension                                                                                                                                                     ``"build"``  
+``check_ldshared``          Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                    ``False``    
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                                                                                           ``None``     
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
@@ -425,6 +426,7 @@ easyconfig parameter        description                                         
 ========================    ===================================================================================================================================================================================================    =============
 ``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``     
 ``buildcmd``                Command to pass to setup.py to build the extension                                                                                                                                                     ``"build"``  
+``check_ldshared``          Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                    ``False``    
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``       
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                                                                                           ``None``     
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``     
@@ -524,6 +526,7 @@ Extra easyconfig parameters specific to ``FortranPythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``check_ldshared``          Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                          ``False``    
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
@@ -784,6 +787,7 @@ easyconfig parameter           description                                      
 ``altroot``                    Software name of dependency to use to define $EBROOT for this bundle                                         ``None``     
 ``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle                                      ``None``     
 ``buildcmd``                   Command to pass to setup.py to build the extension                                                           ``"build"``  
+``check_ldshared``             Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                          ``False``    
 ``components``                 List of components to install: tuples w/ name, version and easyblock to use                                  ``()``       
 ``default_component_specs``    Default specs to use for every component                                                                     ``{}``       
 ``default_easyblock``          Default easyblock to use for components                                                                      ``None``     
@@ -818,6 +822,7 @@ Extra easyconfig parameters specific to ``PythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``check_ldshared``          Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                          ``False``    
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
@@ -1091,6 +1096,7 @@ Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``check_ldshared``          Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                          ``False``    
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
@@ -1122,6 +1128,7 @@ Extra easyconfig parameters specific to ``VersionIndependentPythonPackage`` easy
 easyconfig parameter        description                                                                                                  default value
 ========================    =========================================================================================================    =============
 ``buildcmd``                Command to pass to setup.py to build the extension                                                           ``"build"``  
+``check_ldshared``          Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                          ``False``    
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                 ``None``     
 ``install_target``          Option to pass to setup.py                                                                                   ``"install"``
 ``options``                 Dictionary with extension options.                                                                           ``{}``       
