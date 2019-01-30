@@ -5,16 +5,17 @@
 Template names/values derived from easyconfig instance
 ------------------------------------------------------
 
-===========================    =============================
-Template name                  Template value               
-===========================    =============================
-``%(nameletter)s``             First letter of software name
-``%(toolchain_name)s``         Toolchain name               
-``%(toolchain_version)s``      Toolchain version            
-``%(version_major_minor)s``    Major.Minor version          
-``%(version_major)s``          Major version                
-``%(version_minor)s``          Minor version                
-===========================    =============================
+===========================    ========================================================
+Template name                  Template value                                          
+===========================    ========================================================
+``%(arch)s``                   System architecture (e.g. x86_64, aarch64, ppc64le, ...)
+``%(nameletter)s``             First letter of software name                           
+``%(toolchain_name)s``         Toolchain name                                          
+``%(toolchain_version)s``      Toolchain version                                       
+``%(version_major_minor)s``    Major.Minor version                                     
+``%(version_major)s``          Major version                                           
+``%(version_minor)s``          Minor version                                           
+===========================    ========================================================
 
 
 Template names/values for (short) software versions

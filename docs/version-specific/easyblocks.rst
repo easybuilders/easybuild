@@ -319,6 +319,7 @@
     * EB_Hadoop
     * EB_MTL4
     * EB_picard
+    * EB_RepeatMasker
 
   * Waf
 
