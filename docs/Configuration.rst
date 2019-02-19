@@ -126,7 +126,7 @@ If multiple configuration files are listed via a mechanism listed above, the set
 configuration file have preference over the others.
 
 Each available configuration file will be used, and the configuration settings specified in these files
-will be retained according to the order of preference as indicated above: settings in configuration files specfied via
+will be retained according to the order of preference as indicated above: settings in configuration files specified via
 ``--configfiles`` override those in configuration files specified via ``$EASYBUILD_CONFIGFILES``, which in turns override
 settings in default configuration files.
 

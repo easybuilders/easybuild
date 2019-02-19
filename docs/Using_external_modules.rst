@@ -93,7 +93,7 @@ The following keys are supported:
 * ``version``: specifies the software version(s) that is (are) provided by the module
 * ``prefix``: specifies the installation prefix of the software that is provided by the module
 
-For ``prefix``, a couple of different options are avaialble, i.e.:
+For ``prefix``, a couple of different options are available, i.e.:
 
 * specifying an absolute path (cfr. ``cray-hdf5-parallel/1.8.13`` in the example above)
 * specifying the environment variable that is defined by the module and provides the installation prefix

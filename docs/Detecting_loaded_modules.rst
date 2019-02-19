@@ -27,7 +27,7 @@ with the software installations performed by EasyBuild, i.e.:
 
 * they may cause installations failures, for example due to incompatibilities with the modules being loaded
   during the installation procedure being performed;
-* they may cause installations to work in that particular environment, for example by providing a neccessary
+* they may cause installations to work in that particular environment, for example by providing a necessary
   dependency
 
 Since manually loading modules may affect the reproducibility of software installations, it should be discouraged.

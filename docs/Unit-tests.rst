@@ -149,7 +149,7 @@ instead. Thus, to set a particular configuration option ``--foo``, you should de
 Modules tool to use for running tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-One particular configuration option worth mentioning explicitely is the modules tool that is to be used by the EasyBuild
+One particular configuration option worth mentioning explicitly is the modules tool that is to be used by the EasyBuild
 framework, which is by default the traditional Tcl/C environment modules, referred to as ``EnvironmentModulesC`` in
 EasyBuild configuration terms (see ``eb --help`` and ``eb --avail-modules-tools``).
 

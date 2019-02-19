@@ -592,7 +592,7 @@ This takes care of all the steps required to make a contribution, i.e.:
 * moving easyconfig files to the right location in the repository (e.g. ``easybuild/easyconfigs/e/EasyBuild/``)
 * staging and committing the files in the feature branch
 * pushing the feature branch to your fork of the relevant EasyBuild repository on GitHub
-* creating the pull request, targetting the ``develop`` branch of the central EasyBuild repository (e.g. ``easybuilders/easybuild-easyconfigs``)
+* creating the pull request, targeting the ``develop`` branch of the central EasyBuild repository (e.g. ``easybuilders/easybuild-easyconfigs``)
 
 It should be clear that automating this whole procedure with a single simple ``eb`` command greatly lowers the bar
 for contributing, especially since it even alleviates the need for interacting directly with ``git`` entirely!
