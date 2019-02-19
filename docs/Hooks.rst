@@ -176,7 +176,7 @@ it will be replaced with the actual value of the ``version`` easyconfig paramete
 This can be avoided by temporarily disabling templating via ``self.cfg.enable_templating``, should the need arise.
 
 There is one notable exception to this: templates in easyconfig parameters are *not* resolved in ``parse_hook``,
-because templating has been disabled explicitely before ``parse_hook`` is called;
+because templating has been disabled explicitly before ``parse_hook`` is called;
 this helps significantly to simplify manipulating of easyconfig parameter values
 (see also :ref:`hooks_caveats_manipulating`).
 
@@ -205,7 +205,7 @@ More specifically, the following approach will *not* work in any of the (step) h
 
     def pre_fetch_hook(self):
         "Example of pre-fetch hook to manipulate list of patches."
-        # this does NOT have the intented affect in any pre- or post-step hook
+        # this does NOT have the intended affect in any pre- or post-step hook
         self.cfg['patches'].append('example.patch')
 
 The problem here is that the value obtained via ``self.cfg['patches']`` is not a reference

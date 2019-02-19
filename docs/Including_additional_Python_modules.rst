@@ -139,7 +139,7 @@ components (compilers, MPI libraries, BLAS/LAPACK/FFT libraries, ...) can be don
 
 EasyBuild will determine whether the Python module is a *toolchain definition* or implements support for an *additional
 toolchain component* based on the name of the directory in which it is located. Implementations of toolchain components
-are expeced to be located in a directory named according to the type of component (``compiler``, ``mpi``, ``linalg``
+are expected to be located in a directory named according to the type of component (``compiler``, ``mpi``, ``linalg``
 or ``fft``).
 
 To verify that EasyBuild is aware of the included toolchains, ``--list-toolchains`` can be used.

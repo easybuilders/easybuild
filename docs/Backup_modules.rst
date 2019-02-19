@@ -9,7 +9,7 @@ to compare and assess that the changes in the newly generated module file match 
 Backing up of existing modules can be enabled with ``--backup-modules``.
 
 Backups are stored in the same directory as where the module file was located,
-and the files are given an additional extention of the form ``.bak_<year><month><day><hour><min><sec>``.
+and the files are given an additional extension of the form ``.bak_<year><month><day><hour><min><sec>``.
 
 * With module files in Tcl syntax, the backup module file is hidden by adding a leading dot to the filename; 
   this is done to avoid that it is displayed as a normal module in ``module avail``.

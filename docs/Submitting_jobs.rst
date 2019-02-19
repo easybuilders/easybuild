@@ -227,8 +227,8 @@ When using GC3Pie as a job backend, a configuration file must be provided via ``
 This section includes a couple of examples of GC3Pie configuration files (see also
 https://gc3pie.readthedocs.org/en/latest/users/configuration.html).
 
-Example GC3Pie configuraton for local system
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example GC3Pie configuration for local system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: ini
 

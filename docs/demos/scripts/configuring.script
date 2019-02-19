@@ -68,7 +68,7 @@ eb --show-config
 ### - $HOME/.local/easybuild is the default value for the 'prefix' configuration option
 ###
 ### - the 'buildpath', 'installpath', 'repositorypath', and 'sourcepath' configuration options are derived from 'prefix',
-###   unless they were specified explicitely
+###   unless they were specified explicitly
 ###
 ### - by default, the 'robot-paths' configuration option includes the path to the easyconfig files included in the EasyBuild installation
 
