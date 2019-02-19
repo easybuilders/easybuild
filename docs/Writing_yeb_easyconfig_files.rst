@@ -433,7 +433,7 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
 
     # compiler toolchain dependencies
     # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
-    # because of toolchain preperation functions
+    # because of toolchain preparation functions
         dependencies:
             - *comp_name: *comp_version
             - OpenMPI: 1.6.4

@@ -92,7 +92,7 @@ There are a couple of specific requirements for the base container image:
 
 The ``easybuild`` user will be used when running EasyBuild to install the specified software stack.
 
-.. note:: The generated container recipe currrently hardcodes some of this.
+.. note:: The generated container recipe currently hardcodes some of this.
           We intend to make this more configurable in a future version of EasyBuild.
 
 
@@ -315,7 +315,7 @@ Configuration
 -------------
 
 .. note:: You can specify each of these configuration options either as options to the ``eb`` command,
-          via the equivalent ``$EASYBUILD_CONTAINER*`` environment variable, or via an EasyBuild configuation file;
+          via the equivalent ``$EASYBUILD_CONTAINER*`` environment variable, or via an EasyBuild configuration file;
           see :ref:`configuration_types`.
 
 .. _containers_cfg_path:

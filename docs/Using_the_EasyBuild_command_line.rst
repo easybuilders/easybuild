@@ -23,7 +23,7 @@ This can be done in a number of ways:
 * :ref:`specifying_easyconfigs_set_of_easyconfigs`
 * :ref:`from_pr`
 
-Whenever EasyBuild searches for *explicitely specified* easyconfig files, it considers a couple of locations, i.e. (in order of preference):
+Whenever EasyBuild searches for *explicitly specified* easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
 (i)   the local working directory
 (ii)  the robot search path (see :ref:`robot_search_path`)
@@ -36,7 +36,7 @@ These locations are only considered for easyconfig files that are specified only
 .. note::
   For easyconfig files specified on the ``eb`` command line, the *full* robot search path is only considered since
   EasyBuild v2.0.0. Earlier versions only considered the local working directory and the easyconfig files that are
-  part of the active EasyBuild installation for *explicitely specified* easyconfig files.
+  part of the active EasyBuild installation for *explicitly specified* easyconfig files.
 
 .. _specifying_easyconfigs_single:
 

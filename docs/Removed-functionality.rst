@@ -350,7 +350,7 @@ Module path of default class for extensions
 * *removed in:* EasyBuild v2.0
 * *alternative(s)*: *(none required, module path is derived from specified class name)*
 
-Explicitely specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is
+Explicitly specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is
 no longer possible. Only the class name should be specified, the corresponding module path is derived from it.
 
 Module path for easyblocks
@@ -385,7 +385,7 @@ alternative module naming schemes:
 
 * the ``modules`` class variable and the ``add_module``/``remove_module`` methods are removed; modules should be
   (un)loaded using the ``load`` and ``unload`` methods instead
-* the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method aare removed; the class instance
+* the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method are removed; the class instance
   should be created with a specific list of module paths instead
 * the ``Modules`` class to obtain a class instance representing a modules tool interface is removed;
   the ``modules_tool`` function should be used instead

@@ -401,7 +401,7 @@ A couple of shell tools may be required, depending on the particular use case (i
 * shell builtin commands:
 
   * ``type``, for inspecting the ``module`` function (if defined)
-  * ``ulimit``, for quering user limits
+  * ``ulimit``, for querying user limits
 
 * tools for unpacking (source) archives:
 
@@ -409,9 +409,9 @@ A couple of shell tools may be required, depending on the particular use case (i
   * occasionally required: ``unzip``, ``unxz``
 
 * ``patch``, for applying patch files to unpacked sources (relatively common)
-* ``rpm`` or ``dpkg``, for quering OS dependencies (only needed occasionally)
+* ``rpm`` or ``dpkg``, for querying OS dependencies (only needed occasionally)
 * ``locate``, only as a (poor mans) fallback to ``rpm``/``dpkg`` (rarely needed)
-* ``sysctl``, for quering system characteristics (only required on non-Linux systems)
+* ``sysctl``, for querying system characteristics (only required on non-Linux systems)
 
 .. _required_modules_tool:
 
@@ -443,7 +443,7 @@ Supported module tools:
 
 .. note::
   For Lmod specifically, EasyBuild will try to fall back to finding the ``lmod`` binary via the ``$LMOD_CMD``
-  environment variable, in case ``lmod`` is not availabe in ``$PATH``.
+  environment variable, in case ``lmod`` is not available in ``$PATH``.
 
   In EasyBuild versions *prior* to 2.1.1, the path specified by ``$LMOD_CMD`` was (erroneously) preferred over the
   (first) ``lmod`` binary available via ``$PATH``.

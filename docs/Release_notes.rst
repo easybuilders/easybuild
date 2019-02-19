@@ -390,7 +390,7 @@ bugfix/update release
   - solve '``version UUID_1.0 not found``' problem in LibUUID easyconfigs (`#6962 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6962>`_)
   - eliminate dependency on ancient problematic LibUUID library, replace with util-linux (`#6963 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6963>`_)
   - force building of ``ccmake`` for CMake 3.12.1 + fix deps (`#6967 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6967>`_)
-  - fix broken installation for Python 3.6.2 & 3.6.3 with PyNaCl as dep for paramiko extension by explicitely including previous PyNaCl version as extension (`#6971 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6971>`_)
+  - fix broken installation for Python 3.6.2 & 3.6.3 with PyNaCl as dep for paramiko extension by explicitly including previous PyNaCl version as extension (`#6971 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6971>`_)
   - fix source URL for ADMIXTURE (no https) + add SHA256 checksum (`#6982 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6982>`_)
   - add missing NSS/DBus dependencies to Qt 5.10.1 easyconfigs built with foss toolchain to ensure that QtWebEngine component gets installed (`#7005 <https://github.com/easybuilders/easybuild-easyconfigs/pull/7005>`_)
   - add '``openssl``' OS deps in Perl 5.28.0 easyconfig for ``Net::ssleay`` (`#7008 <https://github.com/easybuilders/easybuild-easyconfigs/pull/7008>`_)
@@ -924,7 +924,7 @@ feature release
   * add 10 packages that were previously downloaded in Python 3.6.4 easyconfigs (`#6081 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6081>`_)
   * add patch for Tensorflow 1.6 & 1.7 to include missing -lrt link flag (needed in CentOS6) (`#6089 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6089>`_)
   * fix checksums for R extensions that were updated in place in easyconfigs for R versions 3.4.3 & 3.4.4 (`#6118 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6118>`_)
-  * include pkg-config as build dep in recent R easyconfigs (required for atleast nloptr) (`#6122 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6122>`_)
+  * include pkg-config as build dep in recent R easyconfigs (required for at least nloptr) (`#6122 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6122>`_)
   * remove Intel-specific workaround for '``undefined symbol: __stack_chk_guard``' issue from Python 3.6.4 foss/2018a easyconfig (`#6130 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6130>`_)
   * add configopt ``--without-matlab``/``octave`` to all NLopt easyconfigs (`#6132 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6132>`_)
   * also consider ``lib64`` in ``sanity_check_paths`` for Bison 3.0.4 (`#6170 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6170>`_)
@@ -1409,7 +1409,7 @@ feature release
   * updates GAMESS-US easyblock for version 20170420R1 + move ``ddikick.x`` when ``ddi_comm`` is set to '``sockets``' (`#1221 <https://github.com/easybuilders/easybuild-easyblocks/pull/1221>`_)
   * update MRtrix easyblock for 3.0 & beyond + use ``copy`` function (`#1230 <https://github.com/easybuilders/easybuild-easyblocks/pull/1230>`_)
   * update ROOT easyblock to support recent versions that require using CMake, add sanity check, clean up/enhance ``make_module*`` (`#1236 <https://github.com/easybuilders/easybuild-easyblocks/pull/1236>`_)
-  * enhance icc easyblock to inlude multipath include dir in ``$CPATH`` (`#1237 <https://github.com/easybuilders/easybuild-easyblocks/pull/1237>`_, `#1242 <https://github.com/easybuilders/easybuild-easyblocks/pull/1242>`_)
+  * enhance icc easyblock to include multipath include dir in ``$CPATH`` (`#1237 <https://github.com/easybuilders/easybuild-easyblocks/pull/1237>`_, `#1242 <https://github.com/easybuilders/easybuild-easyblocks/pull/1242>`_)
 
 * various bug fixes, including:
 
@@ -1890,7 +1890,7 @@ bugfix/update release
 
     * required for Intel MPI and Intel MKL version 2017.2.174
 
-  * remove ``prefix_opt`` as custom easyconfig paramter for Qt easyblock (`#1120 <https://github.com/easybuilders/easybuild-easyblocks/pull/1120>`_)
+  * remove ``prefix_opt`` as custom easyconfig parameter for Qt easyblock (`#1120 <https://github.com/easybuilders/easybuild-easyblocks/pull/1120>`_)
 
 * various bug fixes, including:
 
@@ -2411,7 +2411,7 @@ feature release
 
 * various enhancements, including:
 
-  * extend OpenFoam-Extend sanity check for decomp libaries (`#784 <https://github.com/easybuilders/easybuild-easyblocks/pull/784>`_)
+  * extend OpenFoam-Extend sanity check for decomp libraries (`#784 <https://github.com/easybuilders/easybuild-easyblocks/pull/784>`_)
   * enhance Java easyblock to support installing Java 6.x (`#940 <https://github.com/easybuilders/easybuild-easyblocks/pull/940>`_)
   * make QuantumESPRESSO easyblock aware of multithreaded FFT (`#954 <https://github.com/easybuilders/easybuild-easyblocks/pull/954>`_)
   * extend PSI easyblock to use PCMSolver and CheMPS2 (`#967 <https://github.com/easybuilders/easybuild-easyblocks/pull/967>`_)
@@ -3257,7 +3257,7 @@ feature + bugfix release
   * support overriding # used cores via ``--parallel`` (`#1393 <https://github.com/easybuilders/easybuild-framework/pull/1393>`_)
   * also define ``$FC`` and ``$FCFLAGS`` in build environment (`#1394 <https://github.com/easybuilders/easybuild-framework/pull/1394>`_)
   * add support extracting for ``.tar.Z`` files (`#1396 <https://github.com/easybuilders/easybuild-framework/pull/1396>`_)
-  * include easybuild/scripts in instalation (`#1397 <https://github.com/easybuilders/easybuild-framework/pull/1397>`_)
+  * include easybuild/scripts in installation (`#1397 <https://github.com/easybuilders/easybuild-framework/pull/1397>`_)
   * ignore hidden directories in find_base_dir (`#1413 <https://github.com/easybuilders/easybuild-framework/pull/1413>`_, `#1415 <https://github.com/easybuilders/easybuild-framework/pull/1415>`_)
   * add ``only_if_module_is_available`` decorator function to guard functionality that uses optional dependencies (`#1416 <https://github.com/easybuilders/easybuild-framework/pull/1416>`_)
   * give easyblocks the possibility to choose ``maxhits`` for ``run_cmd_qa`` (`#1417 <https://github.com/easybuilders/easybuild-framework/pull/1417>`_)
@@ -3528,7 +3528,7 @@ feature + bugfix release
   * stop making ``ModulesTool`` class a singleton since it causes problems when multilple toolchains are in play (`#1299 <https://github.com/easybuilders/easybuild-framework/pull/1299>`_)
   * don't modify values of 'paths' list passed as argument to prepend_paths in ``ModuleGenerator`` (`#1300 <https://github.com/easybuilders/easybuild-framework/pull/1300>`_)
   * fix issue with ``EasyConfig.dump()`` + cleanup (`#1308 <https://github.com/easybuilders/easybuild-framework/pull/1308>`_), `#1311 <https://github.com/easybuilders/easybuild-framework/pull/1311>`_)
-  * reenable (and fix) accidentally disabled test (`#1316 <https://github.com/easybuilders/easybuild-framework/pull/1316>`_)
+  * re-enable (and fix) accidentally disabled test (`#1316 <https://github.com/easybuilders/easybuild-framework/pull/1316>`_)
 
 **easyblocks**
 
@@ -3778,7 +3778,7 @@ feature + bugfix release
 
 * various bug fixes, including:
 
-  * fix Score-P easyblock for compiler-only toolchains, include Qt as optional dependecy (`#552 <https://github.com/easybuilders/easybuild-easyblocks/pull/552>`_)
+  * fix Score-P easyblock for compiler-only toolchains, include Qt as optional dependency (`#552 <https://github.com/easybuilders/easybuild-easyblocks/pull/552>`_)
   * fix definition of ``$MKLROOT``, should be set to '``mkl``' subdir of install dir (`#576 <https://github.com/easybuilders/easybuild-easyblocks/pull/576>`_)
   * add ``-libmpichf90`` to list of MPI libraries in NWChem easyblock (`#584 <https://github.com/easybuilders/easybuild-easyblocks/pull/584>`_)
   * stop using '``$root``' to make easyblocks compatible with module files in Lua syntax (`#590 <https://github.com/easybuilders/easybuild-easyblocks/pull/590>`_)
@@ -4353,7 +4353,7 @@ feature + bugfix release
     * example: ``GCC/4.7.2`` in ``Core`` subdir, ``OpenMPI/1.6.5`` in ``Compiler/GCC/4.7.2`` subdir
 
   * make ``ModuleNamingScheme`` class a singleton, move it into ``easybuild.tools.module_naming_scheme.mns`` module
-  * implement ``ActiveMNS`` wrapper class for quering active module naming scheme
+  * implement ``ActiveMNS`` wrapper class for querying active module naming scheme
   * implement toolchain inspection functions that can be used in a custom module naming scheme
 
     * ``det_toolchain_compilers``, ``det_toolchain_mpi`` in ``easybuild.tools.module_naming_scheme.toolchain``
@@ -4371,7 +4371,7 @@ feature + bugfix release
 
   * added toolchain definitions for 'common' toolchains: ``intel`` and ``foss`` (`#956 <https://github.com/easybuilders/easybuild-framework/pull/956>`_)
   * implement caching for easyconfig files, parsed easyconfigs and toolchains (`#953 <https://github.com/easybuilders/easybuild-framework/pull/953>`_)
-  * enable ``--ignore-osdeps`` implicitely when ``-D``, ``--dry-run`` or ``--dep-graph`` are used (`#953 <https://github.com/easybuilders/easybuild-framework/pull/953>`_)
+  * enable ``--ignore-osdeps`` implicitly when ``-D``, ``--dry-run`` or ``--dep-graph`` are used (`#953 <https://github.com/easybuilders/easybuild-framework/pull/953>`_)
   * flesh out ``use_group`` and ``det_parallelism`` function, include them in ``easybuild.tools.systemtools`` (`#953 <https://github.com/easybuilders/easybuild-framework/pull/953>`_)
   * make symlinking of module files part of module naming scheme API (`#973 <https://github.com/easybuilders/easybuild-framework/pull/973>`_)
 
@@ -4830,7 +4830,7 @@ feature + bugfix release
 * various bug fixes:
 
   * use unwanted env var functionality to unset ``$MKLROOT`` rather than failing with an error (`#273 <https://github.com/easybuilders/easybuild-easyblocks/pull/273>`_)
-  * always include ``-w`` flag for preprocessor to supress warnings that may break QuantumESPRESSO configure (`#317 <https://github.com/easybuilders/easybuild-easyblocks/pull/317>`_)
+  * always include ``-w`` flag for preprocessor to suppress warnings that may break QuantumESPRESSO configure (`#317 <https://github.com/easybuilders/easybuild-easyblocks/pull/317>`_)
   * link with multithreaded LAPACK libs for ESMF (`#319 <https://github.com/easybuilders/easybuild-easyblocks/pull/319>`_)
   * extend ``noqanda`` list of patterns in CUDA easyblock (`#328 <https://github.com/easybuilders/easybuild-easyblocks/pull/328>`_, `#337 <https://github.com/easybuilders/easybuild-easyblocks/pull/337>`_)
   * add ``import _ctypes`` to Python sanity check commands to capture a common build issue (`#329 <https://github.com/easybuilders/easybuild-easyblocks/pull/329>`_)
@@ -5238,7 +5238,7 @@ feature + bugfix release
 * various bug fixes, including:
 
   * add salt to temporary log file name (`#656 <https://github.com/easybuilders/easybuild-framework/pull/656>`_, `#665 <https://github.com/easybuilders/easybuild-framework/pull/665>`_)
-  * fix determining CPU architecture on Rasberry Pi (ARM) systems (`#655 <https://github.com/easybuilders/easybuild-framework/pull/655>`_, `#662 <https://github.com/easybuilders/easybuild-framework/pull/662>`_)
+  * fix determining CPU architecture on Raspberry Pi (ARM) systems (`#655 <https://github.com/easybuilders/easybuild-framework/pull/655>`_, `#662 <https://github.com/easybuilders/easybuild-framework/pull/662>`_)
   * fix support for determining base path of tarballs containing a single file (`#660 <https://github.com/easybuilders/easybuild-framework/pull/660>`_)
 
 **easyblocks**
@@ -5572,7 +5572,7 @@ feature + bugfix release
 
     * ``--enable-mpi-thread-multiple`` instead of ``--enable-mpi-threads``
 
-  * explicitely add ``--without-openib --without-udapl`` configure options in OpenMPI easyconfig using versionsuffix ``-no-OFED`` (`#168 <https://github.com/easybuilders/easybuild-easyconfigs/pull/168>`_)
+  * explicitly add ``--without-openib --without-udapl`` configure options in OpenMPI easyconfig using versionsuffix ``-no-OFED`` (`#168 <https://github.com/easybuilders/easybuild-easyconfigs/pull/168>`_)
 
     * this avoids that OpenMPI auto-detects that it can enable Infiniband (OpenIB) support, which doesn't fit the -no-OFED versionsuffix
     * Note: this makes goalf-1.1.0-no-OFED effectively not suitable to produce software builds that are IB-capable!

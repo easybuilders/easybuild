@@ -214,8 +214,8 @@ In the class definition, one or more '``*_step``' methods are redefined, to impl
 in the build and installation procedure.
 
 Each easyblock *must* implement the ``configure``, ``build`` and ``install`` steps, since these are not implemented
-in the abstract ``EasyBlock`` class. This could be done explicitely by redefining the corresponding ``*_step`` methods,
-or implicitely by deriving from existing (generic) easyblocks.
+in the abstract ``EasyBlock`` class. This could be done explicitly by redefining the corresponding ``*_step`` methods,
+or implicitly by deriving from existing (generic) easyblocks.
 
 
 .. _implementing_easyblocks_deriving:
@@ -227,7 +227,7 @@ When implementing an easyblock, it is common to derive from an existing (usually
 and to leverage the functionality provided by it. This approach is typically used when only a specific part
 of the build and installation procedure needs to be customised.
 
-In the (fictious) example below, we derive from the generic ``ConfigureMake`` easyblock to redefine the ``configure``
+In the (fictitious) example below, we derive from the generic ``ConfigureMake`` easyblock to redefine the ``configure``
 step. In this case, we are *extending* the ``configure`` step as implemented by ``ConfigureMake`` rather than
 redefining it entirely, since we call out to the original ``configure_step`` method at the end.
 
@@ -330,7 +330,7 @@ number of useful functions related to this, including:
 
 * ``copy_file(<src>, <dest>)`` to copy an existing file
 
-* ``apply_regex_substitutions(<path>, <list of regex substitions>)`` to patch an existing file
+* ``apply_regex_substitutions(<path>, <list of regex substitutions>)`` to patch an existing file
 
 All of these functions are provided by the ``easybuild.tools.filetools`` module.
 
