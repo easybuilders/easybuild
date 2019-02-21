@@ -6,5 +6,9 @@ install:
   - pip install sphinx codespell
 # command to run tests
 script:
+  # it is (currently) impossible to dismiss ignored suggestions but these are
+  # still added to the exit code (which is a just a count of spelling
+  # suggestions). Since we know we have one of these, we allow for that.
+  # see https://github.com/easybuilders/easybuild/pull/485 for details
   - codespell --skip=".git,version-specific" --ignore-words-list=atleast --quiet-level=2; retVal=$?; if [ $retVal -eq 1 ]; then echo "Got one expected warning, so success!";  else $(exit $retVal); fi;
   - READTHEDOCS=1 sphinx-build docs build
