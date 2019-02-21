@@ -1,7 +1,8 @@
-[![Build Status](https://travis-ci.org/easybuilders/easybuild.svg?branch=develop)](https://travis-ci.org/easybuilders/easybuild)
-
 .. image:: https://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
    :align: center
+
+.. image:: https://travis-ci.org/easybuilders/easybuild.svg?branch=develop
+    :target: https://travis-ci.org/easybuilders/easybuild
 
 `EasyBuild <https://easybuilders.github.io/easybuild>`_ is a software build
 and installation framework that allows you to manage (scientific) software
