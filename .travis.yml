@@ -8,4 +8,4 @@ install:
 # command to run tests
 script:
   - codespell --skip=".git,version-specific" --ignore-words-list=atleast --quiet-level=2; retVal=$?; if [ $retVal -eq 1 ]; then echo "Got one expected warning, so success!";  else $(exit $retVal); fi;
-  - READTHEDOCS=1 sphinx-build docs test
+  - READTHEDOCS=1 sphinx-build docs build
