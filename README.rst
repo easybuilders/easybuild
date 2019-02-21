@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/easybuilders/easybuild.svg?branch=develop)](https://travis-ci.org/easybuilders/easybuild)]
+[![Build Status](https://travis-ci.org/easybuilders/easybuild.svg?branch=develop)]
 
 .. image:: https://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
    :align: center
