@@ -42,7 +42,7 @@ For example:
      * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
 
 
-.. _filter_deps_by_version
+.. _filter_deps_by_version:
 
 Filtering dependencies based on version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
