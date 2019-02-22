@@ -80,7 +80,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@verdurin <https://github.com/verdurin>`_ - e-mail: ``adam.huffman (at) gmail.com`` - IRC/Slack: ``verdurin``
 
-* **Samuel Moors** (`Free University of Brussels <https://hpc.ulb.be//>`_)
+* **Samuel Moors** (`Vrije Universiteit Brussel <https://hpc.vub.be>`_)
 
   * GitHub: `@smoors <https://github.com/smoors>`_ - e-mail: ``samuel.moors (at) vub.be`` - IRC/Slack: ``smoors``
 
