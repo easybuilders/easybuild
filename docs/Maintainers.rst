@@ -80,6 +80,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@verdurin <https://github.com/verdurin>`_ - e-mail: ``adam.huffman (at) gmail.com`` - IRC/Slack: ``verdurin``
 
+* **Samuel Moors** (`Vrije Universiteit Brussel <https://hpc.vub.be>`_)
+
+  * GitHub: `@smoors <https://github.com/smoors>`_ - e-mail: ``samuel.moors (at) vub.be`` - IRC/Slack: ``smoors``
+
 * **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
   * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
