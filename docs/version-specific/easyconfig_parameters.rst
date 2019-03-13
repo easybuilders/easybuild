@@ -1,8 +1,8 @@
 .. _vsd_avail_easyconfig_params:
 
-.. _easyconfig_params:
-
 *(see also* ``eb -a`` or ``eb --avail-easyconfig-params`` *)*
+
+.. _easyconfig_params:
 
 Available easyconfig parameters
 ===============================
