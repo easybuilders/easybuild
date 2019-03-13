@@ -50,8 +50,6 @@ Example:
 Available easyconfig parameters
 -------------------------------
 
-.. XXX UPDATE BY VERSION
-
 About 50 different (generic) easyconfig parameters are supported currently.
 An overview of all available easyconfig parameters is available via the ``-a`` command line option.
 
