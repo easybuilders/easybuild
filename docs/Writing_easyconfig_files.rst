@@ -58,7 +58,7 @@ An overview of all available easyconfig parameters is available via the ``-a`` c
 By default, the parameters specific to generic (default) easyblock ``ConfigureMake`` are included;
 using ``--easyblock``/``-e`` parameters that are specific to a particular easyblock can be consulted.
 
-See :ref:`avail_easyconfig_params` for more details.
+See :ref:`easyconfig_params` for more details.
 
 Example::
 

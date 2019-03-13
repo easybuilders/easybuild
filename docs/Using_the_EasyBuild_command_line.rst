@@ -231,7 +231,7 @@ EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
 ``eb --avail-easyconfig-params``, or ``eb -a`` for short.
 
-Refer to page :ref:`easyconfigs_parameters` for more information, the possible parameters are a very rich set.
+Refer to page :ref:`easyconfig_params` for more information, the possible parameters are a very rich set.
 
 Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock. For example::
 
