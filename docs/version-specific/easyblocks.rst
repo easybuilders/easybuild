@@ -15,6 +15,7 @@
     * EB_Maple
     * EB_Mathematica
     * EB_Molpro
+    * EB_TensorRT
     * JAR
     * PackedBinary
 
@@ -239,6 +240,7 @@
       * EB_python_minus_meep
       * EB_PyZMQ
       * EB_TensorFlow
+      * EB_TensorRT
       * EB_VSC_minus_tools
       * EB_wxPython
       * FortranPythonPackage
@@ -347,6 +349,7 @@
       * EB_python_minus_meep
       * EB_PyZMQ
       * EB_TensorFlow
+      * EB_TensorRT
       * EB_VSC_minus_tools
       * EB_wxPython
       * FortranPythonPackage
