@@ -57,7 +57,7 @@ To instruct EasyBuild to enable RPATH linking, use the ``--rpath`` configuration
 .. note:: For now, ``--experimental`` is also required, since the implementation of RPATH support is not considered fully stable yet.
 
 
-.. _rpath_support_implementation
+.. _rpath_support_implementation:
 
 Implementation
 --------------
@@ -81,7 +81,7 @@ Here, ``/tmp/eb-M3393U/tmpRVJqwr/rpath_wrappers/gcc`` is the wrapper script for 
 which tweaks the list of command line arguments for ``gcc``
 before calling out to the real ``gcc`` command (i.e., ``/example/software/GCCcore/4.9.3/bin/gcc`` in this example).
 
-.. _rpath_support_impl_logs
+.. _rpath_support_impl_logs:
 
 RPATH wrapper script log files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,7 +98,7 @@ the temporary directory used by EasyBuild, for debugging purposes::
 These log files include details on every captured compiler/linker command, i.e. the original list of arguments,
 the tweaked list of arguments that includes the injected ``-rpath`` arguments, etc., and may be helpful to debug the RPATH support.
 
-.. _rpath_support_impl_overhead
+.. _rpath_support_impl_overhead:
 
 Overhead of RPATH wrapper scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
