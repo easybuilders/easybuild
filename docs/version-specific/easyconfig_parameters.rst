@@ -47,13 +47,13 @@ build parameters
 ``buildopts``                Extra options passed to make step (default already has -j X)                                                             ""               
 ``bitbucket_account``        Bitbucket account name to be used to resolve template values in source URLs                                              "%(namelower)s"  
 ``skip``                     Skip existing software                                                                                                   False            
-``parallel``                 Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
 ``stop``                     Keyword to halt the build process after a certain step.                                                                  None             
 ``runtest``                  Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)         None             
 ``sources``                  List of source files                                                                                                     []               
 ``versionsuffix``            Additional suffix for software version (placed after toolchain name)                                                     ""               
 ``preconfigopts``            Extra options pre-passed to configure.                                                                                   ""               
 ``checksums``                Checksums for sources and patches                                                                                        []               
+``skipsteps``                Skip these steps                                                                                                         []               
 ``prebuildopts``             Extra options pre-passed to build command.                                                                               ""               
 ``sanity_check_commands``    format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                          []               
 ``sanity_check_paths``       List of files and directories to check (format: {'files':<list>, 'dirs':<list>})                                         {}               
@@ -61,10 +61,12 @@ build parameters
 ``unpack_options``           Extra options for unpacking source                                                                                       ""               
 ``unwanted_env_vars``        List of environment variables that shouldn't be set during build                                                         []               
 ``patches``                  List of patches to apply                                                                                                 []               
+``pretestopts``              Extra prefix options for test.                                                                                           ""               
 ``maxparallel``              Max degree of parallelism                                                                                                None             
 ``postinstallcmds``          Commands to run after the install step.                                                                                  []               
 ``easybuild_version``        EasyBuild-version this spec-file was written for                                                                         None             
-``skipsteps``                Skip these steps                                                                                                         []               
+``parallel``                 Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
+``testopts``                 Extra options for test.                                                                                                  ""               
 ``source_urls``              List of URLs for source files                                                                                            []               
 ``easyblock``                EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
 ``hidden``                   Install module file as 'hidden' by prefixing its version with '.'                                                        False            
@@ -92,15 +94,17 @@ file-management parameters
 dependencies parameters
 -----------------------
 
-======================    ==============================================================    =================
-**Parameter name**        **Description**                                                   **Default value**
-======================    ==============================================================    =================
-``hiddendependencies``    List of dependencies available as hidden modules                  []               
-``dependencies``          List of dependencies                                              []               
-``osdependencies``        OS dependencies that should be present on the system              []               
-``builddependencies``     List of build dependencies                                        []               
-``allow_system_deps``     Allow listed system dependencies (format: (<name>, <version>))    []               
-======================    ==============================================================    =================
+===========================    ==============================================================    =================
+**Parameter name**             **Description**                                                   **Default value**
+===========================    ==============================================================    =================
+``dependencies``               List of dependencies                                              []               
+``allow_system_deps``          Allow listed system dependencies (format: (<name>, <version>))    []               
+``hiddendependencies``         List of dependencies available as hidden modules                  []               
+``multi_deps``                 Dict of lists of dependency versions over which to iterate        {}               
+``osdependencies``             OS dependencies that should be present on the system              []               
+``multi_deps_load_default``    Load module for first version listed in multi_deps by default     True             
+``builddependencies``          List of build dependencies                                        []               
+===========================    ==============================================================    =================
 
 
 license parameters
