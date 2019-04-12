@@ -71,7 +71,7 @@ feature release
   * add support for installing Python packages with '``pip``' without using ``--ignore-installed`` (`#1647 <https://github.com/easybuilders/easybuild-easyblocks/pull/1647>`_)
   * add support to ``CMakeMake`` easyblock to specify compilers using absolute file path (`#1652 <https://github.com/easybuilders/easybuild-easyblocks/pull/1652>`_, `#1655 <https://github.com/easybuilders/easybuild-easyblocks/pull/1655>`_)
   * stop checking for deprecated ``pgf77`` in sanity check of PGI easyblock (`#1653 <https://github.com/easybuilders/easybuild-easyblocks/pull/1653>`_)
-  * acommodate version 10.1 in CUDA easyblock (`#1654 <https://github.com/easybuilders/easybuild-easyblocks/pull/1654>`_)
+  * accommodate version 10.1 in CUDA easyblock (`#1654 <https://github.com/easybuilders/easybuild-easyblocks/pull/1654>`_)
   * install ``sitecustomize.py`` with Python to support Python package installations for multiple Python versions in a single directory (`#1657 <https://github.com/easybuilders/easybuild-easyblocks/pull/1657>`_)
   * enhance SAMtools easyblock to also install ``libhts.a`` and include/htslib (when applicable) (`#1661 <https://github.com/easybuilders/easybuild-easyblocks/pull/1661>`_)
   * tweak ``PythonPackage`` & ``PythonBundle`` to update ``$EBPYTHONPREFIXES`` rather than ``$PYTHONPATH`` for multi-Python installations + make ``sanity_check_step`` aware of multi_deps (`#1664 <https://github.com/easybuilders/easybuild-easyblocks/pull/1664>`_, `#1678 <https://github.com/easybuilders/easybuild-easyblocks/pull/1678>`_)
