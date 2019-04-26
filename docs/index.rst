@@ -77,6 +77,13 @@ Advanced usage topics
     Using_external_modules
     Wrapping_dependencies
 
+Software-specific topics
+========================
+
+Documentation specific to particular software:
+
+* :ref:`Python and Python packages <software_specific_python>`
+
 Other topics
 ============
 
