@@ -88,6 +88,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
 
+* **Mikael Öhman (`Chalmers University of Technology <https://www.chalmers.se/en>`_)
+
+  * GitHub: `@Micket <https://github.com/Micket>`_ - e-mail: ``micketeer (at) gmail.com`` - IRC/Slack: ``micketeer``
+
 * **Bart Oldeman** (`ComputeCanada <https://www.computecanada.ca/>`_)
 
   * GitHub: `@bartoldeman <https://github.com/bartoldeman>`_ - e-mail: ``bart.oldeman (at) calculquebec.ca`` - IRC/Slack: ``bartoldeman``
