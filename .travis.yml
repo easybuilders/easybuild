@@ -3,9 +3,10 @@ python:
   - "3.6"
 # command to install dependencies
 install:
-  - pip install sphinx codespell
+  - pip install sphinx codespell flake8
 # command to run tests
 script:
+  - flake8 . --count --select=E9,F63,F72,F82 --show-source --statistics
   # it is (currently) impossible to dismiss ignored suggestions but these are
   # still added to the exit code (which is a just a count of spelling
   # suggestions). Since we know we have one of these, we allow for that.
