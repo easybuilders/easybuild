@@ -3272,7 +3272,7 @@ feature + bugfix release
 **framework**
 
 * add support for IBM XL compilers on Power7 and PowerPC (BlueGene) (`#1470 <https://github.com/easybuilders/easybuild-framework/pull/1470>`_)
-* add support fo generic compilation using ``--optarch=GENERIC`` (`#1471 <https://github.com/easybuilders/easybuild-framework/pull/1471>`_)
+* add support for generic compilation using ``--optarch=GENERIC`` (`#1471 <https://github.com/easybuilders/easybuild-framework/pull/1471>`_)
 
   * see also :ref:`controlling_compiler_optimization_flags`
 
@@ -5614,7 +5614,7 @@ feature + bugfix release
   * the newly added toolchains only differ in compilers/MPI library, and all feature OpenBLAS, LAPACK, ScaLAPACK and FFTW
   * `goolfc`: GCC, CUDA (co-compiler), OpenMPI (`#191 <https://github.com/easybuilders/easybuild-easyconfigs/pull/191>`_)
 
-    * a goolfc easyconfig for GROMACS is inluded as proof-of-concept (`#165 <https://github.com/easybuilders/easybuild-easyconfigs/pull/165>`_)
+    * a goolfc easyconfig for GROMACS is included as proof-of-concept (`#165 <https://github.com/easybuilders/easybuild-easyconfigs/pull/165>`_)
 
   * `cgmpolf`: Clang (C/C++ compilers), GCC (Fortran compilers), MPICH (`#213 <https://github.com/easybuilders/easybuild-easyconfigs/pull/213>`_)
   * `cgmvolf`: Clang, GCC, MVAPICH2 (`#218 <https://github.com/easybuilders/easybuild-easyconfigs/pull/218>`_)

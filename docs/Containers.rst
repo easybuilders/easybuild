@@ -285,7 +285,7 @@ The inspect the container image, you can use ``singularity shell`` to start a sh
 
 
 .. note:: We are passing ``--shell "/bin/bash --norc`` to ``singularity shell`` to avoid that the ``.bashrc`` login
-          script thay may be present in your home directory is sourced, since that may include statements that are
+          script that may be present in your home directory is sourced, since that may include statements that are
           not relevant in the container environment.
 
 .. note:: The ``source /etc/profile`` statement should not be required, we intend to fix this in future updates.
