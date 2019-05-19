@@ -110,7 +110,7 @@ directory using ``pip`` would be::
 Installing the EasyBuild packages separately
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each of the EasyBuild packages can also be installed separetely::
+Each of the EasyBuild packages can also be installed separately::
 
     pip install --install-option "--prefix=$HOME/EasyBuild" easybuild-framework
     pip install --install-option "--prefix=$HOME/EasyBuild" easybuild-easyblocks

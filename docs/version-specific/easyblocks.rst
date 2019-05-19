@@ -54,6 +54,7 @@
 
     * CMakeMake
 
+      * CMakeMakeCp
       * CMakePythonPackage
 
         * EB_DOLFIN
@@ -61,6 +62,7 @@
 
       * EB_Armadillo
       * EB_BamTools
+      * EB_Blender
       * EB_CGAL
       * EB_Clang
       * EB_DIRAC
@@ -118,6 +120,7 @@
     * EB_Libint
     * EB_libQGLViewer
     * EB_libxml2
+    * EB_Lua
     * EB_MetaVelvet
     * EB_METIS
     * EB_Molpro
@@ -138,6 +141,7 @@
     * EB_NWChem
     * EB_OCaml
     * EB_Octave
+    * EB_OpenBLAS
     * EB_OpenSSL
     * EB_Paraver
     * EB_Pasha
@@ -173,6 +177,7 @@
     * EB_XCrySDen
     * MakeCp
 
+      * CMakeMakeCp
       * CmdCp
 
         * EB_fastStructure
