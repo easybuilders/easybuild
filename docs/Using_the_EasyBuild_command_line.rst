@@ -21,7 +21,7 @@ This can be done in a number of ways:
 * :ref:`specifying_easyconfigs_single`
 * :ref:`specifying_easyconfigs_command_line`
 * :ref:`specifying_easyconfigs_set_of_easyconfigs`
-* :ref:`from_pr`
+* using ``eb --from-pr`` (see :ref:`github_from_pr`)
 
 Whenever EasyBuild searches for *explicitly specified* easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
@@ -529,8 +529,8 @@ Matching setup:
 
 .. _get_an_overview:
 
-Get an overview of planned installations ``--dry-run`` / ``-D``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Getting an overview of planned installations ``--dry-run`` / ``-D``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combined with ``--robot``, in the form of ``-Dr``)::
 
@@ -560,6 +560,28 @@ Note how the different status symbols denote distinct handling states by EasyBui
 
 .. note:: Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
  will be execute can be obtained using ``--extended-dry-run`` or ``-x``, see :ref:`extended_dry_run`.
+
+.. _eb_missing:
+
+Getting an overview of missing installations ``--missing-modules`` / ``-M``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since EasyBuild v3.9.1, you can obtain a list of missing installations (i.e. easyconfigs for which
+no corresponding environment module file is avaialble yet) using ``eb --missing-modules`` (or ``-eb -M`` for short)::
+
+    $ eb TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb --missing-modules
+    == temporary log file in case of crash /tmp/eb-bjCz9b/easybuild-CSAvhK.log
+
+    2 out of 54 required modules missing:
+
+    * Bazel/0.20.0-GCCcore-8.2.0 (Bazel-0.20.0-GCCcore-8.2.0.eb)
+    * TensorFlow/1.13.1-foss-2019a-Python-3.7.2 (TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb)
+
+    == Temporary log file(s) /tmp/eb-bjCz9b/easybuild-CSAvhK.log* have been removed.
+    == Temporary directory /tmp/eb-bjCz9b has been removed.
+
+Note that dependency resolution is enabled automatically
+(i.e., ``--robot`` is implied when using ``--missing-modules`` or ``-M``).
 
 .. _tweaking_easyconfigs_using_try:
 
