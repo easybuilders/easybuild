@@ -567,7 +567,7 @@ Getting an overview of missing installations ``--missing-modules`` / ``-M``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since EasyBuild v3.9.1, you can obtain a list of missing installations (i.e. easyconfigs for which
-no corresponding environment module file is avaialble yet) using ``eb --missing-modules`` (or ``-eb -M`` for short)::
+no corresponding environment module file is available yet) using ``eb --missing-modules`` (or ``-eb -M`` for short)::
 
     $ eb TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb --missing-modules
     == temporary log file in case of crash /tmp/eb-bjCz9b/easybuild-CSAvhK.log
