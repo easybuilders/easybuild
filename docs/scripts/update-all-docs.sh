@@ -95,9 +95,9 @@ echo "* :ref:\`Available config file constants <avail_cfgfile_constants>\`" >> $
 #  available easyconfig params
 echo ".. _vsd_avail_easyconfig_params:" > $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
-echo ".. _easyconfig_params:" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
-echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 echo "*(see also* \`\`eb -a\`\` or \`\`eb --avail-easyconfig-params\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
+echo ".. _easyconfig_params:" >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 eb -a --output-format rst >> $VERSION_SPECIFIC_DIR/easyconfig_parameters.rst
 

@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakeMakeCp` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -226,6 +226,44 @@ Example easyconfig for ``CMakeMake`` easyblock
     moduleclass = 'data'
     
 
+.. _CMakeMakeCp:
+
+``CMakeMakeCp``
+===============
+
+(derives from :ref:`CMakeMake`, :ref:`MakeCp`)
+
+Software configured with CMake but without 'make install' step
+
+    We use the default CMakeMake implementation, and use install_step from MakeCp.
+
+Extra easyconfig parameters specific to ``CMakeMakeCp`` easyblock
+-----------------------------------------------------------------
+
+========================    ===================================================================================================================================================================================================    ==================
+easyconfig parameter        description                                                                                                                                                                                            default value     
+========================    ===================================================================================================================================================================================================    ==================
+``abs_path_compilers``      Specify compilers via absolute file path (not via command names)                                                                                                                                       ``False``         
+``allow_system_boost``      Always allow CMake to pick up on Boost installed in OS (even if Boost is included as a dependency)                                                                                                     ``False``         
+``build_cmd``               Build command to use                                                                                                                                                                                   ``"make"``        
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
+``configure_cmd``           Configure command to use                                                                                                                                                                               ``"cmake"``       
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``            
+``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``[]``            
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``          
+``install_cmd``             Build command to use                                                                                                                                                                                   ``"make install"``
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``          
+``separate_build_dir``      Perform build in a separate directory                                                                                                                                                                  ``False``         
+``srcdir``                  Source directory location to provide to cmake command                                                                                                                                                  ``None``          
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
+``with_configure``          Run configure script before building                                                                                                                                                                   ``False``         
+========================    ===================================================================================================================================================================================================    ==================
+
+Customised steps in ``CMakeMakeCp`` easyblock
+---------------------------------------------
+* ``configure_step`` - Configure build using CMake
+* ``install_step`` - Install by copying specified files and directories.
+
 .. _CMakePythonPackage:
 
 ``CMakePythonPackage``
@@ -272,7 +310,7 @@ easyconfig parameter        description                                         
 ``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
 ``unpack_sources``          Unpack sources prior to build/install                                                                                                                                                                  ``True``          
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                                                                              ``False``         
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                ``False``         
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                ``None``          
 ``use_pip_editable``        Install using 'pip install --editable'                                                                                                                                                                 ``False``         
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                   ``False``         
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                                                                                           ``False``         
@@ -460,7 +498,7 @@ easyconfig parameter        description                                         
 ``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
 ``unpack_sources``          Unpack sources prior to build/install                                                                                                                                                                  ``True``          
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                                                                              ``False``         
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                ``False``         
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                ``None``          
 ``use_pip_editable``        Install using 'pip install --editable'                                                                                                                                                                 ``False``         
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                   ``False``         
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                                                                                           ``False``         
@@ -557,7 +595,7 @@ easyconfig parameter        description                                         
 ``runtest``                 Run unit tests.                                                                                              ``True``     
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
@@ -825,7 +863,7 @@ easyconfig parameter           description                                      
 ``runtest``                    Run unit tests.                                                                                              ``True``     
 ``unpack_sources``             Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``           Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
-``use_pip``                    Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip``                    Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
 ``use_pip_editable``           Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``           Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``       Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
@@ -858,7 +896,7 @@ easyconfig parameter        description                                         
 ``runtest``                 Run unit tests.                                                                                              ``True``     
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
@@ -1062,6 +1100,8 @@ easyconfig parameter                 description                                
 ``generate_standalone_module``       Add known path extensions and environment variables for the MPI installation to the final module                                                                                                       ``False``           
 ``host_type``                        Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``            
 ``install_cmd``                      Build command to use                                                                                                                                                                                   ``"make install"``  
+``libfabric_configopts``             Configure options for the provided libfabric                                                                                                                                                           ``""``              
+``libfabric_rebuild``                Rebuild the internal libfabric instead of using the provided binary                                                                                                                                    ``True``            
 ``license_activation``               License activation type                                                                                                                                                                                ``"license_server"``
 ``m32``                              Enable 32-bit toolchain                                                                                                                                                                                ``False``           
 ``ofi_internal``                     Use internal shipped libfabric instead of external libfabric                                                                                                                                           ``True``            
@@ -1140,7 +1180,7 @@ easyconfig parameter        description                                         
 ``runtest``                 Run unit tests.                                                                                              ``True``     
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
@@ -1173,7 +1213,7 @@ easyconfig parameter        description                                         
 ``runtest``                 Run unit tests.                                                                                              ``True``     
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
-``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``False``    
+``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
