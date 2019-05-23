@@ -3,17 +3,20 @@
 Generating container recipes & images
 =====================================
 
-EasyBuild has support for generating *container recipes* that will use EasyBuild to build and install a
-specified software stack. In addition, EasyBuild can (optionally) leverage the build tool provided by the
+EasyBuild has support for generating Singularity and Docker *container recipes*
+which will use EasyBuild to build and install a specified software stack.
+In addition, EasyBuild can (optionally) leverage the build tool provided by the
 container software of choice to create *container images*.
 
 .. note:: The features documented here have been available since EasyBuild v3.6.0 but are still *experimental*,
           which implies they are subject to change in upcoming versions of EasyBuild.
 
-          You will need to enable the ``--experimental`` configuration option in order to use them.
+          **You will need to enable the** ``--experimental`` **configuration option in order to use them.**
+
           See :ref:`experimental_features` for more information.
 
-For now (since EasyBuild v3.6.0), only Singularity (http://singularity.lbl.gov/) is supported.
+Initially (since EasyBuild v3.6.0), only Singularity (https://www.sylabs.io/singularity) was supported.
+Since EasyBuild v3.6.2, generating (recipes for) Docker (https://www.docker.com/) containers is also supported.
 
 .. contents::
     :depth: 3
@@ -25,7 +28,7 @@ Requirements
 ------------
 
 * Singularity v2.4 or more recent
-* having ``sudo`` permissions (only required to actually build container images, see :ref:`containers_usage_build_image`)
+* ``sudo`` permissions *(only required to actually build container images, see :ref:`containers_usage_build_image`)*
 
 
 .. _containers_usage:
@@ -47,6 +50,7 @@ that corresponds to the easyconfig files that are specified as arguments to the 
 .. note:: EasyBuild will refuse to overwrite existing container recipes.
 
           To re-generate an already existing recipe file, use the ``--force`` command line option.
+
 
 .. _containers_usage_container_base:
 
@@ -78,6 +82,50 @@ For the ``docker`` and ``shub`` types, an additional *tag* can be specified: ``d
           
           To get started quickly, we recommend using one of the container base images available from
           https://singularity-hub.org/collections/143.
+
+
+.. _containers_usage_template_recipe:
+
+Container template recipe (``--container-template-recipe``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Via the ``--container-template-recipe`` configuration option, you can specify a specific container template recipe
+that EasyBuild should use to generate container recipes.
+
+This gives you control over a variety of aspects, including:
+
+* the operating system (version) used in the container image
+* the location where EasyBuild installs software within the container
+* how EasyBuild is configured when installing software in the container
+* etc.
+
+When generating container recipes, EasyBuild will replace the following template values:
+
+* ``%(bootstrap)s``: bootstrap agent to use
+  * see also https://www.sylabs.io/guides/latest/user-guide/definition_files.html#header
+* ``%(from)s``: argument to pass to bootstrap agent (for example location of local container image)
+* ``%(install_os_deps)s``: list of commands to install required OS packages (for example ``yum install openssl``)
+  * based on ``osdependencies`` specified in easyconfig files
+* ``%(easyconfigs)s``: (list of) easyconfig file name(s)/path(s) to pass to ``eb`` command
+* ``%(modname)s``: module name(s) to load in environment
+
+
+.. _containers_usage_base_config:
+
+Container template recipe (``--container-base-config``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using ``--container-base-config``, values for specific template values can be specified.
+
+Values can be specified as a comma-separated list of ``<key>=<value>`` pairs;
+for example: ``--container-base-config bootstrap=localimage,from:/tmp/example.sif``.
+
+Currently supported keywords include:
+
+* ``bootstrap``: bootstrap agent to use
+* ``from``: argument to pass to bootstrap agent
+
+Specifying any unknown keywords will results in an error.
 
 
 .. _containers_usage_container_base_requirements:
@@ -143,18 +191,18 @@ The container image will be placed in the location specified by the ``--containe
 Example usage
 ~~~~~~~~~~~~~
 
-In this example, we will use a pre-built base container image located at ``/tmp/example.simg``
+In this example, we will use a pre-built base container image located at ``/tmp/example.sif``
 (see also :ref:`containers_usage_container_base`).
 
 To let EasyBuild generate a container recipe for GCC 6.4.0 + binutils 2.28::
 
-    eb GCC-6.4.0-2.28.eb --containerize --container-base-image localimage:/tmp/example.simg --experimental
+    eb GCC-6.4.0-2.28.eb --containerize --container-base-image localimage:/tmp/example.sif --experimental
 
 With other configuration options left to default (see output of ``eb --show-config``),
-this will result in a Singularity container recipe using ``example.simg`` as base image,
+this will result in a Singularity container recipe using ``example.sif`` as base image,
 which will be stored in ``$HOME/.local/easybuild/containers``::
 
-    $ eb GCC-6.4.0-2.28.eb --containerize --container-base-image localimage:/tmp/example.simg --experimental
+    $ eb GCC-6.4.0-2.28.eb --containerize --container-base-image localimage:/tmp/example.sif --experimental
     == temporary log file in case of crash /tmp/eb-dLZTNF/easybuild-LPLeG0.log
     == Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
     == Temporary log file(s) /tmp/eb-dLZTNF/easybuild-LPLeG0.log* have been removed.
@@ -235,13 +283,13 @@ You can instruct EasyBuild to also build the container image by also using ``--c
 Note that you will need to enter your ``sudo`` password (unless you recently executed a ``sudo`` command
 in the same shell session)::
 
-    $ eb GCC-6.4.0-2.28.eb --containerize --container-base-image localimage:/tmp/example.simg --container-build-image --experimental
+    $ eb GCC-6.4.0-2.28.eb --containerize --container-base-image localimage:/tmp/example.sif --container-build-image --experimental
     == temporary log file in case of crash /tmp/eb-aYXYC8/easybuild-8uXhvu.log
     == Singularity tool found at /usr/bin/singularity
     == Singularity version '2.4.6' is 2.4 or higher ... OK
     == Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
-    == Running 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.simg /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28', you may need to enter your 'sudo' password...
-    == (streaming) output for command 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.simg /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28':
+    == Running 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28', you may need to enter your 'sudo' password...
+    == (streaming) output for command 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28':
     Using container recipe deffile: /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
     Sanitizing environment
     Adding base Singularity environment to container
@@ -260,28 +308,28 @@ in the same shell session)::
     == Build succeeded for 15 out of 15
     ...
     Building Singularity image...
-    Singularity container built: /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.simg
+    Singularity container built: /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif
     Cleaning up...
-    == Singularity image created at /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.simg
+    == Singularity image created at /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif
     == Temporary log file(s) /tmp/eb-aYXYC8/easybuild-8uXhvu.log* have been removed.
     == Temporary directory /tmp/eb-aYXYC8 has been removed.
 
 
 The inspect the container image, you can use ``singularity shell`` to start a shell session *in* the container::
 
-    $ singularity shell --shell "/bin/bash --norc" $HOME/.local/easybuild/containers/GCC-6.4.0-2.28.simg
+    $ singularity shell --shell "/bin/bash --norc" $HOME/.local/easybuild/containers/GCC-6.4.0-2.28.sif
 
-    Singularity GCC-6.4.0-2.28.simg:~> source /etc/profile
+    Singularity GCC-6.4.0-2.28.sif:~> source /etc/profile
 
-    Singularity GCC-6.4.0-2.28.simg:~> module list
+    Singularity GCC-6.4.0-2.28.sif:~> module list
 
     Currently Loaded Modules:
       1) GCCcore/6.4.0   2) binutils/2.28-GCCcore-6.4.0   3) GCC/6.4.0-2.28
 
-    Singularity GCC-6.4.0-2.28.simg:~> which gcc
+    Singularity GCC-6.4.0-2.28.sif:~> which gcc
     /app/software/GCCcore/6.4.0/bin/gcc
 
-    Singularity GCC-6.4.0-2.28.simg:~> gcc --version
+    Singularity GCC-6.4.0-2.28.sif:~> gcc --version
     gcc (GCC) 6.4.0
     ...
 
@@ -305,10 +353,10 @@ Compare the output of running ``which gcc`` and ``gcc --version`` locally::
 
 and the output when running the same commands in the container::
 
-    $ singularity exec GCC-6.4.0-2.28.simg which gcc
+    $ singularity exec GCC-6.4.0-2.28.sif which gcc
     /app/software/GCCcore/6.4.0/bin/gcc
 
-    $ singularity exec GCC-6.4.0-2.28.simg gcc --version
+    $ singularity exec GCC-6.4.0-2.28.sif gcc --version
     gcc (GCC) 6.4.0
     ...
 
@@ -340,16 +388,20 @@ Use ``eb --show-full-config | grep containerpath`` to determine the currently ac
 Container image format (``--container-image-format``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note:: This is only relevant when creating Singularity container images;
+          the value for ``--container-image-format`` is ignored when creating Docker container images.
+
 The format for container images that EasyBuild is produces via the functionality provided by the container software
 can be controlled via the ``--container-image-format`` configuration setting.
 
 For Singularity containers (see :ref:`containers_cfg_type`), three image formats are supported:
 
-* ``squashfs`` *(default)*: compressed images using ``squashfs`` read-only file system
-* ``ext3``: writable image file using ``ext3`` file system
+* ``squashfs`` *(default when using Singularity 2.x)*: compressed images using ``squashfs`` read-only file system
+* ``sif`` *(default when using Singularity 3.x)*: compressed read-only Singularity Image File (SIF)
+* ``ext3``: writable image file using ``ext3`` file system *(only supported with Singularity 2.x)*
 * ``sandbox``: container image in a regular directory
 
-See also https://singularity.lbl.gov/user-guide#supported-container-formats and http://singularity.lbl.gov/docs-build-container.
+See also https://www.sylabs.io/guides/latest/user-guide/build_a_container.html .
 
 
 .. _containers_cfg_image_name:
@@ -367,9 +419,11 @@ The filename of generated container recipe will be ``Singularity.<name>``.
 The filename of the container image will be ``<name><extension>``,
 where the value for ``<extension>`` depends on the image format (see :ref:`containers_cfg_image_format`):
 
-* '``.simg``' for ``squashfs`` container images
-* '``.img``' for ``ext3`` container images
-* *empty* for ``sandbox`` container images (in which case the container image is actually a directory rather than a file)
+* '``.simg``' for ``squashfs`` Singularity container images *(only with Singularity 2.x)*
+* '``.img``' for ``ext3`` Singularity container images *(only with Singularity 2.x)*
+* '``.sif``' for Singularity container images in Singularity Image Format (SIF) *(only with Singularity 3.x)*
+* *empty* for ``sandbox`` Singularity container images (in which case the container image is actually a directory rather than a file)
+* *empty* for Docker container images
 
 
 .. _containers_tmpdir:
@@ -382,7 +436,7 @@ a temporary directory in a location that doesn't have sufficient free space.
 
 You can instruct EasyBuild to pass an alternate location via the ``--container-tmpdir`` configuration setting.
 
-For Singularity, the default is to use ``/tmp``, see http://singularity.lbl.gov/build-environment#temporary-folders.
+For Singularity, the default is to use ``/tmp``, see https://www.sylabs.io/guides/latest/user-guide/build_env.html#temporary-folders.
 If ``--container-tmpdir`` is specified, the ``$SINGULARITY_TMPDIR`` environment variable will be defined accordingly
 to let Singularity use that location instead.
 
@@ -395,11 +449,8 @@ Type of container recipe/image to generate (``--container-type``)
 With the ``--container-type`` configuration option, you can specify what type of container recipe/image EasyBuild
 should generated. Possible values are:
 
-* ``singularity`` *(default)*: Singularity (https://singularity.lbl.gov) container recipes & images
-* ``docker``: Docker (https://docs.docker.com/) container recipe & images
-
-.. note:: Currently (since EasyBuild v3.6.0) only ``singularity`` is actually supported.
-
+* ``docker``: Docker (https://docs.docker.com/) container recipe & images (supported since EasyBuild v3.6.2)
+* ``singularity`` *(default)*: Singularity (https://www.sylabs.io/singularity) container recipes & images
 
 
 .. _containers_stacking:
@@ -421,33 +472,33 @@ For example, to build a container image for Python 3.6.4 built with the ``foss/2
     # build base container image for OpenMPI + GCC parts of foss/2018a toolchain, on top of CentOS 7.4 base image from Singularity Hub
     $ eb -C --container-build-image OpenMPI-2.1.2-GCC-6.4.0-2.28.eb --container-base-image shub:shahzebsiddiqui/eb-singularity:centos-7.4.1708 --experimental
     ...
-    == Singularity image created at /tmp/OpenMPI-2.1.2-GCC-6.4.0-2.28.simg
+    == Singularity image created at /tmp/OpenMPI-2.1.2-GCC-6.4.0-2.28.sif
     ...
 
-    $ ls -lh OpenMPI-2.1.2-GCC-6.4.0-2.28.simg
-    -rwxr-xr-x 1 root root 590M Apr 24 11:43 OpenMPI-2.1.2-GCC-6.4.0-2.28.simg
+    $ ls -lh OpenMPI-2.1.2-GCC-6.4.0-2.28.sif
+    -rwxr-xr-x 1 root root 590M Apr 24 11:43 OpenMPI-2.1.2-GCC-6.4.0-2.28.sif
 
     # build another container image for the for the full foss/2018a toolchain, using the OpenMPI + GCC container as a base
-    $ eb -C --container-build-image foss-2018a.eb --container-base-image localimage:$PWD/OpenMPI-2.1.2-GCC-6.4.0-2.28.simg --experimental
+    $ eb -C --container-build-image foss-2018a.eb --container-base-image localimage:$PWD/OpenMPI-2.1.2-GCC-6.4.0-2.28.sif --experimental
     ...
-    == Singularity image created at /tmp/foss-2018a.simg
-    ...
-
-    $ ls -lh foss-2018a.simg
-    -rwxr-xr-x 1 root root 614M Apr 24 13:11 foss-2018a.simg
-
-    # build container image for Python 3.6.4 with foss/2018a toolchain by leveraging base container image foss-2018a.simg
-    $ eb -C --container-build-image Python-3.6.4-foss-2018a.eb --container-base-image localimage:$PWD/foss-2018a.simg --experimental
-    ...
-    == Singularity image created at /tmp/Python-3.6.4-foss-2018a.simg
+    == Singularity image created at /tmp/foss-2018a.sif
     ...
 
-    $ ls -lh Python-3.6.4-foss-2018a.simg
-    -rwxr-xr-x 1 root root 759M Apr 24 14:01 Python-3.6.4-foss-2018a.simg
+    $ ls -lh foss-2018a.sif
+    -rwxr-xr-x 1 root root 614M Apr 24 13:11 foss-2018a.sif
 
-    $ singularity exec Python-3.6.4-foss-2018a.simg which python
+    # build container image for Python 3.6.4 with foss/2018a toolchain by leveraging base container image foss-2018a.sif
+    $ eb -C --container-build-image Python-3.6.4-foss-2018a.eb --container-base-image localimage:$PWD/foss-2018a.sif --experimental
+    ...
+    == Singularity image created at /tmp/Python-3.6.4-foss-2018a.sif
+    ...
+
+    $ ls -lh Python-3.6.4-foss-2018a.sif
+    -rwxr-xr-x 1 root root 759M Apr 24 14:01 Python-3.6.4-foss-2018a.sif
+
+    $ singularity exec Python-3.6.4-foss-2018a.sif which python
     /app/software/Python/3.6.4-foss-2018a/bin/python
 
-    $ singularity exec Python-3.6.4-foss-2018a.simg python -V
+    $ singularity exec Python-3.6.4-foss-2018a.sif python -V
     vsc40023 belongs to gsingularity
     Python 3.6.4
