@@ -102,10 +102,14 @@ This gives you control over a variety of aspects, including:
 When generating container recipes, EasyBuild will replace the following template values:
 
 * ``%(bootstrap)s``: bootstrap agent to use
+
   * see also https://www.sylabs.io/guides/latest/user-guide/definition_files.html#header
+
 * ``%(from)s``: argument to pass to bootstrap agent (for example location of local container image)
 * ``%(install_os_deps)s``: list of commands to install required OS packages (for example ``yum install openssl``)
+
   * based on ``osdependencies`` specified in easyconfig files
+
 * ``%(easyconfigs)s``: (list of) easyconfig file name(s)/path(s) to pass to ``eb`` command
 * ``%(modname)s``: module name(s) to load in environment
 
