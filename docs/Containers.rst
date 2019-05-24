@@ -84,6 +84,24 @@ For the ``docker`` and ``shub`` types, an additional *tag* can be specified: ``d
           https://singularity-hub.org/collections/143.
 
 
+.. _containers_usage_container_base_requirements:
+
+Requirements for base container image
++++++++++++++++++++++++++++++++++++++
+
+There are a couple of specific requirements for the base container image:
+
+* all dependencies of EasyBuild must be installed, incl. Lmod (cfr. :ref:`requirements`)
+* a user named ``easybuild`` must be available
+* the ``/scratch`` and ``/app`` directories must exist,
+  and the ``easybuild`` user must have write permissions to those directories
+
+The ``easybuild`` user will be used when running EasyBuild to install the specified software stack.
+
+.. note:: The generated container recipe currently hardcodes some of this.
+          We intend to make this more configurable in a future version of EasyBuild.
+
+
 .. _containers_usage_template_recipe:
 
 Container template recipe (``--container-template-recipe``)
@@ -130,24 +148,6 @@ Currently supported keywords include:
 * ``from``: argument to pass to bootstrap agent
 
 Specifying any unknown keywords will results in an error.
-
-
-.. _containers_usage_container_base_requirements:
-
-Requirements for base container image
-+++++++++++++++++++++++++++++++++++++
-
-There are a couple of specific requirements for the base container image:
-
-* all dependencies of EasyBuild must be installed, incl. Lmod (cfr. :ref:`requirements`)
-* a user named ``easybuild`` must be available
-* the ``/scratch`` and ``/app`` directories must exist,
-  and the ``easybuild`` user must have write permissions to those directories
-
-The ``easybuild`` user will be used when running EasyBuild to install the specified software stack.
-
-.. note:: The generated container recipe currently hardcodes some of this.
-          We intend to make this more configurable in a future version of EasyBuild.
 
 
 .. _containers_usage_build_image:
