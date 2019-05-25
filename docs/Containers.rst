@@ -27,7 +27,7 @@ Since EasyBuild v3.6.2, generating (recipes for) Docker (https://www.docker.com/
 Requirements
 ------------
 
-* Singularity v2.4 or more recent
+* Docker, or Singularity version 2.4 (or more recent, incl. version 3.x)
 * ``sudo`` permissions *(only required to actually build container images, see :ref:`containers_usage_build_image`)*
 
 
@@ -57,31 +57,24 @@ that corresponds to the easyconfig files that are specified as arguments to the 
 Base container image (``--container-base-image``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: ``--container-base`` was renamed to `--container-base-image`` in EaysBuild v3.9.2.
+.. note:: ``--container-base`` was renamed to ``--container-base-image`` in EaysBuild v3.9.2.
 
-In order to let EasyBuild generate a container recipe, it is *required* to specify which container image
+In order to let EasyBuild generate a container recipe, you can specify which container image
 should be used as a base, via the ``--container-base-image`` configuration option.
 
-Currently, three types of container base images can be specified:
+Currently, four types of container base images can be specified:
 
-* ``localimage:<path>``: the location of an existing container image file
-* ``docker:<name>``: the name of a Docker container image (to be downloaded from Docker Hub, https://hub.docker.com/)
-* ``shub:<name>``: the name of a Singularity container image (to be downloaded from Singularity Hub, https://singularity-hub.org/)
+* ``library:<spec>``: Singularity container image, hosted on Sylabs Container Library
+* ``localimage:<path>``: path to an existing container image file
+* ``docker:<spec>``: Docker container image, hosted on Docker Hub
+* ``shub:<spec>``: Singularity container image, hosted on Singularity Hub
 
-For the ``docker`` and ``shub`` types, an additional *tag* can be specified: ``docker:<name>:<tag>`` or ``shub:<name>:<tag>``.
+For more details on specifying the container image that should be used, see also :ref:`container_bootstrap_agent_image_based`.
 
 
 .. note:: You can also instruct EasyBuild which container base image should be used via the
-          $EASYBUILD_CONTAINER_BASE_IMAGE environment variable, or by specifying ``container-base-image``
-          in an EasyBuild configuration file;
-          see :ref:`configuration_types`.
-
-.. note::
-          EasyBuild currently does not (yet) support generating a container recipe that results in a container image
-          that is built from scratch, this will be implemented in a future version of EasyBuild.
-          
-          To get started quickly, we recommend using one of the container base images available from
-          https://singularity-hub.org/collections/143.
+          ``$EASYBUILD_CONTAINER_BASE_IMAGE`` environment variable, or by specifying ``container-base-image``
+          in an EasyBuild configuration file; see :ref:`configuration_types`.
 
 
 .. _containers_usage_container_base_requirements:
@@ -123,7 +116,11 @@ When generating container recipes, EasyBuild will replace the following template
 
   * see also https://www.sylabs.io/guides/latest/user-guide/definition_files.html#header
 
-* ``%(from)s``: argument to pass to bootstrap agent (for example location of local container image)
+* ``%(bootstrap_config)s``: configuration for the bootstrap agent
+
+  * this is expected to include lines that specify ``From:``, ``MirrorURL:``, etc.
+  * for more information, see :ref:`containers_usage_base_config`
+
 * ``%(install_os_deps)s``: list of commands to install required OS packages (for example ``yum install openssl``)
 
   * based on ``osdependencies`` specified in easyconfig files
@@ -134,8 +131,8 @@ When generating container recipes, EasyBuild will replace the following template
 
 .. _containers_usage_base_config:
 
-Container template recipe (``--container-base-config``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Container base configuration (``--container-base-config``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using ``--container-base-config``, values for specific template values can be specified.
 
@@ -145,9 +142,120 @@ for example: ``--container-base-config bootstrap=localimage,from:/tmp/example.si
 Currently supported keywords include:
 
 * ``bootstrap``: bootstrap agent to use
+
+  * two types of values are supported:
+
+    * :ref:`container_bootstrap_agent_image_based`
+    * :ref:`container_bootstrap_agent_linux_distro`
+
 * ``from``: argument to pass to bootstrap agent
 
-Specifying any unknown keywords will results in an error.
+  * *required/only valid with* ``docker``, ``library``, ``localimage`` *and* ``shub`` *bootstrap agents*
+
+  * for more details, see :ref:`container_bootstrap_agent_image_based`
+
+* ``include``: list of additional OS packages to include
+* ``mirrorurl``: URI to use to download OS
+* ``osversion``: OS version to use
+
+For more details on the last three, see :ref:`container_bootstrap_agent_linux_distro`.
+
+.. note:: Specifying any unknown keywords will results in an error.
+
+
+.. _container_bootstrap_agent_image_based:
+
+Image-based bootstrap agents (``docker``, ``library``, ``localimage``, ``shub``)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+These bootstrap agents involve using an existing container image as a base.
+
+Supported values include:
+
+* ``docker``: base container image hosted on Docker Hub (https://hub.docker.com/)
+* ``library``: base container image hosted on Sylabs Container Library (https://cloud.sylabs.io/)
+* ``localimage``: local base container image file
+* ``shub``: base container image hosted on Singularity Hub (https://singularity-hub.org/)
+
+**The** ``from`` **keyword must also be specified when using one of these bootstrap agents.**
+
+The ``localimage`` bootstrap agents corresponds to using a local container image file as a base,
+where it's path is specified using the ``from`` keyword.
+For example: "``bootstrap=localimage,from=/home/example/base.sif``".
+
+Each of the other image-based bootstrap agents imply that the container image to use as a base
+is downloaded from the corresponding registry, ad specified through the ``from`` keyword, with a specific format:
+
+  * for ``docker`` bootstrap agent: ``<registry>/<namespace>/<container>:<tag>@<digest>``
+  * for ``library`` bootstrap agent: ``<entity>/<collection>/<container>:<tag>``
+  * for ``shub`` bootstrap agent: ``<registry>/<username>/<container-name>:<tag>@digest``
+
+For more details, see https://www.sylabs.io/guides/latest/user-guide/appendix.html#build-modules.
+
+
+.. _container_bootstrap_agent_linux_distro:
+
+Linux distro bootstrap agents (``arch``, ``busybox``, ``debootstrap``, ``yum``, ``zypper``)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Dedicated bootstrap agents are supported for different flavors of Linux distributions, including:
+
+* ``arch``: Arch Linux
+* ``busybox``: BusyBox Linux
+* ``debootstrap``: apt-based systems like Ubuntu/Debian
+* ``yum``: yum-based systems like CentOS
+* ``zypper``: zypper-based systems like openSUSE
+
+When one of these bootstrap agents is used, additional keywords can be specified:
+
+* :ref:`container_bootstrap_agent_linux_distro_include`
+* :ref:`container_bootstrap_agent_linux_distro_mirrorurl`
+* :ref:`container_bootstrap_agent_linux_distro_osversion`
+
+.. _container_bootstrap_agent_linux_distro_include:
+
+``include`` keyword: OS packages to include
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Via the ``include`` keywords, a list of packages can be specified that should be include on top of the base OS installation.
+
+For some bootstrap agents, a default value is used if no value is specified:
+
+* for the ``yum`` bootstrap agent: ``yum``
+* for the ``zypper`` bootstrap agent: ``zypper``
+
+See also https://www.sylabs.io/guides/latest/user-guide/appendix.html#yum-bootstrap-agent and
+https://www.sylabs.io/guides/latest/user-guide/appendix.html#zypper-bootstrap-agent.
+
+
+.. _container_bootstrap_agent_linux_distro_mirrorurl:
+
+``mirrorurl`` keyword: mirror URL to use to download OS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For most of the Linux distro bootstrap agents (all except ``arch``), Singularity requires that a mirror URL
+is specified that will be used when downloading the corresponding OS.
+
+You can specify a value using the ``mirrorurl`` keyword. For example: "``bootstrap=yum,mirrorurl=https://example.com``".
+
+EasyBuild will use a default value for ``mirrorurl`` if no other value is specified:
+
+* ``busybox``: ``https://www.busybox.net/downloads/binaries/%{OSVERSION}/busybox-x86_64``
+* ``debootstrap``: ``http://us.archive.ubuntu.com/ubuntu/``
+* ``yum``: ``http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/x86_64/``
+* ``zypper``:: ``http://download.opensuse.org/distribution/leap/%{OSVERSION}/repo/oss/``
+
+
+.. _container_bootstrap_agent_linux_distro_osversion:
+
+``osversion`` keyword: OS version to use
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Using the ``osversion`` keyword you can specify which OS version should be installed.
+
+Note that is this only required/used if value for the ``mirrorurl`` value contains ``%{OSVERSION}s``.
+
+For example: "``bootstrap=yum,osversion=7``".
 
 
 .. _containers_usage_build_image:
