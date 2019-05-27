@@ -91,7 +91,7 @@ There are a couple of specific requirements for the base container image:
 
 The ``easybuild`` user will be used when running EasyBuild to install the specified software stack.
 
-An example recipe for a Singularity container image that can be used as a base image is avaiilable at
+An example recipe for a Singularity container image that can be used as a base image is available at
 https://singularity-hub.org/containers/1569/download/recipe .
 
 .. note:: The generated container recipe currently hardcodes some of this.
