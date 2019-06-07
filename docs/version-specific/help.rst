@@ -119,16 +119,17 @@ Option flag                                                          Option desc
 
 Container options
 -----------------
-=========================================    =====================================================================================================================================================================================================
-Option flag                                  Option description                                                                                                                                                                                   
-=========================================    =====================================================================================================================================================================================================
-``--container-base=BASE``                    Base for container image. Examples (for Singularity): --container-base localimage:/path/to/image.img, --container-base shub:<image>:<tag>, --container-base docker:<image>:<tag>  (type <type 'str'>)
-``--container-build-image``                  Build container image (requires sudo privileges!) (def False)                                                                                                                                        
-``--container-image-format=IMAGE-FORMAT``    Container image format (type choice) (choices: ext3, sandbox, squashfs)                                                                                                                              
-``--container-image-name=IMAGE-NAME``        Custom name for container image (defaults to name of easyconfig)                                                                                                                                     
-``--container-tmpdir=TMPDIR``                Temporary directory where container image is built                                                                                                                                                   
-``--container-type=TYPE``                    Type of container recipe/image to create (type choice; def singularity) (choices: docker, singularity)                                                                                               
-=========================================    =====================================================================================================================================================================================================
+===============================================    ======================================================================================================
+Option flag                                        Option description                                                                                    
+===============================================    ======================================================================================================
+``--container-build-image``                        Build container image (requires sudo privileges!) (def False)                                         
+``--container-config=CONFIG``                      Configuration for container image (type <type 'str'>)                                                 
+``--container-image-format=IMAGE-FORMAT``          Container image format (type choice) (choices: ext3, sandbox, sif, squashfs)                          
+``--container-image-name=IMAGE-NAME``              Custom name for container image (defaults to name of easyconfig)                                      
+``--container-template-recipe=TEMPLATE-RECIPE``    Template recipe for container image (type <type 'str'>)                                               
+``--container-tmpdir=TMPDIR``                      Temporary directory where container image is built                                                    
+``--container-type=TYPE``                          Type of container recipe/image to create (type choice; def singularity) (choices: docker, singularity)
+===============================================    ======================================================================================================
 
 
 Options for Easyconfigs
