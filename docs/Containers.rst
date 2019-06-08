@@ -83,14 +83,23 @@ When generating container recipes, EasyBuild will replace the following template
 * ``%(easyconfigs)s``: (list of) easyconfig file name(s)/path(s) to pass to ``eb`` command
 * ``%(eb_args)s``: additional arguments for 'eb' command
 * ``%(include)s``: list of additional OS packages to include
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_include`
+
 * ``%(install_eb)s``: list of commands to install EasyBuild
-* ``%(install_os_deps)s``: list of commands to install required OS packages (for example ``yum install openssl``)
+* ``%(install_os_deps)s``: list of commands to install required OS packages (for example ``yum install -y openssl``)
 
   * incl. ``osdependencies`` specified in easyconfig files
 
 * ``%(mirrorurl)``: URI to use to download OS
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_mirrorurl`
+
 * ``%(modname)s``: module name(s) to load in environment
 * ``%(osversion)``: OS version to use
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_osversion`
+
 * ``%(post_commands)s``: additional commands for the ``post`` section of the (Singularity) container recipe
 
 
@@ -121,9 +130,18 @@ Currently supported keywords include:
   * for more details, see :ref:`container_bootstrap_agent_image_based`
 
 * ``include``: list of additional OS packages to include
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_include`
+
 * ``install_eb``: commands to install EasyBuild
 * ``mirrorurl``: URI to use to download OS
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_mirrorurl`
+
 * ``osversion``: OS version to use
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_osversion`
+
 * ``post_commands``: additional commands for ``post`` section of (Singularity) container recipe
 
 For more details on the last three, see :ref:`container_bootstrap_agent_linux_distro`.
