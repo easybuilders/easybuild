@@ -96,6 +96,7 @@
     * EB_DL_underscore_POLY_underscore_Classic
     * EB_Doris
     * EB_EggLib
+    * EB_ELPA
     * EB_ESMF
     * EB_ESPResSo
     * EB_Extrae
