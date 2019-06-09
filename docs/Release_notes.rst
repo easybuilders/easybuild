@@ -3,9 +3,93 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,763** different software packages,
-using 32 different (compiler) toolchains. It contains 203 software-specific easyblocks and 35 generic easyblocks,
-alongside 11,416 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **1,780** different software packages,
+using 32 different (compiler) toolchains. It contains 204 software-specific easyblocks and 35 generic easyblocks,
+alongside 11,502 easyconfig files.
+
+.. _release_notes_eb392:
+
+v3.9.2 (June 9th 2019)
+----------------------
+
+bugfix/update release
+
+**framework**
+
+- various enhancements, including:
+
+  - enhance (experimental) support for generating Singularity container recipes/images (`#2884 <https://github.com/easybuilders/easybuild-framework/pull/2884>`_, `#2900 <https://github.com/easybuilders/easybuild-framework/pull/2900>`_, `#2902 <https://github.com/easybuilders/easybuild-framework/pull/2902>`_, `#2903 <https://github.com/easybuilders/easybuild-framework/pull/2903>`_, `#2907 <https://github.com/easybuilders/easybuild-framework/pull/2907>`_, `#2909 <https://github.com/easybuilders/easybuild-framework/pull/2909>`_, `#2910 <https://github.com/easybuilders/easybuild-framework/pull/2910>`_, `#2913 <https://github.com/easybuilders/easybuild-framework/pull/2913>`_, `#2915 <https://github.com/easybuilders/easybuild-framework/pull/2915>`_)
+
+    - add support for specifying container configuration via ``--container-config`` (``--container-base`` option has been removed)
+    - add support for providing custom template for container recipe via ``--container-template-recipe``
+    - add support for '``sif``' Singularity 3.x container image format
+    - add support for specifying non-image based Singularity bootstrap agents
+    - install default set of OS packages in container recipes starting from scratch
+    - configure Lmod and update Lmod spider cache in generated Singularity container recipes
+    - configure EasyBuild via environment variables (to allow overriding configuration settings via options to '``eb``' command)
+    - also consider ``/tmp/easybuild/sources`` in source path (to allow seeding in sources in container build environment)
+    - updated documentation is available at https://easybuild.readthedocs.io/en/latest/Containers.html
+
+- various bug fixes, including:
+
+  - make sure that easyconfig file for EasyBuild version being bootstrapped is found in robot search path (`#2899 <https://github.com/easybuilders/easybuild-framework/pull/2899>`_)
+  - remove interpreter options when fixing script shebang (`#2905 <https://github.com/easybuilders/easybuild-framework/pull/2905>`_, `#2906 <https://github.com/easybuilders/easybuild-framework/pull/2906>`_)
+  - fix crash on iterated installation when using Cray toolchains (`#2914 <https://github.com/easybuilders/easybuild-framework/pull/2914>`_)
+  - disable checking of read/exec permissions when checking for availability of '``sudo``' command (`#2918 <https://github.com/easybuilders/easybuild-framework/pull/2918>`_)
+
+- other changes:
+
+  - stick to vsc-base < 2.9.0 in bootstrap script to avoid requiring '``future``' dependency (`#2892 <https://github.com/easybuilders/easybuild-framework/pull/2892>`_)
+
+**easyblocks**
+
+- new software-specific easyblock for ELPA (`#1621 <https://github.com/easybuilders/easybuild-easyblocks/pull/1621>`_)
+- minor enhancements, including:
+
+  - allow Boost to build both Python 2 and Python 3 libraries (`#1718 <https://github.com/easybuilders/easybuild-easyblocks/pull/1718>`_)
+  - update CPLEX sanity check: convert tool was removed in CPLEX 12.8 (`#1737 <https://github.com/easybuilders/easybuild-easyblocks/pull/1737>`_)
+  - don't try to patch ``CROSSTOOL`` script for recent Bazel versions (since it's no longer there) (`#1741 <https://github.com/easybuilders/easybuild-easyblocks/pull/1741>`_)
+
+- various bug fixes, including:
+
+  - fix version check on using '``-log``' option to '``Allwmake``' in OpenFOAM easyblock (`#1739 <https://github.com/easybuilders/easybuild-easyblocks/pull/1739>`_)
+  - fix GROMACS easyblock for list-type ``configopts`` (`#1740 <https://github.com/easybuilders/easybuild-easyblocks/pull/1740>`_)
+  - fix configure step for GROMACS version < 4.6 (`#1742 <https://github.com/easybuilders/easybuild-easyblocks/pull/1742>`_)
+
+**easyconfigs**
+
+- added example easyconfig files for 17 new software packages:
+
+  - adjustText (`#8354 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8354>`_), cowsay (`#8380 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8380>`_), fxtract (`#8426 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8426>`_), google-java-format (`#8373 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8373>`_), libtar (`#8379 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8379>`_), mkl-service (`#8390 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8390>`_),
+    msprime (`#8371 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8371>`_), pygrib (`#8395 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8395>`_), pyhdf (`#8394 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8394>`_), pyproj (`#8395 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8395>`_), PyStan (`#8410 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8410>`_), Racon (`#8358 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8358>`_), rapidtide (`#8256 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8256>`_),
+    SingleM (`#8428 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8428>`_), smafa (`#8420 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8420>`_), SVDetect (`#8399 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8399>`_), Unicycler (`#8376 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8376>`_)
+
+- added additional easyconfigs for various supported software packages, including:
+
+  - BLAST+ 2.9.0, Boost.Python 1.70.0, DIAMOND 0.9.24, EMAN2 2.3, ecCodes 2.12.5, GDAL 3.0.0, ImageMagick 7.0.8-46,
+    Libint 2.5.0, matplotlib 2.2.4, NLopt 2.6.1, OrfM 0.7.1, PGI 19.4, PostgreSQL 11.3, R 3.6.0,
+    R-bundle-Bioconductor 3.8, Rust 1.35.0, STAR 2.7.1a
+
+- minor enhancements, including:
+
+  - use CMake rather than configure script for libxc 4.3.4 (`#8361 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8361>`_, `#8453 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8453>`_)
+  - add '``cobs``' extension to R 3.5.1 easyconfigs (`#8389 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8389>`_)
+  - add sanity check command to PSI4 1.2.1 easyconfigs to ensure that '``import psi4``' works (`#8393 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8393>`_)
+  - include the provided backports patch in QuantumESPRESSO-6.4.1 (`#8405 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8405>`_)
+  - add ``Logger::Simple``, ``Scalar::Util::Numeric``, ``YAML``, ``Object::InsideOut`` extensions to Perl 5.28.1 easyconfig (`#8432 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8432>`_)
+  - update Java 1.8 to 1.8.0_212 (`#8443 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8443>`_)
+
+- various bug fixes, including:
+
+  - add missing build dependency on gettext to ATK/2.28.1 for fosscuda/2018b (`#8402 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8402>`_)
+  - add patch to fix OpenBLAS v0.3.1 matrices multiplication issue (`#8396 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8396>`_)
+  - make Eigen a build dependency for nanopolish (`#8448 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8448>`_)
+
+- other changes:
+
+  - clean up ELPA 2018.11.001 easyconfig to use custom easyblock for ELPA (`#8360 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8360>`_)
+  - remove unused checksum for ``ballgown`` extension in Bioconductor 3.7 easyconfigs (`#8363 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8363>`_)
+
 
 .. _release_notes_eb391:
 
