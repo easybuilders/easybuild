@@ -12,9 +12,9 @@ only in 'DEFAULT' section:
 ==========================    ===================================================    ===================================================================
 Constant name                 Constant help                                          Constant value                                                     
 ==========================    ===================================================    ===================================================================
-``DEFAULT_ROBOT_PATHS``       List of default robot paths (':'-separated)            ``$HOME/work/easybuild-easyconfigs/easybuild/easyconfigs``
-``DEFAULT_REPOSITORYPATH``    Default easyconfigs repository path                    ``$HOME/.local/easybuild/ebfiles_repo``                   
-``USER``                      Current username, translated uid from password file    ``$USER``                                                        
-``HOME``                      Current user's home directory, expanded '~'            ``$HOME``                                                 
+``DEFAULT_ROBOT_PATHS``       List of default robot paths (':'-separated)            ``/home/example/work/easybuild-easyconfigs/easybuild/easyconfigs``
+``DEFAULT_REPOSITORYPATH``    Default easyconfigs repository path                    ``/home/example/.local/easybuild/ebfiles_repo``                   
+``USER``                      Current username, translated uid from password file    ``example``                                                        
+``HOME``                      Current user's home directory, expanded '~'            ``/home/example``                                                 
 ==========================    ===================================================    ===================================================================
 
