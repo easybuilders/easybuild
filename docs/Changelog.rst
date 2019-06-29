@@ -5,6 +5,9 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20190609.01** (`Jun 9th 2019`): update release notes for EasyBuild v3.9.2 (see :ref:`release_notes_eb392`)
+* **release 20190908.01** (`Jun 8th 2019`): update documentation on support for generating (Singularity) container recipes/images (see :ref:`containers`)
+* **release 20190520.01** (`May 20th 2019`): update release notes for EasyBuild v3.9.1 (see :ref:`release_notes_eb391`)
 * **release 20190412.01** (`Apr 12th 2019`): update release notes for EasyBuild v3.9.0 (see :ref:`release_notes_eb390`)
 * **release 20190129.01** (`Jan 29th 2019`): update release notes for EasyBuild v3.8.1 (see :ref:`release_notes_eb381`)
 * **release 20190124.01** (`Jan 24th 2019`): add definitions for ``2019a`` common toolchains (see :ref:`common_toolchains`)

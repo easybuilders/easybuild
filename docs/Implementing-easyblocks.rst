@@ -418,7 +418,7 @@ You can both specify file path and subdirectories to check for, which are specif
 as well as simple commands that should execute successfully after completing the installation and loading the generated module file.
 
 Note that it is up to you how extensive you make the sanity check, but it is recommended to make the check as complete
-as possible to catch any potential build or installation problems thay may occur.
+as possible to catch any potential build or installation problems that may occur.
 
 
 .. _implementing_easyblocks_version_specific:
