@@ -35,7 +35,7 @@ from distutils import log
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = '3.9.2'
+VERSION = '3.9.3'
 
 # Utility function to read README file
 def read(fname):
@@ -77,8 +77,8 @@ on High Performance Computing (HPC) systems in an efficient way.""",
     ],
     platforms = "Linux",
     install_requires = [
-        "easybuild-easyconfigs == 3.9.2",
-        "easybuild-easyblocks == 3.9.2",
-        "easybuild-framework == 3.9.2",  # order matters here, framework should be after easyblocks!
+        "easybuild-easyconfigs == 3.9.3",
+        "easybuild-easyblocks == 3.9.3",
+        "easybuild-framework == 3.9.3",  # order matters here, framework should be after easyblocks!
     ]
 )
