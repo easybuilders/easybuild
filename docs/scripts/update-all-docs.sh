@@ -86,7 +86,7 @@ echo ".. _avail_cfgfile_constants:" > $VERSION_SPECIFIC_DIR/config_file_constant
 echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo "*(see also* \`\`eb --avail-cfgfile-constants\`\` *)*" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 echo >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
-eb --avail-cfgfile-constants --output-format rst | sed "s@$HOME@/home/example@g" | sed "s@$USER@example@g" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
+HOME=/home/example eb --avail-cfgfile-constants --output-format rst | sed "s@$HOME@/home/example@g" | sed "s@$USER@example@g" >> $VERSION_SPECIFIC_DIR/config_file_constants.rst
 
 echo "* :ref:\`Available config file constants <avail_cfgfile_constants>\`" >> $overview
 
@@ -110,7 +110,7 @@ echo ".. _avail_easyconfig_constants:" > $VERSION_SPECIFIC_DIR/easyconfig_consta
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 echo "*(see also* \`\`eb --avail-easyconfig-constants\`\` *)*" >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 echo >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
-eb --avail-easyconfig-constants --output-format rst | sed "s@$HOME@/home/example@g" | sed "s@$USER@example@g" >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
+HOME=/home/example eb --avail-easyconfig-constants --output-format rst | sed "s@$HOME@/home/example@g" | sed "s@$USER@example@g" >> $VERSION_SPECIFIC_DIR/easyconfig_constants.rst
 
 echo "* :ref:\`Constants available for easyconfig files <avail_easyconfig_constants>\`" >> $overview
 
@@ -207,7 +207,7 @@ echo ".. _basic_usage_help:" >> $VERSION_SPECIFIC_DIR/help.rst
 echo >> $VERSION_SPECIFIC_DIR/help.rst
 echo "*(see also* \`\`eb --help\`\` *)*" >> $VERSION_SPECIFIC_DIR/help.rst
 echo >> $VERSION_SPECIFIC_DIR/help.rst
-eb --help=rst | sed "s@$HOME@/home/example@g" | sed "s@$USER@example@g" >> $VERSION_SPECIFIC_DIR/help.rst
+HOME=/home/example eb --help=rst | sed "s@$HOME@/home/example@g" | sed "s@$USER@example@g" >> $VERSION_SPECIFIC_DIR/help.rst
 
 echo "* :ref:\`Overview of configuration options (eb --help) <eb_help>\`" >> $overview
 
