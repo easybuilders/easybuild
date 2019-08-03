@@ -30,7 +30,7 @@ Requirements
 ------------
 
 * Docker, or Singularity version 2.4 (or more recent, incl. version 3.x)
-* ``sudo`` permissions *(only required to actually build container images, see :ref:`containers_usage_build_image`)*
+* ``sudo`` permissions *(only required to actually build container images, see* :ref:`containers_usage_build_image` *)*
 
 
 .. _containers_usage:
