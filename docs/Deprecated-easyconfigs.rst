@@ -63,15 +63,42 @@ Deprecated toolchains
 
 Overview of deprecated toolchains:
 
+* :ref:`deprecated_easyconfigs_toolchains_foss`
+* :ref:`deprecated_easyconfigs_toolchains_gompi`
 * :ref:`deprecated_easyconfigs_toolchains_goolf`
 * :ref:`deprecated_easyconfigs_toolchains_ictce`
 * :ref:`deprecated_easyconfigs_toolchains_intel`
 
 
+.. _deprecated_easyconfigs_toolchains_foss:
+
+``foss`` toolchain
+~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.9.4
+* *will be archived in:* EasyBuild v4.0.0
+
+The oldest versions of the ``foss`` toolchain have been deprecated,
+which currently includes any version older than ``foss/2016a``.
+
+
+.. _deprecated_easyconfigs_toolchains_gompi:
+
+``gompi`` toolchain
+~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0
+* *will be archived in:* EasyBuild v4.0.0
+
+Versions of the ``gompi`` toolchain that were used as a subtoolchain for a deprecated toolchain
+have also been deprecated; this includes ``gompi`` toolchain versions that match ``1.*``, and any version
+older than ``gompi/2016a`` (the latter only since EasyBuild v3.9.4).
+
+
 .. _deprecated_easyconfigs_toolchains_goolf:
 
-``gompi``, ``goolf`` and ``goolfc`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``goolf`` and ``goolfc`` toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * *deprecated since:* EasyBuild v3.8.0
 * *will be archived in:* EasyBuild v4.0.0
@@ -81,9 +108,6 @@ since they are superseded by the :ref:`common_toolchains_foss` and ``fosscuda`` 
 
 The ``foss*`` toolchains are equivalent to the ``goolf*`` toolchains,
 except that ``binutils`` is also included as a companion to ``GCC(core)`` in the ``foss*`` toolchains.
-
-Versions of the ``gompi`` toolchain that were used as a subtoolchain for a deprecated toolchain
-have also been deprecated; this includes ``gompi`` toolchain versions that match ``1.*``.
 
 
 .. _deprecated_easyconfigs_toolchains_ictce:

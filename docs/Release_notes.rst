@@ -3,9 +3,81 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,780** different software packages,
+The latest version of EasyBuild provides support for building and installing **1,805** different software packages,
 using 32 different (compiler) toolchains. It contains 204 software-specific easyblocks and 35 generic easyblocks,
-alongside 11,502 easyconfig files.
+alongside 11,603 easyconfig files.
+
+.. _release_notes_eb393:
+
+v3.9.3 (July 8th 2019)
+----------------------
+
+bugfix/update release
+
+**framework**
+
+* various enhancements, including:
+
+  * add a URL whatis line to generated module files (`#2933 <https://github.com/easybuilders/easybuild-framework/pull/2933>`_)
+
+* various bug fixes, including:
+
+  * stick to Ubuntu Trusty when testing with Python 2.6 in Travis (`#2928 <https://github.com/easybuilders/easybuild-framework/pull/2928>`_)
+  * honor ``--tmp-logdir`` when determining location of temporary log file (`#2937 <https://github.com/easybuilders/easybuild-framework/pull/2937>`_)
+
+**easyblocks**
+
+* minor enhancements, including:
+
+  * also install docs and demos in Rosetta easyblock (`#1745 <https://github.com/easybuilders/easybuild-easyblocks/pull/1745>`_)
+  * update HEALPix easyblock to work with latest version of HEALPix' ``configure.sh`` (`#1752 <https://github.com/easybuilders/easybuild-easyblocks/pull/1752>`_)
+  * make HPCG log pattern more generic, it changed in 3.1 (`#1753 <https://github.com/easybuilders/easybuild-easyblocks/pull/1753>`_)
+  * allow bootstrapping GCC with profile-guided optimizations (`#1756 <https://github.com/easybuilders/easybuild-easyblocks/pull/1756>`_)
+  * only require vsc-base for EasyBuild 2.x and 3.x in EasyBuildMeta easyblock (`#1757 <https://github.com/easybuilders/easybuild-easyblocks/pull/1757>`_)
+  * extend question patterns with '``https``' URL entry in Modeller easyblock for recent versions (`#1762 <https://github.com/easybuilders/easybuild-easyblocks/pull/1762>`_)
+  * ``modextrapaths`` implemented on easyblock level, ``sanity_check_step``, ``gcc_target`` added in HEALPix easyblock (`#1763 <https://github.com/easybuilders/easybuild-easyblocks/pull/1763>`_)
+  * update OpenBLAS easyblock to be aware of POWER9 support in OpenBLAS 0.3.6 (`#1765 <https://github.com/easybuilders/easybuild-easyblocks/pull/1765>`_)
+
+* various bug fixes, including:
+
+  * stick to Ubuntu Trusty when testing with Python 2.6 in Travis (`#1751 <https://github.com/easybuilders/easybuild-easyblocks/pull/1751>`_)
+  * fix scripts installation path in SNPhylo easyblock (`#1759 <https://github.com/easybuilders/easybuild-easyblocks/pull/1759>`_)
+  * be more patient when running interactive ``Allwmake.firstInstall`` command for recent OpenFOAM-Extend versions (`#1761 <https://github.com/easybuilders/easybuild-easyblocks/pull/1761>`_)
+  * also add ``--without-go`` configure option for SWIG as we "disable everything by default" (`#1754 <https://github.com/easybuilders/easybuild-easyblocks/pull/1754>`_)
+  * don't assume cmake arguments when configure_cmd is set in CMakeMake easyblock (`#1750 <https://github.com/easybuilders/easybuild-easyblocks/pull/1750>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 25 new software packages:
+
+  * Arb (`#8137 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8137>`_), AtomPAW (`#8506 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8506>`_), ciftify (`#8457 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8457>`_), cysignals (`#8459 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8459>`_), deal.II (`#8440 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8440>`_), FastQTL (`#8449 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8449>`_), FLINT (`#8137 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8137>`_),
+    gdbgui (`#8488 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8488>`_), gearshifft (`#8482 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8482>`_), jbigkit (`#8442 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8442>`_), lavaan (`#8539 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8539>`_), libRmath (`#8449 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8449>`_), OR-Tools (`#8364 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8364>`_, `#8523 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8523>`_),
+    p4est (`#8440 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8440>`_), ppl (`#8459 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8459>`_), pplpy (`#8459 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8459>`_), PRISMS-PF (`#8440 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8440>`_), PyAPS3 (`#8398 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8398>`_), pyEGA3 (`#8418 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8418>`_), ReFrame (`#8481 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8481>`_),
+    S4 (`#8487 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8487>`_), SALMON (`#8478 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8478>`_), TM-align (`#8510 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8510>`_), UnZip (`#8474 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8474>`_), XTandem (`#8517 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8517>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * ABINIT 8.10.3, CFITSIO 3.47, GDB 8.3, GROMACS 2019.3, HEALPix 3.50, HPCG 3.1, Nilearn 0.5.2, OpenBLAS 0.3.6, Xerces-C++ 3.2.0
+
+* minor enhancements, including:
+
+  * update easyconfig for CFITSIO 3.45 with https and sanity check (`#8472 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8472>`_)
+  * add AtomPAW and Wannier90 support to ABINIT 8.10.2 easyconfig (`#8506 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8506>`_)
+  * add '``resample``' extension to R 3.5.1 + 3.6.0 easyconfigs (`#8538 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8538>`_)
+
+* various bug fixes, including:
+
+  * fix source URLs for Mesa 17.{2,3} with fosscuda toolchain (`#8446 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8446>`_)
+  * add in Boost dependency to canu-1.8 easyconfigs using ``foss`` toolchain (`#8470 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8470>`_)
+  * stick to Ubuntu Trusty when testing with Python 2.6 in Travis (`#8483 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8483>`_)
+  * fix incorrect order of extensions for Python-2.7.14 easyconfigs (``pycparser`` and ``cffi`` must come before ``cryptography``) (`#8495 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8495>`_)
+  * suppress installation of ``libbfd`` and ``libopcode`` for GDB (`#8496 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8496>`_)
+  * fix KronaTools easyconfigs to make sure symlinks in bin are not broken (`#8508 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8508>`_)
+  * make additional configopts in PETSc easyconfigs work after uncommenting (`#8522 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8522>`_)
+  * add ``pkg-config`` build dep to easyconfig for pocl 1.2 (`#8528 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8528>`_)
+  * download correct source tarball for Net-core 2.1.8 (`#8530 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8530>`_)
+  * fix '``Permission denied``' error when running '``cp -a``' for ANTs 2.3.1 installation by first removing the ``.git`` subdirectories causing them (`#8535 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8535>`_)
+  * fix checksum for boot 1.3-22 extension in R 3.6.0 easyconfig (`#8537 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8537>`_)
 
 .. _release_notes_eb392:
 
