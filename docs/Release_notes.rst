@@ -3,9 +3,112 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **1,805** different software packages,
-using 32 different (compiler) toolchains. It contains 204 software-specific easyblocks and 35 generic easyblocks,
-alongside 11,603 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **1,840** different software packages,
+using 32 different (compiler) toolchains. It contains 205 software-specific easyblocks and 35 generic easyblocks,
+alongside 11,798 easyconfig files.
+
+.. _release_notes_eb394:
+
+v3.9.4 (August 23rd 2019)
+-------------------------
+
+bugfix/update release
+
+**framework**
+
+* various enhancements, including:
+
+  * add support for specifying checksum via dict providing a filename-to-checksum mapping (`#2946 <https://github.com/easybuilders/easybuild-framework/pull/2946>`_)
+  * enhance 'completed' message with how much time was needed for the installation (`#2956 <https://github.com/easybuilders/easybuild-framework/pull/2956>`_)
+  * add support for specifying tuple of alternative checksums (`#2958 <https://github.com/easybuilders/easybuild-framework/pull/2958>`_)
+  * support using '``system``' as alias for '``dummy``' toolchain + ``SYSTEM`` constant (`#2960 <https://github.com/easybuilders/easybuild-framework/pull/2960>`_)
+  * ensure '``docurls``' easyconfig parameter value is a list of string values, not a single string value (`#2963 <https://github.com/easybuilders/easybuild-framework/pull/2963>`_)
+  * automatically enable ``--ignore-osdeps`` when using ``--check-contrib`` or ``--check-style`` (`#2965 <https://github.com/easybuilders/easybuild-framework/pull/2965>`_)
+
+* various bug fixes, including:
+
+  * escape '``+``' in search queries + handle invalid search queries better (`#2967 <https://github.com/easybuilders/easybuild-framework/pull/2967>`_)
+  * also consider extension patches when determining for which easyconfig a given patch file is intended in ``--new-pr``/``--update-pr`` (`#2969 <https://github.com/easybuilders/easybuild-framework/pull/2969>`_)
+  * unset ``$CDPATH`` early on if it is defined (`#2970 <https://github.com/easybuilders/easybuild-framework/pull/2970>`_)
+  * create specified temporary log directory if it doesn't exist yet in ``init_logging`` (`#2972 <https://github.com/easybuilders/easybuild-framework/pull/2972>`_)
+  * don't indicate first multi_deps version as default in module help text when ``multi_deps_load_default=False`` (`#2973 <https://github.com/easybuilders/easybuild-framework/pull/2973>`_)
+
+* other changes:
+
+  * deprecate toolchains older than ``gompi/2016a`` and ``foss/2016a`` (#2951)
+
+**easyblocks**
+
+* new software-specific easyblock for MSM (`#1770 <https://github.com/easybuilders/easybuild-easyblocks/pull/1770>`_, `#1775 <https://github.com/easybuilders/easybuild-easyblocks/pull/1775>`_, `#1776 <https://github.com/easybuilders/easybuild-easyblocks/pull/1776>`_)
+* minor enhancements, including:
+
+  * allow specifying the license file directly in MATLAB easyblock (`#1712 <https://github.com/easybuilders/easybuild-easyblocks/pull/1712>`_)
+  * enhance CPLEX easyblock to also build Python bindings (`#1738 <https://github.com/easybuilders/easybuild-easyblocks/pull/1738>`_)
+  * workaround for XCrySDen for Tcl 8.6 (`#1749 <https://github.com/easybuilders/easybuild-easyblocks/pull/1749>`_)
+  * update WIEN2k easyblock to support version 19.1 (`#1758 <https://github.com/easybuilders/easybuild-easyblocks/pull/1758>`_)
+  * resolve custom ``%(cudaarch)s`` template value for CUDA sources (`#1766 <https://github.com/easybuilders/easybuild-easyblocks/pull/1766>`_)
+  * enhance sanity check for Blender to make sure that Cycles render engine is available (`#1779 <https://github.com/easybuilders/easybuild-easyblocks/pull/1779>`_)
+
+* various bug fixes, including:
+
+  * only check for qtwebengine in custom easyblock for Qt(5) if glibc is sufficiently recent (`#1771 <https://github.com/easybuilders/easybuild-easyblocks/pull/1771>`_)
+  * correctly define ``comp.src`` in Bundle easyblock, to fix compatibility with easyblocks that leverage ``self.src`` (`#1777 <https://github.com/easybuilders/easybuild-easyblocks/pull/1777>`_)
+  * fix ``Bundle.check_checksums`` to checksums for extensions are also checked (`#1778 <https://github.com/easybuilders/easybuild-easyblocks/pull/1778>`_)
+
+**easyconfigs**
+
+* added example easyconfig files for 36 new software packages:
+
+  * ArrayFire (`#8461 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8461>`_), BRAKER (`#8437 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8437>`_), bwidget (`#8477 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8477>`_), Catch2 (`#8703 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8703>`_), core-counter (`#8749 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8749>`_), CubeGUI (`#6328 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6328>`_),
+    CubeLib (`#6328 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6328>`_), CubeWriter (`#6328 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6328>`_), dagitty (`#8606 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8606>`_), enaBrowserTool (`#8795 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8795>`_), GEMMA (`#8270 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8270>`_), GeneMark-ET (`#8437 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8437>`_),
+    GenomeThreader (`#8437 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8437>`_), ieeg-cli (`#8793 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8793>`_, `#8811 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8811>`_),  Judy (`#8543 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8543>`_), Julia (`#8578 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8578>`_), libaio (`#8543 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8543>`_), libtirpc (`#8792 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8792>`_),
+    magick (`#8545 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8545>`_), MSM (`#8556 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8556>`_), MSPC (`#8531 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8531>`_), mygene (`#8809 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8809>`_), OpenMolcas (`#7699 <https://github.com/easybuilders/easybuild-easyconfigs/pull/7699>`_), PhiPack (`#8750 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8750>`_), plc (`#8796 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8796>`_),
+    plotly.py (`#8756 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8756>`_), pymemcache (`#8663 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8663>`_), PySCF (`#8736 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8736>`_), qcint (`#8736 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8736>`_), Qiskit (`#7592 <https://github.com/easybuilders/easybuild-easyconfigs/pull/7592>`_), QuaZIP (`#8672 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8672>`_), re2c (`#8543 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8543>`_),
+    SeqAn3 (`#8651 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8651>`_), snippy (`#8635 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8635>`_), spaln (`#8437 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8437>`_), V8 (`#8676 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8676>`_)
+
+* added additional easyconfigs for various supported software packages, including:
+
+  * ASE 3.18.0, BEDTools 2.28.0, Bowtie 1.2.3, bzip2 1.0.8, CPLEX 12.9, CUDA 10.1 update 2,  cyvcf2 0.11.5,
+    EIGENSOFT 7.2.1, GC3Pie 2.5.2, GCC(core) 9.2.0, GPAW 19.8.1, GlobalArrays 5.7, IMB 2019.3, imageio 2.5.0,
+    jemalloc 5.2.0, nodejs 10.15.3, PyTorch 1.1.0, pybedtools 0.8.0, Quandl 3.4.8, R 3.6.0 w/ intel/2019a,
+    R-bundle-Bioconductor 3.9, Salmon 0.14.1, Scalasca 2.5, Score-P 6.0, Stacks 2.41, TensorFlow 1.14.0, ToFu 1.4.0,
+    WIEN2k 19.1, Wannier90 3.0.0, XCrySDen 1.5.60
+
+* minor enhancements, including:
+
+  * add patch and dependencies to easyconfig for Qt5 5.12.3 to fix Xlib support & enhance the installation (`#8544 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8544>`_)
+  * update nodejs to version 10.15.3 and build libnode and libv8 shared libs (`#8546 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8546>`_)
+  * add extensions to R 3.6.0 easyconfig: ``MIIVsem`` (`#8565 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8565>`_), ``medflex`` (`#8680 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8680>`_), ``Rserve``/``spls`` (`#8758 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8758>`_), ``Boruta``/``CovSel``/``ctmle``/``BayesPen`` (`#8805 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8805>`_)
+  * include PyQtWebEngine bindings in easyconfig for PyQt5 5.12.1 using Python 3.7.2 (`#8572 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8572>`_)
+  * switch GLX backend to Gallium in Mesa-19.0.1 (`#8594 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8594>`_)
+
+* various bug fixes, including:
+
+  * fix typo in description in GroopM easyconfig file (`#8346 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8346>`_)
+  * add missing bugfix patch to easyconfig for OpenMPI 3.1.4 (`#8566 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8566>`_)
+  * downgrade AtomPAW to last supported version in ABINIT 8.10.3 (`#8571 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8571>`_)
+  * switch easyconfig for glew 2.1.0 to ``ConfigureMake`` easyblock (`#8595 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8595>`_)
+  * fix checksum for source tarball in ``foss/2018b`` easyconfig of NAMD v2.13 (`#8602 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8602>`_)
+  * update URL for bzip2 easyconfigs (`#8614 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8614>`_)
+  * add patch for M4 1.4.17 to fix installation on top of glibc 2.28 (`#8666 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8666>`_)
+  * add patch for Bison 3.0.4 to fix installation on top of glibc 2.28 (`#8675 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8675>`_)
+  - avoid needless requirement for matplotlib < 3.0.0 in MultiQC easyconfigs (`#8691 <https://github.com/easybuilders/easybuild-easyblocks/pull/8691>`_)
+  * fix checksum in OpenMPI 1.8.8 easyconfigs (`#8692 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8692>`_)
+  * add alternative checksums for ``nlme``/``mgcv``/``foreign``/``boot`` extensions in R 3.5.1 and 3.6.0 easyconfigs (`#8564 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8564>`_, `#8762 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8762>`_)
+  * add missing core-counter dependency for worker 1.6.8 (`#8749 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8749>`_)
+  * add missing pkg-config build dependency in various easyconfigs for (`#8763 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8763>`_, `#8775 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8775>`_, `#8777 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8777>`_, `#8776 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8776>`_, `#8764 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8764>`_, `#8787 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8787>`_, `#8816 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8816>`_)
+  * add patch to Python 3.7.2 easyconfig to fix faulthandler segfault (`#8781 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8781>`_)
+  * set ``$CPLUS_INCLUDE_PATH`` in easyconfigs for older matplotlib versions (`#8785 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8785>`_)
+  * patch out removed glibc 2.28 header from GCC libsanitizer (`#8789 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8789>`_)
+  * include ``sysmacros.h`` directly to work around removal from glibc header in numactl easyconfig (`#8790 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8790>`_)
+  * adapt gzip's bundled gnulib for glibc 2.28 (`#8791 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8791>`_)
+  * add libtirpc and depend on it in easyconfig for libdap 3.20.3 (`#8792 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8792>`_)
+  * add missing YAML extension to Perl 5.28.0 easyconfig (required by BioPerl scripts) (`#8806 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8806>`_)
+
+* other changes:
+
+  * remove broken easyconfigs for ciftify due to non-trivial missing dependencies (`#8560 <https://github.com/easybuilders/easybuild-easyconfigs/pull/8560>`_)
+
 
 .. _release_notes_eb393:
 
