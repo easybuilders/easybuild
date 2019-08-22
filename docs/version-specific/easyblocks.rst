@@ -187,6 +187,7 @@
       * EB_BLAT
       * EB_Bowtie2
       * EB_BWISE
+      * EB_MSM
       * EB_mutil
       * EB_MXNet
       * EB_NAMD
