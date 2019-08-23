@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20190823.01** (`Aug 23rd 2019`): update release notes for EasyBuild v3.9.4 (see :ref:`release_notes_eb394`)
 * **release 20190708.01** (`Jul 8th 2019`): update release notes for EasyBuild v3.9.3 (see :ref:`release_notes_eb393`)
 * **release 20190609.01** (`Jun 9th 2019`): update release notes for EasyBuild v3.9.2 (see :ref:`release_notes_eb392`)
 * **release 20190908.01** (`Jun 8th 2019`): update documentation on support for generating (Singularity) container recipes/images (see :ref:`containers`)
