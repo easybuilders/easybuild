@@ -12,3 +12,6 @@ script:
   # see https://github.com/easybuilders/easybuild/pull/485 for details
   - codespell --skip=".git,version-specific,scripts" --ignore-words-list=atleast,ninjs,simpy --quiet-level=2; retVal=$?; if [ $retVal -eq 1 ]; then echo "Got one expected warning, so success!";  else $(exit $retVal); fi;
   - READTHEDOCS=1 sphinx-build docs build
+  # test installation too
+  - pip install $TRAVIS_BUILD_DIR
+  - eb --prefix /tmp/$USER bzip2-1.0.6.eb
