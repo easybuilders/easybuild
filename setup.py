@@ -71,8 +71,8 @@ on High Performance Computing (HPC) systems in an efficient way.""",
     ],
     platforms = "Linux",
     requires = [
-        "easybuild-framework(==3.9.4)",
-        "easybuild-easyblocks(==3.9.4)",
-        "easybuild-easyconfigs(==3.9.4)",
+        "easybuild_framework(==3.9.4)",
+        "easybuild_easyblocks(==3.9.4)",
+        "easybuild_easyconfigs(==3.9.4)",
     ]
 )
