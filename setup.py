@@ -32,6 +32,7 @@ or
 
 import os
 from distutils import log
+from distutils.core import setup
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
@@ -43,13 +44,6 @@ def read(fname):
 
 # log levels: 0 = WARN (default), 1 = INFO, 2 = DEBUG
 log.set_verbosity(1)
-
-try:
-    from setuptools import setup
-    log.info("Installing with setuptools.setup...")
-except ImportError, err:
-    log.info("Failed to import setuptools.setup, so falling back to distutils.setup")
-    from distutils.core import setup
 
 log.info("Installing version %s" % VERSION)
 
@@ -76,9 +70,9 @@ on High Performance Computing (HPC) systems in an efficient way.""",
         "Topic :: Software Development :: Build Tools",
     ],
     platforms = "Linux",
-    install_requires = [
-        "easybuild-easyconfigs == 3.9.4",
-        "easybuild-easyblocks == 3.9.4",
-        "easybuild-framework == 3.9.4",  # order matters here, framework should be after easyblocks!
+    requires = [
+        "easybuild-framework(==3.9.4)",
+        "easybuild-easyblocks(==3.9.4)",
+        "easybuild-easyconfigs(==3.9.4)",
     ]
 )
