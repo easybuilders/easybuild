@@ -38,9 +38,11 @@ from distutils.core import setup
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
 VERSION = '3.9.4'
 
+
 # Utility function to read README file
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 
 # log levels: 0 = WARN (default), 1 = INFO, 2 = DEBUG
 log.set_verbosity(1)
@@ -48,18 +50,18 @@ log.set_verbosity(1)
 log.info("Installing version %s" % VERSION)
 
 setup(
-    name = "easybuild",
-    version = str(VERSION),
-    author = "EasyBuild community",
-    author_email = "easybuild@lists.ugent.be",
-    description = """EasyBuild is a software build \
+    name="easybuild",
+    version=str(VERSION),
+    author="EasyBuild community",
+    author_email="easybuild@lists.ugent.be",
+    description="""EasyBuild is a software build \
 and installation framework that allows you to manage (scientific) software \
 on High Performance Computing (HPC) systems in an efficient way.""",
-    license = "GPLv2",
-    keywords = "software build building installation installing compilation HPC scientific",
-    url = "https://easybuilders.github.io/easybuild",
-    long_description = read("README.rst"),
-    classifiers = [
+    license="GPLv2",
+    keywords="software build building installation installing compilation HPC scientific",
+    url="https://easybuilders.github.io/easybuild",
+    long_description=read("README.rst"),
+    classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
         "Intended Audience :: System Administrators",
@@ -67,12 +69,14 @@ on High Performance Computing (HPC) systems in an efficient way.""",
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Topic :: Software Development :: Build Tools",
     ],
-    platforms = "Linux",
-    requires = [
-        "easybuild_framework(==3.9.4)",
-        "easybuild_easyblocks(==3.9.4)",
-        "easybuild_easyconfigs(==3.9.4)",
-    ]
+    platforms="Linux",
+    # for distutils
+    requires=['easybuild_%s(==%s)' % (x, VERSION) for x in ['framework', 'easyblocks', 'easyconfigs']],
+    # for setuptools/pip
+    install_requires=['easybuild-%s == %s' % (x, VERSION) for x in ['framework', 'easyblocks', 'easyconfigs']],
 )
