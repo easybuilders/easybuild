@@ -1,4 +1,8 @@
 language: python
+addons:
+  apt:
+    packages:
+      - lmod
 matrix:
   include:
     - python: "2.7"
@@ -20,4 +24,4 @@ script:
   # test installation too
   - pip install $TRAVIS_BUILD_DIR
   - eb --list-easyblocks | grep EB_bzip2
-  - eb --search bzip2 | grep 'bzip2-1\.0\.6\.eb'
+  - eb --disable-modules-tool-version-check --search bzip2 | grep 'bzip2-1\.0\.6\.eb'
