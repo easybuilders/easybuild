@@ -1,8 +1,7 @@
 language: python
-python:
-  - "2.7"
 matrix:
   include:
+    - python: "2.7"
     - python: "3.6"
   allow_failures:
     # pip install will fail because easybuild-* packages are not compatible yet with Python 3
