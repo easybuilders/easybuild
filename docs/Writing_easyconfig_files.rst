@@ -475,7 +475,8 @@ defined by EasyBuild. For the *runtime* dependencies, ``module load`` statements
 module file.
 
 .. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the
-  software being installed.
+  software being installed. As of v3.0, if no easyconfig exists to resolve a dependency using the default
+  toolchain EasyBuild will search for the dependency using a compatible subtoolchain.
 
   A different toolchain can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the
   example above).
