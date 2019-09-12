@@ -39,26 +39,26 @@ Functions that should now be imported from the py2vs3 package
 
 The ``py2vs3`` package creates a namespace with the functionality available in the ``py2`` or ``py3`` compatilibity modules depending on which version is being used. The following functions and constants should be imported from the ``py2vs`` package to ensure that the code is compatible with both python 2 and 3.
 
-* OrderedDict``
-* HTTPError, HTTPSHandler, Request, URLError, build_opener, urlopen
-* StringIO
-* ascii_letters and ascii_lowercase
-* configparser
-* json
-* subprocess
-* sys
-* std_urllib
-* urlencode
-* reload
-* string_type (instead of basestring)
+* ``OrderedDict``
+* ``HTTPError``, ``HTTPSHandler``, ``Request``, ``URLError``, ``build_opener``, ``urlopen``
+* ``StringIO``
+* ``ascii_letters``, ``ascii_lowercase``
+* ``configparser``
+* ``json``
+* ``subprocess``
+* ``sys``
+* ``std_urllib``
+* ``urlencode``
+* ``reload``
+* ``string_type`` (instead of ``basestring``)
 
 Wrappers
 
-* json_loads (Wrapper for json.loads that takes into account that Python versions older than 3.6 require a string value)
-* subprocess_popen_text (Call subprocess.Popen in text mode with specified named arguments)
-* raise_with_traceback (Raise exception of specified class with given message and traceback)
-* extract_method_name (Extract method name from lambda function.)
-* mk_wrapper_baseclass (Returns wrapper class that provides proxy access to an instance of some internal instance)
+* ``json_loads``: wrapper for ``json.loads`` that takes into account that Python versions older than 3.6 require a string value
+* ``subprocess_popen_text``: calls ``subprocess.Popen`` in text mode with specified named arguments
+* ``raise_with_traceback``: raise exception of specified class with given message and traceback
+* ``extract_method_name``: extracts method name from lambda function
+* ``mk_wrapper_baseclass``: returns wrapper class that provides proxy access to an instance of some internal instance
 
 .. _easybuild_base:
 
@@ -68,20 +68,20 @@ Functions that should now be imported from the easybuild.base package
 The ``vsc-base`` and ``vsc-util`` packages have been ingested into EasyBuild. This section lists where each functionality was moved to.
 
 * moved from ``vsc.utils`` to ``easybuild.base``
-    * exceptions
-    * fancylogger
-    * missing.FrozenDictKnownKeys ( now in frozendict.FrozenDictKnownKeys)
-    * generaloption
-    * rest
-    * testing
-    * wrapper
+    * ``exceptions``
+    * ``fancylogger``
+    * ``missing.FrozenDictKnownKeys`` (now in ``frozendict.FrozenDictKnownKeys``)
+    * ``generaloption``
+    * ``rest``
+    * ``testing``
+    * ``wrapper``
 * moved from ``vsc.utils`` to ``easybuild.tools.config``
-    * patterns.Singleton
+    * ``patterns.Singleton``
 * moved from ``vsc.utils`` to ``easybuild.tools.utilities``
-    * docs.mk_rst_table
-    * missing.nub, get_class_for, get_subclasses, shell_quote
+    * ``docs.mk_rst_table``
+    * ``missing.nub``, ``get_class_for``, ``get_subclasses``, ``shell_quote``
 * moved from ``vsc.utils`` to ``easybuild.tools.systemtools``
-    * affinity.sched_getaffinity
+    * ``affinity.sched_getaffinity``
 
 ...
 
@@ -94,7 +94,7 @@ https://github.com/easybuilders/easybuild-framework/pull/2877
 
 * A new ``system`` toolchain was introduced (see also ``System`` toolchain definition + ``SystemCompiler`` compiler used by it).
 
-* In contrast with the ``dummy`` toolchain, the version of the ``system`` toolchain is totally meaningless (so no more special behavior like we had with using 'dummy' as a version for the ``dummy`` toolchain).
+* In contrast with the ``dummy`` toolchain, the version of the ``system`` toolchain is totally meaningless (so no more special behavior like we had with using '``dummy``' as a version for the ``dummy`` toolchain).
 
 * The use of the ``dummy`` toolchain is deprecated: it will produce a big fat warning in EasyBuild 4.x, and will result in an error being raised starting with EasyBuild 5.0 (see ``Toolchain.__init__ in easybuild/tools/toolchain/toolchain.py``). In addition, whenever the ``dummy`` toolchain is specified, it will be replaced by the ``system`` toolchain under the covers.
 
