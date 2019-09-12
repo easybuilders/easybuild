@@ -1,0 +1,138 @@
+.. _eb4_changes_overview:
+
+Overview of changes in EasyBuild version 4.0
+============================================
+
+This page provides a concise overview of the most prominent changes in EasyBuild version 4.0.
+
+A detailed overview with links to the pull requests in which the changes are made is available in the
+:ref:`release_notes` (see :ref:`release_notes_eb400` in particular).
+
+* :ref:`eb4_changes_significant_enhancements`
+* :ref:`eb4_changes_backwards_incompatible`
+* :ref:`eb4_changes_deprecated`
+
+
+.. _eb4_changes_significant_enhancements:
+
+Significant enhancements in EasyBuild v4.0
+------------------------------------------
+
+Various significant enhancements are included in EasyBuild v4.0, including:
+
+* :ref:`eb4_no_required_deps`
+* :ref:`eb4_python3_support`
+* :ref:`eb4_custom_easyblocks`
+* :ref:`eb4_2019b_common_toolchains`
+
+.. _eb4_no_required_deps:
+
+No more required Python packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To simplify the installation of EasyBuild, *no Python packages other than the ones included in the Python standard
+library are required anymore* for EasyBuild v4.0. More specifically:
+
+* ``setuptools`` **is no longer a required dependency**, neither for using EasyBuild nor for installing it.
+  This change was motivated by the various problems with installing EasyBuild that were reported, which could
+  often be attributed to ``setuptools`` in one way or another (ancient versions being installed via the OS package
+  manager, quirky or broken functionality in specific versions, etc.).
+
+* ``vsc-base`` **and** ``vsc-install`` **are no longer required dependencies**. The relevant parts of these packages
+  were ingested into the EasyBuild framework codebase itself, mostly to facilitate making EasyBuild compatible with
+  Python 3.
+
+Note that specific Python packages may currently still be required for certain EasyBuild functionality, including
+``keyring`` for the GitHub integration features, etc.
+
+
+.. _eb4_python3_support:
+
+Support for running EasyBuild on top of Python 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A significant effort has been done to make the EasyBuild framework and the easyblocks included with EasyBuild
+compatible with Python 3, while retaining the compatibility with Python 2.
+
+Currently supported Python versions include: ``2.6.x``, ``2.7.x``, ``3.5.x``, ``3.6.x``, ``3.7.x``.
+
+For more details, please see :ref:`py2_py3_support`.
+
+
+.. _eb4_custom_easyblocks:
+
+Custom software-specific easyblocks for ``iccifort``, ``numexpr``, ``OpenMPI``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Custom software-specific easyblocks were added in EasyBuild v4.0 for several software packages, including:
+
+* ``iccifort``: to install ``icc`` and ``ifort`` together in a single prefix, and use that installation as a toolchain
+
+* ``numexpr``: to ensure that ``numexpr`` is linked with Intel MKL's VML when it is available
+
+* ``OpenMPI``: to improve the (default) configuration of ``OpenMPI`` based on installed OS packages (for example for
+  Infiniband support) and available dependencies
+
+In addition, various (generic and software-specific) easyblocks were improved and enhanced
+(see :ref:`release_notes` for more details).
+
+
+.. _eb4_2019b_common_toolchains:
+
+2019b update of common toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FIXME
+
+.. _eb4_changes_backwards_incompatible:
+
+Backwards-incompatible changes in EasyBuild v4.0
+------------------------------------------------
+
+A couple of *backwards-incompatible* changes were made in EasyBuild v4.0
+
+* :ref:`eb4_changes_relocated_stuff`
+* :ref:`eb4_changes_py2vs3`
+
+.. note:: **These changes are mainly important for developers of the EasyBuild framework and easyblock implementers.**
+
+.. _eb4_changes_relocated_stuff:
+
+Relocated functions and constants in EasyBuild framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FIXME
+
+.. _eb4_changes_py2vs3:
+
+Functions that must be imported from the ``easybuild.tools.py2vs3`` namespace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FIXME
+
+
+.. _eb4_changes_deprecated:
+
+Deprecated functionality in EasyBuild v4.0
+------------------------------------------
+
+Some functionality was deprecated in EasyBuild v4.0, and will no longer be supported in EasyBuild v5.0.
+
+If you trigger any deprecated functionality, a warning message will be printed.
+
+* :ref:`eb4_changes_local_variables`
+
+.. _eb4_changes_dummy_tc:
+
+``dummy`` toolchain is deprecated, replaced by ``system`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FIXME
+
+.. _eb4_changes_local_variables:
+
+Local variables in easyconfigs should follow recommended naming scheme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FIXME
+ see :ref:`easyconfig_files_local_variables`
