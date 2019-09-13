@@ -25,11 +25,15 @@ The ``easybuild.tools.py2vs3`` package provides two major classes of items (list
 * functions from the Python standard library which should be imported from different locations in Python 2 and 3
 * wrappers for functionality in the Python standard library which behaves differently in Python 2 and 3
 
+.. _py2vs3_ascii_letters:
+
 ``ascii_letters``
 -----------------
 
 * Python 2: corresponds with ``string.letters``
 * Python 3: corresponds with ``string.ascii_letters``
+
+.. _py2vs3_ascii_lowercase:
 
 ``ascii_lowercase``
 -------------------
@@ -37,11 +41,15 @@ The ``easybuild.tools.py2vs3`` package provides two major classes of items (list
 * Python 2: corresponds with ``string.lowercase``
 * Python 3: corresponds with ``string.ascii_lowercase``
 
+.. _py2vs3_build_opener:
+
 ``build_opener``
 ----------------
 
 * Python 2: corresponds with ``urllib2.build_opener`` function
 * Python 3: corresponds with ``urllib.request.build_opener`` function
+
+.. _py2vs3_configparser:
 
 ``configparser``
 ----------------
@@ -49,15 +57,21 @@ The ``easybuild.tools.py2vs3`` package provides two major classes of items (list
 * Python 2: corresponds with ``ConfigParser.configparser`` module
 * Python 3: corresponds with ``configparser`` module
 
+.. _py2vs3_create_base_metaclass:
+
 ``create_base_metaclass``
 -------------------------
 
 Function to create a metaclass that can be used as a base class, implemented in a way that is compatible with both Python 2 and 3.
 
+.. _py2vs3_extract_method_name:
+
 ``extract_method_name``
 ------------------------
 
 Function to method name from lambda function, implemented in a way that is compatible with both Python 2 and 3.
+
+.. _py2vs3_HTTPError:
 
 ``HTTPError``
 -------------
@@ -65,11 +79,15 @@ Function to method name from lambda function, implemented in a way that is compa
 * Python 2: corresponds with ``urllib2.HTTPError``
 * Python 3: corresponds with ``urllib.request.HTTPError``
 
+.. _py2vs3_HTTPSHandler:
+
 ``HTTPSHandler``
 ----------------
 
 * Python 2: corresponds with ``urllib2.HTTPSHandler``
 * Python 3: corresponds with ``urllib.request.HTTPSHandler``
+
+.. _py2vs3_json_loads:
 
 ``json_loads``
 --------------
@@ -78,11 +96,14 @@ Function to method name from lambda function, implemented in a way that is compa
 * Python 3: wraps ``json.loads`` function, taking into account that for Python versions older than 3.6
             a value of type ``string`` (rather than ``bytes``) is required as argument
 
+.. _py2vs3_mk_wrapper_baseclass:
+
 ``mk_wrapper_baseclass``
 ------------------------
 
 Function to create a wrapper base class using the specified metaclass, implemented in a way that is compatible with both Python 2 and 3.
 
+.. _py2vs3_OrderedDict:
 
 ``OrderedDict``
 ---------------
@@ -91,16 +112,22 @@ Function to create a wrapper base class using the specified metaclass, implement
 * Python 2.7: corresponds with ``collections.OrderedDict``
 * Python 3: corresponds with ``collections.OrderedDict``
 
+.. _py2vs3_reload:
+
 ``reload``
 ----------
 
 * Python 2: corresponds with ``reload`` built-in function
 * Python 3: corresponds with ``importlib.reload`` function
 
+.. _py2vs3_raise_with_traceback:
+
 ``raise_with_traceback``
 ------------------------
 
 Function to raise an error with specified message and traceback, implemented in a way that is compatible with both Python 2 and 3.
+
+.. _py2vs3_Request:
 
 ``Request``
 -----------
@@ -108,11 +135,15 @@ Function to raise an error with specified message and traceback, implemented in 
 * Python 2: corresponds with ``urllib2.Request``
 * Python 3: corresponds with ``urllib.request.Request``
 
+.. _py2vs3_subprocess_popen_text:
+
 ``subprocess_popen_text``
 -------------------------
 
 * Python 2: wrapper for ``subprocess.Popen``
 * Python 3: wrapper for ``subprocess.Popen`` while forcing text mode (using ``universal_newlines=True``)
+
+.. _py2vs3_std_urllib:
 
 ``std_urllib``
 --------------
@@ -120,11 +151,15 @@ Function to raise an error with specified message and traceback, implemented in 
 * Python 2: corresponds with ``urllib`` package
 * Python 3: corresponds with ``urllib.request`` package
 
+.. _py2vs3_string_type:
+
 ``string_type``
 ---------------
 
 * Python 2: corresponds with ``basestring`` built-in string type
 * Python 3: corresponds with ``str`` built-in string type
+
+.. _py2vs3_StringIO:
 
 ``StringIO``
 ------------
@@ -132,17 +167,23 @@ Function to raise an error with specified message and traceback, implemented in 
 * Python 2: corresponds with ``StringIO.StringIO`` class
 * Python 3: corresponds with ``io.StringIO`` class
 
+.. _py2vs3_urlencode:
+
 ``urlencode``
 -------------
 
 * Python 2: corresponds with ``urllib.urlencode`` function
 * Python 2: corresponds with ``urllib.parse.urlencode`` function
 
+.. _py2vs3_URLError:
+
 ``URLError``
 ------------
 
 * Python 2: corresponds with ``urllib2.URLError``
 * Python 3: corresponds with ``urllib.request.URLError``
+
+.. _py2vs3_urlopen:
 
 ``urlopen``
 -----------

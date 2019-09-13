@@ -3,7 +3,8 @@
 Overview of changes in EasyBuild version 4.0
 ============================================
 
-This page provides a concise overview of the most prominent changes in EasyBuild version 4.0.
+This page provides a concise overview of the most prominent changes in EasyBuild version 4.0,
+compared to the latest EasyBuild v3.x (version 3.9.4).
 
 A detailed overview with links to the pull requests in which the changes are made is available in the
 :ref:`release_notes` (see :ref:`release_notes_eb400` in particular).
@@ -54,7 +55,7 @@ Support for running EasyBuild on top of Python 3
 A significant effort has been done to make the EasyBuild framework and the easyblocks included with EasyBuild
 **compatible with Python 3**, while retaining the compatibility with Python 2.
 
-Currently supported Python versions include: ``2.6.x``, ``2.7.x``, ``3.5.x``, ``3.6.x``, ``3.7.x``.
+Currently supported Python versions include: ``2.6``, ``2.7``, ``3.5``, ``3.6``, ``3.7``.
 
 To achieve this in a maintainable way, the ``easybuild.tools.py2vs3`` package was introduced.
 For more details, please see :ref:`py2_py3_compatibility`.
@@ -83,14 +84,15 @@ In addition, various (generic and software-specific) easyblocks were improved an
 2019b update of common toolchains
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FIXME
+The ``2019b`` update of the common toolchains is included with EasyBuild v4.0; see also :ref:`common_toolchains`.
+
 
 .. _eb4_changes_backwards_incompatible:
 
 Backwards-incompatible changes in EasyBuild v4.0
 ------------------------------------------------
 
-A couple of *backwards-incompatible* changes were made in EasyBuild v4.0
+A couple of *backwards-incompatible* changes were made in EasyBuild v4.0:
 
 * :ref:`eb4_changes_relocated_stuff`
 * :ref:`eb4_changes_ingested_vsc_base`
@@ -117,14 +119,42 @@ A detailed overview of relocated functions and constants is available at :ref:`e
 Ingested functionality from ``vsc-base`` and ``vsc-install``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FIXME
+The functionality from the ``vsc-base`` and ``vsc-install`` packages required by EasyBuild has been ingested
+in the EasyBuild framework, see also :ref:``.
+
+This has primarily been done in the new ``easybuild.base`` package, but in some specific cases functions
+have been placed in already existing ``easybuild.tools`` modules.
+
+* ``easybuild.base.exceptions`` (was ``vsc.utils.exceptions``)
+* ``easybuild.base.fancylogger`` (was ``vsc.utils.fancylogger``)
+* ``easybuild.base.frozendict`` (for ``FrozenDict`` and ``FrozenDictKnownKeys`` classes from ``vsc.utils.missing``)
+* ``easybuild.base.generaloption`` (was ``vsc.utils.generaloption``)
+* ``easybuild.base.optcomplete`` (was ``vsc.utils.optcomplete``)
+* ``easybuild.base.rest`` (was ``vsc.utils.rest``)
+* ``easybuild.base.testing`` (was ``vsc.utils.testing``)
+* ``easybuild.base.wrapper`` (was ``vsc.utils.wrapper``)
+
+A number of specific functions have been placed in other modules:
+
+* ``get_class_for``, ``get_subclasses``, ``nub``, ``shell_quote`` from ``vsc.utils.missing`` in ``easybuild.tools.utilities``
+* ``mk_rst_table`` from ``vsc.utils.docs`` in ``easybuild.tools.docs``
+* ``sched_getaffinity`` from ``vsc.utils.affinity`` in ``easybuild.tools.systemtools``
+* ``Singleton`` from ``vsc.utils.patterns`` in ``easybuild.tools.config``
+
+The affected functions are also listed in :ref:`eb4_relocated_functions_constants`.
 
 .. _eb4_changes_py2vs3:
 
 Functions that must be imported from the ``easybuild.tools.py2vs3`` namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FIXME
+Various functions that could be imported directly from the Python standard library should now be
+imported from the ``easybuild.tools.py2vs3`` namespace instead (perhaps under a different name),
+to ensure compatibility with Python 2 and 3.
+
+See :ref:`py2_py3_compatibility` for more information.
+
+The affected functions are also included in :ref:`eb4_relocated_functions_constants`.
 
 
 .. _eb4_changes_deprecated:
