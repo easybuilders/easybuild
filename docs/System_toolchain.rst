@@ -21,7 +21,7 @@ This page provides more information about this change, and how to deal with the 
 Use case for the ``system`` toolchain
 -------------------------------------
 
-The ``system`` toolchain is intended for the same use case as the ``dummy`` toolchain was: it should (only) be used
+The :ref:`system_toolchain` is intended for the same use case as the ``dummy`` toolchain was: it should (only) be used
 for software installations where the compiler & libraries provided by the operating system are assumed to
 be sufficient.
 
@@ -86,6 +86,9 @@ and the contents of the easyconfig files will be interpreted exactly as before, 
 the (build) dependencies specified in the easyconfig files will *always* be loaded in the build environment,
 *regardless* of the toolchain version (see also :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`).
 
+Since the ``dummy`` toolchain has been deprecated, so has the ``--add-dummy-to-minimal-toolchains`` configuration option.
+It has been replaced with the ``--add-system-to-minimal-toolchains`` configuration option (see also :ref:`minimal_toolchains_dummy`).
+
 
 .. _system_toolchain_updating_dummy:
 
@@ -131,11 +134,12 @@ Impact of version of ``dummy`` toolchain w.r.t. dependencies
 
 The *version* that was being used for a ``dummy`` toolchain was interpreted by EasyBuild in a rather surprising way.
 
-If ``'dummy'`` was specified as a toolchain version, then the (build) dependencies that were specified in the easyconfig file
-were *not* loaded in the build environment.
+If ``'dummy'`` was specified as a toolchain version, then the (build) dependencies that were specified in the
+easyconfig file were *not* loaded in the build environment. ``module load`` statements for the (non-build)
+dependencies *were* included in the generated module file, however...
 
-Using any version other than ``'dummy'`` did result in the normal behaviour of loading the dependencies in the build
-environment, however.
+Using any version other than ``'dummy'`` resulted in the usual behaviour of loading the dependencies in the build
+environment.
 
 Why this mechanism was in place has been lost to the sands of time...
 
