@@ -17,7 +17,7 @@ When importing a function from this package, you will automagically get a versio
 is compatible with the Python version being used to run EasyBuild.
 
 Through this approach we can hide subtle differences between Python 2 and 3, while avoiding code duplication
-and Python version checks througout the codebase, as well as avoid requiring packages like ``six`` or ``future``
+and Python version checks throughout the codebase, as well as avoid requiring packages like ``six`` or ``future``
 (which facilitate maintaining compatibility with Python 2 and 3, but are also a bit of a burden).
 
 The ``easybuild.tools.py2vs3`` package provides two major classes of items (listed below in alphabetical order):

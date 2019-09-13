@@ -56,7 +56,7 @@ The ``DUMMY_TOOLCHAIN_NAME`` and ``DUMMY_TOOLCHAIN_VERSION`` constants were relo
 ``FrozenDictKnownKeys`` class
 -----------------------------
 
-The ``FrozenDictKnownKeys`` class from ``vsc.utils.missing`` is now avaialble from ``easybuild.base.frozendict``.
+The ``FrozenDictKnownKeys`` class from ``vsc.utils.missing`` is now available from ``easybuild.base.frozendict``.
 
 
 .. _eb4_relocated_GEENRAL_CLASS:

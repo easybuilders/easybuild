@@ -87,7 +87,7 @@ the (build) dependencies specified in the easyconfig files will *always* be load
 *regardless* of the toolchain version (see also :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`).
 
 Since the ``dummy`` toolchain has been deprecated, so has the ``--add-dummy-to-minimal-toolchains`` configuration option.
-It has been replaced with the ``--add-system-to-minimal-toolchains`` configuration option (see also :ref:`minimal_toolchains_dummy`).
+It has been replaced with the ``--add-system-to-minimal-toolchains`` configuration option (see also :ref:`minimal_toolchains_system`).
 
 
 .. _system_toolchain_updating_dummy:
