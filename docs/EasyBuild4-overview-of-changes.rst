@@ -31,8 +31,8 @@ Various significant enhancements are included in EasyBuild v4.0, including:
 No more required Python packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To simplify the installation of EasyBuild, *no Python packages other than the ones included in the Python standard
-library are required anymore* for EasyBuild v4.0. More specifically:
+To simplify the installation of EasyBuild, **no Python packages other than the ones included in the Python standard
+library are required** for EasyBuild v4.0. More specifically:
 
 * ``setuptools`` **is no longer a required dependency**, neither for using EasyBuild nor for installing it.
   This change was motivated by the various problems with installing EasyBuild that were reported, which could
@@ -43,8 +43,9 @@ library are required anymore* for EasyBuild v4.0. More specifically:
   were ingested into the EasyBuild framework codebase itself (see also :ref:`eb4_changes_ingested_vsc_base`),
   mostly to facilitate making EasyBuild compatible with Python 3.
 
-Note that specific Python packages may currently still be required for certain EasyBuild functionality, including
-``keyring`` for the GitHub integration features, etc.
+Note that specific Python packages may currently still be required for certain EasyBuild functionality outside
+of the core functionality of building and installing scientific software, including ``keyring`` for the GitHub
+integration features (see :ref:`integration_with_github`), etc.
 
 
 .. _eb4_python3_support:
@@ -66,7 +67,7 @@ For more details, please see :ref:`py2_py3_compatibility`.
 Custom software-specific easyblocks for ``iccifort``, ``numexpr``, ``OpenMPI``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A couple of additional custom software-specific easyblocks were added in EasyBuild v4.0 for several software packages, including:
+A couple of **additional custom software-specific easyblocks** were added in EasyBuild v4.0 for several software packages, including:
 
 * ``iccifort``: to install ``icc`` and ``ifort`` together in a single prefix, and use that installation as a toolchain
 
@@ -119,8 +120,8 @@ A detailed overview of relocated functions and constants is available at :ref:`e
 Ingested functionality from ``vsc-base`` and ``vsc-install``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The functionality from the ``vsc-base`` and ``vsc-install`` packages required by EasyBuild has been ingested
-in the EasyBuild framework, see also :ref:``.
+The **functionality from the** ``vsc-base`` **and** ``vsc-install`` **packages required by EasyBuild has been ingested
+in the EasyBuild framework**, see also :ref:``.
 
 This has primarily been done in the new ``easybuild.base`` package, so in general imports
 from a module in the ``vsc.utils`` package should be replaced with a corresponding import statement
@@ -151,8 +152,8 @@ via one of the ``--include-*`` options), an error like this will be produced::
 Functions that must be imported from the ``easybuild.tools.py2vs3`` namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Various functions that could be imported directly from the Python standard library should now be
-imported from the ``easybuild.tools.py2vs3`` namespace instead (perhaps under a different name),
+**Various functions that could be imported directly from the Python standard library should now be
+imported from the** ``easybuild.tools.py2vs3`` **namespace instead** (perhaps under a different name),
 to ensure compatibility with Python 2 and 3.
 
 See :ref:`py2_py3_compatibility` for more information.
@@ -177,6 +178,8 @@ If you trigger any deprecated functionality, a warning message will be printed.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FIXME
+
+:ref:`eb4_system_toolchain`
 
 .. _eb4_changes_local_variables:
 
