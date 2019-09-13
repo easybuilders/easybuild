@@ -8,7 +8,7 @@ In EasyBuild v4.0, the infamous ``dummy`` toolchain was deprecated, and replaced
 This page provides more information about this change, and how to deal with the transition.
 
 .. note:: To easy the transition from ``dummy`` to ``system``, EasyBuild v3.9.4 already supports using the ``system``
-          toolchain as a drop-in replacement for the ``dummy`` toolchain.
+          toolchain as an alias for the ``dummy`` toolchain.
 
 .. contents::
     :depth: 1
@@ -26,9 +26,9 @@ for software installations where the compiler & libraries provided by the operat
 be sufficient.
 
 This includes installing binary software (for which no compiler is used at all), installations that boil down to
-only unpacking a bunch of scripts, and building and installing a (base) toolchain compiler like GCC.
+only unpacking a source tarball, and building and installing a (base) toolchain compiler like GCC.
 
-For all intents and purposes, the ``system`` **toolchain can be considered a drop-in replacement for
+For all intents and purposes, the ``system`` **toolchain can be considered as a drop-in replacement for
 the (deprecated)** ``dummy`` **toolchain** (see also :ref:`system_toolchain_impact_deprecated_dummy`).
 
 .. _system_toolchain_usage:
@@ -46,7 +46,8 @@ To use the ``system`` toolchain in an easyconfig file, simply use ``'system'`` a
           it could be ``'system'``, ``''`` or any other (string) value.
           
           EasyBuild does not interpret the version of the ``system`` toolchain in any way
-          (as was the case with the ``dummy`` toolchain in EasyBuild versions prior to version 4.0).
+          (as opposed to the ``dummy`` toolchain in EasyBuild versions prior to version 4.0,
+          see :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`).
 
 
 .. _system_toolchain_SYSTEM_constant:
@@ -109,7 +110,7 @@ Motivation for deprecating the ``dummy`` toolchain
 
 Deprecating the ``dummy`` toolchain was done for a number of reasons:
 
-* :ref:`system_toolchain_motivation_name`
+* :ref:`system_toolchain_motivation_deprecating_dummy_name`
 * :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`
 
 .. _system_toolchain_motivation_deprecating_dummy_name:

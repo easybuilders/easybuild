@@ -68,7 +68,7 @@ For more details, please see :ref:`py2_py3_compatibility`.
 Custom software-specific easyblocks for ``iccifort``, ``numexpr``, ``OpenMPI``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A couple of **additional custom software-specific easyblocks** were added in EasyBuild v4.0 for several software packages, including:
+A couple of **additional custom software-specific easyblocks** were added in EasyBuild v4.0, including:
 
 * ``iccifort``: to install ``icc`` and ``ifort`` together in a single prefix, and use that installation as a toolchain
 
@@ -130,7 +130,7 @@ This has primarily been done in the new ``easybuild.base`` package, so in genera
 from a module in the ``vsc.utils`` package should be replaced with a corresponding import statement
 from that same module in the ``easybuild.base`` package.
 
-A number of specific functions and classes have been placed in existing modules in the ``easybuild.tools`` package.
+A number of specific functions and classes have been placed in existing modules in the ``easybuild.tools`` package instead.
 
 The affected functions are listed in :ref:`eb4_relocated_functions_classes_constants`.
 
@@ -140,7 +140,7 @@ Fake ``vsc`` namespace
 ++++++++++++++++++++++
 
 To avoid that any functionality is imported from an already installed ``vsc-base`` (or ``vsc-install``) package,
-a fake ``vsc`` namespace is injected since EasyBuild v4.0.
+which could lead to strange side-effects, a fake ``vsc`` namespace is injected since EasyBuild v4.0.
 
 If an import from ``vsc.utils.*`` is detected (for example from an easyblock or from a module that is included
 via one of the ``--include-*`` options), an error like this will be produced::
@@ -177,10 +177,10 @@ If you trigger any deprecated functionality, a warning message will be printed.
 
 .. _eb4_changes_dummy_tc:
 
-``dummy`` toolchain is deprecated, replaced by ``system`` toolchain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deprecated ``dummy`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``dummy`` toolchain was deprecated, and has been replaced with the ``system`` toolchain.
+The ``dummy`` toolchain is now deprecated, and has been replaced with the ``system`` toolchain.
 
 For more information, please consult :ref:`system_toolchain`.
 
