@@ -111,7 +111,7 @@ This was done mostly to ensure that the ``__init__.py`` files that define packag
 than the ``pkgutil.extend_path`` (which replaces the ``pkg_resources.declare_namespace`` which requires ``setuptools``,
 see also :ref:`eb4_no_required_deps`).
 
-A detailed overview of relocated functions and constants is available at :ref:`eb4_relocated_functions_constants`.
+A detailed overview of relocated functions and constants is available at :ref:`eb4_relocated_functions_classes_constants`.
 
 
 .. _eb4_changes_ingested_vsc_base:
@@ -122,26 +122,29 @@ Ingested functionality from ``vsc-base`` and ``vsc-install``
 The functionality from the ``vsc-base`` and ``vsc-install`` packages required by EasyBuild has been ingested
 in the EasyBuild framework, see also :ref:``.
 
-This has primarily been done in the new ``easybuild.base`` package, but in some specific cases functions
-have been placed in already existing ``easybuild.tools`` modules.
+This has primarily been done in the new ``easybuild.base`` package, so in general imports
+from a module in the ``vsc.utils`` package should be replaced with a corresponding import statement
+from that same module in the ``easybuild.base`` package.
 
-* ``easybuild.base.exceptions`` (was ``vsc.utils.exceptions``)
-* ``easybuild.base.fancylogger`` (was ``vsc.utils.fancylogger``)
-* ``easybuild.base.frozendict`` (for ``FrozenDict`` and ``FrozenDictKnownKeys`` classes from ``vsc.utils.missing``)
-* ``easybuild.base.generaloption`` (was ``vsc.utils.generaloption``)
-* ``easybuild.base.optcomplete`` (was ``vsc.utils.optcomplete``)
-* ``easybuild.base.rest`` (was ``vsc.utils.rest``)
-* ``easybuild.base.testing`` (was ``vsc.utils.testing``)
-* ``easybuild.base.wrapper`` (was ``vsc.utils.wrapper``)
+A number of specific functions and classes have been placed in existing modules in the ``easybuild.tools`` package.
 
-A number of specific functions have been placed in other modules:
+The affected functions are listed in :ref:`eb4_relocated_functions_classes_constants`.
 
-* ``get_class_for``, ``get_subclasses``, ``nub``, ``shell_quote`` from ``vsc.utils.missing`` in ``easybuild.tools.utilities``
-* ``mk_rst_table`` from ``vsc.utils.docs`` in ``easybuild.tools.docs``
-* ``sched_getaffinity`` from ``vsc.utils.affinity`` in ``easybuild.tools.systemtools``
-* ``Singleton`` from ``vsc.utils.patterns`` in ``easybuild.tools.config``
+.. _eb4_changes_ingested_vsc_base_fake_vsc_namespace:
 
-The affected functions are also listed in :ref:`eb4_relocated_functions_constants`.
+Fake ``vsc`` namespace
+++++++++++++++++++++++
+
+To avoid that any functionality is imported from an already installed ``vsc-base`` (or ``vsc-install``) package,
+a fake ``vsc`` namespace is injected since EasyBuild v4.0.
+
+If an imports from ``vsc.utils.*`` is detected (for example from an easyblock are from a module that is included
+via one of the ``--include-*`` options), an error like this will be produced::
+
+  ERROR: Detected import from 'vsc' namespace in /home/example/old_easyblock.py (line 7)
+  vsc-base & vsc-install were ingested into the EasyBuild framework in EasyBuild v4.0
+  The functionality you need may be available in the 'easybuild.base.*' namespace.
+
 
 .. _eb4_changes_py2vs3:
 
@@ -154,7 +157,7 @@ to ensure compatibility with Python 2 and 3.
 
 See :ref:`py2_py3_compatibility` for more information.
 
-The affected functions are also included in :ref:`eb4_relocated_functions_constants`.
+The affected functions are also included in :ref:`eb4_relocated_functions_classes_constants`.
 
 
 .. _eb4_changes_deprecated:
