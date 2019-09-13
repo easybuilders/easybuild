@@ -103,14 +103,16 @@ A couple of *backwards-incompatible* changes were made in EasyBuild v4.0:
 
 .. _eb4_changes_relocated_stuff:
 
-Relocated functions and constants in EasyBuild framework
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Relocated functions, classes and constants in EasyBuild framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**A limited number of functions and constants have been relocated in the EasyBuild framework.**
+**A limited number of functions, classes and constants have been relocated in the EasyBuild framework.**
 
 This was done mostly to ensure that the ``__init__.py`` files that define packages are empty, other
 than the ``pkgutil.extend_path`` (which replaces the ``pkg_resources.declare_namespace`` which requires ``setuptools``,
 see also :ref:`eb4_no_required_deps`).
+
+Making EasyBuild compatible with Python 3 also required some similar changes, see :ref:`eb4_changes_py2vs3`.
 
 A detailed overview of relocated functions and constants is available at :ref:`eb4_relocated_functions_classes_constants`.
 
@@ -121,7 +123,7 @@ Ingested functionality from ``vsc-base`` and ``vsc-install``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **functionality from the** ``vsc-base`` **and** ``vsc-install`` **packages required by EasyBuild has been ingested
-in the EasyBuild framework**, see also :ref:``.
+in the EasyBuild framework**, see also :ref:`eb4_no_required_deps`.
 
 This has primarily been done in the new ``easybuild.base`` package, so in general imports
 from a module in the ``vsc.utils`` package should be replaced with a corresponding import statement
@@ -139,7 +141,7 @@ Fake ``vsc`` namespace
 To avoid that any functionality is imported from an already installed ``vsc-base`` (or ``vsc-install``) package,
 a fake ``vsc`` namespace is injected since EasyBuild v4.0.
 
-If an imports from ``vsc.utils.*`` is detected (for example from an easyblock are from a module that is included
+If an import from ``vsc.utils.*`` is detected (for example from an easyblock or from a module that is included
 via one of the ``--include-*`` options), an error like this will be produced::
 
   ERROR: Detected import from 'vsc' namespace in /home/example/old_easyblock.py (line 7)
@@ -149,10 +151,10 @@ via one of the ``--include-*`` options), an error like this will be produced::
 
 .. _eb4_changes_py2vs3:
 
-Functions that must be imported from the ``easybuild.tools.py2vs3`` namespace
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Functions & classes that must be imported from the ``easybuild.tools.py2vs3`` namespace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Various functions that could be imported directly from the Python standard library should now be
+**A handful functions and classes that could be imported directly from the Python standard library should now be
 imported from the** ``easybuild.tools.py2vs3`` **namespace instead** (perhaps under a different name),
 to ensure compatibility with Python 2 and 3.
 
@@ -177,14 +179,19 @@ If you trigger any deprecated functionality, a warning message will be printed.
 ``dummy`` toolchain is deprecated, replaced by ``system`` toolchain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FIXME
+The ``dummy`` toolchain was deprecated, and has been replaced with the ``system`` toolchain.
 
-:ref:`eb4_system_toolchain`
+For more information, please consult :ref:`system_toolchain`.
+
 
 .. _eb4_changes_local_variables:
 
 Local variables in easyconfigs should follow recommended naming scheme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FIXME
- see :ref:`easyconfig_files_local_variables`
+A recommended naming scheme for local variables in easyconfig files was introduced.
+
+If an easyconfig file contains local variables that do not follow the recommended naming scheme,
+a warning will be printed (by default).
+
+For more information, see :ref:`easyconfig_files_local_variables`.

@@ -46,7 +46,7 @@ The ``DEVEL_MODULE_SUFFIX`` constant was relocated from ``easybuild.tools.module
 
 The ``DUMMY_TOOLCHAIN_NAME`` and ``DUMMY_TOOLCHAIN_VERSION`` constants were relocated from ``easybuild.tools.toolchain`` to ``easybuild.tools.toolchain.toolchain``.
 
-.. note:: Since the ``dummy`` toolchain has been deprecated and is replaced by the ``system`` toolchain (see :ref:`eb4_system_toolchain`),
+.. note:: Since the ``dummy`` toolchain has been deprecated and is replaced by the ``system`` toolchain (see :ref:`system_toolchain`),
           you should use the ``is_system_toolchain`` function or ``Toolchain.is_system_toolchain`` method to check whether a toolchain
           is a ``dummy`` or ``system`` toolchain, rather than using these constants directly (or using the ``SYSTEM_TOOLCHAIN-*`` equivalents).
 
