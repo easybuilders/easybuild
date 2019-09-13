@@ -9,9 +9,10 @@ compared to the latest EasyBuild v3.x (version 3.9.4).
 A detailed overview with links to the pull requests in which the changes are made is available in the
 :ref:`release_notes` (see :ref:`release_notes_eb400` in particular).
 
-* :ref:`eb4_changes_significant_enhancements`
-* :ref:`eb4_changes_backwards_incompatible`
-* :ref:`eb4_changes_deprecated`
+.. contents::
+    :depth: 2
+    :backlinks: none
+    :local:
 
 
 .. _eb4_changes_significant_enhancements:
