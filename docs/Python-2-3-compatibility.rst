@@ -1,0 +1,151 @@
+.. _py2_py3_compatibility:
+
+Compatibility with Python 2 and Python 3
+========================================
+
+Starting with EasyBuild v4.0, the EasyBuild framework and easyblocks are compatible with both Python versions 2 and 3.
+More specifically, the following Python versions are currently supported:
+
+* Python 2.6.x
+* Python 2.7.x
+* Python 3.5.x
+* Python 3.6.x
+* Python 3.7.x
+
+To facilitate this, the ``easybuild.tools.py2vs3`` package was introduced in EasyBuild v4.0.
+When importing a function from this package, you will automagically get a version of the function that
+is compatible with the Python version being used to run EasyBuild.
+
+Through this approach we can hide subtle differences between Python 2 and 3, while avoiding code duplication
+and Python version checks througout the codebase, as well as avoid requiring packages like ``six`` or ``future``
+(which facilitate maintaining compatibility with Python 2 and 3, but are also a bit of a burden).
+
+The ``easybuild.tools.py2vs3`` package provides two major classes of items (listed below in alphabetical order):
+
+* functions from the Python standard library which should be imported from different locations in Python 2 and 3
+* wrappers for functionality in the Python standard library which behaves differently in Python 2 and 3
+
+``ascii_letters``
+-----------------
+
+* Python 2: corresponds with ``string.letters``
+* Python 3: corresponds with ``string.ascii_letters``
+
+``ascii_lowercase``
+-------------------
+
+* Python 2: corresponds with ``string.lowercase``
+* Python 3: corresponds with ``string.ascii_lowercase``
+
+``build_opener``
+----------------
+
+* Python 2: corresponds with ``urllib2.build_opener`` function
+* Python 3: corresponds with ``urllib.request.build_opener`` function
+
+``configparser``
+----------------
+
+* Python 2: corresponds with ``ConfigParser.configparser`` module
+* Python 3: corresponds with ``configparser`` module
+
+``create_base_metaclass``
+-------------------------
+
+Function to create a metaclass that can be used as a base class, implemented in a way that is compatible with both Python 2 and 3.
+
+``extract_method_name``
+------------------------
+
+Function to method name from lambda function, implemented in a way that is compatible with both Python 2 and 3.
+
+``HTTPError``
+-------------
+
+* Python 2: corresponds with ``urllib2.HTTPError``
+* Python 3: corresponds with ``urllib.request.HTTPError``
+
+``HTTPSHandler``
+----------------
+
+* Python 2: corresponds with ``urllib2.HTTPSHandler``
+* Python 3: corresponds with ``urllib.request.HTTPSHandler``
+
+``json_loads``
+--------------
+
+* Python 2: wraps ``json.loads`` function
+* Python 3: wraps ``json.loads`` function, taking into account that for Python versions older than 3.6
+            a value of type ``string`` (rather than ``bytes``) is required as argument
+
+``mk_wrapper_baseclass``
+------------------------
+
+Function to create a wrapper base class using the specified metaclass, implemented in a way that is compatible with both Python 2 and 3.
+
+
+``OrderedDict``
+---------------
+
+* Python 2.6: corresponds with ``easybuild.tools.ordereddict.OrderedDict``
+* Python 2.7: corresponds with ``collections.OrderedDict``
+* Python 3: corresponds with ``collections.OrderedDict``
+
+``reload``
+----------
+
+* Python 2: corresponds with ``reload`` built-in function
+* Python 3: corresponds with ``importlib.reload`` function
+
+``raise_with_traceback``
+------------------------
+
+Function to raise an error with specified message and traceback, implemented in a way that is compatible with both Python 2 and 3.
+
+``Request``
+-----------
+
+* Python 2: corresponds with ``urllib2.Request``
+* Python 3: corresponds with ``urllib.request.Request``
+
+``subprocess_popen_text``
+-------------------------
+
+* Python 2: wrapper for ``subprocess.Popen``
+* Python 3: wrapper for ``subprocess.Popen`` while forcing text mode (using ``universal_newlines=True``)
+
+``std_urllib``
+--------------
+
+* Python 2: corresponds with ``urllib`` package
+* Python 3: corresponds with ``urllib.request`` package
+
+``string_type``
+---------------
+
+* Python 2: corresponds with ``basestring`` built-in string type
+* Python 3: corresponds with ``str`` built-in string type
+
+``StringIO``
+------------
+
+* Python 2: corresponds with ``StringIO.StringIO`` class
+* Python 3: corresponds with ``io.StringIO`` class
+
+``urlencode``
+-------------
+
+* Python 2: corresponds with ``urllib.urlencode`` function
+* Python 2: corresponds with ``urllib.parse.urlencode`` function
+
+``URLError``
+------------
+
+* Python 2: corresponds with ``urllib2.URLError``
+* Python 3: corresponds with ``urllib.request.URLError``
+
+``urlopen``
+-----------
+
+* Python 2: corresponds with ``urllib2.urlopen``
+* Python 3: corresponds with ``urllib.request.urlopen``

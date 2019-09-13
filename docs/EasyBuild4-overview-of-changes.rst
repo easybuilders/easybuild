@@ -39,8 +39,8 @@ library are required anymore* for EasyBuild v4.0. More specifically:
   manager, quirky or broken functionality in specific versions, etc.).
 
 * ``vsc-base`` **and** ``vsc-install`` **are no longer required dependencies**. The relevant parts of these packages
-  were ingested into the EasyBuild framework codebase itself, mostly to facilitate making EasyBuild compatible with
-  Python 3.
+  were ingested into the EasyBuild framework codebase itself (see also :ref:`eb4_changes_ingested_vsc_base`),
+  mostly to facilitate making EasyBuild compatible with Python 3.
 
 Note that specific Python packages may currently still be required for certain EasyBuild functionality, including
 ``keyring`` for the GitHub integration features, etc.
@@ -52,11 +52,12 @@ Support for running EasyBuild on top of Python 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A significant effort has been done to make the EasyBuild framework and the easyblocks included with EasyBuild
-compatible with Python 3, while retaining the compatibility with Python 2.
+**compatible with Python 3**, while retaining the compatibility with Python 2.
 
 Currently supported Python versions include: ``2.6.x``, ``2.7.x``, ``3.5.x``, ``3.6.x``, ``3.7.x``.
 
-For more details, please see :ref:`py2_py3_support`.
+To achieve this in a maintainable way, the ``easybuild.tools.py2vs3`` package was introduced.
+For more details, please see :ref:`py2_py3_compatibility`.
 
 
 .. _eb4_custom_easyblocks:
@@ -64,7 +65,7 @@ For more details, please see :ref:`py2_py3_support`.
 Custom software-specific easyblocks for ``iccifort``, ``numexpr``, ``OpenMPI``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Custom software-specific easyblocks were added in EasyBuild v4.0 for several software packages, including:
+A couple of additional custom software-specific easyblocks were added in EasyBuild v4.0 for several software packages, including:
 
 * ``iccifort``: to install ``icc`` and ``ifort`` together in a single prefix, and use that installation as a toolchain
 
@@ -92,6 +93,7 @@ Backwards-incompatible changes in EasyBuild v4.0
 A couple of *backwards-incompatible* changes were made in EasyBuild v4.0
 
 * :ref:`eb4_changes_relocated_stuff`
+* :ref:`eb4_changes_ingested_vsc_base`
 * :ref:`eb4_changes_py2vs3`
 
 .. note:: **These changes are mainly important for developers of the EasyBuild framework and easyblock implementers.**
@@ -100,6 +102,20 @@ A couple of *backwards-incompatible* changes were made in EasyBuild v4.0
 
 Relocated functions and constants in EasyBuild framework
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**A limited number of functions and constants have been relocated in the EasyBuild framework.**
+
+This was done mostly to ensure that the ``__init__.py`` files that define packages are empty, other
+than the ``pkgutil.extend_path`` (which replaces the ``pkg_resources.declare_namespace`` which requires ``setuptools``,
+see also :ref:`eb4_no_required_deps`).
+
+A detailed overview of relocated functions and constants is available at :ref:`eb4_relocated_functions_constants`.
+
+
+.. _eb4_changes_ingested_vsc_base:
+
+Ingested functionality from ``vsc-base`` and ``vsc-install``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FIXME
 
