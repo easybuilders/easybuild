@@ -201,7 +201,7 @@ So, for the zlib v1.2.8 dependency included in the example above, the following 
   zlib v1.2.8 using the ``GCC/4.9.3`` toolchain; if no such easyconfig file is found, it will continue searching
   using the ``gompi/2015b`` toolchain, and finally the ``foss/2015b`` toolchain
 * if ``--add-system-to-minimal-toolchains`` is also enabled, EasyBuild will try locating an easyconfig file for
-  zlib v1.2.8 that uses the ``dummy`` toolchain prior to consider the ``GCC/4.9.3`` toolchain
+  zlib v1.2.8 that uses the ``system`` toolchain prior to considering the ``GCC/4.9.3`` toolchain
 * additionally, with ``--use-existing-modules`` enabled, EasyBuild will first check whether a ``zlib`` module for
   version 1.2.8 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file
   for zlib as outlined above

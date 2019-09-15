@@ -3,11 +3,11 @@
 ``system`` toolchain
 ====================
 
-In EasyBuild v4.0, the infamous ``dummy`` toolchain was deprecated, and replaced with the ``system`` toolchain.
+In EasyBuild v4.0, the infamous ``dummy`` toolchain has been deprecated, and replaced with the ``system`` toolchain.
 
 This page provides more information about this change, and how to deal with the transition.
 
-.. note:: To easy the transition from ``dummy`` to ``system``, EasyBuild v3.9.4 already supports using the ``system``
+.. note:: To ease the transition from ``dummy`` to ``system``, EasyBuild v3.9.4 already supports using the ``system``
           toolchain as an alias for the ``dummy`` toolchain.
 
 .. contents::
@@ -26,7 +26,7 @@ for software installations where the compiler & libraries provided by the operat
 be sufficient.
 
 This includes installing binary software (for which no compiler is used at all), installations that boil down to
-only unpacking a source tarball, and building and installing a (base) toolchain compiler like GCC.
+only unpacking a source tarball, and building and installing a (base) toolchain compiler like GCC(core).
 
 For all intents and purposes, the ``system`` **toolchain can be considered as a drop-in replacement for
 the (deprecated)** ``dummy`` **toolchain** (see also :ref:`system_toolchain_impact_deprecated_dummy`).
@@ -62,6 +62,7 @@ For convenience, a ``SYSTEM`` constant is available to easily specify the use of
 
   toolchain = SYSTEM
 
+*We strongly recommend using the* ``SYSTEM`` *constant to specify the use of the* ``system`` *toolchain.*
 
 .. _system_toolchain_impact_deprecated_dummy:
 
@@ -125,7 +126,7 @@ The ``dummy`` name may be rather confusing, especially if you are new to EasyBui
 Just based on the name, it is unclear how the ``dummy`` toolchain is different from a regular toolchain.
 
 Hopefully, the name of the ``system`` toolchain does speak more for itself: when using it, you are relying on the
-compiler & lilbraries provided by the operating system (as opposed to compilers & libraries that are a part of a regular toolchain).
+compiler & libraries provided by the operating system (as opposed to compilers & libraries that are a part of a regular toolchain).
 
 .. _system_toolchain_motivation_deprecating_dummy_version_and_deps:
 

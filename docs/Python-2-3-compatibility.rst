@@ -13,7 +13,7 @@ More specifically, the following Python versions are currently supported:
 * Python 3.7.x
 
 To facilitate this, the ``easybuild.tools.py2vs3`` package was introduced in EasyBuild v4.0.
-When importing a function from this package, you will automagically get a version of the function that
+When importing a function from this package, you will automatically get a version of the function that
 is compatible with the Python version being used to run EasyBuild.
 
 Through this approach we can hide subtle differences between Python 2 and 3, while avoiding code duplication
