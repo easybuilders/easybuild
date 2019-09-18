@@ -54,8 +54,8 @@ integration features (see :ref:`integration_with_github`), etc.
 Support for running EasyBuild on top of Python 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A significant effort has been done to make the EasyBuild framework and the easyblocks included with EasyBuild
-**compatible with Python 3**, while retaining the compatibility with Python 2.
+A significant effort has been made to ensure that the EasyBuild framework and the easyblocks included with EasyBuild
+are **compatible with Python 3**, while retaining the compatibility with Python 2.
 
 Currently supported Python versions include: ``2.6``, ``2.7``, ``3.5``, ``3.6``, ``3.7``.
 
@@ -75,7 +75,7 @@ A couple of **additional custom software-specific easyblocks** were added in Eas
 * ``numexpr``: to ensure that ``numexpr`` is linked with Intel MKL's VML when it is available
 
 * ``OpenMPI``: to improve the (default) configuration of ``OpenMPI`` based on installed OS packages (for example for
-  Infiniband support) and available dependencies
+  InfiniBand support) and available dependencies
 
 In addition, various (generic and software-specific) easyblocks were improved and enhanced
 (see :ref:`release_notes` for more details).

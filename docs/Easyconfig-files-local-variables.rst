@@ -101,7 +101,7 @@ To get rid of this warning, you can either:
 
 * configure EasyBuild to only log the warning (not print it), via ``--local-var-naming-check=log``
   (see also :ref:`easyconfig_files_local_variables_check_mode`; note that silencing
-  the printed wanrnign is **not recommended**, see the motivation in :ref:`motivation above easyconfig_files_local_variables_motivation`
+  the printed warning is **not recommended**, see the motivation in :ref:`motivation above easyconfig_files_local_variables_motivation`
 
 
 .. _easyconfig_files_local_variables_check_mode:

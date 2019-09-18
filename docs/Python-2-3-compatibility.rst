@@ -23,8 +23,8 @@ For example::
 
   $ export EB_VERBOSE=1
   $ eb --version
-  >> Considering 'python2'...
-  >> No 'python2' found in $PATH, skipping...
+  >> Considering 'python'...
+  >> No 'python' found in $PATH, skipping...
   >> Considering 'python3'...
   >> 'python3' version: 3.6.9, which matches Python 3 version requirement (>= 3.5)
   >> Selected Python command: python3 (/usr/local/bin/python3)
@@ -40,9 +40,9 @@ Controlling which ``python`` command EasyBuild will use via ``$EB_PYTHON``
 The ``eb`` command will consider different ``python`` commands, and check the Python version corresponding with
 the command before selecting one. The commands considered are (in order):
 
-* ``python2``
-* ``python3``
 * ``python``
+* ``python3``
+* ``python2``
 
 Before considering these commands, ``eb`` will first consider the command name specified via the ``$EB_PYTHON``
 environment variable (if defined), so you can always control which Python version is being used if desired.
@@ -82,32 +82,32 @@ The ``easybuild.tools.py2vs3`` package provides two major classes of items (list
 ``ascii_letters``
 -----------------
 
-* Python 2: corresponds with ``string.letters``
-* Python 3: corresponds with ``string.ascii_letters``
+* Python 2: corresponds to ``string.letters``
+* Python 3: corresponds to ``string.ascii_letters``
 
 .. _py2vs3_ascii_lowercase:
 
 ``ascii_lowercase``
 -------------------
 
-* Python 2: corresponds with ``string.lowercase``
-* Python 3: corresponds with ``string.ascii_lowercase``
+* Python 2: corresponds to ``string.lowercase``
+* Python 3: corresponds to ``string.ascii_lowercase``
 
 .. _py2vs3_build_opener:
 
 ``build_opener``
 ----------------
 
-* Python 2: corresponds with ``urllib2.build_opener`` function
-* Python 3: corresponds with ``urllib.request.build_opener`` function
+* Python 2: corresponds to ``urllib2.build_opener`` function
+* Python 3: corresponds to ``urllib.request.build_opener`` function
 
 .. _py2vs3_configparser:
 
 ``configparser``
 ----------------
 
-* Python 2: corresponds with ``ConfigParser.configparser`` module
-* Python 3: corresponds with ``configparser`` module
+* Python 2: corresponds to ``ConfigParser.configparser`` module
+* Python 3: corresponds to ``configparser`` module
 
 .. _py2vs3_create_base_metaclass:
 
@@ -128,16 +128,16 @@ Function to method name from lambda function, implemented in a way that is compa
 ``HTTPError``
 -------------
 
-* Python 2: corresponds with ``urllib2.HTTPError``
-* Python 3: corresponds with ``urllib.request.HTTPError``
+* Python 2: corresponds to ``urllib2.HTTPError``
+* Python 3: corresponds to ``urllib.request.HTTPError``
 
 .. _py2vs3_HTTPSHandler:
 
 ``HTTPSHandler``
 ----------------
 
-* Python 2: corresponds with ``urllib2.HTTPSHandler``
-* Python 3: corresponds with ``urllib.request.HTTPSHandler``
+* Python 2: corresponds to ``urllib2.HTTPSHandler``
+* Python 3: corresponds to ``urllib.request.HTTPSHandler``
 
 .. _py2vs3_json_loads:
 
@@ -160,17 +160,17 @@ Function to create a wrapper base class using the specified metaclass, implement
 ``OrderedDict``
 ---------------
 
-* Python 2.6: corresponds with ``easybuild.tools.ordereddict.OrderedDict``
-* Python 2.7: corresponds with ``collections.OrderedDict``
-* Python 3: corresponds with ``collections.OrderedDict``
+* Python 2.6: corresponds to ``easybuild.tools.ordereddict.OrderedDict``
+* Python 2.7: corresponds to ``collections.OrderedDict``
+* Python 3: corresponds to ``collections.OrderedDict``
 
 .. _py2vs3_reload:
 
 ``reload``
 ----------
 
-* Python 2: corresponds with ``reload`` built-in function
-* Python 3: corresponds with ``importlib.reload`` function
+* Python 2: corresponds to ``reload`` built-in function
+* Python 3: corresponds to ``importlib.reload`` function
 
 .. _py2vs3_raise_with_traceback:
 
@@ -184,8 +184,8 @@ Function to raise an error with specified message and traceback, implemented in 
 ``Request``
 -----------
 
-* Python 2: corresponds with ``urllib2.Request``
-* Python 3: corresponds with ``urllib.request.Request``
+* Python 2: corresponds to ``urllib2.Request``
+* Python 3: corresponds to ``urllib.request.Request``
 
 .. _py2vs3_subprocess_popen_text:
 
@@ -200,45 +200,45 @@ Function to raise an error with specified message and traceback, implemented in 
 ``std_urllib``
 --------------
 
-* Python 2: corresponds with ``urllib`` package
-* Python 3: corresponds with ``urllib.request`` package
+* Python 2: corresponds to ``urllib`` package
+* Python 3: corresponds to ``urllib.request`` package
 
 .. _py2vs3_string_type:
 
 ``string_type``
 ---------------
 
-* Python 2: corresponds with ``basestring`` built-in string type
-* Python 3: corresponds with ``str`` built-in string type
+* Python 2: corresponds to ``basestring`` built-in string type
+* Python 3: corresponds to ``str`` built-in string type
 
 .. _py2vs3_StringIO:
 
 ``StringIO``
 ------------
 
-* Python 2: corresponds with ``StringIO.StringIO`` class
-* Python 3: corresponds with ``io.StringIO`` class
+* Python 2: corresponds to ``StringIO.StringIO`` class
+* Python 3: corresponds to ``io.StringIO`` class
 
 .. _py2vs3_urlencode:
 
 ``urlencode``
 -------------
 
-* Python 2: corresponds with ``urllib.urlencode`` function
-* Python 2: corresponds with ``urllib.parse.urlencode`` function
+* Python 2: corresponds to ``urllib.urlencode`` function
+* Python 2: corresponds to ``urllib.parse.urlencode`` function
 
 .. _py2vs3_URLError:
 
 ``URLError``
 ------------
 
-* Python 2: corresponds with ``urllib2.URLError``
-* Python 3: corresponds with ``urllib.request.URLError``
+* Python 2: corresponds to ``urllib2.URLError``
+* Python 3: corresponds to ``urllib.request.URLError``
 
 .. _py2vs3_urlopen:
 
 ``urlopen``
 -----------
 
-* Python 2: corresponds with ``urllib2.urlopen``
-* Python 3: corresponds with ``urllib.request.urlopen``
+* Python 2: corresponds to ``urllib2.urlopen``
+* Python 3: corresponds to ``urllib.request.urlopen``
