@@ -1,3 +1,5 @@
+.. _easyconfig_files_local_variables:
+
 Local variables in easyconfig files
 ===================================
 
@@ -9,8 +11,7 @@ For more general information on writing easyconfig files, please see :ref:`writi
     :depth: 3
     :backlinks: none
 
-
-.. _easyconfig_files_local_variables:
+.. _easyconfig_files_local_variables_motivation:
 
 Motivation & context
 --------------------
@@ -100,7 +101,7 @@ To get rid of this warning, you can either:
 
 * configure EasyBuild to only log the warning (not print it), via ``--local-var-naming-check=log``
   (see also :ref:`easyconfig_files_local_variables_check_mode`; note that silencing
-  the printed wanrnign is **not recommended**, see the motivation in :ref:`motivation above easyconfig_files_local_variables`
+  the printed warning is **not recommended**, see the motivation in :ref:`motivation above easyconfig_files_local_variables_motivation`
 
 
 .. _easyconfig_files_local_variables_check_mode:

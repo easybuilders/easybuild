@@ -7,10 +7,24 @@ The latest version of EasyBuild provides support for building and installing **1
 using 32 different (compiler) toolchains. It contains 205 software-specific easyblocks and 35 generic easyblocks,
 alongside 11,798 easyconfig files.
 
+.. _release_notes_eb400:
+
+EasyBuild v4.0.0 (<date TBD>)
+-----------------------------
+
+feature release
+
+**framework**
+
+**easyblocks**
+
+**easyconfigs**
+
+
 .. _release_notes_eb394:
 
-v3.9.4 (August 23rd 2019)
--------------------------
+EasyBuild v3.9.4 (August 23rd 2019)
+-----------------------------------
 
 bugfix/update release
 
@@ -112,7 +126,7 @@ bugfix/update release
 
 .. _release_notes_eb393:
 
-v3.9.3 (July 8th 2019)
+EasyBuild v3.9.3 (July 8th 2019)
 ----------------------
 
 bugfix/update release
@@ -184,8 +198,8 @@ bugfix/update release
 
 .. _release_notes_eb392:
 
-v3.9.2 (June 9th 2019)
-----------------------
+EasyBuild v3.9.2 (June 9th 2019)
+--------------------------------
 
 bugfix/update release
 
@@ -268,8 +282,8 @@ bugfix/update release
 
 .. _release_notes_eb391:
 
-v3.9.1 (May 20th 2019)
-----------------------
+EasyBuild v3.9.1 (May 20th 2019)
+--------------------------------
 
 bugfix/update release
 
@@ -431,8 +445,8 @@ bugfix/update release
 
 .. _release_notes_eb390:
 
-v3.9.0 (April 12th 2019)
-------------------------
+EasyBuild v3.9.0 (April 12th 2019)
+----------------------------------
 
 feature release
 
@@ -596,8 +610,8 @@ feature release
 
 .. _release_notes_eb381:
 
-v3.8.1 (January 29th 2019)
---------------------------
+EasyBuild v3.8.1 (January 29th 2019)
+------------------------------------
 
 bugfix/update release
 
@@ -705,8 +719,8 @@ bugfix/update release
 
 .. _release_notes_eb380:
 
-v3.8.0 (December 18th 2018)
----------------------------
+EasyBuild v3.8.0 (December 18th 2018)
+-------------------------------------
 
 feature release
 
@@ -885,8 +899,8 @@ feature release
 
 .. _release_notes_eb371:
 
-v3.7.1 (October 18th 2018)
---------------------------
+EasyBuild v3.7.1 (October 18th 2018)
+------------------------------------
 
 bugfix/update release
 
@@ -994,8 +1008,8 @@ bugfix/update release
 
 .. _release_notes_eb370:
 
-v3.7.0 (September 25th 2018)
-----------------------------
+EasyBuild v3.7.0 (September 25th 2018)
+--------------------------------------
 
 feature release
 
@@ -1170,8 +1184,8 @@ feature release
 
 .. _release_notes_eb362:
 
-v3.6.2 (July 11th 2018)
------------------------
+EasyBuild v3.6.2 (July 11th 2018)
+---------------------------------
 
 bugfix/update release
 
@@ -1280,8 +1294,8 @@ bugfix/update release
 
 .. _release_notes_eb361:
 
-v3.6.1 (May 26th 2018)
-----------------------
+EasyBuild v3.6.1 (May 26th 2018)
+--------------------------------
 
 bugfix/update release
 
@@ -1382,8 +1396,8 @@ bugfix/update release
 
 .. _release_notes_eb360:
 
-v3.6.0 (April 26th 2018)
-------------------------
+EasyBuild v3.6.0 (April 26th 2018)
+----------------------------------
 
 feature release
 
@@ -1528,8 +1542,8 @@ feature release
 
 .. _release_notes_eb353:
 
-v3.5.3 (March 7th 2018)
------------------------
+EasyBuild v3.5.3 (March 7th 2018)
+---------------------------------
 
 bugfix/update release
 
@@ -1576,8 +1590,8 @@ bugfix/update release
 
 .. _release_notes_eb352:
 
-v3.5.2 (March 2nd 2018)
------------------------
+EasyBuild v3.5.2 (March 2nd 2018)
+---------------------------------
 
 bugfix/update release
 
@@ -1669,8 +1683,8 @@ bugfix/update release
 
 .. _release_notes_eb351:
 
-v3.5.1 (January 16th 2018)
---------------------------
+EasyBuild v3.5.1 (January 16th 2018)
+------------------------------------
 
 bugfix/update release
 
@@ -1755,8 +1769,8 @@ bugfix/update release
 
 .. _release_notes_eb350:
 
-v3.5.0 (December 15th 2017)
----------------------------
+EasyBuild v3.5.0 (December 15th 2017)
+-------------------------------------
 
 feature release
 
@@ -1865,8 +1879,8 @@ feature release
 
 .. _release_notes_eb341:
 
-v3.4.1 (October 17th 2017)
---------------------------
+EasyBuild v3.4.1 (October 17th 2017)
+------------------------------------
 
 bugfix/update release
 
@@ -1951,8 +1965,8 @@ bugfix/update release
 
 .. _release_notes_eb340:
 
-v3.4.0 (September 10th 2017)
-----------------------------
+EasyBuild v3.4.0 (September 10th 2017)
+--------------------------------------
 
 feature release
 
@@ -2056,8 +2070,8 @@ feature release
 
 .. _release_notes_eb331:
 
-v3.3.1 (July 12th 2017)
------------------------
+EasyBuild v3.3.1 (July 12th 2017)
+---------------------------------
 
 bugfix/update release
 
@@ -2120,8 +2134,8 @@ bugfix/update release
 
 .. _release_notes_eb330:
 
-v3.3.0 (June 26th 2017)
------------------------
+EasyBuild v3.3.0 (June 26th 2017)
+---------------------------------
 
 feature release
 
@@ -2225,8 +2239,8 @@ feature release
 
 .. _release_notes_eb321:
 
-v3.2.1 (May 12th 2017)
-----------------------
+EasyBuild v3.2.1 (May 12th 2017)
+--------------------------------
 
 bugfix/update release
 
@@ -2274,8 +2288,8 @@ bugfix/update release
 
 .. _release_notes_eb320:
 
-v3.2.0 (May 5th 2017)
----------------------
+EasyBuild v3.2.0 (May 5th 2017)
+-------------------------------
 
 feature release
 
@@ -2359,8 +2373,8 @@ feature release
 
 .. _release_notes_eb312:
 
-v3.1.2 (March 20th 2017)
-------------------------
+EasyBuild v3.1.2 (March 20th 2017)
+----------------------------------
 
 bugfix/update release
 
@@ -2441,8 +2455,8 @@ bugfix/update release
 
 .. _release_notes_eb311:
 
-v3.1.1 (March 7th 2017)
------------------------
+EasyBuild v3.1.1 (March 7th 2017)
+---------------------------------
 
 bugfix/update release
 
@@ -2533,8 +2547,8 @@ bugfix/update release
 
 .. _release_notes_eb310:
 
-v3.1.0 (February 3rd 2017)
---------------------------
+EasyBuild v3.1.0 (February 3rd 2017)
+------------------------------------
 
 feature release
 
@@ -2620,8 +2634,8 @@ feature release
 
 .. _release_notes_eb302:
 
-v3.0.2 (December 22nd 2016)
----------------------------
+EasyBuild v3.0.2 (December 22nd 2016)
+-------------------------------------
 
 bugfix release
 
@@ -2687,8 +2701,8 @@ bugfix release
 
 .. _release_notes_eb301:
 
-v3.0.1 (November 30th 2016)
----------------------------
+EasyBuild v3.0.1 (November 30th 2016)
+-------------------------------------
 
 bugfix release
 
@@ -2752,8 +2766,8 @@ bugfix release
 
 .. _release_notes_eb300:
 
-v3.0.0 (November 16th 2016)
----------------------------
+EasyBuild v3.0.0 (November 16th 2016)
+-------------------------------------
 
 feature release
 
@@ -2927,8 +2941,8 @@ feature release
 
 .. _release_notes_eb290:
 
-v2.9.0 (September 23rd 2016)
-----------------------------
+EasyBuild v2.9.0 (September 23rd 2016)
+--------------------------------------
 
 feature release
 
@@ -3078,8 +3092,8 @@ feature release
 
 .. _release_notes_eb282:
 
-v2.8.2 (July 13th 2016)
------------------------
+EasyBuild v2.8.2 (July 13th 2016)
+---------------------------------
 
 bugfix release
 
@@ -3184,8 +3198,8 @@ bugfix release
 
 .. _release_notes_eb281:
 
-v2.8.1 (May 30th 2016)
-----------------------
+EasyBuild v2.8.1 (May 30th 2016)
+--------------------------------
 
 bugfix release
 
@@ -3230,8 +3244,8 @@ bugfix release
 
 .. _release_notes_eb280:
 
-v2.8.0 (May 18th 2016)
-----------------------
+EasyBuild v2.8.0 (May 18th 2016)
+--------------------------------
 
 feature + bugfix release
 
@@ -3389,8 +3403,8 @@ feature + bugfix release
 
 .. _release_notes_eb270:
 
-v2.7.0 (March 20th 2016)
-------------------------
+EasyBuild v2.7.0 (March 20th 2016)
+----------------------------------
 
 feature + bugfix release
 
@@ -3591,8 +3605,8 @@ feature + bugfix release
 
 .. _release_notes_eb260:
 
-v2.6.0 (January 26th 2016)
---------------------------
+EasyBuild v2.6.0 (January 26th 2016)
+------------------------------------
 
 feature + bugfix release
 
@@ -3686,8 +3700,8 @@ feature + bugfix release
 
 .. _release_notes_eb250:
 
-v2.5.0 (December 17th 2015)
----------------------------
+EasyBuild v2.5.0 (December 17th 2015)
+-------------------------------------
 
 feature + bugfix release
 
@@ -3810,8 +3824,8 @@ feature + bugfix release
 
 .. _release_notes_eb240:
 
-v2.4.0 (November 10th 2015)
----------------------------
+EasyBuild v2.4.0 (November 10th 2015)
+-------------------------------------
 
 feature + bugfix release
 
@@ -3965,8 +3979,8 @@ feature + bugfix release
 
 .. _release_notes_eb230:
 
-v2.3.0 (September 2nd 2015)
----------------------------
+EasyBuild v2.3.0 (September 2nd 2015)
+-------------------------------------
 
 feature + bugfix release
 
@@ -4072,8 +4086,8 @@ feature + bugfix release
 
 .. _release_notes_eb220:
 
-v2.2.0 (July 15th 2015)
------------------------
+EasyBuild v2.2.0 (July 15th 2015)
+---------------------------------
 
 feature + bugfix release
 
@@ -4211,8 +4225,8 @@ feature + bugfix release
 
 .. _release_notes_eb211:
 
-v2.1.1 (May 18th 2015)
-----------------------
+EasyBuild v2.1.1 (May 18th 2015)
+--------------------------------
 
 bugfix release
 
@@ -4263,8 +4277,8 @@ bugfix release
 
 .. _release_notes_v2.1.0:
 
-v2.1.0 (April 30th 2015)
-------------------------
+EasyBuild v2.1.0 (April 30th 2015)
+----------------------------------
 
 feature + bugfix release
 
@@ -4416,8 +4430,8 @@ feature + bugfix release
 
 .. _release_notes_v2.0.0:
 
-v2.0.0 (March 6th 2015)
------------------------
+EasyBuild v2.0.0 (March 6th 2015)
+---------------------------------
 
 feature + bugfix release
 
@@ -4559,8 +4573,8 @@ feature + bugfix release
   * fix name for sparsehash easyconfigs (`#1452 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1452>`_)
 
 
-v1.16.2 (March 6th 2015)
-------------------------
+EasyBuild v1.16.2 (March 6th 2015)
+----------------------------------
 
 bugfix release
 
@@ -4576,8 +4590,8 @@ bugfix release
 
 `(no changes compared to v1.16.1, simple version bump to stay in sync with easybuild-easyblocks)`
 
-v1.16.1 (December 19th 2014)
-----------------------------
+EasyBuild v1.16.1 (December 19th 2014)
+--------------------------------------
 
 bugfix release
 
@@ -4601,8 +4615,8 @@ bugfix release
 
 * set default easyblock to ConfigureMake in TEMPLATE.eb (`#1277 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1277>`_)
 
-v1.16.0 (December 18th 2014)
-----------------------------
+EasyBuild v1.16.0 (December 18th 2014)
+--------------------------------------
 
 feature + bugfix release
 
@@ -4753,8 +4767,8 @@ feature + bugfix release
   * fix easyconfig filenames, enhance unit test to check easyconfig filenames (`#1271 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1271>`_)
 
 
-v1.15.2 (October 7th 2014)
---------------------------
+EasyBuild v1.15.2 (October 7th 2014)
+------------------------------------
 
 bugfix release
 
@@ -4782,8 +4796,8 @@ bugfix release
 * fix compatibility of gimkl with HierarchicalMNS by using gimpi subtoolchain (`#1110 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1110>`_)
 * make both GCC and Clang first-class members in Clang-based toolchains to fix compatibility with HierarchicalMNS (`#1113 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1113>`_)
 
-v1.15.1 (September 23rd 2014)
------------------------------
+EasyBuild v1.15.1 (September 23rd 2014)
+---------------------------------------
 
 bugfix release
 
@@ -4808,8 +4822,8 @@ bugfix release
   * fix TopHat homepage and source_urls since page moved (`#1092 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1092>`_)
   * make iomkl toolchain compatible with HierarchicalMNS (`#1099 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1099>`_)
 
-v1.15.0 (September 12th 2014)
------------------------------
+EasyBuild v1.15.0 (September 12th 2014)
+---------------------------------------
 
 feature + bugfix release
 
@@ -4906,8 +4920,8 @@ feature + bugfix release
   * download link for Perl modules changed to use cpan.metapan.org
   * fix missing MPI-based OpenFOAM libraries (``Pstream``, ``(pt)scotchDecomp``), make sure provided SCOTCH is used (`#957 <https://github.com/easybuilders/easybuild-easyconfigs/pull/957>`_)
 
-v1.14.0 (July 9th 2014)
------------------------
+EasyBuild v1.14.0 (July 9th 2014)
+---------------------------------
 
 feature + bugfix release
 
@@ -5026,8 +5040,8 @@ feature + bugfix release
   * really enable OpenMP support in FastTree easyconfigs (`#947 <https://github.com/easybuilders/easybuild-easyconfigs/pull/947>`_)
   * fix easyconfigs unit tests after changes in framework (`#958 <https://github.com/easybuilders/easybuild-easyconfigs/pull/958>`_)
 
-v1.13.0 (May 29th 2014)
------------------------
+EasyBuild v1.13.0 (May 29th 2014)
+---------------------------------
 
 feature + bugfix release
 
@@ -5134,8 +5148,8 @@ feature + bugfix release
   * remove Windows-style line ending in netCDF patch file (`#796 <https://github.com/easybuilders/easybuild-easyconfigs/pull/796>`_)
   * bump version of OpenSSL dep for BOINC (`#882 <https://github.com/easybuilders/easybuild-easyconfigs/pull/882>`_)
 
-v1.12.1 (April 25th 2014)
--------------------------
+EasyBuild v1.12.1 (April 25th 2014)
+-----------------------------------
 
 bugfix release
 
@@ -5152,8 +5166,8 @@ bugfix release
 
 `(no changes compared to v1.12.0, simple version bump to stay in sync with easybuild-framework)`
 
-v1.12.0 (April 4th 2014)
-------------------------
+EasyBuild v1.12.0 (April 4th 2014)
+----------------------------------
 
 feature + bugfix release
 
@@ -5227,8 +5241,8 @@ feature + bugfix release
   * enable ``-fPIC`` in ncurses 5.9 ictce/5.2.0 easyconfig, just like in the others (`#801 <https://github.com/easybuilders/easybuild-easyconfigs/pull/801>`_)
   * fix unit tests after changes to framework (`#763 <https://github.com/easybuilders/easybuild-easyconfigs/pull/763>`_, `#766 <https://github.com/easybuilders/easybuild-easyconfigs/pull/766>`_, `#769 <https://github.com/easybuilders/easybuild-easyconfigs/pull/769>`_)
 
-v1.11.1 (February 28th 2014)
-----------------------------
+EasyBuild v1.11.1 (February 28th 2014)
+--------------------------------------
 
 bugfix release
 
@@ -5248,8 +5262,8 @@ bugfix release
 
 `(no changes compared to v1.11.0, simple version bump to stay in sync with easybuild-framework)`
 
-v1.11.0 (February 16th 2014)
-----------------------------
+EasyBuild v1.11.0 (February 16th 2014)
+--------------------------------------
 
 feature + bugfix release
 
@@ -5355,8 +5369,8 @@ feature + bugfix release
   * add additional source URL in Qt easyconfigs (`#676 <https://github.com/easybuilders/easybuild-easyconfigs/pull/676>`_)
   * specify correct $PATH specification and define ``$CHPL_HOME`` for Chapel (`#683 <https://github.com/easybuilders/easybuild-easyconfigs/pull/683>`_)
 
-v1.10.0 (December 24th 2013)
-----------------------------
+EasyBuild v1.10.0 (December 24th 2013)
+--------------------------------------
 
 feature + bugfix release
 
@@ -5475,8 +5489,8 @@ feature + bugfix release
 
   * fix WPS v3.5.1 patch file after upstream source tarball was changed, supply checksum for verification (`#642 <https://github.com/easybuilders/easybuild-easyconfigs/pull/642>`_)
 
-v1.9.0 (November 17th 2013)
----------------------------
+EasyBuild v1.9.0 (November 17th 2013)
+-------------------------------------
 
 feature + bugfix release
 
@@ -5576,8 +5590,8 @@ feature + bugfix release
 
   * add build status badges for master/develop branches to README (`#490 <https://github.com/easybuilders/easybuild-easyconfigs/pull/490>`_)
 
-v1.8.2 (October 18th 2013)
---------------------------
+EasyBuild v1.8.2 (October 18th 2013)
+------------------------------------
 
 bugfix release
 
@@ -5597,8 +5611,8 @@ bugfix release
 
 * port thread pool patch to PSI 4.0b4 and include it to avoid hanging tests (`#471 <https://github.com/easybuilders/easybuild-easyconfigs/pull/471>`_)
 
-v1.8.1 (October 14th 2013)
---------------------------
+EasyBuild v1.8.1 (October 14th 2013)
+------------------------------------
 
 bugfix release
 
@@ -5630,8 +5644,8 @@ bugfix release
   * fix faulty easyconfig file names for HPCBIOS_Math, MUSCLE, XML-LibXML and YAML-Syck (`#459 <https://github.com/easybuilders/easybuild-easyconfigs/pull/459>`_, `#462 <https://github.com/easybuilders/easybuild-easyconfigs/pull/462>`_)
   * stop (re)specifying default maximum ratio for failed tests in NWChem easyconfig (`#457 <https://github.com/easybuilders/easybuild-easyconfigs/pull/457>`_)
 
-v1.8.0 (October 4th 2013)
--------------------------
+EasyBuild v1.8.0 (October 4th 2013)
+-----------------------------------
 
 feature + bugfix release
 
@@ -5737,8 +5751,8 @@ feature + bugfix release
   * fix gettext build with adding ``--without-emacs`` configure options, add gettext as dependency for a2ps (`#448 <https://github.com/easybuilders/easybuild-easyconfigs/pull/448>`_)
   * exclude EMACS support in a2ps because of build failures (`#452 <https://github.com/easybuilders/easybuild-easyconfigs/pull/452>`_)
 
-v1.7.0 (September 2nd 2013)
----------------------------
+EasyBuild v1.7.0 (September 2nd 2013)
+-------------------------------------
 
 feature + bugfix release
 
@@ -5810,8 +5824,8 @@ feature + bugfix release
   * fixed filename of Biopython/CD-HIT easyconfig files (`#407 <https://github.com/easybuilders/easybuild-easyconfigs/pull/407>`_)
   * disable parallel building of otcl (`#419 <https://github.com/easybuilders/easybuild-easyconfigs/pull/419>`_)
 
-v1.6.0 (July 11th 2013)
------------------------
+EasyBuild v1.6.0 (July 11th 2013)
+---------------------------------
 
 feature + bugfix release
 
@@ -5887,8 +5901,8 @@ feature + bugfix release
   * specify ``lowopt`` (-O1) optimization level for OpenIFS, to avoid floating-point related issues (`#328 <https://github.com/easybuilders/easybuild-easyconfigs/pull/328>`_)
   * fix naming of 'beagle-lib' (used to be 'BEAGLE'), to avoid name clashes with other software package(s) (`#346 <https://github.com/easybuilders/easybuild-easyconfigs/pull/346>`_)
 
-v1.5.0 (June 1st 2013)
-----------------------
+EasyBuild v1.5.0 (June 1st 2013)
+--------------------------------
 
 feature + bugfix release
 
@@ -5965,8 +5979,8 @@ feature + bugfix release
   * fix CUDA easyconfig file for use on Debian Squeeze (`#291 <https://github.com/easybuilders/easybuild-easyconfigs/pull/291>`_)
   * correct easyconfig filename and module name mismatches (bbcp, DL_POLY Classic, ...) (`#295 <https://github.com/easybuilders/easybuild-easyconfigs/pull/295>`_)
 
-v1.4.0 (May 2nd 2013)
----------------------
+EasyBuild v1.4.0 (May 2nd 2013)
+-------------------------------
 
 feature + bugfix release
 
@@ -6064,8 +6078,8 @@ feature + bugfix release
 
   * add ``--enable-mpirun-prefix-by-default`` configure option for all OpenMPI easyconfigs (#205)
 
-v1.3.0 (April 1st 2013)
------------------------
+EasyBuild v1.3.0 (April 1st 2013)
+---------------------------------
 
 feature + bugfix release
 
@@ -6185,8 +6199,8 @@ feature + bugfix release
     * ncurses and zlib as dependency for SAMtools (+ enhanced patch)
     * remove explicit FFTW dependency for Meep, ... since toolchain already provided FFTW
 
-v1.2.0 (February 28th 2013)
----------------------------
+EasyBuild v1.2.0 (February 28th 2013)
+-------------------------------------
 
 feature + bugfix release
 
@@ -6289,8 +6303,8 @@ feature + bugfix release
   * don't disable ``optarch`` for WRF, it's not needed (only disable heavy optimizations is required)
   * fix homepage/description for ALADIN
 
-v1.1.0 (January 27th 2013)
---------------------------
+EasyBuild v1.1.0 (January 27th 2013)
+------------------------------------
 
 feature + bugfix release
 
@@ -6384,8 +6398,8 @@ feature + bugfix release
 
 * various 'bug' fixes, i.e. added missing dependencies or replaced OS dependencies with proper dependencies
 
-v1.0.2 (December 8th 2012)
---------------------------
+EasyBuild v1.0.2 (December 8th 2012)
+------------------------------------
 
 bugfix release
 
@@ -6409,8 +6423,8 @@ bugfix release
 
 * fixed source URL for ligtextutils (toolchain refactoring error)
 
-v1.0.1 (November 24th 2012)
----------------------------
+EasyBuild v1.0.1 (November 24th 2012)
+-------------------------------------
 
 bugfix release
 
@@ -6457,8 +6471,8 @@ bugfix release
 
 * disable parallel build for PAPI, seems to be causing problems
 
-v1.0 (November 13th 2012)
--------------------------
+EasyBuild v1.0 (November 13th 2012)
+-----------------------------------
 
 * split up EasyBuild across three repositories: framework, easyblocks and easyconfigs
 * packaged EasyBuild, different parts can now be installed easily using ``easy_install``
@@ -6547,8 +6561,8 @@ v1.0 (November 13th 2012)
 * corrected file name of easyconfig files to adher to standard as followed by EasyBuild robot dependency resolver
 * style cleanup in existing easyconfig files
 
-v0.8 (June 29th 2012)
----------------------
+EasyBuild v0.8 (June 29th 2012)
+-------------------------------
 
 * added support for building/installing 17 additional software packages:
 
@@ -6562,8 +6576,8 @@ v0.8 (June 29th 2012)
   * fixed Python git package check
   * implemented toolkit functions for determine compiler family, MPI type, MPI run command, ...
 
-v0.7 (June 18th 2012)
----------------------
+EasyBuild v0.7 (June 18th 2012)
+-------------------------------
 
 * fixed BLACS build
 
@@ -6590,8 +6604,8 @@ v0.7 (June 18th 2012)
 * prefixed EasyBuild messages with ``==``
 * full regression test passed (58 easyconfigs tested)
 
-v0.6 (May 11th 2012)
---------------------
+EasyBuild v0.6 (May 11th 2012)
+------------------------------
 
 * added support for Intel compiler toolkit (ictce)
 
@@ -6601,8 +6615,8 @@ v0.6 (May 11th 2012)
 * added simple regression test
 * this version is able to build all supplied example easyconfigs
 
-v0.5 (April 6th 2012)
----------------------
+EasyBuild v0.5 (April 6th 2012)
+-------------------------------
 
 * first public release of EasyBuild
 
