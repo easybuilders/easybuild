@@ -1,7 +1,7 @@
 .. _system_toolchain:
 
-``system`` toolchain
-====================
+System toolchain
+================
 
 In EasyBuild v4.0, the infamous ``dummy`` toolchain has been deprecated, and replaced with the ``system`` toolchain.
 
