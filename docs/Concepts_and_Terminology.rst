@@ -133,9 +133,10 @@ environment is being defined.
 .. _dummy_toolchain:
 
 ``dummy`` toolchain *(DEPRECATED)*
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``dummy`` toolchain has been deprecated in EasyBuild v4.0, and replaced by the :ref:`system_toolchain`.
+
 
 Common toolchains
 ~~~~~~~~~~~~~~~~~
@@ -163,11 +164,6 @@ package should be installed, and which settings should be used for building it. 
 an installation, EasyBuild copies the used easyconfig file to the install directory, as a template,
 and also supports maintaining an easyconfig archive which is updated on every successful installation.
 Therefore, reproducing installations becomes trivial.
-
-.. XXX - UPDATE BY VERSION FIXME
-
-EasyBuild version |version| includes support for over 511 different software packages,
-spread over 2800 easyconfig files describing distinct builds.
 
 .. _extensions:
 
