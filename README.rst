@@ -51,7 +51,7 @@ components (GCC, OpenMPI, etc.) by running the following commands::
 
   $ module load EasyBuild
   $ export EASYBUILD_PREFIX=/tmp/$USER  # example installation prefix
-  $ eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot
+  $ eb HPL-2.3-foss-2019b.eb --robot
 
 This should install a module file for HPL which you can load to start using it::
 
