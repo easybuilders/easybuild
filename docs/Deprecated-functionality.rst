@@ -42,8 +42,8 @@ For EasyBuild framework developers:
 
 .. _depr_dummy_toolchain:
 
-``dummy`` toolchain:
-~~~~~~~~~~~~~~~~~~~~
+``dummy`` toolchain
+~~~~~~~~~~~~~~~~~~~
 
 * *deprecated since:* EasyBuild v4.0.0 (Sept'19)
 * *removed in:* EasyBuild v5.0
