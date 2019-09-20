@@ -22,7 +22,7 @@ Overview of deprecated functionality in EasyBuild version |version|
 -------------------------------------------------------------------
 
 The different section below document the functionality that is deprecated in EasyBuild version |version|,
-for which support will be removed in EasyBuild version 4.0.
+for which support will be removed in EasyBuild version 5.0.
 
 For EasyBuild users:
 
@@ -30,146 +30,28 @@ For EasyBuild users:
 
 For authors of easyconfig files:
 
-* :ref:`depr_fftw_use_fma4`
-* :ref:`depr_sources_2_element_tuple`
-* :ref:`depr_pythonpackage_use_easy_install_setup_py_develop`
+* :ref:`depr_dummy_toolchain`
 
 For developers of easyblocks:
 
-* :ref:`depr_copytree_function`
-* :ref:`depr_adjust_permissions_skip_symlinks`
+*(nothing yet)*
 
 For EasyBuild framework developers:
 
-* :ref:`depr_get_easyblock_class_default_fallback`
-* :ref:`depr_toolchain_add_dependencies`
+*(nothing yet)*
 
+.. _depr_dummy_toolchain:
 
-.. _depr_fftw_use_fma4:
+``dummy`` toolchain:
+~~~~~~~~~~~~~~~~~~~~
 
-``use_fma`` custom easyconfig parameter for FFTW
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* *deprecated since:* EasyBuild v4.0.0 (Sept'19)
+* *removed in:* EasyBuild v5.0
+* *alternative(s)*: **use** ``system`` **toolchain instead**
 
-* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``use_fma4`` **easyconfig parameter instead**
+The ``dummy`` toolchain is has been deprecated, and is replaced with the ``system`` toolchain.
 
-The ``use_fma`` easyconfig parameter has been deprecated in favor of the equivalent easyconfig parameter ``use_fma4``.
-
-``use_fma`` was introduced in EasyBuild v3.1.0 allow configuring FFTW with ``--enable-avx-128-fma``.
-Since it is only supported on systems with AMD processors that have the ``FMA4`` feature, it was replaced by
-the more fittingly named ``use_fma4`` parameter in EasyBuild v3.2.0.
-
-
-.. _depr_sources_2_element_tuple:
-
-Specifying source files as 2-element tuples to provide a custom extraction command
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v3.3.0 (June 22nd 2017)
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``extract_cmd`` **key in Python dictionary format instead**
-
-Specyfing a custom extraction command for a particular source file by using a 2-element tuple in ``sources``
-has been deprecated.
-
-Instead, a Python dictionary containing the ``filename`` and ``extract_cmd`` keys should be used instead,
-see :ref:`common_easyconfig_param_sources_alt`.
-
-So, this:
-
-.. code:: python
-
-    # source file is actually a gzipped tarball (filename should be .tar.gz)
-    # DEPRECATED FORMAT, don't use this anymore!
-    sources = [('example.gz', "tar xfvz %s")]
-
-should be replaced with:
-
-.. code:: python
-
-  sources = [{
-    'filename': 'example-%(version)s.gz',
-    'extract_cmd': "tar xfvz %s",  # source file is actually a gzipped tarball (filename should be .tar.gz)
-  }]
-
-
-.. _depr_pythonpackage_use_easy_install_setup_py_develop:
-
-``use_easy_install`` and ``use_setup_py_develop`` custom easyconfig parameters for ``PythonPackage`` easyblock
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v3.5.1 (Jan 17th 2018)
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``install_target`` **easyconfig parameter instead**
-
-The custom easyconfig parameters ``use_easy_install`` and ``use_setup_py_develop`` for the ``PythonPackage``
-easyblock have been deprecated, since they are obsolete since the ``install_target`` custom easyconfig parameter was
-added in https://github.com/easybuilders/easybuild-easyblocks/pull/1341.
-
-Rather than using ``use_easy_install = True``, you should now use ``install_target = 'easy_install'`` instead.
-
-Rather than using ``use_setup_py_develop = True``, you should now use ``install_target = 'develop'`` instead.
-
-
-.. _depr_copytree_function:
-
-``copytree`` function
-~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``copy_dir`` **instead**
-
-The ``copytree`` function, which was a copy of the ``shutil.copytree`` function (introduced when Python 2.4 was still
-supported) has been deprecated in favor of the superior ``copy_dir`` function in the ``easybuild.tools.filetools`` module.
-
-``copy_dir`` graciously handles any exceptions that occur, and is aware of the EasyBuild *dry run* mode.
-
-.. _depr_adjust_permissions_skip_symlinks:
-
-``skip_symlinks`` named argument for ``adjust_permissions``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v3.8.0 (Nov 2018)
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: *(none required)*
-
-The ``skip_symlinks`` argument for the ``adjust_permissions`` function has been deprecated since ``adjust_permissions``
-has been changed to *always* skip symbolic links (this was already the default behaviour); see also
-https://github.com/easybuilders/easybuild-framework/pull/2644 .
-
-
-.. _depr_get_easyblock_class_default_fallback:
-
-``default_fallback`` named argument for ``get_easyblock_class``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``error_on_missing_easyblock`` **named parameter instead**
-
-The ``get_easyblock_class`` implementation was cleaned up to remove the support for falling back to the
-generic ``ConfigureMake`` easyblock in EasyBuild v3.2.0 (see https://github.com/easybuilders/easybuild-framework/pull/2178),
-following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBuild v2.0.
-
-The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,
-to retain support for ignoring a missing matching easyblock rather than raising an error.
-
-
-.. _depr_toolchain_add_dependencies:
-
-``add_dependencies`` method in ``Toolchain`` class
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v3.8.0
-* *will be removed in:* EasyBuild v4.0
-* *alternatives*: **pass list of dependencies to** ``deps`` **named argument of** ``prepare`` **method instead**
-
-The ``add_dependencies`` method in the ``Toolchain`` class was deprecated, to provide more flexibility in the
-EasyBuild framework w.r.t. handling of dependencies (see https://github.com/easybuilders/easybuild-framework/pull/2674).
-
-Instead, the list of dependencies should be passed to the ``Toolchain.prepare`` method, via the ``deps`` named argument.
+For more information, see :ref:`system_toolchain`.
 
 
 .. _deprecation_policy:
@@ -230,19 +112,19 @@ How to check for use of deprecated functionality
 Since EasyBuild v1.16.0, the ``--deprecated`` command line option can be used to check whether deprecated behavior is
 still being triggered in your EasyBuild setup.
 
-For example, using ``--deprecated=2.0`` in EasyBuild v1.x will transform any deprecation warning for functionality that
-will no longer be supported in EasyBuild v2.0 into an error message. For example::
+For example, using ``--deprecated=5.0`` with EasyBuild v4.x will transform any deprecation warning for functionality that
+will no longer be supported in EasyBuild v5.0 into an error message. For example::
 
-  $ eb OpenMPI-1.8.1-GCC-4.8.3.eb --deprecated=2.0
+  $ eb test.eb --deprecated=5.0
   == temporary log file in case of crash /tmp/easybuild-WWalWX/easybuild-aoL9Nd.log
-  ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:945 in process_easyconfig):
-  Failed to process easyconfig /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.8.1-GCC-4.8.3.eb:
-  DEPRECATED (since v2.0) functionality used: Magic 'global' easyconfigs variables like shared_lib_ext should no longer
+  ERROR: Failed to process easyconfig /home/example/test.eb:
+  DEPRECATED (since v5.0) functionality used: Use of 'dummy' toolchain is deprecated, use 'system' toolchain instead;
+  see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
   be used; see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
 
 
 .. tip:: Define ``deprecated`` to the next major EasyBuild version in one of your EasyBuild configuration files
-         (see :ref:`configuration_file`) or by defining ``$EASYBUILD_DEPRECATED=2.0``, to ensure you are made aware
+         (see :ref:`configuration_file`) or by defining ``$EASYBUILD_DEPRECATED=5.0``, to ensure you are made aware
          of deprecated behavior as early as possible.
 
          You can (temporarily) still rely on the deprecated functionality by

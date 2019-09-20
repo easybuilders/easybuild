@@ -26,6 +26,7 @@ Various significant enhancements are included in EasyBuild v4.0, including:
 * :ref:`eb4_python3_support`
 * :ref:`eb4_custom_easyblocks`
 * :ref:`eb4_2019b_common_toolchains`
+* :ref:`eb4_changes_local_variables`
 
 .. _eb4_no_required_deps:
 
@@ -87,6 +88,19 @@ In addition, various (generic and software-specific) easyblocks were improved an
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``2019b`` update of the common toolchains is included with EasyBuild v4.0; see also :ref:`common_toolchains`.
+
+
+.. _eb4_changes_local_variables:
+
+Local variables in easyconfigs should follow recommended naming scheme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A recommended naming scheme for local variables in easyconfig files was introduced.
+
+If an easyconfig file contains local variables that do not follow the recommended naming scheme,
+a warning will be printed (by default).
+
+For more information, see :ref:`easyconfig_files_local_variables`.
 
 
 .. _eb4_changes_backwards_incompatible:
@@ -232,8 +246,6 @@ Some functionality was deprecated in EasyBuild v4.0, and will no longer be suppo
 
 If you trigger any deprecated functionality, a warning message will be printed.
 
-* :ref:`eb4_changes_local_variables`
-
 .. _eb4_changes_dummy_tc:
 
 Deprecated ``dummy`` toolchain
@@ -242,16 +254,3 @@ Deprecated ``dummy`` toolchain
 The ``dummy`` toolchain is now deprecated, and has been replaced with the ``system`` toolchain.
 
 For more information, please consult :ref:`system_toolchain`.
-
-
-.. _eb4_changes_local_variables:
-
-Local variables in easyconfigs should follow recommended naming scheme
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-A recommended naming scheme for local variables in easyconfig files was introduced.
-
-If an easyconfig file contains local variables that do not follow the recommended naming scheme,
-a warning will be printed (by default).
-
-For more information, see :ref:`easyconfig_files_local_variables`.
