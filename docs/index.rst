@@ -11,6 +11,8 @@ that allows you to manage (scientific) software on High Performance Computing (H
 
 This documentation is intended for EasyBuild version |version|, and was last rebuilt on |today|.
 
+.. note:: **Please consult the** :ref:`overview of major changes in EasyBuild v4.0 <eb4_changes_overview>` **before upgrading!**
+
 .. _contents:
 
 Introductory topics
