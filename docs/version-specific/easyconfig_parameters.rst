@@ -173,6 +173,7 @@ other parameters
 ==================    ===========================================================================================================================    =================
 **Parameter name**    **Description**                                                                                                                **Default value**
 ==================    ===========================================================================================================================    =================
+``block``             List of other 'block' sections on which this block depends (only relevant in easyconfigs with subblocks)                       None             
 ``buildstats``        A list of dicts with build statistics                                                                                          None             
 ``deprecated``        String specifying reason why this easyconfig file is deprecated and will be archived in the next major release of EasyBuild    False            
 ==================    ===========================================================================================================================    =================

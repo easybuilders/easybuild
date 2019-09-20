@@ -143,6 +143,7 @@
     * EB_OCaml
     * EB_Octave
     * EB_OpenBLAS
+    * EB_OpenMPI
     * EB_OpenSSL
     * EB_Paraver
     * EB_Pasha
@@ -243,6 +244,7 @@
       * EB_libxml2
       * EB_netcdf4_minus_python
       * EB_nose
+      * EB_numexpr
       * EB_PyQuante
       * EB_python_minus_meep
       * EB_PyZMQ
@@ -276,13 +278,16 @@
     * EB_Advisor
     * EB_icc
 
+      * EB_iccifort
       * EB_ifort
 
+        * EB_iccifort
         * SystemCompiler
 
 
     * EB_ifort
 
+      * EB_iccifort
       * SystemCompiler
 
     * EB_imkl
@@ -352,6 +357,7 @@
       * EB_libxml2
       * EB_netcdf4_minus_python
       * EB_nose
+      * EB_numexpr
       * EB_PyQuante
       * EB_python_minus_meep
       * EB_PyZMQ
