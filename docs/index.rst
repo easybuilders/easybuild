@@ -62,6 +62,7 @@ Advanced usage topics
     Controlling_compiler_optimization_flags
     Cray-support
     Detecting_loaded_modules
+    Easyconfig-files-local-variables
     Experimental_features
     Extended_dry_run
     Hooks

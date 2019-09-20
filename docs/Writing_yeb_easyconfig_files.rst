@@ -429,7 +429,7 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
         GNU Compiler Collection (GCC) based compiler toolchain, including
         OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
 
-    toolchain: {name: dummy, version: dummy}
+    toolchain: {name: system, version: system}
 
     # compiler toolchain dependencies
     # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain

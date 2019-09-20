@@ -31,7 +31,7 @@ It consists of a plain text file (in Python syntax) with mostly `key-value` assi
 
 Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``<name>-<version>[-<toolchain>][<versionsuffix>].eb``.
 
-The ``-<toolchain>`` label (which includes the toolchain name and version) is omitted when a :ref:`dummy_toolchain` is used.
+The ``-<toolchain>`` label (which includes the toolchain name and version) is omitted when a :ref:`system_toolchain` is used.
 The ``<versionsuffix>`` label is omitted when the version suffix is empty.
 
 .. note:: the filename of an easyconfig is only important w.r.t. dependency resolution (``--robot``), see :ref:`use_robot`.
@@ -248,7 +248,7 @@ and the one produced by ``--inject-checksums``::
     --- a/example/bzip2-1.0.6.eb.bak_20170824200906
     +++ b/example/bzip2-1.0.6.eb
     @@ -9,8 +9,9 @@ compressors), whilst being around twice as fast at compression and six times fas
-     toolchain = {'name': 'dummy', 'version': 'dummy'}
+     toolchain = SYSTEM
      toolchainopts = {'pic': True}
 
     -sources = [SOURCE_TAR_GZ]
@@ -484,27 +484,22 @@ module file.
   Alternatively, you can instruct EasyBuild to use the most minimal (sub)toolchain when resolving dependencies,
   see :ref:`minimal_toolchains`.
 
-Loading of modules for dependencies with a ``dummy`` toolchain
+Loading of modules for dependencies with a ``system`` toolchain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a :ref:`dummy_toolchain` is used, EasyBuild will only load the modules for each of the (build)
-dependencies when an *empty* string is used as a toolchain version, i.e. ::
+When a :ref:`system_toolchain` is used, the modules for each of the (build) dependencies are *always*
+loaded, regardless of the toolchain version (as opposed the behaviour with the ``dummy`` toolchain in EasyBuild
+versions prior to v4.0, see :ref:`system_toolchain_motivation_deprecating_dummy`).
 
-  toolchain = {'name': 'dummy', 'version': ''}
-
-When specifying a non-empty string as version for the :ref:`dummy_toolchain` (e.g., ``dummy``),
-modules for the (build) dependencies will *not* be loaded in the build environment as defined by EasyBuild.
-Load statements for the runtime dependencies will still be included in the generated module file, however.
-
-Specifying dependencies using ``dummy`` toolchain
+Specifying dependencies using ``system`` toolchain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To make EasyBuild resolve a dependency using the ``dummy`` toolchain, either specify '``dummy``' as toolchain name
+To make EasyBuild resolve a dependency using the ``system`` toolchain, either specify '``system``' as toolchain name
 in the tuple representing the dependency specification, or simply use ``True`` as 4th value in the tuple.
 
-For example, to specify PnMPI version 1.2.0 built with the ``dummy`` toolchain as a (runtime) dependency::
+For example, to specify PnMPI version 1.2.0 built with the ``system`` toolchain as a (runtime) dependency::
 
-  dependencies = [('PnMPI', '1.2.0', '', ('dummy', ''))]
+  dependencies = [('PnMPI', '1.2.0', '', ('system', ''))]
 
 which is equivalent to::
 

@@ -262,6 +262,8 @@ shown in the sections below.
 .. note:: If any ``$EASYBUILD``-prefixed environment variables are defined that do not correspond to a known
   configuration option, EasyBuild will report an error message and exit.
 
+.. _configuration_cmdline:
+
 Command line arguments
 ~~~~~~~~~~~~~~~~~~~~~~
 

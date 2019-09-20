@@ -12,4 +12,4 @@ The list of known toolchains can easily be obtained with::
 
 .. include:: version-specific/eb_list_toolchains.txt
 
-.. note:: The `dummy` toolchain is a special case, see :ref:`dummy_toolchain`.
+.. note:: The `system` toolchain is a special case, see :ref:`system_toolchain`.

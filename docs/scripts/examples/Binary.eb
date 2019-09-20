@@ -7,7 +7,7 @@ versionsuffix = '-linux-x86_64'
 homepage = 'http://platanus.bio.titech.ac.jp/'
 description = """PLATform for Assembling NUcleotide Sequences"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 source_urls = ['http://platanus.bio.titech.ac.jp/Platanus_release/20130901010201']
 sources = ['platanus']
