@@ -8,6 +8,7 @@ Subpackages
 
 .. toctree::
 
+    easybuild.base
     easybuild.framework
     easybuild.toolchains
     easybuild.tools

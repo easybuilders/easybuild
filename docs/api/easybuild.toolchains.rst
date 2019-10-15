@@ -86,6 +86,7 @@ Submodules
    easybuild.toolchains.pmkl
    easybuild.toolchains.pomkl
    easybuild.toolchains.pompi
+   easybuild.toolchains.system
    easybuild.toolchains.xlcxlf
    easybuild.toolchains.xlmpich
    easybuild.toolchains.xlmpich2

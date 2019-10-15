@@ -41,6 +41,7 @@ Template names/values as set in easyconfig
 * ``%(bitbucket_account)s``
 * ``%(github_account)s``
 * ``%(name)s``
+* ``%(parallel)s``
 * ``%(version)s``
 * ``%(versionsuffix)s``
 * ``%(versionprefix)s``
