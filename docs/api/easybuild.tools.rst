@@ -11,6 +11,7 @@ Subpackages
     easybuild.tools.job
     easybuild.tools.module_naming_scheme
     easybuild.tools.package
+    easybuild.tools.py2vs3
     easybuild.tools.repository
     easybuild.tools.toolchain
 

@@ -14,6 +14,7 @@ Submodules
    easybuild.toolchains.compiler.ibmxl
    easybuild.toolchains.compiler.inteliccifort
    easybuild.toolchains.compiler.pgi
+   easybuild.toolchains.compiler.systemcompiler
 
 Module contents
 ---------------
