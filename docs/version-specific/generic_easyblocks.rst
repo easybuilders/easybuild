@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakeMakeCp` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakeMakeCp` - :ref:`CMakeNinja` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -67,7 +67,7 @@ Example easyconfig for ``Binary`` easyblock
     homepage = 'http://platanus.bio.titech.ac.jp/'
     description = """PLATform for Assembling NUcleotide Sequences"""
     
-    toolchain = {'name': 'dummy', 'version': 'dummy'}
+    toolchain = SYSTEM
     
     source_urls = ['http://platanus.bio.titech.ac.jp/Platanus_release/20130901010201']
     sources = ['platanus']
@@ -263,6 +263,33 @@ Customised steps in ``CMakeMakeCp`` easyblock
 ---------------------------------------------
 * ``configure_step`` - Configure build using CMake
 * ``install_step`` - Install by copying specified files and directories.
+
+.. _CMakeNinja:
+
+``CMakeNinja``
+==============
+
+(derives from :ref:`CMakeMake`, :ref:`MesonNinja`)
+
+Extra easyconfig parameters specific to ``CMakeNinja`` easyblock
+----------------------------------------------------------------
+
+========================    ===================================================================================================================================================================================================    ==================
+easyconfig parameter        description                                                                                                                                                                                            default value     
+========================    ===================================================================================================================================================================================================    ==================
+``abs_path_compilers``      Specify compilers via absolute file path (not via command names)                                                                                                                                       ``False``         
+``allow_system_boost``      Always allow CMake to pick up on Boost installed in OS (even if Boost is included as a dependency)                                                                                                     ``False``         
+``build_cmd``               Build command to use                                                                                                                                                                                   ``"make"``        
+``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
+``configure_cmd``           Configure command to use                                                                                                                                                                               ``"cmake"``       
+``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``            
+``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``          
+``install_cmd``             Build command to use                                                                                                                                                                                   ``"make install"``
+``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``          
+``separate_build_dir``      Perform build in a separate directory                                                                                                                                                                  ``False``         
+``srcdir``                  Source directory location to provide to cmake command                                                                                                                                                  ``None``          
+``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
+========================    ===================================================================================================================================================================================================    ==================
 
 .. _CMakePythonPackage:
 

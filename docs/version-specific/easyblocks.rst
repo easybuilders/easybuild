@@ -55,6 +55,7 @@
     * CMakeMake
 
       * CMakeMakeCp
+      * CMakeNinja
       * CMakePythonPackage
 
         * EB_DOLFIN
@@ -205,8 +206,10 @@
   * EB_CP2K
   * EB_FSL
   * EB_GAMESS_minus_US
+  * EB_Gctf
   * EB_libsmm
   * EB_Modeller
+  * EB_MotionCor2
   * EB_MRtrix
   * EB_NCL
   * EB_NEMO
@@ -303,6 +306,9 @@
     * EB_VTune
 
   * MesonNinja
+
+    * CMakeNinja
+
   * ModuleRC
   * PackedBinary
 
