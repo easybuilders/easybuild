@@ -16,15 +16,16 @@
         <h4>EasyBuild:  building software with ease.</h4>
         <p class="view"><a href="https://github.com/easybuilders/easybuild">View the Project on GitHub <small>easybuilders/easybuild</small></a></p>
         <ul>
-         <li><a href="https://pypi.python.org/pypi/easybuild"><strong>EasyBuild @PyPi</strong></a></li>
-         <li><a href="http://easybuild.readthedocs.io"><strong>EasyBuild docs</strong></a></li>
-         <li><a href="https://github.com/easybuilders/easybuild"><strong>EasyBuild @GitHub</strong></a></li>
+        <li><a href="http://easybuild.readthedocs.io"><strong>EasyBuild<br/>docs</strong></a></li>
+        <li><a href="https://pypi.python.org/pypi/easybuild"><strong>EasyBuild<br/>@ PyPi</strong></a></li>
+        <li><a href="https://github.com/easybuilders/easybuild"><strong>EasyBuild<br/>@ GitHub</strong></a></li>
+        <li><a href="https://www.youtube.com/channel/UCqPyXwACj3sjtOho7m4haVA"><strong>EasyBuild<br/>@ YouTube</strong></a></li>
         </ul>
       </header>
       <section>
         <p>
         <a href="https://github.com/easybuilders/easybuild">EasyBuild</a> is a software build and installation framework that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.<br>
-        A full list of supported software packages is available <a href="http://easybuild.readthedocs.io/en/latest/version-specific/Supported_software.html">here</a>.
+        <strong>A full list of supported software packages is available <a href="http://easybuild.readthedocs.io/en/latest/version-specific/Supported_software.html">here</a>.</strong>
         </p>
 
 <hr>
@@ -33,24 +34,18 @@
 
 <div class=news>
 <ul>
-<li><em>20191114</em> - <strong><a href="https://github.com/easybuilders/easybuild/wiki/5th-EasyBuild-User-Meeting">5th EasyBuild User Meeting in Barcelona (29-31 Jan 2020)</a></strong></li>
+<li><em>20191114</em> - <strong><a href="https://github.com/easybuilders/easybuild/wiki/5th-EasyBuild-User-Meeting">5th EasyBuild User Meeting (EUM'20) in Barcelona (29-31 Jan 2020)</a></strong></li>
 <li><em>20191017</em> - <a href="https://pypi.python.org/pypi/easybuild/4.0.0"><strong>EasyBuild v4.0.1</strong> is available</a>;
                         see also the <a href="https://easybuild.readthedocs.io/en/latest/EasyBuild4-overview-of-changes.html">overview of major changes in EasyBuild 4.0</a></li>
 <li><em>20190129</em> - <strong><a href="https://www.youtube.com/playlist?list=PLhnGtSmEGEQhEjG5hD70tRwL3n58aWNHc">Recordings of 4th EasyBuild User Meeting available</a></strong></li>
-<li><em>20181010</em> - <strong>4th EasyBuild User Meeting</strong>: Louvain-la-Neuve (Belgium), Jan 30th - Feb 1st 2019 - <a href="https://tiny.cc/eum19">https://tiny.cc/eum19</a></li>
 <li><em>20180426</em> - <a href="https://easybuild.readthedocs.io/en/latest/Containers.html">EasyBuild now has (experimental) support for generating Singularity container recipes &amp; images!</a></li>
 <li><em>20171113</em> - <strong>Happy 5th birthday (stable) EasyBuild!</strong><br><div align="center"><img src="images/easybuild5.png" width=300px></div></li>
 <li><em>20170705</em> - EasyBuild repositories have been migrated to <a href="https://github.com/easybuilders">https://github.com/easybuilders</a></li>
 <li><em>20170425</em> - <a href="http://users.ugent.be/~kehoste/EasyBuild_20170425_PRACE_Spring_School.pdf">slides from EasyBuild tutorial at PRACE-VI-SEEM Spring School</a></li>
-<li><em>20161128</em> - <strong><a href="http://www.fz-juelich.de/ias/jsc/eum17">2nd EasyBuild User Meeting</a>: Feb 8-10 2017, Jülich</strong></li>
 <li><em>20161110</em> - <a href="http://easybuilders.github.io/easybuild/files/eb-jsc-hust16.pdf">pre-print of <strong>HUST-16 paper</strong> available</a></li>
 <li><em>20160511</em> - <strong>CUG2016 paper</strong>: <a href="https://cug.org/proceedings/cug2016_proceedings/includes/files/pap145.pdf"><i>Making Scientific Software Installation Reproducible On Cray Systems Using EasyBuild</i></a></li>
 <li><em>20160330</em> - <a href="http://insidehpc.com/2016/03/easybuild/">EasyBuild tutorial</a> from <a href="http://www.hpcadvisorycouncil.com/events/2016/swiss-workshop/agenda.php">HPC Advisory Council Swiss conference</a></li>
 <li><em>20160214</em> - <a href="http://www.rce-cast.com/Podcast/rce-103-easybuild.html"><strong>RCE podcast</strong> on EasyBuild</a></li>
-<li><em>20151117</em> - <a href="https://github.com/easybuilders/easybuild/wiki/SC15-BoF-session">Presentation materials of SC'15 BoF session available</a></li>
-<li><em>20150914</em> - <a href="https://github.com/easybuilders/easybuild/wiki/1st-EasyBuild-User-Meeting"><strong>1st EasyBuild User Meeting - Jan 27-29 2016 (Ghent)</strong></a></li>
-<li><em>20141104</em> - <strong>Revamped documentation @ <a href="http://easybuild.readthedocs.io/">easybuild.readthedocs.io</a></strong></li>
-<li><em>20141020</em> - <a href="http://easybuilders.github.io/easybuild/files/hust14_paper.pdf">pre-print of <strong>HUST-14 workshop paper</strong> available</a></li>
 </ul>
 </div>
 
@@ -81,7 +76,7 @@ components (GCC, OpenMPI, etc.) by running the following commands:</p>
 
 <pre><code>$ module load EasyBuild
 $ export EASYBUILD_PREFIX=/tmp/$USER  # example installation prefix
-$ eb HPL-2.0-goalf-1.1.0-no-OFED.eb --robot</code></pre>
+$ b HPL-2.3-foss-2019b.eb --robot</code></pre>
 
 <p>This should install a module file for HPL which you can load to start using it.</p>
 <pre><code>$ export MODULEPATH=$EASYBUILD_PREFIX/modules/all:$MODULEPATH
@@ -103,15 +98,16 @@ have any questions or suggestions, you can post them there.</p>
 <p>Only members can post to this mailinglist. To request membership, see
 <a href="https://lists.ugent.be/wws/info/easybuild">https://lists.ugent.be/wws/info/easybuild</a>.</p>
 
-<h4>IRC</h4>
+<h4>Slack/IRC</h4>
+<p>Contact the EasyBuild community via Slack: <a href="https://easybuild.slack.com">https://easybuild.slack.com</a>,</br>
+self-request an invite via <a href="https://easybuild-slack.herokuapp.com">https://easybuild-slack.herokuapp.com</a>.</p>
+
 <p>An IRC channel <code>#easybuild</code> has been set up on the FreeNode network.</p>
 <p>Just connect your IRC client to the <code>chat.freenode.net</code> server, and join
 the <code>#easybuild</code> channel.</p>
-<p>There is an IRC bot present (<code>easybuilder</code>). Just type !help to get
-pointers to the available commands.</p>
 
 <h4>Twitter</h4>
-<p>The EasyBuild team also has a Twitter feed:
+<p>EasyBuild also has a Twitter feed:
 <a href="http://twitter.com/easy_build">&#64;easy_build</a>.</p>
 
 <h2><a>Disclaimer</a></h2>
