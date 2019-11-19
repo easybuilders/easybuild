@@ -21,7 +21,7 @@ Depending on which GitHub integration features you want to use, there are a coup
 
 * **a GitHub account**
 
-  * see https://github.com; creating an account is free but requires registration
+  * see https://github.com; creating an account is free
 
 * **a GitHub user name**
 
@@ -34,6 +34,8 @@ Depending on which GitHub integration features you want to use, there are a coup
 
 * **a GitHub token** + ``keyring`` **Python package**
 
+  * install via ``pip install keyring`` (for Python2: ``pip install 'keyring<19.0'``)
+  * optionally install potentially unsafe keyrings: ``pip install keyrings.alt`` (but read and understand the `warning <https://pypi.org/project/keyrings.alt/>`_)
   * allows accessing the GitHub API with authentication
   * only strictly required for features that require GitHub 'write' permissions
 
@@ -43,6 +45,7 @@ Depending on which GitHub integration features you want to use, there are a coup
 
 * ``git`` **command** / ``GitPython`` **Python package**
 
+  * install via ``pip install GitPython`` (for Python2: ``pip install 'GitPython<3.0'``)
   * only required when local ``git`` commands need to be executed, e.g. to manipulate a Git repository
 
     * i.e. for :ref:`github_new_pr` and :ref:`github_update_pr`
