@@ -228,7 +228,6 @@
   * EB_WPS
   * EB_WRF
   * EB_WRF_minus_Fire
-  * EB_Xmipp
   * ExtensionEasyBlock
 
     * OCamlPackage
@@ -330,9 +329,13 @@
     * EB_TotalView
 
   * SCons
+
+    * EB_Xmipp
+
   * Tarball
 
     * BinariesTarball
+    * EB_cuDNN
     * EB_FoldX
     * EB_FreeSurfer
     * EB_Gurobi
