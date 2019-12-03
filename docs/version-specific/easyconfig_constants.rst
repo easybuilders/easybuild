@@ -14,6 +14,6 @@ Constant name             Constant value                                 Descrip
 ``OS_VERSION``            ``UNKNOWN``                                    System version                                   
 ``HOME``                  ``/home/example``                              Home directory ($HOME)                           
 ``OS_TYPE``               ``Darwin``                                     System type (e.g. 'Linux' or 'Darwin')           
-``SYS_PYTHON_VERSION``    ``2.7.10``                                     System Python version (platform.python_version())
+``SYS_PYTHON_VERSION``    ``2.7.16``                                     System Python version (platform.python_version())
 ======================    ===========================================    =================================================
 
