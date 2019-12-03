@@ -9,7 +9,7 @@ alongside 8,748 easyconfig files.
 
 .. _release_notes_eb410:
 
-EasyBuild v4.1.0 (December 3rd 2019)
+EasyBuild v4.1.0 (December 4th 2019)
 ------------------------------------
 
 bugfix/update release
@@ -51,6 +51,7 @@ bugfix/update release
   * don't use ``%(version)s`` template in ``exts_default_options`` in dumped easyconfig (`#3096 <https://github.com/easybuilders/easybuild-framework/pull/3096>`_)
   * fix generated module statements in case only a single version is listed in ``multi_deps`` (`#3097 <https://github.com/easybuilders/easybuild-framework/pull/3097>`_)
   * fix broken ``test_show_system_info`` on macOS due to 'Python' binary (`#3105 <https://github.com/easybuilders/easybuild-framework/pull/3105>`_)
+  * take into account that dependency version could be a dict rather than a string value in template_constant_dict (`#3111 <https://github.com/easybuilders/easybuild-framework/pull/3111>`_)
 
 * other changes:
 
@@ -81,6 +82,7 @@ bugfix/update release
   * improve configuration in netCDF and netcdf4_python easyblocks (`#1852 <https://github.com/easybuilders/easybuild-easyblocks/pull/1852>`_)
   * fix CUDA header paths for TensorFlow versions < 1.14 (`#1854 <https://github.com/easybuilders/easybuild-easyblocks/pull/1854>`_)
   * handle incorrect regex better in generic CmdCp easyblock (`#1861 <https://github.com/easybuilders/easybuild-easyblocks/pull/1861>`_)
+  * add missing docstrings in cmakeninja easyblock (`#1867 <https://github.com/easybuilders/easybuild-easyblocks/pull/1867>`_)
 
 * other changes:
 
