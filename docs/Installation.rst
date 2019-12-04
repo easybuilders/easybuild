@@ -532,7 +532,7 @@ Optional Python packages
 * `keyring <https://pypi.org/project/keyring>`_, only needed for securely storing a GitHub token
   (see :ref:`integration_with_github`);
 * `pycodestyle <https://pypi.org/project/pycodestyle>`_,
-  only required for `--check-style` and `--check-contrib`;
+  only required for ``--check-style`` and ``--check-contrib``;
 * `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
   SVN repository for easyconfig files;
 * `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
