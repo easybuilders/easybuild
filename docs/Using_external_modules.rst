@@ -59,6 +59,17 @@ Since EasyBuild v2.7.0, a file providing metadata for Cray-provided modules on C
 and is active by default (i.e., unless other files are specified via ``--external-modules-metadata``);
 see https://github.com/easybuilders/easybuild-framework/blob/master/etc/cray_external_modules_metadata.cfg.
 
+Using wildcards
+~~~~~~~~~~~~~~~
+
+Since EasyBuild v4.1.0, you can use so-called *glob patterns* to specify a list of paths
+to ``--external-modules-metadata``, using wildcard characters like ``*`` and ``?``.
+
+For example, to specify that the metadata for external modules in all ``*.cfg`` files in the directory ``/example``
+should be taken into account, you can use::
+
+  export EASYBUILD_EXTERNAL_MODULES_METADATA='/example/*.cfg'
+
 Example
 ~~~~~~~
 

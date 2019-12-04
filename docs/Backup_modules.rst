@@ -11,11 +11,11 @@ Backing up of existing modules can be enabled with ``--backup-modules``.
 Backups are stored in the same directory as where the module file was located,
 and the files are given an additional extension of the form ``.bak_<year><month><day><hour><min><sec>``.
 
-* With module files in Tcl syntax, the backup module file is hidden by adding a leading dot to the filename; 
+* With module files in Tcl syntax, the backup module file is hidden by adding a leading dot to the filename;
   this is done to avoid that it is displayed as a normal module in ``module avail``.
-* With module files in Lua syntax, the backup module file is not made hidden since the additional
-  ``.bak_*`` extension prevents Lmod from picking it up as a valid module file (only files ending in ``.lua``
-  are considered to be module files)
+* With module files in Lua syntax, the backup module file is not made hidden (unless Lmod 6.x is used),
+  since the additional ``.bak_*`` extension prevents from picking it up as a valid module file;
+  only files ending in ``.lua`` are considered to be module files by Lmod 7+ .
 
 The location of the backed up module file will be printed, as well as a "unified diff" comparison
 (very similar to what ``diff -u`` produces) between the backed up module file and the newly generated module file
@@ -75,7 +75,7 @@ To reinstall the ``bzip2/1.0.6`` module in Lua syntax while retaining a backup o
      setenv("EBDEVELBZIP2", pathJoin(root, "easybuild/bzip2-1.0.6-easybuild-devel"))
 
     ...
-    
+
 Equivalently, we can reinstall the module in Tcl syntax using::
 
     $ eb bzip2-1.0.6.eb --module-syntax=Tcl --force --backup-modules
