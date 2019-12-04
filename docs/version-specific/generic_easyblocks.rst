@@ -249,7 +249,7 @@ easyconfig parameter        description                                         
 ``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
 ``configure_cmd``           Configure command to use                                                                                                                                                                               ``"cmake"``       
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``            
-``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``[]``            
+``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``None``          
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``          
 ``install_cmd``             Build command to use                                                                                                                                                                                   ``"make install"``
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``          
@@ -271,6 +271,8 @@ Customised steps in ``CMakeMakeCp`` easyblock
 
 (derives from :ref:`CMakeMake`, :ref:`MesonNinja`)
 
+Support for configuring with CMake, building and installing with MesonNinja.
+
 Extra easyconfig parameters specific to ``CMakeNinja`` easyblock
 ----------------------------------------------------------------
 
@@ -290,6 +292,12 @@ easyconfig parameter        description                                         
 ``srcdir``                  Source directory location to provide to cmake command                                                                                                                                                  ``None``          
 ``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
 ========================    ===================================================================================================================================================================================================    ==================
+
+Customised steps in ``CMakeNinja`` easyblock
+--------------------------------------------
+* ``build_step`` - Build using MesonNinja.
+* ``configure_step`` - Configure using CMake.
+* ``install_step`` - Install using MesonNinja.
 
 .. _CMakePythonPackage:
 
@@ -332,6 +340,7 @@ easyconfig parameter        description                                         
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                                                                                                                 ``2``             
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                                                                                                                 ``6``             
 ``runtest``                 Run unit tests.                                                                                                                                                                                        ``True``          
+``sanity_pip_check``        Run 'pip check' to ensure all required Python packages are installed                                                                                                                                   ``False``         
 ``separate_build_dir``      Perform build in a separate directory                                                                                                                                                                  ``False``         
 ``srcdir``                  Source directory location to provide to cmake command                                                                                                                                                  ``None``          
 ``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
@@ -371,7 +380,7 @@ easyconfig parameter        description                                         
 ``cmds_map``                List of regex/template command (with 'source'/'target' fields) tuples                                                                                                                                  ``[('.*', '$CC $CFLAGS %(source)s -o %(target)s')]``
 ``configure_cmd``           Configure command to use                                                                                                                                                                               ``"./configure"``                                   
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``                                              
-``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``[]``                                              
+``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``None``                                            
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``                                            
 ``install_cmd``             Build command to use                                                                                                                                                                                   ``"make install"``                                  
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``                                            
@@ -522,6 +531,7 @@ easyconfig parameter        description                                         
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                                                                                                                 ``2``             
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                                                                                                                 ``6``             
 ``runtest``                 Run unit tests.                                                                                                                                                                                        ``True``          
+``sanity_pip_check``        Run 'pip check' to ensure all required Python packages are installed                                                                                                                                   ``False``         
 ``tar_config_opts``         Override tar settings as determined by configure.                                                                                                                                                      ``False``         
 ``unpack_sources``          Unpack sources prior to build/install                                                                                                                                                                  ``True``          
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)                                                                                              ``False``         
@@ -620,6 +630,7 @@ easyconfig parameter        description                                         
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
+``sanity_pip_check``        Run 'pip check' to ensure all required Python packages are installed                                         ``False``    
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
@@ -710,7 +721,7 @@ easyconfig parameter        description                                         
 ``build_type``              Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
 ``configure_cmd``           Configure command to use                                                                                                                                                                               ``"./configure"`` 
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                  ``""``            
-``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``[]``            
+``files_to_copy``           List of files or dirs to copy                                                                                                                                                                          ``None``          
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)     ``None``          
 ``install_cmd``             Build command to use                                                                                                                                                                                   ``"make install"``
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                  ``None``          
@@ -888,6 +899,7 @@ easyconfig parameter           description                                      
 ``req_py_majver``              Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``              Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                    Run unit tests.                                                                                              ``True``     
+``sanity_pip_check``           Run 'pip check' to ensure all required Python packages are installed                                         ``False``    
 ``unpack_sources``             Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``           Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                    Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
@@ -921,6 +933,7 @@ easyconfig parameter        description                                         
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
+``sanity_pip_check``        Run 'pip check' to ensure all required Python packages are installed                                         ``False``    
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
@@ -1167,20 +1180,21 @@ Customised steps in ``Tarball`` easyblock
 
 (derives from :ref:`Bundle`)
 
-Compiler toolchain: generate module file only, nothing to build/install
+Compiler toolchain easyblock: nothing to install, just generate module file.
 
 Extra easyconfig parameters specific to ``Toolchain`` easyblock
 ---------------------------------------------------------------
 
-===========================    ===========================================================================    =============
-easyconfig parameter           description                                                                    default value
-===========================    ===========================================================================    =============
-``altroot``                    Software name of dependency to use to define $EBROOT for this bundle           ``None``     
-``altversion``                 Software name of dependency to use to define $EBVERSION for this bundle        ``None``     
-``components``                 List of components to install: tuples w/ name, version and easyblock to use    ``()``       
-``default_component_specs``    Default specs to use for every component                                       ``{}``       
-``default_easyblock``          Default easyblock to use for components                                        ``None``     
-===========================    ===========================================================================    =============
+============================    ===========================================================================================================    =============
+easyconfig parameter            description                                                                                                    default value
+============================    ===========================================================================================================    =============
+``altroot``                     Software name of dependency to use to define $EBROOT for this bundle                                           ``None``     
+``altversion``                  Software name of dependency to use to define $EBVERSION for this bundle                                        ``None``     
+``components``                  List of components to install: tuples w/ name, version and easyblock to use                                    ``()``       
+``default_component_specs``     Default specs to use for every component                                                                       ``{}``       
+``default_easyblock``           Default easyblock to use for components                                                                        ``None``     
+``set_env_external_modules``    Include setenv statements for toolchain components that use an external module, based on available metadata    ``False``    
+============================    ===========================================================================================================    =============
 
 .. _VSCPythonPackage:
 
@@ -1206,6 +1220,7 @@ easyconfig parameter        description                                         
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
+``sanity_pip_check``        Run 'pip check' to ensure all required Python packages are installed                                         ``False``    
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
@@ -1239,6 +1254,7 @@ easyconfig parameter        description                                         
 ``req_py_majver``           Required major Python version (only relevant when using system Python)                                       ``2``        
 ``req_py_minver``           Required minor Python version (only relevant when using system Python)                                       ``6``        
 ``runtest``                 Run unit tests.                                                                                              ``True``     
+``sanity_pip_check``        Run 'pip check' to ensure all required Python packages are installed                                         ``False``    
 ``unpack_sources``          Unpack sources prior to build/install                                                                        ``True``     
 ``use_easy_install``        Install using '%(python)s setup.py easy_install --prefix=%(prefix)s %(installopts)s %(loc)s' (deprecated)    ``False``    
 ``use_pip``                 Install using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                      ``None``     
