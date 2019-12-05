@@ -27,10 +27,20 @@ Requirements
 
 The only strict requirements are:
 
-* Linux (or OS X)
-* **Python version 2.6**, or a more recent 2.x version + ``setuptools``, ``vsc-install`` & ``vsc-base``
+* a **GNU/Linux distribution** as operating system
 
-  * see also :ref:`required_python_packages`
+* **Python**:
+
+  * Python 2.6 or 2.7, or Python 3.x (>= 3.5)
+
+  * **note**: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
+
+  * no Python packages other than the ones included in the Python standard library are strictly required
+
+    * **note**: only EasyBuild versions prior to v4.0 require ``vsc-base`` (& ``vsc-install``),
+      see also :ref:`required_python_packages_eb3`
+
+  * for some specific features, additional Python packages are needed though, see :ref:`optional_python_packages`
 
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
@@ -371,15 +381,17 @@ EasyBuild has a couple of dependencies, some are optional.
 Required dependencies
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. XXX - UPDATE BY VERSION, below
-
-* **Linux** (or OSX) operating system
+* a **GNU/Linux** distribution as operating system
 
   * some common shell tools are expected to be available, see :ref:`required_shell_tools`
 
-* `Python 2.6 <http://python.org>`_, or a more recent 2.x version
+* `Python <http://python.org>`_:
 
-  * some additional non-standard Python packages are required, see :ref:`required_python_packages`
+  * Python 2.6 or 2.7, or Python 3.x (>= 3.5)
+
+  * no third-party Python packages are strictly required (the Python standard library is sufficient)
+
+  * for some *specific* EasyBuild features additional Python packages are required however, see :ref:`optional_python_packages`
 
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
@@ -428,7 +440,7 @@ Supported module tools:
 
 * `Tcl/C environment-modules <http://modules.sourceforge.net/>`_ (version >= 3.2.10)
 * `Tcl-only variant of environment modules <http://sourceforge.net/p/modules/modules-tcl>`_
-* `Lmod <http://lmod.sourceforge.net>`_ (version >= 5.6.3), *highly recommended*
+* `Lmod <http://lmod.sourceforge.net>`_ (version >= 6.5.1), *highly recommended*
 
 .. note::
   The path to the actual modules tool binary/script used *must* be included in ``$PATH``,
@@ -467,6 +479,15 @@ Additional notes:
 Required Python packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+Since EasyBuild v4.0, *no* Python packages outside of the Python standard library are required.
+
+.. _required_python_packages_eb3:
+
+Required Python packages for older EasyBuild versions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+For EasyBuild versions prior to version 4.0, a couple of additional Python packages are required:
+
 * ``setuptools``: used to define the ``easybuild`` namespace across different directories
 
   * available at https://pypi.python.org/pypi/setuptools
@@ -485,7 +506,7 @@ Required Python packages
   * the required version of ``vsc-base`` depends on the EasyBuild version
 
 .. note::
-   ``vsc-base`` is installed automatically along with EasyBuild, if an installation procedure is used that
+   ``vsc-base`` is installed automatically along with EasyBuild 3.x, if an installation procedure is used that
    consumes the ``setup.py`` script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
    bootstrap script, ``pip``, ``easy_install``, ...)
 
@@ -501,15 +522,21 @@ Some dependencies are optional and are only required to support certain features
 Optional Python packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+* `GC3Pie <https://pypi.org/project/gc3pie>`_, only needed when using `GC3Pie` as a backend for `--job`,
+  see also :ref:`submitting_jobs`;
 * `GitPython <http://gitorious.org/git-python>`_, only needed if
   EasyBuild is hosted in a git repository or if you’re using a git
-  repository for easyconfig files (.eb)
-* `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
-  SVN repository for easyconfig files (.eb)
-* `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
-  only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``.
+  repository for easyconfig files (.eb);
 * `graphviz for Python <https://pypi.python.org/pypi/graphviz>`_,
-   only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``.
+  only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``;
+* `keyring <https://pypi.org/project/keyring>`_, only needed for securely storing a GitHub token
+  (see :ref:`integration_with_github`);
+* `pycodestyle <https://pypi.org/project/pycodestyle>`_,
+  only required for ``--check-style`` and ``--check-contrib``;
+* `pysvn <http://pysvn.tigris.org/>`_, only needed if you’re using an
+  SVN repository for easyconfig files;
+* `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
+  only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``
 
 Sources
 -------
