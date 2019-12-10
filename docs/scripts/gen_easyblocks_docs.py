@@ -28,6 +28,8 @@ Generates documentation for (generic) easyblocks in .rst format
 @author Caroline De Brouwer (Ghent University)
 """
 
+from __future__ import print_function
+
 import os
 import easybuild.tools.config as config
 
@@ -66,7 +68,7 @@ easyblocks_overview = gen_easyblocks_overview_rst(so.options.module, so.options.
 txt = '\n'.join(autogen_comment + easyblocks_overview)
 if so.options.out_file:
     write_file(so.options.out_file, txt)
-    print '%s updated' % so.options.out_file
+    print('%s updated' % so.options.out_file)
 else:
-    print txt
+    print(txt)
 
