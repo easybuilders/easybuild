@@ -550,6 +550,7 @@ significantly easier and less error-prone, especially for people who are not ver
 yet:
 
 * ``--new-pr`` to create new pull requests
+  * Since EasyBuild v4.1.0, it is possible to first push a new branch to GitHub without immediately creating the corresponding PR to ``develop``, using ``--new-branch-github``, in order to check if the CI tests pass, and only then actually open the PR, using ``--new-pr-from-branch``.
 * ``--update-pr`` to update existing pull requests
 
 .. _github_preview_pr:
@@ -574,7 +575,7 @@ as described in :ref:`contributing_review_process_review_pr`.
 
 .. _github_new_pr:
 
-Submitting pull requests (``--new-pr``)
+Submitting pull requests (``--new-pr``, ``--new-branch-github``, ``--new-pr-from-branch``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: Submitting pull requests using ``--new-pr`` only works for the ``easybuild-easyconfigs`` repository, for now.
@@ -596,6 +597,8 @@ This takes care of all the steps required to make a contribution, i.e.:
 * staging and committing the files in the feature branch
 * pushing the feature branch to your fork of the relevant EasyBuild repository on GitHub
 * creating the pull request, targeting the ``develop`` branch of the central EasyBuild repository (e.g. ``easybuilders/easybuild-easyconfigs``)
+
+.. note:: Since EasyBuild v4.1.0, using ``--new-branch-github`` instead of ``--new-pr`` will perform all these steps except the last one, which can be performed separately using ``--new-pr-from-branch``.
 
 It should be clear that automating this whole procedure with a single simple ``eb`` command greatly lowers the bar
 for contributing, especially since it even alleviates the need for interacting directly with ``git`` entirely!
@@ -636,7 +639,7 @@ Yes, it's that easy!
 
 .. _github_update_pr:
 
-Updating existing pull requests (``--update-pr``)
+Updating existing pull requests (``--update-pr``, ``--update-branch-github``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note:: Updating pull requests using ``--update-pr`` only works for the ``easybuild-easyconfigs`` repository, for now.
@@ -648,6 +651,9 @@ Similarly to creating new pull requests, existing pull requests can be easily up
 The usage is equally simple, for example to update pull request ``#1234`` just list the changed/new file(s)::
 
     $ eb --update-pr 1234 example.eb
+
+.. note:: If only a branch was created, with ``--new-branch-github``, it can be updated with ``--update-branch-github``, 
+using the branch name instead of PR number
 
 Again, this take care of the whole procedure required to update an existing pull request:
 
@@ -683,6 +689,32 @@ For example, to update pull request #3153 with a changed easyconfig file::
      1 file changed, 3 insertions(+)
 
     Updated easybuilders/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
+
+.. _github_sync_with_develop:
+
+Syncing with ``develop`` (``--sync-branch-with-develop``, ``--sync-pr-with-develop``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*(supported since EasyBuild v4.1.0)*
+
+With ``--sync-branch-with-develop`` or ``--sync-pr-with-develop``, you can sync a specific GitHub branch, determined by the branch name 
+if a PR hasn't been created yet or by the PR number if it has, with the latest version of the ``develop`` branch from the central repository.
+
+Example
++++++++
+
+For example, to sync pull request #7277 with the current version of ``develop``::
+
+  eb --sync-pr-with-develop 7277
+  == temporary log file in case of crash /tmp/eb-Uul_00/easybuild-kwe1IC.log
+  == Determined branch name corresponding to easybuilders/easybuild-easyconfigs PR #7277: 20181210212203_new_pr_ack224
+  == cloning git repo from /user/example/easybuild-easyconfigs...
+  == fetching branch '20181210212203_new_pr_ack224' from https://github.com/boegel/easybuild-easyconfigs.git...
+  == pulling latest version of 'easybuilders' branch from easybuild-easyconfigs/develop...
+  == merging 'develop' branch into PR branch '20181210212203_new_pr_ack224'...
+  == pushing branch '20181210212203_new_pr_ack224' to remote 'github_boegel_IhzHm' (git@github.com:boegel/easybuild-easyconfigs.git)
+  == Temporary log file(s) /tmp/eb-Uul_00/easybuild-kwe1IC.log* have been removed.
+  == Temporary directory /tmp/eb-Uul_00 has been removed.
 
 .. _github_new_update_pr_patches:
 
