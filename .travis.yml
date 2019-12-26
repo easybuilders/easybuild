@@ -1,8 +1,9 @@
 language: python
-matrix:
+jobs:
   include:
     - python: "2.7"
     - python: "3.6"
+    - python: "3.8"
 # command to install dependencies
 install:
   - pip install sphinx codespell
