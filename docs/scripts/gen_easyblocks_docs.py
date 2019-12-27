@@ -33,7 +33,7 @@ from __future__ import print_function
 import os
 import easybuild.tools.config as config
 
-from vsc.utils.generaloption import simple_option
+from easybuild.base.generaloption import simple_option
 from easybuild.tools.docs import gen_easyblocks_overview_rst
 from easybuild.tools.filetools import write_file
 

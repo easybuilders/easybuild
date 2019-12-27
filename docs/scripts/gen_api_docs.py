@@ -33,7 +33,7 @@ from __future__ import print_function
 import os
 import subprocess
 
-from vsc.utils.generaloption import simple_option
+from easybuild.base.generaloption import simple_option
 
 
 options = {
