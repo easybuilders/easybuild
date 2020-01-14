@@ -11,6 +11,7 @@ More specifically, the following Python versions are currently supported:
 * Python 3.5.x
 * Python 3.6.x
 * Python 3.7.x
+* Python 3.8.x (requires EasyBuild v4.1.0)
 
 .. _py2_py3_compatibility_EB_VERBOSE:
 
