@@ -241,6 +241,7 @@
         * EB_UFC
 
       * ConfigureMakePythonPackage
+      * EB_cryptography
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
@@ -361,6 +362,7 @@
         * EB_UFC
 
       * ConfigureMakePythonPackage
+      * EB_cryptography
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
