@@ -28,10 +28,12 @@ This script requires Sphinx to be installed (http://sphinx-doc.org/index.html).
 
 @author Caroline De Brouwer (Ghent University)
 """
+from __future__ import print_function
+
 import os
 import subprocess
 
-from vsc.utils.generaloption import simple_option
+from easybuild.base.generaloption import simple_option
 
 
 options = {
@@ -49,5 +51,5 @@ if so.options.module is None:
 # -f forces to overwrite existing files
 # -e specifies that every module is written in a separate file
 cmd = "sphinx-apidoc -o %s %s -f -e" % (so.options.out_folder, so.options.module)
-print "$ %s" % cmd
+print("$ %s" % cmd)
 subprocess.call(cmd, shell=True)
