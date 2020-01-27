@@ -72,6 +72,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@pescobar <https://github.com/pescobar>`_ - e-mail: ``pablo.escobarlopez (at) unibas.ch`` - IRC/Slack: ``pescobar``
 
+* **Fotis Georgatos** (`SDSC <https://datascience.ch/>`_)
+
+  * GitHub: `@fgeorgatos <https://github.com/fgeorgatos>`_ - e-mail: ``kefalonia (at) gmail.com`` - IRC/Slack: ``fotis``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
@@ -107,7 +111,3 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 * **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
 
   * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
-
-* **Fotis Georgator** (`SDSC <https://datascience.ch/>`_)
-
-  * GitHub: `@fgeorgatos <https://github.com/fgeorgatos>`_ - e-mail: ``kefalonia (at) gmail.com`` - IRC/Slack: ``fotis``
