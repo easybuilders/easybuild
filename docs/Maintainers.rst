@@ -106,7 +106,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
 * **Åke Sandgren** (`Umeå University, Sweden <http://www.umu.se/english/>`_)
 
-  * GitHub: `@akesandgren <https://github.com/akesandgren>`_ - e-mail: `ake.sandgren (at) hpc2n.umu.se` - IRC/Slack: ``ake_s``
+  * GitHub: `@akesandgren <https://github.com/akesandgren>`_ - e-mail: ``ake.sandgren (at) hpc2n.umu.se`` - IRC/Slack: ``ake_s``
 
 * **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
 
@@ -114,4 +114,4 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
 * **Lars Viklund** (`Umeå University, Sweden <http://www.umu.se/english/>`_)
 
-  * GitHub: `@zao <https://github.com/zao>`_ - e-mail: `lars.viklund (at) umu.se` - IRC/Slack: ``zao``
+  * GitHub: `@zao <https://github.com/zao>`_ - e-mail: ``lars.viklund (at) umu.se`` - IRC/Slack: ``zao``
