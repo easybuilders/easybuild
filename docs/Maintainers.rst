@@ -68,7 +68,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
 
-* **Alex Domingo** (`Free University of Brussels <https://hpc.vub.be>`_)
+* **Alex Domingo** (`Vrije Universiteit Brussel <https://hpc.vub.be>`_)
 
   * GitHub: `@lexming <https://github.com/lexming>`_ - e-mail: ``alex.domingo.toro (at) vub.be`` - IRC/Slack: ``lexming``
 
