@@ -112,6 +112,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@akesandgren <https://github.com/akesandgren>`_ - e-mail: ``ake.sandgren (at) hpc2n.umu.se`` - IRC/Slack: ``ake_s``
 
+* **Caspar Van Leeuwen** (`SURFsara, Netherlands <https://www.surf.nl/en/research-ict>`_)
+
+  * GitHub: `@casparvl <https://github.com/casparvl>`_ - e-mail: ``caspar.vanleeuwen (at) surfsara.nl`` - IRC/Slack: ``Caspar Van Leeuwen``
+
 * **Davide Vanzo** (`Vanderbilt University <http://www.accre.vanderbilt.edu/>`_)
 
   * GitHub: `@vanzod <https://github.com/vanzod>`_ - e-mail: ``davide.vanzo (at) vanderbilt.edu`` - IRC/Slack: ``vanzod``
