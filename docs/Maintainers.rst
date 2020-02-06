@@ -68,6 +68,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
 
+* **Alex Domingo** (`Vrije Universiteit Brussel <https://hpc.vub.be>`_)
+
+  * GitHub: `@lexming <https://github.com/lexming>`_ - e-mail: ``alex.domingo.toro (at) vub.be`` - IRC/Slack: ``lexming``
+
 * **Pablo Escobar** (`sciCORE, University of Basel <https://scicore.unibas.ch/>`_)
 
   * GitHub: `@pescobar <https://github.com/pescobar>`_ - e-mail: ``pablo.escobarlopez (at) unibas.ch`` - IRC/Slack: ``pescobar``
@@ -100,7 +104,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@bartoldeman <https://github.com/bartoldeman>`_ - e-mail: ``bart.oldeman (at) calculquebec.ca`` - IRC/Slack: ``bartoldeman``
 
-* **Ward Poelmans** (`Free University of Brussels <https://hpc.vub.be>`_)
+* **Ward Poelmans** (`Vrije Universiteit Brussel <https://hpc.vub.be>`_)
 
   * GitHub: `@wpoely86 <https://github.com/wpoely86>`_ - e-mail: ``wpoely86 (at) gmail.com`` - IRC/Slack: ``wpoely86``
 
