@@ -17,3 +17,6 @@ jobs:
 
         # Choose whether to include file with no URLs in the prints.
         print_all: False
+
+        # A comma separated patterns to exclude during URL checks
+        white_listed_patterns: https://github.com/easybuilders/easybuild-easyblocks,https://github.com/easybuilders/easybuild-easyconfigs,https://github.com/easybuilders/easybuild-framework
