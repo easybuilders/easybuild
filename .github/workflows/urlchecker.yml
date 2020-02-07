@@ -1,0 +1,17 @@
+name: Check URLs
+on: [push, pull_request]
+jobs:
+  url-checker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: URLs-checker
+      uses: SuperKogito/URLs-checker@0.1.2
+      with:
+        # The project base path.
+        git_path: https://github.com/easybuilders/easybuild-framework
+
+        # A comma-separated list of file types to cover in the URL checks
+        file_types: .md,.py,.rst
+
+        # Choose whether to include file with no URLs in the prints.
+        print_all: False
