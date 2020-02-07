@@ -41,6 +41,13 @@ Release manager
 The release manager is responsible for releasing new stable EasyBuild versions on a regular basis,
 with the help of the other EasyBuild maintainers.
 
+Miguel & Kenneth are working together to get EasyBuild releases out the door on a regular basis
+(about once every 6 weeks, see https://pypi.org/project/easybuild/#history).
+
+* **Miguel Dias Costa** (National University of Singapore)
+
+  * GitHub: `@migueldiascosta <https://github.com/migueldiascosta>`_ - e-mail: ``migueldiascosta (at) nus.edu.sg`` - IRC/Slack: ``migueldiascosta``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
