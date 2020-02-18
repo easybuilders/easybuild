@@ -36,6 +36,7 @@ Getting started
 
     Installation
     Configuration
+    Common-toolchains
 
 
 Basic usage topics
@@ -58,7 +59,6 @@ Advanced usage topics
 
     Archived-easyconfigs
     Backup_modules
-    Common-toolchains
     Containers
     Contributing
     Controlling_compiler_optimization_flags
