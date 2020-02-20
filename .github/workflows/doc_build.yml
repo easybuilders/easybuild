@@ -1,0 +1,41 @@
+name: Docs build and installation end-to-end tests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with codespell
+      run: |
+        pip install codespell
+        # it is (currently) impossible to dismiss ignored suggestions but these are
+        # still added to the exit code (which is a just a count of spelling
+        # suggestions). Since we know we have one of these, we allow for that.
+        # see https://github.com/easybuilders/easybuild/pull/485 for details
+        bash .github/workflows/check_with_codespell.sh
+    - name: Test with sphinx
+      run: |
+        pip install sphinx
+        # This test is weak, options -nWT would make it stronger but we have many warnings...
+        READTHEDOCS=1 sphinx-build docs build
+    - name: Test installation
+      run: |
+        pip install .
+        # test installation too (using options that don't require to have a modules tool installed)
+        eb --list-easyblocks | grep EB_bzip2
+        eb --fetch bzip2-1.0.6.eb
