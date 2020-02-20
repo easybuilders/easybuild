@@ -117,6 +117,10 @@ Recent releases of EasyBuild include out-of-the-box toolchain support for:
 - common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI
 - various numerical libraries, including ATLAS, Intel MKL, OpenBLAS, ScalaPACK, FFTW
 
+Please see the :ref:`common_toolchains` page for details about the two most common toolchains,
+one for "free and open source software" (``foss``) based on GCC and one based on the Intel compilers
+(``intel``).
+
 .. _system_toolchain:
 
 ``system`` toolchain

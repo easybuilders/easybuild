@@ -224,3 +224,11 @@ To customize a toolchain component, you should copy the corresponding easyconfig
 modify according to your needs, and make sure it is included in a location in the robot search path
 that precedes the location of the easyconfig files that are included with EasyBuild
 (see also :ref:`robot_search_path`), before building and installation the toolchain.
+
+More information about toolchains
+---------------------------------
+
+Please see the :ref:`toolchains_table` for how to obtain a listing of the currently known toolchains.
+
+For a detailed listing of the compiler options available with each toolchain, please see :ref:`avail_toolchain_opts`.
+
