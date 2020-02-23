@@ -14,7 +14,7 @@ cgmvapich2           Clang/GCC      MVAPICH2
 cgmvolf              Clang/GCC      MVAPICH2    OpenBLAS/LAPACK, ScaLAPACK(/BLACS), FFTW
 cgompi               Clang/GCC      OpenMPI
 cgoolf               Clang/GCC      OpenMPI     OpenBLAS/LAPACK, ScaLAPACK(/BLACS), FFTW
-dummy
+dummy                                           (Deprecated in favor of system toolchain)
 foss                 GCC            OpenMPI     OpenBLAS/LAPACK, ScaLAPACK(/BLACS), FFTW
 gcccuda              GCC, CUDA
 gimkl                GCC            impi        imkl
@@ -38,5 +38,6 @@ intel                icc, ifort     impi        imkl
 iomkl                icc, ifort     OpenMPI     imkl
 iqacml               icc, ifort     QLogicMPI   ACML, ScaLAPACK(/BLACS), FFTW
 ismkl                icc, ifort     MPICH2      imkl
+system                                          (See the note below)
 ==================   ============== =========== =========================================
 
