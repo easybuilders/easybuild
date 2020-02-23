@@ -538,10 +538,10 @@ You can do a "dry-run" overview by supplying ``-D/--dry-run`` (typically combine
   == temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
   Dry run: printing build status of easyconfigs and dependencies
   CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * [*] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
-   * [*] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [*] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
-   * [*] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
+   * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
+   * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
+   * [x] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
+   * [x] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
    * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
    * [ ] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
    * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
