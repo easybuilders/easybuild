@@ -26,7 +26,7 @@ Searching for build specification for a particular software package can be done 
 for example, to get a list of available easyconfig files for WRF::
 
   $ eb -S WRF
-  CFGS1=/home/bennet/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs
+  CFGS1=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs
    * $CFGS1/w/WPS/WPS-4.0.1_find-wrfdir.patch
    * $CFGS1/w/WPS/WPS-4.0.2_find-wrfdir.patch
    [ . . . ]
@@ -64,7 +64,7 @@ and can even install the compiler toolchain as well if the corresponding modules
   $ eb WRF-4.0.2-foss-2018b-dmpar.eb -Dr
   == temporary log file in case of crash /tmp/eb-eEnBF5/easybuild-pvrvNP.log
   Dry run: printing build status of easyconfigs and dependencies
-  CFGS=/home/bennet/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs
+  CFGS=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs
    * [x] $CFGS/m/M4/M4-1.4.18.eb (module: M4/1.4.18)
    * [x] $CFGS/z/zlib/zlib-1.2.11.eb (module: zlib/1.2.11)
    * [x] $CFGS/h/help2man/help2man-1.47.4.eb (module: help2man/1.47.4)
@@ -127,7 +127,7 @@ we enable dependency resolution such that the entire software stack is handled::
   $ eb WRF-4.0.2-foss-2018b-dmpar.eb --robot
   == temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log
   == resolving dependencies ...
-  == processing EasyBuild easyconfig /home/bennet/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb
+  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb
   == building and installing ncurses/6.1-GCCcore-7.3.0...
   [...]
   == building and installing tcsh/6.20.00-GCCcore-7.3.0...
