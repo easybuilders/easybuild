@@ -38,12 +38,12 @@ for example, to get a list of available easyconfig files for WRF::
 
 
 
-Various easyconfig files are found: for different versions of WRF (e.g., v3.8 and v4.1.3),
+Various easyconfig files are found: for different versions of WRF (e.g., v4.0.1 and v4.4.0.2),
 for different (versions of) compiler toolchains (e.g., foss 2018b, intel 2018b), etc.
 
 For the remainder of this example, we will use the available ``WRF-4.0.2-foss-2018b-dmpar.eb``
 easyconfig file to specify to EasyBuild to build and install
-WRF v4.0.2 using version 2018b of the ``foss`` toolchain.
+WRF v4.0.2 using version 2018b of the ``foss`` toolchain, which is one of the :ref:`common_toolchains`.
 
 See :ref:`toolchains_table` for a list of available toolchains. The ``foss`` toolchain
 stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, ScaLAPACK, and FFTW``.  The ``foss`` toolchain
