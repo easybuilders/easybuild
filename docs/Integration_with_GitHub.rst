@@ -353,6 +353,37 @@ in that same pull request for netCDF, WRF, ...::
 Again, note that locally available easyconfigs that are required to resolve dependencies are being picked up as needed.
 
 
+.. _github_include_easyblocks_from_pr:
+
+Using easyblocks from pull requests (``--include-easyblocks-from-pr``)
+----------------------------------------------------
+
+*(supported since EasyBuild v4.2.0)*
+
+Via the ``--include-easyblocks-from-pr`` command line option (available since EasyBuild v4.2.0), easyblocks that are added or
+modified by a particular pull request to the `easybuild-easyblocks GitHub repository
+<https://github.com/easybuilders/easybuild-easyblocks>`_ can be used (regardless of whether the pull request is merged
+or not).
+
+This can be useful to employ easyblocks that are not available yet in the active EasyBuild installation,
+or to test new contributions by combining ``--include-easyblocks-from-pr`` with ``--from-pr`` and ``--upload-test-report``
+(see :ref:`github_upload_test_report`).
+
+When ``--include-easyblocks-from-pr`` is used, EasyBuild will download all modified easyblocks to a temporary
+directory before processing them.
+
+For example, to use the LAMMPS easyblock contributed via `easyblocks pull request #1964 
+<https://github.com/easybuilders/easybuild-easyblocks/pull/1964>`_ together with the LAMMPS v7Aug2019 easyconfigs contributed via 
+`easyconfigs pull request #9884 <https://github.com/easybuilders/easybuild-easyconfigs/pull/9884>`_::
+
+    $ eb --from-pr 9884 --include-easyblocks 1964 --list-easyblocks=detailed
+    == temporary log file in case of crash /tmp/eb-Eq2zsJ/easybuild-1AaWf8.log
+    EasyBlock (easybuild.framework.easyblock)
+    ...
+    |   |   |-- EB_LAMMPS (easybuild.easyblocks.lammps @ /tmp/included-easyblocks-rD2HEQ/easybuild/easyblocks/lammps.py)
+    ...
+
+
 .. _github_upload_test_report:
 
 Uploading test reports (``--upload-test-report``)
