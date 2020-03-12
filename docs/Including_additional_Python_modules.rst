@@ -85,6 +85,9 @@ Generic easyblocks are expected to be located in a directory named ``generic``.
 To verify that the easyblocks you included are indeed being picked up, ``--list-easyblocks=detailed`` can be used
 (see also :ref:`list_easyblocks`).
 
+Since EasyBuild 4.2.0, easyblocks from a PR can also be included with ``--include-easyblocks-from-pr``,
+see :ref:`github_include_easyblocks_from_pr`
+
 Example
 ~~~~~~~
 
