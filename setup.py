@@ -36,7 +36,7 @@ from distutils.core import setup
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = '4.1.1'
+VERSION = '4.1.2'
 
 
 # Utility function to read README file
@@ -79,7 +79,19 @@ on High Performance Computing (HPC) systems in an efficient way.""",
     ],
     platforms="Linux",
     # for distutils
-    requires=['easybuild_%s(==%s)' % (x, VERSION) for x in ['framework', 'easyblocks', 'easyconfigs']],
+    requires=[
+        'easybuild_framework(==%s)' % VERSION,
+        # there is no 4.1.2 release for easyblocks/easyconfigs,
+        # only for framework (which includes an important security-related bug fix)
+        'easybuild_easyblocks(==4.1.1)',
+        'easybuild_easyconfigs(==4.1.1)',
+    ],
     # for setuptools/pip
-    install_requires=['easybuild-%s == %s' % (x, VERSION) for x in ['framework', 'easyblocks', 'easyconfigs']],
+    install_requires=[
+        'easybuild-framework == %s' % VERSION,
+        # there is no 4.1.2 release for easyblocks/easyconfigs,
+        # only for framework (which includes an important security-related bug fix)
+        'easybuild-easyblocks == 4.1.1',
+        'easybuild-easyconfigs == 4.1.1'
+    ],
 )
