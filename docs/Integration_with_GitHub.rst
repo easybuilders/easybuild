@@ -360,7 +360,7 @@ Using easyblocks from pull requests (``--include-easyblocks-from-pr``)
 
 *(supported since EasyBuild v4.2.0)*
 
-Via the ``--include-easyblocks-from-pr`` command line option (available since EasyBuild v4.2.0), easyblocks that are added or
+Via the ``--include-easyblocks-from-pr`` command line option, easyblocks that are added or
 modified by a particular pull request to the `easybuild-easyblocks GitHub repository
 <https://github.com/easybuilders/easybuild-easyblocks>`_ can be used (regardless of whether the pull request is merged
 or not).
@@ -370,7 +370,8 @@ or to test new contributions by combining ``--include-easyblocks-from-pr`` with 
 (see :ref:`github_upload_test_report`).
 
 When ``--include-easyblocks-from-pr`` is used, EasyBuild will download all modified easyblocks to a temporary
-directory before processing them.
+directory before processing them. Just like with ``--include-easyblocks`` (see :ref:`include_easyblocks`),
+the easyblocks that are included are preferred over the ones included in the EasyBuild installation.
 
 For example, to use the LAMMPS easyblock contributed via `easyblocks pull request #1964 
 <https://github.com/easybuilders/easybuild-easyblocks/pull/1964>`_ together with the LAMMPS v7Aug2019 easyconfigs contributed via 
