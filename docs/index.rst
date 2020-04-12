@@ -59,6 +59,7 @@ Advanced usage topics
 
     Archived-easyconfigs
     Backup_modules
+    Build_locks
     Containers
     Contributing
     Controlling_compiler_optimization_flags
