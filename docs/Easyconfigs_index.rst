@@ -33,7 +33,7 @@ that holds a (large) set of easyconfig files.
 
 The index file (a hidden file named ``.eb-path-index``) will be created in the specified directory.
 It will contain a list of (relative) paths for all files in that directory,
-along with some metadata: the time at which the index file has created
+along with some metadata: the time at which the index file was created
 and a timestamp that indicates how long the index is considered to be valid (see :ref:`easyconfigs_index_max_age`).
 
 .. note::
@@ -151,7 +151,7 @@ To create an index that *always* remains valid (never expires), use zero (``0``)
 Index included with EasyBuild releases
 --------------------------------------
 
-Each EasyBuild release (since EasyBuild v4.2.0) comes with a index file for the easyconfig (and patch) files
+Each EasyBuild release (since EasyBuild v4.2.0) comes with an index file for the easyconfig (and patch) files
 that are included with that release.
 
 Hence, you only need to use ``--create-index`` to create/update the index file for any additional directories
@@ -165,7 +165,7 @@ Should I create an index?
 
 Whether or not you should create an index file for your directories housing additional easyconfig files depends on a number of factors, including:
 
-* how often files or added and/or removed in those directories, since files listed in the index are assumed to be there and any files not included in the index will be overlooked by EasyBuild when it's searching for files;
+* how often files are added and/or removed in those directories, since files listed in the index are assumed to be there and any files not included in the index will be overlooked by EasyBuild when it's searching for files;
 
 * the filesystem on which those directories are located, since an index file will only make a significant difference on filesystems where metadata-intensive operations are relatively slow;
 
