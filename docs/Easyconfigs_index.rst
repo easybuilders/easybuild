@@ -6,13 +6,13 @@ Using an index to speed up searching for easyconfigs
 EasyBuild often needs to search for :ref:`easyconfig_files` (or accompanying files like patches),
 either based on command line arguments (like the name of an easyconfig file)
 or options to the ``eb`` command (like ``--search``, see :ref:`searching_for_easyconfigs`),
-or to resolve dependencies for an particular easyconfig file that was parsed already.
+or to resolve dependencies for a particular easyconfig file that was parsed already.
 
-Searching for easyconfig files or patches make take a while, since it may involve weeding through
+Searching for easyconfig files or patches may take a while, since it can potentially involve weeding through
 thousands of files, which may be located on a shared filesystem (where metadata-intensive operations like
 file searching can be rather slow).
 
-If EasyBuild turns out to be rather sluggish when searching for easyconfig files in your setup,
+If EasyBuild turns out to be sluggish when searching for easyconfig files in your setup,
 using an *index* file could make a big difference.
 
 .. note:: Support for index files was implemented in EasyBuild version 4.2.0 .
@@ -31,20 +31,20 @@ Creating an index (``--create-index``)
 ``eb --create-index`` can be used to create an index file for a particular directory
 that holds a (large) set of easyconfig files.
 
-The index file (a hidden file named '``.eb-path-index``') will be created in the specified directory,
-and will contain a list of (relative) paths of all files in that directory,
-along with some metadata: the time at which the index file has created,
+The index file (a hidden file named ``.eb-path-index``) will be created in the specified directory.
+It will contain a list of (relative) paths for all files in that directory,
+along with some metadata: the time at which the index file has created
 and a timestamp that indicates how long the index is considered to be valid (see :ref:`easyconfigs_index_max_age`).
 
 .. note::
   Make sure to create an index for the correct path.
 
-  When searching for easyconfig files, EasyBuild will *not* recurse into subdirectories of the locations
-  it considers (see :ref:`robot_search_path`), other than the ones it considers based on the name of the
+  The search for easyconfig files performed by EasyBuild will *not* recurse into subdirectories of the locations
+  it considers (see :ref:`robot_search_path`), other than those with a name matching the
   software for which it is trying to find an easyconfig file (like ``t/TensorFlow/`` when searching for an
   easyconfig file for ``TensorFlow``).
 
-  Hence, if the directory where your easyconfig files are housed in has an ``easybuild/easyconfigs`` subdirectory
+  Hence, if the directory housing your easyconfig files has an ``easybuild/easyconfigs`` subdirectory
   (for example, a working copy of the ``easybuild-easyconfigs`` repository), create the index *in* that
   subdirectory, rather than in the higher-level directory.
 
@@ -95,9 +95,9 @@ Without using ``--force``, EasyBuild will refuse to overwrite the existing index
 Using index files
 -----------------
 
-EasyBuild will automatically pick up & use an index file if it runs into it when searching for
-easyconfig files or patches, rather than walking the directory to check whether the file it's looking for
-is available in that directory, which is likely to significantly speed up the search operation.
+EasyBuild will automatically pick up and use any index file that it runs into while searching for
+easyconfig files or patches. If an index file is found, it will be preferred over walking through
+the directory tree to check for the target file, which is likely to significantly speed up the search operation.
 
 When a (valid) index file is found for a particular path, a message will be printed mentioning "``found valid index
 for...``"::
@@ -115,10 +115,11 @@ Ignoring indices (``--ignore-index``)
 One potential issue with having an index in place is that it may get outdated:
 new files may have been added to the directory since the index was created or last updated.
 
-To deal with this, you can instruct EasyBuild to ignore any existing indices using the ``--ignore-index``
+If updating the indexes is not an option (see :ref:`easyconfigs_index_update`),
+you can instruct EasyBuild to ignore any existing indices using the ``--ignore-index``
 configuration option.
 
-The only downside of this is that searching for easyconfig files may be significantly slower.
+The only downside of this option is that searching for easyconfig files may be significantly slower.
 Any existing index files are left untouched (they will *not* be updated or removed).
 
 
@@ -129,12 +130,12 @@ Controlling how long the index is valid (``--index-max-age``)
 
 When creating an index file, you can specify how long the index should be considered valid.
 
-Using the ``--index-max-age`` configuration option, you can specify how longer after the creating time
+Using the ``--index-max-age`` configuration option, you can specify how long after the creation time
 the index remains valid (in seconds).
 
 By default, EasyBuild will consider index files to remain valid for 1 week (7 * 24 * 60 * 60  = 604,800 seconds).
 
-To create an index that *always* remains (never expires), use zero (``0``) as value for ``--index-max-age``::
+To create an index that *always* remains valid (never expires), use zero (``0``) as value for ``--index-max-age``::
 
   $ eb --create-index --index-max-age=0 $HOME/easybuild-easyconfigs/easybuild/easyconfigs
 
