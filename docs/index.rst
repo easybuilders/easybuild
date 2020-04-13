@@ -4,7 +4,6 @@
 .. EasyBuild documentation master file
 
 EasyBuild documentation
-=======================
 
 Welcome to the documentation of `EasyBuild <https://easybuilders.github.io/easybuild>`_, a software build and installation framework
 that allows you to manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
@@ -71,6 +70,7 @@ Advanced usage topics
     Implementing-easyblocks
     Including_additional_Python_modules
     Integration_with_GitHub
+    Locks
     Manipulating_dependencies
     Packaging_support
     Partial_installations
