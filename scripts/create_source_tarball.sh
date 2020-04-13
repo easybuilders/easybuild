@@ -94,7 +94,7 @@ fi
 if [[ "$repo" == "easybuild-easyconfigs" ]]; then
 
     # create index file
-    create_index_cmd="eb --create-index easybuild/easyconfigs --force"
+    create_index_cmd="eb --create-index easybuild/easyconfigs --index-max-age=0 --force"
     out=$tmpdir/eb_create_index.out
     echo -n ">> creating index file with '$create_index_cmd'... "
     eval $create_index_cmd > $out
@@ -110,6 +110,15 @@ if [[ "$repo" == "easybuild-easyconfigs" ]]; then
         ok
     else
         error "Expected to find index file $expected_index_file, not found! (output: $out)"
+    fi
+
+    # make sure index file is valid indefinitely
+    echo -n ">> checking whether index file is valid indefinitely ... "
+    grep "^# valid until: 9999-12-31" $expected_index_file > /dev/null
+    if [[ $? -eq 0 ]]; then
+        ok
+    else
+        error "Index file $expected_index_file is not valid indefinitely!"
     fi
 
 fi
