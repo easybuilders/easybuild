@@ -150,3 +150,26 @@ To create an index that *always* remains valid (never expires), use zero (``0``)
 
 Index included with EasyBuild releases
 --------------------------------------
+
+Each EasyBuild release (since EasyBuild v4.2.0) comes with a index file for the easyconfig (and patch) files
+that are included with that release.
+
+Hence, you only need to use ``--create-index`` to create/update the index file for any additional directories
+with easyconfig files you may have on the side (and only if searching those easyconfig files is rather slow).
+
+
+.. _easyconfigs_index_should_use:
+
+Should I create an index?
+-------------------------
+
+Whether or not you should create an index file for your directories housing additional easyconfig files depends on a number of factors, including:
+
+* how often files or added and/or removed in those directories, since files listed in the index are assumed to be there and any files not included in the index will be overlooked by EasyBuild when it's searching for files;
+
+* the filesystem on which those directories are located, since an index file will only make a significant difference on filesystems where metadata-intensive operations are relatively slow;
+
+* how many files there are in those directories, since performance benefits will only be apparent if the number if files is sufficiently large;
+
+.. note:: Keep in mind that creating an index implies also updating it frequently,
+          to ensure that EasyBuild will take all available files in account.
