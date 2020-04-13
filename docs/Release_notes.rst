@@ -9,6 +9,36 @@ alongside 8,964 easyconfig files.
 
 .. note:: See also the :ref:`concise overview of major changes in EasyBuild v4.0 <eb4_changes_overview>`.
 
+.. _release_notes_eb412:
+
+EasyBuild v4.1.2 (March 16th 2020)
+----------------------------------
+
+bugfix release
+
+.. note::
+
+  This release includes a bug fix for the leaking of your GitHub token in the EasyBuild (debug) log file.
+
+  **We strongly encourage that you revoke the GitHub tokens you are using currently, via** https://github.com/settings/tokens,
+  **and to replace them using a new token (using** ``eb --install-github-token --force`` **).**
+
+  More information in https://github.com/easybuilders/easybuild-framework/pull/3248 .
+
+**framework**
+
+* fix gitdb dependency on Python 2.6 in test configuration (`#3212 <https://github.com/easybuilders/easybuild-framework/pull/3212>`_)
+* fix broken test for --review-pr by using different PR to test with (`#3226 <https://github.com/easybuilders/easybuild-framework/pull/3226>`_)
+* censor authorization part of headers before logging ReST API request (`#3248 <https://github.com/easybuilders/easybuild-framework/pull/3248>`_)
+
+**easyblocks**
+
+*(no changes)*
+
+**easyconfigs**
+
+*(no changes)*
+
 .. _release_notes_eb411:
 
 EasyBuild v4.1.1 (January 16th 2020)
