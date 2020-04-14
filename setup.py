@@ -81,17 +81,13 @@ on High Performance Computing (HPC) systems in an efficient way.""",
     # for distutils
     requires=[
         'easybuild_framework(==%s)' % VERSION,
-        # there is no 4.1.2 release for easyblocks/easyconfigs,
-        # only for framework (which includes an important security-related bug fix)
-        'easybuild_easyblocks(==4.1.1)',
-        'easybuild_easyconfigs(==4.1.1)',
+        'easybuild_easyblocks(==%s)' % VERSION,
+        'easybuild_easyconfigs(==%s)' % VERSION,
     ],
     # for setuptools/pip
     install_requires=[
         'easybuild-framework == %s' % VERSION,
-        # there is no 4.1.2 release for easyblocks/easyconfigs,
-        # only for framework (which includes an important security-related bug fix)
-        'easybuild-easyblocks == 4.1.1',
-        'easybuild-easyconfigs == 4.1.1'
+        'easybuild-easyblocks == %s' % VERSION,
+        'easybuild-easyconfigs == %s' % VERSION,
     ],
 )
