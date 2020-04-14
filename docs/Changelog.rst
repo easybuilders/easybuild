@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20200414.01** (`Apr 14th 2020`): update release notes for EasyBuild v4.2.0 (see :ref:`release_notes_eb420`)
 * **release 20200316.01** (`Mar 16th 2020`): update release notes for EasyBuild v4.1.2 (see :ref:`release_notes_eb412`)
 * **release 20200116.01** (`Jan 16th 2020`): update release notes for EasyBuild v4.1.1 (see :ref:`release_notes_eb411`)
 * **release 20191204.01** (`Dec 4th 2019`): update release notes for EasyBuild v4.1.0 (see :ref:`release_notes_eb410`)
