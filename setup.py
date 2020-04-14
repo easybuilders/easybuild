@@ -36,6 +36,12 @@ from distutils.core import setup
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
+
+# note: using '4.2.0.post0' as version for EasyBuild v4.2.0 because of
+# mistake in easybuild-4.2.0 package that was pushed to PyPI;
+# the version of easyblocks/easyconfigs was accidentally still locked to '==4.1.1',
+# see https://github.com/easybuilders/easybuild/pull/615/commits/3a8c81b1baaff93d3dc94b9b0cadc9bdf43d8fae
+PYPI_VERSION = '4.2.0.post0'
 VERSION = '4.2.0'
 
 
@@ -51,7 +57,7 @@ log.info("Installing version %s" % VERSION)
 
 setup(
     name="easybuild",
-    version=str(VERSION),
+    version=PYPI_VERSION,
     author="EasyBuild community",
     author_email="easybuild@lists.ugent.be",
     description="""EasyBuild is a software build \
