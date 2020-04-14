@@ -89,11 +89,11 @@ jobs:
         cd ${{matrix.repo}}
 
         # script should make sure we're on master branch
-        git checkout develop
+        git checkout develop &> /dev/null
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
-        grep "develop ERROR: Not on master branch!" $out
+        grep "ERROR: Not on master branch" $out
         echo "Expected error found in output: OK!"
-        git checkout master
+        git checkout master > /dev/null
 
         echo "================================================================================================"
 
