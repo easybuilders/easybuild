@@ -244,7 +244,6 @@ feature release
   * ensure that CVS easyconfigs are included in source tarball produced by '``python setup.py sdist``' (`#10326 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10326>`_)
   * fix undefined reference error due to libxc 4.3.4 built with CMake (`#10356 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10356>`_)
   * fix source_urls for tbb: use (new) official '``oneapi-src``' GitHub repository (`#10361 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10361>`_)
-  * add missing build dependency on pkg-config in GObject-Introspection 1.63.1 w/ Python 3.7.4 easyconfig (`#10380 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10380>`_)
   * update checksums and homepage in tbb easyconfigs (`#10285 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10285>`_)
 
 * other changes:
