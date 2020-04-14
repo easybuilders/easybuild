@@ -408,28 +408,28 @@ If a recursive checkout should be made of the repository, the ``recursive`` key 
 Examples:
 
   * creating a source tarball named ``example-master.tar.gz`` of the ``master`` branch of a (fictional)
-    ``test`` repository from ``https://github.com/example``:
+    ``test`` repository from ``https://agitserver.org/example``:
 
     .. code::
 
       sources = [{
           'filename': 'example-master.tar.gz',
           'git_config': {
-              'url': 'https://github.com/example',
+              'url': 'https://agitserver.org/example',
               'repo_name': 'test',
               'tag': 'master',
           },
       }]
 
   * creating a source tarball named ``example-20180920.tar.gz`` of the recursive checkout of commit ``abcdef12``
-    of the ``test`` repository from ``https://github.com/example``:
+    of the ``test`` repository from ``https://agitserver.org/example``:
 
     .. code::
 
       sources = [{
           'filename': 'example-20180920.tar.gz',
           'git_config': {
-              'url': 'https://github.com/example',
+              'url': 'https://agitserver.org/example',
               'repo_name': 'test',
               'commit': 'abcdef12',
               'recursive': True,
@@ -440,8 +440,9 @@ Examples:
 .. note:: Because the source tarball is created locally (by running ``tar cfvz`` on the directory containing
           the cloned repository), the (SHA256) checksum is not guaranteed to be the same across different systems.
 
-          Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub),
-          we strongly recommend you to do so.
+          Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub,
+          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so, 
+          ``git_config`` is intended for other Git repos.
 
 
 .. _dependency_specs:
