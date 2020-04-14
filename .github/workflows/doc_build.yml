@@ -95,6 +95,15 @@ jobs:
         echo "Expected error found in output: OK!"
         git checkout master
 
+        echo "================================================================================================"
+
+        # specified version should match with current version
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} 0.0.0 2>&1 | tee $out) || true
+        grep "specified version '0.0.0' ... ERROR: Found version '${version}'" $out
+        echo "Expected error found in output: OK!"
+
+        echo "================================================================================================"
+
         # existing source tarball in dist should result in an error
         mkdir -p dist
         touch dist/${{matrix.repo}}-${version}.tar.gz
@@ -131,14 +140,6 @@ jobs:
         grep "ERROR: Creating source tarball failed" $out
         echo "Expected error found in output: OK!"
         rm /tmp/$USER/bin/python
-        
-        echo "================================================================================================"
-
-        # using of script with incorrect version should result in an error
-        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} 0.0.0 2>&1 | tee $out) || true
-        grep "ERROR: Expected file dist/${{matrix.repo}}-0.0.0.tar.gz not found!" $out
-        echo "Expected error found in output: OK!"
-        rm -f dist/${{matrix.repo}}-${version}.tar.gz MANIFEST
         
         echo "================================================================================================"
 

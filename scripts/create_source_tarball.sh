@@ -100,6 +100,22 @@ else
     error "Working directory not clean: `cat $out`"
 fi
 
+# check whether specified version matches current version
+echo -n ">> checking whether current version matches specified version '$version' ... "
+if [[ "$repo" == "easybuild-framework" ]]; then
+    curr_version_file='easybuild/tools/version.py'
+elif [[ "$repo" == "easybuild-easyblocks" ]]; then
+    curr_version_file='easybuild/easyblocks/__init__.py'
+else
+    curr_version_file='setup.py'
+fi
+curr_version=$(grep '^VERSION' $curr_version_file | sed 's/[^0-9]*\([0-9a-zA-Z.]*\).*/\1/g')
+if [[ "$curr_version" == "$version" ]]; then
+    ok
+else
+    error "Found version '$curr_version'"
+fi
+
 if [[ "$repo" == "easybuild-easyconfigs" ]]; then
 
     # create index file
