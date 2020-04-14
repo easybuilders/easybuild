@@ -60,6 +60,7 @@ jobs:
     - name: test create_source_tarball.sh script
       run: |
         cd $HOME/${{matrix.repo}}
+        git checkout master
 
         # file to figure out the version from depends on repo
         if [[ ${{matrix.repo}} == "easybuild-framework" ]]; then
@@ -93,7 +94,7 @@ jobs:
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
         grep "ERROR: Not on master branch" $out
         echo "Expected error found in output: OK!"
-        git checkout master > /dev/null
+        git checkout master &> /dev/null
 
         echo "================================================================================================"
 
