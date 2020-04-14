@@ -69,9 +69,11 @@
       * EB_DIRAC
       * EB_Doxygen
       * EB_Eigen
+      * EB_ELSI
       * EB_GATE
       * EB_Geant4
       * EB_GROMACS
+      * EB_LAMMPS
       * EB_netCDF
       * EB_OpenBabel
       * EB_OpenCV
@@ -84,6 +86,7 @@
     * EB_Amber
     * EB_ARB
     * EB_ATLAS
+    * EB_BerkeleyGW
     * EB_binutils
     * EB_BLACS
     * EB_Bowtie
@@ -91,6 +94,7 @@
     * EB_bzip2
     * EB_CBLAS
     * EB_Chapel
+    * EB_CMake
     * EB_cppcheck
     * EB_Cufflinks
     * EB_DB
@@ -119,6 +123,7 @@
     * EB_HPL
     * EB_Hypre
     * EB_LAPACK
+    * EB_libdrm
     * EB_Libint
     * EB_libQGLViewer
     * EB_libxml2
@@ -251,6 +256,7 @@
       * EB_PyQuante
       * EB_python_minus_meep
       * EB_PyZMQ
+      * EB_SEPP
       * EB_TensorFlow
       * EB_TensorRT
       * EB_VSC_minus_tools
@@ -308,6 +314,7 @@
   * MesonNinja
 
     * CMakeNinja
+    * EB_Mesa
 
   * ModuleRC
   * PackedBinary
@@ -372,6 +379,7 @@
       * EB_PyQuante
       * EB_python_minus_meep
       * EB_PyZMQ
+      * EB_SEPP
       * EB_TensorFlow
       * EB_TensorRT
       * EB_VSC_minus_tools
