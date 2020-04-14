@@ -80,6 +80,15 @@ else
     ok
 fi
 
+# make sure we're on the master branch
+curr_branch=$(git status -b --porcelain | grep '^##' | cut -f2 -d' ' | cut -f1 -d'.')
+echo -n ">> checking current Git branch ... ${curr_branch} "
+if [ "$curr_branch" == "master" ]; then
+    ok
+else
+    error "Not on master branch!"
+fi
+
 # check that the working directory is clean
 out=$tmpdir/git_status.out
 echo -n ">> checking for clean working directory... "

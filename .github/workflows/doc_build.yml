@@ -57,8 +57,6 @@ jobs:
       run: |
         cd $HOME
         git clone https://github.com/easybuilders/${{matrix.repo}}.git
-        cd ${{matrix.repo}}
-        git checkout master
     - name: test create_source_tarball.sh script
       run: |
         cd $HOME/${{matrix.repo}}
@@ -88,8 +86,16 @@ jobs:
         
         echo "================================================================================================"
 
-        # existing source tarball in dist should result in an error
         cd ${{matrix.repo}}
+
+        # script should make sure we're on master branch
+        git checkout develop
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "develop ERROR: Not on master branch!" $out
+        echo "Expected error found in output: OK!"
+        git checkout master
+
+        # existing source tarball in dist should result in an error
         mkdir -p dist
         touch dist/${{matrix.repo}}-${version}.tar.gz
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
