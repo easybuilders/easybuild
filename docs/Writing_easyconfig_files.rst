@@ -405,6 +405,9 @@ In addition, either of the following keys *must* also be defined:
 
 If a recursive checkout should be made of the repository, the ``recursive`` key can be set to ``True``.
 
+To also retain the ``.git`` directory (which holds the Git metadata for the repository),
+you can set the ``keep_git_dir`` to ``True`` (supported since EasyBuild v4.2.0).
+
 Examples:
 
   * creating a source tarball named ``example-master.tar.gz`` of the ``master`` branch of a (fictional)
@@ -433,6 +436,7 @@ Examples:
               'repo_name': 'test',
               'commit': 'abcdef12',
               'recursive': True,
+              'keep_git_dir': True,
           },
       }]
 
