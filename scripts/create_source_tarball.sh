@@ -109,7 +109,8 @@ elif [[ "$repo" == "easybuild-easyblocks" ]]; then
 else
     curr_version_file='setup.py'
 fi
-curr_version=$(grep '^VERSION' $curr_version_file | sed 's/[^0-9]*\([0-9a-zA-Z.]*\).*/\1/g')
+# grab version from file, usually a line like "VERSION = '...'", but could slightly diverge
+curr_version=$(grep '^[A-Z_]*VERSION\s*=' $curr_version_file | head -1 | sed 's/[^0-9]*\([0-9a-zA-Z.]*\).*/\1/g')
 if [[ "$curr_version" == "$version" ]]; then
     ok
 else
