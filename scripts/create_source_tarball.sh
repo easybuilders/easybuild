@@ -21,6 +21,11 @@ function success() {
     echo -e "\033[32mSUCCESS!\033[0m"
 }
 
+function warning() {
+    echo -e "\033[31mWARNING: $1\033[0m" >&2
+    warnings="$warnings$1 "
+}
+
 # =================================================================================================
 
 if [ $# -ne 2 ]; then
@@ -36,6 +41,8 @@ echo ">> creating source tarball for $repo $version..."
 
 # create temporary directory
 tmpdir=`mktemp -d`
+
+warnings=""
 
 # we need to create an index file when composing the source tarball for easybuild-easyconfigs,
 # which requires running 'eb --create-index'
@@ -115,6 +122,27 @@ if [[ "$curr_version" == "$version" ]]; then
     ok
 else
     error "Found version '$curr_version'"
+fi
+
+if [[ "$repo" == "easybuild" ]]; then
+    # check whether 'requires' statements are what we expect
+    # if not, print a clear warning, since it may actually be fine if the version for some of the required easybuild-*
+    # packages diverges from the version of the 'easybuid' package...
+    # examples:
+    # - easybuild-4.1.2 which requires easybuild-easyblocks and easybuild-easyconfigs v4.1.1
+    # - easybuild-4.2.0.post0 which requires easybuild-{framework,easyblocks,easyconfigs} v4.2.0
+    echo ">> checking whether required packages for 'easybuild' are what's expected ... "
+    python setup.py --requires 2> /dev/null | grep '^easybuild' | tee $tmpdir/easybuild_requires.txt
+    for dep in framework easyblocks easyconfigs; do
+        echo -n ">>>> $dep ... "
+        pattern="^easybuild_${dep}(==${curr_version})"
+        grep $pattern $tmpdir/easybuild_requires.txt > /dev/null
+        if [ $? -eq 0 ]; then
+            ok
+        else
+            warning "expected pattern '$pattern' in 'requires' in setup.py not found"
+        fi
+    done
 fi
 
 if [[ "$repo" == "easybuild-easyconfigs" ]]; then
@@ -235,7 +263,12 @@ fi
 
 # all done checking, if no checks failed up until now, we're done!
 echo
-success
+if [ -z "$warnings" ]; then
+  success
+else
+  warning "One or more warnings were raised, proceed with caution!"
+fi
+
 echo "Source tarball for $repo $version is ready for publishing with:"
 echo "    twine upload $sdist_tar_gz"
 echo
