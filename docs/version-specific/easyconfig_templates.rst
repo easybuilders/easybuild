@@ -24,6 +24,8 @@ Template names/values for (short) software versions
 ====================    ==========================================
 Template name           Template value                            
 ====================    ==========================================
+``%(cudashortver)s``    short version for CUDA (<major>.<minor>)  
+``%(cudaver)s``         full version for CUDA                     
 ``%(javashortver)s``    short version for Java (<major>.<minor>)  
 ``%(javaver)s``         full version for Java                     
 ``%(perlshortver)s``    short version for Perl (<major>.<minor>)  

@@ -64,6 +64,7 @@ Advanced usage topics
     Cray-support
     Detecting_loaded_modules
     Easyconfig-files-local-variables
+    Easyconfigs_index
     Experimental_features
     Extended_dry_run
     Hooks
