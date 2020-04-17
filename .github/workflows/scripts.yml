@@ -34,7 +34,7 @@ jobs:
         else
             version_file=setup.py
         fi
-        version=$(grep '^VERSION' $version_file | sed 's/[^0-9]*\([0-9a-zA-Z.]*\).*/\1/g')
+        version=$(grep '^.*VERSION[ ]*=' $version_file | head -1 |sed 's/[^0-9]*\([0-9a-zA-Z.]*\).*/\1/g')
         echo "${{matrix.repo}} version: $version"
 
         echo "testing with '$GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version'"
