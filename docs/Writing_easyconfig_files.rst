@@ -506,11 +506,20 @@ which is equivalent to::
 
   dependencies = [('PnMPI', '1.2.0', '', True)]
 
+
 Using external modules as dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as dependencies is also supported.
 See :ref:`using_external_modules` for more information.
+
+
+Module Extensions
+~~~~~~~~~~~~~~~~~
+
+Besides dependencies, which are found outside the package being built but are part of the site's EasyBuild
+installation, it is also possible to incorporate "dependencies" into the package build itself.  This is typically used as part of a PythonPackage or PythonBundle, ...  This is done via the `exts_list` array.
+
 
 .. _configure_build_install_command_options:
 

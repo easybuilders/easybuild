@@ -34,7 +34,6 @@ toolchain parameters
 ``toolchainopts``     Extra options for compilers                                                                                                                                                                                                          None             
 ==================    =================================================================================================================================================================================================================================    =================
 
-.. _easyconfig_parameters_build_parameters:
 
 build parameters
 ----------------
@@ -137,12 +136,6 @@ extensions parameters
 ``exts_filter``               Extension filter details: template for cmd and input to cmd (templates for ext_name, ext_version and src).    None             
 ``exts_list``                 List with extensions added to the base installation                                                           []               
 ==========================    ==========================================================================================================    =================
-
-Each entry in ``exts_list`` is a tuple with the extension name
-(``ext_name``), version string (``ext_version``), and a dictionary of
-source options.  Any of the
-:ref:`easyconfig_parameters_build_parameters` can be specified within
-the options dictionary.
 
 
 modules parameters
