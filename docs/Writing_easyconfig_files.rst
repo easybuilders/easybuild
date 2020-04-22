@@ -517,8 +517,37 @@ See :ref:`using_external_modules` for more information.
 Module Extensions
 ~~~~~~~~~~~~~~~~~
 
-Besides dependencies, which are found outside the package being built but are part of the site's EasyBuild
-installation, it is also possible to incorporate "dependencies" into the package build itself.  This is typically used as part of a PythonPackage or PythonBundle, ...  This is done via the `exts_list` array.
+Besides dependencies, which are found outside the module being built but are part of the site's EasyBuild installation,
+it is also possible to incorporate extensions to the module within the build.  This is typically used as part of a
+PythonPackage or PythonBundle, and done via the `exts_list` array::
+
+.. code:: python
+
+  exts_list = [
+      ('llvmlite', '0.26.0', {
+          'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite/'],
+          'patches': ['llvmlite-0.26.0_fix-ffi-Makefile.patch'],
+          'checksums': [
+              '13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf',            # llvmlite-0.26.0.tar.gz
+              '40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae',            # llvmlite-0.26.0_fix-ffi-Makefile.patch
+          ],
+      }),
+      ('singledispatch', '3.4.0.3', {
+          'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
+          'checksums': ['5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c'],
+      }),
+      (name, version, {
+          'source_urls': ['https://pypi.python.org/packages/source/n/numba/'],
+          'checksums': ['c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258'],
+      }),
+  ]
+
+Each entry in `exts_list` is a three-component tuple, with the name and version number, and a dictionary of source
+information.  The latter is essentially the same as the the dictionary structure of `sources`; see
+:ref:`_common_easyconfig_param_sources_alt` for details.
+
+Since EasyBuild v4.2.1, the `git_config` dictionary (see :ref:`downloading-from-a-git-repository`) may be included in
+the `exts_list` source definition.
 
 
 .. _configure_build_install_command_options:
