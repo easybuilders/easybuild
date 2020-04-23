@@ -519,7 +519,7 @@ Module Extensions
 
 Besides dependencies, which are found outside the module being built but are part of the site's EasyBuild installation,
 it is also possible to incorporate extensions to the module within the build.  This is typically used as part of a
-PythonPackage or PythonBundle, and done via the `exts_list` array::
+PythonPackage or PythonBundle, and done via the `exts_list` array:
 
 .. code:: python
 
@@ -528,8 +528,8 @@ PythonPackage or PythonBundle, and done via the `exts_list` array::
           'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite/'],
           'patches': ['llvmlite-0.26.0_fix-ffi-Makefile.patch'],
           'checksums': [
-              '13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf',            # llvmlite-0.26.0.tar.gz
-              '40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae',            # llvmlite-0.26.0_fix-ffi-Makefile.patch
+              '13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf',    # llvmlite-0.26.0.tar.gz
+              '40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae',    # llvmlite-0.26.0_fix-ffi-Makefile.patch
           ],
       }),
       ('singledispatch', '3.4.0.3', {
@@ -547,7 +547,21 @@ information.  The latter is essentially the same as the the dictionary structure
 :ref:`_common_easyconfig_param_sources_alt` for details.
 
 Since EasyBuild v4.2.1, the `git_config` dictionary (see :ref:`downloading-from-a-git-repository`) may be included in
-the `exts_list` source definition.
+the `exts_list` source definition.  For example, to download Git sources from a private repository and convert them to a tar-ball for installation:
+
+.. code:: python
+
+  exts_defaultclass = 'PythonPackage'
+  exts_list = [
+      ('pyCAP', 'master', {
+          'filename': 'pyCAP-master.tar.gz',
+          'git_config': {
+              'url': 'ssh://nero.stanford.edu/data/git/Analysis',
+              'repo_name': 'pyCAP',
+              'tag': 'master',
+          }
+      }),
+  ]
 
 
 .. _configure_build_install_command_options:
