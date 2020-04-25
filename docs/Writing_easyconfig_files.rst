@@ -518,10 +518,10 @@ Module Extensions
 ~~~~~~~~~~~~~~~~~
 
 Besides dependencies, which are found outside the module being built but are part of the site's EasyBuild installation,
-it is also possible to incorporate extensions to the module within the build.  This is done via the `exts_list` array.
+it is also possible to incorporate extensions to the module within the build.  This is done via the ``exts_list`` array.
 
-Each entry in `exts_list` is a three-component tuple, with the name and
-version number, and a dictionary of source options::
+Each entry in ``exts_list`` is a three-component tuple, with the name and
+version number, and a dictionary of source options:
 
 .. code:: python
 
@@ -529,15 +529,15 @@ version number, and a dictionary of source options::
       ('name', 'version', { 'option':'value', 'option':'value' })
   ]
 
-The latter consist of most of the allowed keys as in the dictionary structure of `sources` (see
+The latter consist of most of the allowed keys as in the dictionary structure of ``sources`` (see
 :ref:`_common_easyconfig_param_sources_alt`).  Among those options, the following exceptions and
 special cases should be noted:
 
-* **nosource**: If set `True`, no download will be done
-* **filename** and **download_filename** are ignored; use `'source_tmpl'`
+* **nosource**: If set ``True``, no download will be done
+* **filename** and **download_filename** are ignored; use ``'source_tmpl'``
 * **source_tmpl**: Template string for the file to be downloaded
-  * default is `'%(name)s-%(version)s.tar.gz'`
-  * `%(name)s` and `%(version)s` come from the `exts_list` entry (above)
+  * default is ``'%(name)s-%(version)s.tar.gz'``
+  * ``%(name)s`` and ``%(version)s`` come from the ``exts_list`` entry (above)
 * **git_config**: Dictionary specifying download from a Git repository
 * **start_dir**: If not set, will be derived; the EasyConfigs value will not be used
 
@@ -562,8 +562,10 @@ special cases should be noted:
       }),
   ]
 
-Since EasyBuild v4.2.1, the `git_config` dictionary (see :ref:`downloading-from-a-git-repository`)
-may be included in the `exts_list` source definition.  For example, to download Git sources from a
+That third instance uses the ``name`` and ``version`` variables defined in the EasyConfigs file.
+
+Since EasyBuild v4.2.1, the ``git_config`` dictionary (see :ref:`downloading-from-a-git-repository`)
+may be included in the ``exts_list`` source definition.  For example, to download Git sources from a
 private repository and convert them to a tar-ball for installation:
 
 .. code:: python
@@ -580,8 +582,8 @@ private repository and convert them to a tar-ball for installation:
       }),
   ]
 
-Here, the template strings `%(name)s` and `%(version)s` will be substituted from the `exts_list` entry elements ("pyCAP"
-and "master", respectively), not from the EasyConfigs values.
+Here, the template strings ``%(name)s`` and ``%(version)s`` will be substituted from the
+``exts_list`` entry elements ("pyCAP" and "master", respectively), not from the EasyConfigs values.
 
 
 .. _configure_build_install_command_options:
