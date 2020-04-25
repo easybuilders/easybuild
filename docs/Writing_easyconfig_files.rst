@@ -197,7 +197,7 @@ Using the ``--inject-checksums`` command line option, you can let EasyBuild add 
 in one or more easyconfig files (which is significantly more convenient than doing it manually).
 
 With ``--inject-checksums``, checksums are injected for all sources and patches (if any),
-as well as for all sources & patches of every extension listed in ``exts_list`` (if any).
+as well as for all sources & patches of every extension listed in ``exts_list`` (if any, see :ref:`module_extensions`).
 
 If the sources (& patches) are not available yet, EasyBuild will try to download them first; i.e.,
 the ``fetch`` step is run prior to computing & injecting the checksums.
@@ -518,8 +518,18 @@ Module Extensions
 ~~~~~~~~~~~~~~~~~
 
 Besides dependencies, which are found outside the module being built but are part of the site's EasyBuild installation,
-it is also possible to incorporate extensions to the module within the build.  This is typically used as part of a
-PythonPackage or PythonBundle, and done via the `exts_list` array:
+it is also possible to incorporate extensions to the module within the build.  This is done via the `exts_list` array.
+
+Each entry in `exts_list` is a three-component tuple, with the name and version number, and a dictionary of source
+information.  The latter consist of most of the allowed keys as in the dictionary structure of `sources` (see
+:ref:`_common_easyconfig_param_sources_alt`):
+
+* **nosource**: If specified, no download will be done
+* **source_tmpl**: Template string for the file to be downloaded
+  * default is `'%(name)s-%(version)s.tar.gz'`
+  * `%(name)s` and `%(version)s` come from the `exts_list` entry (above)
+* **source_urls**, **patches**, **checksums**, **force_download**: as in `sources`
+* **git_config**: Dictionary specifying download from a Git repository
 
 .. code:: python
 
@@ -542,19 +552,16 @@ PythonPackage or PythonBundle, and done via the `exts_list` array:
       }),
   ]
 
-Each entry in `exts_list` is a three-component tuple, with the name and version number, and a dictionary of source
-information.  The latter is essentially the same as the the dictionary structure of `sources`; see
-:ref:`_common_easyconfig_param_sources_alt` for details.
-
 Since EasyBuild v4.2.1, the `git_config` dictionary (see :ref:`downloading-from-a-git-repository`) may be included in
-the `exts_list` source definition.  For example, to download Git sources from a private repository and convert them to a tar-ball for installation:
+the `exts_list` source definition.  For example, to download Git sources from a private repository and convert them to a
+tar-ball for installation:
 
 .. code:: python
 
   exts_defaultclass = 'PythonPackage'
   exts_list = [
       ('pyCAP', 'master', {
-          'filename': 'pyCAP-master.tar.gz',
+          'source_tmpl': '%(name)s-%(version)s.tar.gz',
           'git_config': {
               'url': 'ssh://nero.stanford.edu/data/git/Analysis',
               'repo_name': 'pyCAP',
@@ -562,6 +569,9 @@ the `exts_list` source definition.  For example, to download Git sources from a 
           }
       }),
   ]
+
+Here, the template strings `%(name)s` and `%(version)s` will be substituted from the `exts_list` entry elements ("pyCAP"
+and "master", respectively), not from the EasyConfigs values.
 
 
 .. _configure_build_install_command_options:
