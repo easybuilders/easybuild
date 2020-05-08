@@ -1,0 +1,143 @@
+name: Tests for scripts
+on: [push, pull_request]
+jobs:
+  scripts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: [easybuild-framework, easybuild-easyblocks, easybuild-easyconfigs, easybuild]
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: install EasyBuild (framework-only)
+      run: |
+        pip install easybuild-framework
+        eb --version
+    - name: install modules tool
+      run: |
+        sudo apt-get install lua5.2 liblua5.2-dev lua-filesystem lua-posix tcl-dev
+        # fix for lua-posix packaging issue, see https://bugs.launchpad.net/ubuntu/+source/lua-posix/+bug/1752082
+        sudo ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
+        # use script provided by easybuild-framework to install recent Lmod
+        source install_eb_dep.sh Lmod-8.3.8 $HOME
+        echo $MOD_INIT > $HOME/mod_init
+        echo $PATH > $HOME/path
+    - name: clone repo
+      run: |
+        cd $HOME
+        git clone https://github.com/easybuilders/${{matrix.repo}}.git
+    - name: test create_source_tarball.sh script
+      run: |
+        source $(cat $HOME/mod_init); type module
+        export PATH=$(cat $HOME/path)
+
+        cd $HOME/${{matrix.repo}}
+        git checkout master
+
+        # file to figure out the version from depends on repo
+        if [[ ${{matrix.repo}} == "easybuild-framework" ]]; then
+            version_file=easybuild/tools/version.py
+        elif [[ ${{matrix.repo}} == "easybuild-easyblocks" ]]; then
+            version_file=easybuild/easyblocks/__init__.py
+        else
+            version_file=setup.py
+        fi
+        version=$(grep '^.*VERSION[ ]*=' $version_file | head -1 |sed 's/[^0-9]*\([0-9a-zA-Z.]*\).*/\1/g')
+        echo "${{matrix.repo}} version: $version"
+
+        echo "testing with '$GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version'"
+
+        out=$HOME/out.txt
+        
+        echo "================================================================================================"
+
+        # check use of script outside correct directory
+        cd $HOME
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "ERROR: Expected to be in ${{matrix.repo}} directory" $out
+        echo "Expected error found in output: OK!"
+        
+        echo "================================================================================================"
+
+        cd ${{matrix.repo}}
+
+        # script should make sure we're on master branch
+        git checkout develop &> /dev/null
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "ERROR: Not on master branch" $out
+        echo "Expected error found in output: OK!"
+        git checkout master &> /dev/null
+
+        echo "================================================================================================"
+
+        # specified version should match with current version
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} 0.0.0 2>&1 | tee $out) || true
+        grep "ERROR: Found version '${version}'" $out
+        echo "Expected error found in output: OK!"
+
+        echo "================================================================================================"
+
+        # existing source tarball in dist should result in an error
+        mkdir -p dist
+        touch dist/${{matrix.repo}}-${version}.tar.gz
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "ERROR: Found dist/${{matrix.repo}}-${version}.tar.gz" $out
+        echo "Expected error found in output: OK!"
+        rm dist/${{matrix.repo}}-${version}.tar.gz
+        
+        echo "================================================================================================"
+
+        # check for error when script is run in a dirty working copy
+        touch dirty.txt
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "ERROR: Working directory not clean" $out
+        echo "Expected error found in output: OK!"
+        rm dirty.txt
+        
+        echo "================================================================================================"
+
+        # create fake 'python' command:
+        # just exits when 1st argument is setup.py, but calls out to origin Python command otherwise;
+        # this is important w.r.t. the Python version checks run by the 'eb' script
+        mkdir -p /tmp/$USER/bin
+        export PATH=/tmp/$USER/bin:$PATH
+        echo '#!/bin/bash' > /tmp/$USER/bin/python
+        chmod u+x /tmp/$USER/bin/python
+        echo 'orig_python=$(which -a python | head -2 | tail -1)' >> /tmp/$USER/bin/python
+        echo 'if [[ "$1" == "setup.py" ]]; then exit 0; else $orig_python "$@"; fi' >> /tmp/$USER/bin/python
+
+        # script should fail if expected source tarball did not get created in dist/
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "ERROR: Expected file dist/${{matrix.repo}}-${version}.tar.gz not found!" $out
+        echo "Expected error found in output: OK!"
+
+        # clean up index file, to avoid check for dirty working directory failing
+        rm -f easybuild/easyconfigs/.eb-path-index
+        
+        echo "================================================================================================"
+
+        # make fake python command fail if 1st argument is setup.py
+        sed -i 's/exit 0/exit 1/g' /tmp/$USER/bin/python
+
+        # script should deal well with failing 'python setup.py sdist'
+        ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
+        grep "ERROR: Creating source tarball failed" $out
+        echo "Expected error found in output: OK!"
+
+        # cleanup
+        rm -f /tmp/$USER/bin/python easybuild/easyconfigs/.eb-path-index
+        
+        echo "================================================================================================"
+
+        # check use of script in correct way, should yield "SUCCESS" in output
+        $GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out
+        egrep "SUCCESS|Source tarball for ${{matrix.repo}} ${version} is ready for publishing with" $out
+        # no errors in output
+        errors=$(grep ERROR $out || true)
+        if [ ! -z $errors ]; then "Errors found: $errors"; fi
+
+        echo "Correct run of script OK!"
