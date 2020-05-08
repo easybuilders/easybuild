@@ -269,21 +269,23 @@ specify
   version = '2.5.3'
   versionsuffix = '-Python-3.7.4'
 
-you could access these within an easyblock via
+these are accessible within an easyblock via
 
 .. code:: python
 
-  ec_name = self.cfg['name']
-  ec_ver = self.cfg['version']
-  ec_suffix = self.cfg['versionsuffix']
+  longform = ''.join(self.cfg['name'],'/',self.cfg['version'],self.cfg['versionsuffix'])
 
-For these particular "universal" arguments, this mapping is done for you in the ``EasyBlock`` base
-class and generic subclasses, so most easyconfig parameters are directly available as local Python
-variables (``name``, ``version``, etc.).
+For these "universal" arguments, this mapping is done for you in the ``EasyBlock`` base class, so
+they are also available as local Python variables (``self.name``, ``self.version``, etc.):
 
-Some variables, and in particular :ref:`custom parameters
-<implementing_easyblocks_custom_parameters>` which you define for your own easyblock, will not be
-automatically mapped.  You will need to use ``self.cfg`` to access them in your code.
+.. code:: python
+
+  longform = ''.join(self.name,'/',self.version,self.versionsuffix)
+
+This is true for the variables listed in :ref:`vsd_avail_easyconfig_params`.  Any additional
+:ref:`custom parameters <implementing_easyblocks_custom_parameters>` which you define for your own
+easyblock, will not be automatically mapped.  You will need to use ``self.cfg`` to access them in
+your code.
 
 
 .. _implementing_easyblocks_custom_parameters:
