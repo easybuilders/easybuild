@@ -10,6 +10,6 @@ The list of known toolchains can easily be obtained with::
   List of known toolchains (toolchainname: module[,module...]):
   [...]
 
-.. include:: version-specific/eb_list_toolchains.txt
+An up-to-date overview of known toolchains is available at :ref:`vsd_list_toolchains`.
 
 .. note:: The `system` toolchain is a special case, see :ref:`system_toolchain`.
