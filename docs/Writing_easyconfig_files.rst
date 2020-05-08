@@ -577,7 +577,7 @@ private repository and convert them to a tar-ball for installation:
           'git_config': {
               'url': 'ssh://nero.stanford.edu/data/git/Analysis',
               'repo_name': 'pyCAP',
-              'tag': 'master',
+              'tag': '%(version)s',
           }
       }),
   ]
