@@ -181,9 +181,9 @@ echo "* :ref:\`List of available toolchain options <avail_toolchain_opts>\`" >> 
 #  list-toolchain doc
 echo ".. _vsd_list_toolchains:" > $VERSION_SPECIFIC_DIR/toolchains.rst
 echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
-echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
-echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
 eb --list-toolchains --output-format rst >> $VERSION_SPECIFIC_DIR/toolchains.rst
+echo >> $VERSION_SPECIFIC_DIR/toolchains.rst
+echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> $VERSION_SPECIFIC_DIR/toolchains.rst
 
 echo "* :ref:\`List of known toolchains <vsd_list_toolchains>\`" >> $overview
 
