@@ -10,7 +10,7 @@
 Overview of generic easyblocks
 ==============================
 
-:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakeMakeCp` - :ref:`CMakeNinja` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
+:ref:`BinariesTarball` - :ref:`Binary` - :ref:`BuildEnv` - :ref:`Bundle` - :ref:`CMakeMake` - :ref:`CMakeMakeCp` - :ref:`CMakeNinja` - :ref:`CMakePythonPackage` - :ref:`CmdCp` - :ref:`Conda` - :ref:`ConfigureMake` - :ref:`ConfigureMakePythonPackage` - :ref:`CrayToolchain` - :ref:`FortranPythonPackage` - :ref:`GoPackage` - :ref:`IntelBase` - :ref:`JAR` - :ref:`MakeCp` - :ref:`MesonNinja` - :ref:`ModuleRC` - :ref:`OCamlPackage` - :ref:`OctavePackage` - :ref:`PackedBinary` - :ref:`PerlModule` - :ref:`PythonBundle` - :ref:`PythonPackage` - :ref:`RPackage` - :ref:`Rpm` - :ref:`RubyGem` - :ref:`SCons` - :ref:`SystemCompiler` - :ref:`SystemMPI` - :ref:`Tarball` - :ref:`Toolchain` - :ref:`VSCPythonPackage` - :ref:`VersionIndependentPythonPackage` - :ref:`Waf`
 
 .. _BinariesTarball:
 
@@ -20,6 +20,16 @@ Overview of generic easyblocks
 (derives from :ref:`Tarball`)
 
 Support for installing a tarball of binaries
+
+Extra easyconfig parameters specific to ``BinariesTarball`` easyblock
+---------------------------------------------------------------------
+
+====================    =============================================================================================================================================================    =============
+easyconfig parameter    description                                                                                                                                                      default value
+====================    =============================================================================================================================================================    =============
+``install_type``        Defaults to extract tarball into clean directory. Options: 'merge' merges tarball to existing directory, 'subdir' extracts tarball into its own sub-directory    ``None``     
+``preinstall_cmd``      Command to execute before installation                                                                                                                           ``None``     
+====================    =============================================================================================================================================================    =============
 
 Customised steps in ``BinariesTarball`` easyblock
 -------------------------------------------------
@@ -653,6 +663,31 @@ Customised steps in ``FortranPythonPackage`` easyblock
 * ``configure_step`` - Customize the build step by adding compiler-specific flags to the build command.
 * ``install_step`` - Customize the build step by adding compiler-specific flags to the build command.
 
+.. _GoPackage:
+
+``GoPackage``
+=============
+
+(derives from EasyBlock)
+
+Builds and installs a Go package, and provides a dedicated module file.
+
+Extra easyconfig parameters specific to ``GoPackage`` easyblock
+---------------------------------------------------------------
+
+====================    =====================================================================    =============
+easyconfig parameter    description                                                              default value
+====================    =====================================================================    =============
+``forced_deps``         Force specific version of Go package, when building non-native module    ``None``     
+``modulename``          Module name of the Go package, when building non-native module           ``None``     
+====================    =====================================================================    =============
+
+Customised steps in ``GoPackage`` easyblock
+-------------------------------------------
+* ``build_step`` - If Go package is not native go module, lets try to make the module.
+* ``configure_step`` - Configure Go package build/install.
+* ``install_step`` - Install Go package to a custom path
+
 .. _IntelBase:
 
 ``IntelBase``
@@ -1175,6 +1210,16 @@ easyconfig parameter                 description                                
 
 Precompiled software supplied as a tarball:
     - will unpack binary and copy it to the install dir
+
+Extra easyconfig parameters specific to ``Tarball`` easyblock
+-------------------------------------------------------------
+
+====================    =============================================================================================================================================================    =============
+easyconfig parameter    description                                                                                                                                                      default value
+====================    =============================================================================================================================================================    =============
+``install_type``        Defaults to extract tarball into clean directory. Options: 'merge' merges tarball to existing directory, 'subdir' extracts tarball into its own sub-directory    ``None``     
+``preinstall_cmd``      Command to execute before installation                                                                                                                           ``None``     
+====================    =============================================================================================================================================================    =============
 
 Customised steps in ``Tarball`` easyblock
 -----------------------------------------
