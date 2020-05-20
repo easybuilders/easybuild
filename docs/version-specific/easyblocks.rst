@@ -282,6 +282,7 @@
 
     * RubyGem
 
+  * GoPackage
   * IntelBase
 
     * EB_Advisor

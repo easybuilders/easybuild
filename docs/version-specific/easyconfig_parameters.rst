@@ -47,6 +47,7 @@ build parameters
 ``configopts``                Extra options passed to configure (default already has --prefix)                                                         ""               
 ``easyblock``                 EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
 ``easybuild_version``         EasyBuild-version this spec-file was written for                                                                         None             
+``enhance_sanity_check``      Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it           False            
 ``fix_perl_shebang_for``      List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                  None             
 ``fix_python_shebang_for``    List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)              None             
 ``github_account``            GitHub account name to be used to resolve template values in source URLs                                                 "%(namelower)s"  
@@ -96,17 +97,18 @@ file-management parameters
 dependencies parameters
 -----------------------
 
-===========================    ==============================================================    =================
-**Parameter name**             **Description**                                                   **Default value**
-===========================    ==============================================================    =================
-``allow_system_deps``          Allow listed system dependencies (format: (<name>, <version>))    []               
-``builddependencies``          List of build dependencies                                        []               
-``dependencies``               List of dependencies                                              []               
-``hiddendependencies``         List of dependencies available as hidden modules                  []               
-``multi_deps``                 Dict of lists of dependency versions over which to iterate        {}               
-``multi_deps_load_default``    Load module for first version listed in multi_deps by default     True             
-``osdependencies``             OS dependencies that should be present on the system              []               
-===========================    ==============================================================    =================
+===========================    =====================================================================    =================
+**Parameter name**             **Description**                                                          **Default value**
+===========================    =====================================================================    =================
+``allow_system_deps``          Allow listed system dependencies (format: (<name>, <version>))           []               
+``builddependencies``          List of build dependencies                                               []               
+``dependencies``               List of dependencies                                                     []               
+``hiddendependencies``         List of dependencies available as hidden modules                         []               
+``moddependpaths``             Absolute path(s) to prepend to MODULEPATH before loading dependencies    None             
+``multi_deps``                 Dict of lists of dependency versions over which to iterate               {}               
+``multi_deps_load_default``    Load module for first version listed in multi_deps by default            True             
+``osdependencies``             OS dependencies that should be present on the system                     []               
+===========================    =====================================================================    =================
 
 
 license parameters
