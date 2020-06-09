@@ -525,7 +525,7 @@ Besides dependencies, which are found outside the module being built but are par
 it is also possible to incorporate extensions to the module within the build.  This is done via the ``exts_list`` array.
 
 Each entry in ``exts_list`` is a three-component tuple, with the name and
-version number, and a dictionary of source options:
+version number, and a dictionary of configuration options for the entry:
 
 .. code:: python
 
@@ -533,16 +533,16 @@ version number, and a dictionary of source options:
       ('name', 'version', { 'option':'value', 'option':'value' })
   ]
 
-The latter consist of most of the allowed keys as in the dictionary structure of ``sources`` (see
-:ref:`_common_easyconfig_param_sources_alt`).  Among those options, the following exceptions and
-special cases should be noted:
+The latter may contain essentially any of the full EasyConfig parameters, including ``buildopts``, ``installopts``, etc.
+Among those options, the following exceptions and special cases should be noted:
 
 * **nosource**: If set ``True``, no download will be done
-* **filename** and **download_filename** are ignored; use ``'source_tmpl'``
 * **source_tmpl**: Template string for the file to be downloaded
   * default is ``'%(name)s-%(version)s.tar.gz'``
   * ``%(name)s`` and ``%(version)s`` come from the ``exts_list`` entry (above)
-* **git_config**: Dictionary specifying download from a Git repository
+* **sources**: Dictionary specifying details of where to download the extension
+  * equivalent to a single entry from the EasyConfig ``sources`` list
+  * preffered to use of ``source_tmpl``
 * **start_dir**: If not set, will be derived; the EasyConfigs value will not be used
 
 .. code:: python
@@ -566,22 +566,23 @@ special cases should be noted:
       }),
   ]
 
-That third instance uses the ``name`` and ``version`` variables defined in the EasyConfigs file.
-
-Since EasyBuild v4.2.1, the ``git_config`` dictionary (see :ref:`downloading-from-a-git-repository`)
-may be included in the ``exts_list`` source definition.  For example, to download Git sources from a
-private repository and convert them to a tar-ball for installation:
+That third instance uses the ``name`` and ``version`` variables defined in the EasyConfigs file.  Since EasyBuild
+v4.2.2, a single-entry ``sources`` dictionary (see :ref:`_common_easyconfig_param_sources_alt`) may be included in an
+``exts_list`` entry.  For example, to download Git sources from a private repository and convert them to a tar-ball for
+installation:
 
 .. code:: python
 
   exts_defaultclass = 'PythonPackage'
   exts_list = [
       ('pyCAP', '0.1', {
-          'source_tmpl': '%(name)s-%(version)s.tar.gz',
-          'git_config': {
-              'url': 'ssh://nero.stanford.edu/data/git/Analysis',
-              'repo_name': 'pyCAP',
-              'tag': '%(version)s',
+          'sources': {
+              'filename': '%(name)s-%(version)s.tar.gz',
+              'git_config': {
+                  'url': 'ssh://nero.stanford.edu/data/git/Analysis',
+                  'repo_name': 'pyCAP',
+                  'tag': '%(version)s',
+              }
           }
       }),
   ]
