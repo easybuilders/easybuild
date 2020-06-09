@@ -542,7 +542,7 @@ Among those options, the following exceptions and special cases should be noted:
   * ``%(name)s`` and ``%(version)s`` come from the ``exts_list`` entry (above)
 * **sources**: Dictionary specifying details of where to download the extension
   * equivalent to a single entry from the EasyConfig ``sources`` list
-  * preffered to use of ``source_tmpl``
+  * preferred to use of ``source_tmpl``
 * **start_dir**: If not set, will be derived; the EasyConfigs value will not be used
 
 .. code:: python
