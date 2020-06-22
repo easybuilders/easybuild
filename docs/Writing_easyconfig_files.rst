@@ -326,7 +326,7 @@ For example, to inject checksums in *every* easyconfig file required to build HP
     ...
 
 .. note:: We are clearing ``$MODULEPATH`` and specifying a custom (empty) location to ``--installpath`` to
-          avoid that EasyBuild skips any easyconfigs because a corresponding module is already available.
+          avoid that EasyBuild skips any easyconfig because a corresponding module is already available.
 
 .. _inject_checksums_type:
 
@@ -533,7 +533,7 @@ version number, and a dictionary of configuration options for the entry:
       ('name', 'version', { 'option':'value', 'option':'value' })
   ]
 
-The latter may contain essentially any of the full EasyConfig parameters, including ``buildopts``, ``installopts``, etc.
+The latter may contain essentially any of the full easyconfig parameters, including ``buildopts``, ``installopts``, etc.
 Among those options, the following exceptions and special cases should be noted:
 
 * **nosource**: If set ``True``, no download will be done
@@ -541,9 +541,9 @@ Among those options, the following exceptions and special cases should be noted:
   * default is ``'%(name)s-%(version)s.tar.gz'``
   * ``%(name)s`` and ``%(version)s`` come from the ``exts_list`` entry (above)
 * **sources**: Dictionary specifying details of where to download the extension
-  * equivalent to a single entry from the EasyConfig ``sources`` list
+  * equivalent to a single entry from the easyconfig ``sources`` list
   * preferred to use of ``source_tmpl``
-* **start_dir**: If not set, will be derived; the EasyConfigs value will not be used
+* **start_dir**: If not set, will be derived; the easyconfig value will not be used
 
 .. code:: python
 
@@ -566,7 +566,7 @@ Among those options, the following exceptions and special cases should be noted:
       }),
   ]
 
-That third instance uses the ``name`` and ``version`` variables defined in the EasyConfigs file.  Since EasyBuild
+That third instance uses the ``name`` and ``version`` variables defined in the easyconfig file.  Since EasyBuild
 v4.2.2, a single-entry ``sources`` dictionary (see :ref:`_common_easyconfig_param_sources_alt`) may be included in an
 ``exts_list`` entry.  For example, to download Git sources from a private repository and convert them to a tar-ball for
 installation:
@@ -588,7 +588,7 @@ installation:
   ]
 
 Here, the template strings ``%(name)s`` and ``%(version)s`` will be substituted from the
-``exts_list`` entry elements ("pyCAP" and "0.1", respectively), not from the EasyConfigs values.
+``exts_list`` entry elements ("pyCAP" and "0.1", respectively), not from the easyconfig values.
 
 
 .. _configure_build_install_command_options:
