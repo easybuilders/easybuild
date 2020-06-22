@@ -254,6 +254,44 @@ redefining it entirely, since we call out to the original ``configure_step`` met
 Specific aspects of easyblocks
 ------------------------------
 
+.. _implementing_easyblocks_default_parameters:
+
+Default easyconfig parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All of the parameters which are "set" in an easyconfig file (see :ref:`vsd_avail_easyconfig_params`)
+become key-value pairs in the ``self.cfg`` dictionary.  For instance, if the easyconfig file specifies
+
+.. code:: python
+
+  name = 'example'
+  version = '2.5.3'
+  versionsuffix = '-Python-3.7.4'
+
+then these three parameters are accessible within an easyblock via
+
+.. code:: python
+
+  longform = ''.join(self.cfg['name'],'/',self.cfg['version'],self.cfg['versionsuffix'])
+
+You can use this notation successfully in your easyblock.  For all of the variables listed
+:ref:`vsd_avail_easyconfig_params`, the ``EasyBlock`` base class copies those dictionary entries into local Python
+variables:
+
+* ``self.name = self.cfg['name']``
+* ``self.version = self.cfg['version']``
+* ``self.versionsuffix = self.cfg['versionsuffix']``
+
+and so on.  So in your easyblock code, you may replace the above expression
+with
+
+.. code:: python
+
+  longform = ''.join(self.name,'/',self.version,self.versionsuffix)
+
+Any additional :ref:`custom parameters <implementing_easyblocks_custom_parameters>` which you define for your own
+easyblock, will not be automatically mapped.  You will need to use ``self.cfg`` to access them in your code.
+
 
 .. _implementing_easyblocks_custom_parameters:
 

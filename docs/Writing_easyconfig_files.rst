@@ -197,7 +197,7 @@ Using the ``--inject-checksums`` command line option, you can let EasyBuild add 
 in one or more easyconfig files (which is significantly more convenient than doing it manually).
 
 With ``--inject-checksums``, checksums are injected for all sources and patches (if any),
-as well as for all sources & patches of every extension listed in ``exts_list`` (if any).
+as well as for all sources & patches of every extension listed in ``exts_list`` (if any, see :ref:`module_extensions`).
 
 If the sources (& patches) are not available yet, EasyBuild will try to download them first; i.e.,
 the ``fetch`` step is run prior to computing & injecting the checksums.
@@ -326,7 +326,7 @@ For example, to inject checksums in *every* easyconfig file required to build HP
     ...
 
 .. note:: We are clearing ``$MODULEPATH`` and specifying a custom (empty) location to ``--installpath`` to
-          avoid that EasyBuild skips any easyconfigs because a corresponding module is already available.
+          avoid that EasyBuild skips any easyconfig because a corresponding module is already available.
 
 .. _inject_checksums_type:
 
@@ -510,11 +510,86 @@ which is equivalent to::
 
   dependencies = [('PnMPI', '1.2.0', '', True)]
 
+
 Using external modules as dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as dependencies is also supported.
 See :ref:`using_external_modules` for more information.
+
+
+Module Extensions
+~~~~~~~~~~~~~~~~~
+
+Besides dependencies, which are found outside the module being built but are part of the site's EasyBuild installation,
+it is also possible to incorporate extensions to the module within the build.  This is done via the ``exts_list`` array.
+
+Each entry in ``exts_list`` is a three-component tuple, with the name and
+version number, and a dictionary of configuration options for the entry:
+
+.. code:: python
+
+  exts_list = [
+      ('name', 'version', { 'option':'value', 'option':'value' })
+  ]
+
+The latter may contain essentially any of the full easyconfig parameters, including ``buildopts``, ``installopts``, etc.
+Among those options, the following exceptions and special cases should be noted:
+
+* **nosource**: If set ``True``, no download will be done
+* **source_tmpl**: Template string for the file to be downloaded
+  * default is ``'%(name)s-%(version)s.tar.gz'``
+  * ``%(name)s`` and ``%(version)s`` come from the ``exts_list`` entry (above)
+* **sources**: Dictionary specifying details of where to download the extension
+  * equivalent to a single entry from the easyconfig ``sources`` list
+  * preferred to use of ``source_tmpl``
+* **start_dir**: If not set, will be derived; the easyconfig value will not be used
+
+.. code:: python
+
+  exts_list = [
+      ('llvmlite', '0.26.0', {
+          'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite/'],
+          'patches': ['llvmlite-0.26.0_fix-ffi-Makefile.patch'],
+          'checksums': [
+              '13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf',    # llvmlite-0.26.0.tar.gz
+              '40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae',    # llvmlite-0.26.0_fix-ffi-Makefile.patch
+          ],
+      }),
+      ('singledispatch', '3.4.0.3', {
+          'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
+          'checksums': ['5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c'],
+      }),
+      (name, version, {
+          'source_urls': ['https://pypi.python.org/packages/source/n/numba/'],
+          'checksums': ['c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258'],
+      }),
+  ]
+
+That third instance uses the ``name`` and ``version`` variables defined in the easyconfig file.  Since EasyBuild
+v4.2.2, a single-entry ``sources`` dictionary (see :ref:`_common_easyconfig_param_sources_alt`) may be included in an
+``exts_list`` entry.  For example, to download Git sources from a private repository and convert them to a tar-ball for
+installation:
+
+.. code:: python
+
+  exts_defaultclass = 'PythonPackage'
+  exts_list = [
+      ('pyCAP', '0.1', {
+          'sources': {
+              'filename': '%(name)s-%(version)s.tar.gz',
+              'git_config': {
+                  'url': 'ssh://nero.stanford.edu/data/git/Analysis',
+                  'repo_name': 'pyCAP',
+                  'tag': '%(version)s',
+              }
+          }
+      }),
+  ]
+
+Here, the template strings ``%(name)s`` and ``%(version)s`` will be substituted from the
+``exts_list`` entry elements ("pyCAP" and "0.1", respectively), not from the easyconfig values.
+
 
 .. _configure_build_install_command_options:
 
