@@ -518,11 +518,11 @@ Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as 
 See :ref:`using_external_modules` for more information.
 
 
-Module Extensions
-~~~~~~~~~~~~~~~~~
+Extensions
+~~~~~~~~~~
 
-Besides dependencies, which are found outside the module being built but are part of the site's EasyBuild installation,
-it is also possible to incorporate extensions to the module within the build.  This is done via the ``exts_list`` array.
+Besides dependencies, which are found outside the software being built but are part of the site's EasyBuild installation,
+it is also possible to incorporate extensions to the software within the build.  This is done via the ``exts_list`` array.
 
 Each entry in ``exts_list`` is a three-component tuple, with the name and
 version number, and a dictionary of configuration options for the entry:

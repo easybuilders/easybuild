@@ -274,23 +274,23 @@ then these three parameters are accessible within an easyblock via
 
   longform = ''.join(self.cfg['name'],'/',self.cfg['version'],self.cfg['versionsuffix'])
 
-You can use this notation successfully in your easyblock.  For all of the variables listed
-:ref:`vsd_avail_easyconfig_params`, the ``EasyBlock`` base class copies those dictionary entries into local Python
-variables:
+You can use this notation successfully in your easyblock.  A few of the most commonly used parameters can be referenced
+directly,
 
-* ``self.name = self.cfg['name']``
-* ``self.version = self.cfg['version']``
-* ``self.versionsuffix = self.cfg['versionsuffix']``
+* **self.name** = ``self.cfg['name']``
+* **self.version** = ``self.cfg['version']``
+* **self.toolchain** = ``self.cfg['toolchain']``
+* **self.all_dependencies**: combines ``builddependencies``, ``dependencies``, and ``toolchain``, in one dictionary
 
-and so on.  So in your easyblock code, you may replace the above expression
-with
+So in your easyblock code, you may replace the above expression with
 
 .. code:: python
 
-  longform = ''.join(self.name,'/',self.version,self.versionsuffix)
+  longform = ''.join(self.name,'/',self.version,self.cfg['versionsuffix'])
 
-Any additional :ref:`custom parameters <implementing_easyblocks_custom_parameters>` which you define for your own
-easyblock, will not be automatically mapped.  You will need to use ``self.cfg`` to access them in your code.
+The other easyconfig parameters, and any additional :ref:`custom parameters
+<implementing_easyblocks_custom_parameters>` which you define for your own easyblock, will not be automatically mapped.
+You will need to use ``self.cfg`` to access them in your code.
 
 
 .. _implementing_easyblocks_custom_parameters:
