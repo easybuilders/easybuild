@@ -357,6 +357,7 @@ Option flag                            Option description
 ``--toolchain-name=NAME``              Search and build with given toolchain name                                                                                                                         
 ``--toolchain-version=VERSION``        Search and build with given toolchain version                                                                                                                      
 ``--try-amend=VAR=VALUE[,VALUE]``      Try to specify additional search and build parameters (can be used multiple times); for example: versionprefix=foo or patches=one.patch,two.patch) (USE WITH CARE!)
+``--try-ignore-versionsuffixes``       Ignore versionsuffix differences when --try-update-deps is used (default: False)                                                                                   
 ``--try-software=NAME,VERSION``        Try to search and build software with given name and version (USE WITH CARE!) (type comma-separated list)                                                          
 ``--try-software-name=NAME``           Try to search and build software with given name (USE WITH CARE!)                                                                                                  
 ``--try-software-version=VERSION``     Try to search and build software with given version (USE WITH CARE!)                                                                                               
