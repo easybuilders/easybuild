@@ -13,7 +13,7 @@ script:
   # still added to the exit code (which is a just a count of spelling
   # suggestions). Since we know we have one of these, we allow for that.
   # see https://github.com/easybuilders/easybuild/pull/485 for details
-  - codespell --skip=".git,version-specific,scripts" --ignore-words-list=atleast,ninjs,simpy,proovread --quiet-level=2; retVal=$?; if [ $retVal -eq 1 ]; then echo "Got one expected warning, so success!";  else $(exit $retVal); fi;
+  - codespell --skip=".git,version-specific,scripts" --ignore-words-list=atleast,ninjs,simpy,proovread,namd --quiet-level=2; retVal=$?; if [ $retVal -eq 1 ]; then echo "Got one expected warning, so success!";  else $(exit $retVal); fi;
   - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
   - READTHEDOCS=1 sphinx-build docs build
   # test installation too (using options that don't require to have a modules tool installed)

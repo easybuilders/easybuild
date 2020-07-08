@@ -74,6 +74,7 @@
       * EB_Geant4
       * EB_GROMACS
       * EB_LAMMPS
+      * EB_LLVM
       * EB_netCDF
       * EB_OpenBabel
       * EB_OpenCV
@@ -182,6 +183,7 @@
     * EB_tbb
     * EB_Velvet
     * EB_VMD
+    * EB_XALT
     * EB_XCrySDen
     * MakeCp
 
@@ -235,6 +237,7 @@
   * EB_WRF_minus_Fire
   * ExtensionEasyBlock
 
+    * EB_Scipion
     * OCamlPackage
     * OctavePackage
     * PerlModule
@@ -359,6 +362,7 @@
 
   * ExtensionEasyBlock
 
+    * EB_Scipion
     * OCamlPackage
     * OctavePackage
     * PerlModule
