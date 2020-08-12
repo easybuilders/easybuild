@@ -238,7 +238,7 @@ for pull requests based on an outdated branch in which easyconfigs are changed t
 as well.
 
 As such, the exact semantics of ``--from-pr`` depends on the state of the specified pull request, i.e. whether or not
-the pull request was merged already, whether the pull request is mergeable and stable (as indicated by Travis), etc.
+the pull request was merged already, whether the pull request is mergeable and stable (as indicated by GitHub Actions), etc.
 
 .. _github_from_pr_vs_develop_open_stable_prs:
 
@@ -279,7 +279,7 @@ For closed and unstable pull requests, only the branch corresponding to the pull
 which aligns with the semantics of ``--from-pr`` as it was before EasyBuild v2.9.0. In this case, the current
 ``develop`` branch is *not* taken into account.
 
-.. note:: A pull request is considered unstable when GitHub reports merge conflicts or when Travis reports
+.. note:: A pull request is considered unstable when GitHub reports merge conflicts or when GitHub Actions reports
           one or more failing tests.
 
 
