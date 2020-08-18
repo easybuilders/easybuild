@@ -166,15 +166,15 @@ Patches can be provided via the ``patches`` easyconfig parameter (list). And pat
 * tuple
 * dict
 
-The most straight-forward use-case is ``string``, which contains the name of the patch file 
+The most straight-forward use-case is ``string``, which contains the name of the patch file
 and has to have ``.patch`` extension.
 
-``Tuple`` adds possibility to specify patch level, which is used in patch command. 
+``Tuple`` adds possibility to specify patch level, which is used in patch command.
 This is mostly needed, if patch file just adds new files and generally is not possible to determine starting directory.
 
 .. note:: ``Tuple`` also have special usage, if the patch file have any other extension than ``.patch``
-  In this case, first tuple argument is file which should be coppied to unpacked source dir and second tuple argument 
-  is target path, where the files should be coppied relative to unpacked source dir. See more in example below.
+  In this case, first tuple argument is file which should be copied to unpacked source dir and second tuple argument
+  is target path, where the files should be copied relative to unpacked source dir. See more in example below.
 
 ``Dict`` adds ability to pass ``patch`` command additional arguments. For example ``--binary`` flag is needed to patch
 files with CRLF endings.
@@ -188,13 +188,13 @@ Example:
 patches = [
   # a simple patch file
   'name-versions-fix.patch',
-  
+
   # when creating only new files by patch file, you need to specify level:
   ('name-versions-fix.patch', 1),
-  
+
   # copy file to target_path folder
   ('Makefile', 'target_path'),
-  
+
   # specify patch file and optionally level and opts for patch command
   {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
 ]
@@ -491,7 +491,7 @@ Examples:
           the cloned repository), the (SHA256) checksum is not guaranteed to be the same across different systems.
 
           Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub,
-          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so, 
+          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so,
           ``git_config`` is intended for other Git repos.
 
 
