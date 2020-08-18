@@ -128,6 +128,7 @@ Remarks:
   * unified diff format (``diff -ru``)
   * patched locations relative to unpacked sources
 
+* see :ref:`common_easyconfig_param_sources_patches` for more information on ``patches``
 * see :ref:`common_easyconfig_param_sources_checksums` for more information on ``checksums``
 * ``sources`` is usually specified as a list of strings representing filenames for source files,
   but other formats are supported too, see :ref:`common_easyconfig_param_sources_alt`
@@ -153,6 +154,51 @@ Example:
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources,
   a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
+
+.. _common_easyconfig_param_sources_patches:
+
+Patches
+^^^^^^^
+
+Patches can be provided via the ``patches`` easyconfig parameter (list). And patch could be defined as:
+
+* string
+* tuple
+* dict
+
+The most straight-forward use-case is ``string``, which contains the name of the patch file 
+and has to have ``.patch`` extension.
+
+``Tuple`` adds possibility to specify patch level, which is used in patch command. 
+This is mostly needed, if patch file just adds new files and generally is not possible to determine starting directory.
+
+.. note:: ``Tuple`` also have special usage, if the patch file have any other extension than ``.patch``
+  In this case, first tuple argument is file which should be coppied to unpacked source dir and second tuple argument 
+  is target path, where the files should be coppied relative to unpacked source dir. See more in example below.
+
+``Dict`` adds ability to pass ``patch`` command additional arguments. For example ``--binary`` flag is needed to patch
+files with CRLF endings.
+The ``dict`` has required ``filename`` key, and ``level`` and ``opts`` optional ones.
+
+.. note:: Filling just ``filename`` in ``dict`` is same as using plain ``string`` definition.
+  Filling ``filename`` and ``level`` is same as using ``tuple`` definition.
+
+Example:
+```
+patches = [
+  # a simple patch file
+  'name-versions-fix.patch',
+  
+  # when creating only new files by patch file, you need to specify level:
+  ('name-versions-fix.patch', 1),
+  
+  # copy file to target_path folder
+  ('Makefile', 'target_path'),
+  
+  # specify patch file and optionally level and opts for patch command
+  {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
+]
+```
 
 .. _common_easyconfig_param_sources_checksums:
 
