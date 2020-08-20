@@ -1,0 +1,20 @@
+name: Static Analysis
+on: [push, pull_request]
+jobs:
+  python-linting:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: install Python packages
+      run: |
+        pip install --upgrade pip
+        pip install --upgrade flake8
+
+    - name: Run flake8 to verify PEP8-compliance of Python code
+      run: flake8 -j3

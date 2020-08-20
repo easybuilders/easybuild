@@ -71,4 +71,3 @@ if so.options.out_file:
     print('%s updated' % so.options.out_file)
 else:
     print(txt)
-
