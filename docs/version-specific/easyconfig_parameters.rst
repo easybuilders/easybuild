@@ -38,44 +38,45 @@ toolchain parameters
 build parameters
 ----------------
 
-==========================    =====================================================================================================================    =================
-**Parameter name**            **Description**                                                                                                          **Default value**
-==========================    =====================================================================================================================    =================
-``bitbucket_account``         Bitbucket account name to be used to resolve template values in source URLs                                              "%(namelower)s"  
-``buildopts``                 Extra options passed to make step (default already has -j X)                                                             ""               
-``checksums``                 Checksums for sources and patches                                                                                        []               
-``configopts``                Extra options passed to configure (default already has --prefix)                                                         ""               
-``easyblock``                 EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
-``easybuild_version``         EasyBuild-version this spec-file was written for                                                                         None             
-``enhance_sanity_check``      Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it           False            
-``fix_perl_shebang_for``      List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                  None             
-``fix_python_shebang_for``    List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)              None             
-``github_account``            GitHub account name to be used to resolve template values in source URLs                                                 "%(namelower)s"  
-``hidden``                    Install module file as 'hidden' by prefixing its version with '.'                                                        False            
-``installopts``               Extra options for installation                                                                                           ""               
-``maxparallel``               Max degree of parallelism                                                                                                None             
-``parallel``                  Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
-``patches``                   List of patches to apply                                                                                                 []               
-``postinstallcmds``           Commands to run after the install step.                                                                                  []               
-``prebuildopts``              Extra options pre-passed to build command.                                                                               ""               
-``preconfigopts``             Extra options pre-passed to configure.                                                                                   ""               
-``preinstallopts``            Extra prefix options for installation.                                                                                   ""               
-``pretestopts``               Extra prefix options for test.                                                                                           ""               
-``runtest``                   Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)         None             
-``sanity_check_commands``     format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                          []               
-``sanity_check_paths``        List of files and directories to check (format: {'files':<list>, 'dirs':<list>})                                         {}               
-``skip``                      Skip existing software                                                                                                   False            
-``skipsteps``                 Skip these steps                                                                                                         []               
-``source_urls``               List of URLs for source files                                                                                            []               
-``sources``                   List of source files                                                                                                     []               
-``stop``                      Keyword to halt the build process after a certain step.                                                                  None             
-``testopts``                  Extra options for test.                                                                                                  ""               
-``tests``                     List of test-scripts to run after install. A test script should return a non-zero exit status to fail                    []               
-``unpack_options``            Extra options for unpacking source                                                                                       ""               
-``unwanted_env_vars``         List of environment variables that shouldn't be set during build                                                         []               
-``versionprefix``             Additional prefix for software version (placed before version and toolchain name)                                        ""               
-``versionsuffix``             Additional suffix for software version (placed after toolchain name)                                                     ""               
-==========================    =====================================================================================================================    =================
+=============================    =====================================================================================================================    =================
+**Parameter name**               **Description**                                                                                                          **Default value**
+=============================    =====================================================================================================================    =================
+``bitbucket_account``            Bitbucket account name to be used to resolve template values in source URLs                                              "%(namelower)s"  
+``buildopts``                    Extra options passed to make step (default already has -j X)                                                             ""               
+``checksums``                    Checksums for sources and patches                                                                                        []               
+``configopts``                   Extra options passed to configure (default already has --prefix)                                                         ""               
+``cuda_compute_capabilities``    List of CUDA compute capabilities to build with (if supported)                                                           []               
+``easyblock``                    EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
+``easybuild_version``            EasyBuild-version this spec-file was written for                                                                         None             
+``enhance_sanity_check``         Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it           False            
+``fix_perl_shebang_for``         List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                  None             
+``fix_python_shebang_for``       List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)              None             
+``github_account``               GitHub account name to be used to resolve template values in source URLs                                                 "%(namelower)s"  
+``hidden``                       Install module file as 'hidden' by prefixing its version with '.'                                                        False            
+``installopts``                  Extra options for installation                                                                                           ""               
+``maxparallel``                  Max degree of parallelism                                                                                                None             
+``parallel``                     Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
+``patches``                      List of patches to apply                                                                                                 []               
+``postinstallcmds``              Commands to run after the install step.                                                                                  []               
+``prebuildopts``                 Extra options pre-passed to build command.                                                                               ""               
+``preconfigopts``                Extra options pre-passed to configure.                                                                                   ""               
+``preinstallopts``               Extra prefix options for installation.                                                                                   ""               
+``pretestopts``                  Extra prefix options for test.                                                                                           ""               
+``runtest``                      Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)         None             
+``sanity_check_commands``        format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                          []               
+``sanity_check_paths``           List of files and directories to check (format: {'files':<list>, 'dirs':<list>})                                         {}               
+``skip``                         Skip existing software                                                                                                   False            
+``skipsteps``                    Skip these steps                                                                                                         []               
+``source_urls``                  List of URLs for source files                                                                                            []               
+``sources``                      List of source files                                                                                                     []               
+``stop``                         Keyword to halt the build process after a certain step.                                                                  None             
+``testopts``                     Extra options for test.                                                                                                  ""               
+``tests``                        List of test-scripts to run after install. A test script should return a non-zero exit status to fail                    []               
+``unpack_options``               Extra options for unpacking source                                                                                       ""               
+``unwanted_env_vars``            List of environment variables that shouldn't be set during build                                                         []               
+``versionprefix``                Additional prefix for software version (placed before version and toolchain name)                                        ""               
+``versionsuffix``                Additional suffix for software version (placed after toolchain name)                                                     ""               
+=============================    =====================================================================================================================    =================
 
 
 file-management parameters

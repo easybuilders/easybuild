@@ -187,6 +187,7 @@ easyconfig parameter        description                                         
 ``build_type``              Build type for CMake, e.g. Release.Defaults to 'Release' or 'Debug' depending on toolchainopts[debug]                                                                                                 ``None``          
 ``configure_cmd``           Configure command to use                                                                                                                                                                              ``"cmake"``       
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                 ``""``            
+``generator``               Build file generator to use. None to use CMakes default                                                                                                                                               ``None``          
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
 ``install_cmd``             Build command to use                                                                                                                                                                                  ``"make install"``
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                 ``None``          
@@ -262,6 +263,7 @@ easyconfig parameter        description                                         
 ``configure_cmd``           Configure command to use                                                                                                                                                                              ``"cmake"``       
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                 ``""``            
 ``files_to_copy``           List of files or dirs to copy                                                                                                                                                                         ``None``          
+``generator``               Build file generator to use. None to use CMakes default                                                                                                                                               ``None``          
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
 ``install_cmd``             Build command to use                                                                                                                                                                                  ``"make install"``
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                 ``None``          
@@ -298,6 +300,7 @@ easyconfig parameter        description                                         
 ``build_type``              Build type for CMake, e.g. Release.Defaults to 'Release' or 'Debug' depending on toolchainopts[debug]                                                                                                 ``None``          
 ``configure_cmd``           Configure command to use                                                                                                                                                                              ``"cmake"``       
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                 ``""``            
+``generator``               Build file generator to use. None to use CMakes default                                                                                                                                               ``"Ninja"``       
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
 ``install_cmd``             Build command to use                                                                                                                                                                                  ``"make install"``
 ``prefix_opt``              Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                 ``None``          
@@ -324,7 +327,7 @@ Build a Python package and module with cmake.
     Some packages use cmake to first build and install C Python packages
     and then put the Python package in lib/pythonX.Y/site-packages.
 
-    We install this in a seperate location and generate a module file 
+    We install this in a seperate location and generate a module file
     which sets the PYTHONPATH.
 
     We use the default CMake implementation, and use make_module_extra from PythonPackage.
@@ -345,6 +348,7 @@ easyconfig parameter        description                                         
 ``configure_cmd``           Configure command to use                                                                                                                                                                              ``"cmake"``       
 ``configure_cmd_prefix``    Prefix to be glued before ./configure                                                                                                                                                                 ``""``            
 ``download_dep_fail``       Fail if downloaded dependencies are detected                                                                                                                                                          ``None``          
+``generator``               Build file generator to use. None to use CMakes default                                                                                                                                               ``None``          
 ``host_type``               Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)    ``None``          
 ``install_cmd``             Build command to use                                                                                                                                                                                  ``"make install"``
 ``install_target``          Option to pass to setup.py                                                                                                                                                                            ``"install"``     
@@ -364,6 +368,7 @@ easyconfig parameter        description                                         
 ``use_pip_editable``        Install using 'pip install --editable'                                                                                                                                                                ``False``         
 ``use_pip_extras``          String with comma-separated list of 'extras' to install via pip                                                                                                                                       ``None``          
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                  ``False``         
+``use_pip_requirement``     Install using 'pip install --requirement'. The sources is expected to be the requirements file.                                                                                                       ``False``         
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                                                                                          ``False``         
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                                                                                                                  ``False``         
 ========================    ==================================================================================================================================================================================================    ==================
@@ -554,6 +559,7 @@ easyconfig parameter        description                                         
 ``use_pip_editable``        Install using 'pip install --editable'                                                                                                                                                                 ``False``         
 ``use_pip_extras``          String with comma-separated list of 'extras' to install via pip                                                                                                                                        ``None``          
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                   ``False``         
+``use_pip_requirement``     Install using 'pip install --requirement'. The sources is expected to be the requirements file.                                                                                                        ``False``         
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                                                                                                           ``False``         
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                                                                                                                   ``False``         
 ========================    ===================================================================================================================================================================================================    ==================
@@ -653,6 +659,7 @@ easyconfig parameter        description                                         
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_extras``          String with comma-separated list of 'extras' to install via pip                                              ``None``     
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_pip_requirement``     Install using 'pip install --requirement'. The sources is expected to be the requirements file.              ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
 ========================    =========================================================================================================    =============
@@ -948,6 +955,7 @@ easyconfig parameter           description                                      
 ``use_pip_editable``           Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_extras``             String with comma-separated list of 'extras' to install via pip                                              ``None``     
 ``use_pip_for_deps``           Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_pip_requirement``        Install using 'pip install --requirement'. The sources is expected to be the requirements file.              ``False``    
 ``use_setup_py_develop``       Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``                 Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
 ===========================    =========================================================================================================    =============
@@ -983,6 +991,7 @@ easyconfig parameter        description                                         
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_extras``          String with comma-separated list of 'extras' to install via pip                                              ``None``     
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_pip_requirement``     Install using 'pip install --requirement'. The sources is expected to be the requirements file.              ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
 ========================    =========================================================================================================    =============
@@ -1281,6 +1290,7 @@ easyconfig parameter        description                                         
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_extras``          String with comma-separated list of 'extras' to install via pip                                              ``None``     
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_pip_requirement``     Install using 'pip install --requirement'. The sources is expected to be the requirements file.              ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
 ========================    =========================================================================================================    =============
@@ -1316,6 +1326,7 @@ easyconfig parameter        description                                         
 ``use_pip_editable``        Install using 'pip install --editable'                                                                       ``False``    
 ``use_pip_extras``          String with comma-separated list of 'extras' to install via pip                                              ``None``     
 ``use_pip_for_deps``        Install dependencies using 'pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                         ``False``    
+``use_pip_requirement``     Install using 'pip install --requirement'. The sources is expected to be the requirements file.              ``False``    
 ``use_setup_py_develop``    Install using '%(python)s setup.py develop --prefix=%(prefix)s %(installopts)s' (deprecated)                 ``False``    
 ``zipped_egg``              Install as a zipped eggs (requires use_easy_install)                                                         ``False``    
 ========================    =========================================================================================================    =============
