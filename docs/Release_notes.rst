@@ -193,15 +193,15 @@ feature release
   * add missing pkg-config build dependency in recent R-bundle-Bioconductor easyconfigs (`#11104 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11104>`_)
   * add patch to h5py 2.8.0 (`#11119 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11119>`_) and 2.9.0 (`#11118 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11118>`_) easyconfigs to avoid MPI_Init on ``import h5py``
   * add patch to support libbfd 2.34 API change in Score-P 6.0 (`#11123 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11123>`_)
-  * use pip to install protobuf-python in 2019b toolchain (requires re-downloading source tarball!) (#11143, `#11260 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11260>`_)
-  * add missing Keras-Applications extension to TensorFlow 2.2.0 easyconfigs with foss*/2019b toolchain (`#11156 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11156>`_)
+  * use pip to install protobuf-python in 2019b toolchain (requires re-downloading source tarball!) (`#11143 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11143>`_, `#11260 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11260>`_)
+  * add missing Keras-Applications extension to TensorFlow 2.2.0 easyconfigs with ``foss*/2019b`` toolchain (`#11156 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11156>`_)
   * add missing pocl dependency in R 3.6.0 (`#11157 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11157>`_)
   * update Meson build dep to 0.55.1 for GLib, X11, Mesa & co to fix aggressive RPATH stripping (`#11178 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11178>`_)
   * disable generating of man pages in recent libdrm easyconfigs to avoid installation failure if docbook-xsl is not installed (`#11182 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11182>`_)
-  * add fontconfig and bzip2 as direct dependencies for Qt5 to fix installation with --rpath (`#11183 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11183>`_)
+  * add fontconfig and bzip2 as direct dependencies for Qt5 to fix installation with ``--rpath`` (`#11183 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11183>`_)
   * fix failing ``make check`` for MPFR 4.x (`#11187 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11187>`_) and GMP (`#11188 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11188>`_) when installing with ``eb --rpath``
   * add pkg-config as a build dependency for libglvnd (`#11189 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11189>`_)
-  * add missing libiconv build dep in recent Doxygen easyconfigs (`#11191 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11191>`_, `#11257 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11257>`_)
+  * add missing libiconv dep in recent Doxygen easyconfigs (`#11191 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11191>`_, `#11257 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11257>`_)
   * enhance Java/11 wrapper to also support for aarch64/Arm (`#11192 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11192>`_)
   * add pkg-config as a build dependency to Ghostscript 9.52, needed on aarch64/arm (`#11194 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11194>`_)
   * add patch for pycrypto extension in recent Python easyconfigs to remove hardcoded ``/usr/include`` which causes problems when ``eb --sysroot`` is used (`#11202 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11202>`_)
@@ -210,7 +210,7 @@ feature release
 
 * other changes:
 
-  * don't require custom sanity_check_paths for CUDA bundle easyconfigs (`#10936 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10936>`_)
+  * don't require custom ``sanity_check_paths`` for CUDA bundle easyconfigs (`#10936 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10936>`_)
   * move intervaltree and sortedcontainers to main Python easyconfigs (`#10969 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10969>`_, `#10970 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10970>`_)
   * disable qtwayland in Qt5 v5.14.1 (`#11107 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11107>`_)
   * remove mklml (small MKL) from PyTorch 1.3.1 and 1.4.0 easyconfigs (`#11019 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11019>`_)
