@@ -59,6 +59,7 @@
       * CMakePythonPackage
 
         * EB_DOLFIN
+        * EB_pybind11
         * EB_UFC
 
       * EB_Armadillo
@@ -246,6 +247,7 @@
       * CMakePythonPackage
 
         * EB_DOLFIN
+        * EB_pybind11
         * EB_UFC
 
       * ConfigureMakePythonPackage
@@ -258,6 +260,7 @@
       * EB_numexpr
       * EB_PyQuante
       * EB_python_minus_meep
+      * EB_PyTorch
       * EB_PyZMQ
       * EB_SEPP
       * EB_TensorFlow
@@ -371,6 +374,7 @@
       * CMakePythonPackage
 
         * EB_DOLFIN
+        * EB_pybind11
         * EB_UFC
 
       * ConfigureMakePythonPackage
@@ -383,6 +387,7 @@
       * EB_numexpr
       * EB_PyQuante
       * EB_python_minus_meep
+      * EB_PyTorch
       * EB_PyZMQ
       * EB_SEPP
       * EB_TensorFlow
