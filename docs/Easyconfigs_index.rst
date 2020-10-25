@@ -137,7 +137,7 @@ By default, EasyBuild will consider index files to remain valid for 1 week (7 * 
 
 To create an index that *always* remains valid (never expires), use zero (``0``) as value for ``--index-max-age``::
 
-  $ eb --create-index --index-max-age=0 $HOME/easybuild-easyconfigs/easybuild/easyconfigs
+  $ eb --index-max-age=0 --create-index $HOME/easybuild-easyconfigs/easybuild/easyconfigs
 
   $ head -n 2 $HOME/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index
   # created at: 2020-04-13 15:10:07.173191
