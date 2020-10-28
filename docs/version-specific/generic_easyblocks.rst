@@ -1072,11 +1072,12 @@ Builds and installs Ruby Gems.
 Extra easyconfig parameters specific to ``RubyGem`` easyblock
 -------------------------------------------------------------
 
-====================    ==================================    =============
-easyconfig parameter    description                           default value
-====================    ==================================    =============
-``options``             Dictionary with extension options.    ``{}``       
-====================    ==================================    =============
+====================    ====================================    =============
+easyconfig parameter    description                             default value
+====================    ====================================    =============
+``gem_file``            Path to gem file in unpacked sources    ``None``     
+``options``             Dictionary with extension options.      ``{}``       
+====================    ====================================    =============
 
 Customised steps in ``RubyGem`` easyblock
 -----------------------------------------
