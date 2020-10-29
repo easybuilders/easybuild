@@ -71,6 +71,7 @@ Name                Compiler(s)         MPI            Linear algebra           
 **ipsmpi**          icc, ifort          psmpi          *(none)*                   *(none)*
 **iqacml**          icc, ifort          QLogicMPI      ACML, ScaLAPACK            FFTW    
 **ismkl**           icc, ifort          MPICH2         imkl                       imkl    
+**NVHPC**           NVHPC               *(none)*       *(none)*                   *(none)*
 **PGI**             PGI                 *(none)*       *(none)*                   *(none)*
 **pmkl**            PGI                 *(none)*       imkl                       imkl    
 **pomkl**           PGI                 OpenMPI        imkl                       imkl    
