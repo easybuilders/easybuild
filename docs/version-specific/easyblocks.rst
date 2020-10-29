@@ -30,6 +30,7 @@
       * EB_Java
       * EB_MATLAB
       * EB_MCR
+      * EB_NVHPC
       * EB_PGI
       * EB_Samcef
       * EB_Stata
@@ -67,7 +68,6 @@
       * EB_Blender
       * EB_CGAL
       * EB_Clang
-      * EB_DIRAC
       * EB_Doxygen
       * EB_Eigen
       * EB_ELSI
@@ -81,6 +81,7 @@
       * EB_OpenCV
       * EB_PSI
       * EB_ROOT
+      * EB_ScaLAPACK
       * EB_SuperLU
       * EB_Trilinos
 
@@ -170,7 +171,6 @@
     * EB_R
     * EB_Ruby
     * EB_SAMtools
-    * EB_ScaLAPACK
     * EB_Scalasca1
     * EB_Score_minus_P
     * EB_SHRiMP
@@ -210,6 +210,7 @@
   * EB_ALADIN
   * EB_Bazel
   * EB_Boost
+  * EB_CFDEMcoupling
   * EB_CHARMM
   * EB_CP2K
   * EB_FSL
@@ -337,6 +338,7 @@
     * EB_Java
     * EB_MATLAB
     * EB_MCR
+    * EB_NVHPC
     * EB_PGI
     * EB_Samcef
     * EB_Stata

@@ -166,7 +166,7 @@ Option flag                                                Option description
 ``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``          Path to Git working directories for EasyBuild repositories (type <type 'str'>)                                                  
 ``--github-org=GITHUB-ORG``                                GitHub organization (type <type 'str'>)                                                                                         
 ``--github-user=GITHUB-USER``                              GitHub username (type <type 'str'>)                                                                                             
-``--include-easyblocks-from-pr=PR#``                       Include easyblocks from specified PR (type <type 'int'>)                                                                        
+``--include-easyblocks-from-pr=PR#``                       Include easyblocks from specified PR (type comma-separated list; default: )
 ``--install-github-token``                                 Install GitHub token (requires --github-user) (default: False)                                                                  
 ``--list-prs=STATE,ORDER,DIRECTION``                       List pull requests (type <type 'str'>; default: open,created,desc)                                                              
 ``--merge-pr=PR#``                                         Merge pull request (type <type 'int'>)                                                                                          

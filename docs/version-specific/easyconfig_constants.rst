@@ -18,7 +18,7 @@ Constant name             Constant value                                        
 ``OS_PKG_PAM_DEV``        ``('pam-devel', 'libpam0g-dev')``                                OS packages providing Pluggable Authentication Module (PAM) developement support
 ``OS_TYPE``               ``Darwin``                                                       System type (e.g. 'Linux' or 'Darwin')                                          
 ``OS_VERSION``            ``UNKNOWN``                                                      System version                                                                  
-``SYSTEM``                ``{'version': 'system', 'name': 'system'}``                      System toolchain                                                                
-``SYS_PYTHON_VERSION``    ``2.7.16``                                                       System Python version (platform.python_version())                               
+``SYSTEM``                ``{'name': 'system', 'version': 'system'}``                      System toolchain                                                                
+``SYS_PYTHON_VERSION``    ``3.8.5``                                                        System Python version (platform.python_version())                               
 ======================    =============================================================    ================================================================================
 
