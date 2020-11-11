@@ -101,21 +101,13 @@ Installation using this *easystack* called 'myeasystack.yaml' with command
 
 .. code::
 
-  eb --easystack myeasystack.yaml;
+  eb --easystack myeasystack.yaml
 
 is an equivalent of running:
 
 .. code::
 
-  eb Bioconductor-3.11-foss-2020a.eb;
-  eb EasyBuild-4.3.1-SYSTEM.eb;
-  eb GROMACS-2020.1-foss-2020a.eb;
-  eb GROMACS-2020.3-foss-2020a.eb;
-  eb GROMACS-2020.1-fosscuda-2020a.eb;
-  eb OpenFOAM-8-foss-2020a.eb;
-  eb OpenFOAM-v2006-foss-2020a.eb;
-  eb R-4.0.0-foss-2020a.eb;
-
+  eb Bioconductor-3.11-foss-2020a.eb EasyBuild-4.3.1-SYSTEM.eb GROMACS-2020.1-foss-2020a.eb GROMACS-2020.3-foss-2020a.eb GROMACS-2020.1-fosscuda-2020a.eb OpenFOAM-8-foss-2020a.eb OpenFOAM-v2006-foss-2020a.eb R-4.0.0-foss-2020a.eb
 
 to be developed:
 
