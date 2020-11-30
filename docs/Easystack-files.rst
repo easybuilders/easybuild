@@ -5,7 +5,7 @@ Easystack files
 
 This documentation covers aspects of specifying a software stack to instlal with Easybuild with *easystack files*.
 
-*Note: this is an* :ref:`experimental feature <experimental_features>`. *Some of the mentioned functionality may be subject to change or be prone to errors.*
+**Note: this is an* :ref:`experimental feature <experimental_features>`. *Some of the mentioned functionality may be subject to change or be prone to errors.**
 
 .. contents::
     :depth: 3
