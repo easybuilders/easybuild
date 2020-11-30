@@ -55,7 +55,7 @@ It is mandatory to specify basic software-related keywords - *software name*, *t
 *versions*: Version of software. If multiple entries are provided, EB will install all of them. 
 Can be in form of a list or consecutive line entries (see example). 
 
-**General structure of YAML-formatted *easystack*:**
+**General structure of YAML-formatted easystack:**
 
 .. code::
 
@@ -66,7 +66,7 @@ Can be in form of a list or consecutive line entries (see example).
             software_version:
               versionsuffix:
 
-**Use-case example of YAML-formatted *easystack*:**
+**Use-case example of YAML-formatted easystack:**
 
 .. code::
 
