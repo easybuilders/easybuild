@@ -30,26 +30,26 @@ To build software with *Easystack*, type:
 
 .. code::
 
-  eb --easystack yourEasystackFile.yaml
+  eb --easystack example.yaml
 
-where yourEasystackFile.yaml is the file with specifications that you just created (more about this in the next chapter).
+where example.yaml is the file with specifications that you just created (more about this in the next chapter).
 
 .. building_with_easystack_structure:
 
 Structure of an Easystack file
 -------------------------
 
-Easystack file can currently be of type YAML. 
+Easystack files are written in YAML syntax. ( YAML guide: https://learnxinyminutes.com/docs/yaml )
 
 General options, which should be applied to each software (i.e. *robot*), are defined at the top of the file.
 
 Afterwards, particular software specifications follow.
 
-It is mandatory to specify basic software-related keywords - *software name*, *toolchain* and *versions*.
+It is mandatory to specify basic software-related keywords - *software name*, *toolchains* and *versions*.
 
 *software name*: Name of software.
 
-*toolchain*: A group of development related utilities (eg compiler) and libraries. 
+*toolchains*: A group of development related utilities (eg compiler) and libraries. 
 (see :ref:`toolchains` for more details).
 
 *versions*: Version of software. If multiple entries are provided, EB will install all of them. 
@@ -61,7 +61,7 @@ Can be in form of a list or consecutive line entries (see example).
 
   software:
     software_name:
-      toolchain:
+      toolchains:
         toolchain_name (incl. version):
             software_version:
               versionsuffix:
@@ -109,8 +109,8 @@ is an equivalent of running:
 
   eb Bioconductor-3.11-foss-2020a.eb EasyBuild-4.3.1-SYSTEM.eb GROMACS-2020.1-foss-2020a.eb GROMACS-2020.3-foss-2020a.eb GROMACS-2020.1-fosscuda-2020a.eb OpenFOAM-8-foss-2020a.eb OpenFOAM-v2006-foss-2020a.eb R-4.0.0-foss-2020a.eb
 
-to be developed:
-
+To be developed
+---------------
 
 **Optionally, more advanced keywords can be specified:**
 *easybuild_version*, *robot*, *from_pr*, *versionsuffix*, *include-labels*, *exclude-labels*.
