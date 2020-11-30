@@ -111,7 +111,7 @@ feature release
   * solve issue where pybind11 picks up on the system Python instead of one provided by a module (`#2158 <https://github.com/easybuilders/easybuild-easyblocks/pull/2158>`_)
   * fix Qt5 easyblock to support installation on Arm/aarch64 (requires platform to be ``linux-g++``) (`#2160 <https://github.com/easybuilders/easybuild-easyblocks/pull/2160>`_)
   * fix OpenFOAM easyblock to support installation on Arm/aarch64 systems (`#2162 <https://github.com/easybuilders/easybuild-easyblocks/pull/2162>`_)
-  * explicitely enable/disable CUDA options in PyTorch easyblock + fix download check in sanity check + fix for disabling of *NNPACK on POWER systems (`#2164 <https://github.com/easybuilders/easybuild-easyblocks/pull/2164>`_)
+  * explicitly enable/disable CUDA options in PyTorch easyblock + fix download check in sanity check + fix for disabling of *NNPACK on POWER systems (`#2164 <https://github.com/easybuilders/easybuild-easyblocks/pull/2164>`_)
   * fix sanity check in Mathematica easyblock for 11.x versions older than 11.3 (`#2168 <https://github.com/easybuilders/easybuild-easyblocks/pull/2168>`_)
   * unset ``$COLUMNS`` if it is set to ``0`` before running Perl's configure script (`#2169 <https://github.com/easybuilders/easybuild-easyblocks/pull/2169>`_)
 
