@@ -1,25 +1,25 @@
-.. easystack:
+.. _easystack:
 
 Easystack files
 ===============
 
 This documentation covers aspects of specifying a software stack to instlal with Easybuild with *easystack files*.
 
-*Note: this is an experimental feature. Some of the mentioned functionality may be subject to change or be prone to errors.*
+*Note: this is an `experimental feature <experimental_features>`. Some of the mentioned functionality may be subject to change or be prone to errors.*
 
 .. contents::
     :depth: 3
     :backlinks: none
 
 
-.. easystack_basics:
+.. _easystack_basics:
 
 The basics
 ----------
 
 *Easystack files* describe an entire software stack, and can be used to specify to EasyBuild what to install.
 
-.. easystack_usage:
+.. _easystack_usage:
 
 Usage
 -----
@@ -32,7 +32,7 @@ To build software with *Easystack*, type:
 
 where ``example.yaml`` is the file with specifications that you just created (more about this in the next section).
 
-.. easystack_structure:
+.. _easystack_structure:
 
 Structure of an easystack file
 ------------------------------
@@ -107,8 +107,8 @@ This is equivalent to running:
 To be developed
 ---------------
 
-- **Optionally, more advanced keywords can be specified:**
-  *easybuild_version*, *robot*, *from_pr*, *versionsuffix*, *include-labels*, *exclude-labels*.
+Optionally, more advanced keywords can be specified: *easybuild_version*, *robot*, *from_pr*, *versionsuffix*, *include-labels*, *exclude-labels*.
+
 - *easybuild_version:* if present, EasyBuild will check if the easystack file was intended for the current version of EasyBuild.
 - *robot:* enables dependency resolution; see :ref:`Using_the_EasyBuild_command_line` for more details.
 - *from_pr:* easyconfig files that are added or modified by a
