@@ -9,6 +9,7 @@ Template names/values derived from easyconfig instance
 Template name                  Template value                                          
 ===========================    ========================================================
 ``%(arch)s``                   System architecture (e.g. x86_64, aarch64, ppc64le, ...)
+``%(module_name)s``            Module name                                             
 ``%(nameletter)s``             First letter of software name                           
 ``%(toolchain_name)s``         Toolchain name                                          
 ``%(toolchain_version)s``      Toolchain version                                       
@@ -64,8 +65,8 @@ Template values set outside EasyBlock runstep
 ==================    ======================
 Template name         Template value        
 ==================    ======================
-``%(installdir)s``    Installation directory
 ``%(builddir)s``      Build directory       
+``%(installdir)s``    Installation directory
 ==================    ======================
 
 Template constants that can be used in easyconfigs

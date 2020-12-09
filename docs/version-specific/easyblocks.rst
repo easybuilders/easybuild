@@ -23,6 +23,7 @@
       * EB_ant
       * EB_BiSearch
       * EB_Chimera
+      * EB_code_minus_server
       * EB_COMSOL
       * EB_FDTD_underscore_Solutions
       * EB_FLUENT
@@ -212,6 +213,7 @@
   * EB_Boost
   * EB_CFDEMcoupling
   * EB_CHARMM
+  * EB_code_minus_server
   * EB_CP2K
   * EB_FSL
   * EB_GAMESS_minus_US
@@ -256,6 +258,7 @@
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
+      * EB_Metagenome_Atlas
       * EB_netcdf4_minus_python
       * EB_nose
       * EB_numexpr
@@ -331,6 +334,7 @@
     * EB_ant
     * EB_BiSearch
     * EB_Chimera
+    * EB_code_minus_server
     * EB_COMSOL
     * EB_FDTD_underscore_Solutions
     * EB_FLUENT
@@ -384,6 +388,7 @@
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
+      * EB_Metagenome_Atlas
       * EB_netcdf4_minus_python
       * EB_nose
       * EB_numexpr
