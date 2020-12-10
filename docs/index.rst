@@ -65,6 +65,7 @@ Advanced usage topics
     Detecting_loaded_modules
     Easyconfig-files-local-variables
     Easyconfigs_index
+    Easystack-files
     Experimental_features
     Extended_dry_run
     Hooks
