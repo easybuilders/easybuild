@@ -13,3 +13,4 @@ Currently enabled experimental features include:
 
  * support for easyconfig files in YAML syntax (see :ref:`easyconfig_yeb_format`)
  * support for generating container recipes & images (see :ref:`containers`)
+ * support for using easystack files (see :ref:`easystack`)
