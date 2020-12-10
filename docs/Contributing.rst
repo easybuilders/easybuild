@@ -497,7 +497,7 @@ Some aspects of this are automated, others require human intervention.
 Requirements for pull requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Only pull requests (PRs) that fullfil these requirements are eligible to be merged:**
+**Only pull requests (PRs) that fulfill these requirements are eligible to be merged:**
 
 (i) *the PR must target the* ``develop`` *branch of the repository*; see :ref:`contributing_review_process_develop_branch`
 
