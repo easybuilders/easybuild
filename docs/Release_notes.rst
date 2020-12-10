@@ -103,9 +103,9 @@ bugfix/update release
 
 **easyconfigs**
 
-* add easyconfigs for new gobff toolchain: gobff/2020.11 + gobff/2020.06-amd (`#11761 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11761>`_)
+* add easyconfigs for new `gobff` toolchain: `gobff/2020.11` + `gobff/2020.06-amd` (`#11761 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11761>`_)
 
-* add easyconfigs for updates of common toolchains: foss/2020b, fosscuda/2020b, intel/2020b, intelcuda/2020b
+* add easyconfigs for updates of common toolchains: `foss/2020b`, `fosscuda/2020b`, `intel/2020b`, `intelcuda/2020b`
 
   * see also https://easybuild.readthedocs.io/en/latest/Common-toolchains.html
 
