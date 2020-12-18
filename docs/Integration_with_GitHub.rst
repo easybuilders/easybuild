@@ -377,7 +377,7 @@ For example, to use the LAMMPS easyblock contributed via `easyblocks pull reques
 <https://github.com/easybuilders/easybuild-easyblocks/pull/1964>`_ together with the LAMMPS v7Aug2019 easyconfigs contributed via 
 `easyconfigs pull request #9884 <https://github.com/easybuilders/easybuild-easyconfigs/pull/9884>`_::
 
-    $ eb --from-pr 9884 --include-easyblocks--from-pr 1964 --list-easyblocks=detailed
+    $ eb --from-pr 9884 --include-easyblocks-from-pr 1964 --list-easyblocks=detailed
     == temporary log file in case of crash /tmp/eb-Eq2zsJ/easybuild-1AaWf8.log
     EasyBlock (easybuild.framework.easyblock)
     ...
