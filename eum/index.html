@@ -224,6 +224,24 @@ Limited seats are available for these tutorials for practical reasons (hands-on 
         by Jörg Saßmannshausen (Guy's and St Thomas' NHS Foundation Trust and King's College London, UK)
         </em></p>
         <p>
+        Reproducibility in research and science is an important aspect. Without this, any result obtained is
+        more or less useless. Whereas in the real world we are conducting an experiment a few times, like
+        3 analysis of a compound, large field studies for vaccinations etc, in the virtual world we are not
+        always able to afford this. This is particularly true for larger HPC calculations where the resources
+        are simply often not there. Thus, we need to make sure that we are not generating random numbers,
+        but we are generating meaningful results which are relevant to the real world.</p>
+        <p>For this reason we need to benchmark our computational studies and we need to be able to reproduce
+        the installation. One way forward here is of course EasyBuild, which is installing the software in a
+        reproducible way.</p>
+        <p>However, not all HPC facilities have such a sotware management tool installed. On top of that,
+        in particular in the Bioinformatic Community, users are often running long pipelines or have very
+        special requirements on the way the software is installed. This can make it a bit more difficult to
+        reproduce results between different HPC facilities. One way forward here is for example a container
+        solution like Singularity.</p>
+        <p>In this presentation we are showing a way how to combine the best of the two worlds: using EasyBuild
+        for the software installation and using Singularity for the platform-independant way to run the
+        calculations. We show how a set of simple bash-scripts enables users like for example clinitians,
+        who are not that Linux savvy, to create such containers easily.
         </p><br/>
     </li>
     <li>
@@ -569,6 +587,11 @@ Limited seats are available for these tutorials for practical reasons (hands-on 
         by Jörg Saßmannshausen (Guy's and St Thomas' NHS Foundation Trust and King's College London, UK)
         </em></p>
         <p>
+        In this hands on tutorial we will build 2 containers: a simple one to give users an understanding of
+        how the set of scripts are working and how we can build for example Debian or CentOS containers without
+        much knowledge of the background mechanisms. In the second, more advanced part, we show how to open up
+        the containers and give users are chance to install their bespoken pipelines and use the power of the
+        containers to run that on virtually any suitable platform.
         </p><br/>
     </li>
     <li>
