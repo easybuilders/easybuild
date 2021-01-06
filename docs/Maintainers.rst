@@ -73,7 +73,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
 * **Simon Branford** (`BEAR - University of Birmingham <https://intranet.birmingham.ac.uk/bear>`_)
 
-  * GitHub: `@branfosj <https://github.com/branfosj>`_ - e-mail: ``s.j.branford (at) bham.ac.uk`` - IRC/Slack: ``@Simon``
+  * GitHub: `@branfosj <https://github.com/branfosj>`_ - e-mail: ``s.j.branford (at) bham.ac.uk`` - IRC/Slack: ``Simon``
 
 * **Miguel Dias Costa** (National University of Singapore)
 
