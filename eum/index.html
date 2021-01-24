@@ -46,10 +46,13 @@
         </p>
 <hr>
 
-<p align="center"><a href="#practical-info">Practical info</a> -
+<p align="center">
+<a href="#practical-info">Practical info</a> -
 <a href="#registration">Registration</a> -
 <a href="#organisation">Organisation</a> -
+<strong>
 <a href="#agenda">Agenda</a> -
+</strong>
 <a href="#cvmfs-tutorial">CernVM-FS tutorial</a> -
 <a href="#reframe-tutorial">ReFrame tutorial</a> -
 <a href="#contact">Contact</a>
@@ -57,7 +60,7 @@
 
 <hr>
 
-<a name="practical-info"/>
+<a id="practical-info"/>
 <h2><a>Practical information</a></h2>
 
 <p>The 6th EasyBuild User Meeting will be held <strong>online</strong>,
@@ -91,7 +94,7 @@ via <a href="https://easybuild-slack.herokuapp.com">https://easybuild-slack.hero
 
 <hr>
 
-<a name="registration"/>
+<a id="registration"/>
 <h2><a>Registration</a></h2>
 
 <p><strong>Registration for EUM'21, and the CernVM-FS and ReFrame tutorials, is now closed!</strong></p>
@@ -106,7 +109,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <hr>
 
-<a name="organisation"/>
+<a id="organisation"/>
 <h2><a>Organisation</a></h2>
 
 <p>
@@ -120,7 +123,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <hr>
 
-<a name="agenda"/>
+<a id="agenda"/>
 <h2><a>Agenda</a></h2>
 
 <p>The 6th EasyBuild User Meeting consists of several sessions spread over the week of Jan 25-29 2021.
@@ -129,17 +132,85 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <p>We intentionally left ample time in between talks to allow for Q&amp;A, interactive discussions, switching between speakers and breaks. </p>
 
+<h3>Overview</h3>
+
+<ul>
+<li style="list-style-type: none"><strong>Mon Jan 25th 2021</strong></li>
+<ul>
+    <li><em>[15:45-15:55 UTC]</em> <a href="#welcome">Welcome to EUM'21</a></li>
+    <li><em>[16:00-16:30 UTC]</em> <a href="#reframe-talk">Writing powerful HPC regression tests with ReFrame</a></li>
+    <li><em>[17:00-17:30 UTC]</em> <a href="#cvmfs-talk">CernVM-FS: Overview and Roadmap </a></li>
+    <li><em>[18:00-19:30 UTC]</em> <a href="#eb-state-of-union">EasyBuild: State of the Union</a></li>
+</ul>
+<li style="list-style-type: none"><strong>Tue Jan 26th 2021</strong></li>
+<ul>
+    <li><em>[09:00-09:45 UTC]</em> <a href="#cvmfs-tutorial-part1">CernVM-FS tutorial (part 1/4) </a></li>
+    <li><em>[10:15-10:45 UTC]</em> <a href="#eb-singularity-containers-talk">Easy-Build Singularity Containers (presentation) </a></li>
+    <li><em>[11:00-11:30 UTC]</em> <a href="#gentoo-prefix">Gentoo Prefix: a unified experience on top of another distribution</a></li>
+    <li><em>[12:00-12:45 UTC]</em> <a href="#eessi">European Environment for Scientific Software Installations (EESSI)</a></li>
+    <li><em>[13:15-13:45 UTC]</em> <a href="#reframe-tutorial-part1">ReFrame tutorial (part 1/3) </a></li>
+</ul>
+<li style="list-style-type: none"><strong>Wed Jan 27th 2021</strong></li>
+<ul>
+    <li><em>[09:00-10:00 UTC]</em> <a href="#cvmfs-tutorial-part2">CernVM-FS tutorial (part 2/4) </a></li>
+    <li><em>[14:00-14:15 UTC]</em> <a href="#eb-site-talk-cscs">EasyBuild site presentation: CSCS </a></li>
+    <li><em>[14:30-14:45 UTC]</em> <a href="#eb-site-talk-iter">EasyBuild site presentation: ITER</a></li>
+    <li><em>[15:00-15:30 UTC]</em> <a href="#prace-bpg">PRACE Best Practice Guides</a></li>
+    <li><em>[16:00-16:40 UTC]</em> <a href="#lmod-xalt">Lmod and XALT: Updates</a></li>
+    <li><em>[17:00-17:30 UTC]</em> <a href="#magic-castle">Magic Castle</a></li>
+    <li><em>[18:00-18:45 UTC]</em> <a href="#blis">BLIS: A Framework for Rapidly Instantiating BLAS Functionality</a></li>
+    <li><em>[19:15-19:45 UTC]</em> <a href="#eb-site-talk-astrazeneca">EasyBuild site presentation: AstraZeneca</a></li>
+</ul>
+<li style="list-style-type: none"><strong>Thu Jan 28th 2021</strong></li>
+<ul>
+    <li><em>[09:00-09:45 UTC]</em> <a href="#cvmfs-tutorial-part3">CernVM-FS tutorial (part 3/4) </a></li>
+    <li><em>[10:15-10:45 UTC]</em> <a href="#reframe-tutorial-part2">ReFrame tutorial (part 2/3) </a></li>
+    <li><em>[11:00-11:15 UTC]</em> <a href="#learnhpc">LearnHPC </a></li>
+    <li><em>[11:25-11:40 UTC]</em> <a href="#eb-site-talk-jsc">EasyBuild site presentation: Jülich Supercomputing Centre</a></li>
+    <li><em>[12:00-12:45 UTC]</em> <a href="#citc">Cluster-in-the-Cloud</a></li>
+    <li><em>[13:15-13:30 UTC]</em> <a href="#eb-site-talk-lxp">EasyBuild site presentation: LuxProvide</a></li>
+    <li><em>[13:45-14:00 UTC]</em> <a href="#eb-site-talk-bear">EasyBuild site presentation: University of Birgminham</a></li>
+</ul>
+<li style="list-style-type: none"><strong>Fri Jan 29th 2021</strong></li>
+<ul>
+    <li><em>[09:00-10:00 UTC]</em> <a href="#cvmfs-tutorial-part4">CernVM-FS tutorial (part 4/4) </a></li>
+    <li><em>[13:00-13:30 UTC]</em> <a href="#reframe-tutorial-part3">ReFrame tutorial (part 3/3) </a></li>
+    <li><em>[14:00-14:30 UTC]</em> <a href="#eb-singularity-containers-tutorial">Easy-Build Singularity Containers (tutorial)</a></li>
+    <li><em>[15:00-15:30 UTC]</em> <a href="#buildtest">buildtest: Testing Framework for HPC systems</a></li>
+    <li><em>[15:40-15:55 UTC]</em> <a href="#lmodule"> Automate Module Testing with Lmodule</a></li>
+    <li><em>[16:15-17:00 UTC]</em> <a href="#spack">Spack update</a></li>
+</ul>
+</ul>
+
 <h3>Mon Jan 25th 2021</h3>
 
 <ul style="list-style: none;">
     <li>
+        <a id="welcome"/>
+        <br/><p><em>
+        [15:45-15:55 UTC]
+        </em>
+        <strong>
+        Welcome to EUM'21
+        </strong>
+        </br><a href="https://www.youtube.com/watch?v=m8XphFQT3z0&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=1"><em>(YouTube live stream)</em></a>
+        </p>
+        <p><em>
+        by Kenneth Hoste (HPC-UGent, Belgium)
+        </em></p>
+        <p>
+        Quick overview of agenda + practical guidelines for attending EUM'21.
+        </p><br/>
+    </li>
+    <li>
+        <a id="reframe-talk"/>
         <br/><p><em>
         [16:00-16:30 UTC]
         </em>
         <strong>
         Writing powerful HPC regression tests with <a href="https://reframe-hpc.readthedocs.io">ReFrame</a>
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=SQknciRaJBE&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=1"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=SQknciRaJBE&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=2"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Vasileios Karakasis (CSCS, Switzerland)
@@ -155,6 +226,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="cvmfs-talk"/>
         <p><em>
         [17:00-17:30 UTC]
         </em>
@@ -182,13 +254,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-state-of-union"/>
         <p><em>
         [18:00-19:30 UTC]
         </em>
         <strong>
         EasyBuild: State of the Union
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=G6ninQmSNpY&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=3"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=G6ninQmSNpY&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=4"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Kenneth Hoste (HPC-UGent, Belgium)
@@ -206,13 +279,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <ul style="list-style: none;">
     <li>
+        <a id="cvmfs-tutorial-part1"/>
         <br/><p><em>
         [09:00-09:45 UTC]
         </em>
         <strong>
         CernVM-FS tutorial (part 1/4)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=DHndus4qAqw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=4"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=DHndus4qAqw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=5"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Kenneth Hoste (HPC-UGent) and Bob Dröge (Univ. of Groningen, The Netherlands)
@@ -222,13 +296,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-singularity-containers-talk"/>
         <p><em>
         [10:15-10:45 UTC]
         </em>
         <strong>
         Easy-Build Singularity Containers (presentation)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=J7Z4_iD9EXo&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=5"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=J7Z4_iD9EXo&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=6"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Jörg Saßmannshausen (Guy's and St Thomas' NHS Foundation Trust and King's College London, UK)
@@ -255,13 +330,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="gentoo-prefix"/>
         <p><em>
         [11:00-11:30 UTC]
         </em>
         <strong>
             <a href="https://wiki.gentoo.org/wiki/Project:Prefix">Gentoo Prefix</a>: a unified experience on top of another distribution
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=C0xpWHNdBv4&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=6"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=C0xpWHNdBv4&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=7"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Fabian Groffen (Gentoo)
@@ -291,6 +367,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </em></p>
     </li>
     <li>
+        <a id="eessi"/>
         <p><em>
         [12:00-12:45 UTC]
         </em>
@@ -299,7 +376,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
             European Environment for Scientific Software Installations (EESSI)
             </a>
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=1CXwzIW_MsU&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=7"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=1CXwzIW_MsU&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=8"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Bob Dröge (Univ. of Groningen, The Netherlands)
@@ -338,10 +415,11 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         <p><em>
         [13:15-13:45 UTC]
         </em>
+        <a id="reframe-tutorial-part1"/>
         <strong>
         ReFrame tutorial (part 1/3)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=qfpaOvdCuIc&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=8"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=qfpaOvdCuIc&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=9"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Vasileios Karakasis &amp; Victor Holanda Rusu (CSCS, Switzerland)
@@ -359,10 +437,11 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         <br/><p><em>
         [09:00-10:00 UTC]
         </em>
+        <a id="cvmfs-tutorial-part2"/>
         <strong>
         CernVM-FS tutorial (part 2/4)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=vf0hXhehUzc&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=9"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=vf0hXhehUzc&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=10"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Kenneth Hoste (HPC-UGent) and Bob Dröge (Univ. of Groningen, The Netherlands)
@@ -372,13 +451,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-site-talk-cscs"/>
         <p><em>
         [14:00-14:15 UTC]
         </em>
         <strong>
         EasyBuild site presentation: CSCS
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=c6W5lop0YYc&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=10"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=c6W5lop0YYc&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=11"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Luca Marsella (CSCS)
@@ -387,13 +467,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-site-talk-iter"/>
         <p><em>
         [14:30-14:45 UTC]
         </em>
         <strong>
         EasyBuild site presentation: ITER
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=Kibybb5kHy8&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=11"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=Kibybb5kHy8&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=12"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Simon Pinches (ITER)
@@ -402,14 +483,15 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="prace-bpg"/>
         <p><em>
         [15:00-15:30 UTC]
         </em>
         <strong>
             <a href="https://prace-ri.eu/training-support/best-practice-guides/">
-                PRACE Best Practice Guide</a>
+                PRACE Best Practice Guides</a>
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=VkzsxQdopz8&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=12"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=VkzsxQdopz8&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=13"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Ole Saastad (Univ. of Oslo, Norway)
@@ -418,13 +500,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="lmod-xalt"/>
         <p><em>
         [16:00-16:40 UTC]
         </em>
         <strong>
         Lmod and XALT: Updates
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=8dwgNm9xkqk&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=13"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=8dwgNm9xkqk&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=14"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Robert McLay (TACC, US)
@@ -442,6 +525,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="magic-castle"/>
         <p><em>
         [17:00-17:30 UTC]
         </em>
@@ -449,7 +533,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
             <a href="https://github.com/ComputeCanada/magic_castle">
                 Magic Castle</a>
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=54ph7f2-AL4&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=14"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=54ph7f2-AL4&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=15"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Félix-Antoine Fortin (Université Laval, Compute Canada)
@@ -458,6 +542,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="blis"/>
         <p><em>
         [18:00-18:45 UTC]
         </em>
@@ -465,7 +550,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
             <a href="https://github.com/flame/blis">
                 BLIS</a>: A Framework for Rapidly Instantiating BLAS Functionality
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=eb3dXivyTzE&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=15"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=eb3dXivyTzE&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=16"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Field G. Van Zee (University of Texas at Austin, US)
@@ -483,13 +568,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-site-talk-astrazeneca"/>
         <p><em>
         [19:15-19:45 UTC]
         </em>
         <strong>
         EasyBuild site presentation: AstraZeneca
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=tXjjRinGxRQ&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=16"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=tXjjRinGxRQ&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=17"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Jon Jackson and Ben Carr (AstraZeneca)
@@ -506,10 +592,11 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         <br/><p><em>
         [09:00-09:45 UTC]
         </em>
+        <a id="cvmfs-tutorial-part3"/>
         <strong>
         CernVM-FS tutorial (part 3/4)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=Op_EfOg2vok&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=17"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=Op_EfOg2vok&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=18"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Kenneth Hoste (HPC-UGent) and Bob Dröge (Univ. of Groningen, The Netherlands)
@@ -522,10 +609,11 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         <p><em>
         [10:15-10:45 UTC]
         </em>
+        <a id="reframe-tutorial-part2"/>
         <strong>
         ReFrame tutorial (part 2/3)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=znyGLlxb_fs&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=18"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=znyGLlxb_fs&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=19"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Vasileios Karakasis &amp; Victor Holanda Rusu (CSCS, Switzerland)
@@ -535,13 +623,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="learnhpc"/>
         <p><em>
         [11:00-11:15 UTC]
         </em>
         <strong>
         LearnHPC
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=KyDHzxlwJUw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=19"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=KyDHzxlwJUw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=20"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Alan O'Cais (JSC, Germany)
@@ -551,13 +640,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-site-talk-jsc"/>
         <p><em>
         [11:25-11:40 UTC]
         </em>
         <strong>
         EasyBuild site presentation: Jülich Supercomputing Centre
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=_ZJJTmg52To&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=20"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=_ZJJTmg52To&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=21"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Anke Kreuzer (JSC, Germany)
@@ -566,6 +656,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="citc"/>
         <p><em>
         [12:00-12:45 UTC]
         </em>
@@ -573,7 +664,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
             <a href="https://cluster-in-the-cloud.readthedocs.io/">
                 Cluster-in-the-Cloud</a>
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=ejsqH0Jy9Qw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=21"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=ejsqH0Jy9Qw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=22"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Matt Williams (Univ. of Bristol, UK)
@@ -582,13 +673,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-site-talk-lxp"/>
         <p><em>
         [13:15-13:30 UTC]
         </em>
         <strong>
         EasyBuild site presentation: LuxProvide
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=WNNvJe7mmoE&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=22"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=WNNvJe7mmoE&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=23"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Valentin Plugaru and Robert Mijakovic (LuxProvide, Luxembourg)
@@ -597,13 +689,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-site-talk-bear"/>
         <p><em>
         [13:45-14:00 UTC]
         </em>
         <strong>
         EasyBuild site presentation: University of Birmingham
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=i6gDI4VOt28&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=23"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=i6gDI4VOt28&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=24"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Simon Branford (Univ. of Birmingham, UK)
@@ -620,10 +713,11 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         <br/><p><em>
         [09:00-10:00 UTC]
         </em>
+        <a id="cvmfs-tutorial-part4"/>
         <strong>
         CernVM-FS tutorial (part 4/4)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=DAWCKM7fpwA&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=24"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=DAWCKM7fpwA&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=25"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Kenneth Hoste (HPC-UGent) and Bob Dröge (Univ. of Groningen, The Netherlands)
@@ -636,10 +730,11 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         <p><em>
         [13:00-13:30 UTC]
         </em>
+        <a id="reframe-tutorial-part3"/>
         <strong>
         ReFrame tutorial (part 3/3)
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=PPQX9cufR1U&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=25"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=PPQX9cufR1U&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=26"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Vasileios Karakasis &amp; Victor Holanda Rusu (CSCS, Switzerland)
@@ -649,13 +744,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="eb-singularity-containers-tutorial"/>
         <p><em>
         [14:00-14:30 UTC]
         </em>
         <strong>
         Easy-Build Singularity Containers: tutorial
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=34SFF5Ow7Og&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=26"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=34SFF5Ow7Og&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=27"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Jörg Saßmannshausen (Guy's and St Thomas' NHS Foundation Trust and King's College London, UK)
@@ -669,13 +765,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="buildtest"/>
         <p><em>
         [15:00-15:30 UTC]
         </em>
         <strong>
         buildtest: Testing Framework for HPC systems
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=FI3ES9B89Ig&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=27"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=FI3ES9B89Ig&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=28"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Shahzeb Siddiqui (NERSC, US)
@@ -697,13 +794,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="lmodule"/>
         <p><em>
         [15:40-15:55 UTC]
         </em>
         <strong>
         Automate Module Testing with Lmodule
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=RyUhPSzIrqQ&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=28"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=RyUhPSzIrqQ&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=29"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Shahzeb Siddiqui (NERSC, US)
@@ -722,13 +820,14 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
         </p><br/>
     </li>
     <li>
+        <a id="spack"/>
         <p><em>
         [16:15-17:00 UTC]
         </em>
         <strong>
             <a href="https://spack.io">Spack</a> update
         </strong>
-        </br><a href="https://www.youtube.com/watch?v=mxJVUnHz-Sw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=29"><em>(YouTube live stream)</em></a>
+        </br><a href="https://www.youtube.com/watch?v=mxJVUnHz-Sw&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=30"><em>(YouTube live stream)</em></a>
         </p>
         <p><em>
         by Todd Gamblin (LLNL, US)
@@ -740,7 +839,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <hr>
 
-<a name="cvmfs-tutorial"/>
+<a id="cvmfs-tutorial"/>
 <h2><a>CernVM-FS tutorial</a></h2>
 
 <p>
@@ -805,7 +904,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <hr>
 
-<a name="reframe-tutorial"/>
+<a id="reframe-tutorial"/>
 <h2><a>ReFrame tutorial</a></h2>
 
 <p>
@@ -837,7 +936,7 @@ please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</stro
 
 <hr>
 
-<a name="contact"/>
+<a id="contact"/>
 <h2><a>Contact</a></h2>
 
 <p>In case of questions, please contact <a href="mailto:eum@lists.ugent.be">eum@lists.ugent.be</a>.</p>
