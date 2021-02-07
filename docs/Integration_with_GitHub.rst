@@ -637,7 +637,7 @@ has been created. EasyBuild does *not* make changes to an existing working copy 
 (cfr. :ref:`github_git_working_dirs_path`).
 
 .. note:: When modifying existing files via ``--new-pr``,
-          you *must* specify a (meaningful) commit message using `--pr-commit-msg`, see :ref:`github_controlling_pr_metadata`.
+          you *must* specify a (meaningful) commit message using ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
 
 Example
 +++++++

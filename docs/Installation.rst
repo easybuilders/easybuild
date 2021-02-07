@@ -522,7 +522,7 @@ Some dependencies are optional and are only required to support certain features
 Optional Python packages
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* `GC3Pie <https://pypi.org/project/gc3pie>`_, only needed when using `GC3Pie` as a backend for `--job`,
+* `GC3Pie <https://pypi.org/project/gc3pie>`_, only needed when using `GC3Pie` as a backend for ``--job``,
   see also :ref:`submitting_jobs`;
 * `GitPython <http://gitorious.org/git-python>`_, only needed if
   EasyBuild is hosted in a git repository or if you’re using a git
