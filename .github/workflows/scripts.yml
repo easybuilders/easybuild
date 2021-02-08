@@ -21,7 +21,10 @@ jobs:
       run: |
         sudo apt-get install lua5.2 liblua5.2-dev lua-filesystem lua-posix tcl-dev
         # fix for lua-posix packaging issue, see https://bugs.launchpad.net/ubuntu/+source/lua-posix/+bug/1752082
-        sudo ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
+        # needed for 18.04 not for 20.04.  Conditional added to skip if posix.so exists
+        if [ ! -e /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so ] ; then
+            sudo ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
+        fi
         # use script provided by easybuild-framework to install recent Lmod
         source install_eb_dep.sh Lmod-8.3.8 $HOME
         echo $MOD_INIT > $HOME/mod_init
