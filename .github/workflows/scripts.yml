@@ -21,7 +21,7 @@ jobs:
       run: |
         sudo apt-get install lua5.2 liblua5.2-dev lua-filesystem lua-posix tcl-dev
         # fix for lua-posix packaging issue, see https://bugs.launchpad.net/ubuntu/+source/lua-posix/+bug/1752082
-        # needed for 18.04 not for 20.04.  Conditional added to skip if posix.so exists
+        # needed for Ubuntu 18.04, but not for Ubuntu 20.04, so skipping symlinking if posix.so already exists
         if [ ! -e /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so ] ; then
             sudo ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
         fi
