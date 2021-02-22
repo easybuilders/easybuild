@@ -118,6 +118,7 @@ license parameters
 =======================    ===================================================================================================================================================    =================
 **Parameter name**         **Description**                                                                                                                                        **Default value**
 =======================    ===================================================================================================================================================    =================
+``accept_eula``            Accepted End User License Agreement (EULA) for this software                                                                                           False            
 ``group``                  Name of the user group for which the software should be available; format: string or 2-tuple with group name + custom error for users outside group    None             
 ``key``                    Key for installing software                                                                                                                            None             
 ``license_file``           License file for software                                                                                                                              None             
