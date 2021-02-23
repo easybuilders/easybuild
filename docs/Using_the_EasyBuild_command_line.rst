@@ -591,7 +591,7 @@ Tweaking existing easyconfig files, using ``--try-*``
 Making minor changes to existing easyconfig files can be done straight from the ``eb`` command line.
 This way, having to manually copying and editing easyconfig files can be avoided.
 
-Tweaking existing easyconfig files can be done using the **--try-*** command line options.
+Tweaking existing easyconfig files can be done using the ``--try-*`` command line options.
 For each of the software build options that can be used as an alternative to specifying easyconfig file names,
 a matching ``--try-X`` command line options is available:
 

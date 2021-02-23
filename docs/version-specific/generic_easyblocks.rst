@@ -724,11 +724,7 @@ Customised steps in ``IntelBase`` easyblock
 -------------------------------------------
 * ``build_step`` - Binary installation files, so no building.
 * ``configure_step`` - Configure: handle license file and clean home dir.
-* ``install_step`` - Actual installation
-
-        - create silent cfg file
-        - set environment parameters
-        - execute command
+* ``install_step`` - Install Intel software
 
 .. _JAR:
 

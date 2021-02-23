@@ -21,6 +21,7 @@
 
       * EB_ANSYS
       * EB_ant
+      * EB_AOCC
       * EB_BiSearch
       * EB_Chimera
       * EB_code_minus_server
@@ -316,6 +317,7 @@
       * SystemMPI
 
     * EB_Inspector
+    * EB_intel_minus_compilers
     * EB_ipp
     * EB_itac
     * EB_tbb
@@ -332,6 +334,7 @@
 
     * EB_ANSYS
     * EB_ant
+    * EB_AOCC
     * EB_BiSearch
     * EB_Chimera
     * EB_code_minus_server
