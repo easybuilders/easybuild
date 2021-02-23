@@ -410,17 +410,17 @@ you can set the ``keep_git_dir`` to ``True`` (supported since EasyBuild v4.2.0).
 
 Examples:
 
-  * creating a source tarball named ``example-master.tar.gz`` of the ``master`` branch of a (fictional)
+  * creating a source tarball named ``example-main.tar.gz`` of the ``main`` branch of a (fictional)
     ``test`` repository from ``https://agitserver.org/example``:
 
     .. code::
 
       sources = [{
-          'filename': 'example-master.tar.gz',
+          'filename': 'example-main.tar.gz',
           'git_config': {
               'url': 'https://agitserver.org/example',
               'repo_name': 'test',
-              'tag': 'master',
+              'tag': 'main',
           },
       }]
 
@@ -667,7 +667,7 @@ would result in:
 
 
 An example use case of this is building FFTW with different precisions, see the
-`FFTW easyconfig files <https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/f/FFTW>`_.
+`FFTW easyconfig files <https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/f/FFTW>`_.
 
 Sanity check
 ~~~~~~~~~~~~
