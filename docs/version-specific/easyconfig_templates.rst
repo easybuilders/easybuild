@@ -5,37 +5,38 @@
 Template names/values derived from easyconfig instance
 ------------------------------------------------------
 
-===========================    ========================================================
-Template name                  Template value                                          
-===========================    ========================================================
-``%(arch)s``                   System architecture (e.g. x86_64, aarch64, ppc64le, ...)
-``%(module_name)s``            Module name                                             
-``%(nameletter)s``             First letter of software name                           
-``%(toolchain_name)s``         Toolchain name                                          
-``%(toolchain_version)s``      Toolchain version                                       
-``%(version_major_minor)s``    Major.Minor version                                     
-``%(version_major)s``          Major version                                           
-``%(version_minor)s``          Minor version                                           
-===========================    ========================================================
+===========================    =============================
+Template name                  Template value               
+===========================    =============================
+``%(module_name)s``            Module name                  
+``%(nameletter)s``             First letter of software name
+``%(toolchain_name)s``         Toolchain name               
+``%(toolchain_version)s``      Toolchain version            
+``%(version_major_minor)s``    Major.Minor version          
+``%(version_major)s``          Major version                
+``%(version_minor)s``          Minor version                
+===========================    =============================
 
 
 Template names/values for (short) software versions
 ---------------------------------------------------
 
-====================    ==========================================
-Template name           Template value                            
-====================    ==========================================
-``%(cudashortver)s``    short version for CUDA (<major>.<minor>)  
-``%(cudaver)s``         full version for CUDA                     
-``%(javashortver)s``    short version for Java (<major>.<minor>)  
-``%(javaver)s``         full version for Java                     
-``%(perlshortver)s``    short version for Perl (<major>.<minor>)  
-``%(perlver)s``         full version for Perl                     
-``%(pyshortver)s``      short version for Python (<major>.<minor>)
-``%(pyver)s``           full version for Python                   
-``%(rshortver)s``       short version for R (<major>.<minor>)     
-``%(rver)s``            full version for R                        
-====================    ==========================================
+====================    ============================================
+Template name           Template value                              
+====================    ============================================
+``%(cudashortver)s``    short version for CUDA (<major>.<minor>)    
+``%(cudaver)s``         full version for CUDA                       
+``%(cudashortver)s``    short version for CUDAcore (<major>.<minor>)
+``%(cudaver)s``         full version for CUDAcore                   
+``%(javashortver)s``    short version for Java (<major>.<minor>)    
+``%(javaver)s``         full version for Java                       
+``%(perlshortver)s``    short version for Perl (<major>.<minor>)    
+``%(perlver)s``         full version for Perl                       
+``%(pyshortver)s``      short version for Python (<major>.<minor>)  
+``%(pyver)s``           full version for Python                     
+``%(rshortver)s``       short version for R (<major>.<minor>)       
+``%(rver)s``            full version for R                          
+====================    ============================================
 
 
 Template names/values as set in easyconfig
@@ -68,6 +69,21 @@ Template name         Template value
 ``%(builddir)s``      Build directory       
 ``%(installdir)s``    Installation directory
 ==================    ======================
+
+Template values which are defined dynamically
+---------------------------------------------
+
+=================================    ==========================================================================================================================================================================
+Template name                        Template value                                                                                                                                                            
+=================================    ==========================================================================================================================================================================
+``%(arch)s``                         System architecture (e.g. x86_64, aarch64, ppc64le, ...)                                                                                                                  
+``%(mpi_cmd_prefix)s``               Prefix command for running MPI programs (with default number of ranks)                                                                                                    
+``%(cuda_compute_capabilities)s``    Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
+``%(cuda_cc_space_sep)s``            Space-separated list of CUDA compute capabilities                                                                                                                         
+``%(cuda_cc_semicolon_sep)s``        Semicolon-separated list of CUDA compute capabilities                                                                                                                     
+``%(cuda_sm_comma_sep)s``            Comma-separated list of sm_* values that correspond with CUDA compute capabilities                                                                                        
+``%(cuda_sm_space_sep)s``            Space-separated list of sm_* values that correspond with CUDA compute capabilities                                                                                        
+=================================    ==========================================================================================================================================================================
 
 Template constants that can be used in easyconfigs
 --------------------------------------------------
