@@ -152,7 +152,7 @@ Installation of latest release from GitHub
 To install the latest (stable) release of an EasyBuild package directly
 from GitHub, use the following command::
 
-    pip install --install-option "--prefix=$HOME/EasyBuild" https://github.com/easybuilders/easybuild-framework/archive/master.tar.gz
+    pip install --install-option "--prefix=$HOME/EasyBuild" https://github.com/easybuilders/easybuild-framework/archive/main.tar.gz
 
 Again, the order in which the EasyBuild packages are installed is
 important to have full control over the installation process, see
@@ -202,7 +202,7 @@ It can be used as follows::
     # pick an installation prefix (adjust as you like)
     INSTALL_PREFIX=$(mktemp -d $HOME/EasyBuild-XXXXXX)
     # download script
-    curl -O https://raw.githubusercontent.com/easybuilders/easybuild-framework/master/easybuild/scripts/install-EasyBuild-develop.sh
+    curl -O https://raw.githubusercontent.com/easybuilders/easybuild-framework/main/easybuild/scripts/install-EasyBuild-develop.sh
     # run downloaded script, specifying *your* GitHub username and the installation prefix
     bash install-EasyBuild-develop.sh GITHUB_USERNAME $INSTALL_PREFIX
     # update $MODULEPATH via 'module use', and load the module

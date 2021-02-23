@@ -367,7 +367,7 @@ To upgrade to a newer EasyBuild version (say, |version|) than the one currently 
     * using the easyconfig file available on the develop branch at Github <https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
 
   * install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (``easy_install``, ``pip``, ...), see also :ref:`alt_inst_easy_install_pip`
-  * update the ``master`` branch of your Git working copies of the different EasyBuild repositories
+  * update the ``main`` branch of your Git working copies of the different EasyBuild repositories
 
 .. _dependencies:
 

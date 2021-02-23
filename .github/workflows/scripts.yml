@@ -39,7 +39,7 @@ jobs:
         export PATH=$(cat $HOME/path)
 
         cd $HOME/${{matrix.repo}}
-        git checkout master
+        git checkout main
 
         # file to figure out the version from depends on repo
         if [[ ${{matrix.repo}} == "easybuild-framework" ]]; then
@@ -68,12 +68,12 @@ jobs:
 
         cd ${{matrix.repo}}
 
-        # script should make sure we're on master branch
+        # script should make sure we're on main branch
         git checkout develop &> /dev/null
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
-        grep "ERROR: Not on master branch" $out
+        grep "ERROR: Not on main branch" $out
         echo "Expected error found in output: OK!"
-        git checkout master &> /dev/null
+        git checkout main &> /dev/null
 
         echo "================================================================================================"
 

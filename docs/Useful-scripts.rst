@@ -6,7 +6,7 @@ Useful scripts
 A couple of useful stand-alone scripts are provided along with the EasyBuild framework.
 
 The latest stable version of these scripts is available in the ``easybuild-framework`` GitHub repository at
-https://github.com/easybuilders/easybuild-framework/tree/master/easybuild/scripts.
+https://github.com/easybuilders/easybuild-framework/tree/main/easybuild/scripts.
 
 This documentation provides some information on how to use these scripts.
 
@@ -15,7 +15,7 @@ This documentation provides some information on how to use these scripts.
 ``fix_broken_easyconfigs.py``
 -----------------------------
 
-*download from:* https://github.com/easybuilders/easybuild-framework/blob/master/easybuild/scripts/fix_broken_easyconfigs.py
+*download from:* https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/fix_broken_easyconfigs.py
 
 To fix easyconfig files that are broken due to relying on functionality that is no longer supported in EasyBuild v2.x,
 the ``fix_broken_easyconfigs.py`` script can be used.
@@ -77,7 +77,7 @@ This results in ``broken.eb`` being rewritten/fixed, after creating a backup cop
 ``install-EasyBuild-develop.sh``
 --------------------------------
 
-*download from:* https://github.com/easybuilders/easybuild-framework/blob/master/easybuild/scripts/install-EasyBuild-develop.sh
+*download from:* https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/install-EasyBuild-develop.sh
 
 A script to set up an EasyBuild development environment.
 For more information, see :ref:`install_latest_develop_using_script`.
@@ -87,7 +87,7 @@ For more information, see :ref:`install_latest_develop_using_script`.
 ``clean_gists.py``
 --------------------------------
 
-*download from:* https://github.com/easybuilders/easybuild-framework/blob/master/easybuild/scripts/clean_gists.py
+*download from:* https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/clean_gists.py
 
 When using ``--from-pr`` in combination with ``-upload-test-report`` (see
 https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests),
