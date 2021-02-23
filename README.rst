@@ -77,16 +77,15 @@ have any questions or suggestions, you can post them there.
 Only members can post to this mailinglist. To request membership, see
 https://lists.ugent.be/wws/info/easybuild.
 
-IRC
-^^^
+Slack/IRC
+^^^^^^^^^
+
+Contact the EasyBuild community via Slack: https://easybuild.slack.com,
+self-request an invite via https://easybuild-slack.herokuapp.com.
 
 An IRC channel #easybuild has been set up on the FreeNode network.
 
-Just connect your IRC client to the irc.freenode.net server, and join
-the #easybuild channel.
-
-There is an IRC bot present (easybuilder). Just type !help to get
-pointers to the available commands.
+Just connect your IRC client to the chat.freenode.net server, and join the #easybuild channel.
 
 Twitter
 ^^^^^^^
