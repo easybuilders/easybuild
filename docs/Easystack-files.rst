@@ -3,9 +3,9 @@
 Easystack files
 ===============
 
-This documentation covers aspects of specifying a software stack to instlal with Easybuild with *easystack files*.
+This documentation covers aspects of specifying a software stack to install with Easybuild with *easystack files*.
 
-**Note: this is an* :ref:`experimental feature <experimental_features>`. *Some of the mentioned functionality may be subject to change or be prone to errors.**
+**Note: this is an** :ref:`experimental feature <experimental_features>`. **Some of the mentioned functionality may be subject to change or be prone to errors.**
 
 .. contents::
     :depth: 3
@@ -52,7 +52,7 @@ Can be in form of a list or consecutive line entries (see example).
 
 **General structure of YAML-formatted easystack:**
 
-.. code::
+.. code:: yaml
 
   software:
     <software_name>:
@@ -63,7 +63,7 @@ Can be in form of a list or consecutive line entries (see example).
 
 **Example of YAML-formatted easystack:**
 
-.. code::
+.. code:: yaml
 
   software:
     Bioconductor:
@@ -116,6 +116,5 @@ Optionally, more advanced keywords can be specified: *easybuild_version*, *robot
   can be used (regardless of whether the pull request is merged or not).
   (see :ref:`Integration_with_GitHub` for more details).
 - *versionsuffix:* additional suffix for software version (placed after toolchain name)
-  (see :ref:`easyconfig_parameters` for more details).
-- *include-labels:*
-- *exclude-labels:*
+- *include-labels:* only include this software when EasyBuild is configured with one of the specified labels
+- *exclude-labels:* **do not** include this software when EasyBuild is configured with one of the specified labels
