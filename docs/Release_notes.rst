@@ -27,7 +27,7 @@ bugfix/update release
   * detect ``SYSTEM`` toolchain as special case in easystack files (`#3543 <https://github.com/easybuilders/easybuild-framework/pull/3543>`_)
   * enhance ``extract_cmd`` function to use ``cp -a`` for shell scripts (.sh) (`#3545 <https://github.com/easybuilders/easybuild-framework/pull/3545>`_)
   * allow use of alternate envvar(s) to ``$HOME`` for user modules (`#3558 <https://github.com/easybuilders/easybuild-framework/pull/3558>`_)
-  * use ``https://sources/easybuild.io`` as fallback source URL (`#3572 <https://github.com/easybuilders/easybuild-framework/pull/3572>`_, `#3576 <https://github.com/easybuilders/easybuild-framework/pull/3576>`_)
+  * use https://sources.easybuild.io as fallback source URL (`#3572 <https://github.com/easybuilders/easybuild-framework/pull/3572>`_, `#3576 <https://github.com/easybuilders/easybuild-framework/pull/3576>`_)
   * add toolchain definition for ``iibff`` toolchain (`#3574 <https://github.com/easybuilders/easybuild-framework/pull/3574>`_)
   * add ``%(cuda_cc_space_sep)s`` and ``%(cuda_cc_semicolon_sep)s`` templates (`#3578 <https://github.com/easybuilders/easybuild-framework/pull/3578>`_)
   * add support for intel-compiler toolchain (>= 2021.x versions, oneAPI) (`#3581 <https://github.com/easybuilders/easybuild-framework/pull/3581>`_, `#3582 <https://github.com/easybuilders/easybuild-framework/pull/3582>`_)
