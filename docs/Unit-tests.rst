@@ -106,10 +106,10 @@ The unit test suites are automatically triggered by `Jenkins <https://jenkins1.u
 * each pull request (update), see https://jenkins1.ugent.be/view/pull-request-builder/
 * each (set of) change(s) that is merged in (usually via a pull request)
 
-The status of the different unit test suites is tracked separately for the ``master`` and ``develop`` branches
+The status of the different unit test suites is tracked separately for the ``main`` and ``develop`` branches
 of the EasyBuild code repositories:
 
-* ``master`` (stable, latest EasyBuild release): https://jenkins1.ugent.be/view/EasyBuild/
+* ``main`` (stable, latest EasyBuild release): https://jenkins1.ugent.be/view/EasyBuild/
 * ``develop`` (development, potentially unstable): https://jenkins1.ugent.be/view/EasyBuild%20(develop)/
 
 We strictly adher to the policy of only merging pull requests for which the corresponding (latest) run of the *full* unit
@@ -194,7 +194,7 @@ To run a full unit test suite, simply run the respective ``suite`` Python module
 
 For the EasyBuild framework unit tests, each of the test subgroups can be run separately via a dedicated Python module
 other than ``suite``, to focus on testing a particular aspect. See
-https://github.com/easybuilders/easybuild-framework/tree/master/test/framework for an overview of the available Python
+https://github.com/easybuilders/easybuild-framework/tree/main/test/framework for an overview of the available Python
 modules corresponding to subgroups of tests (note: ``__init__.py`` and ``utilities.py`` are *not* such modules).
 
 For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool::

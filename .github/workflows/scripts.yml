@@ -21,7 +21,10 @@ jobs:
       run: |
         sudo apt-get install lua5.2 liblua5.2-dev lua-filesystem lua-posix tcl-dev
         # fix for lua-posix packaging issue, see https://bugs.launchpad.net/ubuntu/+source/lua-posix/+bug/1752082
-        sudo ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
+        # needed for Ubuntu 18.04, but not for Ubuntu 20.04, so skipping symlinking if posix.so already exists
+        if [ ! -e /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so ] ; then
+            sudo ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
+        fi
         # use script provided by easybuild-framework to install recent Lmod
         source install_eb_dep.sh Lmod-8.3.8 $HOME
         echo $MOD_INIT > $HOME/mod_init
@@ -36,7 +39,7 @@ jobs:
         export PATH=$(cat $HOME/path)
 
         cd $HOME/${{matrix.repo}}
-        git checkout master
+        git checkout main
 
         # file to figure out the version from depends on repo
         if [[ ${{matrix.repo}} == "easybuild-framework" ]]; then
@@ -65,12 +68,12 @@ jobs:
 
         cd ${{matrix.repo}}
 
-        # script should make sure we're on master branch
+        # script should make sure we're on main branch
         git checkout develop &> /dev/null
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
-        grep "ERROR: Not on master branch" $out
+        grep "ERROR: Not on main branch" $out
         echo "Expected error found in output: OK!"
-        git checkout master &> /dev/null
+        git checkout main &> /dev/null
 
         echo "================================================================================================"
 

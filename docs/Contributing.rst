@@ -428,10 +428,10 @@ you should use the GitHub interface, and follow the steps outlined below.
 
 i. visit https://github.com/EXAMPLE/easybuild-framework;
 ii. switch to the branch that includes the changes you want to contribute
-    using the '``Branch: master``' button on the left,
+    using the '``Branch: main``' button on the left,
     for example by selecting ``Branch: mybranch`` from the dropdown list
 iii. click the '``New pull request``' button;
-iv. change the target branch to ``develop`` using the '``base: master``' button;
+iv. change the target branch to ``develop`` using the '``base: main``' button;
 v. review your changes using the 'diff' view presented by GitHub;
 vi. provide an appropriate title and description for your contribution;
 vii. open the pull request by clicking the green '``Create pull request``' button
@@ -525,8 +525,8 @@ Requirements for pull requests
 **Pull requests are only merged in the** '``develop``' **branch** of the EasyBuild repositories,
 which contains the changes that will be included in the next EasyBuild release.
 
-The '``master``' branch provides the latest stable release of EasyBuild at all times.
-Only the EasyBuild release manager should issue a pull request to the EasyBuild '``master``' branch,
+The '``main``' branch provides the latest stable release of EasyBuild at all times.
+Only the EasyBuild release manager should issue a pull request to the EasyBuild '``main``' branch,
 when preparing a new EasyBuild release.
 
 Occasionally, an additional version branch (e.g. '``3.3.x``') may be introduced temporarily,
