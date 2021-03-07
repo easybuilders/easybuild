@@ -1,6 +1,5 @@
 .. _list_software:
 
-== Temporary log file in case of crash /tmp/eb-rvg3pj0d/easybuild-jo5_l5pb.log
 List of supported software
 ==========================
 
