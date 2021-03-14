@@ -1,0 +1,16 @@
+site_name: EasyBuild documentation
+theme:
+  name: material
+  logo: img/easybuild_logo.png
+extra:
+  # add links in bottom right
+  social:
+    - type: github
+      icon: octicons/mark-github-16
+      link: https://github.com/easybuilders
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/easy_build
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/easybuilders
+    - icon: fontawesome/solid/book
+      link: https://docs.easybuild.io
