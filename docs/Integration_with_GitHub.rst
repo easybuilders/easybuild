@@ -103,7 +103,7 @@ To obtain a GitHub token:
 
 * visit https://github.com/settings/tokens/new and log in with your GitHub account
 * enter a token description, for example: "``EasyBuild``"
-* make sure (only) the ``gist`` and ``repo`` scopes are fully enabled
+* make sure (only) the ``gist`` and ``public_repo`` (in the ``repo`` section) scopes are fully enabled
 * click ``Generate token``
 * *copy-paste* the generated token
 
