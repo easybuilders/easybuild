@@ -39,6 +39,7 @@ Name                   Compiler(s)         MPI            Linear algebra        
 **goalf**              GCC                 OpenMPI        ATLAS, ScaLAPACK             FFTW    
 **gobff**              GCC                 OpenMPI        BLIS, libFLAME, ScaLAPACK    FFTW    
 **goblf**              GCC                 OpenMPI        BLIS, LAPACK, ScaLAPACK      FFTW    
+**gofbf**              GCC                 OpenMPI        FlexiBLAS, ScaLAPACK         FFTW    
 **golf**               GCC                 *(none)*       OpenBLAS                     FFTW    
 **golfc**              GCC, CUDA           *(none)*       OpenBLAS                     FFTW    
 **gomkl**              GCC                 OpenMPI        imkl                         imkl    
@@ -56,6 +57,7 @@ Name                   Compiler(s)         MPI            Linear algebra        
 **iccifortcuda**       icc, ifort, CUDA    *(none)*       *(none)*                     *(none)*
 **ictce**              icc, ifort          impi           imkl                         imkl    
 **iibff**              icc, ifort          impi           BLIS, libFLAME, ScaLAPACK    FFTW    
+**iiblf**              icc, ifort          impi           BLIS, LAPACK, ScaLAPACK      FFTW    
 **iimkl**              icc, ifort          *(none)*       imkl                         imkl    
 **iimklc**             icc, ifort, CUDA    *(none)*       imkl                         imkl    
 **iimpi**              icc, ifort          impi           *(none)*                     *(none)*

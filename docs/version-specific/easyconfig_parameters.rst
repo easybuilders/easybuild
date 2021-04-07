@@ -149,6 +149,7 @@ modules parameters
 **Parameter name**                **Description**                                                                                                **Default value**
 ==============================    ===========================================================================================================    =================
 ``allow_prepend_abs_path``        Allow specifying absolute paths to prepend in modextrapaths                                                    False            
+``citing``                        Free-form text that describes how the software should be cited in publications                                 None             
 ``docpaths``                      List of paths for documentation relative to installation directory                                             None             
 ``examples``                      Free-form text with examples on using the software                                                             None             
 ``include_modpath_extensions``    Include $MODULEPATH extensions specified by module naming scheme.                                              True             
