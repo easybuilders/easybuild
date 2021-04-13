@@ -125,7 +125,7 @@ Remarks:
   is used for downloading (since EasyBuild v2.0)
 * patches need to be EasyBuild-compatible
 
-  * unified diff format (``diff -ru``)
+  * unified diff format (``diff -ruN``)
   * patched locations relative to unpacked sources
 
 * see :ref:`common_easyconfig_param_sources_checksums` for more information on ``checksums``
