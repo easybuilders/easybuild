@@ -51,7 +51,7 @@ unexpected ``readline`` or ``ncurses`` libraries:
 Lmod
 ~~~~
 
-Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el) make and bzip2
+Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), make and bzip2
 
 **Step 1**: Download and unpack the latest available Lmod version,
 `Lmod-8.4.tar.bz2`_ at the time of writing.
