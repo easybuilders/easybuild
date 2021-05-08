@@ -20,7 +20,7 @@ Prerequisites
 EasyBuild leverages `FPM <https://github.com/jordansissel/fpm>`_ to create binary packages (RPMs, Debian files, etc.).
 
 Hence, FPM must be available in some way or another. One way is via EasyBuild, for example by installing a module
-for FPM using once of the available easyconfig files.
+for FPM using one of the available easyconfig files.
 
 EasyBuild will also take care of installing Ruby for you (which is required for FPM itself)::
 
