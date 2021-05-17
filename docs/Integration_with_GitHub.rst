@@ -93,11 +93,11 @@ Installing a GitHub token (``--install-github-token``)
 
 .. note:: *requires*: GitHub username + ``keyring`` Python package
 
-A GitHub token is a string of 40 hexadecimal (lowercase) characters that is tied to your GitHub account,
+A GitHub token is a string of 40 characters that is tied to your GitHub account,
 allowing you to access the GitHub API authenticated.
 
 Using a GitHub token is beneficial with respect to rate limitations, and enables write permissions on GitHub
-(e.g., posting comments, creating gists, opening pull requests, etc.).
+(e.g. posting comments, creating gists, opening pull requests).
 
 To obtain a GitHub token:
 
