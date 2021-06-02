@@ -48,6 +48,7 @@
 
     * BuildEnv
     * CrayToolchain
+    * EB_OpenSSL_wrapper
     * PythonBundle
     * SystemCompiler
     * SystemMPI
@@ -73,6 +74,7 @@
       * EB_Doxygen
       * EB_Eigen
       * EB_ELSI
+      * EB_FlexiBLAS
       * EB_GATE
       * EB_Geant4
       * EB_GROMACS
@@ -256,6 +258,7 @@
 
       * ConfigureMakePythonPackage
       * EB_cryptography
+      * EB_dm_minus_reverb
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
@@ -388,6 +391,7 @@
 
       * ConfigureMakePythonPackage
       * EB_cryptography
+      * EB_dm_minus_reverb
       * EB_EasyBuildMeta
       * EB_EggLib
       * EB_libxml2
