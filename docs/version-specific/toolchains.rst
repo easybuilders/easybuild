@@ -17,8 +17,11 @@ Name                   Compiler(s)         MPI            Linear algebra        
 **CrayGNU**            PrgEnv-gnu          cray-mpich     cray-libsci                  *(none)*
 **CrayIntel**          PrgEnv-intel        cray-mpich     cray-libsci                  *(none)*
 **CrayPGI**            PrgEnv-pgi          cray-mpich     cray-libsci                  *(none)*
+**FCC**                lang                *(none)*       *(none)*                     *(none)*
+**ffmpi**              FCC                 *(none)*       *(none)*                     *(none)*
 **foss**               GCC                 OpenMPI        OpenBLAS, ScaLAPACK          FFTW    
 **fosscuda**           GCC, CUDA           OpenMPI        OpenBLAS, ScaLAPACK          FFTW    
+**Fujitsu**            *(none)*            *(none)*       *(none)*                     FFTW    
 **GCC**                GCC                 *(none)*       *(none)*                     *(none)*
 **GCCcore**            GCCcore             *(none)*       *(none)*                     *(none)*
 **gcccuda**            GCC, CUDA           *(none)*       *(none)*                     *(none)*

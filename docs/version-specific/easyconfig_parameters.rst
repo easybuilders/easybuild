@@ -38,45 +38,48 @@ toolchain parameters
 build parameters
 ----------------
 
-=============================    =====================================================================================================================    =================
-**Parameter name**               **Description**                                                                                                          **Default value**
-=============================    =====================================================================================================================    =================
-``bitbucket_account``            Bitbucket account name to be used to resolve template values in source URLs                                              "%(namelower)s"  
-``buildopts``                    Extra options passed to make step (default already has -j X)                                                             ""               
-``checksums``                    Checksums for sources and patches                                                                                        []               
-``configopts``                   Extra options passed to configure (default already has --prefix)                                                         ""               
-``cuda_compute_capabilities``    List of CUDA compute capabilities to build with (if supported)                                                           []               
-``easyblock``                    EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                       None             
-``easybuild_version``            EasyBuild-version this spec-file was written for                                                                         None             
-``enhance_sanity_check``         Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it           False            
-``fix_perl_shebang_for``         List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                  None             
-``fix_python_shebang_for``       List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)              None             
-``github_account``               GitHub account name to be used to resolve template values in source URLs                                                 "%(namelower)s"  
-``hidden``                       Install module file as 'hidden' by prefixing its version with '.'                                                        False            
-``installopts``                  Extra options for installation                                                                                           ""               
-``maxparallel``                  Max degree of parallelism                                                                                                None             
-``parallel``                     Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)    None             
-``patches``                      List of patches to apply                                                                                                 []               
-``postinstallcmds``              Commands to run after the install step.                                                                                  []               
-``prebuildopts``                 Extra options pre-passed to build command.                                                                               ""               
-``preconfigopts``                Extra options pre-passed to configure.                                                                                   ""               
-``preinstallopts``               Extra prefix options for installation.                                                                                   ""               
-``pretestopts``                  Extra prefix options for test.                                                                                           ""               
-``runtest``                      Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)         None             
-``sanity_check_commands``        format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                          []               
-``sanity_check_paths``           List of files and directories to check (format: {'files':<list>, 'dirs':<list>})                                         {}               
-``skip``                         Skip existing software                                                                                                   False            
-``skipsteps``                    Skip these steps                                                                                                         []               
-``source_urls``                  List of URLs for source files                                                                                            []               
-``sources``                      List of source files                                                                                                     []               
-``stop``                         Keyword to halt the build process after a certain step.                                                                  None             
-``testopts``                     Extra options for test.                                                                                                  ""               
-``tests``                        List of test-scripts to run after install. A test script should return a non-zero exit status to fail                    []               
-``unpack_options``               Extra options for unpacking source                                                                                       ""               
-``unwanted_env_vars``            List of environment variables that shouldn't be set during build                                                         []               
-``versionprefix``                Additional prefix for software version (placed before version and toolchain name)                                        ""               
-``versionsuffix``                Additional suffix for software version (placed after toolchain name)                                                     ""               
-=============================    =====================================================================================================================    =================
+===============================    =========================================================================================================================================    =================
+**Parameter name**                 **Description**                                                                                                                              **Default value**
+===============================    =========================================================================================================================================    =================
+``banned_linked_shared_libs``      List of shared libraries (names, file names, or paths) which are not allowed to be linked in any installed binary/library                    []               
+``bin_lib_subdirs``                List of subdirectories for binaries and libraries, which is used during sanity check to check RPATH linking and banned/required libraries    []               
+``bitbucket_account``              Bitbucket account name to be used to resolve template values in source URLs                                                                  "%(namelower)s"  
+``buildopts``                      Extra options passed to make step (default already has -j X)                                                                                 ""               
+``checksums``                      Checksums for sources and patches                                                                                                            []               
+``configopts``                     Extra options passed to configure (default already has --prefix)                                                                             ""               
+``cuda_compute_capabilities``      List of CUDA compute capabilities to build with (if supported)                                                                               []               
+``easyblock``                      EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                                           None             
+``easybuild_version``              EasyBuild-version this spec-file was written for                                                                                             None             
+``enhance_sanity_check``           Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it                               False            
+``fix_perl_shebang_for``           List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                                      None             
+``fix_python_shebang_for``         List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)                                  None             
+``github_account``                 GitHub account name to be used to resolve template values in source URLs                                                                     "%(namelower)s"  
+``hidden``                         Install module file as 'hidden' by prefixing its version with '.'                                                                            False            
+``installopts``                    Extra options for installation                                                                                                               ""               
+``maxparallel``                    Max degree of parallelism                                                                                                                    None             
+``parallel``                       Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)                        None             
+``patches``                        List of patches to apply                                                                                                                     []               
+``postinstallcmds``                Commands to run after the install step.                                                                                                      []               
+``prebuildopts``                   Extra options pre-passed to build command.                                                                                                   ""               
+``preconfigopts``                  Extra options pre-passed to configure.                                                                                                       ""               
+``preinstallopts``                 Extra prefix options for installation.                                                                                                       ""               
+``pretestopts``                    Extra prefix options for test.                                                                                                               ""               
+``required_linked_shared_libs``    List of shared libraries (names, file names, or paths) which must be linked in all installed binaries/libraries                              []               
+``runtest``                        Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)                             None             
+``sanity_check_commands``          format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                                              []               
+``sanity_check_paths``             List of files and directories to check (format: {'files':<list>, 'dirs':<list>})                                                             {}               
+``skip``                           Skip existing software                                                                                                                       False            
+``skipsteps``                      Skip these steps                                                                                                                             []               
+``source_urls``                    List of URLs for source files                                                                                                                []               
+``sources``                        List of source files                                                                                                                         []               
+``stop``                           Keyword to halt the build process after a certain step.                                                                                      None             
+``testopts``                       Extra options for test.                                                                                                                      ""               
+``tests``                          List of test-scripts to run after install. A test script should return a non-zero exit status to fail                                        []               
+``unpack_options``                 Extra options for unpacking source                                                                                                           ""               
+``unwanted_env_vars``              List of environment variables that shouldn't be set during build                                                                             []               
+``versionprefix``                  Additional prefix for software version (placed before version and toolchain name)                                                            ""               
+``versionsuffix``                  Additional suffix for software version (placed after toolchain name)                                                                         ""               
+===============================    =========================================================================================================================================    =================
 
 
 file-management parameters
@@ -145,31 +148,31 @@ extensions parameters
 modules parameters
 ------------------
 
-==============================    ===========================================================================================================    =================
-**Parameter name**                **Description**                                                                                                **Default value**
-==============================    ===========================================================================================================    =================
-``allow_prepend_abs_path``        Allow specifying absolute paths to prepend in modextrapaths                                                    False            
-``citing``                        Free-form text that describes how the software should be cited in publications                                 None             
-``docpaths``                      List of paths for documentation relative to installation directory                                             None             
-``examples``                      Free-form text with examples on using the software                                                             None             
-``include_modpath_extensions``    Include $MODULEPATH extensions specified by module naming scheme.                                              True             
-``modaliases``                    Aliases to be defined in module file                                                                           {}               
-``modaltsoftname``                Module name to use (rather than using software name                                                            None             
-``modextrapaths``                 Extra paths to be prepended in module file                                                                     {}               
-``modextravars``                  Extra environment variables to be added to module file                                                         {}               
-``modloadmsg``                    Message that should be printed when generated module is loaded                                                 {}               
-``modluafooter``                  Footer to include in generated module file (Lua syntax)                                                        ""               
-``modtclfooter``                  Footer to include in generated module file (Tcl syntax)                                                        ""               
-``module_depends_on``             Use depends_on (Lmod 7.6.1+) for dependencies in generated module (implies recursive unloading of modules).    False            
-``moduleclass``                   Module class to be used for this software                                                                      "base"           
-``moduleforceunload``             Force unload of all modules when loading the extension                                                         False            
-``moduleloadnoconflict``          Don't check for conflicts, unload other versions instead                                                       False            
-``recursive_module_unload``       Recursive unload of all dependencies when unloading module                                                     False            
-``site_contacts``                 String/list of strings with site contacts for the software                                                     None             
-``upstream_contacts``             String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)        None             
-``usage``                         Usage instructions for the software                                                                            None             
-``whatis``                        List of brief (one line) description entries for the software                                                  None             
-==============================    ===========================================================================================================    =================
+==============================    ==================================================================================================================================================================================    =================
+**Parameter name**                **Description**                                                                                                                                                                       **Default value**
+==============================    ==================================================================================================================================================================================    =================
+``allow_prepend_abs_path``        Allow specifying absolute paths to prepend in modextrapaths                                                                                                                           False            
+``citing``                        Free-form text that describes how the software should be cited in publications                                                                                                        None             
+``docpaths``                      List of paths for documentation relative to installation directory                                                                                                                    None             
+``examples``                      Free-form text with examples on using the software                                                                                                                                    None             
+``include_modpath_extensions``    Include $MODULEPATH extensions specified by module naming scheme.                                                                                                                     True             
+``modaliases``                    Aliases to be defined in module file                                                                                                                                                  {}               
+``modaltsoftname``                Module name to use (rather than using software name                                                                                                                                   None             
+``modextrapaths``                 Extra paths to be prepended in module file                                                                                                                                            {}               
+``modextravars``                  Extra environment variables to be added to module file                                                                                                                                {}               
+``modloadmsg``                    Message that should be printed when generated module is loaded                                                                                                                        {}               
+``modluafooter``                  Footer to include in generated module file (Lua syntax)                                                                                                                               ""               
+``modtclfooter``                  Footer to include in generated module file (Tcl syntax)                                                                                                                               ""               
+``module_depends_on``             Use depends_on (Lmod 7.6.1+) for dependencies in generated module (implies recursive unloading of modules).                                                                           False            
+``moduleclass``                   Module class to be used for this software                                                                                                                                             "base"           
+``moduleforceunload``             Force unload of all modules when loading the extension                                                                                                                                False            
+``moduleloadnoconflict``          Don't check for conflicts, unload other versions instead                                                                                                                              False            
+``recursive_module_unload``       Recursive unload of all dependencies when unloading module (True/False to hard enable/disable; None implies honoring the --recursive-module-unload EasyBuild configuration setting    None             
+``site_contacts``                 String/list of strings with site contacts for the software                                                                                                                            None             
+``upstream_contacts``             String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)                                                                               None             
+``usage``                         Usage instructions for the software                                                                                                                                                   None             
+``whatis``                        List of brief (one line) description entries for the software                                                                                                                         None             
+==============================    ==================================================================================================================================================================================    =================
 
 
 other parameters
