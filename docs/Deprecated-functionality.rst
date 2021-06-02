@@ -27,7 +27,6 @@ for which support will be removed in EasyBuild version 5.0.
 For EasyBuild users:
 
 * :ref:`depr_lmod6`
-* :ref:`depr_python26`
 
 For authors of easyconfig files:
 
@@ -52,21 +51,6 @@ Support for using Lmod 6.x
 
 Support for using Lmod 6.x as modules tool with EasyBuild has been deprecated,
 and will be removed in a future version of EasyBuild.
-
-
-.. _depr_python26:
-
-Support for running EasyBuild on top of Python 2.6
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v4.1.0 (Nov'19)
-* *removed in:* EasyBuild v5.0
-* *alternative(s)*: **use Python 2.7 or 3.5+**
-
-Support for running EasyBuild on top of Python 2.6 has been deprecated,
-and will be removed in a future version of EasyBuild.
-
-You should upgrade to a newer version of Python (see also :ref:`py2_py3_compatibility`).
 
 
 .. _depr_dummy_toolchain:

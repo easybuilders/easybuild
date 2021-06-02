@@ -31,7 +31,7 @@ The only strict requirements are:
 
 * **Python**:
 
-  * Python 2.6 or 2.7, or Python 3.x (>= 3.5)
+  * Python 2.7, or Python 3.x (>= 3.5)
 
   * **note**: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
 
@@ -387,7 +387,7 @@ Required dependencies
 
 * `Python <http://python.org>`_:
 
-  * Python 2.6 or 2.7, or Python 3.x (>= 3.5)
+  * Python 2.7, or Python 3.x (>= 3.5)
 
   * no third-party Python packages are strictly required (the Python standard library is sufficient)
 

@@ -6,7 +6,7 @@ Compatibility with Python 2 and Python 3
 Starting with EasyBuild v4.0, the EasyBuild framework and easyblocks are compatible with both Python versions 2 and 3.
 More specifically, the following Python versions are currently supported:
 
-* Python 2.6.x
+* Python 2.6.x (support was removed in EasyBuild v4.4.0)
 * Python 2.7.x
 * Python 3.5.x
 * Python 3.6.x

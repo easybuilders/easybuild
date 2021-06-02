@@ -258,7 +258,7 @@ In EasyBuild v2.0, some intrusive changes were made that break backward compatib
 
 For EasyBuild users:
 
-* :ref:`depr_python_version_compatibility_eb1`
+* :ref:`depr_python_version_compatibility`
 * :ref:`depr_easybuild_configuration_eb1`
 * :ref:`depr_softroot_version_env_vars_eb1`
 
@@ -283,10 +283,20 @@ For EasyBuild framework developers:
     backward-incompatible changes documented at :ref:`depr_ConfigureMake_fallback_eb1` and
     :ref:`depr_easyconfig_parameters_eb1`. See :ref:`fix_broken_easyconfigs_script` for more information.
 
-.. _depr_python_version_compatibility_eb1:
+.. _depr_python_version_compatibility:
 
 Python version compatibility
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Compatibility with Python 2.6 is removed.**
+
+* *deprecated since:* EasyBuild v4.1.0 (Nov'19)
+* *removed in:* EasyBuild v4.4.0
+* *alternative(s)*: **upgrade to Python v2.7.x or v3.5+**
+
+Support for running EasyBuild on top of Python 2.6 was removed in EasyBuild version 4.4.0.
+
+You should upgrade to a newer version of Python (see also :ref:`py2_py3_compatibility`).
 
 **Compatibility with Python 2.4 is removed.**
 
