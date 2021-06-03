@@ -1,8 +1,8 @@
 .. image:: https://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
    :align: center
 
-.. image:: https://travis-ci.org/easybuilders/easybuild.svg?branch=develop
-    :target: https://travis-ci.org/easybuilders/easybuild
+.. image:: https://github.com/easybuilders/easybuild/actions/workflows/doc_build.yml/badge.svg
+    :target: https://github.com/easybuilders/easybuild/actions/workflows/doc_build.yml
 
 `EasyBuild <https://easybuilders.github.io/easybuild>`_ is a software build
 and installation framework that allows you to manage (scientific) software
