@@ -67,6 +67,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
 (maintainers are listed in alphabetical order, by last name)
 
+* **Sebastian Achilles** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@SebastianAchilles <https://github.com/SebastianAchilles>`_ - e-mail: ``s.achilles (at) fz-juelich.de`` - IRC/Slack: ``Sebastian Achilles``
+
 * **Damian Alvarez** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
 
   * GitHub: `@damianam <https://github.com/damianam>`_ - e-mail: ``d.alvarez (at) fz-juelich.de`` - IRC/Slack: ``dalvarez``
