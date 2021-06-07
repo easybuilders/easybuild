@@ -83,7 +83,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@lexming <https://github.com/lexming>`_ - e-mail: ``alex.domingo.toro (at) vub.be`` - IRC/Slack: ``lexming``
 
-* **Bob Dröge** (`University of Groning <https://www.rug.nl/?lang=en>`_)
+* **Bob Dröge** (`University of Groningen <https://www.rug.nl/?lang=en>`_)
 
   * GitHub: `@bedroge <https://github.com/bedroge>`_ - e-mail: ``b.e.droge (at) rug.nl`` - IRC/Slack: ``Bob Dröge``
 
