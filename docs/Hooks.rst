@@ -62,7 +62,8 @@ Currently (since EasyBuild v3.7.0), three types of hooks are supported:
   and *once* right after completing all installations, respectively
 * ``parse_hook``, which is triggered when an easyconfig file is being parsed
 * ``module_write_hook``, which is triggered right before a module file is written.
-  This includes the temporary module files used for extensions, sanity checks and the devel module!
+  This includes the temporary module file used when installing extensions and during the sanity check,
+  as well as the devel module.
 * "*step*" hooks that are triggered before and after every step of each installation procedure that is performed,
   also aptly named '``pre``'- and '``post``'-hooks
 
@@ -89,7 +90,7 @@ which can also be consulted using ``eb --avail-hooks``, is:
     * ``pre_package_hook``, ``post_package_hook``
     * ``pre_testcases_hook``, ``post_testcases_hook``
     * ``end_hook`` *(only called once in an EasyBuild session)*
-    * ``module_write_hook`` *(can be called anytime, available since EasyBuild v4.4.1)*
+    * ``module_write_hook`` *(called multiple times per installation, available since EasyBuild v4.4.1)*
 
 All functions implemented in the provided Python module for which the name ends with ``_hook`` are considered.
 
@@ -126,7 +127,7 @@ Do take into account the following:
    * the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
    * the filepath of the module that will be written
    * the module text as a string
-  The return value of this hook (if any) will then be written into the file.
+  The return value of this hook (if any) will then be appended to the contents of the module file.
 
 * for the step hooks, one argument is provided:
   the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
@@ -202,7 +203,7 @@ You may run into surprises when trying to manipulate easyconfig parameters, for 
 First of all, the original easyconfig parameters may already be processed in another data structure
 which does not resemble the original format in which the parameter was defined in the easyconfig file.
 
-Moreover, this processing could be done either "in place", i.e. by replacing the original easyconfig parameter value
+Moreover, this processing could be done either "in place" by replacing the original easyconfig parameter value,
 or in a separate variable, which effectively means that any changes to the original easyconfig parameter value
 are simply ignored.
 
@@ -306,12 +307,12 @@ Example hook to inject a custom patch file
             ec['patches'].append(patch_file)
 
 Example hook to replace PYTHONPATH by EBPYTHONPREFIXES in (Lua) modules
-++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code:: python
 
     def module_write_hook(self, filepath, module_txt, *args, **kwargs):
-        # Note: if `self.mod_filepath == filepath` => final module file
+        # note: if `self.mod_filepath == filepath` => final module file
         if 'Python' in (dep['name'] for dep in self.cfg.dependencies()):
             search = r'prepend_path\("PYTHONPATH", pathJoin\(root, "lib/python\d.\d/site-packages"\)\)'
             replace = 'prepend_path("EBPYTHONPREFIXES", root)'
