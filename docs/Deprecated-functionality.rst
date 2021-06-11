@@ -104,7 +104,7 @@ rid of, together with supporting a better alternative.
     ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:937 in process_easyconfig):
     Failed to process easyconfig /home/example/gzip-1.5-goolf-1.4.10.eb:
     DEPRECATED (since v2.0) functionality used: Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead;
-    see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more informatio
+    see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information.
 
 * the code supporting the deprecated functionality is *removed* in EasyBuild version ``X.(Y+1)`` (i.e., the first
   non-bugfix-only release after version ``X.Y``), see also :ref:`removed_functionality`
