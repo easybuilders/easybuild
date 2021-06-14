@@ -127,7 +127,7 @@ Do take into account the following:
    * the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
    * the filepath of the module that will be written
    * the module text as a string
-  The return value of this hook (if any) will then be appended to the contents of the module file.
+  The return value of this hook (if any) is used as contents for the module file that will be written.
 
 * for the step hooks, one argument is provided:
   the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
