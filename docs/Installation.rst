@@ -5,9 +5,9 @@ Installing EasyBuild
 
 EasyBuild is Python software, so there are a couple of ways to install it.
 
-We recommend installing EasyBuild using ``pip``, described at :ref:`pip`.
+We recommend installing EasyBuild using ``pip``. This method is described at :ref:`pip`.
 
-It is also possible to install EasyBuild as a module. To do this,
+It is also possible to install EasyBuild as a module. To do this, 
 use the 3-step procedure outlined at :ref:`eb_as_module`.
 
 Do take into account the required and optional dependencies (see :ref:`requirements` and :ref:`dependencies`).
@@ -31,7 +31,8 @@ The only strict requirements are:
 
 * **Python**:
 
-  * Python 2.7, or Python 3.x (>= 3.5)
+  * Python 2.7, or Python 3.x (>= 3.5). Since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we recommend
+    using Python 3 if it is available
 
   * **note**: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
 
@@ -55,7 +56,7 @@ Using pip to Install EasyBuild
 -----------------------
 
 Since EasyBuild is released as a Python package on PyPI (https://pypi.org/project/easybuild)
-you can install it using `pip`, the most commonly used tool for installing Python packages.
+you can install it using ``pip``, the most commonly used tool for installing Python packages.
 
 Install EasyBuild with::
 
@@ -63,7 +64,7 @@ Install EasyBuild with::
 
 .. note::
   There are various other ways of installing Python packages, which we won't cover here.
-  If you are familiar with other tools like `virtualenv` or `pipenv`, feel free to use those
+  If you are familiar with other tools like ``virtualenv`` or ``pipenv``, feel free to use those
   instead to install EasyBuild.
 
 Sanity check
@@ -97,7 +98,7 @@ for more information :ref:`configuring_easybuild`
 Updating an existing EasyBuild installation
 ~~~~~~~~~~~~
 
-To upgrade to a newer EasyBuild version (say, |version|) than the one currently installed:
+To upgrade to a newer EasyBuild version than the one currently installed:
 
 * ``pip install --upgrade easybuild`` will upgrade EasyBuild to the latest release.
 
@@ -133,15 +134,14 @@ that you intend to use, you can use ``python3 -m pip`` rather than ``pip3``.
 Updating your environment
 ~~~~~~~~~~~~
 
-If you used the `--user` or `--prefix` option in the `pip install` command,
-or if you installed EasyBuild with a `pip` version that does not correspond
-to your default Python installation,
-you will need to update your environment to make EasyBuild ready for use.
+If you used the ``--user`` or ``--prefix`` option in the ``pip install`` command,
+or if you installed EasyBuild with a ``pip`` version that does not correspond
+to your default Python installation, you will need to update your environment to make EasyBuild ready for use.
 This is not required if you did a system-wide installation in a standard location with the default Python version.
 
 .. note::
   Keep in mind that you will have to make these environment changes again if you start a new shell session.
-  To avoid this, you can update one of the shell startup scripts in your home directory (`.bashrc` for example).
+  To avoid this, you can update one of the shell startup scripts in your home directory (``.bashrc`` for example).
 
 Updating ``$PATH``
 ~~~~~~~~~~~~
@@ -150,8 +150,8 @@ Update the ``$PATH`` environment variable to make sure the ``eb`` command is ava
 
   export PATH=_PREFIX_/bin:$PATH
 
-**Replace '`_PREFIX_`' in this command** with the directory path where EasyBuild was installed into
-(use `$HOME/.local` if you used `pip install --user`).
+**Replace '``_PREFIX_``' in this command** with the directory path where EasyBuild was installed into
+(use ``$HOME/.local`` if you used ``pip install --user``).
 
 This is not required if you installing EasyBuild in a standard system location.
 
@@ -189,7 +189,7 @@ Setting ``$EB_PYTHON``
 ~~~~~~~~~~~~
 
 If you want to control which Python version is used to run EasyBuild,
-you can specify the name or the full path to the `python` command that should be used by the ``eb`` command
+you can specify the name or the full path to the ``python`` command that should be used by the ``eb`` command
 via the ``$EB_PYTHON`` environment variable.
 
 This may be required when you installing EasyBuild with a version of ``pip`` that does not correspond
