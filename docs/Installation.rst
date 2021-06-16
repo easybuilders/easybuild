@@ -5,7 +5,7 @@ Installing EasyBuild
 
 EasyBuild is Python software, so there are a couple of ways to install it.
 
-We recommend installing EasyBuild using ``pip`, described at :ref:`pip`.
+We recommend installing EasyBuild using ``pip``, described at :ref:`pip`.
 
 It is also possible to install EasyBuild as a module. To do this,
 use the 3-step procedure outlined at :ref:`eb_as_module`.
