@@ -161,6 +161,8 @@ that you intend to use, you can use ``python3 -m pip`` rather than ``pip3``.
 
     python3.6 -m pip install easybuild
 
+Note that you may also need to instruct the ``eb`` command to use the correct Python version at runtime,
+via ``$EB_PYTHON`` (see :ref:`more_pip_env_EB_PYTHON`).
 
 .. _more_pip_env:
 
@@ -176,6 +178,8 @@ This is not required if you did a system-wide installation in a standard locatio
   Keep in mind that you will have to make these environment changes again if you start a new shell session.
   To avoid this, you can update one of the shell startup scripts in your home directory (``.bashrc`` for example).
 
+.. _more_pip_env_PATH:
+
 Updating ``$PATH``
 ~~~~~~~~~~~~
 
@@ -189,6 +193,8 @@ Update the ``$PATH`` environment variable to make sure the ``eb`` command is ava
 This is not required if you installing EasyBuild in a standard system location.
 
 You can check with the ``which eb`` command to determine whether or not you need to update the ``$PATH`` environment variable.
+
+.. _more_pip_env_PYTHONPATH:
 
 Updating ``$PYTHONPATH``
 ~~~~~~~~~~~~
@@ -217,6 +223,7 @@ For example::
   # update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6
   export PYTHONPATH=$HOME/tools/lib/python3.6/site-packages:$PYTHONPATH
 
+.. _more_pip_env_EB_PYTHON:
 
 Setting ``$EB_PYTHON``
 ~~~~~~~~~~~~
@@ -232,6 +239,8 @@ For example, to ensure that ``eb`` uses ``python3.6``::
 
   export EB_PYTHON=python3.6
 
+
+.. _more_pip_env_EB_VERBOSE:
 
 Setting ``$EB_VERBOSE``
 ~~~~~~~~~~~~
