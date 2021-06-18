@@ -187,7 +187,7 @@ Update the ``$PATH`` environment variable to make sure the ``eb`` command is ava
 
   export PATH=_PREFIX_/bin:$PATH
 
-**Replace '``_PREFIX_``' in this command** with the directory path where EasyBuild was installed into
+**Replace** ``_PREFIX_`` **in this command** with the directory path where EasyBuild was installed into
 (use ``$HOME/.local`` if you used ``pip install --user``).
 
 This is not required if you installing EasyBuild in a standard system location.
