@@ -5,12 +5,12 @@ Installing EasyBuild
 
 EasyBuild is Python software, so there are a couple of ways to install it.
 
-We recommend using the **bootstrap** install procedure described at :ref:`bootstrapping`, because of various issues
-with the different installation tools that are available for Python packages.
+We recommend installing EasyBuild using ``pip``. This method is described at :ref:`pip`.
+
+It is also possible to install EasyBuild as a module. To do this, 
+use the 3-step procedure outlined at :ref:`eb_as_module`.
 
 Do take into account the required and optional dependencies (see :ref:`requirements` and :ref:`dependencies`).
-
-For advanced options, see :ref:`bootstrap_advanced_options`.
 
 Notes on other ways of installing EasyBuild are available under section :ref:`alt_inst_methods`.
 
@@ -31,7 +31,8 @@ The only strict requirements are:
 
 * **Python**:
 
-  * Python 2.7, or Python 3.x (>= 3.5)
+  * Python 2.7, or Python 3.x (>= 3.5). Since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we recommend
+    using Python 3 if it is available
 
   * **note**: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
 
@@ -49,82 +50,24 @@ The only strict requirements are:
 
 For more information on (optional) dependencies, see :ref:`dependencies`.
 
-.. _bootstrapping:
+.. _pip:
 
-Bootstrapping EasyBuild
+Using pip to Install EasyBuild
 -----------------------
 
-Installing any Python package can be a real pain, and since EasyBuild is basically
-a set of Python packages glued together, installing EasyBuild may (ironically) cause some headaches.
+Since EasyBuild is released as a Python package on PyPI (https://pypi.org/project/easybuild)
+you can install it using ``pip``, the most commonly used tool for installing Python packages.
 
-To resolve this, we have created a bootstrap script that installs the
-latest EasyBuild version for you together with an environment module for
-it - and yes, we use EasyBuild for doing so.
+Install EasyBuild with::
 
-A demo of bootstrapping EasyBuild is available :ref:`here <demo_bootstrapping>`.
+  pip install easybuild
 
-
-Bootstrapping procedure
-~~~~~~~~~~~~~~~~~~~~~~~
-
-The easiest way (by far) to install EasyBuild is by bootstrapping it,
-i.e., installing the latest EasyBuild release (obtained from PyPI) using EasyBuild itself.
-
-To bootstrap EasyBuild:
-
-* download the bootstrap script from https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
-* execute it, and specify an installation prefix as an argument
-
-Yes, it's that easy!
-
-The bootstrap script will perform a 3-stage bootstrap procedure:
-
-* *stage 0:* download and install a specific version of the ``distribute`` Python package, which provides
-  the ``easy_install`` tool for installing Python software into a temporary directory
-* *stage 1:* download and install the most recent version of EasyBuild from PyPI into a temporary location, using the
-  ``easy_install`` tool from stage 0
-* *stage 2:* install the most recent version of EasyBuild into the specified installation prefix,
-  using the temporary EasyBuild installation from stage 1 (inception!)
-
-This should result in an ``EasyBuild`` module that you can load to start using EasyBuild, after making sure the
-module is available by updating ``$MODULEPATH``. More specifically, you need to include the ``modules/all``
-subdirectory of the specified installation prefix into ``$MODULEPATH``.
-
-For example::
-
-  # pick an installation prefix to install EasyBuild to (change this to your liking)
-  EASYBUILD_PREFIX=$HOME/.local/easybuild
-
-  # download script
-  curl -O https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
-
-  # bootstrap EasyBuild
-  python bootstrap_eb.py $EASYBUILD_PREFIX
-
-  # update $MODULEPATH, and load the EasyBuild module
-  module use $EASYBUILD_PREFIX/modules/all
-  module load EasyBuild
+You may need to tweak this command a bit, depending on your setup, see :ref:`more_pip`.
 
 .. note::
-
-  The path you specify to the bootstrap script is where EasyBuild should be installed.
-  If you also want software that is built/installed using EasyBuild to be located there, you will need
-  to configure EasyBuild accordingly (see :ref:`configuring_easybuild`), for example by
-  putting the definition for ``$EASYBUILD_PREFIX`` in your ``.bashrc``.
-
-  See also :ref:`configuring_easybuild`.
-
-.. XXX - UPDATE BY VERSION
-
-.. tip::
-
-  The bootstrap script will only succeed if command ``module --version`` reports a sufficiently recent version
-  (e.g., environments-modules-c >=v3.2.10 or Lmod >= 5.6.3), because modules are applied throughout,
-  e.g., to resolve dependencies and detect already installed software.
-
-Normally, only when the above fails to work for you for some reason, should you resort
-to one of the alternative approaches documented at :ref:`alt_inst_methods`
-(these are more involved but also they may give more control).
+  There are various other ways of installing Python packages, which we won't cover here.
+  If you are familiar with other tools like ``virtualenv`` or ``pipenv``, feel free to use those
+  instead to install EasyBuild.
 
 Sanity check
 ~~~~~~~~~~~~
@@ -136,10 +79,10 @@ For example::
     $ module list
 
     Currently Loaded Modules:
-      1) EasyBuild/1.16.1
+      1) EasyBuild/4.4.0
 
     $ eb --version
-    This is EasyBuild 1.16.1 (framework: 1.16.1, easyblocks: 1.16.1) on host example.local
+    This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local
 
 .. tip::
 
@@ -149,225 +92,245 @@ For example::
   may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
   with respect to what is the version being loaded by default.
 
-.. _install_running_unit_tests:
-
-Running unit tests
-~~~~~~~~~~~~~~~~~~
-
-After completion of the bootstrap procedure and loading the
-``EasyBuild`` module, try running the EasyBuild unit tests::
-
-    # specify modules tool to use: Lmod *(default)*, EnvironmentModules, EnvironmentModulesC, or EnvironmentModulesTcl
-    # see also http://easybuild.readthedocs.org/en/latest/Configuration.html#modules-tool-modules-tool
-    export TEST_EASYBUILD_MODULES_TOOL=Lmod
-
-    # run full unit test suite for EasyBuild framework
-    python -m test.framework.suite
-
-Keep in mind that this is just an example, more details about the EasyBuild unit tests are available at :ref:`unit_tests`.
-
-If this does not complete successfully, `please open an issue`_ to report it.
-
-.. _please open an issue: https://github.com/easybuilders/easybuild-framework/issues/new
-
-
-Example bootstrap run
-~~~~~~~~~~~~~~~~~~~~~
-
-Example output for bootstrapping EasyBuild v1.16.1::
-
-    [[INFO]] Found module command 'lmod' (Lmod), so using it.
-    [[INFO]]
-
-    +++ STAGE 0: installing distribute via included (patched) distribute_setup.py...
-
-
-    Downloading http://pypi.python.org/packages/source/d/distribute/distribute-0.6.34.tar.gz
-    Extracting in /tmp/tmpz0zyAG
-    Now working in /tmp/tmpz0zyAG/distribute-0.6.34
-    Installing Distribute
-    [[INFO]]
-
-    +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
-
-
-    Installing with setuptools.setup...
-    Installing version 1.16.1
-    warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-
-    zip_safe flag not set; analyzing archive contents...
-    Installing with setuptools.setup...
-    Installing version 1.16.1 (API version 1)
-    Installing with setuptools.setup...
-    Installing version 1.16.1 (required versions: API >= 1)
-    Installing with setuptools.setup...
-    Installing version 1.16.1.0 (required versions: API >= 1, easyblocks >= 1.16)
-    warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-
-    [[INFO]]
-
-    +++ STAGE 2: installing EasyBuild in /home/example/.local/easybuild with EasyBuild from stage 1...
-
-
-    Couldn't import dot_parser, loading of dot files will not be possible.
-    == temporary log file in case of crash /tmp/easybuild-zql_Ft/easybuild-peQ8GA.log
-    == processing EasyBuild easyconfig /tmp/tmp_gzHPM/EasyBuild-1.16.1.eb
-    == building and installing EasyBuild/1.16.1...
-    == fetching files...
-    == creating build dir, resetting environment...
-    == unpacking...
-    == patching...
-    == preparing...
-    == configuring...
-    == building...
-    == testing...
-    == installing...
-    == taking care of extensions...
-    == packaging...
-    == postprocessing...
-    == sanity checking...
-    == cleaning up...
-    == creating module...
-    == COMPLETED: Installation ended successfully
-    == Results of the build can be found in the log file /home/example/.local/easybuild/software/EasyBuild/1.16.1/easybuild/easybuild-EasyBuild-1.16.1-20150220.210610.log
-    == Build succeeded for 1 out of 1
-    == temporary log file /tmp/easybuild-zql_Ft/easybuild-peQ8GA.log has been removed.
-    == temporary directory /tmp/easybuild-zql_Ft has been removed.
-    [[INFO]] Done!
-    [[INFO]]
-    [[INFO]] EasyBuild v1.16.1 was installed to /home/example/.local/easybuild, so make sure your $MODULEPATH includes /home/example/.local/easybuild/modules/all
-    [[INFO]]
-    [[INFO]] Run 'module load EasyBuild', and run 'eb --help' to get help on using EasyBuild.
-    [[INFO]] Set $EASYBUILD_MODULES_TOOL to 'Lmod' to use the same modules tool as was used now.
-    [[INFO]]
-    [[INFO]] By default, EasyBuild will install software to $HOME/.local/easybuild.
-    [[INFO]] To install software with EasyBuild to /home/example/.local/easybuild, make sure $EASYBUILD_INSTALLPATH is set accordingly.
-    [[INFO]] See http://easybuild.readthedocs.org/en/latest/Configuration.html for details on configuring EasyBuild.
-
-
-After the bootstrap completes, the installed ``EasyBuild`` module can be loaded::
-
-  $ module use $HOME/.local/easybuild/modules/all
-  $ module av
-  ------------------------- /home/example/.local/easybuild/modules/all --------------------------
-  EasyBuild/1.16.1
-
-  $ module load EasyBuild
-  $ module list
-  Currently Loaded Modulefiles:
-    1) EasyBuild/1.16.1
-
-  $ which eb
-  /home/example/.local/easybuild/software/EasyBuild/1.16.1/bin/eb
-
-  $ eb --version
-  This is EasyBuild 1.16.1 (framework: 1.16.1, easyblocks: 1.16.1) on host example.local.
-
-Now, enjoy!
-
-.. _bootstrap_advanced_options:
-
-Advanced bootstrapping options
-------------------------------
-
-To use these advanced options, make sure you are using the latest version of the bootstrap script, available
-at https://raw.githubusercontent.com/easybuilders/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py .
-
-Skipping the installation of ``easy_install`` (stage 0)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The first stage of the bootstrap procedure consists of installing a specific version of the
-``distribute`` Python package, which provides the ``easy_install`` installation tool for Python software,
-in a temporary location. The bootstrap script then tries to ensure this particular installation is used
-during the other bootstrap stages.
-
-If you already have a version of ``easy_install`` on your system, and if you are confident that it behaves (in particular,
-that it complies to the installation prefix specified via ``--prefix``), you can skip stage 0 of the bootstrap procedure.
-
-To do so, simply define the ``EASYBUILD_BOOTSTRAP_SKIP_STAGE0`` environment variable (the value doesn't matter)::
-
-  $ export EASYBUILD_BOOTSTRAP_SKIP_STAGE0=1
-  $ python bootstrap_eb.py $HOME/eb/test_nostage0
-  ...
-  [[INFO]] Skipping stage0, using local distribute/setuptools providing easy_install
-  ...
-
-  +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
-
-  ...
-
-.. _bootstrap_offline:
-
-Offline bootstrapping using supplied source tarballs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-By default, the bootstrap script will download the most recent (stable) EasyBuild version from PyPI, the Python Package
-Index (https://pypi.python.org/pypi).
-
-Recent versions of the bootstrap script also allow to supply source tarballs for the different EasyBuild components
-(framework, easyblocks, easyconfigs), and (optionally) the vsc-base and vsc-install libraries EasyBuild depends on.
-
-The source tarball filenames must match a pattern like ``<pkg>*.tar.gz``, where ``<pkg>`` denotes the name of the
-respective EasyBuild component:
-
- * ``vsc-install*.tar.gz`` (*must* be downloaded from PyPI, see note below)
- * ``vsc-base*.tar.gz`` (*must* be downloaded from PyPI, see note below)
- * ``easybuild-framework*.tar.gz``
- * ``easybuild-easyblocks*.tar.gz``
- * ``easybuild-easyconfigs*.tar.gz``
-
-The location of the source tarballs can be specified using the ``$EASYBUILD_BOOTSTRAP_SOURCEPATH`` environment variable.
-
-.. note:: The source tarballs for ``vsc-base`` and ``vsc-install`` *must* be downloaded from PyPI rather than GitHub,
-          since the source tarballs published via PyPi are pre-processed, as opposed to the 'raw' source tarballs
-          that are available on GitHub.
-
-          To download the source tarballs from PyPI, visit https://pypi.python.org/pypi/vsc-base or
-          https://pypi.python.org/pypi/vsc-install. Alternatively, you can download the source tarball for the
-          most recent version using pip, for example::
-
-            pip download vsc-base --no-deps
-
-Example usage, with the relevant output at the start of stage 1 of the bootstrap process::
-
-  $ export EASYBUILD_BOOTSTRAP_SOURCEPATH=/tmp/$USER
-  $ python bootstrap_eb.py $HOME/eb/test_tarballs
-
-  +++ STAGE 0: installing distribute via included (patched) distribute_setup.py...
-
-  ...
-
-  +++ STAGE 1: installing EasyBuild in temporary dir with easy_install...
-
-  [[INFO]] Fetching sources from /tmp/example...
-  [[INFO]] Found /tmp/example/vsc-install-0.10.21.tar.gz for vsc-install package
-  [[INFO]] Found /tmp/example/vsc-base-2.5.5.tar.gz for vsc-base package
-  [[INFO]] Found /tmp/example/easybuild-framework-3.0.2.tar.gz for easybuild-framework package
-  [[INFO]] Found /tmp/example/easybuild-easyblocks.tar.gz for easybuild-easyblocks package
-  [[INFO]] Found /tmp/example/easybuild-easyconfigs.tar.gz for easybuild-easyconfigs package
-  ...
-
-.. note:: Providing a source tarball for ``vsc-base`` and ``vsc-install` is *optional*.
-          If not specified, the most recent version available
-          on PyPI will be downloaded and installed automatically when the ``easybuild-framework`` package is installed.
-          Source tarballs for all three EasyBuild components *must* be provided when ``$EASYBUILD_BOOTSTRAP_SOURCEPATH``
-          is defined, however.
+You can also run ``eb --show-system-info`` to see system information relevant to EasyBuild,
+or run``eb --show-config`` to see the default EasyBuild configuration (see also :ref:`configuring_easybuild`).
 
 .. _updating:
 
 Updating an existing EasyBuild installation
--------------------------------------------
+~~~~~~~~~~~~
 
-To upgrade to a newer EasyBuild version (say, |version|) than the one currently installed there are several options:
+To upgrade to a newer EasyBuild version than the one currently installed:
 
-  * (re)bootstrap EasyBuild to obtain an ``EasyBuild`` module for version |version|, using the instructions above, see :ref:`bootstrapping`.
-  * install EasyBuild version |version| with a previous version of EasyBuild
+* ``pip install --upgrade easybuild`` will upgrade EasyBuild to the latest release.
 
-    * using ``eb --install-latest-eb-release`` (requires EasyBuild v2.9.0 or more recent), or
-    * using the easyconfig file available on the develop branch at Github <https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/e/EasyBuild>`__
+.. _more_pip:
 
-  * install EasyBuild version |version| from PyPI, using one of the standard Python installation tools (``easy_install``, ``pip``, ...), see also :ref:`alt_inst_easy_install_pip`
-  * update the ``main`` branch of your Git working copies of the different EasyBuild repositories
+Additional pip install options
+~~~~~~~~~~~~
+
+For the ``pip`` install, you may wish to slightly change this command depending on the context and your personal preferences:
+
+* to install EasyBuild *system-wide*, you can use ``sudo`` (if you have admin privileges):
+
+  .. code:: sh
+
+      sudo pip install easybuild
+
+* To install EasyBuild *in your personal home directory*, you can use the ``--user`` option:
+
+  .. code:: sh
+
+      pip install --user easybuild
+
+  This will result in an EasyBuild installation in ``$HOME/.local/``.
+
+* To install EasyBuild in a *specific directory* you can use the ``--prefix`` option:
+
+  .. code:: sh
+
+      pip install --prefix _PREFIX_ easybuild
+
+  In this command, you should replace '``_PREFIX_``' with the location where you want to have EasyBuild installed
+  (for example, ``$HOME/tools`` or ``/tmp/$USER``).
+
+Keep in mind that you may need to update your environment too when using ``--user`` or ``--prefix``,
+see :ref:`more_pip_env`.
+
+
+.. _more_pip_pip3:
+
+``pip`` vs ``pip3``
+~~~~~~~~~~~~
+
+On systems where both Python 2 and Python 3 are installed you may also have different ``pip`` commands
+available. Or maybe ``pip`` is not available at all, and only "versioned" ``pip`` commands like ``pip3`` are
+available.
+
+If you (only) have ``pip3`` available, you can replace ``pip`` with ``pip3`` in any of the ``pip install`` commands
+above:
+
+.. code:: sh
+
+    pip3 install easybuild
+
+If you want to ensure that you are using the ``pip`` installation that corresponds to the Python 3 installation
+that you intend to use, you can use ``python3 -m pip`` rather than ``pip3``.
+
+.. code:: sh
+
+    python3.6 -m pip install easybuild
+
+Note that you may also need to instruct the ``eb`` command to use the correct Python version at runtime,
+via ``$EB_PYTHON`` (see :ref:`more_pip_env_EB_PYTHON`).
+
+.. _more_pip_env:
+
+Updating your environment
+~~~~~~~~~~~~
+
+If you used the ``--user`` or ``--prefix`` option in the ``pip install`` command,
+or if you installed EasyBuild with a ``pip`` version that does not correspond
+to your default Python installation, you will need to update your environment to make EasyBuild ready for use.
+This is not required if you did a system-wide installation in a standard location with the default Python version.
+
+.. note::
+  Keep in mind that you will have to make these environment changes again if you start a new shell session.
+  To avoid this, you can update one of the shell startup scripts in your home directory (``.bashrc`` for example).
+
+.. _more_pip_env_PATH:
+
+Updating ``$PATH``
+~~~~~~~~~~~~
+
+Update the ``$PATH`` environment variable to make sure the ``eb`` command is available::
+
+  export PATH=_PREFIX_/bin:$PATH
+
+**Replace** ``_PREFIX_`` **in this command** with the directory path where EasyBuild was installed into
+(use ``$HOME/.local`` if you used ``pip install --user``).
+
+This is not required if you installing EasyBuild in a standard system location.
+
+You can check with the ``which eb`` command to determine whether or not you need to update the ``$PATH`` environment variable.
+
+.. _more_pip_env_PYTHONPATH:
+
+Updating ``$PYTHONPATH``
+~~~~~~~~~~~~
+
+If you installed EasyBuild to a non-standard location using ``pip install --prefix``,
+you also need to update the Python search path environment variable ``$PYTHONPATH`` to instruct Python where
+it can find the EasyBuild Python packages.
+
+This is not required if you used the ``--user`` option, since Python will automatically consider
+``$HOME/.local`` when searching for installed Python packages, or if you installed EasyBuild in a standard
+system-wide location.
+
+Update ``$PYTHONPATH`` by running a command like::
+
+  export PYTHONPATH=_PREFIX_/lib/pythonX.Y/site-packages:$PYTHONPATH
+
+Here, you need to replace the ``X`` and ``Y`` with the major and minor version of your Python installation,
+which you can determine by running ``python -V``.
+For example, if you are using Python 3.6, make sure you are using ``/python3.6/`` in the command to update ``$PYTHONPATH``.
+
+And of course, you again need to **replace '``_PREFIX_``'** with the installation prefix where EasyBuild was installed
+into.
+
+For example::
+
+  # update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6
+  export PYTHONPATH=$HOME/tools/lib/python3.6/site-packages:$PYTHONPATH
+
+.. _more_pip_env_EB_PYTHON:
+
+Setting ``$EB_PYTHON``
+~~~~~~~~~~~~
+
+If you want to control which Python version is used to run EasyBuild,
+you can specify the name or the full path to the ``python`` command that should be used by the ``eb`` command
+via the ``$EB_PYTHON`` environment variable.
+
+This may be required when you installing EasyBuild with a version of ``pip`` that does not correspond
+with the default Python version.
+
+For example, to ensure that ``eb`` uses ``python3.6``::
+
+  export EB_PYTHON=python3.6
+
+
+.. _more_pip_env_EB_VERBOSE:
+
+Setting ``$EB_VERBOSE``
+~~~~~~~~~~~~
+
+To determine which ``python`` commands are being considered by the ``eb`` command,
+you can define the ``$EB_VERBOSE`` environment variable. For example::
+
+  $ EB_VERBOSE=1 eb --version
+  >> Considering 'python3.6'...
+  >> 'python3' version: 3.6.8, which matches Python 3 version requirement (>= 3.5)
+  >> Selected Python command: python3 (/usr/bin/python3.6)
+  >> python3.6 -m easybuild.main --version
+  This is EasyBuild 4.3.3 (framework: 4.3.3, easyblocks: 4.3.3) on host example
+
+
+.. _eb_as_module:
+
+Installing EasyBuild with EasyBuild
+-----------------------
+
+If you prefer having EasyBuild available through an environment module file,
+you can consider installing EasyBuild with EasyBuild. This can be done in 3 steps:
+
+* Step 1: Installing EasyBuild with ``pip`` into a temporary location (only needed if EasyBuild is not installed yet)
+* Step 2: Using EasyBuild to install EasyBuild as a module
+* Step 3: Loading the EasyBuild module
+
+.. _eb_as_module_step1:
+
+Step 1: Installing EasyBuild into a temporary location
+~~~~~~~~~~~~
+
+If you don't have EasyBuild installed yet, you need to install it in a temporary location first.
+The recommended way of doing this is using :ref:`pip`.
+
+For example, to install EasyBuild into a subdirectory ``/tmp/$USER`` using the default Python 3 version::
+
+  # pick installation prefix, and install EasyBuild into it
+  export EB_TMPDIR=/tmp/$USER/eb_tmp
+  python3 -m pip install --ignore-installed --prefix $EB_TMPDIR easybuild
+
+  # update environment to use this temporary EasyBuild installation
+  export PATH=$EB_TMPDIR/bin:$PATH
+  export PYTHONPATH=$(/bin/ls -rtd -1 $EB_TMPDIR/lib*/python*/site-packages | tail -1):$PYTHONPATH
+  export EB_PYTHON=python3
+
+.. _eb_as_module_step2:
+
+Step 2: Using EasyBuild to install EasyBuild
+~~~~~~~~~~~~
+
+Once you have a working (recent) temporary EasyBuild installation, you can use it to
+install EasyBuild as a module. Usually this is done in the location where you would
+like to install other software too.
+
+You can use the ``eb --install-latest-eb-release`` command for this,
+combined with the ``--prefix`` option to control which directories are used by EasyBuild for the installation.
+
+For example, to install the latest version of EasyBuild as a module into ``$HOME/easybuild``::
+
+  eb --install-latest-eb-release --prefix $HOME/easybuild
+
+.. note::
+
+  You may see a harmless deprecation warning popping up when performing this installation, just ignore it.
+
+.. _eb_as_module_step3:
+
+Step 3: Loading the EasyBuild module
+~~~~~~~~~~~~
+
+Once :ref:`eb_as_module_step2` is completed, you should be able to load the module that was generated alongside
+the EasyBuild installation. You will need to do this every time you start a new shell session.
+
+First, make the module available by running the following command (which will update the module search path
+environment variable ``$MODULEPATH``)::
+
+  module use _PREFIX_/modules/all
+
+**Replace** ``_PREFIX_`` with the path to the directory that you used when running :ref:`eb_as_module_step2`
+(for example, ``$HOME/easybuild``).
+
+Then, load the EasyBuild module to update your environment and make EasyBuild available for use::
+
+  module load EasyBuild
+
+.. note::
+  Note that in this case, we don't need to make any changes to our environment for EasyBuild to work correctly.
+  The environment module file that was generated by EasyBuild specifies all changes that need to be made.
+
 
 .. _dependencies:
 
@@ -387,11 +350,14 @@ Required dependencies
 
 * `Python <http://python.org>`_:
 
-  * Python 2.7, or Python 3.x (>= 3.5)
+  * Python 2.7, or Python 3.x (>= 3.5);
 
-  * no third-party Python packages are strictly required (the Python standard library is sufficient)
+  * since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we strongly recommend
+    using Python 3 if it is available;
 
-  * for some *specific* EasyBuild features additional Python packages are required however, see :ref:`optional_python_packages`
+  * no third-party Python packages are strictly required (the Python standard library is sufficient);
+
+  * for some *specific* EasyBuild features additional Python packages are required however, see :ref:`optional_python_packages`;
 
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
