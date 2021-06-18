@@ -62,6 +62,8 @@ Install EasyBuild with::
 
   pip install easybuild
 
+You may need to tweak this command a bit, depending on your setup, see :ref:`more_pip`.
+
 .. note::
   There are various other ways of installing Python packages, which we won't cover here.
   If you are familiar with other tools like ``virtualenv`` or ``pipenv``, feel free to use those
@@ -77,10 +79,10 @@ For example::
     $ module list
 
     Currently Loaded Modules:
-      1) EasyBuild/1.16.1
+      1) EasyBuild/4.4.0
 
     $ eb --version
-    This is EasyBuild 1.16.1 (framework: 1.16.1, easyblocks: 1.16.1) on host example.local
+    This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local
 
 .. tip::
 
@@ -90,8 +92,8 @@ For example::
   may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
   with respect to what is the version being loaded by default.
 
-You can also run ``eb --show-config`` to see the default EasyBuild configuration. See the Configuring EasyBuild section
-for more information :ref:`configuring_easybuild`
+You can also run ``eb --show-system-info`` to see system information relevant to EasyBuild,
+or run``eb --show-config`` to see the default EasyBuild configuration (see also :ref:`configuring_easybuild`).
 
 .. _updating:
 
@@ -102,21 +104,41 @@ To upgrade to a newer EasyBuild version than the one currently installed:
 
 * ``pip install --upgrade easybuild`` will upgrade EasyBuild to the latest release.
 
-.. _advancedpip:
+.. _more_pip:
 
-Advanced pip install options
+Additional pip install options
 ~~~~~~~~~~~~
 
 For the ``pip`` install, you may wish to slightly change this command depending on the context and your personal preferences:
 
-* To install EasyBuild *system-wide*, you can use ``sudo`` (if you have admin privileges): ``sudo pip install easybuild``
+* to install EasyBuild *system-wide*, you can use ``sudo`` (if you have admin privileges):
 
-* To install EasyBuild *in your personal home directory*, you can use the ``--user`` option: ``pip install --user easybuild``
+  .. code:: sh
+
+      sudo pip install easybuild
+
+* To install EasyBuild *in your personal home directory*, you can use the ``--user`` option:
+
+  .. code:: sh
+
+      pip install --user easybuild
+
   This will result in an EasyBuild installation in ``$HOME/.local/``.
 
-* To install EasyBuild in a *specific directory* you can use the ``--prefix`` option: ``pip install --prefix _PREFIX_ easybuild``
+* To install EasyBuild in a *specific directory* you can use the ``--prefix`` option:
+
+  .. code:: sh
+
+      pip install --prefix _PREFIX_ easybuild
+
   In this command, you should replace '``_PREFIX_``' with the location where you want to have EasyBuild installed
   (for example, ``$HOME/tools`` or ``/tmp/$USER``).
+
+Keep in mind that you may need to update your environment too when using ``--user`` or ``--prefix``,
+see :ref:`more_pip_env`.
+
+
+.. _more_pip_pip3:
 
 ``pip`` vs ``pip3``
 ~~~~~~~~~~~~
@@ -126,10 +148,23 @@ available. Or maybe ``pip`` is not available at all, and only "versioned" ``pip`
 available.
 
 If you (only) have ``pip3`` available, you can replace ``pip`` with ``pip3`` in any of the ``pip install`` commands
-above.
+above:
+
+.. code:: sh
+
+    pip3 install easybuild
 
 If you want to ensure that you are using the ``pip`` installation that corresponds to the Python 3 installation
 that you intend to use, you can use ``python3 -m pip`` rather than ``pip3``.
+
+.. code:: sh
+
+    python3.6 -m pip install easybuild
+
+Note that you may also need to instruct the ``eb`` command to use the correct Python version at runtime,
+via ``$EB_PYTHON`` (see :ref:`more_pip_env_EB_PYTHON`).
+
+.. _more_pip_env:
 
 Updating your environment
 ~~~~~~~~~~~~
@@ -143,6 +178,8 @@ This is not required if you did a system-wide installation in a standard locatio
   Keep in mind that you will have to make these environment changes again if you start a new shell session.
   To avoid this, you can update one of the shell startup scripts in your home directory (``.bashrc`` for example).
 
+.. _more_pip_env_PATH:
+
 Updating ``$PATH``
 ~~~~~~~~~~~~
 
@@ -150,12 +187,14 @@ Update the ``$PATH`` environment variable to make sure the ``eb`` command is ava
 
   export PATH=_PREFIX_/bin:$PATH
 
-**Replace '``_PREFIX_``' in this command** with the directory path where EasyBuild was installed into
+**Replace** ``_PREFIX_`` **in this command** with the directory path where EasyBuild was installed into
 (use ``$HOME/.local`` if you used ``pip install --user``).
 
 This is not required if you installing EasyBuild in a standard system location.
 
 You can check with the ``which eb`` command to determine whether or not you need to update the ``$PATH`` environment variable.
+
+.. _more_pip_env_PYTHONPATH:
 
 Updating ``$PYTHONPATH``
 ~~~~~~~~~~~~
@@ -184,6 +223,7 @@ For example::
   # update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6
   export PYTHONPATH=$HOME/tools/lib/python3.6/site-packages:$PYTHONPATH
 
+.. _more_pip_env_EB_PYTHON:
 
 Setting ``$EB_PYTHON``
 ~~~~~~~~~~~~
@@ -199,6 +239,8 @@ For example, to ensure that ``eb`` uses ``python3.6``::
 
   export EB_PYTHON=python3.6
 
+
+.. _more_pip_env_EB_VERBOSE:
 
 Setting ``$EB_VERBOSE``
 ~~~~~~~~~~~~
@@ -278,7 +320,7 @@ environment variable ``$MODULEPATH``)::
 
   module use _PREFIX_/modules/all
 
-**Replace '``_PREFIX_``'** with the path to the directory that you used when running :ref:`eb_as_module_step2`
+**Replace** ``_PREFIX_`` with the path to the directory that you used when running :ref:`eb_as_module_step2`
 (for example, ``$HOME/easybuild``).
 
 Then, load the EasyBuild module to update your environment and make EasyBuild available for use::
@@ -308,12 +350,14 @@ Required dependencies
 
 * `Python <http://python.org>`_:
 
-  * Python 2.7, or Python 3.x (>= 3.5). Since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we recommend
-    using Python 3 if it is available
+  * Python 2.7, or Python 3.x (>= 3.5);
 
-  * no third-party Python packages are strictly required (the Python standard library is sufficient)
+  * since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we strongly recommend
+    using Python 3 if it is available;
 
-  * for some *specific* EasyBuild features additional Python packages are required however, see :ref:`optional_python_packages`
+  * no third-party Python packages are strictly required (the Python standard library is sufficient);
+
+  * for some *specific* EasyBuild features additional Python packages are required however, see :ref:`optional_python_packages`;
 
 * a **modules tool**: Tcl(/C) environment modules or Lmod
 
