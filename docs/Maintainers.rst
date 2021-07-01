@@ -99,6 +99,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@fgeorgatos <https://github.com/fgeorgatos>`_ - e-mail: ``kefalonia (at) gmail.com`` - IRC/Slack: ``fotis``
 
+* **Balázs Hajgató** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
+
+  * GitHub: `@hajgato <https://github.com/hajgato>`_ - e-mail: ``balazs.hajgato (at) ugent.be`` - IRC/Slack: ``hajgato``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
