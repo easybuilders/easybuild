@@ -8,6 +8,7 @@
     * EB_ABAQUS
     * EB_Allinea
     * EB_Anaconda
+    * EB_AOMP
     * EB_CPLEX
     * EB_CUDA
     * EB_EPD
@@ -66,6 +67,7 @@
         * EB_pybind11
         * EB_UFC
 
+      * EB_Amber
       * EB_Armadillo
       * EB_BamTools
       * EB_Blender
@@ -90,7 +92,6 @@
       * EB_Trilinos
 
     * ConfigureMakePythonPackage
-    * EB_Amber
     * EB_ARB
     * EB_ATLAS
     * EB_BerkeleyGW
@@ -115,6 +116,7 @@
     * EB_Ferret
     * EB_FFTW
     * EB_flex
+    * EB_FreeFEM
     * EB_freetype
     * EB_g2clib
     * EB_g2lib
@@ -149,6 +151,7 @@
     * EB_MUMmer
     * EB_MUMPS
     * EB_MyMediaLite
+    * EB_NCCL
     * EB_ncurses
     * EB_netCDF_minus_Fortran
     * EB_NEURON
@@ -186,6 +189,7 @@
     * EB_TAU
     * EB_tbb
     * EB_tbb
+    * EB_UCX_Plugins
     * EB_Velvet
     * EB_VMD
     * EB_XALT
@@ -223,6 +227,7 @@
   * EB_Gctf
   * EB_libsmm
   * EB_Modeller
+  * EB_MOOSE
   * EB_MotionCor2
   * EB_MRtrix
   * EB_NCL
@@ -273,6 +278,7 @@
       * EB_SEPP
       * EB_TensorFlow
       * EB_TensorRT
+      * EB_torchvision
       * EB_VSC_minus_tools
       * EB_wxPython
       * FortranPythonPackage
@@ -406,6 +412,7 @@
       * EB_SEPP
       * EB_TensorFlow
       * EB_TensorRT
+      * EB_torchvision
       * EB_VSC_minus_tools
       * EB_wxPython
       * FortranPythonPackage
