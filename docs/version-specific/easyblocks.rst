@@ -227,7 +227,6 @@
   * EB_Gctf
   * EB_libsmm
   * EB_Modeller
-  * EB_MOOSE
   * EB_MotionCor2
   * EB_MRtrix
   * EB_NCL
