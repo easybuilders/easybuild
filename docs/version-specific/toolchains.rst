@@ -21,7 +21,7 @@ Name                   Compiler(s)         MPI            Linear algebra        
 **ffmpi**              FCC                 *(none)*       *(none)*                     *(none)*
 **foss**               GCC                 OpenMPI        OpenBLAS, ScaLAPACK          FFTW    
 **fosscuda**           GCC, CUDA           OpenMPI        OpenBLAS, ScaLAPACK          FFTW    
-**Fujitsu**            *(none)*            *(none)*       *(none)*                     FFTW    
+**Fujitsu**            FCC                 *(none)*       *(none)*                     FFTW    
 **GCC**                GCC                 *(none)*       *(none)*                     *(none)*
 **GCCcore**            GCCcore             *(none)*       *(none)*                     *(none)*
 **gcccuda**            GCC, CUDA           *(none)*       *(none)*                     *(none)*
@@ -80,6 +80,7 @@ Name                   Compiler(s)         MPI            Linear algebra        
 **iqacml**             icc, ifort          QLogicMPI      ACML, ScaLAPACK              FFTW    
 **ismkl**              icc, ifort          MPICH2         imkl                         imkl    
 **NVHPC**              NVHPC               *(none)*       *(none)*                     *(none)*
+**nvompic**            NVHPC               OpenMPI        *(none)*                     *(none)*
 **PGI**                PGI                 *(none)*       *(none)*                     *(none)*
 **pmkl**               PGI                 *(none)*       imkl                         imkl    
 **pomkl**              PGI                 OpenMPI        imkl                         imkl    
