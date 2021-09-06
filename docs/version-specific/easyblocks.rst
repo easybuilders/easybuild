@@ -10,6 +10,7 @@
     * EB_Anaconda
     * EB_AOMP
     * EB_CPLEX
+    * EB_CRISPR_minus_DAV
     * EB_CUDA
     * EB_EPD
     * EB_IMOD
@@ -34,6 +35,7 @@
       * EB_MATLAB
       * EB_MCR
       * EB_NVHPC
+      * EB_ORCA
       * EB_PGI
       * EB_Samcef
       * EB_Stata
@@ -209,6 +211,7 @@
       * EB_mutil
       * EB_MXNet
       * EB_NAMD
+      * EB_ORCA
 
     * PerlModule
     * SystemMPI
@@ -265,6 +268,7 @@
       * EB_dm_minus_reverb
       * EB_EasyBuildMeta
       * EB_EggLib
+      * EB_jaxlib
       * EB_libxml2
       * EB_Metagenome_Atlas
       * EB_netcdf4_minus_python
@@ -354,6 +358,7 @@
     * EB_MATLAB
     * EB_MCR
     * EB_NVHPC
+    * EB_ORCA
     * EB_PGI
     * EB_Samcef
     * EB_Stata
@@ -375,6 +380,7 @@
     * EB_MTL4
     * EB_picard
     * EB_RepeatMasker
+    * EB_RepeatModeler
 
   * Waf
 
@@ -399,6 +405,7 @@
       * EB_dm_minus_reverb
       * EB_EasyBuildMeta
       * EB_EggLib
+      * EB_jaxlib
       * EB_libxml2
       * EB_Metagenome_Atlas
       * EB_netcdf4_minus_python
