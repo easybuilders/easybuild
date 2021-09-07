@@ -35,7 +35,7 @@ bugfix/update release
 
 * various bug fixes, including:
 
-  * remove Python 2.6 from list of supported Python versions in ``setup.py ``(`#3767 <https://github.com/easybuilders/easybuild-framework/pull/3767>`_)
+  * remove Python 2.6 from list of supported Python versions in ``setup.py`` (`#3767 <https://github.com/easybuilders/easybuild-framework/pull/3767>`_)
   * don't add directory that doesn't include any files to ``$PATH`` or ``$LD_LIBRARY_PATH`` (`#3769 <https://github.com/easybuilders/easybuild-framework/pull/3769>`_)
   * make logdir writable also when ``--stop``/``--fetch`` is used and ``--read-only-installdir`` is enabled (`#3771 <https://github.com/easybuilders/easybuild-framework/pull/3771>`_)
   * fix forgotten renaming of ``l`` to ``char`` in ``__init__.py`` that is created for included Python modules (`#3773 <https://github.com/easybuilders/easybuild-framework/pull/3773>`_)
@@ -78,7 +78,7 @@ bugfix/update release
   * fix motorBike test in sanity check for OpenFOAM 9 (`#2544 <https://github.com/easybuilders/easybuild-easyblocks/pull/2544>`_)
   * generate and install pkg-config files for OpenSSL wrapper (`#2549 <https://github.com/easybuilders/easybuild-easyblocks/pull/2549>`_)
   * don't run ``setup.py config`` for numpy >= 1.21, since it's no longer supported (`#2554 <https://github.com/easybuilders/easybuild-easyblocks/pull/2554>`_)
-  * update WIEK2k easyblock to handle new Intel versions, WIEN2k v21, Perl dependency, and tuning of dimension parameters (`#2558 <https://github.com/easybuilders/easybuild-easyblocks/pull/2558>`_)
+  * update WIEN2k easyblock to handle new Intel versions, WIEN2k v21, Perl dependency, and tuning of dimension parameters (`#2558 <https://github.com/easybuilders/easybuild-easyblocks/pull/2558>`_)
   * remove PCRE from list of system libraries for TensorFlow 2.6.0 (`#2559 <https://github.com/easybuilders/easybuild-easyblocks/pull/2559>`_)
   * add support for also installing Tosca component in ABAQUS (`#2560 <https://github.com/easybuilders/easybuild-easyblocks/pull/2560>`_)
   * update ABAQUS easyblock to support installing of version 2021 with hot fixes (`#2562 <https://github.com/easybuilders/easybuild-easyblocks/pull/2562>`_)
