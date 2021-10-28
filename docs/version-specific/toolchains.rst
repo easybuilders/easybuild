@@ -60,7 +60,6 @@ Name                   Compiler(s)         MPI            Linear algebra        
 **iccifortcuda**       icc, ifort, CUDA    *(none)*       *(none)*                     *(none)*
 **ictce**              icc, ifort          impi           imkl                         imkl    
 **iibff**              icc, ifort          impi           BLIS, libFLAME, ScaLAPACK    FFTW    
-**iiblf**              icc, ifort          impi           BLIS, LAPACK, ScaLAPACK      FFTW    
 **iimkl**              icc, ifort          *(none)*       imkl                         imkl    
 **iimklc**             icc, ifort, CUDA    *(none)*       imkl                         imkl    
 **iimpi**              icc, ifort          impi           *(none)*                     *(none)*
