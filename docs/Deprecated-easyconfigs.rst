@@ -65,6 +65,7 @@ Overview of deprecated toolchains:
 
 * :ref:`deprecated_easyconfigs_toolchains_foss`
 * :ref:`deprecated_easyconfigs_toolchains_gcc`
+* :ref:`deprecated_easyconfigs_toolchains_gcccuda`
 * :ref:`deprecated_easyconfigs_toolchains_gompi`
 * :ref:`deprecated_easyconfigs_toolchains_goolf`
 * :ref:`deprecated_easyconfigs_toolchains_ictce`
@@ -74,14 +75,14 @@ Overview of deprecated toolchains:
 
 .. _deprecated_easyconfigs_toolchains_foss:
 
-``foss`` toolchain
-~~~~~~~~~~~~~~~~~~
+``foss`` and ``fosscuda`` toolchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * *deprecated since:* EasyBuild v4.5.0
 * *will be archived in:* EasyBuild v5.0.0
 
-The oldest versions of the ``foss`` toolchain have been deprecated,
-which currently includes any version older than ``foss/2019a``.
+The oldest versions of the ``foss`` and ``fosscuda`` toolchains have been deprecated,
+which currently includes any version older than ``foss/2019a`` and ``fosscuda/2019a``.
 
 
 .. _deprecated_easyconfigs_toolchains_gcc:
@@ -96,16 +97,28 @@ The oldest versions of the ``GCCcore`` and ``GCC`` toolchains have been deprecat
 which currently includes any version older than ``8.0``.
 
 
-.. _deprecated_easyconfigs_toolchains_gompi:
+.. _deprecated_easyconfigs_toolchains_gcccuda:
 
-``gompi`` toolchain
-~~~~~~~~~~~~~~~~~~~
+``gcccuda`` toolchain
+~~~~~~~~~~~~~~~~~~~~~
 
 * *deprecated since:* EasyBuild v4.5.0
 * *will be archived in:* EasyBuild v5.0.0
 
-Versions of the ``gompi`` toolchain that were used as a subtoolchain for a deprecated toolchain
-have also been deprecated; this includes ``gompi`` toolchain versions older than ``gompi/2019a``.
+The oldest versions of the ``gcccuda`` toolchains have been deprecated,
+which currently includes any version older than ``gcccuda/2019a``.
+
+
+.. _deprecated_easyconfigs_toolchains_gompi:
+
+``gompi`` and ``gompic`` toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v4.5.0
+* *will be archived in:* EasyBuild v5.0.0
+
+Versions of the ``gompi`` and ``gompic`` toolchains that were used as a subtoolchain for a deprecated toolchain
+have also been deprecated; this includes versions older than ``gompi/2019a`` and ``gompic/2019a``.
 
 
 .. _deprecated_easyconfigs_toolchains_goolf:
@@ -140,8 +153,8 @@ for the Intel compilers) in the ``intel`` toolchain.
 
 .. _deprecated_easyconfigs_toolchains_intel:
 
-``iccifort``, ``iimpi`` and ``intel`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``iccifort``, ``iimpi``, ``iimpic``, ``intel``, and ``intelcuda`` toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * *deprecated since:* EasyBuild v4.5.0
 * *will be archived in:* EasyBuild v5.0.0
@@ -151,17 +164,17 @@ The oldest versions of the ``iccifort``, ``iimpi`` and :ref:`common_toolchains_i
 Deprecated versions include:
 
 * ``iccifort`` versions older than ``2019.0``
-* ``iimpi`` versions older than ``2019a``
-* ``intel`` versions older than ``2019a``
+* ``iimpi`` and ``iimpic`` versions older than ``2019a``
+* ``intel`` and ``intelcuda`` versions older than ``2019a``
 
 
 .. _deprecated_easyconfigs_toolchains_iomkl:
 
-``iompi`` and ``iomkl`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``iompi``, ``iompic``, ``iomkl``, and ``iomklc`` toolchains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * *deprecated since:* EasyBuild v4.5.0
 * *will be archived in:* EasyBuild v5.0.0
 
-The oldest versions of the ``iompi`` and ``iomkl`` toolchains have been deprecated,
-which currently includes any version older than ``iompi/2019a`` and ``iomkl/2019a``.
+The oldest versions of the ``iompi``, ``iompic``, ``iomkl`` and ``iomklc`` toolchains have been deprecated,
+which currently includes any version older than ``2019a``.
