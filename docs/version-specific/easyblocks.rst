@@ -34,6 +34,7 @@
       * EB_Java
       * EB_MATLAB
       * EB_MCR
+      * EB_MotionCor2
       * EB_NVHPC
       * EB_ORCA
       * EB_PGI
@@ -230,7 +231,6 @@
   * EB_Gctf
   * EB_libsmm
   * EB_Modeller
-  * EB_MotionCor2
   * EB_MRtrix
   * EB_NCL
   * EB_NEMO
@@ -324,6 +324,9 @@
       * SystemCompiler
 
     * EB_imkl
+
+      * EB_imkl_minus_FFTW
+
     * EB_impi
 
       * SystemMPI
@@ -357,6 +360,7 @@
     * EB_Java
     * EB_MATLAB
     * EB_MCR
+    * EB_MotionCor2
     * EB_NVHPC
     * EB_ORCA
     * EB_PGI
