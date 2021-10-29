@@ -19,6 +19,12 @@ by default, if the `Rich <https://pypi.org/project/rich/>`_ Python package is av
 
 The progress bars shown by EasyBuild are *dynamic*: they are only visible when they are relevant.
 
+Note that for most progress bars the amount of progress made is assumed to be linear across the whole process,
+even though it is typically not. Some installation steps take significantly longer than others,
+and some easyconfigs may install in a couple minutes while others take much longer, but it is very difficult
+to get a good estimate on how much time will be needed.
+The download progress bar is an exception here (as long as the size of the file to download could be determined first).
+
 .. _progress_bars_types:
 
 Types of progress bars
@@ -43,11 +49,13 @@ From left to right, the following information is included:
   being processed, and a count of easyconfigs that failed to installed so far (if there are any).
 * The list of already processed easyconfigs, along with the result:
     * ``OK`` (in green) for a successful installation;
-    * ``FAILED`` (in red) a failed installation;
+    * ``FAILED`` (in red) for a failed installation;
 
 Processed easyconfigs are shown in reversed order: most recently processed easyconfigs are listed first.
-Failing easyconfigs are listed before easyconfigs that were installed successfully,
-to highlight failing installations.
+
+If EasyBuild is configured to continue processing easyconfigs when an installation failed
+(for example when using ``--upload-test-report``), failing easyconfigs are listed before easyconfigs
+that were installed successfully, to highlight failing installations.
 
 The status bar is not shown if only a single easyconfig file is being installed,
 and is hidden automatically as soon as the EasyBuild session finishes.
@@ -83,8 +91,8 @@ a dedicated progress bar will be visible:
 
 * For large downloads: the name of the file being downloaded,
   a visual progress bar, the amount of data downloaded so far,
-  the amount of data to download in total, the download speed,
-  and the amount of time spent downloading the file so far.
+  the amount of data to download in total, the average download speed,
+  and the estimated time remaining to complete the download (based on average download speed).
 * If there are multiple files being downloaded: an overview of how
   many files have been downloaded already, and how many need to be downloaded in total.
 
