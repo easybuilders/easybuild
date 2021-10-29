@@ -19,10 +19,10 @@ by default, if the `Rich <https://pypi.org/project/rich/>`_ Python package is av
 
 The progress bars shown by EasyBuild are *dynamic*: they are only visible when they are relevant.
 
-Note that for most progress bars the amount of progress made is assumed to be linear across the whole process,
-even though it is typically not. Some installation steps take significantly longer than others,
-and some easyconfigs may install in a couple minutes while others take much longer, but it is very difficult
-to get a good estimate on how much time will be needed.
+Note that for most progress bars each step is treated as being equal even though the time taken for the
+various steps varies. There are many factors that impact how long an individual installation step, installing
+an easyconfig, or installing an extension may and this makes it very difficult to get a good estimate on how
+much time will be needed.
 The download progress bar is an exception here (as long as the size of the file to download could be determined first).
 
 .. _progress_bars_types:
