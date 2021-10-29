@@ -93,7 +93,7 @@ Skipping of installed extensions is still done sequentially
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checking which extensions are already installed for which the installation can be skipped
-when ``--skip`` is being used is still done sequentially.
+when ``--skip`` (see :ref:`partial_installation_skip`) is being used is still done sequentially.
 
 Additional work is needed to also run these checks in parallel across the cores that are available to EasyBuild.
 
