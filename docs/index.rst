@@ -76,6 +76,7 @@ Advanced usage topics
     Manipulating_dependencies
     Packaging_support
     Partial_installations
+    Progress_bars
     RPATH-support
     Submitting_jobs
     Tracing_progress
