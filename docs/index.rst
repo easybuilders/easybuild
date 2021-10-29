@@ -71,6 +71,7 @@ Advanced usage topics
     Hooks
     Implementing-easyblocks
     Including_additional_Python_modules
+    Installing_extensions_in_parallel
     Integration_with_GitHub
     Locks
     Manipulating_dependencies
