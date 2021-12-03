@@ -115,9 +115,9 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@smoors <https://github.com/smoors>`_ - e-mail: ``samuel.moors (at) vub.be`` - IRC/Slack: ``smoors``
 
-* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+* **Alan O'Cais** (`CECAM <https://www.cecam.org/>`_)
 
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``alan.ocais (at) epfl.ch`` - IRC/Slack: ``ocaisa``
 
 * **Mikael Öhman** (`Chalmers University of Technology <https://www.chalmers.se/en>`_)
 
