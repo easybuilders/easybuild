@@ -52,6 +52,7 @@
 
     * BuildEnv
     * CrayToolchain
+    * EB_Clang_minus_AOMP
     * EB_OpenSSL_wrapper
     * PythonBundle
     * SystemCompiler
