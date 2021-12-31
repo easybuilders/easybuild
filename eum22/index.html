@@ -147,7 +147,7 @@ https://webappsx.ugent.be/eventManager/events/eumtwentytwo</a></strong></p>
     <li style="list-style-type: none"><strong>Tue 25 Jan 2022</strong></li>
     <ul>
         <li><em>[15:00 UTC]</em> <a href="#site-talks-tue">Site presentations: CECAM, BSC Earth Sciences</a></li>
-        <li><em>[16:00 UTC]</em> <a href="#cvmfs">CernVM-FS and containers</a></li>
+        <li><em>[16:00 UTC]</em> <a href="#cvmfs">CernVM-FS with Singularity/Apptainer: a great combination</a></li>
         <li><em>[17:00 UTC]</em> <a href="#apptainer">From Singularity to Apptainer</a></li>
         <li><em>[18:00 UTC]</em> <a href="#spack">Spack update</a></li>
     </ul>
@@ -281,7 +281,7 @@ Survey will be covered in this talk.
 <a id="cvmfs"/></a>
 <br/><p>
 <em>[Tue 25 Jan 2022 - 16:00 UTC]</em><br/>
-<strong>CernVM-FS and containers</strong><br/>
+<strong>CernVM-FS with Singularity/Apptainer: a great combination</strong><br/>
 <!--<a
     href="https://www.youtube.com/watch?v=m8XphFQT3z0&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=1"><em>(recording
     @ YouTube)</em></a>-->
@@ -290,7 +290,28 @@ Survey will be covered in this talk.
 by Dave Dykstra (Fermilab, US)</em>
 </p>
 <p>
-<em>(talk description coming soon)</em>
+The CernVM-FileSystem (CVMFS) is ideal for transporting Singularity/
+Apptainer "sandbox" style (unpacked) containers.  It moves metadata
+operations to the client in the same performance-enhancing way as
+monolithic SIF containers, while providing automatic updates and
+enabling Singularity/Apptainer to run entirely unprivileged.</p>
+
+<p>CERN
+and OSG each host shared CVMFS repositories containing automatically
+downloaded containers, which is especially efficient for storage and
+network because CVMFS deduplicates repeated files.
+A recent CVMFS feature enables publication of layered docker containers
+to also be efficient, where the bulk of files shared in a large project's
+software base can avoid the overhead of reprocessing.</p>
+
+<p>I will
+discuss my plans for incorporating that new feature in my
+cvmfs-user-pub package which is designed to quickly make end user
+software available worldwide to distributed batch processing.  I
+will also discuss the challenges of using CVMFS on HPC systems and
+the applicability of using my cvmfsexec package to run CVMFS
+entirely as an end user without assistance from system
+administrators.
 </p><br/>
 
 <hr>
