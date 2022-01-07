@@ -398,7 +398,19 @@ making scientific libraries, languages and packages dynamically available in a s
 by Alex Domingo (Vrije Universiteit Brussel, Belgium)</em>
 </p>
 <p>
-<em>(talk description coming soon)</em>
+EasyBuild greatly simplifies the installation of several MPI implementations with a single command. However, the MPI
+stack is tightly bound to the network hardware and directly interacts with kernel drivers and system libraries. Projects
+such as OpenUCX and OpenFabrics aim at providing a unified driver to offload the network transport from the MPI
+implementation. These higher-level drivers bring enhanced flexibility at runtime to MPI applications, as they can switch
+the network interface on-the-fly. But the dependencies with hardware drivers and the host system are not pushed off the
+table, just pushed down a larger library stack.</p>
+
+<p>This problem is very hard to solve automagically in EasyBuild due to all factors at play that lie out of its control
+(hardware configuration, build system, resource manager). Nonetheless, EasyBuild already provides tools to make custom
+modifications to easyconfigs programmatically (e.g. hooks), which can be used to seamlessly build and deploy an MPI
+stack fully adapted to your system. This talk will describe strategies to automatically handle the MPI stack with
+OpenMPI and Intel MPI on TCP and InfiniBand networks, as well as with Nvidia GPUs. Selected configurations reflect what
+we use at Vrije Universiteit Brussel in our heterogeneous tier-2 HPC.</p>
 </p><br/>
 
 <hr>
