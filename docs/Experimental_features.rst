@@ -15,3 +15,4 @@ Currently enabled experimental features include:
  * support for generating container recipes & images (see :ref:`containers`)
  * support for using easystack files (see :ref:`easystack`)
  * support for trying to update versions of the dependencies of an easyconfig based on what is available in the robot path (see :ref:`basic_usage_help`)
+ * support for installing extensions in parallel (see :ref:`installing_extensions_in_parallel`)

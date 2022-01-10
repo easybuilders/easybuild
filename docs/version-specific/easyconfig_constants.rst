@@ -20,6 +20,6 @@ Constant name             Constant value                                        
 ``OS_TYPE``               ``Darwin``                                                       System type (e.g. 'Linux' or 'Darwin')                                          
 ``OS_VERSION``            ``UNKNOWN``                                                      System version                                                                  
 ``SYSTEM``                ``{'name': 'system', 'version': 'system'}``                      System toolchain                                                                
-``SYS_PYTHON_VERSION``    ``3.9.5``                                                        System Python version (platform.python_version())                               
+``SYS_PYTHON_VERSION``    ``3.9.7``                                                        System Python version (platform.python_version())                               
 ======================    =============================================================    ================================================================================
 

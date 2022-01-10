@@ -503,6 +503,8 @@ Optional Python packages
   SVN repository for easyconfig files;
 * `python-graph-dot <https://pypi.python.org/pypi/python-graph-dot/>`_,
   only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``
+* `Rich <https://pypi.org/project/rich/>`_,
+  only needed to let ``eb`` produce rich output, like :ref:`progress_bars`;
 
 Sources
 -------

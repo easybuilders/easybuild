@@ -5,6 +5,10 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20211213.01** (`Dec 13th 2021`): update release notes for EasyBuild v4.5.1 (see :ref:`release_notes_eb451`)
+* **release 20211029.01** (`Oct 29th 2021`): update release notes for EasyBuild v4.5.0 (see :ref:`release_notes_eb450`)
+* **release 20210907.01** (`Sep  7th 2021`): update release notes for EasyBuild v4.4.2 (see :ref:`release_notes_eb442`)
+* **release 20210706.01** (`Jul  6th 2021`): update release notes for EasyBuild v4.4.1 (see :ref:`release_notes_eb441`)
 * **release 20210602.01** (`Jun  2nd 2021`): update release notes for EasyBuild v4.4.0 (see :ref:`release_notes_eb440`)
 * **release 20210409.01** (`Apr  9th 2021`): update release notes for EasyBuild v4.3.4 (see :ref:`release_notes_eb434`)
 * **release 20210223.01** (`Feb 23rd 2021`): update release notes for EasyBuild v4.3.3 (see :ref:`release_notes_eb433`)

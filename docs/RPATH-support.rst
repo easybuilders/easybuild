@@ -5,9 +5,6 @@ Support for RPATH
 
 Since EasyBuild v3.5.2, (stable) support is available for using RPATH.
 
-.. note:: RPATH support has been available since EasyBuild v3.0.0, but was considered experimental
-          until EasyBuild v3.5.2 (cfr. :ref:`experimental_features` for more information on experimental features).
-
 .. contents::
     :depth: 3
     :backlinks: none
@@ -53,8 +50,6 @@ Enabling RPATH linking
 ----------------------
 
 To instruct EasyBuild to enable RPATH linking, use the ``--rpath`` configuration option.
-
-.. note:: For now, ``--experimental`` is also required, since the implementation of RPATH support is not considered fully stable yet.
 
 
 .. _rpath_support_implementation:

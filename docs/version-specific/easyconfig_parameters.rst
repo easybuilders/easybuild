@@ -51,6 +51,7 @@ build parameters
 ``easyblock``                      EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                                           None             
 ``easybuild_version``              EasyBuild-version this spec-file was written for                                                                                             None             
 ``enhance_sanity_check``           Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it                               False            
+``fix_bash_shebang_for``           List of files for which Bash shebang should be fixed to '#!/usr/bin/env bash' (glob patterns supported)                                      None             
 ``fix_perl_shebang_for``           List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                                      None             
 ``fix_python_shebang_for``         List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)                                  None             
 ``github_account``                 GitHub account name to be used to resolve template values in source URLs                                                                     "%(namelower)s"  

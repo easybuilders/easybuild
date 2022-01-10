@@ -99,6 +99,10 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@fgeorgatos <https://github.com/fgeorgatos>`_ - e-mail: ``kefalonia (at) gmail.com`` - IRC/Slack: ``fotis``
 
+* **Balázs Hajgató** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
+
+  * GitHub: `@hajgato <https://github.com/hajgato>`_ - e-mail: ``balazs.hajgato (at) ugent.be`` - IRC/Slack: ``hajgato``
+
 * **Kenneth Hoste** (`HPC-UGent <http://www.ugent.be/hpc/en>`_)
 
   * GitHub: `@boegel <https://github.com/boegel>`_ - e-mail: ``kenneth.hoste (at) ugent.be`` - IRC/Slack: ``boegel``
@@ -111,9 +115,9 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
   * GitHub: `@smoors <https://github.com/smoors>`_ - e-mail: ``samuel.moors (at) vub.be`` - IRC/Slack: ``smoors``
 
-* **Alan O'Cais** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+* **Alan O'Cais** (`CECAM <https://www.cecam.org/>`_)
 
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``a.ocais (at) fz-juelich.de`` - IRC/Slack: ``ocaisa``
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``alan.ocais (at) epfl.ch`` - IRC/Slack: ``ocaisa``
 
 * **Mikael Öhman** (`Chalmers University of Technology <https://www.chalmers.se/en>`_)
 

@@ -8,7 +8,9 @@
     * EB_ABAQUS
     * EB_Allinea
     * EB_Anaconda
+    * EB_AOMP
     * EB_CPLEX
+    * EB_CRISPR_minus_DAV
     * EB_CUDA
     * EB_EPD
     * EB_IMOD
@@ -32,7 +34,9 @@
       * EB_Java
       * EB_MATLAB
       * EB_MCR
+      * EB_MotionCor2
       * EB_NVHPC
+      * EB_ORCA
       * EB_PGI
       * EB_Samcef
       * EB_Stata
@@ -48,6 +52,7 @@
 
     * BuildEnv
     * CrayToolchain
+    * EB_Clang_minus_AOMP
     * EB_OpenSSL_wrapper
     * PythonBundle
     * SystemCompiler
@@ -66,6 +71,7 @@
         * EB_pybind11
         * EB_UFC
 
+      * EB_Amber
       * EB_Armadillo
       * EB_BamTools
       * EB_Blender
@@ -90,7 +96,6 @@
       * EB_Trilinos
 
     * ConfigureMakePythonPackage
-    * EB_Amber
     * EB_ARB
     * EB_ATLAS
     * EB_BerkeleyGW
@@ -115,6 +120,7 @@
     * EB_Ferret
     * EB_FFTW
     * EB_flex
+    * EB_FreeFEM
     * EB_freetype
     * EB_g2clib
     * EB_g2lib
@@ -149,6 +155,7 @@
     * EB_MUMmer
     * EB_MUMPS
     * EB_MyMediaLite
+    * EB_NCCL
     * EB_ncurses
     * EB_netCDF_minus_Fortran
     * EB_NEURON
@@ -186,6 +193,7 @@
     * EB_TAU
     * EB_tbb
     * EB_tbb
+    * EB_UCX_Plugins
     * EB_Velvet
     * EB_VMD
     * EB_XALT
@@ -205,6 +213,7 @@
       * EB_mutil
       * EB_MXNet
       * EB_NAMD
+      * EB_ORCA
 
     * PerlModule
     * SystemMPI
@@ -223,7 +232,6 @@
   * EB_Gctf
   * EB_libsmm
   * EB_Modeller
-  * EB_MotionCor2
   * EB_MRtrix
   * EB_NCL
   * EB_NEMO
@@ -261,6 +269,7 @@
       * EB_dm_minus_reverb
       * EB_EasyBuildMeta
       * EB_EggLib
+      * EB_jaxlib
       * EB_libxml2
       * EB_Metagenome_Atlas
       * EB_netcdf4_minus_python
@@ -273,6 +282,7 @@
       * EB_SEPP
       * EB_TensorFlow
       * EB_TensorRT
+      * EB_torchvision
       * EB_VSC_minus_tools
       * EB_wxPython
       * FortranPythonPackage
@@ -315,6 +325,9 @@
       * SystemCompiler
 
     * EB_imkl
+
+      * EB_imkl_minus_FFTW
+
     * EB_impi
 
       * SystemMPI
@@ -348,7 +361,9 @@
     * EB_Java
     * EB_MATLAB
     * EB_MCR
+    * EB_MotionCor2
     * EB_NVHPC
+    * EB_ORCA
     * EB_PGI
     * EB_Samcef
     * EB_Stata
@@ -370,6 +385,7 @@
     * EB_MTL4
     * EB_picard
     * EB_RepeatMasker
+    * EB_RepeatModeler
 
   * Waf
 
@@ -394,6 +410,7 @@
       * EB_dm_minus_reverb
       * EB_EasyBuildMeta
       * EB_EggLib
+      * EB_jaxlib
       * EB_libxml2
       * EB_Metagenome_Atlas
       * EB_netcdf4_minus_python
@@ -406,6 +423,7 @@
       * EB_SEPP
       * EB_TensorFlow
       * EB_TensorRT
+      * EB_torchvision
       * EB_VSC_minus_tools
       * EB_wxPython
       * FortranPythonPackage
