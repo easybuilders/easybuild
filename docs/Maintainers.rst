@@ -117,7 +117,7 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
 
 * **Alan O'Cais** (`CECAM <https://www.cecam.org/>`_)
 
-  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``alan.ocais (at) epfl.ch`` - IRC/Slack: ``ocaisa``
+  * GitHub: `@ocaisa <https://github.com/ocaisa>`_ - e-mail: ``alan.ocais (at) cecam.org`` - IRC/Slack: ``ocaisa``
 
 * **Mikael Öhman** (`Chalmers University of Technology <https://www.chalmers.se/en>`_)
 
