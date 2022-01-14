@@ -154,7 +154,7 @@ https://webappsx.ugent.be/eventManager/events/eumtwentytwo</a></strong></p>
 
     <li style="list-style-type: none"><strong>Wed 26 Jan 2022</strong></li>
     <ul>
-        <li><em>[14:00 UTC]</em> <em>(reserved talk slot, more info later)</em></li>
+        <li><em>[14:00 UTC]</em> <a href="#spack-vs-eb">A noob test: Spack "vs" EasyBuild</a></li>
         <li><em>[15:00 UTC]</em> <a href="#eb-k8s">EasyBuild for Kubernetes-based Data Science Platforms</a></li>
         <li><em>[16:00 UTC]</em> <a href="#eb-mpi">Building a heterogeneous MPI stack with EasyBuild</a></li>
         <li><em>[17:00 UTC]</em> <a href="#eessi-getting-started">Getting started with EESSI</a></li>
@@ -359,6 +359,33 @@ use, and Spack's oldest issue - too many rebuilds - is resolved.</p>
 public binary cache. We'll talk about how we've built out Spack's package build CI to handle every pull request, how we
 manage security, and how we expect to start proving binaries for core packages and compilers.
 </p><br/>
+
+<a id="spack-vs-eb"></a>
+<br/><p>
+<em>[Wed 26 Jan 2022 - 14:00 UTC]</em><br/>
+<strong>A noob test: Spack "vs" EasyBuild</strong><br/>
+<!--<a
+    href="https://www.youtube.com/watch?v=m8XphFQT3z0&list=PLhnGtSmEGEQh0pCtmkFQsDzeoo6tbYnyZ&index=1"><em>(recording
+    @ YouTube)</em></a>-->
+<!-- - <a href="000_eum21_welcome.pdf"><em>(slides, PDF)</em></a>-->
+<em>
+    by Jan-Patrick Lehr (TU Darmstadt, Germany)</em>
+</p>
+<p>
+Spack and EasyBuild promise to make software installation more accessible, if not easy.
+This seems perfect to set up the dependencies for our own research software development.
+The question is: how easy is it to get started with these systems?</p>
+
+<p>I look at Spack and EasyBuild as package managers without any previous knowledge of either of the tools.
+Our goal is to install the dependencies and toolchain for my C++ library MetaCG: GCC 9, Clang and LLVM 10,
+Extra-P, cxxopts, nlohmann json, and several Python packages.</p>
+
+<p>
+Finally, creating a package file and an easy config for MetaCG is the ultimate achievement.
+The talk will reflect on what I enjoyed about the package managers, what obstacles I ran into,
+and which issues I encountered in my own software.
+</p><br/>
+
 
 <hr>
 
