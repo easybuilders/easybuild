@@ -674,7 +674,29 @@ folding, the impact of the AlphaFold release, and the software on the HPC.</p>
 <em>by Bob Dröge (Univ. of Groningen, Netherlands)</em>
 </p>
 <p>
-<em>(talk description coming soon)</em>
+One major goal of European Environment for Scientific Software Installations (EESSI) collaborative project is
+to let people propose software installations to include into EESSI, much like accepting contributions in
+EasyBuild through pull requests.</p>
+
+<p>The setup of EESSI, where optimized software installations for a diverse range of CPU microarchitectures
+(Intel, AMD, Arm, POWER, and perhaps later also RISC-V), as well as the need to ensure a secure workflow,
+makes this challenging.</br>
+Other aspects of EESSI, like strictly controlling the build environment through containers, distributing
+software via CernVM-FS, supporting different Linux distributions through a compatibility layer built with
+Gentoo Prefix, and leveraging EasyBuild + Lmod for software installations and ReFrame for software testing,
+actually make this feasible.</p>
+
+<p>In this talk, we will outline our projected approach to this, which involves implementing a GitHub App
+(in Python) that serves as a bot to help with processing pull requests to the easystack file that defines
+the EESSI software layer.</p>
+
+<p>The bot's tasks include testing software installations in the EESSI environment on all supported CPU
+targets, (re-)running the tests for that software in different contexts (operating systems, platforms, etc.),
+and eventually ingesting the software installations into EESSI, under the supervision of humans that review
+the incoming contributions and assess the results produced by the bot.</p>
+
+<p>Although our primary focus is to automate the contribution workflow in EESSI as much as possible, we believe
+our GitHub App could also be useful beyond the EESSI project.
 </p><br/>
 
 <hr>
