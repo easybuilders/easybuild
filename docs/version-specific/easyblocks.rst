@@ -85,6 +85,7 @@
       * EB_Geant4
       * EB_GROMACS
       * EB_LAMMPS
+      * EB_Libint
       * EB_LLVM
       * EB_netCDF
       * EB_OpenBabel
@@ -137,7 +138,6 @@
     * EB_Hypre
     * EB_LAPACK
     * EB_libdrm
-    * EB_Libint
     * EB_libQGLViewer
     * EB_libxml2
     * EB_Lua
