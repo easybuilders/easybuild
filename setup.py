@@ -59,7 +59,7 @@ and installation framework that allows you to manage (scientific) software \
 on High Performance Computing (HPC) systems in an efficient way.""",
     license="GPLv2",
     keywords="software build building installation installing compilation HPC scientific",
-    url="https://easybuilders.github.io/easybuild",
+    url="https://easybuild.io",
     long_description=read("README.rst"),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
