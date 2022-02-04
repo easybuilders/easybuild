@@ -170,7 +170,7 @@ The most straight-forward use-case is ``string``, which contains the name of the
 (and must have ``.patch`` extension).
 
 A ``tuple`` adds the possibility to specify the patch level which is used in patch command.
-This is mostly needed if patch file adds new files or generally itis not possible to determine
+This is mostly needed if patch file adds new files or generally it is not possible to determine
 starting directory.
 
 .. note:: ``tuple`` also has special usage if the patch file has any other extension than ``.patch``.
