@@ -179,7 +179,7 @@ starting directory.
   source dir. See more in example below.
 
 A ``dict`` adds the ability to pass the ``patch`` command additional arguments. For example, the
-``--binary`` flag is needed to patchfiles with CRLF endings.
+``--binary`` flag is needed to patch files with CRLF endings.
 The ``dict`` has a required ``filename`` key, with ``level`` and ``opts`` being optional ones.
 
 .. note:: Specifying only ``filename`` in ``dict`` is the same as using a plain ``string`` definition.
