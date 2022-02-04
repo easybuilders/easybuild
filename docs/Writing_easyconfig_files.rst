@@ -171,12 +171,12 @@ The most straight-forward use-case is ``string``, which contains the name of the
 
 A ``tuple`` adds the possibility to specify the patch level which is used in patch command.
 This is mostly needed if patch file adds new files or generally it is not possible to determine
-starting directory.
+the starting directory.
 
-.. note:: ``tuple`` also has special usage if the patch file has any other extension than ``.patch``.
+.. note:: ``tuple`` also has a special use case if the patch file has any other extension than ``.patch``.
           In this case, the first tuple argument is a file which should be copied to unpacked source
-          dir and the second tuple argument is the target path, where the files should be copied
-          relative to the unpacked source dir. See below for an example of this use case.
+          dir and the second tuple argument is the target path, where the files should be copied to
+          (relative to the unpacked source dir). See below for an example of this use case.
 
 A ``dict`` adds the ability to pass the ``patch`` command additional arguments. For example, the
 ``--binary`` flag is needed to patch files with CRLF endings.
