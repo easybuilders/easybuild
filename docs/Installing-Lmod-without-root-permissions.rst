@@ -81,8 +81,9 @@ Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), mak
 .. code:: bash
     export LMOD_CMD=$HOME/lmod/8.4/libexec/lmod
 
-Note that you can also use the specific version as above but the ``lmod``
-directory symlink allows updates without needing to change this export:
+Note that you can use the specific version as above but the ``lmod``
+directory symlink allows updates without needing to change this export
+(and so is usually preferred):
 
 .. code:: bash
 
