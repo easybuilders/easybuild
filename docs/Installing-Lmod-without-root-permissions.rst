@@ -10,6 +10,8 @@ depends) on Linux, without requiring root permissions.
 Lua
 ~~~
 
+Dependencies: Installing Lua using the steps below requires rsync, make and gcc
+
 Build and install Lua using the source tarball available in the Lmod
 SourceForge repository (`http://sourceforge.net/projects/lmod/files/`_).
 This version is a lot easier to build, and already includes the required
@@ -50,12 +52,14 @@ unexpected ``readline`` or ``ncurses`` libraries:
 Lmod
 ~~~~
 
+Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), make and bzip2
+
 **Step 1**: Download and unpack the latest available Lmod version,
-`Lmod-6.1.tar.bz2`_ at the time of writing.
+`Lmod-8.4.tar.bz2`_ at the time of writing.
 
 .. code:: bash
 
-    tar xfvj Lmod-6.1.tar.bz2 && cd Lmod-6.1
+    tar xfvj Lmod-8.4.tar.bz2 && cd Lmod-8.4
 
 **Step 2**: Configure, build and install Lmod build, in a custom prefix:
 
@@ -68,7 +72,7 @@ Lmod
 
 .. code:: bash
 
-    export PATH=$HOME/lmod/6.1/libexec:$PATH
+    export PATH=$HOME/lmod/8.4/libexec:$PATH
 
 Optionally, give it a spin:
 
@@ -76,7 +80,7 @@ Optionally, give it a spin:
 
     $ lmod --version
 
-    Modules based on Lua: Version 6.1  2016-02-05 16:31
+    Modules based on Lua: Version 8.4  2020-07-31 12:25 -05:00
         by Robert McLay mclay@tacc.utexas.edu
 
 **Step 4**: Define ``module`` function to use ``lmod`` (optional for use
@@ -84,10 +88,10 @@ with EasyBuild):
 
 .. code:: bash
 
-    source $HOME/lmod/6.1/init/bash
-    export LMOD_CMD=$HOME/lmod/6.1/libexec/lmod
+    source $HOME/lmod/8.4/init/bash
+    export LMOD_CMD=$HOME/lmod/8.4/libexec/lmod
 
 .. _`http://sourceforge.net/projects/lmod/files/`: http://sourceforge.net/projects/lmod/files/
-.. _lua-5.1.4.8.tar.gz: http://sourceforge.net/projects/lmod/files/lua-5.1.4.8.tar.gz/download
-.. _Lmod-6.1.tar.bz2: http://sourceforge.net/projects/lmod/files/Lmod-6.1.tar.bz2/download
+.. _lua-5.1.4.8.tar.gz: https://sourceforge.net/projects/lmod/files/lua-5.1.4.8.tar.gz/download
+.. _Lmod-8.4.tar.bz2: https://sourceforge.net/projects/lmod/files/Lmod-8.4.tar.bz2/download
 
