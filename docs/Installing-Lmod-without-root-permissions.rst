@@ -6,10 +6,11 @@ Installing Lmod without root permissions
 
 This short guide will show how to install Lmod (and Lua, on which it
 depends) on Linux, without requiring root permissions.
-Installing lua using the steps below does require rsync, make and gcc
 
 Lua
 ~~~
+
+Dependencies: Installing Lua using the steps below requires rsync, make and gcc
 
 Build and install Lua using the source tarball available in the Lmod
 SourceForge repository (`http://sourceforge.net/projects/lmod/files/`_).
