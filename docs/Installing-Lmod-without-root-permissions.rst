@@ -103,7 +103,7 @@ with EasyBuild):
 
 .. code:: bash
 
-    source $HOME/lmod/8.4/init/bash
+    source $HOME/lmod/lmod/init/bash
 
 .. _`https://sourceforge.net/projects/lmod/files/`: https://sourceforge.net/projects/lmod/files/
 .. _lua-5.1.4.9.tar.bz2: https://sourceforge.net/projects/lmod/files/lua-5.1.4.9.tar.bz2/download
