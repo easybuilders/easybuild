@@ -160,28 +160,30 @@ Example:
 Patches
 ^^^^^^^
 
-Patches can be provided via the ``patches`` easyconfig parameter (list). And patch could be defined as:
+Patches can be provided via the ``patches`` easyconfig parameter (list). A patch can be defined as:
 
-* string
-* tuple
-* dict
+* a ``string``,
+* a ``tuple``, or
+* a ``dict``
 
 The most straight-forward use-case is ``string``, which contains the name of the patch file
-and has to have ``.patch`` extension.
+(and must have ``.patch`` extension).
 
-``Tuple`` adds possibility to specify patch level, which is used in patch command.
-This is mostly needed, if patch file just adds new files and generally is not possible to determine starting directory.
+A ``tuple`` adds the possibility to specify the patch level which is used in patch command.
+This is mostly needed if patch file adds new files or generally itis not possible to determine
+starting directory.
 
-.. note:: ``Tuple`` also have special usage, if the patch file have any other extension than ``.patch``
-  In this case, first tuple argument is file which should be copied to unpacked source dir and second tuple argument
-  is target path, where the files should be copied relative to unpacked source dir. See more in example below.
+.. note:: ``tuple`` also has special usage if the patch file has any other extension than ``.patch``.
+  In this case, first tuple argument is file which should be copied to unpacked source dir and
+  second tuple argument is target path, where the files should be copied relative to unpacked
+  source dir. See more in example below.
 
-``Dict`` adds ability to pass ``patch`` command additional arguments. For example ``--binary`` flag is needed to patch
-files with CRLF endings.
-The ``dict`` has required ``filename`` key, and ``level`` and ``opts`` optional ones.
+A ``dict`` adds the ability to pass the ``patch`` command additional arguments. For example, the
+``--binary`` flag is needed to patchfiles with CRLF endings.
+The ``dict`` has a required ``filename`` key, with ``level`` and ``opts`` being optional ones.
 
-.. note:: Filling just ``filename`` in ``dict`` is same as using plain ``string`` definition.
-  Filling ``filename`` and ``level`` is same as using ``tuple`` definition.
+.. note:: Specifying only ``filename`` in ``dict`` is the same as using a plain ``string`` definition.
+  Specifying ``filename`` and ``level`` is same as using a ``tuple`` definition.
 
 Example:
 ```
