@@ -35,8 +35,8 @@ The order of preference for the different configuration types is as listed above
 
 .. _configuration_consistency:
 
-Consistentency across supported configuration types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Consistency across supported configuration types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note that the various available configuration options are handled
 **consistently** across the supported configuration types.
