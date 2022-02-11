@@ -330,6 +330,11 @@ which will be stored in ``$HOME/.local/easybuild/containers``::
     == Temporary log file(s) /tmp/eb-dLZTNF/easybuild-LPLeG0.log* have been removed.
     == Temporary directory /tmp/eb-dLZTNF has been removed.
 
+Docker supports a limited set of the container options. Example of commands that can be used to generate
+Docker containers are::
+
+    eb  --containerize --container-type=docker --experimental --container-config=ubuntu:20.04 zlib-1.2.11.eb
+    eb  --containerize --container-type=docker --experimental --container-config=centos:7 zlib-1.2.11.eb
 
 .. _containers_example_recipe:
 
