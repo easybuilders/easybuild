@@ -128,6 +128,7 @@ Remarks:
   * unified diff format (``diff -ruN``)
   * patched locations relative to unpacked sources
 
+* see :ref:`common_easyconfig_param_sources_patches` for more information on ``patches``
 * see :ref:`common_easyconfig_param_sources_checksums` for more information on ``checksums``
 * ``sources`` is usually specified as a list of strings representing filenames for source files,
   but other formats are supported too, see :ref:`common_easyconfig_param_sources_alt`
@@ -153,6 +154,53 @@ Example:
 
 .. note:: Rather than hardcoding the version (and name) in the list of sources,
   a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
+
+.. _common_easyconfig_param_sources_patches:
+
+Patches
+^^^^^^^
+
+Patches can be provided via the ``patches`` easyconfig parameter (list). A patch can be defined as:
+
+* a ``string``,
+* a ``tuple``, or
+* a ``dict``
+
+The most straight-forward use-case is ``string``, which contains the name of the patch file
+(and must have ``.patch`` extension).
+
+A ``tuple`` adds the possibility to specify the patch level which is used in patch command.
+This is mostly needed if patch file adds new files or generally it is not possible to determine
+the starting directory.
+
+.. note:: ``tuple`` also has a special use case if the patch file has any other extension than ``.patch``.
+          In this case, the first tuple argument is a file which should be copied to unpacked source
+          dir and the second tuple argument is the target path, where the files should be copied to
+          (relative to the unpacked source dir). See below for an example of this use case.
+
+A ``dict`` adds the ability to pass the ``patch`` command additional arguments. For example, the
+``--binary`` flag is needed to patch files with CRLF endings.
+The ``dict`` has a required ``filename`` key, with ``level`` and ``opts`` being optional ones.
+
+.. note:: Specifying only ``filename`` in ``dict`` is the same as using a plain ``string`` definition.
+          Specifying ``filename`` and ``level`` is same as using a ``tuple`` definition.
+
+Example:
+```
+patches = [
+  # a simple patch file
+  'name-versions-fix.patch',
+
+  # when creating only new files by patch file, you need to specify level:
+  ('name-versions-fix.patch', 1),
+
+  # copy file to target_path folder
+  ('Makefile', 'target_path'),
+
+  # specify patch file and optionally level and opts for patch command
+  {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
+]
+```
 
 .. _common_easyconfig_param_sources_checksums:
 
@@ -445,7 +493,7 @@ Examples:
           the cloned repository), the (SHA256) checksum is not guaranteed to be the same across different systems.
 
           Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub,
-          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so, 
+          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so,
           ``git_config`` is intended for other Git repos.
 
 

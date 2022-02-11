@@ -36,7 +36,7 @@ from distutils.core import setup
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = '4.5.2'
+VERSION = '4.5.3'
 
 
 # Utility function to read README file
@@ -59,7 +59,7 @@ and installation framework that allows you to manage (scientific) software \
 on High Performance Computing (HPC) systems in an efficient way.""",
     license="GPLv2",
     keywords="software build building installation installing compilation HPC scientific",
-    url="https://easybuilders.github.io/easybuild",
+    url="https://easybuild.io",
     long_description=read("README.rst"),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -75,6 +75,7 @@ on High Performance Computing (HPC) systems in an efficient way.""",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Scientific/Engineering",
         "Topic :: Software Development :: Build Tools",
     ],

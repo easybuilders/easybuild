@@ -300,6 +300,7 @@
       * EB_Bioconductor
       * EB_pbdMPI
       * EB_pbdSLAP
+      * EB_reticulate
       * EB_Rmpi
       * EB_Rserve
       * EB_XML
@@ -441,6 +442,7 @@
       * EB_Bioconductor
       * EB_pbdMPI
       * EB_pbdSLAP
+      * EB_reticulate
       * EB_Rmpi
       * EB_Rserve
       * EB_XML
