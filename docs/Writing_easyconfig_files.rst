@@ -456,10 +456,13 @@ If a recursive checkout should be made of the repository, the ``recursive`` key 
 To also retain the ``.git`` directory (which holds the Git metadata for the repository),
 you can set the ``keep_git_dir`` to ``True`` (supported since EasyBuild v4.2.0).
 
+A different name for the top-level directory can be specified via ``clone_into``;
+by default the name of the repository is used.
+
 Examples:
 
   * creating a source tarball named ``example-main.tar.gz`` of the ``main`` branch of a (fictional)
-    ``test`` repository from ``https://agitserver.org/example``:
+    ``test`` repository from ``https://agitserver.org/example``, and use ``example-test`` as top-level directory name:
 
     .. code::
 
@@ -469,6 +472,7 @@ Examples:
               'url': 'https://agitserver.org/example',
               'repo_name': 'test',
               'tag': 'main',
+              'clone_into': 'example-test',
           },
       }]
 
