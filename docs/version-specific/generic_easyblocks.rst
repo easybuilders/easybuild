@@ -28,6 +28,7 @@ Extra easyconfig parameters specific to ``BinariesTarball`` easyblock
 easyconfig parameter    description                                                                                                                                                      default value
 ====================    =============================================================================================================================================================    =============
 ``install_type``        Defaults to extract tarball into clean directory. Options: 'merge' merges tarball to existing directory, 'subdir' extracts tarball into its own sub-directory    ``None``     
+``options``             Dictionary with extension options.                                                                                                                               ``{}``       
 ``preinstall_cmd``      Command to execute before installation                                                                                                                           ``None``     
 ====================    =============================================================================================================================================================    =============
 
@@ -1247,7 +1248,7 @@ easyconfig parameter                 description                                
 ``Tarball``
 ===========
 
-(derives from EasyBlock)
+(derives from ExtensionEasyBlock)
 
 Precompiled software supplied as a tarball:
     - will unpack binary and copy it to the install dir
@@ -1259,6 +1260,7 @@ Extra easyconfig parameters specific to ``Tarball`` easyblock
 easyconfig parameter    description                                                                                                                                                      default value
 ====================    =============================================================================================================================================================    =============
 ``install_type``        Defaults to extract tarball into clean directory. Options: 'merge' merges tarball to existing directory, 'subdir' extracts tarball into its own sub-directory    ``None``     
+``options``             Dictionary with extension options.                                                                                                                               ``{}``       
 ``preinstall_cmd``      Command to execute before installation                                                                                                                           ``None``     
 ====================    =============================================================================================================================================================    =============
 

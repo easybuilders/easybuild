@@ -306,6 +306,19 @@
       * EB_XML
 
     * RubyGem
+    * Tarball
+
+      * BinariesTarball
+      * EB_cuDNN
+      * EB_FoldX
+      * EB_FreeSurfer
+      * EB_Gurobi
+      * EB_Hadoop
+      * EB_MTL4
+      * EB_picard
+      * EB_RepeatMasker
+      * EB_RepeatModeler
+
 
   * GoPackage
   * IntelBase
@@ -375,19 +388,6 @@
 
     * EB_Xmipp
 
-  * Tarball
-
-    * BinariesTarball
-    * EB_cuDNN
-    * EB_FoldX
-    * EB_FreeSurfer
-    * EB_Gurobi
-    * EB_Hadoop
-    * EB_MTL4
-    * EB_picard
-    * EB_RepeatMasker
-    * EB_RepeatModeler
-
   * Waf
 
 * **Extension**
@@ -448,5 +448,18 @@
       * EB_XML
 
     * RubyGem
+    * Tarball
+
+      * BinariesTarball
+      * EB_cuDNN
+      * EB_FoldX
+      * EB_FreeSurfer
+      * EB_Gurobi
+      * EB_Hadoop
+      * EB_MTL4
+      * EB_picard
+      * EB_RepeatMasker
+      * EB_RepeatModeler
+
 
 
