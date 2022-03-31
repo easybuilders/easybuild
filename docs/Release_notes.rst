@@ -20,20 +20,20 @@ bugfix/update release
 
 * various enhancements, including:
 
-  * warn about potentially missing patches in --new-pr (#3759, `#3966 <https://github.com/easybuilders/easybuild-framework/pull/3966>`_)
-  * add support for 'clone_into' field in git_config source spec to specify different name for top-level directory (`#3949 <https://github.com/easybuilders/easybuild-framework/pull/3949>`_)
+  * warn about potentially missing patches in ``--new-pr`` (`#3759 <https://github.com/easybuilders/easybuild-framework/pull/3759>`_, `#3966 <https://github.com/easybuilders/easybuild-framework/pull/3966>`_)
+  * add support for '``clone_into``' field in git_config source spec to specify different name for top-level directory (`#3949 <https://github.com/easybuilders/easybuild-framework/pull/3949>`_)
   * add bash completion for easyconfigs from local dir but not robot search path (`#3953 <https://github.com/easybuilders/easybuild-framework/pull/3953>`_)
   * add a 'sync pr' message when the PR has a mergeable state but is showing a failed status for the test suite on the last commit (`#3967 <https://github.com/easybuilders/easybuild-framework/pull/3967>`_)
-  * add gmpit toolchain definition (GCC + MPItrampoline) (`#3971 <https://github.com/easybuilders/easybuild-framework/pull/3971>`_)
-  * use 'zypper search -i' to check whether specified OS dependency is installed on openSUSE + make sure that rpm is considered for checking OS dependencies on RHEL8 (`#3973 <https://github.com/easybuilders/easybuild-framework/pull/3973>`_)
+  * add ``gmpit`` toolchain definition (GCC + MPItrampoline) (`#3971 <https://github.com/easybuilders/easybuild-framework/pull/3971>`_)
+  * use '``zypper search -i``' to check whether specified OS dependency is installed on openSUSE + make sure that rpm is considered for checking OS dependencies on RHEL8 (`#3973 <https://github.com/easybuilders/easybuild-framework/pull/3973>`_)
   * add support for post-install patches (`#3974 <https://github.com/easybuilders/easybuild-framework/pull/3974>`_)
-  * add support for 'download_instructions' easyconfig parameter key to specify some download or installation steps for user in case of complicated way of obtaining needed files (#3976, `#3981 <https://github.com/easybuilders/easybuild-framework/pull/3981>`_)
-  * also try collecting AMD GPU info (via rocm-smi) for --show-system-info (#3978, `#3982 <https://github.com/easybuilders/easybuild-framework/pull/3982>`_)
+  * add support for '``download_instructions``' easyconfig parameter key to specify some download or installation steps for user in case of complicated way of obtaining needed files (`#3976 <https://github.com/easybuilders/easybuild-framework/pull/3976>`_, `#3981 <https://github.com/easybuilders/easybuild-framework/pull/3981>`_)
+  * also try collecting AMD GPU info (via ``rocm-smi``) for ``--show-system-info`` (`#3978 <https://github.com/easybuilders/easybuild-framework/pull/3978>`_, `#3982 <https://github.com/easybuilders/easybuild-framework/pull/3982>`_)
 
 * various bug fixes, including:
 
-  * ensure --review-pr can find dependencies included in PR (`#3979 <https://github.com/easybuilders/easybuild-framework/pull/3979>`_)
-  * run 'apt-get update' in GitHub Actions workflow for container tests to update container package list before installing anything (`#3985 <https://github.com/easybuilders/easybuild-framework/pull/3985>`_)
+  * ensure ``--review-pr`` can find dependencies included in PR (`#3979 <https://github.com/easybuilders/easybuild-framework/pull/3979>`_)
+  * run '``apt-get update``' in GitHub Actions workflow for container tests to update container package list before installing anything (`#3985 <https://github.com/easybuilders/easybuild-framework/pull/3985>`_)
 
 * other changes:
 
@@ -47,25 +47,28 @@ bugfix/update release
   * update Clang-AOMP easyblock to add support for ROCm v5.0 (`#2681 <https://github.com/easybuilders/easybuild-easyblocks/pull/2681>`_)
   * enable system SSL certificates in OpenSSL installations (`#2683 <https://github.com/easybuilders/easybuild-easyblocks/pull/2683>`_)
   * enhance MRtrix easyblock: build in parallel + enable OpenMP support for MRtrix >= 3.0 (`#2685 <https://github.com/easybuilders/easybuild-easyblocks/pull/2685>`_)
-  * avoid dependency on 'which' command in sanity check for Python, use 'command -v' instead (`#2687 <https://github.com/easybuilders/easybuild-easyblocks/pull/2687>`_)
+  * avoid dependency on '``which``' command in sanity check for Python, use '``command -v``' instead (`#2687 <https://github.com/easybuilders/easybuild-easyblocks/pull/2687>`_)
   * enhance Tarball easyblock to support using it for installing extensions (`#2688 <https://github.com/easybuilders/easybuild-easyblocks/pull/2688>`_)
   * update wxPython easyblock to support wxPython v4.1 (`#2689 <https://github.com/easybuilders/easybuild-easyblocks/pull/2689>`_)
-  * enhance Gurobi easyblock to also update $MATLABPATH (`#2691 <https://github.com/easybuilders/easybuild-easyblocks/pull/2691>`_)
-  * build single-file shared libraries for imkl so it can be used as FlexiBLAS backend via $FLEXIBLAS_LIBRARY_PATH (`#2694 <https://github.com/easybuilders/easybuild-easyblocks/pull/2694>`_)
+  * enhance Gurobi easyblock to also update ``$MATLABPATH`` (`#2691 <https://github.com/easybuilders/easybuild-easyblocks/pull/2691>`_)
+  * build single-file shared libraries for imkl so it can be used as FlexiBLAS backend via ``$FLEXIBLAS_LIBRARY_PATH`` (`#2694 <https://github.com/easybuilders/easybuild-easyblocks/pull/2694>`_)
 
 * various bug fixes, including:
 
   * added regex to replace /lib/cpp with cpp in OpenFOAM's wmake rules file (`#2331 <https://github.com/easybuilders/easybuild-easyblocks/pull/2331>`_)
-  * set $NINJAFLAGS to make sure Ninja doesn't use all visible cores when building Qt5 (`#2338 <https://github.com/easybuilders/easybuild-easyblocks/pull/2338>`_)
+  * set ``$NINJAFLAGS`` to make sure Ninja doesn't use all visible cores when building Qt5 (`#2338 <https://github.com/easybuilders/easybuild-easyblocks/pull/2338>`_)
   * update Siesta EasyBlock to use serial FFTW (`#2662 <https://github.com/easybuilders/easybuild-easyblocks/pull/2662>`_)
   * fix support for imkl for numexpr 2.8.0+ in numexpr easyblock (`#2678 <https://github.com/easybuilders/easybuild-easyblocks/pull/2678>`_)
-  * make sure TensorFlow doesn't see the nvptx-none dir when searching for gcc include dir (`#2682 <https://github.com/easybuilders/easybuild-easyblocks/pull/2682>`_)
+  * make sure TensorFlow doesn't see the ``nvptx-none`` dir when searching for ``gcc`` include dir (`#2682 <https://github.com/easybuilders/easybuild-easyblocks/pull/2682>`_)
   * force use of bash for Anaconda install script (`#2692 <https://github.com/easybuilders/easybuild-easyblocks/pull/2692>`_)
-  * add guess for path to add to $MANPATH for intel-compilers (`#2696 <https://github.com/easybuilders/easybuild-easyblocks/pull/2696>`_)
+  * add guess for path to add to ``$MANPATH`` for intel-compilers (`#2696 <https://github.com/easybuilders/easybuild-easyblocks/pull/2696>`_)
   * change permissions of the Java build directory to avoid permission denied error (`#2698 <https://github.com/easybuilders/easybuild-easyblocks/pull/2698>`_)
-  * also consider $MKLROOT/lib/pkgconfig for $PKG_CONFIG_PATH for imkl (`#2701 <https://github.com/easybuilders/easybuild-easyblocks/pull/2701>`_)
+  * also consider ``$MKLROOT/lib/pkgconfig`` for ``$PKG_CONFIG_PATH`` for imkl (`#2701 <https://github.com/easybuilders/easybuild-easyblocks/pull/2701>`_)
   * close log after installing Bundle component (`#2702 <https://github.com/easybuilders/easybuild-easyblocks/pull/2702>`_)
-  * replace hardcoded /tmp to make sure that Bazel build respects $TMPDIR (`#2703 <https://github.com/easybuilders/easybuild-easyblocks/pull/2703>`_)
+
+    * fixes problem of log leaking across installations (`framework issue #3533 <https://github.com/easybuilders/easybuild-framework/issues/3533>`_)
+
+  * replace hardcoded /tmp to make sure that Bazel build respects ``$TMPDIR`` (`#2703 <https://github.com/easybuilders/easybuild-easyblocks/pull/2703>`_)
 
 * other changes:
 
@@ -76,8 +79,8 @@ bugfix/update release
 
 * added example easyconfig files for 29 new software packages:
 
-  * Abseil (`#15102 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15102>`_), AMS (`#1997 <https://github.com/easybuilders/easybuild-easyconfigs/pull/1997>`_), ArchR (`#15119 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15119>`_), CMAverse (`#14963 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14963>`_), CmdStanR (`#15198 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15198>`_), CONN (#963),
-    Devito (#14984, `#15009 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15009>`_), GraphMap (`#10299 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10299>`_), gRPC (`#14728 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14728>`_), Hydra (`#15025 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15025>`_), jupyter-server-proxy (`#14844 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14844>`_),
+  * Abseil (`#15102 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15102>`_), AMS (`#13155 <https://github.com/easybuilders/easybuild-easyconfigs/pull/13155>`_), ArchR (`#15119 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15119>`_), CMAverse (`#14963 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14963>`_), CmdStanR (`#15198 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15198>`_), CONN (`#15052 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15052>`_),
+    Devito (`#14984 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14984>`_, `#15009 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15009>`_), GraphMap (`#10299 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10299>`_), gRPC (`#14728 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14728>`_), Hydra (`#15025 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15025>`_), jupyter-server-proxy (`#14844 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14844>`_),
     M1QN3 (`#15002 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15002>`_), MAGeCK (`#15082 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15082>`_), matplotlib-inline (`#15084 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15084>`_), MEGAN (`#15064 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15064>`_), MNE-Python (`#15174 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15174>`_),
     ONNX (`#15158 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15158>`_), ONNX-Runtime (`#15158 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15158>`_), ont-remora (`#15162 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15162>`_), Optuna (`#15021 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15021>`_), patch (`#15035 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15035>`_),
     porefoam (`#15067 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15067>`_), presto (`#15119 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15119>`_), PyFrag (`#15184 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15184>`_), skorch (`#15175 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15175>`_), SlamDunk (`#15197 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15197>`_), SPM (`#15050 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15050>`_),
@@ -104,27 +107,27 @@ bugfix/update release
   * also install rMATS_P commands in rMATS-turbo easyconfig (`#15113 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15113>`_)
   * add extensions to Bioconductor v3.14 easyconfig: chromVAR (`#15118 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15118>`_), EnsDb.Hsapiens.v79 (`#15154 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15154>`_), WGCNA (`#15178 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15178>`_)
   * add extensions to Perl v5.34.0 easyconfigs: Sys::Info, HTML::Template, Log::Report (`#15176 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15176>`_), Sys::Info::Driver::Unknown, Sys::Info::Driver::Linux, Unix::Processors (`#15190 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15190>`_)
-  * enable running of tests for MEME with gompi/2021b (#15191, `#15199 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15199>`_)
+  * enable running of tests for MEME with ``gompi/2021b`` (#15191, `#15199 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15199>`_)
 
 * various bug fixes, including:
 
   * add missing xxd build dependency for recent PLUMED versions (2.6.2, 2.7.x) (`#14847 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14847>`_)
-  * downgrade dependency on nodejs + use jupyter-server-proxy in jupyter-matlab-proxy and configurable-http-proxy easyconfigs using GCCcore/10.3.0 toolchain (`#14942 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14942>`_)
+  * downgrade dependency on nodejs + use jupyter-server-proxy in jupyter-matlab-proxy and configurable-http-proxy easyconfigs using ``GCCcore/10.3.0`` toolchain (`#14942 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14942>`_)
   * add additional valid checksum for extensions in R 4.1.0 and 4.1.2 easyconfigs: norm (`#14987 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14987>`_), optmatch (`#14993 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14993>`_)
   * avoid pollution in the tmp directory when running the AlphaFold tests (`#14989 <https://github.com/easybuilders/easybuild-easyconfigs/pull/14989>`_)
   * consistently enable usempi toolchain option in OSU-Micro-Benchmarks easyconfigs (`#15039 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15039>`_)
-  * fix GBprocesS easyconfig by switching to source tarball created using git_config (`#15048 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15048>`_)
+  * fix GBprocesS easyconfig by switching to source tarball created using ``git_config`` (`#15048 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15048>`_)
   * add patches for mauveAligner to fix build on RHEL8 (`#15049 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15049>`_)
-  * fix installation of RDKit by using -DBoost_NO_BOOST_CMAKE=ON (`#15051 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15051>`_)
+  * fix installation of RDKit by using ``-DBoost_NO_BOOST_CMAKE=ON`` (`#15051 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15051>`_)
   * add patch to fix linking error for imread extension in scikit-image easyconfigs using intel toolchain (`#15054 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15054>`_)
   * avoid excessively long shebang in Autoconf/Automake Perl scripts + promote Perl to runtime dependency + fix Perl shebang for intltool (`#15055 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15055>`_)
-  * fix python shebang in cutadapt script for cutadapt 1.18 w/ GCCcore/8.3.0 (`#15059 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15059>`_)
+  * fix ``python`` shebang in cutadapt script for cutadapt 1.18 w/ ``GCCcore/8.3.0`` (`#15059 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15059>`_)
   * don't use v2.1.0rc1 release candidate of gmpy2, stick to proper release v2.1.2 (`#15060 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15060>`_)
   * add M4 as build dependency for CCL-1.12 (`#15075 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15075>`_)
-  * configure libffi 3.4.2 with --disable-exec-static-tramp to prevent segfaults (`#15086 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15086>`_)
-  * set XLA_PYTHON_CLIENT_ALLOCATOR=platform for running tests in jax CUDA easyconfigs (`#15097 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15097>`_)
+  * configure libffi 3.4.2 with ``--disable-exec-static-tramp`` to prevent segfaults (`#15086 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15086>`_)
+  * set ``XLA_PYTHON_CLIENT_ALLOCATOR=platform`` for running tests in jax CUDA easyconfigs (`#15097 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15097>`_)
   * remove disable flag for RTTI in snappy v1.1.9 (`#15099 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15099>`_)
-  * fix grconvert build for Grace/5.1.25 with foss/2021a by adding libtirpc dependency + related patch (`#15121 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15121>`_)
+  * fix grconvert build for Grace 5.1.25 with ``foss/2021a`` by adding libtirpc dependency + related patch (`#15121 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15121>`_)
   * clean up PSolver and futile easyconfigs and add dynamic libs (`#15148 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15148>`_)
   * enhance vcflib easyconfigs to also install scripts (`#15181 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15181>`_)
   * add patch to fix shared linking in vcflib (`#15203 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15203>`_)
