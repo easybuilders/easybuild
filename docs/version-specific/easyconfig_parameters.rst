@@ -48,6 +48,7 @@ build parameters
 ``checksums``                      Checksums for sources and patches                                                                                                            []               
 ``configopts``                     Extra options passed to configure (default already has --prefix)                                                                             ""               
 ``cuda_compute_capabilities``      List of CUDA compute capabilities to build with (if supported)                                                                               []               
+``download_instructions``          Specify steps to aquire necessary file, if obtaining it is difficult                                                                         ""               
 ``easyblock``                      EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                                           None             
 ``easybuild_version``              EasyBuild-version this spec-file was written for                                                                                             None             
 ``enhance_sanity_check``           Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it                               False            
@@ -61,6 +62,7 @@ build parameters
 ``parallel``                       Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)                        None             
 ``patches``                        List of patches to apply                                                                                                                     []               
 ``postinstallcmds``                Commands to run after the install step.                                                                                                      []               
+``postinstallpatches``             Patch files to apply after running the install step.                                                                                         []               
 ``prebuildopts``                   Extra options pre-passed to build command.                                                                                                   ""               
 ``preconfigopts``                  Extra options pre-passed to configure.                                                                                                       ""               
 ``preinstallopts``                 Extra prefix options for installation.                                                                                                       ""               
