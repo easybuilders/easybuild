@@ -428,6 +428,27 @@ For example:
 .. note:: Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
           in favor of the Python dictionary format described above; see also :ref:`depr_sources_2_element_tuple`.
 
+Using ``download_instructions`` for user-side part of installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases, getting some of the files required for an installation cannot be automated. Reasons for this include:
+
+* there is a manual stage to combine multiple downloaded files into the required installation file
+* the file requires a login to download
+
+You can use the ``download_instructions`` parameter to specify steps for the user to do.
+This parameter takes string value and prints it whenever build fails because any file needed was not found.
+If ``download_instructions`` is not specified, Easybuild prints the default message stating the paths that were tested.
+
+.. code:: python
+
+    download_instructions = """
+      Step 1: Go to example.com and download example.jar.
+      Step 2: Install example.jar (ensure Java is installed).
+      Step 3: Go to the installation directory and create Tarball of its contents (tar -czvf example.tar.gz *).
+      Step 4: Move created Tarball into the same directory, where your easyconfig is located and run build again.
+    """
+
 .. _common_easyconfig_param_sources_git_config:
 
 Downloading from a Git repository
