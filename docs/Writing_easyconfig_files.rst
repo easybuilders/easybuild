@@ -428,11 +428,13 @@ For example:
 .. note:: Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
           in favor of the Python dictionary format described above; see also :ref:`depr_sources_2_element_tuple`.
 
-Using ``download_instructions`` for user-side part of instalation
+Using ``download_instructions`` for user-side part of installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In some cases, getting some files that are needed for the installation are too complicated to provide up-front,
-and the process would be much simpler if user provided said files.
+In some cases, getting some of the files required for an installation cannot be automated. Reasons for this include:
+
+* there is a manual stage to combine multiple downloaded files into the required installation file
+* the file requires a login to download
 
 You can use the ``download_instructions`` parameter to specify steps for the user to do.
 This parameter takes string value and prints it whenever build fails because any file needed was not found.
