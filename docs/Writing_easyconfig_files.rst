@@ -186,21 +186,22 @@ The ``dict`` has a required ``filename`` key, with ``level`` and ``opts`` being 
           Specifying ``filename`` and ``level`` is same as using a ``tuple`` definition.
 
 Example:
-```
-patches = [
-  # a simple patch file
-  'name-versions-fix.patch',
 
-  # when creating only new files by patch file, you need to specify level:
-  ('name-versions-fix.patch', 1),
+.. code:: python
 
-  # copy file to target_path folder
-  ('Makefile', 'target_path'),
+  patches = [
+    # a simple patch file
+    'name-versions-fix.patch',
+  
+    # when creating only new files by patch file, you need to specify level:
+    ('name-versions-fix.patch', 1),
 
-  # specify patch file and optionally level and opts for patch command
-  {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
-]
-```
+    # copy file to target_path folder
+    ('Makefile', 'target_path'),
+  
+    # specify patch file and optionally level and opts for patch command
+    {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
+  ]
 
 .. _common_easyconfig_param_sources_checksums:
 
