@@ -470,7 +470,7 @@ will be created from the cloned repository).
 
 In addition, either of the following keys *must* also be defined:
 
-* ``tag``: the specific tag to download (could be a branch name or an actual tag)
+* ``tag``: the specific tag to download
 * ``commit``: the specific commit ID to download
 
 If a recursive checkout should be made of the repository, the ``recursive`` key can be set to ``True``.
