@@ -88,6 +88,7 @@
       * EB_Libint
       * EB_LLVM
       * EB_netCDF
+      * EB_NEURON
       * EB_OpenBabel
       * EB_OpenCV
       * EB_PSI
@@ -120,6 +121,9 @@
     * EB_Extrae
     * EB_Ferret
     * EB_FFTW
+
+      * EB_FFTW_period_MPI
+
     * EB_flex
     * EB_FreeFEM
     * EB_freetype
@@ -158,7 +162,6 @@
     * EB_NCCL
     * EB_ncurses
     * EB_netCDF_minus_Fortran
-    * EB_NEURON
     * EB_NWChem
     * EB_OCaml
     * EB_Octave

@@ -73,7 +73,7 @@ echo >> $overview
 ###################################################################################################
 
 #  api docs
-python $generate_api_script
+python3 $generate_api_script
 # inject label to top of API docs
 sed -i '' -e 's/easybuild package/.. _easybuild_api_top:\
 \
@@ -216,7 +216,7 @@ echo "* :ref:\`Overview of configuration options (eb --help) <eb_help>\`" >> $ov
 #  generic easyblocks doc
 echo ".. _generic_easyblocks:" > $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
 echo "" >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
-python $generic_easyblocks_script >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
+python3 $generic_easyblocks_script >> $VERSION_SPECIFIC_DIR/generic_easyblocks.rst
 
 echo "* :ref:\`Overview of generic easyblocks <generic_easyblocks>\`" >> $overview
 
