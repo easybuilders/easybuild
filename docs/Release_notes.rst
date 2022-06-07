@@ -83,6 +83,7 @@ bugfix/update release
     Wayland (`#11107 <https://github.com/easybuilders/easybuild-easyconfigs/pull/11107>`_), XGrafix (`#15268 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15268>`_), XPLOR-NIH (`#15479 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15479>`_)
 
 * added additional easyconfigs for various supported software packages, including:
+
   * ABAQUS 2022, Arb 2.22.1, ARGoS 3.0.0, Arriba 2.2.1, astropy 5.0.4, ATK 2.38.0, Autotools 20220317,
     Bader 1.04, Bazel 4.2.2 + 5.1.1, BDBag 1.6.3, binutils 2.38, biom-format 2.1.12, BLIS 0.9.0, Boost 1.79.0,
     breseq 0.36.1, bx-python 0.8.13, cairo 1.17.4, CellRanger-ARC 2.0.1, CMake 3.23.1, cryoDRGN 1.0.0,
