@@ -20,7 +20,7 @@ bugfix/update release
 
 * various enhancements, including:
 
-  * add toolchain definitions for ``nvompi`` (NVHPC + OpenMPI) (`#3969 <https://github.com/easybuilders/easybuild-framework/pull/3969>`_), ``nvpsmpi`` (NVHPC + ParaStationMPI) (`#3970 <https://github.com/easybuilders/easybuild-framework/pull/3970>`_), ```gfbf`` (GCC, FlexiBLAS, FFTW) (`#4006 <https://github.com/easybuilders/easybuild-framework/pull/4006>`_)
+  * add toolchain definitions for ``nvompi`` (NVHPC + OpenMPI) (`#3969 <https://github.com/easybuilders/easybuild-framework/pull/3969>`_), ``nvpsmpi`` (NVHPC + ParaStationMPI) (`#3970 <https://github.com/easybuilders/easybuild-framework/pull/3970>`_), ``gfbf`` (GCC, FlexiBLAS, FFTW) (`#4006 <https://github.com/easybuilders/easybuild-framework/pull/4006>`_)
   * add support for ``FFTW.MPI`` toolchain component (``$FFT*DIR`` variables) (`#4012 <https://github.com/easybuilders/easybuild-framework/pull/4012>`_)
   * add support for customizing EasyBuild command used in jobs via ``--job-eb-cmd`` (`#4016 <https://github.com/easybuilders/easybuild-framework/pull/4016>`_)
 
