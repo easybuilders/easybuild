@@ -132,7 +132,7 @@ if [[ "$repo" == "easybuild" ]]; then
     # - easybuild-4.1.2 which requires easybuild-easyblocks and easybuild-easyconfigs v4.1.1
     # - easybuild-4.2.0.post0 which requires easybuild-{framework,easyblocks,easyconfigs} v4.2.0
     echo ">> checking whether required packages for 'easybuild' are what's expected ... "
-    python setup.py --requires 2> /dev/null | grep '^easybuild' | tee $tmpdir/easybuild_requires.txt
+    python3 setup.py --requires 2> /dev/null | grep '^easybuild' | tee $tmpdir/easybuild_requires.txt
     for dep in framework easyblocks easyconfigs; do
         echo -n ">>>> $dep ... "
         pattern="^easybuild_${dep}(==${curr_version})"
@@ -178,7 +178,7 @@ if [[ "$repo" == "easybuild-easyconfigs" ]]; then
 fi
 
 # create source tarball
-sdist_cmd="python setup.py sdist"
+sdist_cmd="python3 setup.py sdist"
 out=$tmpdir/sdist.out
 echo -n ">> running '$sdist_cmd'... "
 eval $sdist_cmd &> $out
