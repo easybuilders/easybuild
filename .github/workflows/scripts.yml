@@ -103,15 +103,15 @@ jobs:
         
         echo "================================================================================================"
 
-        # create fake 'python' command:
+        # create fake 'python3' command:
         # just exits when 1st argument is setup.py, but calls out to origin Python command otherwise;
         # this is important w.r.t. the Python version checks run by the 'eb' script
         mkdir -p /tmp/$USER/bin
         export PATH=/tmp/$USER/bin:$PATH
-        echo '#!/bin/bash' > /tmp/$USER/bin/python
-        chmod u+x /tmp/$USER/bin/python
-        echo 'orig_python=$(which -a python | head -2 | tail -1)' >> /tmp/$USER/bin/python
-        echo 'if [[ "$1" == "setup.py" ]]; then exit 0; else $orig_python "$@"; fi' >> /tmp/$USER/bin/python
+        echo '#!/bin/bash' > /tmp/$USER/bin/python3
+        chmod u+x /tmp/$USER/bin/python3
+        echo 'orig_python3=$(which -a python3 | head -2 | tail -1)' >> /tmp/$USER/bin/python3
+        echo 'if [[ "$1" == "setup.py" ]]; then exit 0; else $orig_python3 "$@"; fi' >> /tmp/$USER/bin/python3
 
         # script should fail if expected source tarball did not get created in dist/
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
@@ -124,15 +124,15 @@ jobs:
         echo "================================================================================================"
 
         # make fake python command fail if 1st argument is setup.py
-        sed -i 's/exit 0/exit 1/g' /tmp/$USER/bin/python
+        sed -i 's/exit 0/exit 1/g' /tmp/$USER/bin/python3
 
-        # script should deal well with failing 'python setup.py sdist'
+        # script should deal well with failing 'python3 setup.py sdist'
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
         grep "ERROR: Creating source tarball failed" $out
         echo "Expected error found in output: OK!"
 
         # cleanup
-        rm -f /tmp/$USER/bin/python easybuild/easyconfigs/.eb-path-index
+        rm -f /tmp/$USER/bin/python3 easybuild/easyconfigs/.eb-path-index
         
         echo "================================================================================================"
 
