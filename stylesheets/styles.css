@@ -24,7 +24,7 @@ div.news {
 }
 
 .wrapper {
-  width: 852px;
+  width: 900px;
   margin: 0 auto;
   background: #DEDEDE;
   -moz-border-radius: 8px;
@@ -90,7 +90,7 @@ header.without-description h1 {
 header p {
   margin: 0;
   color: #61778B;
-  width: 300px;
+  width: 500px;
   font-size: 13px;
 }
 header p.view {
@@ -113,7 +113,7 @@ header ul {
   z-index: 1;
   right: 20px;
   top: 20px;
-  height: 38px;
+  height: 26px;
   padding: 1px 0;
   background: #5198DF;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #77b9fb), color-stop(100%, #3782cd));
@@ -127,7 +127,7 @@ header ul {
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   -o-box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
-  width: 480px;
+  width: 600px;
 }
 header ul:before {
   content: '';
@@ -151,18 +151,30 @@ header ul:before {
 }
 header ul li {
   line-height: 1;
-  width: 79px;
+  width: 120px;
   float: left;
   border-right: 1px solid #3A7CBE;
-  height: 38px;
+  height: 19px;
 }
 header ul li + li {
-  width: 78px;
+  width: 74px;
   border-left: 1px solid #8BBEF3;
 }
 header ul li + li + li {
   border-right: none;
-  width: 79px;
+  width: 60px;
+}
+header ul li + li + li + li {
+  border-right: none;
+  width: 74px;
+}
+header ul li + li + li + li + li {
+  border-right: none;
+  width: 74px;
+}
+header ul li + li + li + li + li + li {
+  border-right: none;
+  width: 90px;
 }
 header ul a {
   line-height: 1.2;
