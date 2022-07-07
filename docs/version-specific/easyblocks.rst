@@ -246,6 +246,7 @@
   * EB_SAS
   * EB_SCOTCH
   * EB_SNPhylo
+  * EB_STAR_minus_CCM_plus_
   * EB_TINKER
   * EB_Trinity
   * EB_VEP
