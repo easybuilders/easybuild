@@ -2569,6 +2569,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
@@ -2615,6 +2616,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
@@ -2751,6 +2753,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
@@ -2981,6 +2984,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
@@ -3072,6 +3076,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
@@ -3164,6 +3169,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
@@ -3256,6 +3262,7 @@ option                       description                                        
 ``lowopt``                   Low compiler optimizations                                                 ``False``
 ``no-icc``                   Don't set Intel specific macros                                            ``False``
 ``noopt``                    Disable compiler optimizations                                             ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
 ``optarch``                  Enable architecture optimizations                                          ``True`` 
