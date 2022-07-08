@@ -20,24 +20,24 @@ feature release
 
 * various enhancements, including:
 
-  * allow searching for sources/patches in alternative location by specifying 'alt_location' in source/patch spec (`#3994 <https://github.com/easybuilders/easybuild-framework/pull/3994>`_)
+  * allow searching for sources/patches in alternative location by specifying '``alt_location``' in source/patch spec (`#3994 <https://github.com/easybuilders/easybuild-framework/pull/3994>`_)
   * show URLs used for download attempts in trace output (`#4026 <https://github.com/easybuilders/easybuild-framework/pull/4026>`_)
-  * add support for setting environment variables via 'pushenv' with modextravars (`#4030 <https://github.com/easybuilders/easybuild-framework/pull/4030>`_)
-  * add support for OneAPI compilers using toolchain option 'oneapi' (`#4031 <https://github.com/easybuilders/easybuild-framework/pull/4031>`_, `#4032 <https://github.com/easybuilders/easybuild-framework/pull/4032>`_, `#4039 <https://github.com/easybuilders/easybuild-framework/pull/4039>`_)
-  * make check_linked_shared_libs more robust by taking into account that 'ldd' may fail (`#4033 <https://github.com/easybuilders/easybuild-framework/pull/4033>`_)
+  * add support for setting environment variables via '``pushenv``' with ``modextravars`` (`#4030 <https://github.com/easybuilders/easybuild-framework/pull/4030>`_)
+  * add support for OneAPI compilers using toolchain option '``oneapi``' (`#4031 <https://github.com/easybuilders/easybuild-framework/pull/4031>`_, `#4032 <https://github.com/easybuilders/easybuild-framework/pull/4032>`_, `#4039 <https://github.com/easybuilders/easybuild-framework/pull/4039>`_)
+  * make ``check_linked_shared_libs`` more robust by taking into account that '``ldd``' may fail (`#4033 <https://github.com/easybuilders/easybuild-framework/pull/4033>`_)
   * fall back to sequential extension install if parallel install is not implemented (`#4034 <https://github.com/easybuilders/easybuild-framework/pull/4034>`_)
   * add support for using template values in name/version of extensions (`#4036 <https://github.com/easybuilders/easybuild-framework/pull/4036>`_)
 
 * various bug fixes, including:
 
-  * make sure that ARCH constant has 'aarch64' (rather than 'arm64') as value on macOS ARM (`#4018 <https://github.com/easybuilders/easybuild-framework/pull/4018>`_)
-  * tweak 'eb' wrapper script to correctly handle errors when python command being considered fails to run (`#4019 <https://github.com/easybuilders/easybuild-framework/pull/4019>`_)
-  * tweak is_patch_for function to make it more robust (`#4028 <https://github.com/easybuilders/easybuild-framework/pull/4028>`_)
+  * make sure that ``ARCH`` constant has '``aarch64``' (rather than '``arm64``') as value on macOS ARM (`#4018 <https://github.com/easybuilders/easybuild-framework/pull/4018>`_)
+  * tweak '``eb``' wrapper script to correctly handle errors when python command being considered fails to run (`#4019 <https://github.com/easybuilders/easybuild-framework/pull/4019>`_)
+  * tweak ``is_patch_for`` function to make it more robust (`#4028 <https://github.com/easybuilders/easybuild-framework/pull/4028>`_)
 
 * other changes:
 
   * update Lmod used to run tests to version 8.7.6 (`#4027 <https://github.com/easybuilders/easybuild-framework/pull/4027>`_, `#4030 <https://github.com/easybuilders/easybuild-framework/pull/4030>`_)
-  * tweak apply_patch to not create .orig files (by default) when applying patch files (`#4038 <https://github.com/easybuilders/easybuild-framework/pull/4038>`_)
+  * tweak ``apply_patch`` to not create ``.orig files`` (by default) when applying patch files (`#4038 <https://github.com/easybuilders/easybuild-framework/pull/4038>`_)
 
 **easyblocks**
 
@@ -45,29 +45,30 @@ feature release
 
 * minor enhancements and updates, including:
 
-  * update Siesta EasyBlock to support GCC 10+ by adding -fallow-argument-mismatch Fortran compiler option (`#2690 <https://github.com/easybuilders/easybuild-easyblocks/pull/2690>`_)
+  * update Siesta EasyBlock to support GCC 10+ by adding ``-fallow-argument-mismatch`` Fortran compiler option (`#2690 <https://github.com/easybuilders/easybuild-easyblocks/pull/2690>`_)
   * enable building of shared library for Libint 2.7+ (`#2738 <https://github.com/easybuilders/easybuild-easyblocks/pull/2738>`_)
   * allow some PyTorch tests to fail + print warning if one or more tests fail (`#2742 <https://github.com/easybuilders/easybuild-easyblocks/pull/2742>`_)
   * also support OpenSSL 3.0 in OpenSSL wrapper easyblock (`#2746 <https://github.com/easybuilders/easybuild-easyblocks/pull/2746>`_)
-  * add more logging to install_pc_files method of OpenSSL wrapper easyblock (`#2752 <https://github.com/easybuilders/easybuild-easyblocks/pull/2752>`_)
-  * make WPS easyblock aware of (pre)buildopts (`#2754 <https://github.com/easybuilders/easybuild-easyblocks/pull/2754>`_)
+  * add more logging to ``install_pc_files`` method of OpenSSL wrapper easyblock (`#2752 <https://github.com/easybuilders/easybuild-easyblocks/pull/2752>`_)
+  * make WPS easyblock aware of ``(pre)buildopts`` (`#2754 <https://github.com/easybuilders/easybuild-easyblocks/pull/2754>`_)
   * add Abseil system dependency for TensorFlow 2.9+ (`#2757 <https://github.com/easybuilders/easybuild-easyblocks/pull/2757>`_)
   * disable altivec when building FFTW versions < 3.4 with single-precision with GCC on POWER (`#2758 <https://github.com/easybuilders/easybuild-easyblocks/pull/2758>`_)
 
 * various bug fixes, including:
 
-  * make VEP easyblock compatible with --sanity-check-only (`#2743 <https://github.com/easybuilders/easybuild-easyblocks/pull/2743>`_)
-  * update Rosetta easyblock to take into account that $LD_LIBRARY_PATH, $CPATH, $PATH may not be defined (`#2744 <https://github.com/easybuilders/easybuild-easyblocks/pull/2744>`_)
+  * make VEP easyblock compatible with ``--sanity-check-only`` (`#2743 <https://github.com/easybuilders/easybuild-easyblocks/pull/2743>`_)
+  * update Rosetta easyblock to take into account that ``$LD_LIBRARY_PATH``, ``$CPATH``, ``$PATH`` may not be defined (`#2744 <https://github.com/easybuilders/easybuild-easyblocks/pull/2744>`_)
   * only load temporary module file during sanity check for pybind11 for stand-alone installations, so it can be installed as extension (`#2747 <https://github.com/easybuilders/easybuild-easyblocks/pull/2747>`_)
-  * make sure that CMakeMakeCp uses correct build dir (`#2748 <https://github.com/easybuilders/easybuild-easyblocks/pull/2748>`_)
-  * enhance Bazel easyblock to avoid writing to $HOME in sanity check (`#2756 <https://github.com/easybuilders/easybuild-easyblocks/pull/2756>`_)
+  * make sure that ``CMakeMakeCp`` uses correct build dir (`#2748 <https://github.com/easybuilders/easybuild-easyblocks/pull/2748>`_)
+  * enhance Bazel easyblock to avoid writing to ``$HOME`` in sanity check (`#2756 <https://github.com/easybuilders/easybuild-easyblocks/pull/2756>`_)
 
 **easyconfigs**
 
-* added easyconfigs for foss/2022a, intel/2022a common toolchains (`#15755 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15755>`_)
-* add easyconfig for gfbf/2022a toolchain (`#15653 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15653>`_, `#15755 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15755>`_)
+* added easyconfigs for ``foss/2022a``, ``intel/2022a`` common toolchains (`#15755 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15755>`_)
 
   * see also https://docs.easybuild.io/en/latest/Common-toolchains.html
+
+* add easyconfig for ``gfbf/2022a`` toolchain (`#15653 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15653>`_, `#15755 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15755>`_)
 
 * added example easyconfig files for 24 new software packages:
 
@@ -97,14 +98,14 @@ feature release
 * minor enhancements, including:
 
   * add extensions to R v4.2.0: hypergeo (`#15701 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15701>`_), rtdists (`#15734 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15734>`_), geeM (`#15810 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15810>`_)
-  * add patch for GCCcore 11.3.0 to support using -fuse-ld=mold (`#15715 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15715>`_)
-  * add patch for porefoam to fix hardcoded mpirun command and take into account $POREFOAM_MPIRUN_CMD (`#15730 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15730>`_)
+  * add patch for GCCcore 11.3.0 to support using ``-fuse-ld=mold`` (`#15715 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15715>`_)
+  * add patch for porefoam to fix hardcoded ``mpirun`` command and take into account ``$POREFOAM_MPIRUN_CMD`` (`#15730 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15730>`_)
 * various bug fixes, including:
-  * switch to Rust 1.60.0 build dependency for bamtofastq, since build of fails with Rust 1.52.1 (`#15636 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15636>`_)
+  * switch to Rust 1.60.0 build dependency for bamtofastq, since build fails with Rust 1.52.1 (`#15636 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15636>`_)
   * avoid that pygmo v2.18.0 installs stuff in Python installation directory + add custom sanity check paths to pygmo easyconfigs (`#15657 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15657>`_)
   * add patch for Mmg v5.6.0 to remove library CI tests that point to external sources (`#15691 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15691>`_)
   * correct configopts in deal.II v9.1.1 easyconfig (`#15692 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15692>`_)
-  * add missing Python dependency for HPDBSCAN to fix unresolved %(pyshortver)s template (`#15694 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15694>`_)
+  * add missing Python dependency for HPDBSCAN to fix unresolved ``%(pyshortver)s`` template (`#15694 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15694>`_)
 
 * other changes:
 
