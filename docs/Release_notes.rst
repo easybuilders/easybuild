@@ -69,7 +69,6 @@ feature release
   * see also https://docs.easybuild.io/en/latest/Common-toolchains.html
 
 * add easyconfig for ``gfbf/2022a`` toolchain (`#15653 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15653>`_, `#15755 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15755>`_)
-
 * added example easyconfig files for 24 new software packages:
 
   * BLT (`#15624 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15624>`_), category_encoders (`#15638 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15638>`_), fio (`#10321 <https://github.com/easybuilders/easybuild-easyconfigs/pull/10321>`_), FSON (`#15721 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15721>`_), G-PhoCS (`#7619 <https://github.com/easybuilders/easybuild-easyconfigs/pull/7619>`_), GCTA (`#15649 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15649>`_),
@@ -100,7 +99,9 @@ feature release
   * add extensions to R v4.2.0: hypergeo (`#15701 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15701>`_), rtdists (`#15734 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15734>`_), geeM (`#15810 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15810>`_)
   * add patch for GCCcore 11.3.0 to support using ``-fuse-ld=mold`` (`#15715 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15715>`_)
   * add patch for porefoam to fix hardcoded ``mpirun`` command and take into account ``$POREFOAM_MPIRUN_CMD`` (`#15730 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15730>`_)
+
 * various bug fixes, including:
+
   * switch to Rust 1.60.0 build dependency for bamtofastq, since build fails with Rust 1.52.1 (`#15636 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15636>`_)
   * avoid that pygmo v2.18.0 installs stuff in Python installation directory + add custom sanity check paths to pygmo easyconfigs (`#15657 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15657>`_)
   * add patch for Mmg v5.6.0 to remove library CI tests that point to external sources (`#15691 <https://github.com/easybuilders/easybuild-easyconfigs/pull/15691>`_)
