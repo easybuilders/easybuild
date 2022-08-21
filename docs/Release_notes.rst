@@ -4828,7 +4828,7 @@ feature release
   - add expat dependency to Mesa v18.1.1 (`#6706 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6706>`_)
   - add missing ``--with-trio-flavor=netcdf`` flag to ABINIT 8.x easyconfigs (`#6711 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6711>`_)
   - remove useless definition of $TORCH_CUDA_ARCH_LIST in PyTorch easyconfig that doesn't use CUDA (`#6719 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6719>`_)
-  - fix builing GCCcore 6.3.0 on recent OSs by backporting patches from 6.4.0 (`#6727 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6727>`_)
+  - fix building GCCcore 6.3.0 on recent OSs by backporting patches from 6.4.0 (`#6727 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6727>`_)
   - fix ``source_urls`` in bzip2 easyconfigs (`#6728 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6728>`_)
   - specify location of dependencies in configure options for libgd (to avoid system libraries being used instead) (`#6731 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6731>`_)
   - also install docs/man pages in recent git easyconfigs (versions 2.1x.y) (`#6751 <https://github.com/easybuilders/easybuild-easyconfigs/pull/6751>`_)
