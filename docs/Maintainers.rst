@@ -35,14 +35,18 @@ Roles
 
 .. _maintainers_release_manager:
 
-Release manager
-~~~~~~~~~~~~~~~
+Release managers
+~~~~~~~~~~~~~~~~
 
-The release manager is responsible for releasing new stable EasyBuild versions on a regular basis,
+The release managers are responsible for releasing new stable EasyBuild versions on a regular basis,
 with the help of the other EasyBuild maintainers.
 
-Miguel & Kenneth are working together to get EasyBuild releases out the door on a regular basis
+Sebastian, Miguel & Kenneth have been working together to get EasyBuild releases out the door on a regular basis
 (about once every 6 weeks, see https://pypi.org/project/easybuild/#history).
+
+* **Sebastian Achilles** (`JSC <http://www.fz-juelich.de/ias/jsc/EN>`_)
+
+  * GitHub: `@SebastianAchilles <https://github.com/SebastianAchilles>`_ - e-mail: ``s.achilles (at) fz-juelich.de`` - IRC/Slack: ``Sebastian Achilles``
 
 * **Miguel Dias Costa** (National University of Singapore)
 
