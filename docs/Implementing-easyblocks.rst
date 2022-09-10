@@ -188,7 +188,7 @@ use ``--include-easyblocks`` to make EasyBuild use additional or customised easy
 Structure of an easyblock
 -------------------------
 
-The example below shows the overal structure of an easyblock:
+The example below shows the overall structure of an easyblock:
 
 .. code:: python
 
