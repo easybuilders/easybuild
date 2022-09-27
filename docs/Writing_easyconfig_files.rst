@@ -163,18 +163,21 @@ Patches
 Patches can be provided via the ``patches`` easyconfig parameter (list). A patch can be defined as:
 
 * a ``string``,
-* a ``tuple``, or
+* a ``tuple`` of 2 elements, or
 * a ``dict``
 
 The most straight-forward use-case is ``string``, which contains the name of the patch file
 (and must have ``.patch`` extension).
 
-A ``tuple`` adds the possibility to specify the patch level which is used in patch command.
-This is mostly needed if patch file adds new files or generally it is not possible to determine
-the starting directory.
+A ``tuple`` adds the possibility to specify where patch should be applied.
+This is mostly needed if a patch file adds new files or it is generally not possible to determine
+the starting directory.  
+The first element is the patch file and the second is
+either the patch level (as an integer) which is used in the patch command (``patch -p<n>``)
+or a directory relative to the unpacked source dir.
 
 .. note:: ``tuple`` also has a special use case if the patch file has any other extension than ``.patch``.
-          In this case, the first tuple argument is a file which should be copied to unpacked source
+          In this case, the first tuple argument is a file which should be copied to the unpacked source
           dir and the second tuple argument is the target path, where the files should be copied to
           (relative to the unpacked source dir). See below for an example of this use case.
 
@@ -193,8 +196,11 @@ Example:
       # a simple patch file
       'name-versions-fix.patch',
 
-      # when creating only new files by patch file, you need to specify level:
+      # when creating only new files by patch file, you need to specify the level:
       ('name-versions-fix.patch', 1),
+
+      # apply the patch in a (sub-)subdirectory inside the source tree
+      ('name-versions-fix.patch', 'src/subfolder'),
 
       # copy file to target_path folder
       ('Makefile', 'target_path'),
