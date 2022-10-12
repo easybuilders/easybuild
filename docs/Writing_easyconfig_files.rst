@@ -579,16 +579,12 @@ versions prior to v4.0, see :ref:`system_toolchain_motivation_deprecating_dummy`
 Specifying dependencies using ``system`` toolchain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To make EasyBuild resolve a dependency using the ``system`` toolchain, either specify '``system``' as toolchain name
-in the tuple representing the dependency specification, or simply use ``True`` as 4th value in the tuple.
+To make EasyBuild resolve a dependency using the ``system`` toolchain, simply use the ``SYSTEM`` template constant as
+the 4th value in the tuple representing the dependency specification.
 
 For example, to specify PnMPI version 1.2.0 built with the ``system`` toolchain as a (runtime) dependency::
 
-  dependencies = [('PnMPI', '1.2.0', '', ('system', ''))]
-
-which is equivalent to::
-
-  dependencies = [('PnMPI', '1.2.0', '', True)]
+  dependencies = [('PnMPI', '1.2.0', '', SYSTEM)]
 
 
 Using external modules as dependencies
