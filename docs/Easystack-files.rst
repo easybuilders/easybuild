@@ -78,7 +78,7 @@ Running the easystack file above would be equivalent to running:
 Note that whenever options are *not* specified (as is the case for ``Hypre`` in the above easystack file), you are 
 still allowed to use ``:`` the EasyConfig name: there is no difference in behaviour in ending with or without ``:``.
 
-Specifying short options in an easystack file, e.g.
+Specifying short options in an easystack file, for example
 
 .. code:: yaml
 
