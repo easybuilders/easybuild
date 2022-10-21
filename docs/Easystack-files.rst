@@ -75,7 +75,7 @@ Running the easystack file above would be equivalent to running:
   eb Hypre-2.25.0-foss-2022a.eb
   eb OpenFOAM-v2206-foss-2022a.eb --installpath /my/custom/installpath
 
-Note that whenever options are *not* specified (as is the case for ``Hyper`` in the above easystack file), you are 
+Note that whenever options are *not* specified (as is the case for ``Hypre`` in the above easystack file), you are 
 still allowed to use ``:`` the EasyConfig name: there is no difference in behaviour in ending with or without ``:``.
 
 Specifying short options in an easystack file, e.g.
