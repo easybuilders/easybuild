@@ -5,6 +5,7 @@ Changelog for EasyBuild documentation
 
 (for EasyBuild release notes, see :ref:`release_notes`)
 
+* **release 20221021.01** (`Oct 21st 2022`): update release notes for EasyBuild v4.6.2 (see :ref:`release_notes_eb462`)
 * **release 20220912.01** (`Sep 12th 2022`): update release notes for EasyBuild v4.6.1 (see :ref:`release_notes_eb461`)
 * **release 20220708.01** (`Jul  8th 2022`): update release notes for EasyBuild v4.6.0 (see :ref:`release_notes_eb460`)
 * **release 20220608.01** (`Jun  8th 2022`): update release notes for EasyBuild v4.5.5 (see :ref:`release_notes_eb455`)
