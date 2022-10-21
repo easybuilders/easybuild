@@ -39,82 +39,122 @@ Structure of an easystack file
 
 Easystack files are written in `YAML syntax <https://learnxinyminutes.com/docs/yaml>`_.
 
-General options, which should be applied to each software (for example ``robot``), are defined at the top of the file.
-
-Afterwards, particular software specifications follow.
-
-It is mandatory to specify basic software-related keywords: *software name*, *toolchains* and *versions*.
-
-- *software name*: Name of the software.
-- *toolchains*: Names and versions of compiler :ref:`toolchains`.
-- *versions*: Versions of software. If multiple entries are provided, EasyBuild will install all of them. 
-Can be in form of a list or consecutive line entries (see example). 
-
-**General structure of YAML-formatted easystack:**
+Essentially, easystack files list the EasyConfigs you want to install. These are listed under the 'easyconfigs:' key:
 
 .. code:: yaml
 
-  software:
-    <software_name>:
-      toolchains:
-        <toolchain name and version>:
-            <software_version>:
-              versionsuffix: '<-example>'
+  easyconfigs:
+    - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb
+    - OpenFOAM-v2206-foss-2022a.eb
 
-**Example of YAML-formatted easystack:**
+(note the use of the ``-`` to list the items).
+
+In addition, you can specify additional options that will only apply to the installation of that EasyConfig:
 
 .. code:: yaml
 
-  software:
-    Bioconductor:
-      toolchains:
-        foss-2020a:
-          versions:
-            3.11:
-    EasyBuild:
-      toolchains:
-        SYSTEM:
-          versions: [4.3.1]
-    GROMACS:
-      toolchains:
-        foss-2020a:
-          versions:
-            2020.1:
-            2020.3:
-        fosscuda-2020a:
-          versions: [2020.1]
-    OpenFOAM:
-      toolchains:
-        foss-2020a:
-          versions: [8, v2006]
-    R:
-      toolchains:
-        foss-2020a:
-          versions: [4.0.0]
+  easyconfigs:
+    - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb:
+      options: {
+        'from-pr': 15924,
+        'debug': True
+      }
+    - Hypre-2.25.0-foss-2022a.eb:
+    - OpenFOAM-v2206-foss-2022a.eb:
+      options: {
+        'installpath': '/my/custom/installpath'
+      }
 
-To install the software specified in this *easystack file* named '``myeasystack.yaml``', run:
+The same command line arguments and options that are valid for the ``eb`` command can be used here, but any prefixed single or double dashes that are commonly used on the command line are ommitted in easystack files. 
+
+Running the easystack file above would be equivalent to running:
 
 .. code::
 
-  eb --easystack myeasystack.yaml
+  eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --from-pr 15924 --debug
+  eb Hypre-2.25.0-foss-2022a.eb
+  eb OpenFOAM-v2206-foss-2022a.eb --installpath /my/custom/installpath
 
-This is equivalent to running:
+Note that whenever options are *not* specified (as is the case for ``Hyper`` in the above easystack file), you are 
+still allowed to use ``:`` the EasyConfig name: there is no difference in behaviour in ending with or without ``:``.
+
+Specifying short options in an easystack file, e.g.
+
+.. code:: yaml
+
+  easyconfigs:
+    - OpenFOAM-v2206-foss-2022a.eb:
+      options: {
+        'D': True
+      }
+
+is allowed, but not recommended as they are more difficult to interpret by humans.
+
+.. _easystack_combining_options:
+
+Combining command line options with options in an easystack file
+------------------------------
+
+When building software with an easystack file, you can still add additional options on the command line as well.
+These apply to *all* items in the easystack file. For example, if you have an easystack file named 
+``my_easystack.yaml``
+
+.. code:: yaml
+
+  easyconfigs:
+    - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb:
+      options: {
+        'from-pr': 15924,
+        'debug': True
+      }
+    - OpenFOAM-v2206-foss-2022a.eb:
+
+and you run with
 
 .. code::
 
-  eb Bioconductor-3.11-foss-2020a.eb EasyBuild-4.3.1-SYSTEM.eb GROMACS-2020.1-foss-2020a.eb GROMACS-2020.3-foss-2020a.eb GROMACS-2020.1-fosscuda-2020a.eb OpenFOAM-8-foss-2020a.eb OpenFOAM-v2006-foss-2020a.eb R-4.0.0-foss-2020a.eb
+  eb --experimental --easystack my_easystack.yaml -D
+
+this will have the same effect as running
+
+.. code::
+
+  eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb -D --from-pr 15924 --debug
+  eb OpenFOAM-v2206-foss-2022a.eb -D --installpath /my/custom/installpath
+
+Note that options specified on the command line are placed *before* the EasyConfig-specific options in the easystack file. EasyBuild will always respect the argument that was put *last*, for example:
+
+.. code::
+
+  eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --dry-run --disable-dry-run
+
+will effectively run with ``--disabe-dry-run``. Since EasyConfig-specific options in from the easystack file are put *last*, this implies that they take priority over the the ones on the command line, if the same option is specified in both. For example, running
+
+.. code::
+
+  eb --experimental --easystack my_easystack.yaml --disable-debug
+
+will effectively cause the build of ``PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb`` to be build with ``--debug``, while ``OpenFOAM-v2206-foss-2022a.eb`` is effectively build with ``--disable-debug``.
+
 
 To be developed
 ---------------
 
-Optionally, more advanced keywords can be specified: *easybuild_version*, *robot*, *from_pr*, *versionsuffix*, *include-labels*, *exclude-labels*.
+In the future, we are planning to support additional also global options specified in the easystack file. For example:
 
-- *easybuild_version:* if present, EasyBuild will check if the easystack file was intended for the current version of EasyBuild.
-- *robot:* enables dependency resolution; see :ref:`Using_the_EasyBuild_command_line` for more details.
-- *from_pr:* easyconfig files that are added or modified by a
-  particular pull request to the easybuild-easyconfigs GitHub repository
-  can be used (regardless of whether the pull request is merged or not).
-  (see :ref:`Integration_with_GitHub` for more details).
-- *versionsuffix:* additional suffix for software version (placed after toolchain name)
-- *include-labels:* only include this software when EasyBuild is configured with one of the specified labels
-- *exclude-labels:* **do not** include this software when EasyBuild is configured with one of the specified labels
+.. code:: yaml
+
+  options: {
+   robot: True
+  }
+  easyconfigs:
+  - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb
+  - OpenFOAM-v2206-foss-2022a.eb
+
+would build both ``PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb`` and ``OpenFOAM-v2206-foss-2022a.eb`` with ``--robot`` (see https://github.com/easybuilders/easybuild-framework/issues/4105).
+
+Additionally, we plan to support specifying for which easybuild version an easystack file was intended, which can be helpful in more accurately recreating a certain software stack (see https://github.com/easybuilders/easybuild-framework/issues/4106).
+
+In the future, the need for specifying ``--easystack`` specifically will probably be dropped (see https://github.com/easybuilders/easybuild-framework/issues/4104).
+
+Finally, we plan to support specifying labels, which would make it more easy to build only a certain subset of the items in the easystack file. For example, by labelling all GPU-capable software with one specific label, one could easily choose to *not* build anything labeled ``gpu`` on a CPU node. (see https://github.com/easybuilders/easybuild-framework/issues/3512)
