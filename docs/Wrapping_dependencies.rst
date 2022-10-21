@@ -27,7 +27,7 @@ depending on a specific version (e.g., ``Java/1.8.0_181``):
 .. code::
 
   # specify dependency on Java/1.8 "wrapper", rather than a specific Java version
-  dependencies = [('Java', '1.8', '', True)]
+  dependencies = [('Java', '1.8', '', SYSTEM)]
 
 This has a couple of advantages:
 
