@@ -65,7 +65,7 @@ In addition, you can specify additional options that will only apply to the inst
         'installpath': '/my/custom/installpath'
       }
 
-The same command line arguments and options that are valid for the ``eb`` command can be used here, but any prefixed ``-`` or ``--`` that are commonly used on the command line are ommitted in easystack files.
+The same command line arguments and options that are valid for the ``eb`` command can be used here, but any prefixed ``-`` or ``--`` that are commonly used on the command line are omitted in easystack files.
 
 Running the easystack file above would be equivalent to running:
 
