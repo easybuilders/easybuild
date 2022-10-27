@@ -8,10 +8,18 @@
     * EB_ABAQUS
     * EB_Allinea
     * EB_Anaconda
+
+      * EB_Mamba
+
+    * EB_Anaconda
+
+      * EB_Mamba
+
     * EB_AOMP
     * EB_CPLEX
     * EB_CRISPR_minus_DAV
     * EB_CUDA
+    * EB_CUDAcompat
     * EB_EPD
     * EB_IMOD
     * EB_Maple
