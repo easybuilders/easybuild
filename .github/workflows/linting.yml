@@ -18,3 +18,18 @@ jobs:
 
     - name: Run flake8 to verify PEP8-compliance of Python code
       run: flake8 -j3
+
+  shell-linting:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Run ShellCheck
+      uses: redhat-plumbers-in-action/differential-shellcheck@v3
+      with:
+        severity: warning
+        token: ${{ secrets.GITHUB_TOKEN }}
