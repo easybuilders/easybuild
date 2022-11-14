@@ -65,13 +65,13 @@ header {
   -ms-border-radius: 8px 8px 0 0;
   -khtml-border-radius: 8px 8px 0 0;
   border-radius: 8px 8px 0 0;
-  background: #C6EAFA;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ddfbfc), color-stop(100%, #c6eafa));
-  background: -webkit-linear-gradient(#ddfbfc, #c6eafa);
-  background: -moz-linear-gradient(#ddfbfc, #c6eafa);
-  background: -o-linear-gradient(#ddfbfc, #c6eafa);
-  background: -ms-linear-gradient(#ddfbfc, #c6eafa);
-  background: linear-gradient(#ddfbfc, #c6eafa);
+  background: #2F353F;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2F353F), color-stop(100%, #59616F));
+  background: -webkit-linear-gradient(#2F353F, #59616F);
+  background: -moz-linear-gradient(#2F353F, #59616F);
+  background: -o-linear-gradient(#2F353F, #59616F);
+  background: -ms-linear-gradient(#2F353F, #59616F);
+  background: linear-gradient(#2F353F, #59616F);
   position: relative;
   padding: 15px 20px;
   border-bottom: 1px solid #B2D2E1;
@@ -83,6 +83,9 @@ header h1 {
   line-height: 1.2;
   color: #069;
   text-shadow: rgba(255, 255, 255, 0.9) 0 1px 0;
+}
+header h3 {
+  color: #FFFFFF
 }
 header.without-description h1 {
   margin: 10px 0;
@@ -144,10 +147,10 @@ header ul:before {
   -ms-border-radius: 8px;
   -khtml-border-radius: 8px;
   border-radius: 8px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(100, 100, 100, 0.7) 0 -1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(100, 100, 100, 0.7) 0 -1px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(100, 100, 100, 0.7) 0 -1px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(100, 100, 100, 0.7) 0 -1px 0;
 }
 header ul li {
   line-height: 1;
