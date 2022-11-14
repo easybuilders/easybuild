@@ -1,5 +1,6 @@
-.. image:: https://easybuilders.github.io/easybuild/images/easybuild_logo_small.png
+.. image:: https://github.com/easybuilders/easybuild/raw/develop/logo/png/easybuild_logo_2022_horizontal_dark_bg_transparent.png
    :align: center
+   :height: 400px
 
 .. image:: https://github.com/easybuilders/easybuild/actions/workflows/doc_build.yml/badge.svg
     :target: https://github.com/easybuilders/easybuild/actions/workflows/doc_build.yml
