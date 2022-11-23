@@ -80,8 +80,12 @@ For example:
 
 .. note::
    You need to take care with some values in YAML, especially integers, booleans, etc.
-   To avoid that the YAML parser assumes that a value is of a particular type,
-   use quotes (``'...'``) to force a string value.
+
+   If the specified value definitely must be a string value, you should use quotes (``'...'``) to avoid
+   that the YAML parser automatically converts the value to be of a specific type.
+
+   In other cases, the automatic conversion is useful, like for the ``True`` used above,
+   since ``debug`` is a boolean configuration option.
 
 The configuration options that are valid for the ``eb`` command can be used (see ``eb --help``),
 but the ``-`` or ``--`` prefixes that are commonly used on the command line are omitted in easystack files.
@@ -94,8 +98,9 @@ Using the example easystack file above would be equivalent to running:
   eb Hypre-2.25.0-foss-2022a.eb
   eb OpenFOAM-v2206-foss-2022a.eb --installpath /my/custom/installpath
 
-Note that whenever configuration options are *not* specified (as is the case for ``Hypre`` in the example easystack file above),
-you are still allowed to use '``:``' after the easyconfig filename: there is no difference in behaviour in ending with or without '``:``'.
+.. note::
+   Whenever configuration options are *not* specified (as is the case for ``Hypre`` in the example easystack file above),
+   you are still allowed to use '``:``' after the easyconfig filename: there is no difference in behaviour in ending with or without '``:``'.
 
 Specifying short options in an easystack file is allowed, for example:
 
