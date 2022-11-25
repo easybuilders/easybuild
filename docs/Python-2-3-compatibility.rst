@@ -226,7 +226,7 @@ Function to raise an error with specified message and traceback, implemented in 
 -------------
 
 * Python 2: corresponds to ``urllib.urlencode`` function
-* Python 2: corresponds to ``urllib.parse.urlencode`` function
+* Python 3: corresponds to ``urllib.parse.urlencode`` function
 
 .. _py2vs3_URLError:
 
