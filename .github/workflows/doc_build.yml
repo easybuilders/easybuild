@@ -2,6 +2,10 @@ name: Docs build and installation end-to-end tests
 
 on: [push, pull_request]
 
+concurrency:
+  group: ${{format('{0}:{1}:{2}', github.repository, github.ref, github.workflow)}}
+  cancel-in-progress: true
+
 jobs:
   docs:
     runs-on: ubuntu-latest
