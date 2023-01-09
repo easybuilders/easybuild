@@ -62,6 +62,7 @@
     * CrayToolchain
     * EB_Clang_minus_AOMP
     * EB_OpenSSL_wrapper
+    * JuliaBundle
     * PythonBundle
     * SystemCompiler
     * SystemMPI
@@ -265,6 +266,7 @@
   * ExtensionEasyBlock
 
     * EB_Scipion
+    * JuliaPackage
     * OCamlPackage
     * OctavePackage
     * PerlModule
@@ -407,6 +409,7 @@
   * ExtensionEasyBlock
 
     * EB_Scipion
+    * JuliaPackage
     * OCamlPackage
     * OctavePackage
     * PerlModule
