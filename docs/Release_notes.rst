@@ -12,8 +12,8 @@ alongside 15,535 easyconfig files.
 
 .. _release_notes_eb470:
 
-EasyBuild v4.7.0 (Januar 9th 2023)
-----------------------------------
+EasyBuild v4.7.0 (January 9th 2023)
+-----------------------------------
 
 feature release
 
