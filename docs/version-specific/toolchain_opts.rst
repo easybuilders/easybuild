@@ -5,7 +5,7 @@ Available toolchain options (by toolchain)
 
 *(see also* ``eb --avail-toolchain-opts <tcname>`` *)*
 
-ClangGCC_ - CrayCCE_ - CrayGNU_ - CrayIntel_ - CrayPGI_ - FCC_ - Fujitsu_ - GCC_ - GCCcore_ - GNU_ - NVHPC_ - PGI_ - cgmpich_ - cgmpolf_ - cgmvapich2_ - cgmvolf_ - cgompi_ - cgoolf_ - ffmpi_ - foss_ - fosscuda_ - gcccuda_ - gfbf_ - gimkl_ - gimpi_ - gimpic_ - giolf_ - giolfc_ - gmacml_ - gmkl_ - gmklc_ - gmpich2_ - gmpich_ - gmpit_ - gmpolf_ - gmvapich2_ - gmvolf_ - goalf_ - gobff_ - goblf_ - gofbf_ - golf_ - golfc_ - gomkl_ - gomklc_ - gompi_ - gompic_ - goolf_ - goolfc_ - gpsmpi_ - gpsolf_ - gqacml_ - gsmpi_ - gsolf_ - iccifort_ - iccifortcuda_ - ictce_ - iibff_ - iimkl_ - iimklc_ - iimpi_ - iimpic_ - iiqmpi_ - impich_ - impmkl_ - intel-compilers_ - intel-para_ - intel_ - intelcuda_ - iomkl_ - iomklc_ - iompi_ - iompic_ - ipsmpi_ - iqacml_ - ismkl_ - nvompi_ - nvompic_ - nvpsmpi_ - nvpsmpic_ - pmkl_ - pomkl_ - pompi_ - system_ - xlcxlf_ - xlmpich2_ - xlmpich_ - xlmvapich2_ - xlompi_
+ClangGCC_ - CrayCCE_ - CrayGNU_ - CrayIntel_ - CrayPGI_ - FCC_ - Fujitsu_ - GCC_ - GCCcore_ - GNU_ - NVHPC_ - PGI_ - cgmpich_ - cgmpolf_ - cgmvapich2_ - cgmvolf_ - cgompi_ - cgoolf_ - ffmpi_ - foss_ - fosscuda_ - gcccuda_ - gfbf_ - gimkl_ - gimpi_ - gimpic_ - giolf_ - giolfc_ - gmacml_ - gmkl_ - gmklc_ - gmpich2_ - gmpich_ - gmpit_ - gmpolf_ - gmvapich2_ - gmvolf_ - goalf_ - gobff_ - goblf_ - gofbf_ - golf_ - golfc_ - gomkl_ - gomklc_ - gompi_ - gompic_ - goolf_ - goolfc_ - gpsmpi_ - gpsolf_ - gqacml_ - gsmpi_ - gsolf_ - iccifort_ - iccifortcuda_ - ictce_ - iibff_ - iimkl_ - iimklc_ - iimpi_ - iimpic_ - iiqmpi_ - impich_ - impmkl_ - intel-compilers_ - intel-para_ - intel_ - intelcuda_ - iomkl_ - iomklc_ - iompi_ - iompic_ - ipsmpi_ - iqacml_ - ismkl_ - nvofbf_ - nvompi_ - nvompic_ - nvpsmpi_ - nvpsmpic_ - pmkl_ - pomkl_ - pompi_ - system_ - xlcxlf_ - xlmpich2_ - xlmpich_ - xlmvapich2_ - xlompi_
 
 .. _ClangGCC:
 
@@ -13,20 +13,20 @@ Available options for ClangGCC toolchain
 ----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -35,17 +35,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -57,20 +57,20 @@ Available options for CrayCCE toolchain
 ---------------------------------------
 
 =========================    ===============================================================================================================================================================================================================================================================    =========
-option                       description                                                                                                                                                                                                                                                        default  
+option                       description                                                                                                                                                                                                                                                        default
 =========================    ===============================================================================================================================================================================================================================================================    =========
 ``32bit``                    Compile 32bit target                                                                                                                                                                                                                                               ``False``
 ``cciscxx``                  Use CC as CXX                                                                                                                                                                                                                                                      ``False``
-``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None`` 
+``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None``
 ``debug``                    Enable debug                                                                                                                                                                                                                                                       ``False``
 ``defaultopt``               Default compiler optimizations                                                                                                                                                                                                                                     ``False``
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
-``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
-``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None`` 
+``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None``
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
@@ -84,14 +84,14 @@ option                       description                                        
 ``pic``                      Use PIC                                                                                                                                                                                                                                                            ``False``
 ``precise``                  High precision                                                                                                                                                                                                                                                     ``False``
 ``r8``                       Real is 8 byte real                                                                                                                                                                                                                                                ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True``
 ``shared``                   Build shared library                                                                                                                                                                                                                                               ``False``
 ``static``                   Build static library                                                                                                                                                                                                                                               ``False``
 ``strict``                   Strict (highest) precision                                                                                                                                                                                                                                         ``False``
 ``unroll``                   Unroll loops                                                                                                                                                                                                                                                       ``False``
 ``usempi``                   Use MPI compiler as default compiler                                                                                                                                                                                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None`` 
-``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None``
+``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True``
 ``veryloose``                Very loose precision                                                                                                                                                                                                                                               ``False``
 =========================    ===============================================================================================================================================================================================================================================================    =========
 
@@ -102,20 +102,20 @@ Available options for CrayGNU toolchain
 ---------------------------------------
 
 =========================    ===============================================================================================================================================================================================================================================================    =========
-option                       description                                                                                                                                                                                                                                                        default  
+option                       description                                                                                                                                                                                                                                                        default
 =========================    ===============================================================================================================================================================================================================================================================    =========
 ``32bit``                    Compile 32bit target                                                                                                                                                                                                                                               ``False``
 ``cciscxx``                  Use CC as CXX                                                                                                                                                                                                                                                      ``False``
-``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None`` 
+``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None``
 ``debug``                    Enable debug                                                                                                                                                                                                                                                       ``False``
 ``defaultopt``               Default compiler optimizations                                                                                                                                                                                                                                     ``False``
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
-``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
-``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None`` 
+``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None``
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
@@ -129,14 +129,14 @@ option                       description                                        
 ``pic``                      Use PIC                                                                                                                                                                                                                                                            ``False``
 ``precise``                  High precision                                                                                                                                                                                                                                                     ``False``
 ``r8``                       Real is 8 byte real                                                                                                                                                                                                                                                ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True``
 ``shared``                   Build shared library                                                                                                                                                                                                                                               ``False``
 ``static``                   Build static library                                                                                                                                                                                                                                               ``False``
 ``strict``                   Strict (highest) precision                                                                                                                                                                                                                                         ``False``
 ``unroll``                   Unroll loops                                                                                                                                                                                                                                                       ``False``
 ``usempi``                   Use MPI compiler as default compiler                                                                                                                                                                                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None`` 
-``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None``
+``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True``
 ``veryloose``                Very loose precision                                                                                                                                                                                                                                               ``False``
 =========================    ===============================================================================================================================================================================================================================================================    =========
 
@@ -147,20 +147,20 @@ Available options for CrayIntel toolchain
 -----------------------------------------
 
 =========================    ===============================================================================================================================================================================================================================================================    =========
-option                       description                                                                                                                                                                                                                                                        default  
+option                       description                                                                                                                                                                                                                                                        default
 =========================    ===============================================================================================================================================================================================================================================================    =========
 ``32bit``                    Compile 32bit target                                                                                                                                                                                                                                               ``False``
 ``cciscxx``                  Use CC as CXX                                                                                                                                                                                                                                                      ``False``
-``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None`` 
+``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None``
 ``debug``                    Enable debug                                                                                                                                                                                                                                                       ``False``
 ``defaultopt``               Default compiler optimizations                                                                                                                                                                                                                                     ``False``
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
-``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
-``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None`` 
+``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None``
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
@@ -174,14 +174,14 @@ option                       description                                        
 ``pic``                      Use PIC                                                                                                                                                                                                                                                            ``False``
 ``precise``                  High precision                                                                                                                                                                                                                                                     ``False``
 ``r8``                       Real is 8 byte real                                                                                                                                                                                                                                                ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True``
 ``shared``                   Build shared library                                                                                                                                                                                                                                               ``False``
 ``static``                   Build static library                                                                                                                                                                                                                                               ``False``
 ``strict``                   Strict (highest) precision                                                                                                                                                                                                                                         ``False``
 ``unroll``                   Unroll loops                                                                                                                                                                                                                                                       ``False``
 ``usempi``                   Use MPI compiler as default compiler                                                                                                                                                                                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None`` 
-``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None``
+``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True``
 ``veryloose``                Very loose precision                                                                                                                                                                                                                                               ``False``
 =========================    ===============================================================================================================================================================================================================================================================    =========
 
@@ -192,20 +192,20 @@ Available options for CrayPGI toolchain
 ---------------------------------------
 
 =========================    ===============================================================================================================================================================================================================================================================    =========
-option                       description                                                                                                                                                                                                                                                        default  
+option                       description                                                                                                                                                                                                                                                        default
 =========================    ===============================================================================================================================================================================================================================================================    =========
 ``32bit``                    Compile 32bit target                                                                                                                                                                                                                                               ``False``
 ``cciscxx``                  Use CC as CXX                                                                                                                                                                                                                                                      ``False``
-``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None`` 
+``cstd``                     Specify C standard                                                                                                                                                                                                                                                 ``None``
 ``debug``                    Enable debug                                                                                                                                                                                                                                                       ``False``
 ``defaultopt``               Default compiler optimizations                                                                                                                                                                                                                                     ``False``
 ``defaultprec``              Default precision                                                                                                                                                                                                                                                  ``False``
-``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True`` 
-``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None`` 
+``dynamic``                  Generate dynamically linked executable                                                                                                                                                                                                                             ``True``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                                                                                                                                      ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                                                                                                                                                    ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                                                                                                                                     ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                                                                                                                                      ``None``
 ``i8``                       Integers are 8 byte integers                                                                                                                                                                                                                                       ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                                                                                                                                                                                                           ``False``
 ``loose``                    Loose precision                                                                                                                                                                                                                                                    ``False``
@@ -219,14 +219,14 @@ option                       description                                        
 ``pic``                      Use PIC                                                                                                                                                                                                                                                            ``False``
 ``precise``                  High precision                                                                                                                                                                                                                                                     ``False``
 ``r8``                       Real is 8 byte real                                                                                                                                                                                                                                                ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                              ``True``
 ``shared``                   Build shared library                                                                                                                                                                                                                                               ``False``
 ``static``                   Build static library                                                                                                                                                                                                                                               ``False``
 ``strict``                   Strict (highest) precision                                                                                                                                                                                                                                         ``False``
 ``unroll``                   Unroll loops                                                                                                                                                                                                                                                       ``False``
 ``usempi``                   Use MPI compiler as default compiler                                                                                                                                                                                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None`` 
-``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                                                                                                                                            ``None``
+``verbose``                  Verbose output                                                                                                                                                                                                                                                     ``True``
 ``veryloose``                Very loose precision                                                                                                                                                                                                                                               ``False``
 =========================    ===============================================================================================================================================================================================================================================================    =========
 
@@ -237,19 +237,19 @@ Available options for FCC toolchain
 -----------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -257,17 +257,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -279,19 +279,19 @@ Available options for Fujitsu toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -299,18 +299,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -322,19 +322,19 @@ Available options for GCC toolchain
 -----------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -345,17 +345,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -367,19 +367,19 @@ Available options for GCCcore toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -390,17 +390,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -412,19 +412,19 @@ Available options for GNU toolchain
 -----------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -435,17 +435,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -457,19 +457,19 @@ Available options for NVHPC toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -477,17 +477,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -499,19 +499,19 @@ Available options for PGI toolchain
 -----------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -519,17 +519,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -541,20 +541,20 @@ Available options for cgmpich toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -563,18 +563,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -586,20 +586,20 @@ Available options for cgmpolf toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -608,18 +608,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -631,20 +631,20 @@ Available options for cgmvapich2 toolchain
 ------------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -653,18 +653,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -676,20 +676,20 @@ Available options for cgmvolf toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -698,18 +698,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -721,20 +721,20 @@ Available options for cgompi toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -743,18 +743,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -766,20 +766,20 @@ Available options for cgoolf toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``basic-block-vectorize``    Basic block vectorization                                                  ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loop-vectorize``           Loop vectorization                                                         ``False``
@@ -788,18 +788,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -811,19 +811,19 @@ Available options for ffmpi toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -831,18 +831,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -854,19 +854,19 @@ Available options for foss toolchain
 ------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -877,18 +877,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -900,19 +900,19 @@ Available options for fosscuda toolchain
 ----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -923,18 +923,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -946,19 +946,19 @@ Available options for gcccuda toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -969,17 +969,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -991,19 +991,19 @@ Available options for gfbf toolchain
 ------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1014,17 +1014,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1036,19 +1036,19 @@ Available options for gimkl toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1059,18 +1059,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1082,19 +1082,19 @@ Available options for gimpi toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1105,18 +1105,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1128,19 +1128,19 @@ Available options for gimpic toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1151,18 +1151,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1174,19 +1174,19 @@ Available options for giolf toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1197,18 +1197,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1220,19 +1220,19 @@ Available options for giolfc toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1243,18 +1243,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1266,19 +1266,19 @@ Available options for gmacml toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1289,18 +1289,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1312,19 +1312,19 @@ Available options for gmkl toolchain
 ------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1335,17 +1335,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1357,19 +1357,19 @@ Available options for gmklc toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1380,17 +1380,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1402,19 +1402,19 @@ Available options for gmpich2 toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1425,18 +1425,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1448,19 +1448,19 @@ Available options for gmpich toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1471,18 +1471,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1494,19 +1494,19 @@ Available options for gmpit toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1517,18 +1517,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1540,19 +1540,19 @@ Available options for gmpolf toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1563,18 +1563,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1586,19 +1586,19 @@ Available options for gmvapich2 toolchain
 -----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1609,18 +1609,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1632,19 +1632,19 @@ Available options for gmvolf toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1655,18 +1655,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1678,19 +1678,19 @@ Available options for goalf toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1701,18 +1701,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1724,19 +1724,19 @@ Available options for gobff toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1747,18 +1747,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1770,19 +1770,19 @@ Available options for goblf toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1793,18 +1793,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1816,19 +1816,19 @@ Available options for gofbf toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1839,18 +1839,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1862,19 +1862,19 @@ Available options for golf toolchain
 ------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1885,17 +1885,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1907,19 +1907,19 @@ Available options for golfc toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1930,17 +1930,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1952,19 +1952,19 @@ Available options for gomkl toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -1975,18 +1975,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -1998,19 +1998,19 @@ Available options for gomklc toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2021,18 +2021,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2044,19 +2044,19 @@ Available options for gompi toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2067,18 +2067,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2090,19 +2090,19 @@ Available options for gompic toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2113,18 +2113,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2136,19 +2136,19 @@ Available options for goolf toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2159,18 +2159,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2182,19 +2182,19 @@ Available options for goolfc toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2205,18 +2205,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2228,19 +2228,19 @@ Available options for gpsmpi toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2251,18 +2251,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2274,19 +2274,19 @@ Available options for gpsolf toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2297,18 +2297,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2320,19 +2320,19 @@ Available options for gqacml toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2343,18 +2343,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2366,19 +2366,19 @@ Available options for gsmpi toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2389,18 +2389,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2412,19 +2412,19 @@ Available options for gsolf toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``f2c``                      Generate code compatible with f2c and f77                                  ``False``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -2435,18 +2435,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2458,20 +2458,20 @@ Available options for iccifort toolchain
 ----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -2481,17 +2481,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2503,20 +2503,20 @@ Available options for iccifortcuda toolchain
 --------------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -2526,17 +2526,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2547,46 +2547,48 @@ option                       description                                        
 Available options for ictce toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``usempi``                   Use MPI compiler as default compiler                                                                                                          ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iibff:
@@ -2594,46 +2596,48 @@ option                       description                                        
 Available options for iibff toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``usempi``                   Use MPI compiler as default compiler                                                                                                          ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iimkl:
@@ -2641,44 +2645,47 @@ option                       description                                        
 Available options for iimkl toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iimklc:
@@ -2686,44 +2693,47 @@ option                       description                                        
 Available options for iimklc toolchain
 --------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iimpi:
@@ -2731,46 +2741,48 @@ option                       description                                        
 Available options for iimpi toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``usempi``                   Use MPI compiler as default compiler                                                                                                          ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iimpic:
@@ -2779,20 +2791,20 @@ Available options for iimpic toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -2802,18 +2814,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2825,20 +2837,20 @@ Available options for iiqmpi toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -2848,18 +2860,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2871,20 +2883,20 @@ Available options for impich toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -2894,18 +2906,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2917,20 +2929,20 @@ Available options for impmkl toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -2940,18 +2952,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -2962,45 +2974,47 @@ option                       description                                        
 Available options for intel-compilers toolchain
 -----------------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _intel-para:
@@ -3009,20 +3023,20 @@ Available options for intel-para toolchain
 ------------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3032,18 +3046,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3054,46 +3068,48 @@ option                       description                                        
 Available options for intel toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``usempi``                   Use MPI compiler as default compiler                                                                                                          ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _intelcuda:
@@ -3102,20 +3118,20 @@ Available options for intelcuda toolchain
 -----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3125,18 +3141,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3147,46 +3163,48 @@ option                       description                                        
 Available options for iomkl toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``usempi``                   Use MPI compiler as default compiler                                                                                                          ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iomklc:
@@ -3195,20 +3213,20 @@ Available options for iomklc toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3218,18 +3236,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3240,46 +3258,48 @@ option                       description                                        
 Available options for iompi toolchain
 -------------------------------------
 
-=========================    =======================================================================    =========
-option                       description                                                                default  
-=========================    =======================================================================    =========
-``32bit``                    Compile 32bit target                                                       ``False``
-``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
-``debug``                    Enable debug                                                               ``False``
-``defaultopt``               Default compiler optimizations                                             ``False``
-``defaultprec``              Default precision                                                          ``False``
-``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
-``i8``                       Integers are 8 byte integers                                               ``False``
-``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
-``intel-static``             Link Intel provided libraries statically                                   ``False``
-``loose``                    Loose precision                                                            ``False``
-``lowopt``                   Low compiler optimizations                                                 ``False``
-``no-icc``                   Don't set Intel specific macros                                            ``False``
-``noopt``                    Disable compiler optimizations                                             ``False``
-``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers             ``False``
-``openmp``                   Enable OpenMP                                                              ``False``
-``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
-``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
-``pic``                      Use PIC                                                                    ``False``
-``precise``                  High precision                                                             ``False``
-``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
-``shared``                   Build shared library                                                       ``False``
-``static``                   Build static library                                                       ``False``
-``strict``                   Strict (highest) precision                                                 ``False``
-``unroll``                   Unroll loops                                                               ``False``
-``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
-``verbose``                  Verbose output                                                             ``False``
-``veryloose``                Very loose precision                                                       ``False``
-=========================    =======================================================================    =========
+=========================    ==========================================================================================================================================    =========
+option                       description                                                                                                                                   default
+=========================    ==========================================================================================================================================    =========
+``32bit``                    Compile 32bit target                                                                                                                          ``False``
+``cciscxx``                  Use CC as CXX                                                                                                                                 ``False``
+``cstd``                     Specify C standard                                                                                                                            ``None``
+``debug``                    Enable debug                                                                                                                                  ``False``
+``defaultopt``               Default compiler optimizations                                                                                                                ``False``
+``defaultprec``              Default precision                                                                                                                             ``False``
+``error-unknown-option``     Error instead of warning for unknown options                                                                                                  ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                                                                                                 ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                                                                                               ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                                                                                               ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                                                                                                ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                                                                                                 ``None``
+``i8``                       Integers are 8 byte integers                                                                                                                  ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                                                                                      ``False``
+``intel-static``             Link Intel provided libraries statically                                                                                                      ``False``
+``loose``                    Loose precision                                                                                                                               ``False``
+``lowopt``                   Low compiler optimizations                                                                                                                    ``False``
+``no-icc``                   Don't set Intel specific macros                                                                                                               ``False``
+``noopt``                    Disable compiler optimizations                                                                                                                ``False``
+``oneapi``                   Use oneAPI compilers icx/icpx/ifx instead of classic compilers                                                                                ``None``
+``oneapi_c_cxx``             Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)    ``None``
+``oneapi_fortran``           Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler                                                                     ``False``
+``openmp``                   Enable OpenMP                                                                                                                                 ``False``
+``opt``                      High compiler optimizations                                                                                                                   ``False``
+``optarch``                  Enable architecture optimizations                                                                                                             ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                                                                                               ``False``
+``pic``                      Use PIC                                                                                                                                       ``False``
+``precise``                  High precision                                                                                                                                ``False``
+``r8``                       Real is 8 byte real                                                                                                                           ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                         ``True``
+``shared``                   Build shared library                                                                                                                          ``False``
+``static``                   Build static library                                                                                                                          ``False``
+``strict``                   Strict (highest) precision                                                                                                                    ``False``
+``unroll``                   Unroll loops                                                                                                                                  ``False``
+``usempi``                   Use MPI compiler as default compiler                                                                                                          ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt                                                                       ``None``
+``verbose``                  Verbose output                                                                                                                                ``False``
+``veryloose``                Very loose precision                                                                                                                          ``False``
+=========================    ==========================================================================================================================================    =========
 
 
 .. _iompic:
@@ -3288,20 +3308,20 @@ Available options for iompic toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3311,18 +3331,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3334,20 +3354,20 @@ Available options for ipsmpi toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3357,18 +3377,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3380,20 +3400,20 @@ Available options for iqacml toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3403,18 +3423,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3426,20 +3446,20 @@ Available options for ismkl toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``intel-static``             Link Intel provided libraries statically                                   ``False``
@@ -3449,18 +3469,61 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
+``verbose``                  Verbose output                                                             ``False``
+``veryloose``                Very loose precision                                                       ``False``
+=========================    =======================================================================    =========
+
+
+.. _nvofbf:
+
+Available options for nvofbf toolchain
+--------------------------------------
+
+=========================    =======================================================================    =========
+option                       description                                                                default
+=========================    =======================================================================    =========
+``32bit``                    Compile 32bit target                                                       ``False``
+``cciscxx``                  Use CC as CXX                                                              ``False``
+``cstd``                     Specify C standard                                                         ``None``
+``debug``                    Enable debug                                                               ``False``
+``defaultopt``               Default compiler optimizations                                             ``False``
+``defaultprec``              Default precision                                                          ``False``
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
+``i8``                       Integers are 8 byte integers                                               ``False``
+``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
+``loose``                    Loose precision                                                            ``False``
+``lowopt``                   Low compiler optimizations                                                 ``False``
+``noopt``                    Disable compiler optimizations                                             ``False``
+``openmp``                   Enable OpenMP                                                              ``False``
+``opt``                      High compiler optimizations                                                ``False``
+``optarch``                  Enable architecture optimizations                                          ``True``
+``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
+``pic``                      Use PIC                                                                    ``False``
+``precise``                  High precision                                                             ``False``
+``r8``                       Real is 8 byte real                                                        ``False``
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
+``shared``                   Build shared library                                                       ``False``
+``static``                   Build static library                                                       ``False``
+``strict``                   Strict (highest) precision                                                 ``False``
+``unroll``                   Unroll loops                                                               ``False``
+``usempi``                   Use MPI compiler as default compiler                                       ``False``
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3472,19 +3535,19 @@ Available options for nvompi toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3492,18 +3555,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3515,19 +3578,19 @@ Available options for nvompic toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3535,18 +3598,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3558,19 +3621,19 @@ Available options for nvpsmpi toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3578,18 +3641,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3601,19 +3664,19 @@ Available options for nvpsmpic toolchain
 ----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3621,18 +3684,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3644,19 +3707,19 @@ Available options for pmkl toolchain
 ------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3664,17 +3727,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3686,19 +3749,19 @@ Available options for pomkl toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3706,18 +3769,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3729,19 +3792,19 @@ Available options for pompi toolchain
 -------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3749,18 +3812,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3772,19 +3835,19 @@ Available options for system toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
 ``loose``                    Loose precision                                                            ``False``
@@ -3792,17 +3855,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3814,20 +3877,20 @@ Available options for xlcxlf toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ibm-static``               Link IBM XL provided libraries statically                                  ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -3836,17 +3899,17 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3858,20 +3921,20 @@ Available options for xlmpich2 toolchain
 ----------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ibm-static``               Link IBM XL provided libraries statically                                  ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -3880,18 +3943,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3903,20 +3966,20 @@ Available options for xlmpich toolchain
 ---------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ibm-static``               Link IBM XL provided libraries statically                                  ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -3925,18 +3988,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3948,20 +4011,20 @@ Available options for xlmvapich2 toolchain
 ------------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ibm-static``               Link IBM XL provided libraries statically                                  ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -3970,18 +4033,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
@@ -3993,20 +4056,20 @@ Available options for xlompi toolchain
 --------------------------------------
 
 =========================    =======================================================================    =========
-option                       description                                                                default  
+option                       description                                                                default
 =========================    =======================================================================    =========
 ``32bit``                    Compile 32bit target                                                       ``False``
 ``cciscxx``                  Use CC as CXX                                                              ``False``
-``cstd``                     Specify C standard                                                         ``None`` 
+``cstd``                     Specify C standard                                                         ``None``
 ``debug``                    Enable debug                                                               ``False``
 ``defaultopt``               Default compiler optimizations                                             ``False``
 ``defaultprec``              Default precision                                                          ``False``
 ``error-unknown-option``     Error instead of warning for unknown options                               ``False``
-``extra_cflags``             Specify extra CFLAGS options.                                              ``None`` 
-``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None`` 
-``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None`` 
-``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None`` 
-``extra_fflags``             Specify extra FFLAGS options.                                              ``None`` 
+``extra_cflags``             Specify extra CFLAGS options.                                              ``None``
+``extra_cxxflags``           Specify extra CXXFLAGS options.                                            ``None``
+``extra_f90flags``           Specify extra F90FLAGS options.                                            ``None``
+``extra_fcflags``            Specify extra FCFLAGS options.                                             ``None``
+``extra_fflags``             Specify extra FFLAGS options.                                              ``None``
 ``i8``                       Integers are 8 byte integers                                               ``False``
 ``ibm-static``               Link IBM XL provided libraries statically                                  ``False``
 ``ieee``                     Adhere to IEEE-754 rules                                                   ``False``
@@ -4015,18 +4078,18 @@ option                       description                                        
 ``noopt``                    Disable compiler optimizations                                             ``False``
 ``openmp``                   Enable OpenMP                                                              ``False``
 ``opt``                      High compiler optimizations                                                ``False``
-``optarch``                  Enable architecture optimizations                                          ``True`` 
+``optarch``                  Enable architecture optimizations                                          ``True``
 ``packed-linker-options``    Pack the linker options as comma separated list                            ``False``
 ``pic``                      Use PIC                                                                    ``False``
 ``precise``                  High precision                                                             ``False``
 ``r8``                       Real is 8 byte real                                                        ``False``
-``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True`` 
+``rpath``                    Use RPATH wrappers when --rpath is enabled in EasyBuild configuration      ``True``
 ``shared``                   Build shared library                                                       ``False``
 ``static``                   Build static library                                                       ``False``
 ``strict``                   Strict (highest) precision                                                 ``False``
 ``unroll``                   Unroll loops                                                               ``False``
 ``usempi``                   Use MPI compiler as default compiler                                       ``False``
-``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None`` 
+``vectorize``                Enable compiler auto-vectorization, default except for noopt and lowopt    ``None``
 ``verbose``                  Verbose output                                                             ``False``
 ``veryloose``                Very loose precision                                                       ``False``
 =========================    =======================================================================    =========
