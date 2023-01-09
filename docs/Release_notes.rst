@@ -3,9 +3,9 @@
 EasyBuild release notes
 =======================
 
-The latest version of EasyBuild provides support for building and installing **2,798** different software packages,
-including 37 different (compiler) toolchains. It contains 248 software-specific easyblocks and 37 generic easyblocks,
-alongside 15,535 easyconfig files.
+The latest version of EasyBuild provides support for building and installing **2,904** different software packages,
+including 39 different (compiler) toolchains. It contains 248 software-specific easyblocks and 39 generic easyblocks,
+alongside 16,138 easyconfig files.
 
 .. note:: See also the :ref:`concise overview of major changes in EasyBuild v4.0 <eb4_changes_overview>`.
 
