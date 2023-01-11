@@ -7,18 +7,25 @@ Installing Lmod without root permissions
 This short guide will show how to install Lmod (and Lua, on which it
 depends) on Linux, without requiring root permissions.
 
+For full instructions on installing Lmod and its prerequisites check
+the `Lmod documentation<https://lmod.readthedocs.io/en/latest/030_installing.html>`_.
+
 Lua
 ~~~
 
-Dependencies: Installing Lua using the steps below requires rsync, make and gcc
+Dependencies: Installing Lua using the steps below requires bzip2, rsync, make and gcc
 
 Build and install Lua using the source tarball available in the Lmod
-SourceForge repository (`http://sourceforge.net/projects/lmod/files/`_).
+SourceForge repository (`https://sourceforge.net/projects/lmod/files/`_).
 This version is a lot easier to build, and already includes the required
 extra Lua modules. At the time of writing this relates to the
-``lua-5.1.4.8.tar.gz`` tarball.
+``lua-5.1.4.9.tar.bz2`` tarball.
 
-**Step 1**: Download and unpack `lua-5.1.4.8.tar.gz`_.
+**Step 1**: Download and unpack Lua:
+
+.. code:: bash
+    wget https://sourceforge.net/projects/lmod/files/lua-5.1.4.9.tar.bz2
+    tar xvfj lua-5.1.4.9.tar.bz2 && cd lua-5.1.4.9
 
 **Step 2**: Configure the Lua build, provide a custom installation
 prefix (e.g. ``$HOME/lua``) and specify to statically link libraries
@@ -55,7 +62,8 @@ Lmod
 Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), make and bzip2
 
 **Step 1**: Download and unpack the latest available Lmod version,
-`Lmod-8.4.tar.bz2`_ at the time of writing.
+`Lmod-8.4.tar.bz2`_ at the time of writing, from the `Lmod GitHub releases page
+<https://github.com/TACC/Lmod/releases>`_.
 
 .. code:: bash
 
@@ -67,18 +75,25 @@ Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), mak
 
     ./configure --prefix=$HOME && make install
 
-**Step 3**: Update ``$PATH`` so ``lmod`` is available (put this in your
-``.bashrc``):
+**Step 3**: Update the ``$LMOD_CMD`` to point to the Lmod executable
+(put this in your ``.bashrc``):
+
+.. code:: bash
+    export LMOD_CMD=$HOME/lmod/8.4/libexec/lmod
+
+Note that you can use the specific version as above but the ``lmod``
+directory symlink allows updates without needing to change this export
+(and so is usually preferred):
 
 .. code:: bash
 
-    export PATH=$HOME/lmod/8.4/libexec:$PATH
+    export LMOD_CMD=$HOME/lmod/lmod/libexec/lmod
 
 Optionally, give it a spin:
 
 .. code:: bash
 
-    $ lmod --version
+    $ $LMOD_CMD --version
 
     Modules based on Lua: Version 8.4  2020-07-31 12:25 -05:00
         by Robert McLay mclay@tacc.utexas.edu
@@ -88,10 +103,9 @@ with EasyBuild):
 
 .. code:: bash
 
-    source $HOME/lmod/8.4/init/bash
-    export LMOD_CMD=$HOME/lmod/8.4/libexec/lmod
+    source $HOME/lmod/lmod/init/bash
 
-.. _`http://sourceforge.net/projects/lmod/files/`: http://sourceforge.net/projects/lmod/files/
-.. _lua-5.1.4.8.tar.gz: https://sourceforge.net/projects/lmod/files/lua-5.1.4.8.tar.gz/download
+.. _`https://sourceforge.net/projects/lmod/files/`: https://sourceforge.net/projects/lmod/files/
+.. _lua-5.1.4.9.tar.bz2: https://sourceforge.net/projects/lmod/files/lua-5.1.4.9.tar.bz2/download
 .. _Lmod-8.4.tar.bz2: https://sourceforge.net/projects/lmod/files/Lmod-8.4.tar.bz2/download
 
