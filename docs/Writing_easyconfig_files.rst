@@ -224,7 +224,7 @@ Nevertheless, providing checksums for *all* source files and patches is highly r
 If checksums are provided, the checksum of the corresponding source files and patches is verified to match.
 
 
-The ``checksums`` easyconfig parameter is usually defined as a list of strings.
+The ``checksums`` easyconfig parameter is a list usually containing strings.
 
 Until EasyBuild v3.3.0, only MD5 checksums could be provided through a list of strings.
 Since EasyBuild v3.3.0, the checksum type is determined by looking at the length of the string:
@@ -242,6 +242,59 @@ of the form ``('<checksum type>', '<checksum value>')``. For example:
 .. code:: python
 
   checksums = [('sha512', 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266')]
+
+It is also possible to specify alternative checksums using a tuple of checksum elements where any match is sufficient (logical OR).
+This is helpful when the release was updated but can still be used (e.g. only doc changes).
+
+.. code:: python
+
+  checksums = [('mainchecksum', 'alternativechecksum')]  # Placeholders used
+
+The opposite is also possible:
+A list instead of a tuple denotes that **all** checksums must match (logical AND).
+In both cases each element can also be a type-value-tuple:
+
+.. code:: python
+
+  checksums = [[('size', 42), 'sha256checksum')]  # Placeholder used
+
+Finally a checksum can be specified as a dictionary mapping filenames to checksums.
+This is useful when the source file is specified using e.g. the `%(arch)s` template.
+Again elements (values) can be strings or type-value-tuples.
+For example:
+
+.. code:: python
+
+  checksums = [{
+    'src_x86_64.tgz': 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d2410',
+    'src_aarch64.tgz': ('size', 42),
+  }]
+
+Of course this can be combined with the logical AND/OR semantics using lists or tuples:
+
+.. code:: python
+
+  checksums = [{
+    'src_x86_64.tgz': ('oldchecksum', 'newchecksum'),
+    'src_aarch64.tgz': [('size', 42), 'checksumthatmustmatchtoo'],
+  }]
+
+When the checksum cannot be specified for a file (e.g. when using a git clone instead of an archive) a value of `None` can be used to skip the checksum check.
+This is possible in the list of checksums as well as as a value in a dictionary, e.g.:
+
+.. code:: python
+
+  checksums = [{
+    None, # No checksum for first source file
+    'checksumfor2ndfile',
+    {
+      'third_file_x86_64.tgz': 'checksum',
+      'third_file_aarch64.tgz': None,
+    },
+  ]
+
+The difference between having an entry in the dict with the value of `None` and not having an entry
+only matters when using the `--enforce_checksums` option which will raise an error in the latter case.
 
 .. _inject_checksums:
 
