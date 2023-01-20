@@ -70,13 +70,13 @@ For example:
 
   easyconfigs:
     - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb:
-      options:
-        from-pr: 15924
-        debug: True
+        options:
+          from-pr: 15924
+          debug: True
     - Hypre-2.25.0-foss-2022a.eb:
     - OpenFOAM-v2206-foss-2022a.eb:
-      options:
-        installpath: /my/custom/installpath
+        options:
+          installpath: /my/custom/installpath
 
 .. note::
    You need to take care with some values in YAML, especially integers, booleans, etc.
@@ -108,8 +108,8 @@ Specifying short options in an easystack file is allowed, for example:
 
   easyconfigs:
     - OpenFOAM-v2206-foss-2022a.eb:
-      options:
-        D: True
+        options:
+          D: True
 
 This is not recommended however, as short options are more difficult to interpret by humans.
 
@@ -127,9 +127,9 @@ These apply to *all* items in the easystack file. For example, if you have an ea
 
   easyconfigs:
     - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb:
-      options:
-        from-pr: 15924
-        debug: True
+        options:
+          from-pr: 15924
+          debug: True
     - OpenFOAM-v2206-foss-2022a.eb:
 
 and you run with
@@ -180,8 +180,8 @@ In the future, we are planning to support additional also global options specifi
     robot: True
 
   easyconfigs:
-  - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb
-  - OpenFOAM-v2206-foss-2022a.eb
+    - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb
+    - OpenFOAM-v2206-foss-2022a.eb
 
 would installed both ``PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb`` and ``OpenFOAM-v2206-foss-2022a.eb`` using ``--robot``
 (see `issue #4105 <https://github.com/easybuilders/easybuild-framework/issues/4105>`_).
