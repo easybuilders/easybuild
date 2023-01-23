@@ -35,7 +35,7 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'EasyBuild'
-copyright = '2012-2019, Ghent University, CC-BY-SA'
+copyright = '2012-2023, Ghent University, CC-BY-SA'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
@@ -43,7 +43,7 @@ copyright = '2012-2019, Ghent University, CC-BY-SA'
 # The short X.Y version.
 version = '4.7.0'  # this is meant to reference the version of EasyBuild
 # The full version, including alpha/beta/rc tags.
-release = '20230109.0'  # this is meant to reference the version of the documentation itself
+release = '20230123.0'  # this is meant to reference the version of the documentation itself
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -93,7 +93,9 @@ else:
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = project + " v" + version + " documentation (release " + release + ")"
+html_title = "EasyBuild documentation has moved to https://docs.easybuild.io"
+
+html_baseurl = 'https://docs.easybuild.io'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # html_short_title = None
