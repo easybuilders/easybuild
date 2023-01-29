@@ -223,7 +223,8 @@ redirects = {
     "Deprecated-functionality": "https://docs.easybuild.io/deprecated-functionality",
     "Detecting_loaded_modules": "https://docs.easybuild.io/detecting-loaded-modules",
     "EasyBuild4-overview-of-changes": "https://docs.easybuild.io/easybuild-v4/overview-of-changes",
-    "EasyBuild4-overview-relocated-functions-constants": "https://docs.easybuild.io/easybuild-v4/overview-relocated-functions-constants",
+    "EasyBuild4-overview-relocated-functions-constants":
+        "https://docs.easybuild.io/easybuild-v4/overview-relocated-functions-constants",
     "Easyconfig-files-local-variables": "https://docs.easybuild.io/easyconfig-files-local-variables",
     "Easyconfigs_index": "https://docs.easybuild.io/easyconfigs-search-index",
     "Easystack-files": "https://docs.easybuild.io/easystack-files",
@@ -240,7 +241,8 @@ redirects = {
     "Including_additional_Python_modules": "https://docs.easybuild.io/including-additional-python-modules",
     "Installation": "https://docs.easybuild.io/installation",
     "Installation_Alternative": "https://docs.easybuild.io/installation-alternative",
-    "Installing-environment-modules-without-root-permissions": "https://docs.easybuild.io/installing-environment-modules-without-root-permissions",
+    "Installing-environment-modules-without-root-permissions":
+        "https://docs.easybuild.io/installing-environment-modules-without-root-permissions",
     "Installing_extensions_in_parallel": "https://docs.easybuild.io/installing-extensions-in-parallel",
     "Installing-Lmod-without-root-permissions": "https://docs.easybuild.io/installing-lmod-without-root-permissions",
     "Integration_with_GitHub": "https://docs.easybuild.io/integration-with-github",
@@ -268,7 +270,8 @@ redirects = {
     "version-specific/config_file_constants": "https://docs.easybuild.io/version-specific/config-file-constants",
     "version-specific/easyblocks": "https://docs.easybuild.io/version-specific/easyblocks",
     "version-specific/easyconfig_constants": "https://docs.easybuild.io/version-specific/easyconfig-constants",
-    "version-specific/easyconfig_license_constants": "https://docs.easybuild.io/version-specific/easyconfig-license-constants",
+    "version-specific/easyconfig_license_constants":
+        "https://docs.easybuild.io/version-specific/easyconfig-license-constants",
     "version-specific/easyconfig_parameters": "https://docs.easybuild.io/version-specific/easyconfig-parameters",
     "version-specific/easyconfig_templates": "https://docs.easybuild.io/version-specific/easyconfig-templates",
     "version-specific/generic_easyblocks": "https://docs.easybuild.io/version-specific/generic-easyblocks",
