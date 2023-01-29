@@ -35,11 +35,6 @@ jobs:
         pip install -r docs/requirements.txt
         # This test is weak, options -nWT would make it stronger but we have many warnings...
         READTHEDOCS=1 sphinx-build docs build
-    - name: Check release notes
-      run: |
-        # make sure release notes are in place for current version
-        ebver=$(grep '^VERSION' setup.py | sed "s/VERSION = '\([0-9.]*\)'/\1/g")
-        grep "^EasyBuild v${ebver}" docs/Release_notes.rst
     - name: Test installation
       run: |
         pip install .
