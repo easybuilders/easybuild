@@ -5,7 +5,7 @@
 .. image:: https://github.com/easybuilders/easybuild/actions/workflows/doc_build.yml/badge.svg
     :target: https://github.com/easybuilders/easybuild/actions/workflows/doc_build.yml
 
-`EasyBuild <https://easybuilders.github.io/easybuild>`_ is a software build
+`EasyBuild <https://easybuild.io>`_ is a software build
 and installation framework that allows you to manage (scientific) software
 on High Performance Computing (HPC) systems in an efficient way.
 
@@ -29,24 +29,23 @@ Corresponding Python packages are available via PyPi:
 Documentation
 ~~~~~~~~~~~~~
 
-Read the fine manual (RTFM!) at http://easybuild.readthedocs.org .
+Read the fine manual (RTFM!) at http://docs.easybuild.io .
 
 Getting started
 ~~~~~~~~~~~~~~~
 
-The recommended way of installing EasyBuild is via the
-`documented bootstrap procedure <http://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-procedure>`_
-You should `configure <http://easybuild.readthedocs.org/en/latest/Configuration.html>`_
+The recommended way of installing EasyBuild is `using pip <https://docs.easybuild.io/en/latest/Installation.html>`_.
+You should `configure <http://docs.easybuild.io/en/latest/Configuration.html>`_
 EasyBuild to behave as you prefer, subsequently.
 
 That is all that is needed to get started with installing (scientific) software with ease.
-Take a look at the `typical workflow <http://easybuild.readthedocs.org/en/latest/Typical_workflow_example_with_WRF.html>`_
+Take a look at the `typical workflow <http://docs.easybuild.io/en/latest/Typical_workflow_example_with_WRF.html>`_
 example in the EasyBuild documentation that shows how to make EasyBuild build and **install WRF with a single command**.
 
 Quick demo for the impatient
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After `installing EasyBuild <http://easybuild.readthedocs.org/en/latest/Installation.html>`_,
+After `installing EasyBuild <http://docs.easybuild.io/en/latest/Installation.html>`_,
 you can build and install **HPL** on top of a compiler toolchain that consists of open source
 components (GCC, OpenMPI, etc.) by running the following commands::
 
@@ -60,7 +59,7 @@ This should install a module file for HPL which you can load to start using it::
   $ module load HPL
 
 For more information on using EasyBuild, see the
-`EasyBuild documentation <http://easybuild.readthedocs.org/>`_
+`EasyBuild documentation <http://docs.easybuild.io/>`_
 
 Contact info
 ~~~~~~~~~~~~
@@ -78,15 +77,11 @@ have any questions or suggestions, you can post them there.
 Only members can post to this mailinglist. To request membership, see
 https://lists.ugent.be/wws/info/easybuild.
 
-Slack/IRC
-^^^^^^^^^
+Slack
+^^^^^
 
 Contact the EasyBuild community via Slack: https://easybuild.slack.com,
-self-request an invite via https://easybuild-slack.herokuapp.com.
-
-An IRC channel #easybuild has been set up on the FreeNode network.
-
-Just connect your IRC client to the chat.freenode.net server, and join the #easybuild channel.
+self-request an invite via https://easybuild.io/join-slack.
 
 Twitter
 ^^^^^^^
