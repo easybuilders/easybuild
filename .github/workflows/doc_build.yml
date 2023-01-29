@@ -32,7 +32,7 @@ jobs:
         bash .github/workflows/check_with_codespell.sh
     - name: Test with sphinx
       run: |
-        pip install sphinx
+        pip install -r docs/requirements.txt
         # This test is weak, options -nWT would make it stronger but we have many warnings...
         READTHEDOCS=1 sphinx-build docs build
     - name: Check release notes
