@@ -22,7 +22,10 @@ import os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx_reredirects',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
@@ -195,3 +198,85 @@ latex_documents = [
 
 # If false, no module index is generated.
 # latex_use_modindex = True
+
+# automatically redirect all pages to new location;
+# see https://documatt.gitlab.io/sphinx-reredirects/usage.html
+redirects = {
+    "api/*": "https://docs.easybuild.io/api/easybuild/",
+    "Archived-easyconfigs": "https://docs.easybuild.io/archived-easyconfigs",
+    "Backup_modules": "https://docs.easybuild.io/backup-modules",
+    "Changelog": "https://docs.easybuild.io/changelog-docs",
+    "Code_style": "https://docs.easybuild.io/code-style",
+    "Common-toolchains": "https://docs.easybuild.io/common-toolchains",
+    "Concepts_and_Terminology": "https://docs.easybuild.io/terminology",
+    "Configuration": "https://docs.easybuild.io/configuration",
+    "Configuration_Legacy": "https://docs.easybuild.io/legacy/configuration",
+    "Containers": "https://docs.easybuild.io/containers",
+    "Contributing": "https://docs.easybuild.io/contributing",
+    "Controlling_compiler_optimization_flags": "https://docs.easybuild.io/controlling-compiler-optimization-flags",
+    "Cray-support": "https://docs.easybuild.io/cray-support",
+    "demos/bootstrapping": "https://docs.easybuild.io/installation",
+    "demos/configuring": "https://docs.easybuild.io/demos/configuring",
+    "demos/index": "https://docs.easybuild.io/demos",
+    "demos/review_pr": "https://docs.easybuild.iodemos/review-pr",
+    "Deprecated-easyconfigs": "https://docs.easybuild.io/deprecated-easyconfigs",
+    "Deprecated-functionality": "https://docs.easybuild.io/deprecated-functionality",
+    "Detecting_loaded_modules": "https://docs.easybuild.io/detecting-loaded-modules",
+    "EasyBuild4-overview-of-changes": "https://docs.easybuild.io/easybuild-v4/overview-of-changes",
+    "EasyBuild4-overview-relocated-functions-constants": "https://docs.easybuild.io/easybuild-v4/overview-relocated-functions-constants",
+    "Easyconfig-files-local-variables": "https://docs.easybuild.io/easyconfig-files-local-variables",
+    "Easyconfigs_index": "https://docs.easybuild.io/easyconfigs-search-index",
+    "Easystack-files": "https://docs.easybuild.io/easystack-files",
+    "eb_a": "https://docs.easybuild.io/using-easybuild/#all-available-easyconfig-parameters",
+    "eb_a_e_EB_WRF": "https://docs.easybuild.io/using-easybuild/#eb_a_e_EB_WRF",
+    "eb_help": "https://docs.easybuild.io/version-specific/eb-help",
+    "eb_list_easyblocks": "https://docs.easybuild.io/version-specific/easyblocks",
+    "eb_list_toolchains": "https://docs.easybuild.io/version-specific/toolchains",
+    "Experimental_features": "https://docs.easybuild.io/experimental-features",
+    "Extended_dry_run": "https://docs.easybuild.io/extended-dry-run",
+    "Extended_dry_run_examples": "https://docs.easybuild.io/extended-dry-run/#extended_dry_run_examples",
+    "Hooks": "https://docs.easybuild.io/hooks",
+    "Implementing-easyblocks": "https://docs.easybuild.io/implementing-easyblocks",
+    "Including_additional_Python_modules": "https://docs.easybuild.io/including-additional-python-modules",
+    "Installation": "https://docs.easybuild.io/installation",
+    "Installation_Alternative": "https://docs.easybuild.io/installation-alternative",
+    "Installing-environment-modules-without-root-permissions": "https://docs.easybuild.io/installing-environment-modules-without-root-permissions",
+    "Installing_extensions_in_parallel": "https://docs.easybuild.io/installing-extensions-in-parallel",
+    "Installing-Lmod-without-root-permissions": "https://docs.easybuild.io/installing-lmod-without-root-permissions",
+    "Integration_with_GitHub": "https://docs.easybuild.io/integration-with-github",
+    "Introduction": "https://docs.easybuild.io/what-is-easybuild",
+    "Locks": "https://docs.easybuild.io/locks",
+    "Logfiles": "https://docs.easybuild.io/log-files",
+    "Maintainers": "https://docs.easybuild.io/maintainers",
+    "Manipulating_dependencies": "https://docs.easybuild.io/manipulating-dependencies",
+    "Packaging_support": "https://docs.easybuild.io/packaging-support",
+    "Partial_installations": "https://docs.easybuild.io/partial-installations",
+    "Progress_bars": "https://docs.easybuild.io/progress-bars",
+    "Python-2-3-compatibility": "https://docs.easybuild.io/python-2-3-compatibility",
+    "Release_notes": "https://docs.easybuild.io/release-notes",
+    "Removed-functionality": "https://docs.easybuild.io/removed-functionality",
+    "RPATH-support": "https://docs.easybuild.io/rpath-support",
+    "Submitting_jobs": "https://docs.easybuild.io/submitting-jobs",
+    "System_toolchain": "https://docs.easybuild.io/system-toolchain",
+    "Tracing_progress": "https://docs.easybuild.io/tracing-progress",
+    "Typical_workflow_example_with_WRF": "https://docs.easybuild.io/typical-workflow-example-with-wrf/",
+    "Unit-tests": "https://docs.easybuild.io/unit-tests",
+    "Useful_links": "https://docs.easybuild.io",
+    "Useful-scripts": "https://docs.easybuild.io/useful-scripts",
+    "Using_external_modules": "https://docs.easybuild.io/using-external-modules",
+    "Using_the_EasyBuild_command_line": "https://docs.easybuild.io/using-easybuild",
+    "version-specific/config_file_constants": "https://docs.easybuild.io/version-specific/config-file-constants",
+    "version-specific/easyblocks": "https://docs.easybuild.io/version-specific/easyblocks",
+    "version-specific/easyconfig_constants": "https://docs.easybuild.io/version-specific/easyconfig-constants",
+    "version-specific/easyconfig_license_constants": "https://docs.easybuild.io/version-specific/easyconfig-license-constants",
+    "version-specific/easyconfig_parameters": "https://docs.easybuild.io/version-specific/easyconfig-parameters",
+    "version-specific/easyconfig_templates": "https://docs.easybuild.io/version-specific/easyconfig-templates",
+    "version-specific/generic_easyblocks": "https://docs.easybuild.io/version-specific/generic-easyblocks",
+    "version-specific/help": "https://docs.easybuild.io/version-specific/eb-help",
+    "version-specific/Supported_software": "https://docs.easybuild.io/version-specific/supported-software",
+    "version-specific/toolchain_opts": "https://docs.easybuild.io/version-specific/toolchain-opts",
+    "version-specific/toolchains": "https://docs.easybuild.io/version-specific/toolchains",
+    "Wrapping_dependencies": "https://docs.easybuild.io/wrapping-dependencies",
+    "Writing_easyconfig_files": "https://docs.easybuild.io/writing-easyconfig-files",
+    "Writing_yeb_easyconfig_files": "https://docs.easybuild.io/writing-yeb-easyconfig-files",
+}
