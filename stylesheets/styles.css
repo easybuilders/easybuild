@@ -87,6 +87,12 @@ header h1 {
 header h3 {
   color: #FFFFFF
 }
+header div {
+  color: #FFFFFF
+}
+header a {
+  color: #FFFFFF
+}
 header.without-description h1 {
   margin: 10px 0;
 }
