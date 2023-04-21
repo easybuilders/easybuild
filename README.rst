@@ -18,6 +18,7 @@ The EasyBuild sources are spread across different GitHub repositories:
 * the `easybuild-framework repository <https://github.com/easybuilders/easybuild-framework>`_ hosts the source code of the EasyBuild `framework`
 * the `easybuild-easyblocks repository <https://github.com/easybuilders/easybuild-easyblocks>`_ hosts `easyblocks`, i.e. implementations of install procedures
 * the `easybuild-easyconfigs repository <https://github.com/easybuilders/easybuild-easyconfigs>`_ hosts `easyconfigs`, i.e. EasyBuild specification files
+* the _`easybuild-docs repository <https://github.com/easybuilders/easybuild-docs>`_ contains the *sources* of the EasyBuild documentation, which is hosted at https://docs.easybuild.io.
 
 Corresponding Python packages are available via PyPi:
 
