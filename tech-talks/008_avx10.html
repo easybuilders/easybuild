@@ -19,10 +19,10 @@ A reasonable solution to the 7 levels of AVX-512 folly </h2>
       <section>
             <em><h4>Talk description</h4></em>
             <p>
-            HPC has been using Same Instruction, Multiple Data paradigms to increase the performance of machines, libraries and codes since the early Cray Vector processors. This talk provides a historical overview of x86 SIMD from the 90's to modern and unreleased processors in the form of AVX10, specifically its impact within High Performance Computing. 
+            HPC has been using Same Instruction, Multiple Data (SIMD) paradigms to increase the performance of machines, libraries and codes since the early Cray Vector processors. This talk provides a historical overview of x86 SIMD from the 90's to modern and unreleased processors in the form of AVX10, specifically its impact within High Performance Computing. 
 
             Focusing on HPC, this talk is targeted on two primary demographics: Those in HPC packaging/system administration as well as those in HPC Compiler/Library optimization.  
-The end goal of this talk is to demystify AVX in all its forms, from the HPC focused AVX1, the general workload focused AVX2, and the 7 different, non-overlapping levels of AVX512, and a return to normality with AVX10. HPC stands to benefit from AVX10 not by having new instructions, but rather by setting a new common baseline that developers, administrators and users can universally target without having had to run their own assembly routines prior to moving from one cluster to another.    
+The end goal of this talk is to demystify AVX in all its forms, from the HPC focused AVX1, the general workload focused AVX2, and the 7 different, non-overlapping levels of AVX-512, and a return to normality with AVX10. HPC stands to benefit from AVX10 not by having new instructions, but rather by setting a new common baseline that developers, administrators and users can universally target without having had to run their own assembly routines prior to moving from one cluster to another.    
             </p>
             <p>
             Outline of the talk:
@@ -33,9 +33,12 @@ The end goal of this talk is to demystify AVX in all its forms, from the HPC foc
             SSE3-4.2: I can do 4 things, and now I can manipulate *how* I do them 
             AVX1: 256 bits of floating point action, time for maths to fly 
             AVX2: You get an integer! You get an interger! Everbody get's an integer
-            AVX512 Part 1: They were the best of times, they were the worst of times. 
-            AVX512 Part 2: *And then things went very, very wrong*
-            AVX512 Part 3: *Why yes, I too would like 5 more spec exantions without contiguous supersets*
+            AVX-512 Part 1: They were the best of times, they were the worst of times. 
+            AVX-512 Part 2: *And then things went very, very wrong*
+            AVX-512 Part 3: *Why yes, I too would like 5 more spec expantions without contiguous supersets*
+            AVX10.1/512: Ok, let's make all of the AVX-512 thing less of a PITA
+            AVX10.1/256: Ok, let's make all of the AVX-512 goodies available for consumers
+            AVX10.1/128: Ok, let's ruin all of the progress of AVX10
 
                 <li>...</li>
             </ul>
