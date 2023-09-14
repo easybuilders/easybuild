@@ -40,34 +40,35 @@ uild.io/join-slack">here</a>).<br/>
             <em><h4>Talk description</h4></em>
             <p>
             HPC has been using Same Instruction, Multiple Data (SIMD) paradigms to increase the performance of machines,
-            libraries and codes since the early Cray Vector processors. This talk provides a historical overview of x86
-            SIMD from the 90's to modern and unreleased processors in the form of AVX10, specifically its impact within
-            High Performance Computing.</p>
+            libraries, and codes since the early days of the Cray Vector processor. This talk provides a historical overview of x86
+            and x86_64 SIMD instruction sets from the 90's to modern, currently unreleased processors.
+            It seeks to introduce the new AVX10 specification, specifically its impact within High Performance
+            Computing.</p>
 
-            <p>Focusing on HPC, this talk is targeted on two primary demographics: those in HPC packaging/system
-            administration as well as those in HPC Compiler/Library optimization.</p>
+            <p>Focusing on HPC, this talk is targeted towards two primary demographics: HPC packaging/system
+            supporters/administrators and HPC Compiler/Math Library optimization Developers.</p>
 
-            <p>The end goal of this talk is to demystify AVX in all its forms, from the HPC focused AVX1, the general
-            workload focused AVX2, and the 7 different, non-overlapping levels of AVX-512, and a return to normality
-            with AVX10. HPC stands to benefit from AVX10 not by having new instructions, but rather by setting a new
-            common baseline that developers, administrators and users can universally target without having had to run
-            their own assembly routines prior to moving from one cluster to another.</p>
-            </p>
+            <p>The goal of this talk is demystifying x86_64 Advanced Vector eXtensions in all its forms, from the
+            original HPC focused AVX1, the general workload focused AVX2, the 7 different non-overlapping levels of AVX-512,
+            and a return to normality with AVX10 in its 2.5 forms. HPC specifically will benefit from AVX10 not by having new instructions, but rather by resetting
+            the common baseline that developers, administrators and users can target. Regardless of their cluster,
+            a simple check of two flags for code size, and the feature set level is known. No more custom lookup tables
+            for various non-overlapping implementations.</p>
             <p>
             Outline of the talk:
             <ul>
-                <li>In the beginning, there was x87, and we've universally agreed this was a bad idea</li>
+                <li>In the beginning, there was x87, and we’ve universally agreed this was a bad idea</li>
                 <li>MMX: Look mum! I can do two things at once!</li>
-                <li>SSE1-2: Now I can do 4 things, and operate on real data types! </li>
-                <li>SSE3-4.2: I can do 4 things, and now I can manipulate *how* I do them </li>
-                <li>AVX1: 256 bits of floating point action, time for maths to fly </li>
-                <li>AVX2: You get an integer! You get an integer! Everbody get's an integer</li>
-                <li>AVX-512 Part 1: They were the best of times, they were the worst of times. </li>
+                <li>SSE1-2: Now I can do up to 4 things at once, and operate on floating point data types!</li>
+                <li>SSE3-4.2: I can do 4 things, and manipulate *how* I do them</li>
+                <li>AVX1: 256 bits of floating point action, time for maths to fly</li>
+                <li>AVX2: You get a signed integer! You get a signed integer! Everybody gets signed integers!</li>
+                <li>AVX-512 Part 1: They were the best of times, they were the worst of times.</li>
                 <li>AVX-512 Part 2: *And then things went very, very wrong*</li>
                 <li>AVX-512 Part 3: *Why yes, I too would like 5 more spec expansions without contiguous supersets*</li>
-                <li>AVX10.1/512: Ok, let's make all of the AVX-512 thing less of a PITA</li>
-                <li>AVX10.1/256: Ok, let's make all of the AVX-512 goodies available for consumers</li>
-                <li>AVX10.1/128: Ok, let's ruin all of the progress of AVX10</li>
+                <li>AVX10.1/512: Ok, let’s make all of AVX-512 less of a PITA</li>
+                <li>AVX10.1/256: Ok, let’s make all of AVX-512 available to consumers in a reasonable way</li>
+                <li>AVX10.1/128: Ok, let’s ruin all of the progress of AVX10 before it’s even out there</li>
             </ul>
             </p>
             <em><h4>Links</h4></em>
