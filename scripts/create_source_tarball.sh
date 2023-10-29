@@ -250,15 +250,6 @@ if [[ "$repo" == "easybuild-easyconfigs" ]]; then
     echo -e -n "\r>> checking whether all files in index actually exist in unpacked source tarball ... $idx/$file_cnt "
     ok
 
-    # cfr. https://github.com/easybuilders/easybuild-easyconfigs/issues/10325
-    echo -n ">> checking for CVS easyconfigs in source tarball... "
-    CVS_easyconfigs=`ls $unpacked_sdist/easybuild/easyconfigs/c/CVS/*.eb 2> /dev/null`
-    if [ -z "$CVS_easyconfigs" ]; then
-        error "No CVS easyconfigs found in source tarball!"
-    else
-        ok
-    fi
-
 fi
 
 # all done checking, if no checks failed up until now, we're done!
