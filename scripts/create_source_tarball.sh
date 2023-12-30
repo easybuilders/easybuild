@@ -240,7 +240,7 @@ if [[ "$repo" == "easybuild-easyconfigs" ]]; then
     echo -n ">> checking whether all files in index actually exist in unpacked source tarball ... "
     file_cnt=`cat $index_in_sdist | grep -v '^#' | wc -l | sed 's/ //g'`
     idx=1
-    for file in `cat $index_in_sdist | grep -v '^#'`; do
+    for file in `cat $index_in_sdist | grep -v '^#' | grep -v '__archive__/r/RCS/'`; do
         echo -e -n "\r>> checking whether all files in index actually exist in unpacked source tarball ... $idx/$file_cnt"
         if [ ! -f $unpacked_sdist/easybuild/easyconfigs/$file ]; then
             error "File $file listed in index, but not found in $cwd!"
