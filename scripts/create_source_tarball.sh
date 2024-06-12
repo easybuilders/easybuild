@@ -22,7 +22,7 @@ function success() {
 }
 
 function warning() {
-    echo -e "\033[31mWARNING: $1\033[0m" >&2
+    echo -e "\033[33mWARNING: $1\033[0m" >&2
     warnings="$warnings$1 "
 }
 
@@ -78,14 +78,19 @@ else
     error "Expected to be in $repo directory, found myself in $cwd"
 fi
 
+# recent version of setuptools normalize source tarball name by replacing dashes ('-)
+# in package name with underscores ('_'), so easybuild-framework becomes easybuild_framework;
+repo_underscore=$(echo ${repo} | tr '-' '_')
+
 # make sure source tarball doesn't already exist in dist/ subdirectory
-sdist_tar_gz=dist/${repo}-${version}.tar.gz
-echo -n ">> making sure $sdist_tar_gz doesn't exist yet ... "
-if [ -f $sdist_tar_gz ]; then
-    error "Found $sdist_tar_gz, which will be blindly overwritten by this script, please (re)move first!"
-else
-    ok
-fi
+for sdist_tar_gz in dist/${repo_underscore}-${version}.tar.gz dist/${repo}-${version}.tar.gz; do
+    echo -n ">> making sure $sdist_tar_gz doesn't exist yet ... "
+    if [ -f $sdist_tar_gz ]; then
+        error "Found $sdist_tar_gz, which will be blindly overwritten by this script, please (re)move first!"
+    else
+        ok
+    fi
+done
 
 # make sure we're on the main branch
 curr_branch=$(git status -b --porcelain | grep '^##' | cut -f2 -d' ' | cut -f1 -d'.')
@@ -189,16 +194,22 @@ else
     error "Creating source tarball failed, output in $out"
 fi
 
-echo -n ">> checking for $sdist_tar_gz ... "
-if [ -f $sdist_tar_gz ]; then
-    ok
-else
-    error "Expected file $sdist_tar_gz not found!"
+for sdist_tar_gz in dist/${repo_underscore}-${version}.tar.gz dist/${repo}-${version}.tar.gz; do
+    echo -n ">> checking for $sdist_tar_gz ... "
+    if [ -f $sdist_tar_gz ]; then
+        ok
+        break
+    else
+        warning "$sdist_tar_gz not found"
+    fi
+done
+if [ ! -f $sdist_tar_gz ]; then
+    error "No source tarball for ${repo} ${version} found in $PWD/dist!"
 fi
 
 # sanity checks on source tarball
 cd $tmpdir; tar xfz $cwd/$sdist_tar_gz; cd - > /dev/null
-unpacked_sdist=$tmpdir/${repo}-${version}
+unpacked_sdist=$tmpdir/${repo_underscore}-${version}
 echo -n ">> checking for unpacked source tarball at $unpacked_sdist ... "
 if [ -d $unpacked_sdist ]; then
     ok
