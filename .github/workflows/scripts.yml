@@ -120,7 +120,7 @@ jobs:
 
         # script should fail if expected source tarball did not get created in dist/
         ($GITHUB_WORKSPACE/scripts/create_source_tarball.sh ${{matrix.repo}} $version 2>&1 | tee $out) || true
-        grep "ERROR: Expected file dist/${{matrix.repo}}-${version}.tar.gz not found!" $out
+        grep "ERROR: No source tarball for ${{matrix.repo}} ${version} found" $out
         echo "Expected error found in output: OK!"
 
         # clean up index file, to avoid check for dirty working directory failing
