@@ -209,12 +209,17 @@ fi
 
 # sanity checks on source tarball
 cd $tmpdir; tar xfz $cwd/$sdist_tar_gz; cd - > /dev/null
-unpacked_sdist=$tmpdir/${repo_underscore}-${version}
-echo -n ">> checking for unpacked source tarball at $unpacked_sdist ... "
-if [ -d $unpacked_sdist ]; then
-    ok
-else
-    error "Expected unpacked source tarball at $unpacked_sdist, not found!"
+for unpacked_sdist in $tmpdir/${repo_underscore}-${version} $tmpdir/${repo}-${version}; do
+    echo -n ">> checking for unpacked source tarball at $unpacked_sdist ... "
+    if [ -d $unpacked_sdist ]; then
+        ok
+        break
+    else
+        warning "Unpacked source tarball at $unpacked_sdist not found!"
+    fi
+done
+if [ ! -d $unpacked_sdist ]; then
+    error "No unpacked source tarball found for ${repo} ${version} in $tmpdir!"
 fi
 
 if [[ "$repo" == "easybuild-easyconfigs" ]]; then
