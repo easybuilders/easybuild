@@ -577,6 +577,30 @@ Finally a comparison of features and performance against the existing GCC toolch
 <hr>
 
 
+<a id="opengl"/></a>
+<br/><p>
+<em>[Wed 26 Mar 2025 - 11:30-12:00 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
+<strong>OpenGL support in EasyBuild</strong>
+<br/><em>Jens Henrik Göbbert (Jülich Supercomputing Centre)</em>
+</p>
+<p>
+Heavy 3D visualization tasks can be accelerated enormously if they are supported by a GPU. The current default Easybuild
+configuration files only depend on Mesa for OpenGL. This limits OpenGL applications to software-accelerated rendering
+instead of hardware-accelerated rendering in most cases. If you want to deploy software packages that take advantage of
+the installed GPUs for OpenGL, a simple approach can be to install the same module twice - once for software OpenGL with
+Mesa and once for hardware-accelerated OpenGL using the vendor-specific OpenGL library. However, this passes the
+responsibility for the best choice on to the user. It would be much better if the correct OpenGL library were simply
+selected at runtime.</p>
+<p>
+To make that possible the standard approach is the use of libglvnd as a vendor-neutral dispatch layer for arbitrating
+OpenGL API calls between multiple vendors. It allows multiple drivers from different vendors to coexist on the same filesystem,
+and determines which vendor to dispatch each API call to at runtime. In this talk we want to show how libglvnd works and
+how it can be a key component to integrate OpenGL into the Easybuild framework in an advanced way.
+</p><br/>
+
+<hr>
+
+
 <a id="pop3"/></a>
 <br/><p>
 <em>[Wed 26 Mar 2025 - 13:00-13:15 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
