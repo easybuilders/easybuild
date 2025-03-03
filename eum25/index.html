@@ -250,14 +250,14 @@ Useful links:
 
         <li><em>(coffee break)</em></br></br></li>
 
-        <li><em>[Tue 25 Mar'25 - 15:00-15:25 <a href="https://time.is/CET">CET</a>]</em></br>
-            <a href="#exacb"><strong>Integrating exaCB with EasyBuild: The why and the how</strong></a></br>
-            <em>Jayesh Badwaik (Jülich Supercomputing Centre) - in person</em>
+        <li><em>[Tue 25 Mar'25 - 15:00-15:20 <a href="https://time.is/CET">CET</a>]</em></br>
+            <a href="#secure-workflow"><strong><em>A Secure Workflow for Shared HPC Systems</em></strong></a></br>
+            <em>Alexander Grund (TU Dresden) - in person</em>
         </br></br></li>
 
-        <li><em>[Tue 25 Mar'25 - 15:25-15:45 <a href="https://time.is/CET">CET</a>]</em></br>
-            <a href="#xxxxxxxxxxxxxxxxxxxxxxx"><strong><em>(talk slot reserved, to be confirmed)</em></strong></a></br>
-            <em>(speaker to be confirmed)</em>
+        <li><em>[Tue 25 Mar'25 - 15:20-15:45 <a href="https://time.is/CET">CET</a>]</em></br>
+            <a href="#exacb"><strong>Integrating exaCB with EasyBuild: The why and the how</strong></a></br>
+            <em>Jayesh Badwaik (Jülich Supercomputing Centre) - in person</em>
         </br></br></li>
 
         <li><em>[Tue 25 Mar'25 - 15:45-16:15 <a href="https://time.is/CET">CET</a>]</em></br>
@@ -504,26 +504,32 @@ the environments of interpreted languages, such as Python, R and Julia.
 
 <a id="exacb"/></a>
 <br/><p>
-<em>[Tue 25 Mar 2025 - 13:00-13:15 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
+<em>[Tue 25 Mar 2025 - 15:20-15:45 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
 <strong>Integrating exaCB with EasyBuild: The why and the how</strong>
 <br/><em>
     by Jayesh Badwaik (Jülich Supercomputing Centre)</em>
 </p>
 <p>
-The Jülich Supercomputing Centre (JSC) is deploying the JUPITER supercomputer, powered by Grace-Hopper-based
-architecture. To support early application adaptation, JSC has introduced the JUREAP early access program, with
-continuous benchmarking as a core component to monitor application progress and system performance.
-<a href="https://exacb.pages.jsc.fz-juelich.de">exaCB</a>, the chosen continuous benchmarking framework, integrates
-tools such as GitLab CI/CD, Jacamar for CI integration with supercomputers, and JUBE for generating reproducible
-benchmark scripts. A critical requirement for reproducibility is effective dependency resolution during the build
-process. While EasyBuild is the default tool for this purpose, many applications incorporate additional ad hoc
-mechanisms, making dependency management and therefore reproducibility more challenging.
+The Jülich Supercomputing Centre (JSC) is deploying the JUPITER supercomputer,
+powered by the Grace-Hopper-based architecture. To support early application
+adaptation, JSC has introduced the JUREAP early access program, where
+continuous benchmarking plays a crucial role in tracking application progress
+and system performance.
 </p><p>
-In this talk, I will introduce exaCB and illustrate key requirements in ensuring consistent and reproducible
-dependency management. Given the need for a unified framework that simplifies dependency handling for users,
-I will outline the requirements for more reproducible workflows using EasyBuild and introduce a tentative proposal.
-This approach aims to improve reproducibility, streamline workflows, and better support continuous benchmarking.
-I will also invite feedback and alternative ideas on achieving the requirements needed.
+<a href="https://exacb.pages.jsc.fz-juelich.de">exaCB</a>,
+the selected continuous benchmarking framework, integrates key tools
+such as GitLab CI/CD, Jacamar for CI integration with supercomputers, and JUBE
+for generating reproducible benchmark scripts. However, a major challenge in
+ensuring reproducibility lies in effective dependency resolution during the
+build process. While EasyBuild serves as the default tool, many applications
+introduce additional ad hoc mechanisms for dependency management.
+</p><p>
+In this talk, I will introduce exaCB and highlight the key challenges in
+achieving consistent and reproducible dependency management. Given the need
+for a unified approach to simplify dependency handling, I will outline
+requirements that need to be met to improve reproducibility. I will also
+present a tentative proposal to enhance EasyBuild-based workflows and invite
+feedback and alternative ideas to help refine the path forward.
 </p><br/>
 
 <hr>
