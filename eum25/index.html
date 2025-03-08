@@ -35,12 +35,6 @@
       </header>
       <section>
         <p align="center">
-        <img src="eum24_group_pic.jpg" alt="Group picture at 9th EasyBuild User Meeting (2024)" width="100%" align="center"/><br/>
-        <span align="center"><em>(group picture from 9th EasyBuild User Meeting in Umeå - April 2024)</em></span>
-        </p>
-
-        <hr>
-        <p align="center">
         <a href="#practical-info">Practical info</a> -
         <a href="#registration">Registration</a> -
         <a href="#organisation">Organisation</a> -
@@ -49,6 +43,12 @@
         </strong>
         <a href="#sponsors">Sponsors</a> -
         <a href="#contact">Contact</a>
+        </p>
+        <hr>
+        
+        <p align="center">
+        <img src="eum24_group_pic.jpg" alt="Group picture at 9th EasyBuild User Meeting (2024)" width="100%" align="center"/><br/>
+        <span align="center"><em>(group picture from 9th EasyBuild User Meeting in Umeå - April 2024)</em></span>
         </p>
         <hr>
 
@@ -300,7 +300,7 @@ Useful links:
         <li><em>(coffee break)</em></br></br></li>
 
         <li><em>[Wed 26 Mar'25 - 11:00-11:30 <a href="https://time.is/CET">CET</a>]</em></br>
-            <a href="#linalg"><strong>Linear Algebra & BLAS</strong></a></br>
+            <a href="#linalg"><strong>EasyBuild's Linear Algebra</strong></a></br>
             <em>Bart Oldeman (Digital Research Alliance of Canada) - in person</em>
         </br></br></li>
 
@@ -508,6 +508,24 @@ the environments of interpreted languages, such as Python, R and Julia.
 <hr>
 
 
+<a id="eb-contributor"/></a>
+<br/><p>
+<em>[Tue 25 Mar 2025 - 13:15-13:30 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
+<strong>Getting Started as EasyBuild Contributor</strong>
+<br/><em>
+    by Jan André Reuter (Jülich Supercomputing Centre)</em>
+</p>
+<p>
+EasyBuild is a software build and installation framework, widely used on HPC systems and clusters to manage software installations. With over 20.000 build configs, corresponding build blocks and a whole framework around it, EasyBuild is a large project and contributing can feel intimidating at first. But it does not have to be!
+</p><p>
+In this talk, I will talk about my journey starting to contribute to EasyBuild. I show my personal use case, my motivation to contribute both upstream and at JSC, and my experiences in doing so. I share features I appreciated, how I accidentally broke EasyBuild twice and mention issues I ran into during development.
+</p><p>
+At the end I will open the discussion regarding improvements for users and developers and share things I would like to see in EasyBuild in the future. 
+</p><br/>
+
+<hr>
+
+
 <a id="environment-modules"/></a>
 <br/><p>
 <em>[Tue 25 Mar 2025 - 14:00-14:30 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
@@ -522,6 +540,28 @@ well as its organization and the changes currently made to it. This
 talk will also be the occasion to hear from the audience its
 perception and what would be the most interesting features to add to
 a "module" tool nowadays.
+</p>
+
+<hr>
+
+<a id="secure-workflow"/></a>
+<br/><p>
+<em>[Tue 25 Mar 2025 - 15:00-15:20 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
+<strong>A Secure Workﬂow for Shared HPC Systems</strong>
+<br/><em>
+    by Alexander Grund (TU Dresden)</em>
+</p>
+<p>
+The demand for access to the vast computational resources of HPC systems is growing among researchers from various scientific domains, including those working with highly sensitive data.
+</p>
+<p>
+While HPC systems offer the computational power required for increasingly complex research methods, they are primarily designed for performance rather than security.
+These systems share resources among multiple users, making it challenging to ensure data confidentiality.
+Traditional security measures like UNIX permissions are often insufficient to protect sensitive information — especially as new security vulnerabilities continue to emerge.
+</p>
+<p>
+This talk presents a secure workflow developed at GWDG Göttingen (https://gwdg.de) and currently being implemented at ZIH Dresden.
+Designed to be broadly applicable across different use cases, this approach enables the secure transfer, storage, and processing of sensitive data with minimal impact on performance.
 </p>
 
 <hr>
@@ -604,6 +644,33 @@ It has also been widely adopted by HPC vendors, with AMD, NVIDIA and Intel all u
 Here we will present the current status of a new LLVM toolchain for EasyBuild.
 Different option for building both the LLVM backend and the front-end compilers will be discussed.
 Finally a comparison of features and performance against the existing GCC toolchain will be presented focusing on C/C++ and Fortran. 
+</p><br/>
+
+<hr>
+
+
+<a id="linalg"/></a>
+<br/><p>
+<em>[Wed 26 Mar 2025 - 11:00-11:30 <a href="https://time.is/CET">CET</a> - in person]</em><br/>
+<strong>A new LLVM toolchain for EasyBuild</strong>
+<br/><em>
+    by Bart Oldeman (Digital Research Alliance of Canada)</em>
+</p>
+<p>
+The linear algebra infrastructure in EasyBuild's toolchains consists of 4 parts:
+BLAS, LAPACK, BLACS, and ScaLAPACK. We will cover what they do, their
+history, and what drives performance in modern BLAS implementations.
+</p><p>
+Nowadays BLIS, AOCL-BLAS, OpenBLAS, and MKL are popular
+implementations, and we show how they compare performance-wise
+on the newer x86 architectures AMD Zen4 (Genoa) and Intel Golden Cove
+(Sapphire Rapids).
+</p><p>
+EasyBuild's also uses FlexiBLAS, which can dynamically select a BLAS
+implementation depending on your hardware, and even loosely link to
+MKL without needing a hard dependency on MKL. We explain how
+the resulting FlexiBLAS library can then be almost universally used
+with a few small exceptions concerning functions returning complex values.
 </p><br/>
 
 <hr>
