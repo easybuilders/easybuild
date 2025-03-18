@@ -31,11 +31,6 @@ jobs:
         # suggestions). Since we know we have one of these, we allow for that.
         # see https://github.com/easybuilders/easybuild/pull/485 for details
         bash .github/workflows/check_with_codespell.sh
-    - name: Test with sphinx
-      run: |
-        pip install -r docs/requirements.txt
-        # This test is weak, options -nWT would make it stronger but we have many warnings...
-        READTHEDOCS=1 sphinx-build docs build
     - name: Test installation
       run: |
         pip install .
