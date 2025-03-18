@@ -36,4 +36,4 @@ jobs:
         pip install .
         # test installation too (using options that don't require to have a modules tool installed)
         eb --list-easyblocks | grep EB_bzip2
-        eb --fetch bzip2-1.0.6.eb
+        eb --fetch bzip2-1.0.8.eb
