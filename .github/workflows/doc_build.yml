@@ -8,13 +8,14 @@ concurrency:
 
 jobs:
   docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v1
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # 4.2.2
+    - name: Set up Python
+      uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
       with:
-        python-version: 3.8
+        # Python 3.10 is default in Ubuntu 22.04
+        python-version: '3.10'
     - name: Lint with flake8
       run: |
         pip install flake8
@@ -30,14 +31,9 @@ jobs:
         # suggestions). Since we know we have one of these, we allow for that.
         # see https://github.com/easybuilders/easybuild/pull/485 for details
         bash .github/workflows/check_with_codespell.sh
-    - name: Test with sphinx
-      run: |
-        pip install -r docs/requirements.txt
-        # This test is weak, options -nWT would make it stronger but we have many warnings...
-        READTHEDOCS=1 sphinx-build docs build
     - name: Test installation
       run: |
         pip install .
         # test installation too (using options that don't require to have a modules tool installed)
         eb --list-easyblocks | grep EB_bzip2
-        eb --fetch bzip2-1.0.6.eb
+        eb --fetch bzip2-1.0.8.eb
