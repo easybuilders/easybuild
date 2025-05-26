@@ -175,7 +175,7 @@ header ul li + li + li {
 }
 header ul li + li + li + li {
   border-right: none;
-  width: 74px;
+  width: 60px;
 }
 header ul li + li + li + li + li {
   border-right: none;
@@ -183,7 +183,11 @@ header ul li + li + li + li + li {
 }
 header ul li + li + li + li + li + li {
   border-right: none;
-  width: 90px;
+  width: 80px;
+}
+header ul li + li + li + li + li + li + li {
+  border-right: none;
+  width: 60px;
 }
 header ul a {
   line-height: 1.2;
