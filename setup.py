@@ -36,7 +36,7 @@ from distutils.core import setup
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = '5.0.0'
+VERSION = '5.1.0'
 
 
 # Utility function to read README file
@@ -75,6 +75,8 @@ on High Performance Computing (HPC) systems in an efficient way.""",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Topic :: Scientific/Engineering",
         "Topic :: Software Development :: Build Tools",
     ],
