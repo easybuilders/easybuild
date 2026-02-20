@@ -1,5 +1,5 @@
 ##
-# Copyright 2012-2014 Ghent University
+# Copyright 2012-2026 Ghent University
 #
 # This file is part of EasyBuild,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -36,7 +36,7 @@ from distutils.core import setup
 
 # note: release candidates should be versioned as a pre-release, e.g. "1.1rc1"
 # 1.1-rc1 would indicate a post-release, i.e., and update of 1.1, so beware
-VERSION = '5.2.0'
+VERSION = '5.2.1'
 
 
 # Utility function to read README file
