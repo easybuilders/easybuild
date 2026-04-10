@@ -39,7 +39,7 @@ You should `configure <http://docs.easybuild.io/en/latest/Configuration.html>`_
 EasyBuild to behave as you prefer, subsequently.
 
 That is all that is needed to get started with installing (scientific) software with ease.
-Take a look at the `typical workflow <http://docs.easybuild.io/en/latest/Typical_workflow_example_with_WRF.html>`_
+Take a look at the `typical workflow <https://docs.easybuild.io/typical-workflow-example/>`_
 example in the EasyBuild documentation that shows how to make EasyBuild build and **install WRF with a single command**.
 
 Quick demo for the impatient
